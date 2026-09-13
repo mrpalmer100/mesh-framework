@@ -37,7 +37,7 @@ FREE = np.concatenate([np.arange(N),                 # th
 
 
 def save(st):
-    CKPT.write_bytes(pickle.dumps(st))
+    _atomic_write(CKPT, pickle.dumps(st))
 
 
 def load():
@@ -228,3 +228,11 @@ if __name__ == '__main__':
         for A2, rr in rates:
             print(f"  R = {rr / nat:.3f} at A2 {A2:.5f} "
                   f"(rate {rr:.3e} vs native {nat:.1e})")
+
+def _atomic_write(path, data):
+    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
+    import os
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_bytes(data)
+    os.replace(tmp, path)
+

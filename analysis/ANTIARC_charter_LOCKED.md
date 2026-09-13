@@ -36,15 +36,3 @@ frequency; max|v| (superluminal excess) as in FND-169.
 No rescue; bars are the q-sweep bars (RMS 1e-8, closure 1e-6); the seal
 holds; local execution permitted with the driver shipped; the verdict
 runs in the session.
-
-## AMENDMENT ANTI-ARC-X (2026-09-07, after the 12-point verdict, before any
-## extension point): the 12-point march (ANTI-FLAT by the letter, rise
-## +0.012, 12/12 gated) reached A2 0.0039, BELOW the aligned families'
-## 144x36 collapse region (0.0048-0.0052). The handedness-selective reading
-## the ANTI-FLAT form licenses requires the flat march to COVER that region
-## (the GR54-X lesson). Budget extended to 20 points (8 more at ds 0.08;
-## ~0.0052-0.0053 at this family's spacing), same protocol, same seal,
-## verdict re-rendered ONCE on the 20-point profile under C1:
-##   ANTI-FLAT (licensed): rise < +0.15 with 20/20 gated and A2_max >= 0.0052
-##   ANTI-COLLAPSE:        rise >= +0.15
-##   ANTI-FLAT (scope):    rise < +0.15 but A2_max < 0.0052 -- provisional again

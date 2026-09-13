@@ -874,3 +874,11 @@ cited from full-bar states only.
 
 - 2026-09-09: RENAME tier C: GitHub repository renamed mesh-framework (old URL redirects); README badge/URLs, pyproject Repository URL, the one-fence prompt, naming notes updated. CHANGELOG history entries keep the old URL. Next release artifact: mesh-3_32_0-release.zip; Zenodo title updated at the 3.32.0 deposit.
 - 2026-09-09: root RELEASE_NOTES_*.md removed (3.28.1/3.29.0/3.30.0/3.31.0 were byte-identical duplicates of docs/history/RELEASE_NOTES_v*.md; the short-form 3.28.0 moved to docs/history/RELEASE_NOTES_v3.28.0_short.md with a provenance line). RELEASE_CHECKLIST step 6 amended: release notes live ONLY in docs/history/. Last three live-tree 'rope-framework' strings updated (HANDOFF, ADJOINT spec, one benchmark print).
+
+# SESSION_CHANGES -- 2026-09-11..13 (rebuilt 2026-09-13 after a sandbox reset; the compute tree and GitHub were the sources of truth)
+- FND-174 registered (ANTI-FLAT licensed on the 20-point ANTI-ARC-X profile; handedness-selective collapse) with riders on FND-163/164/139; grid-scope rider (ANTI-ARC-54: REFUSED at a resolved floor; wsNyq is the s-direction weight) and continuum-status rider (ANTI-ARC-S288) folded into its note.
+- ANTI-ARC-54 chartered/run/REFUSED (analysis/ANTIARC54_results.md); ANTI-ARC-S288 chartered/run/REFUSED at exact resonance (analysis/ANTIARC_S288_results.md); riders on FND-172 (strengthened), FND-173 (grid-conditioned).
+- kernel_continuation.py built (bordered GN along a near-null direction); KERNEL-CONT chartered; partial local result: stage A all seven b != 0 GATED (c1 floor reproduced), stage B (288x36, 5/4) b = -0.2/-0.1/-0.05 GATED at exact resonance.
+- CITATION.cff title: "The Mesh Programme (rope_solver): A Computational Toolkit for the Mesh Framework" (author's wording).
+- Instrument incidents: laptop disk filled twice (SJ_MEMO=1 factor memos; then a launcher prune that used ls -t on memo DIRECTORIES). Launchers now default SJ_MEMO=jac, prune with ls -td / rm -rf, and read only the last log line; all 30 drivers write checkpoints atomically (tmp + os.replace). The pattern cache was truncated once and re-measured.
+- Sandbox reset 2026-09-13: tree rebuilt from GitHub (through FND-173) + the compute tree's recovery tarball; registry edits re-applied from the conversation record.

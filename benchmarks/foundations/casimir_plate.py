@@ -14,6 +14,14 @@ with run_local.sh (it loops until 'COMPLETE'). SJ memos not used (no torus solve
 import numpy as np, pickle, pathlib, sys, time, itertools
 from scipy.linalg import eigvalsh
 
+
+def _atomic_write(path, data):
+    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
+    import os
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_bytes(data)
+    os.replace(tmp, path)
+
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'benchmarks' / 'foundations'))
 import shin6_3d_bloch as S6                     # noqa  (instrument, byte-identical)
@@ -89,7 +97,7 @@ def main():
     t0 = time.time(); rec = dict(kx=kx, ky=ky, W=W, om={})
     for n in heights:
         rec['om'][n] = slab_omegas(kx, ky, n, P, T, PR, scale).astype(np.float64)
-    done[i] = rec; CKPT.write_bytes(pickle.dumps(st))
+    done[i] = rec; _atomic_write(CKPT, pickle.dumps(st))
     print(f"[casimir] k-point {i+1}/{len(nodes)} done in {time.time()-t0:.0f}s "
           f"(|k|={np.hypot(kx,ky):.4f}); {len(nodes)-len(done)} remain", flush=True)
 

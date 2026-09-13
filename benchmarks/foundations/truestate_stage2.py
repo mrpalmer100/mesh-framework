@@ -506,7 +506,7 @@ def main(argv=None):
 
     while st['unit'] < len(units):
         if deadline and time.time() > deadline:
-            CKPT.write_bytes(pickle.dumps(st))
+            _atomic_write(CKPT, pickle.dumps(st))
             print(f"[--task chunk end at unit {st['unit']}/{len(units)}; "
                   "rerun to resume]", flush=True)
             return 3
@@ -517,7 +517,7 @@ def main(argv=None):
                 CKPT.unlink()
             return st['rc']
         if task:
-            CKPT.write_bytes(pickle.dumps(st))
+            _atomic_write(CKPT, pickle.dumps(st))
     if task and CKPT.exists():
         CKPT.unlink()
     return 0
@@ -525,3 +525,11 @@ def main(argv=None):
 
 if __name__ == "__main__":
     raise SystemExit(main(sys.argv))
+
+def _atomic_write(path, data):
+    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
+    import os
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_bytes(data)
+    os.replace(tmp, path)
+

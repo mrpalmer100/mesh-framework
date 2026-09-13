@@ -94,7 +94,7 @@ def load():
 
 
 def save(st):
-    CKPT.write_bytes(pickle.dumps(st))
+    _atomic_write(CKPT, pickle.dumps(st))
 
 
 def metrics(T, x):
@@ -856,3 +856,11 @@ if __name__ == '__main__':
         capture_singlet(load())
     else:
         main()
+
+def _atomic_write(path, data):
+    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
+    import os
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_bytes(data)
+    os.replace(tmp, path)
+

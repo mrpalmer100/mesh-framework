@@ -25,7 +25,7 @@ A machine-verified development of the Rope Hypothesis into the mesh framework: a
 >
 > **What makes it unusual is the discipline.** Every claim is registered with a pass/fail line drawn *before* the computation runs, and the failures are kept on permanent display rather than quietly dropped. As of this release:
 <!-- BEGIN GENERATED: corpus_stats -->
-*765 registered claims, 641 code-backed and passing, 121 Derived, 47 registered Failed and kept.*
+*766 registered claims, 641 code-backed and passing, 121 Derived, 47 registered Failed and kept.*
 <!-- END GENERATED: corpus_stats --> A dealbreaker, if one exists, should be findable in about five minutes — start with [`KNOWN_LIMITATIONS.md`](KNOWN_LIMITATIONS.md).
 >
 > **Where it is strong (the five-line version):** electromagnetism and optics derive from one wave equation on the weave; the classic gravity tests (light bending, Mercury, clock rates) come out exact; the fine-structure constant lands at 178 ppm from geometry; chemistry and the nuclear mass table are full mechanical layers; and the exact quantum ceiling (the Tsirelson bound) is a theorem. Full account: [`docs/WHERE_IT_STANDS.md`](docs/WHERE_IT_STANDS.md); how it unfolded: [`docs/SURPRISES.md`](docs/SURPRISES.md).
@@ -34,7 +34,7 @@ A machine-verified development of the Rope Hypothesis into the mesh framework: a
 
 > **Corpus state:**
 <!-- BEGIN GENERATED: status_breakdown -->
-765 registered claims (121 Derived, 556 Modeled, 4 EFT-constrained, 2 Conjecture, 7 Open, 47 Failed-and-kept, 28 registered); 641 code-backed.
+766 registered claims (121 Derived, 556 Modeled, 4 EFT-constrained, 2 Conjecture, 7 Open, 47 Failed-and-kept, 29 registered); 641 code-backed.
 <!-- END GENERATED: status_breakdown -->
 > Counts regenerate from `claims.yaml` — the authority is the registry, not this line.
 
@@ -56,7 +56,7 @@ A machine-verified development of the Rope Hypothesis into the mesh framework: a
 
 
 <!-- BEGIN GENERATED: current_release -->
-**Current release: v3.31.0** (5 Sep 2026), 765 claims.
+**Current release: v3.31.0** (5 Sep 2026), 766 claims.
 <!-- END GENERATED: current_release -->
 Headline: THE ENERGY BILL — priced and payable. The vacuum's constituents orbit at exactly c (two registered numbers multiplying to one), and the wave's dynamical share [0.62, 0.78] fits inside the matter sector's registered zero-point window (< 0.889): zero-point energy IS the winding's rotation. Full account: [`docs/history/RELEASE_NOTES_v3.26.77.md`](docs/history/RELEASE_NOTES_v3.26.77.md); prior: [`docs/history/RELEASE_NOTES_v3.26.76.md`](docs/history/RELEASE_NOTES_v3.26.76.md).
 

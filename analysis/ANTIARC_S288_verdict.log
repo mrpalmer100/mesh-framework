@@ -1,0 +1,4 @@
+ANTI-ARC-S288 -- sealed record: halt = s0 refused at 288 | points: 0
+s0 final: RMS 1.29e-07 (bar 1e-8) clos 1.9e-10 A2 0.0020880 (pin 0.0020880) om2 -1.110727 wsNyq 2.6e-07
+difference frequency -Om1/4 = -1.110721; detuning at 288: -6.11e-06; rounds used 60
+** S288-REFUSED (resolved floor at exact resonance) **

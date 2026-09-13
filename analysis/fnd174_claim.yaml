@@ -1,0 +1,55 @@
+id: FND-174
+title: 'COMMISSION ANTI-ARC / ANTI-ARC-X -- ANTI-FLAT (LICENSED): THE ANTI-ALIGNED
+  TWO-FREQUENCY FAMILY AT q = 5/4 MARCHES STRAIGHT THROUGH THE ALIGNED FAMILY''S
+  144x36 COLLAPSE REGION (20/20 GATED, A2 0.0020-0.0053, C1 f_dir RISE +0.017 vs
+  +0.15, RATE CONSTANT TO 0.1 PCT, om2 PINNED AT THE DIFFERENCE FREQUENCY): THE
+  COLLAPSE MECHANISM IS HANDEDNESS-SELECTIVE'
+status: registered
+note: 'Charter analysis/ANTIARC_charter_LOCKED.md (locked 2026-09-07 before any arc
+  point; forms ANTI-COLLAPSE / ANTI-FLAT / ANTI-REFUSED) with the ANTI-ARC-X amendment
+  (after the 12-point verdict and before any extension point: budget 20, the ANTI-FLAT
+  licence requiring the flat march to COVER the aligned collapse region, A2_max >= 0.0052
+  -- the GR54-X lesson applied in advance). Protocol: the registered stage-2c arc march
+  (ds 0.08, 144x36, credentialed sparse instrument, cached 144x36:arc:n2=5 pattern) from
+  FND-173''s polished 5/4 anti-aligned member (s0) and its a2-pinned continuation at
+  1.02 A2 (s1, gated); measurements sealed per point; executed on the author''s laptop;
+  verdict computed once per stage (12-point: ANTI-FLAT provisional-by-scope, A2_max
+  0.0039; 20-point: LICENSED). THE PROFILE: 20/20 gated (RMS 4.7e-9 to 9.9e-9, closure
+  passing); rate 2.1410e-3 -> 2.1428e-3 (+0.08 pct); V_pt 1.2104e-2 -> 1.2244e-2; f_dir
+  0.7589 -> 0.7771 (C1 rise +0.0172 vs +0.15); om2 -1.110632 -> -1.110635 (detuning from
+  the difference frequency -Om1/4 constant at +8.7e-5); A2 spacing 1.714e-4 per step
+  (5x the aligned families''); points 17-18 inside the aligned collapse window
+  0.0048-0.0052 with f_dir 0.7772 and rate 2.143e-3, identical to the rest. No turn
+  marker of any kind across a span 2.6x the aligned profiles'' length. WHAT IS
+  ESTABLISHED: at the same cell, grid, amplitude range and protocol, the aligned family
+  collapses (FND-163; displaced and sharpened at 54, FND-164) and the anti-aligned family
+  does not: the collapse mechanism is HANDEDNESS-SELECTIVE, and the discriminator for it
+  is now two-cell (FND-165) and two-handedness. The two level-2 sectors are different
+  dynamical objects end to end: the anti-aligned branch is born as a linear difference-
+  frequency resonance (FND-172), exists as a detuned member (FND-173) and continues as
+  a phase-dominated straight family (f_dir ~0.77 from the first point); the aligned
+  branch is born off the cell ladder (f_dir ~0.11) and collapses when it converts
+  arclength into phase motion (f_dir -> 0.30). DISPLAY: Sigma_wave along the family
+  2.5986 -> 2.6025 T0 (level-1-dominated) -- FND-139''s anti-aligned corner priced on its
+  object; max|v_total| 1.007 -> 1.017 (a third of the aligned family''s growth per unit
+  A2). NOT an artifact verdict: open beyond A2 0.0053. Named next-order (executed as
+  ANTI-ARC-54 and ANTI-ARC-S288): the same march at 144x54 and with s refined 2x; and
+  the f_dir contrast as a candidate discriminating variable for the second-order
+  coupling commission. Process: forms before data at both stages; seal held; a launcher
+  defect stalled the resumed run twice (fixed; no physics effect). Results
+  analysis/ANTIARC_results.md; verdict logs analysis/ANTIARC_verdict.log,
+  analysis/ANTIARC_X_verdict.log; checkpoint analysis/antiarc_ckpt.pkl. Granted by the
+  author 2026-09-11. [GRID-SCOPE RIDER 2026-09-11 (ANTI-ARC-54, analysis/ANTIARC54_
+  results.md), granted: this is a 144x36 statement. At 144x54 the seed pair gated by a
+  hair (RMS 9.4e-9, 1.0e-8) and the first arc point REFUSED at a residual floor of 1.1e-8,
+  10 pct above the bar, after 54 stationary rounds. Diagnostic: the anti-aligned family
+  carries an s-Nyquist weight (the gate''s wsNyq, fft axis 0 at NS//2) of 2.2e-3 at 144x54
+  (8.7e-4 at 144x36; aligned members ~1e-7) -- its phase-dominated motion (f_dir ~0.77)
+  is structure ALONG THE STRAND at the 144-point grid scale, which refining phi cannot
+  resolve (the weight rose). Grid-robustness of ANTI-FLAT is NOT established; the
+  handedness contrast at 36 stands as measured.] [CONTINUUM-STATUS RIDER 2026-09-12
+  (ANTI-ARC-S288): the flat family marched at 144x36 is the grid-detuned family of
+  FND-173''s rider; at 288x36 the seed refuses at exact resonance before any point. The
+  handedness contrast at 144x36 stands as an instrument fact (same bars: aligned
+  collapsed, anti-aligned did not); its continuum status is OPEN, and the specific
+  reason is on FND-173''s face.]'

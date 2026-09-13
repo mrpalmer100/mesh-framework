@@ -10,6 +10,14 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[2]))
 from benchmarks.foundations import qsweep_stage1 as q1            # noqa
 from benchmarks.foundations import sparsej_instrument as SJ       # noqa
 
+
+def _atomic_write(path, data):
+    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
+    import os
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_bytes(data)
+    os.replace(tmp, path)
+
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 CKPT = pathlib.Path('/tmp/brick2_ckpt.pkl')
 PAT = ROOT / 'analysis' / 'sparsej_pattern_144x36.pkl'
@@ -66,7 +74,7 @@ def main():
             out['M_jn'] = mode_M(w_pt, wn, *cfg['jn'])
             out['jn_line'] = cfg['jn']
         st[cell] = out
-        CKPT.write_bytes(pickle.dumps(st))
+        _atomic_write(CKPT, pickle.dumps(st))
         (ROOT / 'analysis' / 'brick2_ckpt.pkl').write_bytes(
             pickle.dumps(st))
         print(f"[{cell}] A2 {pin:.6f}  M(m={m},n={n}) = "

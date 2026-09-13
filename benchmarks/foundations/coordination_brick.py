@@ -33,7 +33,7 @@ CKPT = pathlib.Path('/tmp/coord_ckpt.pkl')
 
 
 def save(st):
-    CKPT.write_bytes(pickle.dumps(st))
+    _atomic_write(CKPT, pickle.dumps(st))
 
 
 def load():
@@ -404,3 +404,11 @@ if __name__ == '__main__':
     m = c5_isotropy()
     for k in sorted(m):
         print(f"  {k}: {m[k]:.5f}")
+
+def _atomic_write(path, data):
+    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
+    import os
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_bytes(data)
+    os.replace(tmp, path)
+

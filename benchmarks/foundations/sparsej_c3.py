@@ -16,6 +16,14 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[2]))
 from benchmarks.foundations import qsweep_stage1 as q1           # noqa
 from benchmarks.foundations import sparsej_instrument as SJ      # noqa
 
+
+def _atomic_write(path, data):
+    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
+    import os
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_bytes(data)
+    os.replace(tmp, path)
+
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 CKPT = pathlib.Path('/tmp/sjc3_ckpt.pkl')
 PAT = ROOT / 'analysis' / 'sparsej_pattern_144x36.pkl'
@@ -42,7 +50,7 @@ def main():
         # on every write makes any timed-out chunk resumable mid-point.
         def __setitem__(self, k, v):
             super().__setitem__(k, v)
-            CKPT.write_bytes(pickle.dumps(dict(self)))
+            _atomic_write(CKPT, pickle.dumps(dict(self)))
 
     st = PersistDict(pickle.loads(CKPT.read_bytes())
                      if CKPT.exists() else {})

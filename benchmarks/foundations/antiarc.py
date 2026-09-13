@@ -11,6 +11,14 @@ from benchmarks.foundations import qsweep_stage1 as q1            # noqa
 from benchmarks.foundations import sparsej_instrument as SJ       # noqa
 from benchmarks.foundations import truestate_stage2 as S2         # noqa
 
+
+def _atomic_write(path, data):
+    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
+    import os
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_bytes(data)
+    os.replace(tmp, path)
+
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 CKPT = ROOT / 'analysis' / 'antiarc_ckpt.pkl'
 SRC = ROOT / 'analysis' / 'antialigned_ckpt.pkl'
@@ -41,7 +49,7 @@ def main():
         def __setitem__(self, k, v):
             if isinstance(k, str) and k.startswith('ar|') and not k.endswith('-cum') and not k.endswith('-lastw'):
                 super().__setitem__(k + '-cum', self.get(k + '-cum', 0) + 1)
-            super().__setitem__(k, v); CKPT.write_bytes(pickle.dumps(dict(self)))
+            super().__setitem__(k, v); _atomic_write(CKPT, pickle.dumps(dict(self)))
     st = PersistDict(pickle.loads(CKPT.read_bytes()) if CKPT.exists() else {})
     T = q1.QTGrid(144, 36, N1, N2)
     P = st.setdefault('prof', dict(states=[], meas=[], halt=None))

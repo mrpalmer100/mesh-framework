@@ -49,7 +49,7 @@ def load():
 
 
 def save(st):
-    CKPT.write_bytes(pickle.dumps(st))
+    _atomic_write(CKPT, pickle.dumps(st))
 
 
 def solve96(T, st, key, x0, aux, deadline, rounds_max=60):
@@ -373,3 +373,11 @@ def main(argv):
 
 if __name__ == '__main__':
     raise SystemExit(main(sys.argv[1:]))
+
+def _atomic_write(path, data):
+    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
+    import os
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_bytes(data)
+    os.replace(tmp, path)
+

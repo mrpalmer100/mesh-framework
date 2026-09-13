@@ -478,7 +478,7 @@
   "branch": ""
  },
  "PM-001": {
-  "status": "Conjecture",
+  "status": "Failed",
   "markers": [
    "e_mass"
   ],
@@ -2943,6 +2943,43 @@
   "status": "Modeled",
   "markers": [
    "zp"
+  ],
+  "cat": "MENTION",
+  "why": "incidental vocabulary; no dependence (default rule)",
+  "branch": ""
+ },
+ "FND-166": {
+  "status": "registered",
+  "markers": [
+   "q"
+  ],
+  "cat": "MENTION",
+  "why": "incidental vocabulary; no dependence (default rule)",
+  "branch": ""
+ },
+ "FND-167": {
+  "status": "registered",
+  "markers": [
+   "q"
+  ],
+  "cat": "MENTION",
+  "why": "incidental vocabulary; no dependence (default rule)",
+  "branch": ""
+ },
+ "FND-170": {
+  "status": "registered",
+  "markers": [
+   "hbar",
+   "zp"
+  ],
+  "cat": "MENTION",
+  "why": "incidental vocabulary; no dependence (default rule)",
+  "branch": ""
+ },
+ "FND-171": {
+  "status": "registered",
+  "markers": [
+   "hbar"
   ],
   "cat": "MENTION",
   "why": "incidental vocabulary; no dependence (default rule)",

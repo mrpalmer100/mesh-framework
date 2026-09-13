@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 doi: 10.5281/zenodo.21430784
-title: "rope_solver: A Computational Toolkit for Rope Solitons"
+title: "The Mesh Programme (rope_solver): A Computational Toolkit for the Mesh Framework"
 message: "If you use this software, please cite it as below."
 version: 3.31.0
 repository-code: "https://github.com/mrpalmer100/mesh-framework"

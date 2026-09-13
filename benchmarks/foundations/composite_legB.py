@@ -21,6 +21,14 @@ from benchmarks.foundations import sparsej_instrument as SJ       # noqa
 from benchmarks.foundations import truestate_stage2 as S2         # noqa
 from benchmarks.foundations.s3r_replication import phi_zeropad    # noqa
 
+
+def _atomic_write(path, data):
+    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
+    import os
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_bytes(data)
+    os.replace(tmp, path)
+
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 CKPT = ROOT / 'analysis' / 'composite_legB_ckpt.pkl'
 PAT = ROOT / 'analysis' / 'sparsej_pattern_144x36.pkl'
@@ -69,7 +77,7 @@ def main():
             if isinstance(k, str) and k.startswith('lb|') and not k.endswith('-cum') and not k.endswith('-lastw'):
                 super().__setitem__(k + '-cum', self.get(k + '-cum', 0) + 1)
             super().__setitem__(k, v)
-            CKPT.write_bytes(pickle.dumps(dict(self)))
+            _atomic_write(CKPT, pickle.dumps(dict(self)))
     st = PersistDict(pickle.loads(CKPT.read_bytes()) if CKPT.exists() else {})
     for tag, N1, N2 in CELLS:
         NS = 48 * N1
