@@ -12,12 +12,20 @@ import numpy as np
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[2]))
 import benchmarks.foundations.whywind_stage3 as W3               # noqa: E402
 from benchmarks.foundations.qsweep_stage1 import (                # noqa: E402
+
     QTGrid, metrics, RMS_BAR, CLOSURE_BAR)
 
 CKPT = pathlib.Path('/tmp/p42_ckpt.pkl')
 CK2C = pathlib.Path('analysis/qsweep_stage2c_ckpt.pkl')
 CELLS = {'4/3': (3, 4), '5/3': (3, 5)}
 
+
+def _atomic_write(path, data):
+    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
+    import os
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_bytes(data)
+    os.replace(tmp, path)
 
 def load():
     return pickle.loads(CKPT.read_bytes()) if CKPT.exists() else {}
@@ -151,11 +159,4 @@ def render(st, st2c, required_only):
 
 if __name__ == '__main__':
     main()
-
-def _atomic_write(path, data):
-    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
-    import os
-    tmp = path.with_suffix(path.suffix + ".tmp")
-    tmp.write_bytes(data)
-    os.replace(tmp, path)
 

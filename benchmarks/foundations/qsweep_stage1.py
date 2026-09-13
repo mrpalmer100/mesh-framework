@@ -40,6 +40,14 @@ from benchmarks.foundations.traverse_steepened import (        # noqa: E402
     TGrid, RMS_BAR, SINTH_FLOOR, DS_FLOOR)
 from benchmarks.foundations.traverse96_scout import TGrid96    # noqa: E402
 
+
+def _atomic_write(path, data):
+    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
+    import os
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_bytes(data)
+    os.replace(tmp, path)
+
 CKPT = pathlib.Path('/tmp/qsweep_ckpt.pkl')
 CLOSURE_BAR = 1e-6          # halt-grade, FND-143 promotion (bar v3)
 PIN_TOL = 1e-8
@@ -856,11 +864,4 @@ if __name__ == '__main__':
         capture_singlet(load())
     else:
         main()
-
-def _atomic_write(path, data):
-    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
-    import os
-    tmp = path.with_suffix(path.suffix + ".tmp")
-    tmp.write_bytes(data)
-    os.replace(tmp, path)
 

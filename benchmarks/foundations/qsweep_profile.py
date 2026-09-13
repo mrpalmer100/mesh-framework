@@ -58,6 +58,13 @@ DS = 0.08
 BUDGET = 12
 
 
+def _atomic_write(path, data):
+    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
+    import os
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_bytes(data)
+    os.replace(tmp, path)
+
 def load():
     if CKPT.exists():
         return pickle.loads(CKPT.read_bytes())
@@ -118,11 +125,3 @@ def run(tag='4/3'):
 
 if __name__ == '__main__':
     run(sys.argv[1] if len(sys.argv) > 1 else '4/3')
-
-def _atomic_write(path, data):
-    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
-    import os
-    tmp = path.with_suffix(path.suffix + ".tmp")
-    tmp.write_bytes(data)
-    os.replace(tmp, path)
-

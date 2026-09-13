@@ -21,6 +21,14 @@ from benchmarks.foundations.traverse_steepened import TGrid, w0_margin, \
     RMS_BAR, SINTH_FLOOR, DS_FLOOR
 from benchmarks.foundations import truestate_stage2 as S2
 
+
+def _atomic_write(path, data):
+    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
+    import os
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_bytes(data)
+    os.replace(tmp, path)
+
 CKPT = pathlib.Path('/tmp/t96_ckpt.pkl')
 CK64 = pathlib.Path('/tmp/trav_ckpt.pkl')
 
@@ -449,11 +457,4 @@ def main(argv):
 
 if __name__ == '__main__':
     raise SystemExit(main(sys.argv[1:]))
-
-def _atomic_write(path, data):
-    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
-    import os
-    tmp = path.with_suffix(path.suffix + ".tmp")
-    tmp.write_bytes(data)
-    os.replace(tmp, path)
 

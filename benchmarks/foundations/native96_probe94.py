@@ -37,6 +37,14 @@ from benchmarks.foundations.traverse96_scout import TGrid96, interp_x, \
     lm_round, gn_exact
 from benchmarks.foundations import truestate_stage2 as S2
 
+
+def _atomic_write(path, data):
+    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
+    import os
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_bytes(data)
+    os.replace(tmp, path)
+
 CKPT = pathlib.Path('/tmp/p94_ckpt.pkl')
 N96CKPT = pathlib.Path('/tmp/n96_ckpt.pkl')
 A2_PIN = float(S2.RAMP_CONV[2])
@@ -373,11 +381,4 @@ def main(argv):
 
 if __name__ == '__main__':
     raise SystemExit(main(sys.argv[1:]))
-
-def _atomic_write(path, data):
-    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
-    import os
-    tmp = path.with_suffix(path.suffix + ".tmp")
-    tmp.write_bytes(data)
-    os.replace(tmp, path)
 

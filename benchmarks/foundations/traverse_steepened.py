@@ -29,6 +29,14 @@ from scipy.optimize import least_squares
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[2]))
 from benchmarks.foundations import truestate_stage2 as S2
 
+
+def _atomic_write(path, data):
+    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
+    import os
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_bytes(data)
+    os.replace(tmp, path)
+
 R1, R2, K1, K2, TBAR = S2.R1, S2.R2, S2.K1, S2.K2, S2.TBAR
 OM1_L1, LCELL, N1, N2 = S2.OM1_L1, S2.LCELL, S2.N1, S2.N2
 CKPT = pathlib.Path('/tmp/trav_ckpt.pkl')
@@ -554,11 +562,4 @@ def main(argv):
 
 if __name__ == '__main__':
     raise SystemExit(main(sys.argv[1:]))
-
-def _atomic_write(path, data):
-    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
-    import os
-    tmp = path.with_suffix(path.suffix + ".tmp")
-    tmp.write_bytes(data)
-    os.replace(tmp, path)
 

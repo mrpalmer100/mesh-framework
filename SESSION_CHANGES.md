@@ -882,3 +882,4 @@ cited from full-bar states only.
 - CITATION.cff title: "The Mesh Programme (rope_solver): A Computational Toolkit for the Mesh Framework" (author's wording).
 - Instrument incidents: laptop disk filled twice (SJ_MEMO=1 factor memos; then a launcher prune that used ls -t on memo DIRECTORIES). Launchers now default SJ_MEMO=jac, prune with ls -td / rm -rf, and read only the last log line; all 30 drivers write checkpoints atomically (tmp + os.replace). The pattern cache was truncated once and re-measured.
 - Sandbox reset 2026-09-13: tree rebuilt from GitHub (through FND-173) + the compute tree's recovery tarball; registry edits re-applied from the conversation record.
+- 2026-09-13: the atomic-write helper had been appended at end-of-file in 13 drivers without a ROOT line (CI: FND-145 NameError); helper now placed before first use in every driver, all parse.

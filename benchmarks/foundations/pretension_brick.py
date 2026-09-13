@@ -17,6 +17,14 @@ import scipy.sparse as sp
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from coordination_brick import cubic_network  # noqa: E402
 
+
+def _atomic_write(path, data):
+    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
+    import os
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_bytes(data)
+    os.replace(tmp, path)
+
 CKPT = pathlib.Path('/tmp/pret_ckpt.pkl')
 
 
@@ -181,11 +189,4 @@ if __name__ == '__main__':
         r = v1_classify(z=z, tau=t)
         print(f"  z={z} tau={t}: p_dyn = {r['p_dyn']:.3f}  "
               f"c = {r['c']:.3f}  [{r['cls']}]")
-
-def _atomic_write(path, data):
-    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
-    import os
-    tmp = path.with_suffix(path.suffix + ".tmp")
-    tmp.write_bytes(data)
-    os.replace(tmp, path)
 

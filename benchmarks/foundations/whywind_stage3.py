@@ -23,6 +23,14 @@ from benchmarks.foundations.qsweep_stage1 import (                # noqa: E402
     QTGrid, metrics, RMS_BAR, CLOSURE_BAR)
 from benchmarks.foundations import traverse96_scout as T96        # noqa: E402
 
+
+def _atomic_write(path, data):
+    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
+    import os
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_bytes(data)
+    os.replace(tmp, path)
+
 CK2C = pathlib.Path('analysis/qsweep_stage2c_ckpt.pkl')
 CKPT = pathlib.Path('/tmp/s3w_ckpt.pkl')
 CELLS = {'4/3': (3, 4), '5/3': (3, 5)}
@@ -439,11 +447,4 @@ if __name__ == '__main__':
         if '--budget' in sys.argv:
             b = int(sys.argv[sys.argv.index('--budget') + 1])
         campaign(b)
-
-def _atomic_write(path, data):
-    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
-    import os
-    tmp = path.with_suffix(path.suffix + ".tmp")
-    tmp.write_bytes(data)
-    os.replace(tmp, path)
 

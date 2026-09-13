@@ -37,6 +37,14 @@ from benchmarks.foundations.traverse96_scout import TGrid96, \
 from benchmarks.foundations import truestate_stage2 as S2
 
 
+def _atomic_write(path, data):
+    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
+    import os
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_bytes(data)
+    os.replace(tmp, path)
+
+
 def resumable_solve(T, st, key, x0, pin_mode, aux, deadline,
                     rounds_max=160, nfev=3):
     """SCHEDULING FORK of traverse96_scout.resumable_solve (2026-08-20,
@@ -928,11 +936,4 @@ def main(argv):
 
 if __name__ == '__main__':
     raise SystemExit(main(sys.argv[1:]))
-
-def _atomic_write(path, data):
-    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
-    import os
-    tmp = path.with_suffix(path.suffix + ".tmp")
-    tmp.write_bytes(data)
-    os.replace(tmp, path)
 

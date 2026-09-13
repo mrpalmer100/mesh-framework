@@ -32,6 +32,14 @@ from scipy.optimize import least_squares
 from scipy.optimize._numdiff import approx_derivative, group_columns
 from scipy.sparse import lil_matrix, csr_matrix
 
+
+def _atomic_write(path, data):
+    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
+    import os
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_bytes(data)
+    os.replace(tmp, path)
+
 S1 = 1.0 / 3.0
 S2 = (15 + 2 * np.sqrt(30)) / 35.0
 C1, C2 = np.sqrt(S1), np.sqrt(S2)
@@ -525,11 +533,4 @@ def main(argv=None):
 
 if __name__ == "__main__":
     raise SystemExit(main(sys.argv))
-
-def _atomic_write(path, data):
-    """write to a temp file then rename: a full disk can truncate the temp file, never the checkpoint (2026-09-13)."""
-    import os
-    tmp = path.with_suffix(path.suffix + ".tmp")
-    tmp.write_bytes(data)
-    os.replace(tmp, path)
 
