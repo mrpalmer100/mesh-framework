@@ -22,6 +22,13 @@ commitments D1-D5 of the charter:
 """
 import sys, time, pathlib, pickle
 import numpy as np
+import tempfile as _tempfile
+
+
+def _memo_dir():
+    """platform memo directory: /tmp on Unix, %TEMP% on Windows (2026-09-13, for the Windows compute box)."""
+    return pathlib.Path(_tempfile.gettempdir())
+
 import scipy.sparse as sp
 import scipy.sparse.linalg as spl
 
@@ -98,7 +105,7 @@ class SparseJac:
         hk = hashlib.sha1(x.tobytes() +
                           np.int64(self.S.nnz).tobytes()
                           ).hexdigest()[:16]
-        mp = pathlib.Path(f'/tmp/sjjac_{hk}.pkl')
+        mp = _memo_dir() / f'sjjac_{hk}.pkl'
         if mp.exists():
             J, r0 = pickle.loads(mp.read_bytes())
             return J, r0
@@ -449,7 +456,7 @@ class BandedTorusSolver:
         import hashlib
         hk = hashlib.sha1(J.data.tobytes() + np.float64(lam).tobytes()
                           ).hexdigest()[:16]
-        self._mp = pathlib.Path(f'/tmp/sjfac_{hk}.pkl')
+        self._mp = _memo_dir() / f'sjfac_{hk}.pkl'
         d = pathlib.Path(str(self._mp) + '.d')
         if (d / 'ok').exists():
             self.cb = np.load(d / 'cb.npy')

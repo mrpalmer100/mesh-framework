@@ -1,0 +1,33 @@
+KERNEL-CONT -- verdict from the sealed checkpoint (run once)
+
+STAGE A (144x36, cell 4/3): floored state RMS 6.57e-07 om2 -1.480935 pin 0.0018791; near-null |Jc|/row 8.12e-05
+         b       RMS     clos        om2 rounds  gated
+    -0.200  7.88e-09  1.1e-10  -1.481022     15  GATED
+    -0.100  8.75e-09  2.8e-10  -1.480993      8  GATED
+    -0.050  1.02e-09  2.1e-11  -1.480988      9  GATED
+    +0.000  6.15e-07  3.8e-09  -1.480939      4  -
+    +0.050  8.97e-09  2.3e-10  -1.480985      8  GATED
+    +0.100  5.29e-09  2.1e-10  -1.481015      6  GATED
+    +0.200  9.40e-09  2.3e-10  -1.481016     14  GATED
+    +0.300  9.09e-09  2.0e-10  -1.481017     22  GATED
+  control c1: b=0 RMS 6.15e-07 vs GN floor 6.57e-07 -> floor reproduced
+  gated b values: [-0.2, -0.1, -0.05, 0.05, 0.1, 0.2, 0.3]
+
+STAGE B (288x36, cell 5/4): floored state RMS 1.29e-07 om2 -1.110727 pin 0.0020880; near-null |Jc|/row 3.89e-05
+         b       RMS     clos        om2 rounds  gated
+    -0.200  3.85e-09  2.1e-10  -1.110730     38  GATED
+    -0.167  1.54e-08  3.1e-10  -1.110730     40  -
+    -0.133  1.85e-06  9.9e-08  -1.110729     40  -
+    -0.100  6.63e-09  4.1e-11  -1.110728     23  GATED
+    -0.050  6.92e-09  3.9e-11  -1.110728     27  GATED
+    +0.000  7.17e-08  1.9e-10  -1.110727     13  -
+    +0.050  2.91e-08  2.2e-09  -1.110727     40  -
+    +0.100  2.65e-06  1.2e-07  -1.110727      4  -
+    +0.200  1.39e-08  5.0e-10  -1.110728     32  -
+    +0.300  2.64e-08  1.2e-09  -1.110729     40  -
+  control c1: b=0 RMS 7.17e-08 vs GN floor 1.29e-07 -> floor reproduced
+  gated b values: [-0.2, -0.1, -0.05]
+
+control c2 (analysis/antialigned/kc_c2.pkl): aligned 4/3 member under the bordered solve at b=0: RMS 1.89e-9 -> 6.5e-11, |dx|/|x| 1.7e-6 -> unchanged, GATED. (1,1)-subspace smallest direction 2.3e-2 vs 8e-5 / 4e-5 at the resonant states.
+
+** KC-MEMBER **  stage B gated at b = [-0.2, -0.1, -0.05]; c1 and c2 pass.

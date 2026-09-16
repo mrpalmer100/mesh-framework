@@ -67,14 +67,17 @@ def near_null(T, J, x0, iom, exclude=(), ks=1, m=1):
 
 
 def bordered_gn(T, x, pin, c, b_target, x_ref, sj, bs, rounds=30, PW=50.0, lam=1e-9,
-                stop_rms=None, log=print):
+                stop_rms=None, log=print, pin_mode='a2', aux=None):
     """Gauss-Newton with the bordering constraint c^T (x - x_ref) = b_target. Same acceptance
-    ladder in spirit as gn_sparse (fractions 1, .5, .25, .1), same bars read by the caller."""
+    ladder in spirit as gn_sparse (fractions 1, .5, .25, .1), same bars read by the caller.
+    pin_mode/aux: 'a2' with aux = pin (default), or 'arc' with aux = (xb, t, ds) for the
+    stage-2c arc constraint (KERNEL-MARCH, 2026-09-16)."""
     stop_rms = stop_rms or q1.RMS_BAR
+    if aux is None: aux = pin
     n = len(x); d2 = np.ones(n)
     hist = []
     for it in range(rounds):
-        J, r0 = sj(x, 'a2', pin, PW); J = sp.csr_matrix(J)
+        J, r0 = sj(x, pin_mode, aux, PW); J = sp.csr_matrix(J)
         bs.factor(J, lam, d2)
         y1 = bs.solve(J.T @ r0)                    # solves (J^T J + lam D) y1 = -J^T r0
         y2 = bs.solve(-c)                          # solves (J^T J + lam D) y2 =  c
@@ -86,20 +89,20 @@ def bordered_gn(T, x, pin, c, b_target, x_ref, sj, bs, rounds=30, PW=50.0, lam=1
             # PREDICTOR: the first move along the kernel is a prescribed displacement to the
             # target b, taken unconditionally; the corrector rounds that follow reduce the
             # residual at fixed b through the acceptance ladder.
-            x = x + dx; ft = float(np.linalg.norm(T.wres(x, 'a2', pin, PW))); rms = T.field_rms(x, 'a2', pin)
+            x = x + dx; ft = float(np.linalg.norm(T.wres(x, pin_mode, aux, PW))); rms = T.field_rms(x, pin_mode, aux)
             b_now = float(c @ (x - x_ref)); hist.append((it, rms, ft, b_now, mu))
             log(f"      [kc {it}: PREDICTOR to b {b_now:+.3e}  RMS {rms:.2e}  wres {ft:.2e}  mu {mu:+.2e}]")
             continue
         for a_ in (1.0, 0.5, 0.25, 0.1, 0.03):
             xt = x + a_ * dx
-            ft = float(np.linalg.norm(T.wres(xt, 'a2', pin, PW)))
+            ft = float(np.linalg.norm(T.wres(xt, pin_mode, aux, PW)))
             if ft < f0:
                 acc = (a_, xt, ft); break
         if acc is None:
             log(f"      [kc {it}: no accepted step; |mu| {abs(mu):.2e}  b {float(c @ (x - x_ref)):+.3e}]")
             break
         a_, x, ft = acc
-        rms = T.field_rms(x, 'a2', pin); b_now = float(c @ (x - x_ref))
+        rms = T.field_rms(x, pin_mode, aux); b_now = float(c @ (x - x_ref))
         hist.append((it, rms, ft, b_now, mu))
         log(f"      [kc {it}: RMS {rms:.2e}  wres {ft:.2e}  b {b_now:+.3e}  mu {mu:+.2e}  frac {a_}  df {100 * (1 - ft / f0):.1f}%]")
         if rms < stop_rms:
