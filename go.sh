@@ -5,6 +5,10 @@
 DRV="$1"; NAME=$(basename "$DRV" .py); mkdir -p logs
 PY=$HOME/rope-venv/bin/python; export SJ_MEMO=${SJ_MEMO:-jac}
 pkill -f "$NAME" 2>/dev/null; sleep 1
+# rotate a log whose last line is a terminal line (a previous run's), so a resumed run is not stopped by it
+if [ -f "logs/$NAME.log" ] && tail -1 "logs/$NAME.log" | grep -qE "COMPLETE|REFUSED|RESOLVED|run the verdict"; then
+  n=1; while [ -f "logs/${NAME}_run$n.log" ]; do n=$((n+1)); done; mv "logs/$NAME.log" "logs/${NAME}_run$n.log"
+fi
 nohup bash -c '
   fails=0
   while true; do

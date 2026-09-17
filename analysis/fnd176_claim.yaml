@@ -1,0 +1,46 @@
+id: FND-176
+title: 'COMMISSION KERNEL-MARCH / KERNEL-MARCH-X -- KM-FLAT (LICENSED): THE ANTI-ALIGNED
+  5/4 FAMILY, MARCHED IN THE CONTINUUM ON THE s-RESOLVED 288x36 CHART WITH THE BORDERED
+  SOLVER, IS FLAT THROUGH THE ALIGNED COLLAPSE REGION (30/30 GATED AT RMS < 2.4e-9, A2
+  0.0022-0.0054, C1 f_dir RISE +0.0004 vs +0.15, om2 AT EXACT RESONANCE): THE COLLAPSE
+  MECHANISM IS HANDEDNESS-SELECTIVE AT TWO s-RESOLUTIONS; THE KERNEL COORDINATE IS
+  CONSERVED ALONG THE FAMILY; THE RESONANCE SLOWLY REGULARIZES (sigma x8.7)'
+status: registered
+note: 'Charter analysis/KERNEL_MARCH_charter_LOCKED.md (locked 2026-09-16 before any arc
+  point; the KERNEL-MARCH-X amendment locked after the 20-point verdict KM-SCOPE and
+  before any extension point, licence A2_max >= 0.0053 unchanged). Protocol: 288x36,
+  cell 5/4; s0 = FND-175''s b = -0.10 member; s1 a bordered a2-pinned member at 1.02 A2
+  (gated in 2 rounds); then the stage-2c arc march at ds 0.08 with every arc solve
+  BORDERED (kernel_continuation.bordered_gn generalized to the arc constraint; the near-
+  null direction recomputed at each predictor state in the (1,1) subspace; the kernel
+  coordinate carried along the tangent); measurements sealed per point including the
+  kernel step b_n and sigma_n = |J c_n|/row norm. Executed on the author''s Windows box;
+  sealed checkpoint analysis/kernel_march_ckpt.pkl; verdicts once per stage (analysis/
+  KERNEL_MARCH_verdict.log: KM-SCOPE at 20 points, A2_max 0.00428; analysis/KERNEL_MARCH_
+  X_verdict.log: the 30-point verdict). THE PROFILE: 30/30 gated, RMS 5.9e-10 to 2.4e-9,
+  closure passing; A2 0.00219 -> 0.00537 (spacing 1.10e-4 per step); rate 1.3860e-3 ->
+  1.3716e-3 (-1.0 pct); V_pt 7.695e-3 -> 7.639e-3 (-0.7 pct); f_dir 0.6037 -> 0.6050 (C1
+  rise +0.0004 vs +0.15; the coarse chart''s 0.76-0.78 was exaggerated by its grid
+  detuning); om2 at exact resonance throughout (detuning -7e-6 -> -2.5e-5 from -Om1/4);
+  points 24-28 inside the aligned collapse window 0.0048-0.0053 with f_dir 0.6048-0.6050
+  and rate 1.372e-3 to 1.373e-3, indistinguishable from the rest; no turn marker of any
+  kind. VERDICT KM-FLAT, LICENSED. WHAT IS ESTABLISHED: (1) the collapse mechanism is
+  handedness-selective IN THE CONTINUUM -- FND-174 (measured on a grid-detuned family) is
+  upgraded and its continuum-status rider discharged: same cell, amplitude range and bars
+  on the resolved chart, the aligned family collapses (FND-163/164) and the anti-aligned
+  family does not; (2) the kernel coordinate is CONSERVED along the family (b_step ~1e-8
+  per point over 30 points): FND-175''s one-parameter freedom is a label the march
+  carries, not a direction it wanders in; (3) the resonance slowly REGULARIZES: sigma
+  grows smoothly and monotonically 2.7e-4 -> 2.4e-3 (x8.7) over the span with no
+  saturation, extrapolating to the 1e-2 regular-branch level near A2 ~0.012 -- the
+  degeneracy is exact only at small amplitude (a prediction, tested by KERNEL-MARCH-2);
+  (4) the difference-frequency law (FND-172) acquires a small negative second-order
+  amplitude shift on the resolved chart (-7e-6 -> -2.5e-5), of the sign Q2''s pencil gave;
+  recorded as a number, not identified; (5) instrument: the bordered solver on the arc
+  constraint delivers RMS ~6e-10 routinely where the credentialed GN solver floored at
+  1.3e-7 at this resonance; its roughness in b (KERNEL-CONT) did not show because the
+  march holds b fixed. NAMED NEXT-ORDER: KERNEL-MARCH-2 (the family to A2 ~0.012 with GN
+  controls every 10th point: does the branch regularize, and does it collapse once
+  regular?); the mechanism charter for the second-order coupling with f_dir as the
+  discriminating variable (0.11 -> 0.30 at the aligned collapse vs 0.60 flat). Results
+  analysis/KERNEL_MARCH_results.md. Granted by the author 2026-09-17.'

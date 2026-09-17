@@ -6,7 +6,7 @@ you have found it in under five minutes.
 
 *Revised against the current registry.*
 <!-- BEGIN GENERATED: corpus_stats -->
-*766 registered claims, 641 code-backed and passing, 121 Derived, 47 registered Failed and kept.*
+*768 registered claims, 641 code-backed and passing, 121 Derived, 47 registered Failed and kept.*
 <!-- END GENERATED: corpus_stats -->
 
 
