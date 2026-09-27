@@ -86,7 +86,7 @@ vacuum's energy is the floor, not the basement — and there is no stairwell
 below the floor.**
 
 What the discovery buys instead is **explanation and prediction**. If
-zero-point energy is mechanically the winding's rotation, then quantities
+zero-point energy is mechanically the winding's rotation (in the budget sense; the spectral zero-point that Casimir and Sakharov induction act on is a different object, FND-178), then quantities
 standard physics treats as brute facts become computable in principle: the
 Casimir force's strength, the vacuum fluctuation spectrum, and possibly the
 shape of the cosmological-constant puzzle — most of the vacuum's energy sits

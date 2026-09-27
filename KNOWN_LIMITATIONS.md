@@ -6,7 +6,7 @@ you have found it in under five minutes.
 
 *Revised against the current registry.*
 <!-- BEGIN GENERATED: corpus_stats -->
-*774 registered claims, 641 code-backed and passing, 121 Derived, 47 registered Failed and kept.*
+*775 registered claims, 641 code-backed and passing, 121 Derived, 47 registered Failed and kept.*
 <!-- END GENERATED: corpus_stats -->
 
 
@@ -36,7 +36,7 @@ both formation readings computed, FND-131), and KBSAT was **executed by its own
 condition 1**: the static winding is unreachable across the entire admissible
 box, so **the winding is a rotating-wave state, forced not adopted** (level-1
 wave at √(3/2) c; material points orbiting at exactly c; energy bill payable
-inside FND-MATTER-041's zero-point window, FND-132).
+inside FND-MATTER-041's zero-point window (budget sense; NAME_REGISTRY 2026-09-27), FND-132).
 
 **The standing limitations of the fine sector, current:**
 
@@ -291,7 +291,7 @@ the FND-110 substructure suspension, one gate under three sectors. And the nucle
 classical semi-empirical mass formula is derived across all five terms, leaving only the
 genuinely quantum shell/pairing structure at a few MeV RMS -- not the classical mass table,
 which is closed.) Their terminal diagnoses name the same missing
-layer: quantum zero-point / shell structure (FND-BOUND-001). The classical programme's boundary is one boundary. It is located from four
+layer: quantum zero-point (spectral sense) / shell structure (FND-BOUND-001). The classical programme's boundary is one boundary. It is located from four
 directions and crossed from none; constructing the quantum layer requires hbar (underived)
 and the absolute mesh scale (measurement-fixed at the M-point, not derived -- FND-MATTER-003/044).
 A standing research directive for

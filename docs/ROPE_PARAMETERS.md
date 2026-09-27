@@ -254,7 +254,8 @@ this corpus spent 1 August correcting.
   creates windings, the mesh analogue of pair creation. One unpinned input, the kink width
   w (registered regime 0.8 to 2.8): window [1.1e15, 3.2e18] V/m across the three scale sets,
   above the highest field applied to vacuum (9.1e14 V/m), below QED's Schwinger field
-  (1.32e18 V/m) over most of the range. A discriminator candidate, pending the census.
+  (1.32e18 V/m) over most of the range. Census tier T2 (ELEC-101): a window, not a number, until the strand mass scale is pinned in
+  electronvolts; then it is a T1 candidate.
 
 ## 6. What is *not* registered
 

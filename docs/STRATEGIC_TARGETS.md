@@ -375,3 +375,24 @@ limit, not a breakdown. DISCRIMINATOR CANDIDATE for the census pass (predictions
 next laser generation. Registered as FND-182 (granted 2026-09-27; FND-031 language rider applied);
 results analysis/KIN_BREAKDOWN_results.md. Language debt: qualify E_crit as the
 linearity limit in ROPE_PARAMETERS.
+
+## L. THE CENSUS PASS OVER PREDICTIONS 20 TO 34 (2026-09-27, reading only)
+
+Entries 20 to 22 and 26 to 34 tiered for the first time under the ELEC-062
+criteria unrelaxed: firm count unchanged (P6; the P20 adjoint pin armed; the
+k-string adjudicated); seven T2, two T3, four T4, one T5, P22 folds into P6.
+FND-182's charge-creation window meets C2, C3, C4 and D1 to D3, and meets C1
+as a bounded window whose null branch falsifies; whether the census's C1
+admits such a window is the author's ruling, asked not made. If admitted, the
+firm count becomes three. RULED: C1 does not admit a window; FND-182 is T2 until
+the strand mass scale is pinned. Registered as ELEC-101 (granted 2026-09-27);
+results analysis/CENSUS_P20_34_results.md.
+
+## M. THE ZERO-POINT NAMING SWEEP (2026-09-27)
+
+71 claims use "zero-point"; tagged 49 spectral, 8 budget, 14 mixed (review owed
+at the 3.32.0 cut). The two names are bound in NAME_REGISTRY (spectral: the
+FND-109 half-sum; budget: the dynamical share of the energy bill), "zero-point"
+alone reserved for the spectral sense, and the qualifier applied at the front
+door (README, KNOWN_LIMITATIONS, WHERE_IT_STANDS, VACUUM_WAVE_PLAIN_LANGUAGE).
+Record: analysis/ZEROPOINT_SWEEP_results.md. No registered text edited.

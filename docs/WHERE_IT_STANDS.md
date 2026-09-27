@@ -153,7 +153,7 @@ bounds again (kb ≤ 0.079, r_s ≤ 0.187), each with its named gap. The standin
 ontology: **the vacuum's winding is a rotating-wave state** — forced by three
 independently-earned registrations — with the level-1 wave at √(3/2) c, the
 material orbit at exactly c, and the energy bill payable inside the registered
-zero-point window. Sharpest open items: the rotating-background correction to
+zero-point window (budget sense, FND-178). Sharpest open items: the rotating-background correction to
 the anchors, the exact composite wave, and the magic angle's unexplained
 triple duty. See KNOWN_LIMITATIONS.md §fine-level and
 docs/VACUUM_WAVE_PLAIN_LANGUAGE.md.

@@ -255,3 +255,17 @@ two unit classes apart.
 NO NEW SYMBOL for the dynamical share [0.615, 0.779]: it is a derived
 ratio of Sigma_wave (excess over booked / total) and is quoted as "the
 dynamical share (FND-132)", no letter assigned.
+
+
+## Addendum (2026-09-27): "zero-point", two objects, two names (FND-178; sweep analysis/ZEROPOINT_SWEEP_results.md)
+
+  zero-point energy (spectral) / the spectral zero-point: the FND-109 half-sum over
+    carried modes, lattice-regulated, hbar by import (GRV-014). The object Sakharov
+    induction (GRV-021/025) and the Casimir force (FND-178) act on. "Zero-point" alone
+    means this.
+  zero-point share (budget) / the budget zero-point: the dynamical share of the vacuum
+    energy bill, excess over booked / total (FND-132; FND-MATTER-041's window; Prediction
+    32; re-priced at FND-169). No symbol, per the standing rule above.
+  RULE: new text qualifies the term whenever the sentence does not fix the sense.
+  CASIMIR-F3 (FND-178) showed the budget object carries no plate force; the two are not
+  one object and are never to be equated by adjacency of the word.
