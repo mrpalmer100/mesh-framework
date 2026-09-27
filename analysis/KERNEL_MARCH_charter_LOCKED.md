@@ -38,3 +38,17 @@ Sigma_wave; max|v|.
 No rescue; q-sweep bars (RMS 1e-8, closure 1e-6); the bordered solver as
 credentialed by KERNEL-CONT (one machine, the PC); verdict in the session;
 FND-173/174/175 riders inherited.
+
+## AMENDMENT KERNEL-MARCH-X (2026-09-17, after the 20-point verdict KM-SCOPE,
+## before any extension point): the 20-point march (20/20 gated, C1 rise
+## +0.0001, A2 0.0022 -> 0.0043) gains A2 at 1.10e-4 per step on 288x36 (vs
+## 1.71e-4 at 144x36) and stopped short of the 0.0053 licence. Budget extended
+## to 30 points (10 more at ds 0.08; ~0.0054 at this spacing), same protocol,
+## same seal, same forms; the verdict re-rendered ONCE on the 30-point profile:
+##   KM-FLAT (licensed): rise < +0.15, 30/30 gated, A2_max >= 0.0053
+##   KM-COLLAPSE:        rise >= +0.15
+##   KM-SCOPE (again):   rise < +0.15, A2_max < 0.0053
+##   KM-REFUSED:         fewer than 12 gated (moot: 20 already)
+## Display added: sigma along the family (the degeneracy weakened 2.7e-4 ->
+## 1.6e-3 over the first 20 points; does it continue to lift?) and the amplitude
+## at which sigma reaches 1e-2 (the branch becoming regular), if reached.

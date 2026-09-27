@@ -24,7 +24,7 @@ CKPT = ROOT / 'analysis' / 'kernel_march_ckpt.pkl'
 SRC = ROOT / 'analysis' / 'kernel_cont_ckpt.pkl'
 PAT = ROOT / 'analysis' / 'sparsej_pattern_144x36.pkl'
 NS, NP, N1, N2 = 288, 36, 4, 5
-DS, NPTS, ROUNDS = 0.08, 20, 60
+DS, NPTS, ROUNDS = 0.08, 90, 60   # KERNEL-MARCH-2: budget 90 (charter 2026-09-17); GN control every 10th point
 
 
 def kernel_dir(T, x, pin, pin_mode, aux):
@@ -94,8 +94,14 @@ def main():
     rms = float(T.field_rms(x)); clos = float(T.closure_max(x)); gated = rms < q1.RMS_BAR and clos < q1.CLOSURE_BAR
     if gated:
         m = measure(T, xb, x, DS); m['b_step'] = float(np.asarray(R['c'], float) @ (x - xb)); m['sigma'] = R['sigma']
+        if (i + 1) % 10 == 0:
+            # GN CONTROL (KERNEL-MARCH-2): does the PLAIN solver gate here? Same pinned problem, from the
+            # gated state, 10 rounds; recorded, not used for the march.
+            xg = SJ.gn_sparse(T, x, 'arc', aux, sj, bs, rounds=10, st={}, key=f'gnctl{i}')
+            m['rms_gn'] = float(T.field_rms(xg)); m['gn_gates'] = bool(m['rms_gn'] < q1.RMS_BAR and T.closure_max(xg) < q1.CLOSURE_BAR)
         P['states'].append(x); P['meas'].append(m); R['done'] = True; save()
-        print(f"[km p{i}] GATED  A2 {m['A2']:.7f}  sigma {R['sigma']:.1e}  (measurements sealed)", flush=True); return
+        extra = f"  GN-control rms {m['rms_gn']:.1e} {'GATES' if m['gn_gates'] else 'floors'}" if 'rms_gn' in m else ''
+        print(f"[km p{i}] GATED  A2 {m['A2']:.7f}  sigma {R['sigma']:.1e}  (measurements sealed){extra}", flush=True); return
     if len(R['hist']) >= ROUNDS or hist == []:
         R['done'] = True; P['halt'] = f'p{i} refused'; save()
         print(f"[km] point {i} REFUSED (RMS {rms:.1e} after {len(R['hist'])} rounds)", flush=True); return

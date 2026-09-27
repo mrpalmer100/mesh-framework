@@ -22,7 +22,8 @@ level-2 injection lives), NOT by a global smallest-singular-value search, which 
 Nyquist grid modes (ANTI-ALIGNED Q2, recorded caution). The om2 column and the pattern-phase
 partner are projected out.
 
-Provenance: built 2026-09-12 as the named next-order of ANTI-ARC-S288. Uncredentialed until
+Provenance: built 2026-09-12 as the named next-order of ANTI-ARC-S288; fault-13 remedy (de-aliased
+corrector, Nyquist bar) 2026-09-23; lam ladder and floor detector 2026-09-24/27. Uncredentialed until
 its own commission (KERNEL-CONT) sets bars and controls; use for exploration and for that
 commission only.
 """
@@ -31,6 +32,18 @@ import scipy.sparse as sp
 
 from benchmarks.foundations import sparsej_instrument as SJ
 from benchmarks.foundations import qsweep_stage1 as q1
+
+
+def dealias_s(T, dx, kmax_frac=1.0 / 3.0):
+    """FAULT-13 REMEDY (2026-09-23): remove the high s-harmonics (|k| > kmax_frac * NS) from a step
+    in the th and pt fields, so the corrector cannot gate by adding grid-scale structure along the
+    strand. The om2 component and the T field are untouched."""
+    NS, NP = T.NS, T.NP; N = NS * NP; out = dx.copy(); kmax = int(kmax_frac * NS)
+    for f in (0, 1):
+        F = np.fft.rfft(dx[f * N:(f + 1) * N].reshape(NS, NP), axis=0)
+        F[kmax + 1:, :] = 0.0
+        out[f * N:(f + 1) * N] = np.fft.irfft(F, n=NS, axis=0).ravel()
+    return out
 
 
 def harmonic_basis(T, x0, ks, m, iom):
@@ -67,46 +80,77 @@ def near_null(T, J, x0, iom, exclude=(), ks=1, m=1):
 
 
 def bordered_gn(T, x, pin, c, b_target, x_ref, sj, bs, rounds=30, PW=50.0, lam=1e-9,
-                stop_rms=None, log=print, pin_mode='a2', aux=None):
+                stop_rms=None, log=print, pin_mode='a2', aux=None, dealias=False, nyq_bar=None,
+                stall_rounds=6, stall_df=1e-3, state=None):
     """Gauss-Newton with the bordering constraint c^T (x - x_ref) = b_target. Same acceptance
     ladder in spirit as gn_sparse (fractions 1, .5, .25, .1), same bars read by the caller.
     pin_mode/aux: 'a2' with aux = pin (default), or 'arc' with aux = (xb, t, ds) for the
-    stage-2c arc constraint (KERNEL-MARCH, 2026-09-16)."""
+    stage-2c arc constraint (KERNEL-MARCH, 2026-09-16).
+    dealias=True (FAULT-13 remedy, 2026-09-23): every step is projected onto s-harmonics
+    |k| <= NS/3 before acceptance. nyq_bar: the solve is not reported converged unless the
+    gate's wsNyq <= nyq_bar (hist entries carry it as their 6th field).
+    On a rejected step (2026-09-24/27): lam escalates x10 within the round, to 1e-5 at most
+    (four rungs), before no-step is declared; lam relaxes x0.5 on success. A FLOOR is declared
+    after stall_rounds consecutive accepted rounds each below stall_df relative decrease --
+    the credentialed solver's stall trigger, so a floored solve does not burn its budget."""
     stop_rms = stop_rms or q1.RMS_BAR
     if aux is None: aux = pin
+    if state is not None: lam = float(state.get('lam', lam))   # lam persists across one-round-per-invocation drivers
     n = len(x); d2 = np.ones(n)
-    hist = []
-    for it in range(rounds):
-        J, r0 = sj(x, pin_mode, aux, PW); J = sp.csr_matrix(J)
+    hist = []; stall = 0
+
+    def _step(J, r0, lam):
         bs.factor(J, lam, d2)
         y1 = bs.solve(J.T @ r0)                    # solves (J^T J + lam D) y1 = -J^T r0
         y2 = bs.solve(-c)                          # solves (J^T J + lam D) y2 =  c
         gap = b_target - float(c @ (x - x_ref))
         mu = (gap - float(c @ y1)) / float(c @ y2)
         dx = y1 + mu * y2
+        if dealias:
+            dx = dealias_s(T, dx)
+        return dx, mu, gap
+
+    for it in range(rounds):
+        J, r0 = sj(x, pin_mode, aux, PW); J = sp.csr_matrix(J)
+        dx, mu, gap = _step(J, r0, lam)
+        log(f"      [kc {it}: J assembled; factored at lam {lam:.0e}; |dx| {float(np.linalg.norm(dx)):.2e}; gap {gap:+.2e}]")
         f0 = float(np.linalg.norm(r0)); acc = None
-        if it == 0 and abs(gap) > 1e-12:
+        if it == 0 and abs(gap) > 1e-6:
             # PREDICTOR: the first move along the kernel is a prescribed displacement to the
             # target b, taken unconditionally; the corrector rounds that follow reduce the
             # residual at fixed b through the acceptance ladder.
             x = x + dx; ft = float(np.linalg.norm(T.wres(x, pin_mode, aux, PW))); rms = T.field_rms(x, pin_mode, aux)
-            b_now = float(c @ (x - x_ref)); hist.append((it, rms, ft, b_now, mu))
-            log(f"      [kc {it}: PREDICTOR to b {b_now:+.3e}  RMS {rms:.2e}  wres {ft:.2e}  mu {mu:+.2e}]")
+            b_now = float(c @ (x - x_ref)); nyq = float(q1.metrics(T, x)['nyq'])
+            hist.append((it, rms, ft, b_now, mu, nyq))
+            log(f"      [kc {it}: PREDICTOR to b {b_now:+.3e}  RMS {rms:.2e}  wres {ft:.2e}  wsNyq {nyq:.1e}  mu {mu:+.2e}]")
             continue
-        for a_ in (1.0, 0.5, 0.25, 0.1, 0.03):
-            xt = x + a_ * dx
-            ft = float(np.linalg.norm(T.wres(xt, pin_mode, aux, PW)))
-            if ft < f0:
-                acc = (a_, xt, ft); break
+        while True:
+            for a_ in (1.0, 0.5, 0.25, 0.1, 0.03):
+                xt = x + a_ * dx
+                ft = float(np.linalg.norm(T.wres(xt, pin_mode, aux, PW)))
+                if ft < f0:
+                    acc = (a_, xt, ft); break
+            if acc is not None or lam >= 1e-5:
+                break
+            lam *= 10.0
+            log(f"      [kc {it}: step rejected; escalating lam to {lam:.0e}]")
+            dx, mu, gap = _step(J, r0, lam)
         if acc is None:
-            log(f"      [kc {it}: no accepted step; |mu| {abs(mu):.2e}  b {float(c @ (x - x_ref)):+.3e}]")
+            log(f"      [kc {it}: no accepted step at lam {lam:.0e}; |mu| {abs(mu):.2e}  b {float(c @ (x - x_ref)):+.3e}]")
             break
         a_, x, ft = acc
-        rms = T.field_rms(x, pin_mode, aux); b_now = float(c @ (x - x_ref))
-        hist.append((it, rms, ft, b_now, mu))
-        log(f"      [kc {it}: RMS {rms:.2e}  wres {ft:.2e}  b {b_now:+.3e}  mu {mu:+.2e}  frac {a_}  df {100 * (1 - ft / f0):.1f}%]")
-        if rms < stop_rms:
+        lam = max(lam * 0.5, 1e-9)
+        rms = T.field_rms(x, pin_mode, aux); b_now = float(c @ (x - x_ref)); nyq = float(q1.metrics(T, x)['nyq'])
+        hist.append((it, rms, ft, b_now, mu, nyq))
+        df = 1.0 - ft / f0
+        log(f"      [kc {it}: RMS {rms:.2e}  wres {ft:.2e}  b {b_now:+.3e}  wsNyq {nyq:.1e}  lam {lam:.0e}  frac {a_}  df {100 * df:.2f}%]")
+        if rms < stop_rms and (nyq_bar is None or nyq <= nyq_bar):
             break
+        stall = stall + 1 if df < stall_df else 0
+        if stall >= stall_rounds:
+            log(f"      [kc {it}: FLOOR -- {stall_rounds} consecutive rounds below {stall_df:.0e} relative decrease]")
+            break
+    if state is not None: state['lam'] = lam
     return x, hist
 
 
