@@ -323,3 +323,41 @@ FND-178 (granted 2026-09-27, riders applied to FND-132 and FND-MATTER-041). The 
 now: F1 (registration-ready), F2 (done, FND-166), F4 (paper-sync only); F3 is
 closed at this instrument class. Session selection from here is governed by
 docs/NORTH_STAR.md section 5.
+
+## H. CURRENT-AS-SPIN EXECUTED (2026-09-27; charter analysis/CURRENT_AS_SPIN_charter_LOCKED.md)
+
+Section E item 4 ran in the sandbox. (a) TWIST-NOT-SPIN: the torque density on
+the azimuth in the registered screw-stretch sector is the total derivative of
+the twist flux J = lambda Phi' + c_L u' (exact), so a steady EMF (bulk strain
+gradient) exerts no net torque and produces static twist; rotation is a
+terminal condition (source and sink of twist flux) the registry does not hold;
+chain control at 1e-16 relative. (b) ASYMMETRY: the registered contact form is
+blind to both twist and stretch (dV/dphi = dV/du = 0), so the azimuthal leak
+through contacts is exactly zero; the transverse leak is O(g^2) per crossing;
+the finite azimuthal route is EM-RECON-026's collective coupling, GRV-118
+obligation (3). The vertex session (item 1) inherits the bars. Registered as
+FND-179 (granted 2026-09-27); results analysis/CURRENT_AS_SPIN_results.md.
+
+## I. TERMINAL-TWIST EXECUTED (2026-09-27; charter analysis/TERMINAL_TWIST_charter_LOCKED.md)
+
+The candidate "a terminal is a reconnection site" failed T1 on GRV-045's own
+engine read before and after: the punch-through changes writhe by 0.03 and the
+material twist by the same; the reported 2 pi is the final state's Frenet
+rotation, present in the seed (an inflection count in the planar control).
+TERMINAL-RECON-WRONG-VARIABLE. The terminal that spins current remains a new
+primitive, specified: an integer 2 pi of material twist per charge into the
+azimuth. GRV-045 F2 is FLAGGED for the author's amendment (F1/F3 stand, F3 more
+strongly; F2's quantization and F4 withdrawn). Registered as FND-180
+(granted 2026-09-27; GRV-045 amended); results analysis/TERMINAL_TWIST_results.md.
+
+## J. KIN-DRIVE EXECUTED (2026-09-27; charter analysis/KIN_DRIVE_charter_LOCKED.md)
+
+KIN-FORCE-DERIVED: the registered lock gives a winding the force 2 pi c_L eps'
+from the strain gradient (the mesh's q E along the strand, no new coupling);
+the registered kink obeys it with mass 8/w to 1 pct; effectively free (F_th <
+1e-8); relativistic to 0.5 c_t then a terminal velocity ~0.7 c_t by phonon
+radiation into the discrete strand (KIN-DRIFTS, loss identified); breakdown
+gradient 1/c_L recorded. FND-KIN-001 narrows to the loss choreography at
+ordinary drift speeds; the terminal sheet's P4 is discharged at the bulk level.
+Registered as FND-181 (granted 2026-09-27); results
+analysis/KIN_DRIVE_results.md.

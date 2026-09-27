@@ -1,0 +1,44 @@
+id: FND-180
+title: 'COMMISSION TERMINAL-TWIST -- TERMINAL-RECON-WRONG-VARIABLE: THE REGISTERED RECONNECTION
+  DOES NOT HAND A 2 pi QUANTUM INTO THE SCREW AZIMUTH -- READ BEFORE AND AFTER ON GRV-045''S
+  OWN ENGINE THE PUNCH-THROUGH CHANGES THE CURVE''S WRITHE BY 0.03 AND THE MATERIAL TWIST BY
+  THE SAME, THE REPORTED 2 pi BEING THE FINAL STATE''S FRENET ROTATION (PRESENT IN THE SEED;
+  AN INFLECTION COUNT IN THE PLANAR CONTROL); THE TERMINAL THAT SPINS CURRENT REMAINS A NEW
+  PRIMITIVE, NOW SPECIFIED (AN INTEGER 2 pi OF MATERIAL TWIST PER CHARGE); GRV-045 F2 FLAGGED
+  FOR AMENDMENT WITH F1/F3 STANDING'
+status: registered
+note: 'Charter analysis/TERMINAL_TWIST_charter_LOCKED.md (locked 2026-09-27 on the author''s
+  word before any number; six reads at lock, one bar corrected before computing (T3''s
+  angular-momentum statement) and one instrument fact recorded (GRV-045''s F2 observable is
+  computed on the final state only); forms TERMINAL-IS-RECONNECTION / RECON-WRONG-VARIABLE /
+  RECON-NO-STEADY-STATE / REFUSED). THE QUESTION: FND-179 proved a steady EMF cannot spin a
+  strand from the bulk and that a steady rotation needs terminals sourcing and sinking twist
+  flux; does the registry hold such a terminal? CANDIDATE, stated before computing: a
+  reconnection site with a supply, on GG-006 (charge = winding), GRV-045 (one 2 pi quantum of
+  frame winding exchanged per punch-through, Derived), GRV-061/FND-STRAND-002 (twist conserved
+  and transported) and GRV-037 (one-way). T1 on GRV-045''s engine as registered (same seed,
+  relaxation and Frenet bookkeeping), the initial seeded state kept: the Frenet frame rotation
+  is -1.217 x 2 pi BEFORE the event and -1.006 after (L = 4; -1.012 at L = 6), a change of
+  0.21 x 2 pi; the writhe (Gauss integral) changes from -0.028 to 0.000; by Calugareanu with
+  linking conserved (no cut, FND-010; the ledger FND-131 uses) the material twist changes by
+  0.03 x 2 pi. The symmetric-seed control reads +1.000 x 2 pi before and after with zero
+  writhe: the Frenet inflection count of a plane curve. Bar T1 (1.00 +/- 0.05) FAILS at 0.03;
+  T2 run as a display (FND-179''s chain carries 2 pi steps into whole-strand rotation, ringing
+  included: transport is not the obstacle); T3 not run. Rendered TERMINAL-RECON-WRONG-
+  VARIABLE: the registered reconnection is not the terminal; the terminal remains a NEW
+  PRIMITIVE, specified sharper than FND-179 left it (an integer 2 pi of MATERIAL twist per
+  charge handed into the azimuth; one ampere is 6.2e18 handovers per second per terminal).
+  FLAG (a registered instrument re-read, the author''s act to amend): GRV-045 F2''s
+  "exchanged" quantum is the final state''s Frenet rotation with the seed''s unsubtracted; F1
+  (continuous passage) stands; F3''s conclusion (a bounded local exchange cannot flip an
+  extensive sign; charge survives reconnection) stands and strengthens at 0.03 of a turn; F2''s
+  "quantized at 2 pi", the length-independence as stated, and F4''s belt-trick resonance do
+  not survive the before/after reading. Draft amendment for GRV-045: "[AMENDED (FND-180,
+  2026-09-27): F2 read before and after on this engine: the exchange across the event is 0.21
+  x 2 pi in the Frenet observable and 0.028 in writhe; the reported 1.007 x 2 pi is the final
+  state''s value, present in the seed; the planar control''s 2 pi is the Frenet inflection
+  count. F1 and F3 stand, F3 more strongly; F2''s quantization and F4 are withdrawn.]"
+  NORTH_STAR: row "Strength of magnets" nearest step is the terminal primitive as specified,
+  or the electron model; targets moved 0, inputs retired 0. Results
+  analysis/TERMINAL_TWIST_results.md; verdict log analysis/TERMINAL_TWIST_verdict.log; sealed
+  output analysis/terminal_twist.npz. Granted by the author 2026-09-27; GRV-045 amended the same day on the author''s word.'

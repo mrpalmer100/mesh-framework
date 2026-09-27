@@ -1,0 +1,45 @@
+id: FND-179
+title: 'COMMISSION CURRENT-AS-SPIN -- TWIST-NOT-SPIN: AT THE REGISTERED COUPLINGS A STEADY EMF
+  (THE BULK STRAIN GRADIENT OF EM-018) EXERTS NO NET TORQUE ON THE AZIMUTH -- THE TORQUE
+  DENSITY IS THE TOTAL DERIVATIVE OF THE TWIST FLUX J = lambda Phi'' + c_L u'' (EXACT), SO
+  ROTATION IS A TERMINAL CONDITION THE REGISTRY DOES NOT HOLD; CHAIN CONTROL RATE 1e-16
+  RELATIVE; AND THE RESERVOIR ASYMMETRY: TRANSVERSE LEAK O(g^2) PER CROSSING, AZIMUTHAL LEAK
+  EXACTLY ZERO THROUGH THE CONTACT FORM (dV/dphi = dV/du = 0), FINITE ONLY VIA EM-RECON-026
+  (GRV-118 OBLIGATION 3)'
+status: registered
+note: 'Charter analysis/CURRENT_AS_SPIN_charter_LOCKED.md (locked 2026-09-27 on the author''s
+  word before any number; seven reads at lock, one parts-list correction: the O(g) crossing
+  coupling of displacement is FND-REL-005, EM-RECON-026 is the collective q-linear coupling;
+  forms DERIVED-RATE / RATE-UNDERDETERMINED / TWIST-NOT-SPIN / ASYMMETRY / REFUSED). The
+  author''s question of 2026-08-16 (STRATEGIC_TARGETS E item 4), both halves. (A) TORQUE
+  INJECTION: in the registered screw-stretch sector (EM-RECON-023) with the derived lock
+  (EM-RECON-012, c_L = lambda gamma tau_0) the Euler-Lagrange torque density on the azimuth
+  is lambda Phi'''' + c_L u'''' = dJ/ds with J = lambda Phi'' + c_L u'' (sympy-exact), a TOTAL
+  DERIVATIVE: the net torque on the SO(2) zero mode is J(L) - J(0), a boundary term, so a
+  steady EMF read as the registered bulk strain gradient (EM-018) produces a static twist
+  profile and no rotation; the azimuth''s angular momentum obeys d/dt(I Phi_dot) = dJ/ds and a
+  steady rotation needs terminals acting as source and sink of twist flux, a primitive the
+  registry does not hold. Chain control (100/200 sites, three drives spanning two decades,
+  torsion-free ends): strand-averaged rate 1e-18..3e-16 against a twist-rate scale 9e-3..1.6,
+  relative 1e-16 (bar 1e-6): TWIST. Displays with unregistered terminal inputs, run to name
+  the missing input: an injected twist flux accelerates the strand without bound (no sink);
+  an imposed rotation is followed. Rendered TWIST-NOT-SPIN, kept as a failure of the reading
+  "current is spin" at the registered couplings; the rescues are priced as grants (a bulk
+  strain-to-rotation coupling, or a terminal twist-flux primitive), none adopted. (B) SPIN
+  PERSISTENCE: for the registered contact form V(r_line), dV/dphi = 0 (EM-RECON-023,
+  reproduced) AND dV/du = 0 (sliding a straight strand along its tangent leaves the centre
+  line invariant; u is gauge): the azimuthal leak through contacts is EXACTLY ZERO at every
+  order, sharper than 023''s "higher-order-in-g"; the finite route is EM-RECON-026''s
+  collective coupling, GRV-118 obligation (3), not computed and not owed. Transverse leak
+  (FND-REL-005 pinning class, two chains coupled by a contact spring g, wave packet, energy
+  fraction transferred): 5.7e-5 at g 0.0032 to 5.1e-2 at g 0.1, n = 1.974 (small-g half
+  1.998); the prefactor form is NOT accepted by bar B-B''s letter (22 pct across halves, the
+  top point saturating), the raw table is the record, O(g^2) in energy at small g. The
+  author''s reading that the azimuthal reservoir is the low-loss channel is confirmed in
+  structure with its size assigned to GRV-118. INHERITANCE: GRV-118''s vertex session takes
+  the total-derivative theorem and the contact-blindness of both twist and stretch, so its
+  crossing transfer runs through EM-RECON-026 alone. NORTH_STAR: row "Strength of magnets"
+  nearest step becomes the terminal primitive (grant) or the electron model; targets moved 0,
+  inputs retired 0. Results analysis/CURRENT_AS_SPIN_results.md; verdict log
+  analysis/CURRENT_AS_SPIN_verdict.log; sealed outputs analysis/current_as_spin_partA.npz,
+  _partB.npz. Granted by the author 2026-09-27; the terminal question chartered the same day (COMMISSION TERMINAL-TWIST).'

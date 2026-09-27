@@ -1,0 +1,20 @@
+TERMINAL-TWIST VERDICT (bars: analysis/TERMINAL_TWIST_charter_LOCKED.md; outputs sealed 2026-09-27)
+================================================================================================
+T1  L 4.0 asymmetric seed: punch-through yes; Frenet phi/2pi -1.2174 -> -1.0059 (change +0.2115); writhe -0.0276 -> -0.0000; material twist change (Lk conserved) -0.0276 x 2pi  -> bar 1.00 +/- 0.05: FAIL
+T1  L 6.0 asymmetric seed: punch-through yes; Frenet phi/2pi -1.2174 -> -1.0120 (change +0.2054); writhe -0.0278 -> -0.0000; material twist change (Lk conserved) -0.0278 x 2pi  -> bar 1.00 +/- 0.05: FAIL
+T1  L 4.0 symmetric seed (control): punch-through yes; Frenet phi/2pi +1.0000 -> +1.0000 (change +0.0000); writhe +0.0000 -> +0.0000; material twist change (Lk conserved) -0.0000 x 2pi  -> bar 1.00 +/- 0.05: FAIL
+T1  reading: the 2 pi GRV-045 reports is the FINAL curve's Frenet frame rotation (and the symmetric control's, an inflection-count of a planar curve),
+    present in the seeded initial state before any event; the change across the punch-through is 0.21 x 2 pi in the Frenet observable and
+    0.028 in writhe. By Lk conservation the material azimuth changes by 0.03 x 2 pi, not by a quantum. The candidate FAILS T1.
+T2  display only (T1 failed): 2 pi steps at rate 0.005 -> strand mean rate +0.0448 vs 2 pi R 0.0314 (ratio 1.426, ringing included)
+T2  display only (T1 failed): 2 pi steps at rate 0.02 -> strand mean rate +0.1434 vs 2 pi R 0.1257 (ratio 1.141, ringing included)
+T2  display only (T1 failed): 2 pi steps at rate 0.05 -> strand mean rate +0.3407 vs 2 pi R 0.3142 (ratio 1.084, ringing included)
+T3  not run: T1 failed (charter reads-at-lock).
+T4  the supply demand stands as a statement: one ampere is 6.2e18 winding handovers per second per terminal, whatever object performs them.
+================================================================================================
+FORM: TERMINAL-RECON-WRONG-VARIABLE -- the registered reconnection event does not hand a 2 pi quantum into the screw azimuth; on the registered
+      engine it changes the curve's writhe by 0.03 and the material twist by the same. The terminal remains a NEW PRIMITIVE to be priced.
+FLAG for the author (a registered instrument re-read, not a bar): GRV-045 F2's 'exchanged' quantum was computed on the final state only;
+      read before and after, the exchange is 0.21 x 2 pi (asymmetric seed) and the planar control's 2 pi is the Frenet inflection count.
+      F1 (continuous passage) and F3 (a bounded local exchange cannot flip an extensive sign) stand, the latter more strongly; F2's
+      'quantized' language and F4's belt-trick resonance do not survive the before/after reading. Amendment is the author's act.

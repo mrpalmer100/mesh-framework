@@ -1,0 +1,40 @@
+id: FND-181
+title: 'COMMISSION KIN-DRIVE -- KIN-FORCE-DERIVED AND KIN-DRIFTS: THE REGISTERED LOCK GIVES A
+  WINDING ON A STRAND THE FORCE F = 2 pi c_L eps'' FROM THE STRAIN GRADIENT (THE MESH''S q E
+  ALONG THE STRAND, NO NEW COUPLING), THE REGISTERED KINK OBEYS IT WITH THE SINE-GORDON MASS
+  8/w TO 1 PCT, IS EFFECTIVELY FREE (F_th < 1e-8, FIFTY TIMES BELOW THE STATIC PN ESTIMATE),
+  ACCELERATES RELATIVISTICALLY TO 0.5 c_t AND REACHES A TERMINAL VELOCITY ~0.7 c_t BY PHONON
+  RADIATION INTO THE DISCRETE STRAND; A BREAKDOWN GRADIENT eps''_c = 1/c_L FALLS OUT'
+status: registered
+note: 'Charter analysis/KIN_DRIVE_charter_LOCKED.md (locked 2026-09-27 on the author''s word
+  before any number; six reads at lock, no correction; forms KIN-FORCE-DERIVED / FORCE-FAILS /
+  PINNED / ACCELERATES / DRIFTS / REFUSED). THE QUESTION (FND-KIN-001''s open item, reached
+  from the terminal price sheet''s T-C): does the registered strain gradient (EM-018''s electric
+  field) move a winding along its strand, and how. D1, DERIVED: the lock''s cross term c_L u''
+  Phi'' (EM-RECON-012/023) gives a 2 pi kink of the screw azimuth the energy 2 pi c_L eps(s0),
+  hence the force F_kink = -2 pi c_L eps''(s0): charge (2 pi of winding) times field (c_L
+  times the strain gradient), from registered objects only; the same torque tilts the on-site
+  potential and the vacuum ceases to exist above eps''_c = 1/c_L (a Schwinger-class breakdown
+  gradient, consequence recorded). K1 on FND-STRAND-002''s chain as registered (kink relaxed
+  at F = 0, then driven; two trackers agreeing to 0.1 pct; winding conserved at 0.0): the
+  measured mass 2 pi F/|a| is 4.043/4.057 vs 8/w = 4.000 at w = 2 and 2.873/2.883 vs 2.857 at
+  w = 2.8 for F = 1e-4/3e-4 (bar 5 pct: PASS); a positive torque drives the +2 pi kink toward
+  -s. K2: the kink moves at F = 1e-8 at both widths, so F_th < 1e-8 (upper bound; the
+  instrument''s residual velocity ~1e-3 node per time hides shallower wells), fifty times below
+  the static estimate E_PN/2 = 5e-7 at w = 2: static PN overstates dynamic pinning; the
+  winding is effectively free (bar B-K2 not met, reported as the bound). K3: under |F| = 1e-3
+  the velocity follows the relativistic form to 1.5 pct up to 0.5 c_t, then saturates at
+  0.68 c_t at w = 2 (energy 22.2 = 1.39 x 16; still rising at 0.78 c_t at w = 2.8 at the chain
+  end); the energy budget identifies the loss: from t ~ 1500 the kink''s energy is constant
+  while the energy left behind grows at exactly the work rate 2 pi |F| dx, half kinetic --
+  phonon radiation into the discrete strand. Rendered KIN-FORCE-DERIVED and KIN-DRIFTS (loss
+  identified), with B-K3''s relativistic-to-0.9 c_t bar FAILED above 0.5 c_t as the record.
+  CONSEQUENCES: FND-KIN-001 narrows (the drive is derived; the loss choreography at ordinary
+  drift speeds is what remains; the derived terminal velocity is of order the torsion speed,
+  not a copper drift, so resistance stays the collective route, GRV-118 obligation 3); the
+  terminal price sheet''s P4/F4 is discharged at the bulk level (route exists; the boundary
+  handover remains unpriced); FND-179 untouched (a moving kink advances Phi locally). NORTH_STAR:
+  targets moved 0, inputs retired 0; one derived force law, one derived terminal velocity with
+  its loss, one static estimate shown to overstate. Results analysis/KIN_DRIVE_results.md;
+  verdict log analysis/KIN_DRIVE_verdict.log; sealed output analysis/kin_drive.npz. Granted by
+  the author 2026-09-27.'

@@ -1,0 +1,29 @@
+CURRENT-AS-SPIN VERDICT (bars: analysis/CURRENT_AS_SPIN_charter_LOCKED.md; outputs sealed 2026-09-27)
+================================================================================================
+A1  torque density on the azimuth = c_L*Derivative(u(s), (s, 2)) + lambda*Derivative(Phi(s), (s, 2))  =  d/ds of J = c_L*Derivative(u(s), s) + lambda*Derivative(Phi(s), s)  (total derivative: True)
+    net torque on the zero mode = J(L) - J(0): boundary flux only; the bulk strain gradient exerts none.
+A2  N 100 f0 1e-04: <dPhi/dt> +2.45e-18  drift +7.08e-19  twist-rate scale 9.08e-03  relative 2.7e-16
+A2  N 100 f0 1e-03: <dPhi/dt> +2.11e-17  drift +1.18e-17  twist-rate scale 9.08e-02  relative 2.3e-16
+A2  N 100 f0 1e-02: <dPhi/dt> -5.78e-17  drift -1.28e-16  twist-rate scale 9.08e-01  relative 6.4e-17
+A2  N 200 f0 1e-04: <dPhi/dt> -3.51e-18  drift +4.74e-19  twist-rate scale 1.62e-02  relative 2.2e-16
+A2  N 200 f0 1e-03: <dPhi/dt> +4.70e-18  drift +1.26e-17  twist-rate scale 1.62e-01  relative 2.9e-17
+A2  N 200 f0 1e-02: <dPhi/dt> -3.17e-16  drift -1.26e-16  twist-rate scale 1.62e+00  relative 2.0e-16
+B-A1 classification: TWIST (max relative rate 2.7e-16 against the 1e-6 bar)
+A3  displays (unregistered terminal inputs, named not adopted): twist flux injected at s=0 -> mean rate -2.97e-03 drifting -1.49e-03 per window (accelerates; no steady rate without a sink); rotation rate imposed at s=0 -> the strand rotates (+3.35e-03, undamped transients).
+B1  registered contact form: dV/dphi = 0, dV/du = 0: the azimuthal leak through the contact form is exactly zero at every order.
+B2  g 0.0032: transverse energy leak fraction per crossing 5.689e-05
+B2  g 0.0056: transverse energy leak fraction per crossing 1.799e-04
+B2  g 0.0100: transverse energy leak fraction per crossing 5.683e-04
+B2  g 0.0178: transverse energy leak fraction per crossing 1.793e-03
+B2  g 0.0316: transverse energy leak fraction per crossing 5.624e-03
+B2  g 0.0562: transverse energy leak fraction per crossing 1.735e-02
+B2  g 0.1000: transverse energy leak fraction per crossing 5.096e-02
+B2  fit leak = A g^n over the sealed range: n = 1.974 (halves 1.998/1.940), A = 5.014 (halves 5.627/4.522); B-B form NOT ACCEPTED by the letter (prefactor moves more than 10 percent across the halves; n = 2 to 0.03 on the small-g half)
+B3  asymmetry: transverse leak O(g^2) in energy per crossing; azimuthal leak ZERO through the registered contact form. Unbounded at the contact level;
+    the finite azimuthal route is EM-RECON-026's collective coupling, whose crossing transfer rate is GRV-118 obligation (3): not computed here, not owed here.
+================================================================================================
+FORM (A): TWIST-NOT-SPIN -- at the registered couplings a steady EMF (bulk strain gradient) produces a static twist, not rotation; the azimuth's
+          rotation rate is set by the TERMINALS (the twist flux J at the ends), an input the registry does not hold. Kept as a failure of the
+          reading 'current is spin' at registered couplings; the row's nearest step is a terminal (source/sink of twist flux) priced as a grant.
+FORM (B): ASYMMETRY -- transverse O(g^2), azimuthal exactly 0 through the contact form (raw table above; prefactor form not accepted by the letter).
+Registration and riders are the author's act (drafts: analysis/CURRENT_AS_SPIN_results.md, analysis/fnd179_claim.yaml).
