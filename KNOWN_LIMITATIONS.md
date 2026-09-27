@@ -248,6 +248,26 @@ kept straight, several quantum facts are **adopted, not derived**, or **open**:
   must be (FND-MATTER-005). The scale is therefore pinned but measurement-fixed, not derived
   from more primitive quantities; a remains a fundamental constant of the framework.
 
+## Conduction and charge transport (opened 27 Sep 2026)
+
+- **A charge moves along a strand under the registered electric field: DERIVED (FND-181).**
+  The lock gives a 2 pi kink the force 2 pi c_L eps' from the strain gradient, the mesh's q E
+  along the strand with no new coupling; the registered kink obeys it with the sine-Gordon
+  mass to 1 percent, is effectively free of lattice pinning, and reaches a terminal velocity
+  of order 0.7 of the torsion speed by phonon radiation into the strand. What is NOT derived:
+  the loss at ordinary drift speeds (ordinary resistance remains the collective route,
+  GRV-118 obligation 3), so FND-KIN-001's open item narrows to the loss choreography.
+- **"Current is spin" is REFUTED at the registered couplings and kept (FND-179).** The torque
+  on a strand's azimuth is the derivative of a twist flux, so a steady EMF cannot rotate a
+  strand from the bulk; a steady rotation needs terminals sourcing and sinking twist flux.
+  The registered reconnection is not such a terminal (FND-180: it moves 0.03 of a turn, and
+  GRV-045's 2 pi quantum was a final-state reading, amended). The terminal is priced as a
+  grant candidate and PARKED behind the transport question
+  (analysis/GRANT_CANDIDATE_TERMINAL_price_sheet.md).
+- **The vacuum's charge-creation field is a WINDOW, not a number (FND-182):** [1.1e15, 3.2e18]
+  V/m across the registered scale sets, one unpinned input (the kink width, i.e. the strand
+  mass scale in electronvolts). Census tier T2 until pinned (ELEC-101).
+
 ## Chemistry (open edges within a strong sector)
 
 - **Metallic bonding** cohesion is a consistent ~2.8x low (order-right, declared shortfall).
@@ -296,4 +316,8 @@ directions and crossed from none; constructing the quantum layer requires hbar (
 and the absolute mesh scale (measurement-fixed at the M-point, not derived -- FND-MATTER-003/044).
 A standing research directive for
 crossing this fence -- with pre-committed acceptance tests and the discipline required --
-is maintained at docs/technical/FUTURE_MODEL_PROMPT_one_fence.md.
+is maintained at docs/technical/FUTURE_MODEL_PROMPT_one_fence.md. Sharpened 27 Sep 2026
+(FND-178): the fence's Task 1 now reads, in spectral form, "supply an energy per carried light
+mode proportional to its frequency with one universal constant"; the forced rotating-wave
+state of the wave arc is the vacuum's energy BUDGET and is not that object (it carries no
+Casimir force). The magnitude owed is GRV-093's quantum-area-to-cell ratio, about 2e4.

@@ -396,3 +396,14 @@ FND-109 half-sum; budget: the dynamical share of the energy bill), "zero-point"
 alone reserved for the spectral sense, and the qualifier applied at the front
 door (README, KNOWN_LIMITATIONS, WHERE_IT_STANDS, VACUUM_WAVE_PLAIN_LANGUAGE).
 Record: analysis/ZEROPOINT_SWEEP_results.md. No registered text edited.
+
+## N. FOLLOW-THROUGH ITEMS DONE (2026-09-27, evening)
+
+GRV-045's benchmark now reads the Frenet observable and the writhe BEFORE and
+AFTER the punch-through and asserts the amended statement (bounded, small,
+length-independent exchange; planar control's 2 pi an inflection count); it
+passes. KNOWN_LIMITATIONS gains a "Conduction and charge transport" section
+and the fence's spectral restatement; WHERE_IT_STANDS gains the 27 September
+addendum; HANDOFF opens with NORTH_STAR read-first. Owed at the 3.32.0 cut:
+the rope_blackholes paper's F2 sentence (paper sync), the 14 mixed zero-point
+claims' review, the predictions paper re-render.

@@ -1,5 +1,10 @@
 # HANDOFF -- Mesh Framework, next session
 
+READ FIRST (standing, 2026-09-27): docs/NORTH_STAR.md. Every charter names the scorecard
+target it moves, the input it retires, or the discriminator it arms, or it is rationed
+interior work (NORTH_STAR section 5). Then this file, then docs/STRATEGIC_TARGETS.md
+sections G to M for the 27 September commissions (FND-178 to FND-182, ELEC-101).
+
 *Written 2026-08-18; cuts v3.27.1 (TRUE-SOLVE) and v3.27.2 (TRUE-STATE
 stage 2). 733 claims, quick-verify green, freshness green; full suite
 verified green by the author on CI before stage 2 (two cuts of debt

@@ -157,3 +157,20 @@ zero-point window (budget sense, FND-178). Sharpest open items: the rotating-bac
 the anchors, the exact composite wave, and the magic angle's unexplained
 triple duty. See KNOWN_LIMITATIONS.md §fine-level and
 docs/VACUUM_WAVE_PLAIN_LANGUAGE.md.
+
+
+## Addendum, 27 September 2026 (post-3.31.0, FND-178 to FND-182, ELEC-101)
+
+One sandbox day, five commissions, all sandbox-only. The Casimir force is predicted by the
+registered zero-point ledger by universality (consistency-tier), and the wave arc's rotation
+carries none of it, so the corpus's two zero-points are distinct objects and the fence's
+Task 1 is restated in spectral form (FND-178). A steady EMF cannot spin a strand from the
+bulk (FND-179), the registered reconnection is not the terminal that could (FND-180, with
+GRV-045 amended), and the terminal is priced and parked. The first positive result of the
+day: the lock gives a charge a derived force along its strand, F = 2 pi c_L eps', the mesh's
+own q E, and the driven charge reaches a terminal speed by phonon radiation (FND-181). From
+it, the vacuum's charge-creation field: a window [1.1e15, 3.2e18] V/m, above every field yet
+applied and below QED's Schwinger field over most of the range, T2 until the strand mass
+scale is pinned (FND-182, ELEC-101). The census ruled that C1 admits no window; the firm
+count stays at two plus one adjudicated, and the route to three is now a named input to pin
+rather than a rule to widen. The North Star page (docs/NORTH_STAR.md) carries the scorecard.
