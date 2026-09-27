@@ -1,0 +1,41 @@
+id: FND-182
+title: 'COMMISSION KIN-BREAKDOWN -- THE MESH VACUUM''S CHARGE-CREATION FIELD DERIVED, E_c = 2 pi T0
+  r^2/(5 e w^2 a^2) (THE LOCK''S TORQUE TILTING THE ORIENTATION POTENTIAL PAST ITS MAXIMUM; ONE
+  UNPINNED INPUT, THE KINK WIDTH w), EVALUATING TO A WINDOW [1.1e15, 3.2e18] V/m ACROSS THE
+  REGISTERED SCALE SETS: ABOVE THE HIGHEST FIELD EVER APPLIED TO VACUUM (9.1e14 V/m, BY 1.2x AT
+  ITS WEAKEST CORNER), BELOW QED''S SCHWINGER FIELD OVER MOST OF THE RANGE (EQUAL AT THE
+  CONTINUUM FLOOR WITH w = 1.25), FIVE TO EIGHT ORDERS BELOW THE REGISTERED E_crit, WHICH IS
+  A LINEARITY LIMIT AND NOT A BREAKDOWN; DISCRIMINATOR CANDIDATE FOR THE CENSUS'
+status: registered
+note: 'Charter analysis/KIN_BREAKDOWN_charter_LOCKED.md (locked 2026-09-27 on the author''s
+  word before any number; six reads at lock, one interpretive note recorded before computing:
+  FND-031''s E_crit = 2.0e23 V/m is the field at which the mesh''s LINEAR RESPONSE fails
+  (QGATE-009 confrontation 3), not a charge-creation threshold, so it and E_c are limits of
+  different things; forms BREAKDOWN-AGREES / DISAGREES / BELOW-DATA / UNDETERMINED / REFUSED).
+  S1, DERIVED with a machine dimensional check: FND-181''s breakdown gradient 1/c_L (the
+  lock''s uniform torque c_L eps'' exceeding the orientation potential''s amplitude) and its
+  force 2 pi c_L eps'' on a winding of charge e give E_c = 2 pi V_0/(e a); the registered twist
+  band (gap = strand mass scale, FND-STRAND-008; unit map kt = C/(V_0 a), v_t = w sqrt(V_0
+  a/I_T)), the rod inertia I_T = (T0/c^2) r^2 (FND-MATTER-047, GRV-073) and v_t = c/sqrt5 give
+  E_c = 2 pi T0 r^2/(5 e w^2 a^2), r = d_c/2 (HBAR-005), every symbol registered except the
+  kink width w (regime 0.8 to 2.8, free transport at w >= 2; FND-STRAND-002/FND-KIN-002). S2:
+  E_c = 8.3e15/w^2 (M-point), 4.1e17/w^2 (kappa_pack 50), 2.1e18/w^2 (kappa_pack 250) V/m,
+  i.e. [1.1e15, 1.3e16], [5.3e16, 6.4e17], [2.6e17, 3.2e18] over the regime. S3: E_c equals
+  the Schwinger field (1.32e18) at w = 0.08 / 0.56 / 1.25; equals E_crit at no registered w.
+  S4: bar B-2 (agrees with E_crit) FAILS by 5 to 8 orders, read with the lock note as
+  different objects; bar B-3 (below the laser record 9.1e14 V/m, 1.1e23 W/cm^2, Yoon et al.
+  2021, entered at lock, to be verified at paper sync) does NOT hold: the weakest corner
+  (M-point, w = 2.8) is 1.2x above the record. Rendered BREAKDOWN-DISAGREES, and like with
+  like against QED: the mesh predicts vacuum charge creation in a window [1.1e15, 3.2e18] V/m,
+  below the Schwinger field over most of the registered range and reachable by the next laser
+  generation (1e24 to 1e25 W/cm^2 is 3e15 to 1e16 V/m); QED predicts no creation below
+  1.32e18. DISCRIMINATOR CANDIDATE for the census pass over predictions 20 to 34: distinctive
+  in outcome, checkable near-term, live; quantitative only as a three-order window until w
+  and the scale set are pinned, stated on its face; a null at 1e16 V/m kills the M-point row
+  outright and pushes the rest toward the continuum floor. Not entered in the predictions
+  paper until the window narrows (house rule: computed numbers). CONSEQUENCE for language:
+  E_crit is a linearity limit; the "breakdown" qualifier is owed in ROPE_PARAMETERS and
+  wherever it is quoted. NORTH_STAR: "Also carried" gains the charge-creation window; targets
+  moved 0, inputs retired 0. Results analysis/KIN_BREAKDOWN_results.md; verdict log
+  analysis/KIN_BREAKDOWN_verdict.log; sealed output analysis/kin_breakdown.npz. Granted by the
+  author 2026-09-27, with the E_crit language rider on FND-031 applied the same day.'

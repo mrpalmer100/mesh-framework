@@ -244,6 +244,18 @@ eight orders apart, and the sign of the comparison with T₀ *inverts* (γ/T₀ 
 This is reported, not adjudicated. Choosing by preference is the failure mode
 this corpus spent 1 August correcting.
 
+## 5b. The medium's electric limits (two different objects; added 27 Sep 2026)
+
+- **Linearity limit, E_crit = 2.0e23 V/m** (FND-031, at the pinned Σ): the field at which the
+  mesh's linear response fails, the Kerr-class nonlinearity onset. Not a breakdown of the
+  vacuum; the earlier habit of calling it "the vacuum breakdown field" is retired by rider.
+- **Charge-creation field, E_c = 2π T0 r²/(5 e w² a²)** (FND-182): the field at which the
+  lock's torque tilts the strand's orientation potential past its maximum and the vacuum
+  creates windings, the mesh analogue of pair creation. One unpinned input, the kink width
+  w (registered regime 0.8 to 2.8): window [1.1e15, 3.2e18] V/m across the three scale sets,
+  above the highest field applied to vacuum (9.1e14 V/m), below QED's Schwinger field
+  (1.32e18 V/m) over most of the range. A discriminator candidate, pending the census.
+
 ## 6. What is *not* registered
 
 - **The strand's Poisson ratio.** G ≈ E/2.5 is imported from isotropic elasticity.

@@ -1,0 +1,19 @@
+KIN-BREAKDOWN VERDICT (bars: analysis/KIN_BREAKDOWN_charter_LOCKED.md; sealed 2026-09-27)
+================================================================================================
+B-1 dimensional check: E_c = 2*pi*T0*r**2/(5*a**2*e*w**2) -> volt/metre by machine: PASS
+kappa_pack 1 (M-point)  : E_c over w in [0.8, 2.8] = [1.1e+15, 1.3e+16] V/m; Schwinger needs w = 0.08; E_crit needs w = 0.000 (outside every regime); laser record exceeded below w = 3.0
+kappa_pack 50           : E_c over w in [0.8, 2.8] = [5.3e+16, 6.4e+17] V/m; Schwinger needs w = 0.56; E_crit needs w = 0.001 (outside every regime); laser record exceeded below w = 21.3
+kappa_pack 250          : E_c over w in [0.8, 2.8] = [2.6e+17, 3.2e+18] V/m; Schwinger needs w = 1.25; E_crit needs w = 0.003 (outside every regime); laser record exceeded below w = 47.6
+B-2 (agrees with E_crit within the spread at some registered w): FAIL; E_c is 5 to 8 orders below E_crit at every w and scale set.
+B-3 (below the laser record at every w and scale set): FAILS; the minimum registered value, 1.1e+15 V/m (M-point, w = 2.8), sits 1.2x ABOVE the record 9.1e14 V/m.
+S4 the window: across every registered w and scale set E_c lies in [1.1e+15, 3.2e+18] V/m: above the highest field ever applied, and at or below
+    the Schwinger field except at the continuum floor with w < 1.25. At the continuum floor and w = 1.25 the mesh's charge-creation threshold EQUALS the Schwinger field.
+================================================================================================
+FORM: BREAKDOWN-DISAGREES (read with the lock note: E_crit is the mesh's LINEARITY limit, not a charge-creation threshold, so the two are limits of
+      different things and the mismatch is not a contradiction). The like-with-like comparison is with the Schwinger field, and there the finding is:
+      the mesh predicts vacuum charge creation at a field between 1.1e15 and 3.2e18 V/m, the value set by the kink width and the scale set, which is
+      BELOW QED's Schwinger field over most of the registered range and reachable by the next laser generation (1e24 to 1e25 W/cm^2 gives 3e15 to
+      1e16 V/m). DISCRIMINATOR CANDIDATE for the census: quantitative as a window, distinctive in outcome (QED predicts nothing below 1.3e18),
+      checkable near-term, live. Its weakness, on its face: a three-order window until w and the scale set are pinned; a null result at 1e16 V/m
+      would kill the M-point row outright and push the others toward the continuum floor.
+Registration is the author's act (drafts: analysis/KIN_BREAKDOWN_results.md, analysis/fnd182_claim.yaml).

@@ -361,3 +361,17 @@ gradient 1/c_L recorded. FND-KIN-001 narrows to the loss choreography at
 ordinary drift speeds; the terminal sheet's P4 is discharged at the bulk level.
 Registered as FND-181 (granted 2026-09-27); results
 analysis/KIN_DRIVE_results.md.
+
+## K. KIN-BREAKDOWN EXECUTED (2026-09-27; charter analysis/KIN_BREAKDOWN_charter_LOCKED.md)
+
+The vacuum's charge-creation field derived from FND-181's breakdown gradient:
+E_c = 2 pi T0 r^2/(5 e w^2 a^2), one unpinned input (the kink width w), window
+[1.1e15, 3.2e18] V/m across the registered scale sets: above the highest field
+ever applied to vacuum (9.1e14, by 1.2x at the weakest corner), below QED's
+Schwinger field over most of the range (equal at the continuum floor, w = 1.25),
+five to eight orders below E_crit, which the lock note identifies as a linearity
+limit, not a breakdown. DISCRIMINATOR CANDIDATE for the census pass (predictions
+20 to 34): vacuum charge creation below the Schwinger field, reachable by the
+next laser generation. Registered as FND-182 (granted 2026-09-27; FND-031 language rider applied);
+results analysis/KIN_BREAKDOWN_results.md. Language debt: qualify E_crit as the
+linearity limit in ROPE_PARAMETERS.
