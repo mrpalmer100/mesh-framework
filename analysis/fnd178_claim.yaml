@@ -1,0 +1,51 @@
+id: FND-178
+title: 'COMMISSION CASIMIR-F3 -- CAS-LEDGER-CONSISTENT AND CAS-IDENTITY-SHORT-RANGE: THE
+  REGISTERED ZERO-POINT LEDGER PREDICTS THE MEASURED CASIMIR FORCE pi^2 hbar c/(240 d^4)
+  EXACTLY GIVEN hbar (COEFFICIENT BY UNIVERSALITY ON THREE REGISTERED CLOSURES; CONSISTENCY-
+  TIER; KNOWN-ANSWER INSTRUMENT AT -0.003 PCT), WHILE THE WINDING''S ROTATION CARRIES NO
+  PLATE FORCE (RESIDUAL AT MACHINE NOISE OVER THREE DECADES OF d, THREE PITCHES): THE
+  CORPUS''S TWO ZERO-POINTS, SPECTRAL AND BUDGET, ARE DISTINCT OBJECTS, AND THE FENCE''S
+  TASK 1 IS RESTATED IN SPECTRAL FORM'
+status: registered
+note: 'Charter analysis/CASIMIR_F3_charter_LOCKED.md (locked 2026-09-27 on the author''s
+  word before any number; six reads owed at lock executed, one citation corrected: the wave
+  sector on wound carriers is FND-090, not FND-127/129; forms CAS-LEDGER-CONSISTENT /
+  LEDGER-DEFECT / IDENTITY-SHORT-RANGE / IDENTITY-LONG-RANGE / REFUSED). STRATEGIC_TARGETS
+  F3 ("Casimir from the winding spectrum") executed as two questions. Q1, the registered
+  ledger: under FND-109 (the half-sum of carried-mode frequencies, lattice-regulated, hbar
+  imported per GRV-014 at the conversion to joules exactly as GRV-021/025 import it) the
+  plate energy is -pi^2 hbar c/(720 d^3) per area BY UNIVERSALITY, because the registry
+  closes the three ways the mesh could have differed: two isotropic gapless transverse
+  polarizations (FND-089; FND-090 Derived, acoustic tensor isotropic to 2.6e-15), the dark
+  longitudinal channel unpinned by matter at linear order (EM-RECON-011/012; if pinned it
+  would add >= 35 pct, displayed and already excluded by the percent-level data), the twist
+  band gapped (FND-STRAND-008, exp(-2 m d)). Known-answer instrument
+  (benchmarks/foundations/casimir_f3.py, scalar Dirichlet slab, exact per-k remainder
+  against elliptic-integral bulk and surface terms, polar Gauss-Legendre over the zone):
+  extrapolated coefficient -0.0068537 vs -pi^2/1440 = -0.0068539, -0.003 pct (bar 1 pct),
+  lattice correction c2 = +0.839 in (a/d)^2, quadrature stable to 2e-9 under doubling;
+  the wound SHIN6 slab carries two Dirichlet modes per n (2.5 pct split). Rendered
+  CAS-LEDGER-CONSISTENT: consistency-tier, no discriminator, no hbar derived, instrument
+  credentialed. Q2, the winding''s rotation (FND-130/131/132): a fixed-frequency, constant-
+  modulus classical configuration has a LOCAL energy, so plates change it only in a boundary
+  layer; exact control on a pinned chain carrying the travelling helix, 160 values of d over
+  10..1000 sites at pitches 5, 7 and 2 sqrt3: E(d) = e d + constant with residual 1.6e-13 to
+  3.2e-13 at every d (the linearly polarized contrast shows the bounded commensurability
+  term, 0.25 R^2, averaging to 1e-13 over a period); the SHIN6 wound slab''s local bond sum
+  is exactly linear in d (5e-15 relative). Rendered CAS-IDENTITY-SHORT-RANGE, the expected
+  outcome, stated before computing. CONSEQUENCE: the corpus''s "zero-point" names two
+  objects, (A) the spectral half-sum that Sakharov induction and Casimir act on and (B) the
+  budget share of the energy bill (FND-MATTER-041''s window; FND-132''s identity), and (B)
+  does not produce what (A) produces: distinct objects, flagged per the EM-020 precedent
+  (riders drafted for FND-132 and FND-MATTER-041 in analysis/CASIMIR_F3_results.md, the
+  author''s act). The magnitude question is restated, not adjudicated: hbar c/a = 5.3e-10 J
+  per mode against T0 a = 2.6e-14 J per cell, ratio 2e4, is GRV-093''s quantum-area-to-cell
+  ratio in energy form. THE FENCE''S TASK 1 IN SPECTRAL FORM: supply an energy per carried
+  light mode proportional to frequency with one universal constant on the gapless transverse
+  band; the forced rotating wave is not that object. F3''s "computable in principle" is
+  removed from its face; its "strongest potential external confrontation" is not one.
+  Results analysis/CASIMIR_F3_results.md; verdict log analysis/CASIMIR_F3_verdict.log;
+  sealed outputs analysis/casimir_f3_part1.npz, casimir_f3_part2.npz. NORTH_STAR delta:
+  targets moved 0, inputs retired 0, one retirement route (hbar) stated more sharply.
+  Named next-order: none cheaper than the fence''s Task 1; CURRENT-AS-SPIN remains queued.
+  Granted by the author 2026-09-27, with riders on FND-132 and FND-MATTER-041 (applied the same day).'

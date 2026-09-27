@@ -1,0 +1,27 @@
+CASIMIR-F3 VERDICT (bars: analysis/CASIMIR_F3_charter_LOCKED.md; outputs sealed 2026-09-27)
+================================================================================================
+B0  known answer: extrapolated C = -0.0068537 vs continuum -pi^2/1440 = -0.0068539; deviation -0.0028 pct (bar 1 pct); quadrature change under doubling 2.10e-07 pct (bar 0.1 pct); lattice c2 = +0.839  -> PASS
+      d   8  E_cas d^3 / continuum = 1.01312
+      d  10  E_cas d^3 / continuum = 1.00833
+      d  12  E_cas d^3 / continuum = 1.00576
+      d  16  E_cas d^3 / continuum = 1.00323
+      d  20  E_cas d^3 / continuum = 1.00206
+      d  24  E_cas d^3 / continuum = 1.00143
+      d  32  E_cas d^3 / continuum = 1.00080
+      d  40  E_cas d^3 / continuum = 1.00051
+      d  48  E_cas d^3 / continuum = 1.00036
+B1  derivation closes on cited claims read at verdict level: polarization count two and isotropy (FND-089, FND-090 Derived); longitudinal channel unpinned by matter at linear order (EM-RECON-011/012); twist band gapped (FND-STRAND-008)  -> CLOSED
+      ledger plate energy per area, two pinned polarizations: -pi^2 hbar c / (720 d^3) [hbar imported per GRV-014]; force pi^2 hbar c / (240 d^4); corrections O((a_f/d)^2), unobservable at laboratory d.
+      excluded control (longitudinal pinned, c_L >= sqrt2 c): >= +35 pct on the two-polarization value, displayed, not adopted.
+      gapped twist band: exp(-2 m d) with m at the strand mass scale, zero at any laboratory d.
+B2  the winding rotation under plates (one-dimensional control, exact energies; residual after extensive + boundary):
+      helix|pitch5           |residual| max 2.27e-13   period-averaged max 1.36e-13   raw fit p    nan   averaged fit p    nan   -> NO TERM (residual at machine noise)
+      helix|pitch7           |residual| max 1.62e-13   period-averaged max 1.62e-13   raw fit p    nan   averaged fit p    nan   -> NO TERM (residual at machine noise)
+      helix|pitch_sqrt3x2    |residual| max 2.27e-13   period-averaged max 2.27e-13   raw fit p    nan   averaged fit p    nan   -> NO TERM (residual at machine noise)
+      linear|pitch5          |residual| max 2.50e-01   period-averaged max 1.14e-13   raw fit p  0.051   averaged fit p    nan   -> NO TERM (residual at machine noise)
+      SHIN6 wound slab local bond sum vs d: residual from linear 1.9e-11 (relative 5.2e-15)  -> extensive + boundary exactly
+      the linearly polarized wave is the contrast display only: its commensurability term is bounded and period-averages to noise.
+================================================================================================
+FORM (Q1): CAS-LEDGER-CONSISTENT -- the registered ledger predicts the measured Casimir force exactly given hbar; consistency-tier; no tier motion; no discriminator; instrument credentialed.
+FORM (Q2): CAS-IDENTITY-SHORT-RANGE -- the fixed-frequency, constant-modulus rotating state has NO scale-free plate term: its energy is extensive plus a boundary constant, exactly (residual at machine noise over three decades of d and three pitches). The winding's rotation is the vacuum's energy budget, not its spectral zero-point; the two zero-points are DISTINCT objects.
+Riders and registration are the author's act (drafts: analysis/CASIMIR_F3_results.md, analysis/fnd178_claim.yaml).

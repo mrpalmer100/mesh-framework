@@ -25,7 +25,8 @@ necessary; it is not progress on this page.
 | Weights of atoms | Nuclear masses C-12 to U-238 at 0.00 to 0.51% from bond counting (NUC-005/018); surface term derived from packing geometry (18% miss, NUC-016); Coulomb term derived from winding charge and spacing (+9%) | The nucleon mass unit and m_e (PM-005, irreducible); one calibrated bond depth eps fixed on Ca-40 | Asymmetry and pairing need Fermi statistics, i.e. hbar; He-4 misses by 38% (zero-point); H-1 is inputs only; m_p/m_e = 1836 is spectrum-gated, not framework-bounded (FND-MATTER-066, kept) | Fence tests (b) and (c) below |
 | Gravitational force | Newton's law forced by 3D elastostatics (GRV-005); weak-field metric, gamma = 1 and the PPN table (GRV-029); 1.751 arcsec deflection; SPARC g_dagger = cH0/2pi with zero parameters (GRV-030/031/033) | Sigma (measured, FND-030); a (fixed at the M-point by m_e); G itself is read as the medium's rigidity c^4/4piG (GRV-006), with the Sakharov cutoff selected at Planck-class spacing (GRV-075/095) | The frame-dragging magnitude waits on the fine scale a_f (GRV-126, FND-110); G is not yet computed from a | Fence test (d) below |
 | Strength of magnets | Maxwell's equations (EM-003) with a unique mechanical dictionary (EM-017..022); every electromagnetic magnitude locked to Sigma by kappa_0 = c/sqrt(eps0 Sigma) (FND-031, P31): fields of currents and forces between them follow | Sigma | A permanent magnet's strength needs the electron's magnetic moment and exchange ordering: the electron model is unbuilt (the ELEC sector contributes nothing at any census tier; the spin-axis identification was falsified, ELEC-099/100) and both sit behind the quantum layer | COMMISSION CURRENT-AS-SPIN (chartered 2026-08-16); the electron model |
-| Also carried | 1/alpha = 2 pi^2 rho^2 with rho = 2.6348 owed by one mechanism, blind, inside a +178.8 ppm fence (ELEC-083); the Casimir coefficient pi^2/240 from the winding spectrum (STRATEGIC_TARGETS F3, chartered, not computed); the adjoint Casimir pin (FND-106, armed); the alpha-G drift ratio (PRED-003, clocked 2027 to 2030) | | | F3 is the first number the wave reading can put against a measurement |
+| Also carried | 1/alpha = 2 pi^2 rho^2 with rho = 2.6348 owed by one mechanism, blind, inside a +178.8 ppm fence (ELEC-083); the adjoint Casimir pin (FND-106, armed); the alpha-G drift ratio (PRED-003, clocked 2027 to 2030) | | | The alpha mechanism is the highest-reward item on the board and has no shape yet |
+| Casimir force | pi^2 hbar c / (240 d^4) from the registered ledger, coefficient by universality on three registered closures (CASIMIR-F3, 2026-09-27; consistency-tier) | hbar (imported, GRV-014) | The energy per light mode: the wave arc's rotation does not supply it (CAS-IDENTITY-SHORT-RANGE, FND-178, granted 2026-09-27) | Fence Task 1 in spectral form |
 
 ## 3. The input ledger (the number to drive down)
 
@@ -88,6 +89,11 @@ point where the pending verdict can be read, then the lineage stops. Every relea
 carries the scorecard delta, including when it is zero.
 
 ## 6. The queue as of 27 September 2026 (proposed, author decides)
+
+Delta since this page was written (2026-09-27, CASIMIR-F3): targets moved blocked to
+derived 0; inputs retired 0; one retirement route (hbar) stated more sharply; one naming
+collision (spectral vs budget zero-point) flagged before it collided. F3 is closed at this
+instrument class; item 2 below is discharged.
 
 1. Finish the two pending verdicts; the compute is sunk. NYQ-CONTROL on the PC decides
    whether FND-175/176/177 stand or become refute-and-keep. COMPOSITE-SELECT Leg B on the

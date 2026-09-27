@@ -299,3 +299,27 @@ the docx/PDF re-render is the remaining format debt. The
 priority order within this refresh: F1 (registration-ready), F3 (highest
 external value, one commission), F2 (identification session), F4 (already
 registered, paper-sync only).
+
+
+## G. F3 EXECUTED (2026-09-27, COMMISSION CASIMIR-F3; charter analysis/CASIMIR_F3_charter_LOCKED.md)
+
+F3 ran as two questions after the registry was read at verdict level. Q1: the
+registered zero-point ledger (FND-109 convention, hbar imported per GRV-014 as
+in GRV-021/025) gives the plate energy -pi^2 hbar c/(720 d^3) BY UNIVERSALITY,
+because the registry already closes the three ways the mesh could differ (two
+isotropic gapless polarizations, FND-089/090; the dark channel unpinned,
+EM-RECON-011/012; the twist band gapped, FND-STRAND-008); known-answer
+instrument at -0.003 percent; CAS-LEDGER-CONSISTENT, consistency-tier, not a
+discriminator and not hbar derived. Q2: the winding's rotation (FND-130..132)
+carries NO plate force (a classical configuration's energy is local; exact
+control residual at machine noise over three decades of d); CAS-IDENTITY-
+SHORT-RANGE. Consequence: the corpus's spectral zero-point and its budget
+zero-point are distinct objects (riders drafted for FND-132 and
+FND-MATTER-041, the author's act). F3's "computable in principle" and
+"strongest potential external confrontation" are withdrawn from its face; the
+wave arc's external surface is Prediction 32's lower edge. The fence's Task 1
+is restated in spectral form in analysis/CASIMIR_F3_results.md. Registered as
+FND-178 (granted 2026-09-27, riders applied to FND-132 and FND-MATTER-041). The priority order within section F is
+now: F1 (registration-ready), F2 (done, FND-166), F4 (paper-sync only); F3 is
+closed at this instrument class. Session selection from here is governed by
+docs/NORTH_STAR.md section 5.
