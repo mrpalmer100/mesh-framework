@@ -1,0 +1,11 @@
+[nyq verdict] c1|b=+0.000                floor                    RMS 1.3e-07 clos 8.2e-11 wsNyq 2.6e-07 om2 -1.110727 rounds 7
+[nyq verdict] B|b=-0.100                 floor                    RMS 5.8e-06 clos 4.5e-08 wsNyq 2.6e-07 om2 -1.110732 rounds 14
+[nyq verdict] B|b=-0.200                 floor                    RMS 1.3e-05 clos 8.7e-08 wsNyq 2.6e-07 om2 -1.110741 rounds 14
+[nyq verdict] B|b=-0.050                 floor                    RMS 1.7e-06 clos 1.6e-08 wsNyq 2.6e-07 om2 -1.110728 rounds 24
+[nyq verdict] B|b=+0.050                 floor                    RMS 1.1e-06 clos 7.0e-09 wsNyq 2.6e-07 om2 -1.110728 rounds 34
+[nyq verdict] B|b=+0.100                 floor                    RMS 3.8e-06 clos 3.1e-08 wsNyq 2.6e-07 om2 -1.110731 rounds 24
+[nyq verdict] B|b=+0.200                 floor                    RMS 1.2e-05 clos 8.8e-08 wsNyq 2.6e-07 om2 -1.110738 rounds 14
+[nyq verdict] c3|b=-0.100|nodealias      floor                    RMS 9.1e-07 clos 3.7e-08 wsNyq 2.1e-03 om2 -1.110728 rounds 60
+[nyq verdict] c2|aligned|b=+0.000        GATED (clean)            RMS 4.3e-09 clos 1.6e-10 wsNyq 1.9e-09 om2 +2.148419 rounds 1
+[nyq verdict] controls: c1 GN floor reproduced True; c2 aligned member stays gated True; c3 fault reproduced (gates with wsNyq > 1e-3) False
+[nyq verdict] VERDICT: NYQ-CONTROL-FAIL
