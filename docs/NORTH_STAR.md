@@ -96,13 +96,19 @@ collision (spectral vs budget zero-point) flagged before it collided. F3 is clos
 instrument class; item 2 below is discharged.
 
 1. Finish the two pending verdicts; the compute is sunk. NYQ-CONTROL on the PC decides
-   whether FND-175/176/177 stand or become refute-and-keep. COMPOSITE-SELECT Leg B on the
-   Mac is the composite build itself, which F3 needs.
+   whether FND-175/176/177 stand or become refute-and-keep. [DONE 2026-10-04: NYQ-CONTROL
+   rendered CONTROL-FAIL; NYQ-CONTROL-2 rendered IRREPRODUCIBLE; FND-175 refuted and kept,
+   FND-176/177 artifact records, FND-174 caution reopened. Input retired from "Also carried":
+   the anti-aligned continuum family.] COMPOSITE-SELECT Leg B on the Mac is the composite
+   build itself, which F3 needs. [Leg B still running at 11/7.]
 2. Then F3: Casimir from the winding spectrum, pi^2/240 pre-named. The first external
    number the wave arc can produce, zero parameters. Charter to be written once Leg B seals.
 3. In parallel on the PC: CURRENT-AS-SPIN, the magnet-facing commission already chartered
    and never run.
 4. Then the fence, Task 1: the snap-action-to-hbar bridge, under the acceptance tests above.
 
-Not chartered further: KERNEL-MARCH / KM-TURN successors. The bordered instrument is at its
-floor under NYQUIST-CAUTION and the lineage names no scorecard target.
+Not chartered further: KERNEL-MARCH / KM-TURN successors. The bordered instrument is retired
+(NYQ-CONTROL-2: conditioning-limited at the resonance, gates not reproducible from identical
+inputs) and the lineage names no scorecard target. The kernel question stays open; a
+credentialed route to it would start by gating a known member (FND-173) under any new
+corrector before touching the resonance.

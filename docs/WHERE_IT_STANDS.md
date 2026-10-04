@@ -174,3 +174,20 @@ applied and below QED's Schwinger field over most of the range, T2 until the str
 scale is pinned (FND-182, ELEC-101). The census ruled that C1 admits no window; the firm
 count stays at two plus one adjudicated, and the route to three is now a named input to pin
 rather than a rule to widen. The North Star page (docs/NORTH_STAR.md) carries the scorecard.
+
+## Addendum, 4 October 2026 (NYQ-CONTROL and NYQ-CONTROL-2)
+
+The two pending verdicts on the anti-aligned kernel branch rendered, and the result is an
+instrument finding, not a physics finding. NYQ-CONTROL (the PC, de-aliased corrector, Nyquist
+bar) floored at every b with the Nyquist weight clean, but its fault-reproduction control did not
+gate, so it rendered CONTROL-FAIL and no verdict attached. NYQ-CONTROL-2 re-ran the control on
+the 2026-09-16 corrector frozen byte-for-byte, from inputs shown identical to the bit, and it did
+not gate either: the predictor step alone differed by 40 percent, which places the bordered solve
+at the edge of its conditioning (lam 1e-9 against sigma^2 of the same size). FND-175 is refuted
+on reproducibility and kept; FND-176/177 are artifact records; FND-174's continuum rider is
+reopened as caution. The resonance (FND-172) and the 5/4 member (FND-173) were measured on clean
+states by plain Gauss-Newton and are not touched. What the house learned: a solver operating
+where the regularization equals the near-null singular value squared produces gates that are
+not its inputs' gates. The kernel question is open; the bordered corrector is retired from it.
+Scorecard: no row moves; the anti-aligned continuum family leaves the "Also carried" column.
+

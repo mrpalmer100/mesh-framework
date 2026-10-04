@@ -407,3 +407,28 @@ and the fence's spectral restatement; WHERE_IT_STANDS gains the 27 September
 addendum; HANDOFF opens with NORTH_STAR read-first. Owed at the 3.32.0 cut:
 the rope_blackholes paper's F2 sentence (paper sync), the 14 mixed zero-point
 claims' review, the predictions paper re-render.
+
+## O. NYQ-CONTROL AND NYQ-CONTROL-2 RENDERED (2026-10-02 to 2026-10-04; the PC)
+
+NYQ-CONTROL (v3 driver; charter analysis/NYQ_CONTROL_charter_LOCKED.md): the six-b de-aliased
+sweep floored at RMS 1.1e-6 to 1.3e-5 with wsNyq 2.6e-7 throughout; c1 and c2 passed; c3 (the
+fault reproduction, dealias off) floored at 9.1e-7 with wsNyq 2.1e-3 instead of gating. Verdict
+NYQ-CONTROL-FAIL; no physics verdict attached, because the v3 solver (bounded lam ladder, stall
+rule) was not the 09-16 solver that gated FND-175's members. analysis/NYQ_CONTROL_results.md.
+
+NYQ-CONTROL-2 (charter analysis/NYQ_CONTROL_2_charter_LOCKED.md): the 09-16 corrector frozen
+byte-for-byte (benchmarks/foundations/kernel_continuation_0916.py, sha256 recorded), de-aliasing
+the only amendment, c3 first. c3 floored at 1.3e-6 after the registered 40 rounds, wsNyq 1.8e-3,
+38 of 40 rounds accepted only at the smallest ladder rung. Forensics (tools/nyq2_forensics.py):
+source state, pin and near-null direction identical to the bit with FND-175's sealed stage-B
+inputs; the predictor step differed by 40 percent. Reading: the bordered solve at lam 1e-9
+against sigma^2 ~1.5e-9 is conditioning-limited; the registered run's factor-29 final step is
+the Fault-13 signature. Verdict NYQ2-IRREPRODUCIBLE. Riders applied 2026-10-04 on the author's
+word: FND-175 registered -> Failed (kept); FND-176/177 artifact records; FND-174 continuum rider
+reopened as caution. FND-172/173 untouched. analysis/NYQ_CONTROL_2_results.md.
+
+Scorecard delta: no row moves; one input retired from "Also carried" (the anti-aligned
+continuum family). What the two commissions bought: the bordered corrector is known not to be
+an instrument, before anything further was built on it. Not chartered: any successor on the
+kernel branch; the PC is free for a scorecard-facing job.
+

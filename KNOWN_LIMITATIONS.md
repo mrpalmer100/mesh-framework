@@ -6,7 +6,7 @@ you have found it in under five minutes.
 
 *Revised against the current registry.*
 <!-- BEGIN GENERATED: corpus_stats -->
-*775 registered claims, 641 code-backed and passing, 121 Derived, 47 registered Failed and kept.*
+*775 registered claims, 641 code-backed and passing, 121 Derived, 48 registered Failed and kept.*
 <!-- END GENERATED: corpus_stats -->
 
 
@@ -289,7 +289,7 @@ kept straight, several quantum facts are **adopted, not derived**, or **open**:
 
 ## Failed and kept
 
-Forty-five claims are registered Failed and kept — the corpus's rule is that
+Forty-eight claims are registered Failed and kept; the corpus's rule is that
 failures are never erased, and every one carries its verdict text on its face.
 The authoritative ledger is the registry itself: `claims.yaml` (filter
 status: Failed), with sector-by-sector history in `docs/history/`. Headline
@@ -297,6 +297,16 @@ entries a reader should know exist: GRV-059 (the source audit that opened the
 frame-dragging line), FND-052/102/113 (the k-string exposure clauses firing at
 their own pre-registered bars), NUC-010 (the kinetic-residual explanation
 computed and refuted), and QB-003/004 (the counting models Bell caps at 2).
+Newest (4 Oct 2026): FND-175, the anti-aligned kernel-branch continuum, refuted
+on reproducibility by NYQ-CONTROL-2: the bordered corrector that gated its
+members could not re-obtain the gate from bit-identical inputs, because the
+bordered solve at lam 1e-9 against a near-null direction with sigma^2 of the
+same size is conditioning-limited; its output is set by library internals, not
+by the equations. FND-176/177 are artifact records of that instrument; FND-174
+carries a reopened caution. The kernel question itself (does the anti-aligned
+resonance carry a continuum of full-bar members) is open, not answered either
+way, and the bordered corrector is retired from answering it. Record:
+analysis/NYQ_CONTROL_2_results.md.
 
 ## The one fence (cross-sector synthesis)
 
