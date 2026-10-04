@@ -1,0 +1,9 @@
+[ln T1] Pi provenance (registry read): FND-005 Pi = kappa a / T; PRED-003-LOCK enslaves kappa = 2 T/(eta a) from OPT-006's Z = T/c and the director stiffness (FND-001/002); FND-044 has eta = 1 on the books -> Pi = 2, registered through the EM impedance and the director stiffness, NOT through alpha. Clean under B-1.
+[ln T2] coherence count: FND-STRAND-008 / ELEC-048: weave correlations die within one spacing -> a count over a coherence volume is (1 spacing)^3 = 1. The count route is closed at the registered correlation length.
+[ln T3] F-LOR (GRV-092 point)  N 2.2e+03: exp(c/Pi) needs c =   15.4;  Pi^p needs p =  11.1;  exp(c Pi) needs c =   3.8
+[ln T3] F-LOR (GRV-092 point)  N 9.0e+03: exp(c/Pi) needs c =   18.2;  Pi^p needs p =  13.1;  exp(c Pi) needs c =   4.6
+[ln T3] F-LOR (scale sets)     N 1.4e+04: exp(c/Pi) needs c =   19.1;  Pi^p needs p =  13.8;  exp(c Pi) needs c =   4.8
+[ln T3] F-LOR (scale sets)     N 4.2e+04: exp(c/Pi) needs c =   21.3;  Pi^p needs p =  15.4;  exp(c Pi) needs c =   5.3
+[ln T3] F-SAK                  N 1.0e+21: exp(c/Pi) needs c =   96.7;  Pi^p needs p =  69.8;  exp(c Pi) needs c =  24.2
+[ln T3] F-SAK                  N 2.0e+22: exp(c/Pi) needs c =  102.7;  Pi^p needs p =  74.1;  exp(c Pi) needs c =  25.7
+[ln T3] note: 2^70 = 1.18e+21 lies inside the F-SAK bracket [1.0e21, 2.0e22]; 2^13 = 8.19e+03 and 2^14 = 1.64e+04 bracket the F-LOR scale-set range. RECORDED AS COINCIDENCES (bar B-2): no mechanism produces the exponent; the exponent IS the claim.

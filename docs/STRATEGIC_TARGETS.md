@@ -446,3 +446,37 @@ registered), FND-182 and FND-STRAND-008 (V_0 unsourced). Scorecard delta: none; 
 route restated as two priced grants. ANTI-ARC-NYQ (FND-174 under the Nyquist bar) chartered and
 locked the same day, running on the PC; its verdict belongs to the next release.
 
+## Q. SANDBOX READINESS AND PRICING WHILE BOTH MACHINES RUN (2026-10-04, evening)
+
+Verdict dry runs: tools/aan_verdict_dryrun.py exercises ANTI-ARC-NYQ's verdict on eleven synthetic
+checkpoints (ten writable states read correctly; the script is unchanged). tools/legb_verdict_dryrun.py
+and benchmarks/foundations/composite_legB_verdict.py (QB and the QC price table) built ahead of
+LADDER COMPLETE; five forms read correctly; the price route checked on the registered 4/3 member
+(2.5987 T0). FINDING, reported before the data: with the four existing cells in the ladder as D3
+requires, the locked Spearman statistic cannot return RAT-SMOOTH (max attainable |rho(D, q)| 0.767
+against the 0.8 bar) and RAT-RESONANT only barely; the likely readings are RAT-MIXED or NO CALL
+whatever the Mac finds. Nothing is changed (the no-rescue rule forbids it); the verdict runs as
+locked and analysis/COMPOSITE_SELECT_legB_verdict_readiness.md carries the explanation.
+
+Pricing: the two grants ACTION-BRIDGE named are priced for the desk in the TERMINAL format.
+GRANT-CANDIDATE-CONTACT-SECTION (analysis/GRANT_CANDIDATE_CONTACT_SECTION_price_sheet.md): one new
+term in the registered contact form, orientation-dependent with symmetry order n = 2 from the
+two-strand section; sources V_0, the strand mass scale in eV and FND-182's number; falsifiers F1 to
+F4; cheap test T-1 (the existing contact engine with two non-circular sections) doubles as the
+retirement test and should run first. GRANT-CANDIDATE-LARGE-NUMBER (analysis/GRANT_CANDIDATE_LARGE_NUMBER_price_sheet.md):
+not a sentence but the acceptance test any hbar-deriving mechanism must meet, with the registry's
+pure-number ledger (the mesh has produced blind pure numbers of order 1 to 40, never a large one;
+its two large numbers are both computed from measured constants) and three cheap tests, the first
+of which (is Pi alpha-anchored?) may close the slot outright. Decision lines are the author's.
+
+T-1 results (2026-10-04, late): CONTACT-SECTION's T-1 could not run on the registered engine (it
+has no section: the form is in the centre-line separation), so it ran on the two-strand section's
+support function with the registered contact law: period pi in each azimuth (n = 2), flat lying
+preferred (phi_0 = pi/2), amplitude V_sec/V_line 0.035 to 0.48 roughly proportional to rho/sigma.
+The grant shrinks to one convention (the contact acts on surfaces, not centre lines); the rest is
+geometry. LARGE-NUMBER's T-1 found Pi registered and clean: Pi = 2 (kappa = 2T/(eta a),
+PRED-003-LOCK, eta = 1 per FND-044), so the slot is open; T-2 closes the count route at the
+registered one-spacing correlation length; T-3 tabulates the exponents a mechanism must supply
+(2^70 or e^97 at F-SAK; 2^13 to 2^15 at F-LOR), with 2^70 = 1.18e21 recorded as a coincidence
+under bar B-2 and not read. Both sheets carry their results; decision lines remain the author's.
+

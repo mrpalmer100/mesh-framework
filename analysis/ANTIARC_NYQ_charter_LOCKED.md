@@ -139,3 +139,17 @@ seeds exactly as antiarc.py does and refuses to march from a zero tangent. The c
 that invocation held c1 and the degenerate c2A1 seed only; it was discarded and the run
 restarted from nothing. No arc point of either arm existed. Forms, bars and protocol unchanged.
 
+## VERDICT DRY RUN (2026-10-04, before any arc point was sealed)
+tools/aan_verdict_dryrun.py builds eleven synthetic checkpoints in the driver's exact layout and
+runs the verdict against each form: FLAT-CLEAN (A2 only; both arms), COLLAPSE-CLEAN, FLAT-NYQ
+(A2 halted), REFUSED (both arms; s1), CONTROL-FAIL (c2; c1), the provisional-by-scope sub-case,
+and an unfinished arm. All ten writable states read correctly. The eleventh fixture carried a
+halted point without the driver's halt flag, a state the driver cannot write; the verdict read it
+as non-terminal, which is the right refusal. The verdict script is unchanged by the dry run.
+
+## SHAKEDOWN NOTE 2 (2026-10-04): the PC's disk filled (745 MB free, Windows temporary files) during
+the aligned control's seed; the Tee log write failed and the next invocation died inside a
+checkpoint write. The checkpoint is atomic (temp file then rename) and was intact; c1 and c2A1's
+seed survived. The driver now refuses to start with under 2 GB free, with a message, instead of
+dying mid-write. No arc point of either arm had been computed. Forms, bars and protocol unchanged.
+

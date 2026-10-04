@@ -79,6 +79,11 @@ def arc_point(T, st, key, xa, xb, arm):
 
 
 def main():
+    import shutil
+    free_gb = shutil.disk_usage(ROOT).free / 1e9
+    if free_gb < 2.0:                                   # 2026-10-04: the PC filled up mid-write (745 MB free); refuse to start rather than die inside a checkpoint write
+        print(f"[aan] REFUSING TO START: {free_gb:.2f} GB free on the drive holding {ROOT}; free at least 2 GB and rerun (the checkpoint is intact; atomic writes)", flush=True)
+        raise SystemExit(2)
     st = PersistDict(pickle.loads(CKPT.read_bytes()) if CKPT.exists() else {})
     Ta = q1.QTGrid(144, 36, *CELLS['anti']); Tl = q1.QTGrid(144, 36, *CELLS['aligned'])
     # ---- c1: FND-173's polished member re-gated in place (plain GN, 20 rounds) ----

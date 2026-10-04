@@ -1,0 +1,24 @@
+[cs T1] section: two discs side by side (rho each); support function h(phi) = rho (1 + |cos phi|); contact V = A_c/(1 + (gap/sigma)^4)
+[cs T1]  r/sigma rho/sigma   V_line V_sec/V_line period/pi  preferred 2nd harm/1st
+[cs T1]     0.80      0.05   0.7279        0.035      1.00 flat (minor radius faces)        0.206
+[cs T1]     0.80      0.10   0.7456        0.067      1.00 flat (minor radius faces)        0.214
+[cs T1]     0.80      0.20   0.7785        0.124      1.00 flat (minor radius faces)        0.237
+[cs T1]     0.80      0.30   0.8069        0.170      1.00 flat (minor radius faces)        0.269
+[cs T1]     0.80      0.50   0.8487        0.236      1.00 flat (minor radius faces)        0.355
+[cs T1]     1.00      0.05   0.5184        0.049      1.00 flat (minor radius faces)        0.195
+[cs T1]     1.00      0.10   0.5373        0.095      1.00 flat (minor radius faces)        0.191
+[cs T1]     1.00      0.20   0.5759        0.178      1.00 flat (minor radius faces)        0.188
+[cs T1]     1.00      0.30   0.6144        0.249      1.00 flat (minor radius faces)        0.192
+[cs T1]     1.00      0.50   0.6854        0.353      1.00 flat (minor radius faces)        0.225
+[cs T1]     1.20      0.05   0.3391        0.055      1.00 flat (minor radius faces)        0.189
+[cs T1]     1.20      0.10   0.3536        0.108      1.00 flat (minor radius faces)        0.178
+[cs T1]     1.20      0.20   0.3851        0.207      1.00 flat (minor radius faces)        0.159
+[cs T1]     1.20      0.30   0.4196        0.295      1.00 flat (minor radius faces)        0.144
+[cs T1]     1.20      0.50   0.4948        0.437      1.00 flat (minor radius faces)        0.132
+[cs T1]     1.50      0.05   0.1719        0.055      1.00 flat (minor radius faces)        0.186
+[cs T1]     1.50      0.10   0.1794        0.108      1.00 flat (minor radius faces)        0.171
+[cs T1]     1.50      0.20   0.1961        0.211      1.00 flat (minor radius faces)        0.143
+[cs T1]     1.50      0.30   0.2155        0.307      1.00 flat (minor radius faces)        0.117
+[cs T1]     1.50      0.50   0.2633        0.479      1.00 flat (minor radius faces)        0.069
+[cs T1] two-azimuth surface at r/sigma 1.0, rho/sigma 0.2: dominant mixed harmonic (k1, k2) = (2, 2); separable n = 2 in each azimuth: True
+[cs T1] sealed -> analysis/contact_section_t1.npz
