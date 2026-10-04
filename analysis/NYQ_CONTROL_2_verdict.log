@@ -1,0 +1,4 @@
+[nyq2 verdict] frozen solver sha256 bfe24d2d2b1b3250c8b4f0ec22ae2bc78032f62c11f840eb16b6af82c5e92009
+[nyq2 verdict] S1 c3|b=-0.100|nodealias      floor                    RMS 1.3e-06 clos 6.3e-08 wsNyq 1.8e-03 om2 -1.110728 rounds 40 ended by budget
+[nyq2 verdict] c3 fault reproduced on the 09-16 solver (gates with wsNyq > 1e-3): False
+[nyq2 verdict] VERDICT: NYQ2-IRREPRODUCIBLE
