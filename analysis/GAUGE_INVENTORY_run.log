@@ -1,0 +1,50 @@
+[gi G2 strand]   rotation phi->phi+alpha (SO(2))      invariant: True
+[gi G2 strand]   slide s->s-a (R)                     invariant: True
+[gi G2 strand]   reflection phi->-phi                 invariant: False
+[gi G2 strand]   inversion s->-s                      invariant: False
+[gi G2 strand]   scaling phi->lam phi                 invariant: False
+[gi G2 strand]   shear phi->phi+k s                   invariant: False
+[gi G2 strand]   P = (s->-s, phi->-phi) jointly       invariant: True
+[gi G2 strand] continuous group dim 2 (R x SO(2)), screw stabiliser dim 1: True, G/H dim 1 (S^1)
+[gi CONTROL] GRV-020 reproduced: True
+[gi G3 strand] phi->-phi together with tau0->-tau0 (handedness flip) invariant: True  (the energy is symmetric between the two handedness signs; neither is selected)
+[gi G2 node] z = 6 (FND-148 embedding); E = J sum (1 - cos dtheta) (FND-001)
+[gi G2 node]   rope-label permutations S_6 invariant: True  (discrete, internal)
+[gi G2 node]   common rotation of all directors (spatial SO(3)): True;  rotation of one director alone: False
+[gi G2 node]   each rope's own-axis azimuth (the face, FND-184): appears in no registered node energy -> UNCONSTRAINED (not a symmetry; JUNCTION-LOCK f = 0)
+[gi G2 weave] cubic harmonic sum n_i^4 - 3/5 (ELEC-096) invariant under all 48 elements of O_h: True; under a generic SO(3) rotation: False
+[gi G2 weave] family label set ('x', 'y', 'z'): symmetry group S_3 (6 elements, inside O_h); continuous (identity-component) part acting on a 3-element set: trivial (dim 0)
+[gi G2 weave] relative handedness aligned/anti-aligned (FND-173/174): a Z_2 LABEL the registered energy DISTINGUISHES (different om2) -> not a symmetry; a label
+[gi G3] spatial inversion P and the handedness flip, variable by variable (reads at lock, applied):
+[gi G3]   strand azimuth phi, torsion energy (GRV-020)                   even                   P flips s and phi together: phi' unchanged, energy invariant
+[gi G3]   strand handedness sign tau0 (FND-088 fixes |angle|, no sign)   degenerate (both signs) the energy is symmetric under tau0 -> -tau0 with phi -> -phi; no registered claim selects a sign
+[gi G3]   material winding sign = charge (GRV-045, FND-008)              odd label              P reverses the winding sign: P acts on windings as charge reversal
+[gi G3]   relative level-2 handedness aligned/anti-aligned (FND-173)     even                   P flips both levels: the RELATIVE label is P-invariant; the energy difference between the two is P-even
+[gi G3]   node director energy (FND-001)                                 even                   cos dtheta is P-even
+[gi G3]   three-family direction set and sum n_i^4 (ELEC-096)            even                   O_h contains inversion: even
+[gi G3] READING: every registered energy is P-even and the vacuum's absolute handedness is not fixed by any registered claim (FND-088 derives angles, not signs; FND-173 registers both relative signs as objects). The registered vacuum is P-EVEN with a two-fold handedness degeneracy; P acts on the charge label as charge reversal. There is no registered seed of parity VIOLATION; there is a registered handedness LABEL.
+[gi G4] label table of registered excitations (groups and labels only; B-3):
+[gi G4]   object                             winding n (Z)  handedness   family   knot / det     source
+[gi G4]   vacuum strand winding              n in Z         +/-          x|y|z    -              FND-008, GRV-045, EM-RECON-018
+[gi G4]   two-frequency member, aligned      -              aligned      -        -              FND-140/173 (level-2 relative sign +)
+[gi G4]   two-frequency member, anti-aligned q=5/4 -              anti         -        -              FND-173/174 (level-2 relative sign -)
+[gi G4]   ring (unknot)                      -              -            -        0_1 / 1        FND-MATTER-019
+[gi G4]   trefoil                            -              chiral pair  -        3_1 / 3        FND-MATTER-019
+[gi G4]   cinquefoil                         -              chiral pair  -        5_1 / 5        FND-MATTER-019
+[gi G4]   septafoil                          -              chiral pair  -        7_1 / 7        FND-MATTER-019
+[gi G4]   figure-eight                       -              achiral      -        4_1 / 5        FND-MATTER-020
+[gi G4]   square knot                        -              achiral composite -        3_1#3_1* / 9   FND-MATTER-019
+[gi G4]   granny knot                        -              chiral composite -        3_1#3_1 / 9    FND-MATTER-019
+[gi G4] the labels available to a registered excitation: one integer (winding), one sign (handedness), one of three (family), one knot type. No continuous internal label beyond the U(1) phase exists.
+[gi G5] the count: real dimension of the CONTINUOUS internal space at each level, against the need:
+[gi G5]   strand: continuous internal dim 1 (S^1, GRV-020)
+[gi G5]   node  : continuous internal dim 0 (finite labels only: S_6 rope permutations at the node; S_3 families, Z_2 relative handedness in the weave)
+[gi G5]   weave : continuous internal dim 0 (finite labels only: S_6 rope permutations at the node; S_3 families, Z_2 relative handedness in the weave)
+[gi G5]   need SU(2) doublet (complex 2)           : 4  -> shortfall 3 real dimensions beyond the registered circle
+[gi G5]   need SU(2)/SO(3) adjoint acting on S^2   : 3  -> shortfall 2 real dimensions beyond the registered circle
+[gi G5]   need SU(3) triplet (complex 3)           : 6  -> shortfall 5 real dimensions beyond the registered circle
+[gi G5]   need SU(3) adjoint                       : 8  -> shortfall 7 real dimensions beyond the registered circle
+[gi G5] discrete shadows, named as shadows: Z_2 (strand exchange, A2) is the centre of SU(2); S_3 (family permutation) is the Weyl group of SU(3). A finite subgroup of G is not G.
+[gi G5] the registered internal space is ONE CIRCLE. Its full continuous symmetry is SO(2) (GRV-020), already spent on electromagnetism (winding = charge, torsion = light). No registered variable carries a second continuous internal direction.
+[gi VERDICT] DISCRETE-ONLY + NEW-INTERNAL-SPACE-NEEDED; P-EVEN: the continuous internal symmetry at every level is GRV-020's SO(2) (times the slide), the rest is finite (S_6 at the node, S_3 and Z_2 in the weave); the registered continuous internal space has real dimension 1 and SU(2)/SU(3) need 3 to 8; the vacuum is P-even with a handedness degeneracy and P acts as charge reversal on windings.
+[gi] sealed -> gauge_inventory.npz

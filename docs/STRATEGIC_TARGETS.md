@@ -610,3 +610,27 @@ ends at the fence (sections P to V); a torture suite would score 'electron unbui
 rows and ELEC-062 already registered that as the sectoral finding. The review's call to invite
 adversarial external attack stands as the author's to act on.
 
+
+## X. GAUGE-INVENTORY EXECUTED (2026-10-04, night; sandbox; charter analysis/GAUGE_INVENTORY_charter_LOCKED.md)
+
+Booked as the one permitted interior session (no section 5 ruling at lock). Verdict DISCRETE-ONLY
+with the count, P-EVEN (analysis/GAUGE_INVENTORY_results.md). Control: the instrument reproduced
+GRV-020 from the registered torsion energy alone (R x SO(2), screw stabiliser, G/H = S^1) before any
+other group was computed. By machine: the node's internal group is S_6 on rope labels (FND-001's pair
+sum), the weave's is S_3 on the three families inside O_h (ELEC-096 reproduced on all 48 elements;
+a generic SO(3) rotation fails), the relative handedness is a Z_2 label the energy distinguishes,
+and the exchange and face variables carry no registered energy (UNCONSTRAINED, not symmetries).
+The continuous internal space is one circle (dimension 1); SU(2) needs 3 or 4, SU(3) 6 or 8; the
+shortfall is 2 to 7 real dimensions per strand, each needing a registered energy. Z_2 and S_3 are
+named as the centre of SU(2) and the Weyl group of SU(3), finite shadows, not the groups. Parity: every
+registered energy is P-even, FND-088 fixes angles not signs, FND-173 registers both relative signs,
+so the vacuum is P-even with a handedness degeneracy and P acts on windings as charge reversal; row 7's
+parity violation has no registered seed. SM_EMERGENCE tally unchanged at 1/4/7; rows 2, 5, 7, 8 gain
+their registered reasons on the author's word. Riders adopted 2026-10-04 on GRV-020, ELEC-096,
+FND-088; registered as FND-185 (the count a future grant is priced against); SM_EMERGENCE rows 2,
+5, 7, 8 carry the registered reasons. Next-order is a grant
+class ("the strand carries an internal space of dimension d >= 3"), not proposed.
+
+Author's decision recorded (2026-10-04): the extension "the tie holds the face" is NOT granted; the
+fourth grant FND-184 stays scoped to contacts where strands press (the matter sector). The fence at
+the centre stands as NORTH_STAR section 4 draws it.
