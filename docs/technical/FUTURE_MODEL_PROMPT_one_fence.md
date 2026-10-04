@@ -25,7 +25,8 @@ begins; it must pass after every session you run.
 The postulate set is unchanged: inextensible, volume-conserving strands
 under tension; parameters {T, kappa, a} carrying exactly one
 dimensionless ratio (FND-005) — PLUS, since v1, three priced grants
-rather than two: the pair is one thing; the weave is warm; the quantum
+rather than two (and a fourth since 4 Oct 2026, FND-184: the contact acts on
+surfaces, not centre lines; see analysis/CONTACT_SECTION_grant.md): the pair is one thing; the weave is warm; the quantum
 arrives whole (FND-STRAND-025, falsifiers armed, retirement bounty
 standing). Everything you build must carry those grants on its face
 wherever consumed.

@@ -37,9 +37,10 @@ necessary; it is not progress on this page.
 | d_c, the strand thickness | Calibration, 1.87e-19 m (HBAR-005) | With a |
 | The nucleon mass unit | Input (PM-005) | The 1836 road: kinetic/zero-point structure of the proton knot (FND-MATTER-066) |
 | eps, the nuclear bond depth | One calibration, Ca-40 (NUC-005) | The one calibration the fence directive permits, unless the zero-point layer supplies it |
-| hbar | Imported; the mesoscopic identification retired after six closures; ACTION-BRIDGE (FND-183, 2026-10-04): no registered mechanism bridges the snap action to it, and the postulates' only action carries two powers of a | Fence Task 1 restated: a pure number of order 1e21 from Pi, or an imported fork-invariant length; both are grants to price |
+| hbar | Imported; the mesoscopic identification retired after six closures; ACTION-BRIDGE (FND-183, 2026-10-04): no registered mechanism bridges the snap action to it, and the postulates' only action carries two powers of a | Fence Task 1 restated: a pure number of order 1e21 from the registered Pi = 2 (2^70 and e^97 are the sizes; recorded as coincidences, not read), or an imported fork-invariant length; the LARGE-NUMBER slot is open and narrow |
 | k/T0 = 2 | Adopted, theorem route closed (FND-129) | Re-opens only through GRANT-CONTACT's supersession clause |
 | The strand's Poisson ratio | Imported from isotropic elasticity | Moves gamma by a factor of a few, not orders |
+| The contact convention (surfaces, not centre lines) | Adopted 2026-10-04 (FND-184, the fourth grant); replaces the centre-line convention of EM-RECON-023 | Retires into a theorem if a two-strand engine (Phase 2b) reproduces the period-pi dependence by itself |
 | g = l_q/a | The single mesoscopic unknown (FND-044) | Whatever mechanism supplies rho = 2.6348 blind |
 
 About ten named inputs, two of them (kappa_pack, g) not even pinned to a number. The
@@ -78,6 +79,9 @@ excluded at enumeration grade), and three roads (the bridge, the strand mass sca
 FND-182's window) stop at one registered gap: nothing in the registry resists a strand's
 azimuth at a contact (V_0 unsourced; FND-179 B). The two grants that would move the fence are
 named: a cross-section-aware contact form; a candidate large-number mechanism from Pi.
+[2026-10-04, evening: the first was adopted as the fourth grant, FND-184 (the contact acts on
+surfaces); V_0 now has a registered source and COMMISSION STRAND-MASS-SCALE is the next step on
+the discriminator route. The second is priced and open (Pi = 2 is registered and clean).]
 
 The wave arc (FND-130..132, COMPOSITE-SELECT, the anti-aligned sector FND-172..177) is the
 fence attacked from the vacuum side: zero-point energy read mechanically as the winding's

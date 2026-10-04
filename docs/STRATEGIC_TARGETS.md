@@ -480,3 +480,18 @@ registered one-spacing correlation length; T-3 tabulates the exponents a mechani
 (2^70 or e^97 at F-SAK; 2^13 to 2^15 at F-LOR), with 2^70 = 1.18e21 recorded as a coincidence
 under bar B-2 and not read. Both sheets carry their results; decision lines remain the author's.
 
+## R. THE FOURTH GRANT ADOPTED (2026-10-04, evening; FND-184)
+
+On the author's word ("let's adopt it") after the price sheet and its T-1 run: the contact acts
+on surfaces, not centre lines. Grant record analysis/CONTACT_SECTION_grant.md. Pre-adoption read
+F4 (does the registry forbid a half-twist state?) did not fire: GG-006's integer is the linking
+number of two curves, a half material twist is twist, not linking. Riders: EM-RECON-023 (its
+azimuth-blindness is now a statement about the centre-line form), FND-129 (class-C object reads
+the surface gap), FND-STRAND-002/008, FND-KIN-002, FND-181, FND-182 (period 2 pi -> pi re-read
+owed), FND-183 (M2/M3 unblocked pending V_0). Imported sentences: four. Input ledger: the contact
+convention enters as an adopted input with its retirement route. NAMED NEXT-ORDER, chartered as a
+draft the same evening: COMMISSION STRAND-MASS-SCALE (analysis/STRAND_MASS_SCALE_charter_DRAFT.md):
+V_0 in joules from V_sec per crossing times the registered crossing density; omega_min in eV;
+w from V_0 and kt; FND-182's E_c as a number against the laser record and Schwinger; the grant's
+F1 as the kill. Scorecard: the discriminator route to three is now a computation with bars.
+

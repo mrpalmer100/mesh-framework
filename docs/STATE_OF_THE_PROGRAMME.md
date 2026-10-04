@@ -4,7 +4,7 @@
 developed and formalised in this corpus.*
 
 <!-- BEGIN GENERATED: corpus_stats -->
-*776 registered claims, 641 code-backed and passing, 121 Derived, 48 registered Failed and kept.*
+*777 registered claims, 641 code-backed and passing, 121 Derived, 48 registered Failed and kept.*
 <!-- END GENERATED: corpus_stats -->
 
 **In one line:** one medium of strands under tension reproduces optics,
