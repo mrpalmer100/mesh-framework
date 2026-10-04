@@ -489,9 +489,25 @@ number of two curves, a half material twist is twist, not linking. Riders: EM-RE
 azimuth-blindness is now a statement about the centre-line form), FND-129 (class-C object reads
 the surface gap), FND-STRAND-002/008, FND-KIN-002, FND-181, FND-182 (period 2 pi -> pi re-read
 owed), FND-183 (M2/M3 unblocked pending V_0). Imported sentences: four. Input ledger: the contact
-convention enters as an adopted input with its retirement route. NAMED NEXT-ORDER, chartered as a
-draft the same evening: COMMISSION STRAND-MASS-SCALE (analysis/STRAND_MASS_SCALE_charter_DRAFT.md):
+convention enters as an adopted input with its retirement route. NAMED NEXT-ORDER, chartered, locked and
+run the same evening: COMMISSION STRAND-MASS-SCALE (analysis/STRAND_MASS_SCALE_charter_LOCKED.md):
 V_0 in joules from V_sec per crossing times the registered crossing density; omega_min in eV;
 w from V_0 and kt; FND-182's E_c as a number against the laser record and Schwinger; the grant's
 F1 as the kill. Scorecard: the discriminator route to three is now a computation with bars.
+
+## S. STRAND-MASS-SCALE EXECUTED (2026-10-04, late; sandbox)
+
+Verdict MASS-SCALE-UNDETERMINED (analysis/STRAND_MASS_SCALE_results.md). C1 refused under B-1:
+the contact law's A_c and sigma are symbols in EM-RECON-023 with no registered joules or metres,
+and the coarse weave's crossing density per node is not registered; FND-KIN-005's 13.8 eV is a
+hydrogen-calibrated atomic mode overlap and was not used. The chain from V_0 onward is exact and
+dimensionally checked, and it yields one identity: E_c = (4 pi/5) V_0/(e a), the charge-creation
+field is the orientation well depth per node over the charge times the spacing. FND-182's unpinned
+w and the grant's V_0 are one unknown. Displays (hbar imported, no claim): the registered w bracket
+maps to V_0 of 0.01 to 12 eV per node and a twist gap in the GeV class; the discriminator needs
+V_0 between 0.022 and 31.5 eV per node at kappa_pack 1. Named next-order: three registered inputs
+(A_c in joules from the interpenetration energetics at the coarse level; sigma; the crossings per
+node from FND-091's angles), after which the chain closes in an afternoon and the grant's F1 is
+live. Scorecard: the discriminator route to three is now three named inputs away, each a
+derivation, none a choice.
 
