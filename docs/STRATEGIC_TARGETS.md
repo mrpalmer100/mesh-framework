@@ -546,3 +546,22 @@ junction's azimuthal locking, from FND-001's endpoint mechanics extended to the 
 from a tied-node engine (Phase 2b). Scorecard: the discriminator route is one derivation from a
 verdict either way, and the honest prior is ABOVE-QED.
 
+## V. JUNCTION-LOCK EXECUTED (2026-10-04, night; sandbox): THE CHAIN CLOSES
+
+Verdict JUNCTION-FREE at the registered level (analysis/JUNCTION_LOCK_results.md). Scope read:
+FND-184's sentence covers contacts between strands with a contact law in r; the registered
+junction (FND-001, section 2 of the micromechanics paper) is a point atom on a harmonic bond
+pulled by two tensions, with no gap, no contact law and no surface; the grant does not reach it.
+By machine: E* = -(T^2/kappa)(1 + cos dtheta), J reproduced, and the ropes' azimuths do not
+appear: f = 0 identically. Control passed (circular faces: no azimuthal term). Display under the
+named extension "the tie holds the face" (not adopted): a face-to-face distributed bond locks
+the azimuth at f = 3.5 J with period pi, giving E_c ~ 1e22 V/m (four orders above Schwinger)
+and a self-trapped kink. So the two available readings are f = 0 and f ~ 3.5; the window
+FND-182 and FND-181's coasting regime both need (1e-7 to 1e-4) is reachable by neither. Five
+commissions from ACTION-BRIDGE (sections P, S, T, U, V) traced the strand mass scale, FND-182's
+window and two bridge candidates to one object, a strand's face at a node, and the registered
+vacuum has no mechanism that touches it. Riders proposed (FND-182 status, FND-STRAND-002/008,
+FND-184, FND-181, FND-183); the author's word. Next-order: a decision, not a computation: grant
+"the tie holds the face" (priced) or leave the fourth grant to the matter sector where strands
+press. Scorecard unchanged; input ledger unchanged; the map is sharper by three roads.
+

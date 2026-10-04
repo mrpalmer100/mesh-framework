@@ -1,0 +1,10 @@
+[jl S0] registered junction: E* = -T**2*(cos(dtheta) + 1)/kappa;  J = T^2/kappa reproduced: True
+[jl S0] dE*/dphi_1 = 0, dE*/dphi_2 = 0  (the azimuths do not appear): f = 0 identically under FND-001's mechanics
+[jl J3 control] circular faces: overlap fraction [np.float64(1.0), np.float64(1.0), np.float64(1.0)] -> f = 0.0e+00 (FND-001's J reproduced; bar B-3 True)
+[jl J1 display] extension 'the tie holds the face' (bond distributed over two two-lobed end-faces): overlap fraction min 0.3632 at dphi = 1.571;  azimuthal locking amplitude f = 3.506 J;  period pi;  E(dphi)/J at dphi = pi/4, pi/2: 1.638, 3.506
+[jl J2] face against a POINT node (the registered node): no orientation dependence; f = 0.
+[jl J4 display] kappa_pack 1  : under the extension E_c = 1.19e+22 V/m (9043 x Schwinger), kink width w = 8.3e-04 (self-trapped; onset 0.8)
+[jl J4 display] kappa_pack 50 : under the extension E_c = 4.40e+22 V/m (33316 x Schwinger), kink width w = 3.1e-03 (self-trapped; onset 0.8)
+[jl J4 display] kappa_pack 250: under the extension E_c = 7.52e+22 V/m (56964 x Schwinger), kink width w = 5.2e-03 (self-trapped; onset 0.8)
+[jl VERDICT] JUNCTION-FREE at the registered level (f = 0 identically: the registered node is a point atom with a harmonic bond, and FND-184's sentence covers crossings with a contact law, not bonds); the extension 'the tie holds the face' is priced by the display (f ~ 3.5 J, ABOVE-QED class) and not adopted.
+[jl] sealed -> junction_lock.npz
