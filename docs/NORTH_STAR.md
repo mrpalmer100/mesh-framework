@@ -28,6 +28,23 @@ necessary; it is not progress on this page.
 | Also carried | 1/alpha = 2 pi^2 rho^2 with rho = 2.6348 owed by one mechanism, blind, inside a +178.8 ppm fence (ELEC-083); the adjoint Casimir pin (FND-106, armed); the alpha-G drift ratio (PRED-003, clocked 2027 to 2030) | | | The alpha mechanism is the highest-reward item on the board and has no shape yet |
 | Casimir force | pi^2 hbar c / (240 d^4) from the registered ledger, coefficient by universality on three registered closures (CASIMIR-F3, 2026-09-27; consistency-tier) | hbar (imported, GRV-014) | The energy per light mode: the wave arc's rotation does not supply it (CAS-IDENTITY-SHORT-RANGE, FND-178, granted 2026-09-27) | Fence Task 1 in spectral form |
 
+## 2b. The five numbers (adopted 4 October 2026; carried at the top of every release note)
+
+The claim count measures reproducibility, not physics. These five measure the programme.
+Each is read from a named page, so a release cannot move one by rewording.
+
+| Number | Today | Read from | Direction wanted |
+|---|---|---|---|
+| Fundamental dimensional inputs | 6 (Sigma, a, d_c, the nucleon mass unit, eps, hbar) | Section 3 of this page | Down |
+| Unexplained dimensionless constants | 4 named (alpha via rho = 2.6348; m_p/m_e; g = l_q/a; kappa_pack), plus every Standard Model coupling and ratio not yet on the board (SM_EMERGENCE row 11: none derived) | Section 3; docs/SM_EMERGENCE.md | Down |
+| Imported physical laws | 1: the quantum layer (hbar as a constant, GRV-014; the guidance dynamics, QGATE-011). Isotropic elasticity's Poisson ratio is an imported constant, counted above | Section 3; SM_EMERGENCE row 12 | Down |
+| Unique quantitative predictions (census T1) | 1 firm (PRED-003, the alpha-G drift ratio, clocked 2027 to 2030) and 1 armed pin (FND-106, the adjoint Casimir band) | ELEC-062/064; STRATEGIC_TARGETS section L | Up |
+| Externally adjudicated predictions | 0. The k-string coefficient was adjudicated at its own pre-registered checkpoint and killed; that is self-adjudication, kept, and does not count here | WHERE_IT_STANDS | Up |
+
+A release that moves none of the five is infrastructure, and its note says so in those words.
+The Standard Model's structure is scored separately, in twelve rows, at docs/SM_EMERGENCE.md
+(today 1 derived, 4 partial, 7 unexplained); a release that moves a row says which.
+
 ## 3. The input ledger (the number to drive down)
 
 | Input | Status today | Route to retire it |
@@ -102,6 +119,14 @@ A charter that names none is interior work: at most one such session between
 target-facing sessions, and never a lineage of them. An instrument fault is repaired to the
 point where the pending verdict can be read, then the lineage stops. Every release note
 carries the scorecard delta, including when it is zero.
+
+Standing bar, blind hold-out (adopted 4 October 2026, STRATEGIC_TARGETS section W): in any
+sector whose model carries a calibration or a fit against a measured table (today the
+nuclear masses, NUC-005/018), the next confrontation holds out a pre-registered test set,
+selected and sealed before the fit by a process other than the commission, and the
+prediction is frozen before the held-out values are read. The locked charter names the
+hold-out file by hash. Inspecting the whole table and fitting to part of it is no longer a
+confrontation on this page.
 
 ## 6. The queue as of 27 September 2026 (proposed, author decides)
 

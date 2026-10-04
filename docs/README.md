@@ -29,6 +29,8 @@ Read these, roughly in order. They are written to be read, not waded through.
 
 ## If you want to understand the ideas
 
+- **[SM Emergence](SM_EMERGENCE.md)**: the Standard Model's structure in twelve
+  rows, each derived, partial or unexplained, cited by claim id.
 - **[Where it stands](WHERE_IT_STANDS.md)** — strengths, edges, and the
   committed bets, in full (the README carries the short version).
 - **[Philosophy](philosophy.md)** — why the rope model; the motivation.

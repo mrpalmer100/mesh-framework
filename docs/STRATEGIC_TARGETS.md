@@ -568,3 +568,45 @@ source for V_0). Next-order: a decision, not a computation: grant
 "the tie holds the face" (priced) or leave the fourth grant to the matter sector where strands
 press. Scorecard unchanged; input ledger unchanged; the map is sharper by three roads.
 
+## W. STANDING BAR ADOPTED: THE BLIND HOLD-OUT (2026-10-04, from external review; the author's word)
+
+An external review of the programme (4 October 2026) made twelve recommendations. Most restate
+house law (bars locked before computing, failures kept, discrimination as the criterion, the
+input ledger, the census). Three were new and were adopted the same night: the SM Emergence
+scoreboard (docs/SM_EMERGENCE.md, twelve rows, 1 derived / 4 partial / 7 unexplained at
+adoption); the five numbers at the head of every release note (NORTH_STAR section 2b); and
+this bar.
+
+THE BAR. Any commission that fits or calibrates a model against a measured table (the AME
+nuclear masses are the standing case, NUC-005/018; any future spectrum or coupling table is
+another) is run as a hold-out confrontation:
+
+  W1  Before the charter locks, a test set is drawn from the table by a process other than the
+      commission (a seeded random draw whose seed is recorded, or the author's hand), sealed as
+      a file whose sha256 is written into the locked charter, and not read by the commission
+      until W4. For the nuclear masses the standing size is fifty isotopes across the table.
+  W2  The model is built and calibrated on the remainder only. The calibration count is stated
+      in the charter before W3.
+  W3  The code emits the held-out predictions to a sealed file (sha256 recorded) before any
+      held-out measurement is read. The bars for the confrontation (the accuracy that counts as
+      BLIND-AGREES, the miss that counts as BLIND-FAILS) are locked in the same charter.
+  W4  The held-out values are read once, the verdict is computed once, and the residuals are
+      kept whatever they say. A miss is registered as Failed and kept under the no-rescue rule.
+  W5  A result obtained by inspecting the whole table and fitting to part of it is Modeled at
+      most and is not a confrontation on the North Star page.
+
+What this costs: the nuclear sector's existing 0.00 to 0.51 percent (NUC-005/018) was obtained
+on the whole table and is so labelled; it keeps its status and does not become a confrontation
+retroactively. What it buys: the first hold-out that passes is the programme's first
+out-of-sample agreement in the matter sector, and counts toward the fifth of the five numbers
+when the hold-out was held by someone other than the author.
+
+The review's other recommendations (half of effort on quantum emergence, a master action, a
+hundred-observable torture suite, an alpha campaign, a gate roadmap) were read against the
+record and not adopted as directions: ACTION-BRIDGE (FND-183) already found that hbar needs
+a new primitive, not more effort, so the quantum question is a grant decision; alpha's form
+has an owed input exactly as FND-182 did, and the chain from such a form in this registry
+ends at the fence (sections P to V); a torture suite would score 'electron unbuilt' on most
+rows and ELEC-062 already registered that as the sectoral finding. The review's call to invite
+adversarial external attack stands as the author's to act on.
+

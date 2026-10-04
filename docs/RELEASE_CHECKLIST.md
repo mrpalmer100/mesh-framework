@@ -17,7 +17,9 @@ short because the tooling does the work; the ORDER is the point.
    citations, waived with <!-- version-ok -->) before
    proceeding.
 4. docs/history/RELEASE_NOTES_vX.Y.Z.md written (house format:
-   headline, claims count, the one-paragraph version, also-in-
+   the five numbers of NORTH_STAR section 2b at the top, with the
+   delta (zero is written as zero) and any SM_EMERGENCE row that
+   moved; then headline, claims count, the one-paragraph version, also-in-
    release). The README featured paragraph is updated to the new
    release BY HAND (it is editorial, not generated) -- the
    tripwire will catch it if forgotten, because a stale version
