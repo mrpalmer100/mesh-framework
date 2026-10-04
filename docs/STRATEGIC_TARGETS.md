@@ -525,7 +525,24 @@ about [5, 20] across the scale sets. Recorded, not read: the registered coasting
 w in [0.8, 2.8] maps to d/sigma in [12, 19] (kappa_pack 1), inside the window. One number now
 stands between the fourth grant and FND-182 as a prediction: the vacuum crossing standoff in
 strand widths, a reading of FND-091's node geometry and the coarse packing. Riders adopted on
-FND-182, FND-184, EM-RECON-017 (2026-10-04, night). COMMISSION NODE-STANDOFF chartered as a draft
-(analysis/NODE_STANDOFF_charter_DRAFT.md): read the standoff from the registered node geometry,
-or find that the weave's nodes are not a registered object.
+FND-182, FND-184, EM-RECON-017 (2026-10-04, night). COMMISSION NODE-STANDOFF chartered, locked and run
+the same night (section U).
+
+## U. NODE-STANDOFF EXECUTED (2026-10-04, night; sandbox)
+
+Verdict STANDOFF-UNREGISTERED, with the question restated (analysis/NODE_STANDOFF_results.md).
+The reads found the registered weave has no pressing crossings: ropes are JOINED at nodes
+(FND-148's network; FND-001's junction locking J = T0 a/2 in the director angle) and strands
+crossing between nodes pass through each other without interaction (rope_weave_universe,
+FND-KIN-005, FND-070). So the on-site orientation potential, if any, lives at the junctions, as
+the fraction f of J that locks the two-strand rope's AZIMUTH, which is unregistered. Arithmetic
+in f: E_c = (2 pi/5) f T0/e, spacing-independent; an ordinary locking (f ~ 0.1 to 1) gives
+E_c ~ 1e21 to 1e22 V/m (ABOVE QED) and a self-trapped kink; the FND-182 discriminator reading and
+FND-181's coasting regime both need f ~ 1e-7 to 1e-4, which no registered geometry supplies and
+the section's anisotropy argues against. CROSSING-PRICE's "spacing" horn is retired (it described
+no registered situation). Riders proposed on FND-182 (prior on its face), FND-184 (source is the
+junction), FND-181 (its regime implies a tiny f); the author's word. Named next-order: the
+junction's azimuthal locking, from FND-001's endpoint mechanics extended to the rope's face, or
+from a tied-node engine (Phase 2b). Scorecard: the discriminator route is one derivation from a
+verdict either way, and the honest prior is ABOVE-QED.
 
