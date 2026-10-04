@@ -1,0 +1,8 @@
+[ab verdict] M0: REFUSED (dimensions)
+[ab verdict] M1: REFUSED (no universal count)
+[ab verdict] M2: BLOCKED (unregistered input)
+[ab verdict] M3: BLOCKED (unregistered input)
+[ab verdict] M4: NO COINCIDENCE
+[ab verdict] M5: EXCLUDED
+[ab verdict] action exponents of the postulate set (T0, a, c): (1, 2, -1); dimension-matrix rank 3
+[ab verdict] VERDICT: BRIDGE-NO-MECHANISM

@@ -248,7 +248,7 @@ def make_instrument(T, x0, pin_mode, aux, PW, cache=None):
 
 
 def gn_sparse(T, x, pin_mode, aux, sj, bs, rounds=60, PW=50.0,
-              st=None, key=None, stop_rms=None):
+              st=None, key=None, stop_rms=None, project=None):
     """gn_lean VERBATIM (qsweep_stage1.gn_lean) with the linear
     kernel swapped per the charter. [SJ]-annotated diffs ONLY:
       [SJ-1] J via colored sparse FD (f64) instead of dense f32.
@@ -261,7 +261,12 @@ def gn_sparse(T, x, pin_mode, aux, sj, bs, rounds=60, PW=50.0,
       [SJ-3] the lsmr escalation/fallback uses the SAME sparse f64 J
              (a precision upgrade on an identical operator).
     Acceptance ladder, fractions, trust cap 0.05, basin guard, lam
-    schedule, stall trigger, persistence: unchanged."""
+    schedule, stall trigger, persistence: unchanged.
+    [SJ AMENDMENT 2026-10-04, ANTI-ARC-NYQ] project: optional callable
+    applied to every candidate step (the normal step AND the lsmr
+    fallback) before the acceptance ladder; None (the default) is the
+    credentialed solver byte-for-byte in behaviour. Used only by arm A2
+    of ANTI-ARC-NYQ with kernel_continuation.dealias_s."""
 
     def wn(z):
         return float(np.linalg.norm(T.wres(z, pin_mode, aux, PW)))
@@ -291,6 +296,8 @@ def gn_sparse(T, x, pin_mode, aux, sj, bs, rounds=60, PW=50.0,
             J2, r2 = sj(x, pin_mode, aux, PW)               # [SJ-3]
             dxl = spl.lsmr(J2, -r2, atol=1e-11, btol=1e-11,
                            maxiter=1500)[0]
+            if project is not None:
+                dxl = project(dxl)                          # [SJ 2026-10-04] ANTI-ARC-NYQ A2 only
             acc = False
             for a_ in (1.0, 0.5, 0.25, 0.1):
                 xt = x + a_ * dxl
@@ -341,6 +348,8 @@ def gn_sparse(T, x, pin_mode, aux, sj, bs, rounds=60, PW=50.0,
             _cap = 0.05 * np.sqrt(len(dx) / (2 * 144 * 36 + 2))
             if _nd > _cap:
                 dx = dx * (_cap / _nd)
+            if project is not None:
+                dx = project(dx)                            # [SJ 2026-10-04] ANTI-ARC-NYQ A2 only
             for a_ in (1.0, 0.5, 0.25, 0.1, 0.03):
                 xt = x + a_ * dx
                 f2 = wn(xt)
@@ -356,6 +365,8 @@ def gn_sparse(T, x, pin_mode, aux, sj, bs, rounds=60, PW=50.0,
         if not acc:
             dxl = spl.lsmr(J, -r0, atol=1e-11, btol=1e-11,
                            maxiter=1500)[0]                 # [SJ-3]
+            if project is not None:
+                dxl = project(dxl)                          # [SJ 2026-10-04] ANTI-ARC-NYQ A2 only
             for a_ in (1.0, 0.5, 0.25, 0.1):
                 xt = x + a_ * dxl
                 f2 = wn(xt)

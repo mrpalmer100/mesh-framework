@@ -37,7 +37,7 @@ necessary; it is not progress on this page.
 | d_c, the strand thickness | Calibration, 1.87e-19 m (HBAR-005) | With a |
 | The nucleon mass unit | Input (PM-005) | The 1836 road: kinetic/zero-point structure of the proton knot (FND-MATTER-066) |
 | eps, the nuclear bond depth | One calibration, Ca-40 (NUC-005) | The one calibration the fence directive permits, unless the zero-point layer supplies it |
-| hbar | Imported; the mesoscopic identification retired after six closures | Fence Task 1: the bridge from the derived snap action (GRV-092..094) |
+| hbar | Imported; the mesoscopic identification retired after six closures; ACTION-BRIDGE (FND-183, 2026-10-04): no registered mechanism bridges the snap action to it, and the postulates' only action carries two powers of a | Fence Task 1 restated: a pure number of order 1e21 from Pi, or an imported fork-invariant length; both are grants to price |
 | k/T0 = 2 | Adopted, theorem route closed (FND-129) | Re-opens only through GRANT-CONTACT's supersession clause |
 | The strand's Poisson ratio | Imported from isotropic elasticity | Moves gamma by a factor of a few, not orders |
 | g = l_q/a | The single mesoscopic unknown (FND-044) | Whatever mechanism supplies rho = 2.6348 blind |
@@ -67,6 +67,17 @@ The standing plan is docs/technical/FUTURE_MODEL_PROMPT_one_fence.md (v2, 4 Augu
 
 A theorem-grade no-go is full credit. It would mean the postulate set is insufficient and a
 new primitive must be priced as a grant, which is a result, not a failure.
+
+The fence's shape (ACTION-BRIDGE, FND-183, 2026-10-04): the postulate set {T0, a, c, Pi} has a
+full-rank dimension matrix, so its only action is T0 a^2 g(Pi)/c, which carries two powers of
+the lattice spacing where hbar carries zero. "Derive hbar" is therefore not a calculation waiting
+to be done; it is a demand for a mechanism that manufactures a pure number of order 1e21 (at the
+adopted Planck-class spacing) from the single coupling, with a then fixed by the result. Task 1
+and Task 2 are one equation. Nothing registered does this (six candidates refused, blocked or
+excluded at enumeration grade), and three roads (the bridge, the strand mass scale in eV,
+FND-182's window) stop at one registered gap: nothing in the registry resists a strand's
+azimuth at a contact (V_0 unsourced; FND-179 B). The two grants that would move the fence are
+named: a cross-section-aware contact form; a candidate large-number mechanism from Pi.
 
 The wave arc (FND-130..132, COMPOSITE-SELECT, the anti-aligned sector FND-172..177) is the
 fence attacked from the vacuum side: zero-point energy read mechanically as the winding's
@@ -100,6 +111,11 @@ Delta at the v3.32.0 cut (2026-10-04): targets moved blocked to derived 0; input
 0, the route to a third named (pin the strand mass scale in eV; collapses FND-182's window to
 a number); one derived claim corrected on the record (GRV-045); one instrument retired (the
 bordered kernel corrector). Casimir row: consistency-tier, hbar imported, zero fitted.
+
+Delta 2026-10-04 (ACTION-BRIDGE, FND-183): targets moved 0; inputs retired 0; the hbar input's
+retirement route restated from "a bridge to compute" to "a primitive to price", with the number
+the primitive must produce written down (1e21 at F-SAK; 1e3 to 1e4 at F-LOR). One registered
+gap (V_0) identified as blocking three roads at once.
 
 1. Finish the two pending verdicts; the compute is sunk. NYQ-CONTROL on the PC decides
    whether FND-175/176/177 stand or become refute-and-keep. [DONE 2026-10-04: NYQ-CONTROL

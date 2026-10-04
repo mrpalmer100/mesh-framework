@@ -1,0 +1,22 @@
+[ab S1] R1: hbar = T0*l_q**2/(4*pi*alpha*c);  A* = 13.0434782608696*T0*a*beta*h/(c*chi);  N = hbar/A* = 0.0191666666666667*chi*l_q**2/(pi*a*alpha*beta*h)
+[ab S1] a-exponents (invariants fixed): hbar 0, A* 1, N -1  -> one-power theorem reproduced: True
+[ab S1] kappa_pack 1                         chi 1: A* 7.500e-39 J s  n_q 7.11e-05  N = 1/n_q 1.41e+04
+[ab S1] kappa_pack 1                         chi 3: A* 2.500e-39 J s  n_q 2.37e-05  N = 1/n_q 4.22e+04
+[ab S1] kappa_pack 50                        chi 1: A* 7.507e-39 J s  n_q 7.12e-05  N = 1/n_q 1.40e+04
+[ab S1] kappa_pack 50                        chi 3: A* 2.502e-39 J s  n_q 2.37e-05  N = 1/n_q 4.21e+04
+[ab S1] kappa_pack 250                       chi 1: A* 7.504e-39 J s  n_q 7.12e-05  N = 1/n_q 1.41e+04
+[ab S1] kappa_pack 250                       chi 3: A* 2.501e-39 J s  n_q 2.37e-05  N = 1/n_q 4.22e+04
+[ab S1] F-SAK (a = 8 l_P), T0 kappa_pack 1   chi 1: A* 1.616e-56 J s  n_q 1.53e-22  N = 1/n_q 6.53e+21
+[ab S1] F-SAK (a = 8 l_P), T0 kappa_pack 1   chi 3: A* 5.387e-57 J s  n_q 5.11e-23  N = 1/n_q 1.96e+22
+[ab S1] F-SAK (a = 8 l_P), T0 kappa_pack 250 chi 1: A* 1.018e-55 J s  n_q 9.65e-22  N = 1/n_q 1.04e+21
+[ab S1] F-SAK (a = 8 l_P), T0 kappa_pack 250 chi 3: A* 3.394e-56 J s  n_q 3.22e-22  N = 1/n_q 3.11e+21
+[ab S2] M0: REFUSED (dimensions) -- kappa = Pi T0/a has dimensions M/T**2; kappa/c has M/(L*T), not action L**2*M/T; kappa/T0 = Pi/a is a length^-1, not an area
+[ab S2] M1: REFUSED (no universal count) -- the overlap count scales with the accretion rate (GRV-040: luminosity gated by feeding); the universal number in the chain, beta = 35.4, is already a factor of A* (e_bit = beta N h), so it cannot also be the bridge
+[ab S2] M2: BLOCKED (unregistered input) -- omega_min in physical units needs V_0; the registered contact form has dV/dphi = 0 (FND-179 B) and GRV-072 records FND-STRAND-002 fixes only kt/V_0; no registered source for V_0 (V_0 note 2026-10-04)
+[ab S2] M3: BLOCKED (unregistered input) -- 2 pi I_T omega_min needs the same V_0
+[ab S2] M4: NO COINCIDENCE -- kappa_pack = 1: within half a decade of N at F-LOR False, at F-SAK False; kappa_pack = 50: within half a decade of N at F-LOR False, at F-SAK False; kappa_pack = 250: within half a decade of N at F-LOR False, at F-SAK False; n_sub (fine over coarse spacing, scale sets) = 3.68: within half a decade of N at F-LOR False, at F-SAK False; n_sub (fine over coarse spacing, scale sets) = 6.3: within half a decade of N at F-LOR False, at F-SAK False; beta = 35.4: within half a decade of N at F-LOR False, at F-SAK False; 1/0.23 = 4.35: within half a decade of N at F-LOR False, at F-SAK False; chi = 1: within half a decade of N at F-LOR False, at F-SAK False; chi = 3: within half a decade of N at F-LOR False, at F-SAK False
+[ab S2] M5: EXCLUDED -- l_q^2/a^2 is the target (GRV-093's geometry question), not a mechanism
+[ab S4] dimension matrix rank 3 of 3: no dimensionless combination of (T0, a, c); lengths are a g(Pi) only
+[ab S4] the postulate set's action: T0^1 a^2 c^-1 g(Pi) -> 2 powers of a; A* has one (h supplies a length anchored to the electron); hbar has zero
+[ab S4] therefore: no action built from the postulates alone is fork-invariant; a bridge needs a fork-invariant length from outside the postulates (the registry holds d_c, electron-anchored through m_e, and l_q, alpha-anchored), or a pure number g(Pi) equal to N(a), which then pins a. The registry holds no pure number of the required size (S2 M4) and no mechanism producing one.
+[ab] sealed -> action_bridge.npz

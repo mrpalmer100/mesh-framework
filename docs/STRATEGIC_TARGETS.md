@@ -432,3 +432,17 @@ continuum family). What the two commissions bought: the bordered corrector is kn
 an instrument, before anything further was built on it. Not chartered: any successor on the
 kernel branch; the PC is free for a scorecard-facing job.
 
+## P. ACTION-BRIDGE EXECUTED (2026-10-04; sandbox; charter analysis/ACTION_BRIDGE_charter_LOCKED.md)
+
+The fence's Task 1 taken in the only form the registry allows: hbar/A* = N carries one inverse
+power of a (GRV-094 reproduced by machine), so a bridge is a derived count, and a derived count
+pins a. N written down before any mechanism: 2.2e3 to 9.0e3 (F-LOR, GRV-092's point), 1.4e4 to
+4.2e4 (F-LOR, scale sets), 1.0e21 to 2.0e22 (F-SAK). Enumeration M0..M5, closed at lock: M0 the
+bending area dies on dimensions (Pi = kappa a/T); M1 the snap-overlap count is accretion-set;
+M2/M3 blocked at V_0; M4 no coincidence; M5 the target. S4: rank 3 of 3 for (T0, a, c); the
+postulates' only action T0 a^2 g(Pi)/c. VERDICT BRIDGE-NO-MECHANISM. Registered FND-183 on the
+author's word with riders on FND-STRAND-025 (Grant 3 cannot retire from the postulate set as
+registered), FND-182 and FND-STRAND-008 (V_0 unsourced). Scorecard delta: none; the hbar input's
+route restated as two priced grants. ANTI-ARC-NYQ (FND-174 under the Nyquist bar) chartered and
+locked the same day, running on the PC; its verdict belongs to the next release.
+

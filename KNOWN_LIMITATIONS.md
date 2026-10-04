@@ -6,7 +6,7 @@ you have found it in under five minutes.
 
 *Revised against the current registry.*
 <!-- BEGIN GENERATED: corpus_stats -->
-*775 registered claims, 641 code-backed and passing, 121 Derived, 48 registered Failed and kept.*
+*776 registered claims, 641 code-backed and passing, 121 Derived, 48 registered Failed and kept.*
 <!-- END GENERATED: corpus_stats -->
 
 
@@ -330,4 +330,12 @@ is maintained at docs/technical/FUTURE_MODEL_PROMPT_one_fence.md. Sharpened 27 S
 (FND-178): the fence's Task 1 now reads, in spectral form, "supply an energy per carried light
 mode proportional to its frequency with one universal constant"; the forced rotating-wave
 state of the wave arc is the vacuum's energy BUDGET and is not that object (it carries no
-Casimir force). The magnitude owed is GRV-093's quantum-area-to-cell ratio, about 2e4.
+Casimir force). The magnitude owed is GRV-093's quantum-area-to-cell ratio, about 2e4. Sharpened
+again 4 Oct 2026 (FND-183, ACTION-BRIDGE): the owed magnitude cannot come from inside the
+postulate set. {T0, a, c, Pi} has a full-rank dimension matrix, so its only action is
+T0 a^2 g(Pi)/c, two powers of the spacing against hbar's zero; a bridge must import a
+fork-invariant length or produce a pure number of order 1e21 (Planck-class spacing) from Pi,
+and the registry holds neither nor a mechanism for one. The on-site potential V_0 that the
+strand mass scale, FND-182's window and two of the bridge's candidates all need has no
+registered source (the registered contact form does not resist a strand's azimuth, FND-179 B).
+The fence is a demand for one of two priced grants, not a pending computation.

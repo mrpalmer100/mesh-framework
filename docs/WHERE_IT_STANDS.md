@@ -191,3 +191,20 @@ where the regularization equals the near-null singular value squared produces ga
 not its inputs' gates. The kernel question is open; the bordered corrector is retired from it.
 Scorecard: no row moves; the anti-aligned continuum family leaves the "Also carried" column.
 
+## Addendum, 4 October 2026, evening (ACTION-BRIDGE, FND-183)
+
+The fence was attacked head on, in the sandbox, with the enumeration and the forms fixed first,
+and it did not move; it acquired a shape. In this framework hbar and the derived snap action have
+the same form (tension times area over c) and their ratio carries exactly one power of the lattice
+spacing, so deriving hbar means deriving a count, and a derived count would also fix the absolute
+scale. The postulate set cannot supply that count: its dimension matrix has full rank, its only
+action is T0 a^2 g(Pi)/c, and that carries two powers of a while hbar carries none. Six candidate
+mechanisms were refused, blocked or excluded before any number was compared. Grant 3 keeps hbar
+as the import it always was, now with the primitive that would retire it named: a mechanism
+producing a dimensionless number of order 1e21 from the single coupling, or a fork-invariant
+length from outside the postulates. The same session found that the on-site orientation potential
+behind the strand mass scale has no registered source, which blocks FND-182's window and two of
+the bridge's candidates at once; the grant that would source it is a contact form that can see
+the rope's cross-section. No scorecard row moved. What moved is the question, from "compute the
+bridge" to "price one of two primitives", and that is the honest state of the programme's centre.
+
