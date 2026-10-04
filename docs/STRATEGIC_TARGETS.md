@@ -385,7 +385,8 @@ FND-182's charge-creation window meets C2, C3, C4 and D1 to D3, and meets C1
 as a bounded window whose null branch falsifies; whether the census's C1
 admits such a window is the author's ruling, asked not made. If admitted, the
 firm count becomes three. RULED: C1 does not admit a window; FND-182 is T2 until
-the strand mass scale is pinned. Registered as ELEC-101 (granted 2026-09-27);
+the strand mass scale is pinned. [Moved T2 -> T4 on 2026-10-04 at JUNCTION-LOCK: the
+input has no registered source; section V.] Registered as ELEC-101 (granted 2026-09-27);
 results analysis/CENSUS_P20_34_results.md.
 
 ## M. THE ZERO-POINT NAMING SWEEP (2026-09-27)
@@ -560,8 +561,10 @@ and a self-trapped kink. So the two available readings are f = 0 and f ~ 3.5; th
 FND-182 and FND-181's coasting regime both need (1e-7 to 1e-4) is reachable by neither. Five
 commissions from ACTION-BRIDGE (sections P, S, T, U, V) traced the strand mass scale, FND-182's
 window and two bridge candidates to one object, a strand's face at a node, and the registered
-vacuum has no mechanism that touches it. Riders proposed (FND-182 status, FND-STRAND-002/008,
-FND-184, FND-181, FND-183); the author's word. Next-order: a decision, not a computation: grant
+vacuum has no mechanism that touches it. Riders adopted 2026-10-04 on FND-STRAND-002/008,
+FND-184, FND-181 and FND-183, and FND-182 moved T2 -> T4 (a quantitative statement whose input
+has no registered source is a constraint, not a prediction; it returns to T2 with a registered
+source for V_0). Next-order: a decision, not a computation: grant
 "the tie holds the face" (priced) or leave the fourth grant to the matter sector where strands
 press. Scorecard unchanged; input ledger unchanged; the map is sharper by three roads.
 

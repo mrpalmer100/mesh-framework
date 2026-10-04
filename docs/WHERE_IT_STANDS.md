@@ -208,3 +208,18 @@ the bridge's candidates at once; the grant that would source it is a contact for
 the rope's cross-section. No scorecard row moved. What moved is the question, from "compute the
 bridge" to "price one of two primitives", and that is the honest state of the programme's centre.
 
+
+## Addendum, 4 October 2026, night (the fourth grant and the chain to the node)
+
+The contact form was adopted as the fourth grant, FND-184 (the contact acts on surfaces), and
+spent the same night: five commissions (STRAND-MASS-SCALE, CROSSING-PRICE, NODE-STANDOFF,
+JUNCTION-LOCK, after ACTION-BRIDGE) walked from the grant to FND-182's number and found the
+on-site potential's only possible vacuum source at the weave's junctions, where the registered
+bond is a point atom with no face: the azimuth does not appear and f = 0 by machine. The one
+extension that would supply it (a tie that holds the face) is priced at f ~ 3.5 J, a vacuum
+harder than QED's and a self-trapped charge-kink, and is not adopted. FND-182 therefore moved
+T2 -> T4: its window is a constraint on a source the registry does not have, not a prediction.
+The route to a third firm prediction is unchanged in name (pin the strand mass scale) and now
+known to be a missing mechanism rather than a missing number. Scorecard and input ledger
+unchanged. The next move at the centre is the author's: grant the tie, or leave the fourth grant
+to the matter sector where strands press.
