@@ -512,3 +512,20 @@ coarse level; sigma; the crossings per node from FND-091's angles), after which 
 in an afternoon and the grant's F1 is live. Scorecard: the discriminator route to three is now
 three named inputs away, each a derivation, none a choice.
 
+## T. CROSSING-PRICE EXECUTED (2026-10-04, night; sandbox)
+
+Verdict CROSSING-UNDETERMINED (analysis/CROSSING_PRICE_results.md). D1: A_c/(T0 a) is registered
+only as a lower bound (> 0.40, EM-RECON-017/018; the nuclear import is the programme's one
+calibration and was not spent). D2: sigma_0 = w is registered; the standoff d/sigma of crossing
+strands in the VACUUM weave is not (the threshold readings are matter's; FND-070). D3: n_x = 2
+per node, derived. The chain against the standoff: touching crossings give a self-trapped kink
+and E_c 500x Schwinger (no discriminator, FND-181 contradicted); crossings at the lattice spacing
+give E_c ~1e9 V/m, BELOW DATA (the grant's F1 would fire); the discriminator window is d/sigma in
+about [5, 20] across the scale sets. Recorded, not read: the registered coasting regime
+w in [0.8, 2.8] maps to d/sigma in [12, 19] (kappa_pack 1), inside the window. One number now
+stands between the fourth grant and FND-182 as a prediction: the vacuum crossing standoff in
+strand widths, a reading of FND-091's node geometry and the coarse packing. Riders adopted on
+FND-182, FND-184, EM-RECON-017 (2026-10-04, night). COMMISSION NODE-STANDOFF chartered as a draft
+(analysis/NODE_STANDOFF_charter_DRAFT.md): read the standoff from the registered node geometry,
+or find that the weave's nodes are not a registered object.
+

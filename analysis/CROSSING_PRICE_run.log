@@ -1,0 +1,32 @@
+[cp D1] A_c/(T0 a) is unregistered; registered lower bound 0.40 (core survival, EM-RECON-017/018; FND-068's sqrt3 re-solve owed). The nuclear import that would fix it is the one calibration; not spent here (B-1).
+[cp D2] sigma_0 = w (EM-RECON-018); the vacuum crossing's standoff d/sigma is NOT registered (threshold readings 1.00/1.38 are for matter at the coverage onset, FND-070; the vacuum is sub-threshold, FND-129).
+[cp D3] n_x = 2 crossings per node (three families, EM-RECON-018 counting; a strand crosses the two other families once per spacing).
+[cp D4] chain at alpha_c = 0.40 (the bound), rho/sigma in [0.25, 0.5], as a function of the standoff d/sigma:
+[cp D4]  d/sigma rho/sig V_sec/A_c | kappa_pack 1: V_0(eV) w E_c(V/m) | kappa_pack 50: V_0(eV) w E_c(V/m) | kappa_pack 250: V_0(eV) w E_c(V/m)
+[cp D4]     1.00    0.25  1.28e-01 |  1.67e+04 3.44e-03  6.98e+20 |  1.67e+04 1.27e-02  2.57e+21 |  1.67e+04 2.17e-02  4.39e+21
+[cp D4]     1.00    0.50  2.42e-01 |  3.15e+04 2.50e-03  1.32e+21 |  3.15e+04 9.22e-03  4.86e+21 |  3.15e+04 1.58e-02  8.31e+21
+[cp D4]     1.38    0.25  7.07e-02 |  9.19e+03 4.63e-03  3.85e+20 |  9.20e+03 1.71e-02  1.42e+21 |  9.20e+03 2.92e-02  2.43e+21
+[cp D4]     1.38    0.50  1.62e-01 |  2.11e+04 3.06e-03  8.84e+20 |  2.11e+04 1.13e-02  3.26e+21 |  2.11e+04 1.93e-02  5.57e+21
+[cp D4]     2.00    0.25  1.60e-02 |  2.08e+03 9.74e-03  8.72e+19 |  2.08e+03 3.59e-02  3.21e+20 |  2.08e+03 6.13e-02  5.49e+20
+[cp D4]     2.00    0.50  3.83e-02 |  4.98e+03 6.30e-03  2.08e+20 |  4.98e+03 2.32e-02  7.68e+20 |  4.98e+03 3.96e-02  1.31e+21
+[cp D4]     3.00    0.25  2.22e-03 |  2.89e+02 2.61e-02  1.21e+19 |  2.89e+02 9.62e-02  4.46e+19 |  2.89e+02 1.64e-01  7.63e+19
+[cp D4]     3.00    0.50  5.02e-03 |  6.53e+02 1.74e-02  2.74e+19 |  6.54e+02 6.40e-02  1.01e+20 |  6.54e+02 1.09e-01  1.72e+20
+[cp D4]     5.00    0.25  1.69e-04 |  2.20e+01 9.47e-02  9.22e+17 |  2.20e+01 3.48e-01  3.40e+18 |  2.20e+01 5.96e-01  5.81e+18
+[cp D4]     5.00    0.50  3.62e-04 |  4.71e+01 6.47e-02  1.97e+18 |  4.72e+01 2.38e-01  7.27e+18 |  4.71e+01 4.07e-01  1.24e+19
+[cp D4]    10.00    0.25  5.15e-06 |  6.69e-01 5.43e-01  2.80e+16 |  6.70e-01 2.00e+00  1.03e+17 |  6.70e-01 3.42e+00  1.77e+17
+[cp D4]    10.00    0.50  1.06e-05 |  1.38e+00 3.78e-01  5.78e+16 |  1.38e+00 1.39e+00  2.13e+17 |  1.38e+00 2.38e+00  3.64e+17
+[cp D4]    20.00    0.25  1.59e-07 |  2.06e-02 3.09e+00  8.63e+14 |  2.06e-02 1.14e+01  3.18e+15 |  2.06e-02 1.95e+01  5.44e+15
+[cp D4]    20.00    0.50  3.22e-07 |  4.18e-02 2.17e+00  1.75e+15 |  4.19e-02 7.99e+00  6.46e+15 |  4.19e-02 1.37e+01  1.10e+16
+[cp D4]    50.00    0.25  1.61e-09 |  2.09e-04 3.07e+01  8.77e+12 |  2.09e-04 1.13e+02  3.23e+13 |  2.09e-04 1.93e+02  5.52e+13
+[cp D4]    50.00    0.50  3.24e-09 |  4.21e-04 2.17e+01  1.76e+13 |  4.21e-04 7.97e+01  6.50e+13 |  4.21e-04 1.36e+02  1.11e+14
+[cp D4]   320.00    0.25  1.49e-13 |  1.94e-08 3.19e+03  8.12e+08 |  1.94e-08 1.17e+04  2.99e+09 |  1.94e-08 2.01e+04  5.12e+09
+[cp D4]   320.00    0.50  2.99e-13 |  3.88e-08 2.25e+03  1.63e+09 |  3.89e-08 8.30e+03  5.99e+09 |  3.88e-08 1.42e+04  1.02e+10
+[cp D4] standoff window for a discriminator (E_c between the laser record and Schwinger), alpha_c = 0.40, rho/sigma = 0.25:
+[cp D4]   kappa_pack 1  : d/sigma in [4.7, 19.8]
+[cp D4]   kappa_pack 1  : at touching (d/sigma 1) E_c 6.98e+20 V/m, w 3.44e-03; at d/sigma = a/d_c = 321: E_c 8.02e+08 V/m
+[cp D4]   kappa_pack 50 : d/sigma in [6.1, 25.6]
+[cp D4]   kappa_pack 50 : at touching (d/sigma 1) E_c 2.57e+21 V/m, w 1.27e-02; at d/sigma = a/d_c = 87: E_c 2.00e+12 V/m
+[cp D4]   kappa_pack 250: d/sigma in [6.8, 28.5]
+[cp D4]   kappa_pack 250: at touching (d/sigma 1) E_c 4.39e+21 V/m, w 2.17e-02; at d/sigma = a/d_c = 51: E_c 5.02e+13 V/m
+[cp VERDICT] CROSSING-UNDETERMINED: D1 is a bound and D2's vacuum standoff is unregistered; E_c spans from below the laser record (crossings at the lattice spacing) to far above Schwinger (touching crossings); the discriminator reading needs the standoff in a narrow registered window that does not exist today.
+[cp] sealed -> crossing_price.npz
