@@ -2,9 +2,9 @@ cff-version: 1.2.0
 doi: 10.5281/zenodo.21430784
 title: "The Mesh Programme (rope_solver): A Computational Toolkit for the Mesh Framework"
 message: "If you use this software, please cite it as below."
-version: 3.31.0
+version: 3.32.0
 repository-code: "https://github.com/mrpalmer100/mesh-framework"
-date-released: 2026-09-05
+date-released: 2026-10-04
 authors:
   - family-names: Palmer
     given-names: Mark

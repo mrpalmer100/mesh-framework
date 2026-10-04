@@ -95,6 +95,12 @@ derived 0; inputs retired 0; one retirement route (hbar) stated more sharply; on
 collision (spectral vs budget zero-point) flagged before it collided. F3 is closed at this
 instrument class; item 2 below is discharged.
 
+Delta at the v3.32.0 cut (2026-10-04): targets moved blocked to derived 0; inputs retired 1
+(the anti-aligned continuum family, FND-175 refuted on reproducibility); discriminators armed
+0, the route to a third named (pin the strand mass scale in eV; collapses FND-182's window to
+a number); one derived claim corrected on the record (GRV-045); one instrument retired (the
+bordered kernel corrector). Casimir row: consistency-tier, hbar imported, zero fitted.
+
 1. Finish the two pending verdicts; the compute is sunk. NYQ-CONTROL on the PC decides
    whether FND-175/176/177 stand or become refute-and-keep. [DONE 2026-10-04: NYQ-CONTROL
    rendered CONTROL-FAIL; NYQ-CONTROL-2 rendered IRREPRODUCIBLE; FND-175 refuted and kept,

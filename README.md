@@ -11,7 +11,7 @@ Repository: `mesh-framework` (renamed from `rope-framework` on 9 September 2026;
 
 **Version:**
 <!-- BEGIN GENERATED: version -->
-3.31.0
+3.32.0
 <!-- END GENERATED: version -->
 
 A machine-verified development of the Rope Hypothesis into the mesh framework: a classical, mechanical model in which the vacuum is a mesh of physical filaments and matter and light are its configurations, put into falsifiable, independently checkable form.
@@ -38,6 +38,8 @@ A machine-verified development of the Rope Hypothesis into the mesh framework: a
 <!-- END GENERATED: status_breakdown -->
 > Counts regenerate from `claims.yaml` — the authority is the registry, not this line.
 
+**📄 [THE NORTH STAR CUT, 4 Oct 2026](docs/history/RELEASE_NOTES_v3.32.0.md)** -- *v3.32.0*: the goal written down and cut against -- the registered zero-point ledger predicts the Casimir force pi^2 hbar c/(240 d^4) exactly given hbar (FND-178, consistency-tier); a charge's force along its strand derived, F = 2 pi c_L eps', and from it the vacuum's charge-creation field window (FND-181, FND-182, T2); GRV-045 corrected on the record; the anti-aligned continuum claim FND-175 refuted on reproducibility and kept, the bordered corrector retired; 775 claims, 48 Failed and kept.
+
 **📄 [THE QUEUE, PROCESSED, 5 Sep 2026](docs/history/RELEASE_NOTES_v3.31.0.md)** -- *v3.31.0*: seven charters executed in a day -- the PeV coincidence reduced to an identity (FND-166); LEAD-RAD's fence held by computation, 37-2000x (FND-167); bending-neutrality a theorem and the c-orbital identity a saturation (FND-168); the two E-identifications reconciled, A = -rho kappa_0 (s x z) (EM-023); no principle selects the level-2 amplitude, Sigma_wave retreats to 2.598 (FND-169); EW-001 and PM-001 demoted. Prior release: [THE FOURTH CELL AND THE REFINED GRID](docs/history/RELEASE_NOTES_v3.30.0.md).
 
 **📄 [THE FOURTH CELL AND THE REFINED GRID, 5 Sep 2026](docs/history/RELEASE_NOTES_v3.30.0.md)** -- *v3.30.0*: the committed q = 5/4 FLAT prediction falsified at 144x36 (FND-163); every line mechanism down on re-pricing (proximity 0/12, j = n falsified, first-order coupling null); the 54-grid replication finds the 5/4 collapse physical and displaced 0.0003 deeper (FND-164, after a rescinded ARTIFACT verdict) and the founding 4/3 collapse NOT FOUND to A2 0.0055 (FND-165); the r discriminator retired for f_dir alone. Prior release: [THE WHY-WINDING ARC](docs/history/RELEASE_NOTES_v3.29.0.md).
@@ -56,7 +58,7 @@ A machine-verified development of the Rope Hypothesis into the mesh framework: a
 
 
 <!-- BEGIN GENERATED: current_release -->
-**Current release: v3.31.0** (5 Sep 2026), 775 claims.
+**Current release: v3.32.0** (4 Oct 2026), 775 claims.
 <!-- END GENERATED: current_release -->
 Headline: THE ENERGY BILL — priced and payable. The vacuum's constituents orbit at exactly c (two registered numbers multiplying to one), and the wave's dynamical share [0.62, 0.78] fits inside the matter sector's registered zero-point window (< 0.889): zero-point energy IS the winding's rotation. Full account: [`docs/history/RELEASE_NOTES_v3.26.77.md`](docs/history/RELEASE_NOTES_v3.26.77.md); prior: [`docs/history/RELEASE_NOTES_v3.26.76.md`](docs/history/RELEASE_NOTES_v3.26.76.md).
 

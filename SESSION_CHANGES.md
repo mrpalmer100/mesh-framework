@@ -896,3 +896,18 @@ cited from full-bar states only.
 - 2026-09-23: KM-TURN-2: R-CONTINUES-FLAT (12/12 on R past the crossing to A2 0.0086; GN gates at every control). INSTRUMENT FAULT 13 found the same day by the R-N difference's harmonic content (70 pct of its theta-field power at s = 144, the 288 grid's Nyquist): every bordered kernel-branch member (KERNEL-CONT / KERNEL-MARCH / KM-TURN(-2)) carries wsNyq 1e-3 to 1.4e-2 vs 2.6e-7 for the GN-floored resonant state, 1.5e-5 for the b = 0 control, ~1e-9 aligned, and the credentialed gate's 1e-4 threshold; the march drivers gated on RMS + closure and never applied the gate's Nyquist flag. NYQUIST-CAUTION riders on FND-175/176/177; FND-178 (KM-TURN/KM-TURN-2) NOT granted; KM-TURN-2's R-CONTINUES-FLAT and the R/N crossing are instrument-conditioned. Rule: every gate in every driver applies the credentialed gate's wsNyq flag as a BAR; a bordered corrector must exclude the s-Nyquist band. NYQ-CONTROL chartered (de-aliased corrector + wsNyq <= 1e-4 bar; controls c1/c2/c3); instrument amendment dealias_s + nyq_bar in kernel_continuation.py.
 - 2026-09-24: NYQ-CONTROL v1 stalled at round 1 (a rejected step was terminal); bordered_gn escalates lam within the round; v2 issued.
 - 2026-09-27: NYQ-CONTROL v2 sat 24 h on c1 with no visible output (the driver silenced the solver's log; the b = 0 control had a 60-round budget; the lam ladder ran to 1e-2). v3: solver messages in the log, ladder bounded at 1e-5, lam persistent across rounds, floor detector (six rounds below 1e-3 relative decrease), 10-round budgets for the controls. SANDBOX RESET (second): tree rebuilt from GitHub (through FND-176) plus the sealed checkpoints; FND-177, the riders, KM-TURN/KM-TURN-2/NYQ-CONTROL charters, results, verdict logs and drivers re-created from the record; verdict logs regenerated from the checkpoints and found identical.
+
+# SESSION_CHANGES -- 2026-10-04: v3.32.0 CUT
+- Registry 761 -> 775 (FND-170..182, ELEC-101); FND-175 -> Failed and kept
+  (NYQ-CONTROL-2); riders on FND-174/176/177, GRV-045 (amended), FND-031,
+  FND-132, FND-MATTER-041, ELEC-062 and others; zero-point naming riders on 14
+  claims. Version bumps (pyproject, CITATION), CHANGELOG, release notes
+  (docs/history/RELEASE_NOTES_v3.32.0.md), README card, Zenodo note,
+  sync_doc_facts ok, .gitignore gains __pycache__/ and *.pyc (seven tracked
+  .pyc files to be removed from the index by the author).
+- Papers: falsifiable_predictions (P35 Casimir consistency-tier, P36
+  charge-creation field T2, P32 qualifier, recount of 4 Oct) and
+  rope_blackholes (GRV-045 amendment paragraph) rebuilt from source
+  (tools/paper_edit.py), PDFs regenerated; docs/PAPERS.md annotated.
+- Sandbox-only cut; CI is the arbiter for verify_corpus.
+

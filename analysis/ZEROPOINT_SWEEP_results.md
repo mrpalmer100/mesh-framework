@@ -127,3 +127,14 @@ not a rider, and registered text is history and is not edited (NAME_REGISTRY rul
 EM-RECON-016, GRV-005, FND-MATTER-009, FND-MATTER-011, FND-MATTER-057, FND-MATTER-064, NUC-009, CHEM-DYN-002, ELEC-101, FND-038, FND-041, FND-042, FND-119, FND-123. Each needs one reading to decide
 which sense its sentences use; none is load-bearing for a registered number, so the review
 is a T4 item for the 3.32.0 cut.
+
+## Review closed (2026-10-04, v3.32.0 cut)
+
+The 14 MIXED claims were read one by one. Thirteen use 'zero-point' in the spectral sense
+(the GRV-004 tower and its Sakharov residual: EM-RECON-016, GRV-005, FND-038, FND-041, FND-042;
+the knot zero-point instrument and its lever: FND-MATTER-009/011/057/064; the nuclear kinetic
+zero-point omission: NUC-009; vibrational zero-point corrections: CHEM-DYN-002; the FND-109
+convention: FND-119, FND-123) and carry a naming rider saying so. ELEC-101 names both senses on
+purpose and carries a rider saying that. No claim was found to use the budget sense without
+saying so. The sweep's tags are now 62 spectral, 8 budget, 1 both-by-design.
+

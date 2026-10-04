@@ -2,3 +2,6 @@
 # Instrument caches and build output: kept locally, not on GitHub
 analysis/sparsej_pattern_*.pkl
 rope_solver.egg-info/
+# Python bytecode caches (tracked copies removed at v3.32.0)
+__pycache__/
+*.pyc

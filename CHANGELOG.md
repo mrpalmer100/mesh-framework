@@ -508,6 +508,13 @@
   Lambda_nat <= 4.7e34, chi_required >= 2.1e-35. KL updated.
   713 claims.
 
+## 3.32.0 (2026-10-04) -- THE NORTH STAR CUT: ONE EXTERNAL NUMBER MATCHED, ONE DERIVED CLAIM CORRECTED, ONE CONTINUUM CLAIM REFUTED ON REPRODUCIBILITY
+
+- FND-170..182, ELEC-101 registered (775 claims). FND-178 CASIMIR-F3: the registered zero-point ledger predicts pi^2 hbar c/(240 d^4) exactly given hbar (consistency-tier). FND-181 KIN-DRIVE: F = 2 pi c_L eps' derived and obeyed. FND-182 KIN-BREAKDOWN: charge-creation field window [1.1e15, 3.2e18] V/m, T2.
+- FND-175 registered -> Failed and kept (NYQ-CONTROL-2: the bordered corrector cannot re-obtain its gates from bit-identical inputs; conditioning-limited at the resonance); FND-176/177 artifact records; FND-174 caution reopened. The bordered corrector is retired.
+- GRV-045 amended on the author's word (F2/F4 withdrawn, F1/F3 stand); its benchmark rewritten. Riders on FND-031, FND-132, FND-MATTER-041, ELEC-062 and twelve others; zero-point naming riders on 14 claims.
+- docs/NORTH_STAR.md (the goal, the scorecard, the rule); NAME_REGISTRY spectral/budget zero-point; two papers regenerated. See docs/history/RELEASE_NOTES_v3.32.0.md.
+
 ## 3.31.0 (2026-09-05) -- THE QUEUE, PROCESSED
 
 - FND-166 PEV-IDENT; FND-167 FINE-GATE; FND-168 TRIPLE-DUTY; FND-169 COMPOSITE-SELECT Leg A; EM-023 E-RECON. Registry 761.
