@@ -505,9 +505,10 @@ dimensionally checked, and it yields one identity: E_c = (4 pi/5) V_0/(e a), the
 field is the orientation well depth per node over the charge times the spacing. FND-182's unpinned
 w and the grant's V_0 are one unknown. Displays (hbar imported, no claim): the registered w bracket
 maps to V_0 of 0.01 to 12 eV per node and a twist gap in the GeV class; the discriminator needs
-V_0 between 0.022 and 31.5 eV per node at kappa_pack 1. Named next-order: three registered inputs
-(A_c in joules from the interpenetration energetics at the coarse level; sigma; the crossings per
-node from FND-091's angles), after which the chain closes in an afternoon and the grant's F1 is
-live. Scorecard: the discriminator route to three is now three named inputs away, each a
-derivation, none a choice.
+V_0 between 0.022 and 31.5 eV per node at kappa_pack 1. Riders adopted the same night on FND-182
+(the identity), FND-STRAND-008 (the physical form of the gap) and FND-184 (first use). Named
+next-order: three registered inputs (A_c in joules from the interpenetration energetics at the
+coarse level; sigma; the crossings per node from FND-091's angles), after which the chain closes
+in an afternoon and the grant's F1 is live. Scorecard: the discriminator route to three is now
+three named inputs away, each a derivation, none a choice.
 
