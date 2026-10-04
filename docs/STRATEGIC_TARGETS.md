@@ -540,8 +540,8 @@ in f: E_c = (2 pi/5) f T0/e, spacing-independent; an ordinary locking (f ~ 0.1 t
 E_c ~ 1e21 to 1e22 V/m (ABOVE QED) and a self-trapped kink; the FND-182 discriminator reading and
 FND-181's coasting regime both need f ~ 1e-7 to 1e-4, which no registered geometry supplies and
 the section's anisotropy argues against. CROSSING-PRICE's "spacing" horn is retired (it described
-no registered situation). Riders proposed on FND-182 (prior on its face), FND-184 (source is the
-junction), FND-181 (its regime implies a tiny f); the author's word. Named next-order: the
+no registered situation). Riders adopted 2026-10-04 on FND-182 (prior on its face), FND-184 (source
+is the junction), FND-181 (its regime implies a tiny f). Named next-order: the
 junction's azimuthal locking, from FND-001's endpoint mechanics extended to the rope's face, or
 from a tied-node engine (Phase 2b). Scorecard: the discriminator route is one derivation from a
 verdict either way, and the honest prior is ABOVE-QED.
