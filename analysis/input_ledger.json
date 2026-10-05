@@ -1,0 +1,5479 @@
+{
+ "claims": {
+  "FND-001": {
+   "benchmark": "benchmarks/micromech/coarse_graining_stiffness.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-002": {
+   "benchmark": "benchmarks/micromech/coarse_graining_stiffness.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-003": {
+   "benchmark": "benchmarks/micromech/gamma_convergence.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-004": {
+   "benchmark": "benchmarks/micromech/gamma_convergence.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-005": {
+   "benchmark": "benchmarks/micromech/parameter_count.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-006": {
+   "benchmark": "benchmarks/micromech/parameter_count.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-007": {
+   "benchmark": "benchmarks/micromech/defect_theory.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-008": {
+   "benchmark": "benchmarks/micromech/defect_theory.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-009": {
+   "benchmark": "benchmarks/micromech/defect_theory.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-010": {
+   "benchmark": "benchmarks/micromech/defect_theory.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-011": {
+   "benchmark": "benchmarks/micromech/defect_topology_3d.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-012": {
+   "benchmark": "benchmarks/micromech/defect_topology_3d.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-013": {
+   "benchmark": "benchmarks/micromech/flux_tube_quantization.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-014": {
+   "benchmark": "benchmarks/micromech/defect_cores.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-015": {
+   "benchmark": "benchmarks/micromech/defect_cores.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-016": {
+   "benchmark": "benchmarks/micromech/defect_cores.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "GG-001": {
+   "benchmark": "benchmarks/topology/gauge_geometry.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "GG-002": {
+   "benchmark": "benchmarks/topology/gauge_geometry.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "GG-003": {
+   "benchmark": "benchmarks/topology/gauge_geometry.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "GG-006": {
+   "benchmark": "benchmarks/em/strand_handedness.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-RECON-001": {
+   "benchmark": "benchmarks/em/swinging_threads_reconciliation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-RECON-002": {
+   "benchmark": "benchmarks/em/swinging_threads_reconciliation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-RECON-003": {
+   "benchmark": "benchmarks/em/lattice_swirl_strain.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-RECON-004": {
+   "benchmark": "benchmarks/em/lattice_geometry_dependence.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-RECON-005": {
+   "benchmark": "benchmarks/em/mode_overlap_harness.py",
+   "status": "Modeled",
+   "measured": {
+    "e (elementary charge, C)": 1
+   },
+   "registered": {}
+  },
+  "EM-RECON-006": {
+   "benchmark": "benchmarks/em/mode_overlap_harness.py",
+   "status": "Derived",
+   "measured": {
+    "e (elementary charge, C)": 1
+   },
+   "registered": {}
+  },
+  "EM-RECON-007": {
+   "benchmark": "benchmarks/em/mode_overlap_harness.py",
+   "status": "Modeled",
+   "measured": {
+    "e (elementary charge, C)": 1
+   },
+   "registered": {}
+  },
+  "EM-RECON-008": {
+   "benchmark": "benchmarks/em/repulsive_core_residual.py",
+   "status": "Open",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-RECON-009": {
+   "benchmark": "benchmarks/em/strand_extensibility_core.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-RECON-010": {
+   "benchmark": "benchmarks/em/k_independent_windows.py",
+   "status": "Modeled",
+   "measured": {
+    "e (elementary charge, C)": 1,
+    "hbar (J s)": 1,
+    "m_p (kg)": 2
+   },
+   "registered": {}
+  },
+  "EM-RECON-011": {
+   "benchmark": "benchmarks/em/longitudinal_sector_resolution.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-RECON-012": {
+   "benchmark": "benchmarks/em/twist_gap_computation.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-RECON-013": {
+   "benchmark": "benchmarks/em/joint_relaxation_core_survival.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-RECON-017": {
+   "benchmark": "benchmarks/em/emrecon017_kc_derivation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-RECON-014": {
+   "benchmark": "benchmarks/em/field_strain_calibration.py",
+   "status": "Modeled",
+   "measured": {
+    "eps0 (F/m)": 1,
+    "Schwinger field (V/m)": 1
+   },
+   "registered": {}
+  },
+  "EM-RECON-015": {
+   "benchmark": "benchmarks/em/field_strain_calibration.py",
+   "status": "Modeled",
+   "measured": {
+    "eps0 (F/m)": 1,
+    "Schwinger field (V/m)": 1
+   },
+   "registered": {}
+  },
+  "EM-RECON-016": {
+   "benchmark": "benchmarks/em/vacuum_birefringence_discriminator.py",
+   "status": "Modeled",
+   "measured": {
+    "eps0 (F/m)": 1,
+    "Schwinger field (V/m)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "EFT-001": {
+   "benchmark": "benchmarks/eft/rg_analysis.py",
+   "status": "EFT-constrained",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-001": {
+   "benchmark": "benchmarks/reproduce_results.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-002": {
+   "benchmark": "benchmarks/em/em_structure.py",
+   "status": "Derived",
+   "measured": {
+    "alpha / 1/alpha": 1
+   },
+   "registered": {}
+  },
+  "EM-002b": {
+   "benchmark": "benchmarks/em/em_structure.py",
+   "status": "Modeled",
+   "measured": {
+    "alpha / 1/alpha": 1
+   },
+   "registered": {}
+  },
+  "EM-003": {
+   "benchmark": "benchmarks/em/em_structure.py",
+   "status": "Derived",
+   "measured": {
+    "alpha / 1/alpha": 1
+   },
+   "registered": {}
+  },
+  "EM-004": {
+   "benchmark": "benchmarks/optics/optics_checks.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-005": {
+   "benchmark": "benchmarks/optics/optics_checks.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-006": {
+   "benchmark": "benchmarks/optics/optics_checks.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-007": {
+   "benchmark": "benchmarks/em/stiffness_density.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-008": {
+   "benchmark": "benchmarks/em/current_continuity.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-009": {
+   "benchmark": "benchmarks/em/helix_circulation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-010": {
+   "benchmark": "benchmarks/em/dynamical_drive.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-011": {
+   "benchmark": "benchmarks/em/alpha_variation.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-012": {
+   "benchmark": "benchmarks/em/magnetic_force.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-013": {
+   "benchmark": "benchmarks/em/lorentz_force.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-014": {
+   "benchmark": "benchmarks/em/screw_current.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-015": {
+   "benchmark": "benchmarks/em/electrostatic_sign_derivation.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-016": {
+   "benchmark": "benchmarks/em/electrostatic_sign_derivation.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-017": {
+   "benchmark": "benchmarks/em/aleph2_dictionary_uniqueness.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-018": {
+   "benchmark": "benchmarks/em/bet2_phi_channel.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-019": {
+   "benchmark": "benchmarks/em/gimel2_inertial_term.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-020": {
+   "benchmark": "benchmarks/em/dalet2_sigma_provenance.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {
+    "Sigma (J/m^3)": 1
+   }
+  },
+  "EM-021": {
+   "benchmark": "benchmarks/em/he2_sigma_bridge.py",
+   "status": "Modeled",
+   "measured": {
+    "eps0 (F/m)": 1,
+    "Schwinger field (V/m)": 1
+   },
+   "registered": {
+    "Sigma (J/m^3)": 1
+   }
+  },
+  "OPT-001": {
+   "benchmark": "benchmarks/optics/classical_optics.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "OPT-002": {
+   "benchmark": "benchmarks/optics/classical_optics.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "OPT-003": {
+   "benchmark": "benchmarks/optics/classical_optics.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "OPT-004": {
+   "benchmark": "benchmarks/optics/classical_optics.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "OPT-005": {
+   "benchmark": "benchmarks/optics/classical_optics.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "OPT-006": {
+   "benchmark": "benchmarks/optics/interface_physics.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "OPT-007": {
+   "benchmark": "benchmarks/optics/interface_physics.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "OPT-008": {
+   "benchmark": "benchmarks/optics/interface_physics.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "OPT-009": {
+   "benchmark": "benchmarks/optics/interface_physics.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "OPT-010": {
+   "benchmark": "benchmarks/optics/interface_physics.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "THM-002": {
+   "benchmark": "benchmarks/micromech/statistical_mechanics.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "THM-003": {
+   "benchmark": "benchmarks/micromech/statistical_mechanics.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "THM-004": {
+   "benchmark": "benchmarks/micromech/statistical_mechanics.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "THM-005": {
+   "benchmark": "benchmarks/micromech/statistical_mechanics.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "THM-006": {
+   "benchmark": "benchmarks/theorems/layer_separation.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "QGATE-001": {
+   "benchmark": "benchmarks/qgate/amplitude_nogo.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QGATE-002": {
+   "benchmark": "benchmarks/qgate/quantum_ledger.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QGATE-003": {
+   "benchmark": "benchmarks/qgate/transfer_test.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QGATE-004": {
+   "benchmark": "benchmarks/qgate/tube_census.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QGATE-005": {
+   "benchmark": "benchmarks/qgate/width_trilemma.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QGATE-006": {
+   "benchmark": "benchmarks/qgate/pvlas_confrontation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QGATE-007": {
+   "benchmark": "benchmarks/qgate/atlas_structure.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QGATE-008": {
+   "benchmark": "benchmarks/qgate/synthesis.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QGATE-009": {
+   "benchmark": "benchmarks/qgate/vacuum_audit.py",
+   "status": "Modeled",
+   "measured": {
+    "eps0 (F/m)": 1,
+    "Schwinger field (V/m)": 2
+   },
+   "registered": {}
+  },
+  "QGATE-010": {
+   "benchmark": "benchmarks/qgate/spin_meter.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1,
+    "m_e (kg)": 1,
+    "alpha / 1/alpha": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "QGATE-018": {
+   "benchmark": "benchmarks/qgate/sigma_specification.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {
+    "Sigma (J/m^3)": 1
+   }
+  },
+  "QGATE-011": {
+   "benchmark": "benchmarks/qgate/guidance_flow.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QGATE-012": {
+   "benchmark": "benchmarks/qgate/singlet_guidance.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QGATE-013": {
+   "benchmark": "benchmarks/qgate/born_relaxation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QGATE-014": {
+   "benchmark": "benchmarks/qgate/born_relaxation_locked.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QGATE-015": {
+   "benchmark": "benchmarks/qgate/born_relaxation_mode_count.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QGATE-016": {
+   "benchmark": "benchmarks/qgate/trajectory_mixing_correlation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QGATE-017": {
+   "benchmark": "benchmarks/qgate/global_transport_correlation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-001": {
+   "benchmark": "benchmarks/reproduce_results.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-002": {
+   "benchmark": "benchmarks/reproduce_results.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-003": {
+   "benchmark": "benchmarks/gravity/weak_field_poisson.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-004": {
+   "benchmark": "benchmarks/gravity/zero_point_and_poisson.py",
+   "status": "Modeled",
+   "measured": {
+    "G (m^3 kg^-1 s^-2)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "GRV-005": {
+   "benchmark": "benchmarks/gravity/zero_point_and_poisson.py",
+   "status": "Modeled",
+   "measured": {
+    "G (m^3 kg^-1 s^-2)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "GRV-006": {
+   "benchmark": "benchmarks/gravity/g_underdetermination.py",
+   "status": "Derived",
+   "measured": {
+    "hbar (J s)": 1,
+    "G (m^3 kg^-1 s^-2)": 1,
+    "m_p (kg)": 2
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "GRV-007": {
+   "benchmark": "benchmarks/gravity/g_underdetermination.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1,
+    "G (m^3 kg^-1 s^-2)": 1,
+    "m_p (kg)": 2
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "GRV-008": {
+   "benchmark": "benchmarks/gravity/tensor_structure_reduction.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-009": {
+   "benchmark": "benchmarks/gravity/tensor_structure_reduction.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-010": {
+   "benchmark": "benchmarks/gravity/mode_bath_gamma.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-011": {
+   "benchmark": "benchmarks/gravity/anisotropic_defect_field.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-012": {
+   "benchmark": "benchmarks/gravity/anisotropic_defect_field.py",
+   "status": "Open",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-013": {
+   "benchmark": "benchmarks/gravity/locked_quadrupole_hunt.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-014": {
+   "benchmark": "benchmarks/gravity/quantum_completion_audit.py",
+   "status": "Derived",
+   "measured": {
+    "hbar (J s)": 1,
+    "G (m^3 kg^-1 s^-2)": 1,
+    "m_p (kg)": 2
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "GRV-015": {
+   "benchmark": "benchmarks/gravity/tortuosity_fourth_column.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-016": {
+   "benchmark": "benchmarks/gravity/premise_independence_audit.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-017": {
+   "benchmark": "benchmarks/gravity/no_monopole_lemma.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-018": {
+   "benchmark": "benchmarks/gravity/internal_mode_dichotomy.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-019": {
+   "benchmark": "benchmarks/gravity/emergent_tensor_audit.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-020": {
+   "benchmark": "benchmarks/gravity/internal_symmetry_theorem.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-021": {
+   "benchmark": "benchmarks/gravity/induced_elasticity.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-022": {
+   "benchmark": "benchmarks/gravity/tensor_induction_test.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-023": {
+   "benchmark": "benchmarks/gravity/one_metric_gate.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-024": {
+   "benchmark": "benchmarks/gravity/absorption_test.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-025": {
+   "benchmark": "benchmarks/gravity/absorption_verdict.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-026": {
+   "benchmark": "benchmarks/gravity/gamma_completion.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-027": {
+   "benchmark": "benchmarks/gravity/gap_lock_engine.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-028": {
+   "benchmark": "benchmarks/gravity/scalar_screening.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-029": {
+   "benchmark": "benchmarks/gravity/one_metric_physical.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-030": {
+   "benchmark": "benchmarks/gravity/sparc_rar_confrontation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-031": {
+   "benchmark": "benchmarks/gravity/interpolation_retirement.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-032": {
+   "benchmark": "benchmarks/gravity/rar_hubble_meter.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-033": {
+   "benchmark": "benchmarks/gravity/rar_hierarchical_ml.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-034": {
+   "benchmark": "benchmarks/gravity/black_hole_dictionary.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-035": {
+   "benchmark": "benchmarks/gravity/horizon_percolation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-036": {
+   "benchmark": "benchmarks/gravity/mass_without_knots.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-037": {
+   "benchmark": "benchmarks/gravity/reconnection_count.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-038": {
+   "benchmark": "benchmarks/gravity/pressing_profile.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-039": {
+   "benchmark": "benchmarks/gravity/hawking_channel.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-040": {
+   "benchmark": "benchmarks/gravity/reconnection_noise.py",
+   "status": "Modeled",
+   "measured": {
+    "G (m^3 kg^-1 s^-2)": 1
+   },
+   "registered": {}
+  },
+  "GRV-041": {
+   "benchmark": "benchmarks/gravity/whisper_spectrum.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-042": {
+   "benchmark": "benchmarks/gravity/tail_convergence.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-043": {
+   "benchmark": "benchmarks/gravity/pileup_integral.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-044": {
+   "benchmark": "benchmarks/gravity/saddle_point_tail.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-049": {
+   "benchmark": "benchmarks/gravity/whisper_flux.py",
+   "status": "Modeled",
+   "measured": {
+    "G (m^3 kg^-1 s^-2)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "GRV-050": {
+   "benchmark": "benchmarks/gravity/ratchet_polarization.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-051": {
+   "benchmark": "benchmarks/gravity/ratchet_eh_overlap.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-052": {
+   "benchmark": "benchmarks/gravity/whisper_strain.py",
+   "status": "Modeled",
+   "measured": {
+    "G (m^3 kg^-1 s^-2)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "GRV-053": {
+   "benchmark": "benchmarks/gravity/whisper_law_correction.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1,
+    "G (m^3 kg^-1 s^-2)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "GRV-045": {
+   "benchmark": "benchmarks/gravity/handedness_reconnection.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-046": {
+   "benchmark": "benchmarks/gravity/temperature_anatomy.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-047": {
+   "benchmark": "benchmarks/gravity/whisper_luminosity.py",
+   "status": "Modeled",
+   "measured": {
+    "G (m^3 kg^-1 s^-2)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "GRV-048": {
+   "benchmark": "benchmarks/gravity/strongfield_audit.py",
+   "status": "Derived",
+   "measured": {
+    "G (m^3 kg^-1 s^-2)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "FND-REL-001": {
+   "benchmark": "benchmarks/em/matter_lorentz_inaccessibility.py",
+   "status": "EFT-constrained",
+   "measured": {},
+   "registered": {}
+  },
+  "SOL-002": {
+   "benchmark": "benchmarks/reproduce_results.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-REL-002": {
+   "benchmark": "benchmarks/em/lorentz_no_convective.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-REL-003": {
+   "benchmark": "benchmarks/em/lattice_lorentz_bound.py",
+   "status": "EFT-constrained",
+   "measured": {
+    "e (elementary charge, C)": 1,
+    "Planck length (m)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "FND-REL-004": {
+   "benchmark": "benchmarks/foundations/commission_a_rerun_dispersion.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {
+    "a (m)": 2
+   }
+  },
+  "FND-REL-005": {
+   "benchmark": "benchmarks/foundations/commission_g_rerun_loaded_continuum.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {
+    "a (m)": 1
+   }
+  },
+  "PM-003": {
+   "benchmark": "benchmarks/em/lepton_mass_structural.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "PM-004": {
+   "benchmark": "benchmarks/em/knot_excitation_spectrum.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "PM-005": {
+   "benchmark": "benchmarks/em/ordinary_matter_scope.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-002": {
+   "benchmark": "benchmarks/em/star_radius_scaling.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-004": {
+   "benchmark": "benchmarks/em/impenetrability_threshold.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-005": {
+   "benchmark": "benchmarks/em/mesh_scale_irreducible.py",
+   "status": "Derived",
+   "measured": {
+    "alpha / 1/alpha": 1
+   },
+   "registered": {}
+  },
+  "FND-MATTER-006": {
+   "benchmark": "benchmarks/foundations/knot_solver_first_light.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-007": {
+   "benchmark": "benchmarks/foundations/knot_spectrum_session1.py",
+   "status": "Modeled",
+   "measured": {
+    "m_p/m_e": 3
+   },
+   "registered": {}
+  },
+  "FND-MATTER-008": {
+   "benchmark": "benchmarks/foundations/zero_point_mass_term.py",
+   "status": "Modeled",
+   "measured": {
+    "m_p/m_e": 1
+   },
+   "registered": {}
+  },
+  "FND-MATTER-009": {
+   "benchmark": "benchmarks/foundations/two_term_mass_model.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-010": {
+   "benchmark": "benchmarks/foundations/crossing_spectroscopy.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-011": {
+   "benchmark": "benchmarks/foundations/bend_spectroscopy.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-012": {
+   "benchmark": "benchmarks/foundations/log_conviction.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-013": {
+   "benchmark": "benchmarks/foundations/bend_coefficient_derived.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-014": {
+   "benchmark": "benchmarks/foundations/bend_constant_a.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-015": {
+   "benchmark": "benchmarks/foundations/topology_certifier.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-016": {
+   "benchmark": "benchmarks/foundations/contact_dissolved.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-017": {
+   "benchmark": "benchmarks/foundations/isospin_doublet_rehearsal.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-018": {
+   "benchmark": "benchmarks/foundations/mapping_calibrated.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-019": {
+   "benchmark": "benchmarks/foundations/certified_spectrum.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-020": {
+   "benchmark": "benchmarks/foundations/figure_eight_seated.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-021": {
+   "benchmark": "benchmarks/foundations/braid_family_spectrum.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-022": {
+   "benchmark": "benchmarks/foundations/alexander_certifier_61.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-023": {
+   "benchmark": "benchmarks/foundations/plat_constructor.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-024": {
+   "benchmark": "benchmarks/foundations/crankshaft_basin_hopping.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-025": {
+   "benchmark": "benchmarks/foundations/reptation_conveyor.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-026": {
+   "benchmark": "benchmarks/foundations/resolution_scaling.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-027": {
+   "benchmark": "benchmarks/foundations/corrected_spectrum_table.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-028": {
+   "benchmark": "benchmarks/foundations/literature_anchors.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-029": {
+   "benchmark": "benchmarks/foundations/lambda_gate.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-030": {
+   "benchmark": "benchmarks/foundations/composite_jury.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-031": {
+   "benchmark": "benchmarks/foundations/triple_extensivity.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-032": {
+   "benchmark": "benchmarks/foundations/adaptive_flow_campaign.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-033": {
+   "benchmark": "benchmarks/foundations/microstructure_gate.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-034": {
+   "benchmark": "benchmarks/foundations/classical_amplitude_fork.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-035": {
+   "benchmark": "benchmarks/foundations/cledger_conditionals.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-036": {
+   "benchmark": "benchmarks/foundations/alpha_saturation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-037": {
+   "benchmark": "benchmarks/foundations/coverage_closure.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-038": {
+   "benchmark": "benchmarks/foundations/fc_determination.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-001": {
+   "benchmark": "benchmarks/bell/nonlocal_correlation.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-002": {
+   "benchmark": "benchmarks/bell/gamma_measurement_analysis.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-003": {
+   "benchmark": "benchmarks/bell/gamma_measurement_analysis.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-007": {
+   "benchmark": "benchmarks/bell/knot_nucleation_measurement.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-008": {
+   "benchmark": "benchmarks/bell/depletion_speed_bounds.py",
+   "status": "EFT-constrained",
+   "measured": {},
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "QB-009": {
+   "benchmark": "benchmarks/bell/conservation_toy.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-010": {
+   "benchmark": "benchmarks/bell/bohmian_adjacency.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-011": {
+   "benchmark": "benchmarks/bell/gamma_identification.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-012": {
+   "benchmark": "benchmarks/bell/wall_characterization.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "QB-013": {
+   "benchmark": "benchmarks/bell/dipole_rigidity.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-014": {
+   "benchmark": "benchmarks/bell/quadrupole_ceiling.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-023": {
+   "benchmark": "benchmarks/quantum/shared_ribbon_singlet.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-024": {
+   "benchmark": "benchmarks/quantum/half_angle_energetics.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-025": {
+   "benchmark": "benchmarks/quantum/junction_realized.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-026": {
+   "benchmark": "benchmarks/quantum/knot_stern_gerlach.py",
+   "status": "Modeled",
+   "measured": {
+    "H0": 1
+   },
+   "registered": {}
+  },
+  "QB-027": {
+   "benchmark": "benchmarks/quantum/bell_experiment.py",
+   "status": "Modeled",
+   "measured": {
+    "H0": 1
+   },
+   "registered": {}
+  },
+  "QB-028": {
+   "benchmark": "benchmarks/foundations/qb028_ribbon_production.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-029": {
+   "benchmark": "benchmarks/foundations/qb029_fiber_bath.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-030": {
+   "benchmark": "benchmarks/foundations/qb030_bell_from_nucleation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-031": {
+   "benchmark": "benchmarks/foundations/qb031_transport_law.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-032": {
+   "benchmark": "benchmarks/foundations/qb032_orientation_curve.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-033": {
+   "benchmark": "benchmarks/foundations/qb033_anharmonic_vr.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-015": {
+   "benchmark": "benchmarks/bell/cubic_rung.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-016": {
+   "benchmark": "benchmarks/bell/quartic_rung.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-017": {
+   "benchmark": "benchmarks/bell/quintic_rung.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-018": {
+   "benchmark": "benchmarks/bell/all_orders_crossing.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-019": {
+   "benchmark": "benchmarks/bell/tsirelson_selection.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-020": {
+   "benchmark": "benchmarks/bell/rope_native_tsirelson.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-021": {
+   "benchmark": "benchmarks/bell/positivity_eliminated.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-022": {
+   "benchmark": "benchmarks/bell/mechanism_unity_grounded.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-KIN-002": {
+   "benchmark": "benchmarks/foundations/kink_transport_toy.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-KIN-003": {
+   "benchmark": "benchmarks/foundations/vortex_mobility_2d.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-KIN-004": {
+   "benchmark": "benchmarks/foundations/line_transport_3d.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-KIN-005": {
+   "benchmark": "benchmarks/foundations/impenetrability_test.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-001": {
+   "benchmark": "benchmarks/foundations/strand_substrate.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-002": {
+   "benchmark": "benchmarks/foundations/strand_twist_transport.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-003": {
+   "benchmark": "benchmarks/foundations/strand_calugareanu.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-004": {
+   "benchmark": "benchmarks/foundations/strand_coverage_threshold.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-005": {
+   "benchmark": "benchmarks/foundations/strand_interaction_model.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-006": {
+   "benchmark": "benchmarks/foundations/strand_nucleation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-007": {
+   "benchmark": "benchmarks/foundations/strand_weave_reservoir.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-008": {
+   "benchmark": "benchmarks/foundations/strand_weave_spectrum.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-009": {
+   "benchmark": "benchmarks/foundations/strand_attempt_rate.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-010": {
+   "benchmark": "benchmarks/foundations/strand_attempt_rate_promotion.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-011": {
+   "benchmark": "benchmarks/foundations/strand_N_sweep.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-012": {
+   "benchmark": "benchmarks/foundations/strand_four_point_sweep.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-013": {
+   "benchmark": "benchmarks/foundations/strand_tail_refit.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-014": {
+   "benchmark": "benchmarks/foundations/strand_hazard_census.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-015": {
+   "benchmark": "benchmarks/foundations/strand_thermometry.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-016": {
+   "benchmark": "benchmarks/foundations/strand_force_noise.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-017": {
+   "benchmark": "benchmarks/foundations/strand_theory_t1.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-018": {
+   "benchmark": "benchmarks/foundations/strand_slow_mixing.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-019": {
+   "benchmark": "benchmarks/foundations/strand_N_generality.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-020": {
+   "benchmark": "benchmarks/foundations/strand_poissonization.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-021": {
+   "benchmark": "benchmarks/foundations/strand_switch_on.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-022": {
+   "benchmark": "benchmarks/foundations/strand_one_click.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-023": {
+   "benchmark": "benchmarks/foundations/strand_thermal_exclusivity.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-024": {
+   "benchmark": "benchmarks/foundations/strand_split_packet.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-025": {
+   "benchmark": "benchmarks/foundations/strand_third_grant.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-026": {
+   "benchmark": "benchmarks/foundations/strand_antibunching.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-027": {
+   "benchmark": "benchmarks/foundations/strand_mandel_counting.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-028": {
+   "benchmark": "benchmarks/foundations/strand_delayed_choice.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-STRAND-029": {
+   "benchmark": "benchmarks/foundations/strand_hom_pin.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-040": {
+   "benchmark": "benchmarks/foundations/matter040_scale_closure.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1,
+    "G (m^3 kg^-1 s^-2)": 1,
+    "m_e (kg)": 1,
+    "alpha / 1/alpha": 1
+   },
+   "registered": {
+    "d_c (m)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "FND-MATTER-041": {
+   "benchmark": "benchmarks/foundations/matter041_two_scale_fork.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1,
+    "G (m^3 kg^-1 s^-2)": 1,
+    "m_e (kg)": 1,
+    "alpha / 1/alpha": 1
+   },
+   "registered": {
+    "d_c (m)": 1,
+    "Sigma (J/m^3)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "FND-MATTER-042": {
+   "benchmark": "benchmarks/foundations/matter042_suppression_session.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1,
+    "G (m^3 kg^-1 s^-2)": 1,
+    "m_p/m_e": 1,
+    "alpha / 1/alpha": 1
+   },
+   "registered": {
+    "d_c (m)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "FND-MATTER-043": {
+   "benchmark": "benchmarks/foundations/matter043_bending_channel.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1,
+    "G (m^3 kg^-1 s^-2)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "FND-MATTER-044": {
+   "benchmark": "benchmarks/foundations/matter044_whisper_pricing.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1,
+    "m_e (kg)": 1,
+    "alpha / 1/alpha": 1
+   },
+   "registered": {
+    "T0 (J/m)": 1,
+    "a (m)": 1,
+    "d_c (m)": 1,
+    "Sigma (J/m^3)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "FND-MATTER-045": {
+   "benchmark": "benchmarks/foundations/matter045_rigidity_audit.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1,
+    "G (m^3 kg^-1 s^-2)": 1
+   },
+   "registered": {
+    "T0 (J/m)": 1,
+    "a (m)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "FND-MATTER-046": {
+   "benchmark": "benchmarks/foundations/matter046_h_demand.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1,
+    "alpha / 1/alpha": 1
+   },
+   "registered": {
+    "T0 (J/m)": 1,
+    "a (m)": 1,
+    "d_c (m)": 1,
+    "Sigma (J/m^3)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "FND-MATTER-047": {
+   "benchmark": "benchmarks/foundations/matter047_channel_exhaustion.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1,
+    "G (m^3 kg^-1 s^-2)": 1
+   },
+   "registered": {
+    "T0 (J/m)": 1,
+    "a (m)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "FND-MATTER-048": {
+   "benchmark": "benchmarks/foundations/matter048_nonspectral_survey.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-049": {
+   "benchmark": "benchmarks/foundations/matter049_open_claim_terminus.py",
+   "status": "Open",
+   "measured": {},
+   "registered": {
+    "a (m)": 1
+   }
+  },
+  "FND-MATTER-051": {
+   "benchmark": "benchmarks/foundations/matter051_lever_demand.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1,
+    "m_e (kg)": 1,
+    "alpha / 1/alpha": 1
+   },
+   "registered": {
+    "T0 (J/m)": 1,
+    "a (m)": 1,
+    "d_c (m)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "FND-MATTER-052": {
+   "benchmark": "benchmarks/foundations/matter052_expression_fraction.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1,
+    "alpha / 1/alpha": 1
+   },
+   "registered": {
+    "T0 (J/m)": 1,
+    "a (m)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "FND-MATTER-053": {
+   "benchmark": "benchmarks/foundations/matter053_coefficient_resolution.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {
+    "T0 (J/m)": 1,
+    "a (m)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "QB-034": {
+   "benchmark": "benchmarks/quantum/qb034_severing_discriminator.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-035": {
+   "benchmark": "benchmarks/quantum/qb035_timescale_lever.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {
+    "a (m)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "FND-MATTER-054": {
+   "benchmark": "benchmarks/foundations/matter054_knot_mode_asymmetry.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {
+    "T0 (J/m)": 1,
+    "a (m)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "FND-MATTER-055": {
+   "benchmark": "benchmarks/foundations/matter055_ambient_zero_point.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1,
+    "alpha / 1/alpha": 1
+   },
+   "registered": {
+    "T0 (J/m)": 1,
+    "a (m)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "FND-MATTER-056": {
+   "benchmark": "benchmarks/foundations/matter056_suppression_mechanism.py",
+   "status": "Modeled",
+   "measured": {
+    "alpha / 1/alpha": 1
+   },
+   "registered": {}
+  },
+  "FND-MATTER-057": {
+   "benchmark": "benchmarks/foundations/matter057_gap_structure.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {
+    "T0 (J/m)": 1,
+    "a (m)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "FND-MATTER-058": {
+   "benchmark": "benchmarks/foundations/matter058_displaced_mode_count.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-059": {
+   "benchmark": "benchmarks/foundations/matter059_directional_reading.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-060": {
+   "benchmark": "benchmarks/foundations/matter060_lever_propagation.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {
+    "T0 (J/m)": 1,
+    "a (m)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "FND-MATTER-061": {
+   "benchmark": "benchmarks/foundations/matter061_compliance_adjudication.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-062": {
+   "benchmark": "benchmarks/foundations/matter062_settler.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-059-hist": {
+   "benchmark": "benchmarks/foundations/fnd017_three_provenance.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-060-hist": {
+   "benchmark": "benchmarks/foundations/matter060_directional_share_void.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-007": {
+   "benchmark": "benchmarks/em/nuclear_capacity_rebuild.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-008": {
+   "benchmark": "benchmarks/em/nuclear_state_labeled.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-063": {
+   "benchmark": "benchmarks/foundations/eta_contact_dispersion.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-064": {
+   "benchmark": "benchmarks/foundations/two_term_mass_model.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-065": {
+   "benchmark": "benchmarks/foundations/zpe_reaudit_pipeline.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1,
+    "G (m^3 kg^-1 s^-2)": 1,
+    "m_e (kg)": 1,
+    "alpha / 1/alpha": 1
+   },
+   "registered": {
+    "d_c (m)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "FND-MATTER-066": {
+   "benchmark": "benchmarks/foundations/f4_ratio_first.py",
+   "status": "Failed",
+   "measured": {
+    "m_p/m_e": 3
+   },
+   "registered": {}
+  },
+  "EM-RECON-020": {
+   "benchmark": "benchmarks/em/dressed_carrier_transverse.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-RECON-021": {
+   "benchmark": "benchmarks/em/dressed_carrier_transverse.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-RECON-023": {
+   "benchmark": "benchmarks/foundations/commission_h_rerun_torsion.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-RECON-024": {
+   "benchmark": "benchmarks/em/e_direction_derivation.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-RECON-025": {
+   "benchmark": "benchmarks/em/collective_carrier_k.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {
+    "a (m)": 1
+   }
+  },
+  "EM-RECON-026": {
+   "benchmark": "benchmarks/em/q_linear_coupling_theta.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-RECON-027": {
+   "benchmark": "benchmarks/em/kappa0_normalization_iota.py",
+   "status": "Modeled",
+   "measured": {
+    "eps0 (F/m)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "EM-RECON-028": {
+   "benchmark": "benchmarks/em/b_sector_reconciliation_lambda.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-RECON-029": {
+   "benchmark": "benchmarks/em/em_arc_new_predictions.py",
+   "status": "Modeled",
+   "measured": {
+    "eps0 (F/m)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "EM-RECON-030": {
+   "benchmark": "benchmarks/em/emrecon018r_areal_resolve.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-103": {
+   "benchmark": "benchmarks/gravity/nun_coupling_provenance.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-MATTER-067": {
+   "benchmark": "benchmarks/foundations/review_arc_reruns_cheap_tier.py",
+   "status": "Failed",
+   "measured": {
+    "hbar (J s)": 1,
+    "G (m^3 kg^-1 s^-2)": 1,
+    "m_p/m_e": 3
+   },
+   "registered": {
+    "a (m)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "FND-MATTER-068": {
+   "benchmark": "benchmarks/foundations/review_arc_reruns_cheap_tier.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1,
+    "G (m^3 kg^-1 s^-2)": 1,
+    "m_p/m_e": 3
+   },
+   "registered": {
+    "a (m)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "FND-MATTER-069": {
+   "benchmark": "benchmarks/foundations/review_arc_reruns_cheap_tier.py",
+   "status": "Failed",
+   "measured": {
+    "hbar (J s)": 1,
+    "G (m^3 kg^-1 s^-2)": 1,
+    "m_p/m_e": 3
+   },
+   "registered": {
+    "a (m)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "FND-MATTER-070": {
+   "benchmark": "benchmarks/foundations/review_arc_reruns_cheap_tier.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1,
+    "G (m^3 kg^-1 s^-2)": 1,
+    "m_p/m_e": 3
+   },
+   "registered": {
+    "a (m)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "NUC-009": {
+   "benchmark": "benchmarks/em/nuclear_alpha_geometry.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-010": {
+   "benchmark": "benchmarks/em/nuclear_kinetic_diagnosis.py",
+   "status": "Failed",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {}
+  },
+  "NUC-011": {
+   "benchmark": "benchmarks/em/nuclear_surface_relaxation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-012": {
+   "benchmark": "benchmarks/em/nuclear_diffuse_surface.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-013": {
+   "benchmark": "benchmarks/em/nuclear_model_class_test.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-014": {
+   "benchmark": "benchmarks/em/nuclear_joint_lambda_phys.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-015": {
+   "benchmark": "benchmarks/em/nuclear_lattice_independence.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-016": {
+   "benchmark": "benchmarks/em/nuclear_facet_audit.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-017": {
+   "benchmark": "benchmarks/em/nuclear_saturation_density.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-018": {
+   "benchmark": "benchmarks/em/nuclear_semf_recalibration.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-019": {
+   "benchmark": "benchmarks/em/nuclear_asymmetry_term.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-020": {
+   "benchmark": "benchmarks/em/nuclear_asymmetry_scaling.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-021": {
+   "benchmark": "benchmarks/em/nuclear_asymmetry_nogo.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-022": {
+   "benchmark": "benchmarks/em/nuclear_state_counting_route.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-A": {
+   "benchmark": "explorations/nuc_a_asymmetry.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-B": {
+   "benchmark": "explorations/nuc_b_potential.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-C": {
+   "benchmark": "explorations/nuc_c_coulomb.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-D": {
+   "benchmark": "explorations/nuc_d_surface.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {
+    "eps (Ca-40 bond depth)": 1
+   }
+  },
+  "NUC-D2": {
+   "benchmark": "explorations/nuc_d2_curvature.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {
+    "eps (Ca-40 bond depth)": 1
+   }
+  },
+  "NUC-023": {
+   "benchmark": "benchmarks/em/nuclear_collective_kinetic_retest.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-024": {
+   "benchmark": "benchmarks/em/nuclear_pairing_term.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-025": {
+   "benchmark": "benchmarks/em/nuclear_second_neighbour_test.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-026": {
+   "benchmark": "benchmarks/nuclear/lamed_residual_classifier.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-027": {
+   "benchmark": "benchmarks/nuclear/mem_pairing_confrontation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-028": {
+   "benchmark": "benchmarks/nuclear/nun_dilution.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-029": {
+   "benchmark": "benchmarks/nuclear/samekh_coh_realization.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-030": {
+   "benchmark": "benchmarks/nuclear/samekh_coh_realization.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-BOUND-001": {
+   "benchmark": "benchmarks/foundations/one_fence_triangulation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "QB-006": {
+   "benchmark": "benchmarks/bell/qb_nonlocal_position.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "CHEM-STRUCT-001": {
+   "benchmark": "benchmarks/em/periodic_shell_counting.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "CHEM-GEO-001": {
+   "benchmark": "benchmarks/em/molecular_geometry_foundations.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "CHEM-GEO-002": {
+   "benchmark": "benchmarks/em/heavy_hydride_asymptote.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "CHEM-MET-001": {
+   "benchmark": "benchmarks/em/metallic_bonding_foundations.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "CHEM-DYN-001": {
+   "benchmark": "benchmarks/em/reaction_dynamics_foundations.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "CHEM-DYN-002": {
+   "benchmark": "benchmarks/em/reaction_dynamics_field_level.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "CHEM-DYN-003": {
+   "benchmark": "benchmarks/em/reaction_dynamics_catalysis.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "CHEM-DYN-004": {
+   "benchmark": "benchmarks/em/reaction_entrance_channel.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "CHEM-DYN-005": {
+   "benchmark": "benchmarks/em/bracket_and_catalysis_entrance.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "CHEM-HB-001": {
+   "benchmark": "benchmarks/em/hydrogen_bond_electrostatics.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "CHEM-HB-002": {
+   "benchmark": "benchmarks/em/hydrogen_bond_ordering.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "CHEM-HB-003": {
+   "benchmark": "benchmarks/em/lone_pair_dipole_derivation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "CHEM-HB-004": {
+   "benchmark": "benchmarks/em/contact_repulsion_test.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "CHEM-HB-005": {
+   "benchmark": "benchmarks/em/tail_asymmetry_charges.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "CHEM-HB-006": {
+   "benchmark": "benchmarks/em/contact_anisotropy.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-001": {
+   "benchmark": "benchmarks/em/atomic_mass_from_nucleons.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-004": {
+   "benchmark": "benchmarks/em/yukawa_from_mode_overlap.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "NUC-005": {
+   "benchmark": "benchmarks/em/atomic_mass_predictor.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {
+    "eps (Ca-40 bond depth)": 2
+   }
+  },
+  "NUC-006": {
+   "benchmark": "benchmarks/em/nuclear_binding_geometry.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-001": {
+   "benchmark": "benchmarks/foundations/electron_candidate_localization.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-002": {
+   "benchmark": "benchmarks/foundations/electron_curve_field_consistency.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-003": {
+   "benchmark": "benchmarks/foundations/electron_resolution_stability.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-003A": {
+   "benchmark": "benchmarks/foundations/electron_matched_basis.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-004A": {
+   "benchmark": "benchmarks/foundations/electron_linear_stability.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-004A-R": {
+   "benchmark": "benchmarks/foundations/electron_stationarity_repair.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-005": {
+   "benchmark": "benchmarks/foundations/electron_topology_constrained.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-006": {
+   "benchmark": "benchmarks/foundations/electron_extended_constrained.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-007": {
+   "benchmark": "benchmarks/foundations/electron_augmented_lagrangian.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-008": {
+   "benchmark": "benchmarks/foundations/electron_adaptive_direct_curve.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-009": {
+   "benchmark": "benchmarks/foundations/electron_variational_remesh.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "ROPE-MODE-001": {
+   "benchmark": "benchmarks/foundations/rope_atomic_shell_modes.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "ROPE-MODE-002": {
+   "benchmark": "benchmarks/foundations/rope_central_field_modes.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "ROPE-MODE-003": {
+   "benchmark": "benchmarks/foundations/rope_surrounding_field_modes.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-010": {
+   "benchmark": "benchmarks/foundations/electron_virial_audit.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ROPE-MODE-004": {
+   "benchmark": "benchmarks/foundations/rope_only_binding.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ROPE-MODE-005": {
+   "benchmark": "benchmarks/foundations/rope_resolved_spectrum.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-011": {
+   "benchmark": "benchmarks/foundations/electron_kkt_push.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-012": {
+   "benchmark": "benchmarks/foundations/electron_tight_link.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-013": {
+   "benchmark": "benchmarks/foundations/electron_run_to_termination.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-014": {
+   "benchmark": "benchmarks/foundations/electron_second_order.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-015": {
+   "benchmark": "benchmarks/foundations/electron_resolution_ladder.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-016": {
+   "benchmark": "benchmarks/foundations/electron_characterization.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-017": {
+   "benchmark": "benchmarks/foundations/electron_n22_reopt.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-018": {
+   "benchmark": "benchmarks/foundations/electron_chart_decider.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-019": {
+   "benchmark": "benchmarks/foundations/electron_k12_terminus.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-020": {
+   "benchmark": "benchmarks/foundations/electron_ladder_closure.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-021": {
+   "benchmark": "benchmarks/foundations/electron_calibration.py",
+   "status": "Modeled",
+   "measured": {
+    "e (elementary charge, C)": 1,
+    "hbar (J s)": 1,
+    "alpha / 1/alpha": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "ELEC-022": {
+   "benchmark": "benchmarks/foundations/electron_continuum.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-023": {
+   "benchmark": "benchmarks/foundations/electron_minimality_census.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-024": {
+   "benchmark": "benchmarks/foundations/electron_true_minimum_hunt.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-025": {
+   "benchmark": "benchmarks/foundations/electron_bending_degeneracy.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-026": {
+   "benchmark": "benchmarks/foundations/electron_valley_following.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-027": {
+   "benchmark": "benchmarks/foundations/electron_reparameterization.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-028": {
+   "benchmark": "benchmarks/foundations/electron_constraint_metric.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-029": {
+   "benchmark": "benchmarks/foundations/electron_three_state_decider.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-030": {
+   "benchmark": "benchmarks/foundations/electron_converged_census.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-031": {
+   "benchmark": "benchmarks/foundations/electron_tightened_census.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-033": {
+   "benchmark": "benchmarks/foundations/electron_tangent_curvature.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-034": {
+   "benchmark": "benchmarks/foundations/electron_recalibration.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-035": {
+   "benchmark": "benchmarks/foundations/electron_clarke_test.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-036": {
+   "benchmark": "benchmarks/foundations/electron_form_factor.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-037": {
+   "benchmark": "benchmarks/foundations/electron_two_objects.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-038": {
+   "benchmark": "benchmarks/foundations/electron_one_medium.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-039": {
+   "benchmark": "benchmarks/foundations/electron_counting_hypotheses.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-040": {
+   "benchmark": "benchmarks/foundations/electron_tension_matching.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-041": {
+   "benchmark": "benchmarks/foundations/electron_strand_identification.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-042": {
+   "benchmark": "benchmarks/foundations/electron_binding_mechanism.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-043": {
+   "benchmark": "benchmarks/foundations/electron_collective_number.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-044": {
+   "benchmark": "benchmarks/foundations/electron_hbar_rederivation.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "ELEC-045": {
+   "benchmark": "benchmarks/foundations/electron_3d_reconnection.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-046": {
+   "benchmark": "benchmarks/foundations/elec_funnel_rerun.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "ELEC-047": {
+   "benchmark": "benchmarks/foundations/elec_bundle_census.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "ELEC-048": {
+   "benchmark": "benchmarks/foundations/elec_order_sweep.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "ELEC-049": {
+   "benchmark": "benchmarks/foundations/elec_w_adjudication.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "ELEC-050": {
+   "benchmark": "benchmarks/foundations/elec_t0_band.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "ELEC-051": {
+   "benchmark": "benchmarks/foundations/elec_lattice_width.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-052": {
+   "benchmark": "benchmarks/foundations/elec_ancdata_width.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-081": {
+   "benchmark": "benchmarks/foundations/elec_flux_recompute.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-082": {
+   "benchmark": "benchmarks/foundations/elec_candidate_regrade.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-083": {
+   "benchmark": "benchmarks/foundations/elec083_ratio_test.py",
+   "status": "Modeled",
+   "measured": {
+    "alpha / 1/alpha": 1
+   },
+   "registered": {}
+  },
+  "ELEC-053": {
+   "benchmark": "benchmarks/foundations/elec_scale_fork.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "ELEC-054": {
+   "benchmark": "benchmarks/foundations/elec_scale_selection.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "ELEC-055": {
+   "benchmark": "benchmarks/foundations/elec_nucq_propagation.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "ELEC-056": {
+   "benchmark": "benchmarks/foundations/elec_subquantum_audit.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "ELEC-057": {
+   "benchmark": "benchmarks/foundations/elec_strand_scale_sweep.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "ELEC-058": {
+   "benchmark": "benchmarks/foundations/elec_bundle_scaling.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "ELEC-059": {
+   "benchmark": "benchmarks/foundations/elec_rope_unit_recruitment.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "ELEC-060": {
+   "benchmark": "benchmarks/foundations/elec_two_medium_price.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "ELEC-062": {
+   "benchmark": "benchmarks/foundations/elec_prediction_census.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-063": {
+   "benchmark": "benchmarks/foundations/elec_paper_registry_reconcile.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "PRED-001": {
+   "benchmark": "benchmarks/foundations/pred_neutrino_mass_sum.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "PRED-002": {
+   "benchmark": "benchmarks/foundations/pred_cosmic_birefringence.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "PRED-002-CONF": {
+   "benchmark": "benchmarks/foundations/pred002_confrontation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "PRED-002-FREQ": {
+   "benchmark": "benchmarks/foundations/pred002_frequency_scaling.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "ELEC-064": {
+   "benchmark": "benchmarks/foundations/elec_t1_audit.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-065": {
+   "benchmark": "benchmarks/foundations/elec_dependency_sweep.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-067": {
+   "benchmark": "benchmarks/foundations/elec_fast_channel_coupling.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-068": {
+   "benchmark": "benchmarks/foundations/elec_soliton_scaling.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-069": {
+   "benchmark": "benchmarks/foundations/elec_soliton_window.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-070": {
+   "benchmark": "benchmarks/foundations/elec_derrick_3d.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-071": {
+   "benchmark": "benchmarks/foundations/elec_parametrization_test.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-072": {
+   "benchmark": "benchmarks/foundations/elec_exposure_reduction.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-073": {
+   "benchmark": "benchmarks/foundations/elec_radial_profile.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-074": {
+   "benchmark": "benchmarks/foundations/elec_exact_profile.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-075": {
+   "benchmark": "benchmarks/foundations/elec_core_scale.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-076": {
+   "benchmark": "benchmarks/foundations/elec_channel_dependence.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-077": {
+   "benchmark": "benchmarks/foundations/elec_functional_selection.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-078": {
+   "benchmark": "benchmarks/foundations/elec_reconciliation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-079": {
+   "benchmark": "benchmarks/foundations/elec_constraint_locality.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-080": {
+   "benchmark": "benchmarks/foundations/elec_reservoir_premise.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-017": {
+   "benchmark": "benchmarks/foundations/fnd_tension_origin.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {
+    "Sigma (J/m^3)": 1
+   }
+  },
+  "PRED-003": {
+   "benchmark": "benchmarks/foundations/pred_alpha_g_drift.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "PRED-003-CONF": {
+   "benchmark": "benchmarks/foundations/pred003_confrontation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "PRED-003-META": {
+   "benchmark": "benchmarks/foundations/pred003_meta_confrontation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "PRED-003-J1713": {
+   "benchmark": "benchmarks/foundations/pred003_j1713_lineage.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "PRED-003-XCHAIN": {
+   "benchmark": "benchmarks/foundations/pred003_xchain_audit.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "PRED-003-CONST": {
+   "benchmark": "benchmarks/foundations/pred003_constitutive.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "PRED-003-CHAIN": {
+   "benchmark": "benchmarks/foundations/pred003_chain_attempt.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "PRED-003-DICT": {
+   "benchmark": "benchmarks/foundations/pred003_dictionary.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "PRED-003-LOCK": {
+   "benchmark": "benchmarks/foundations/pred003_locking.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "PRED-003-ETA": {
+   "benchmark": "benchmarks/foundations/pred003_eta.py",
+   "status": "Modeled",
+   "measured": {
+    "alpha / 1/alpha": 1
+   },
+   "registered": {}
+  },
+  "ALPHA-DE-CHAIN": {
+   "benchmark": "explorations/w_dressing_phase1c.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "HBAR-001": {
+   "benchmark": "benchmarks/foundations/hbar_standing_wave.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "HBAR-002": {
+   "benchmark": "benchmarks/foundations/hbar_coherence_mechanism.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "HBAR-003": {
+   "benchmark": "benchmarks/foundations/hbar_quantization_search.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "HBAR-004": {
+   "benchmark": "benchmarks/foundations/hbar_twist_test.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {}
+  },
+  "HBAR-005": {
+   "benchmark": "benchmarks/foundations/hbar_dimensional_audit.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "HBAR-006": {
+   "benchmark": "benchmarks/foundations/hbar_constancy_and_scale.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {}
+  },
+  "HBAR-007": {
+   "benchmark": "benchmarks/foundations/hbar_equation_of_state.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "HBAR-008": {
+   "benchmark": "benchmarks/foundations/hbar_dipole_mechanism.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "HBAR-009": {
+   "benchmark": "benchmarks/foundations/hbar_compression_test.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "HBAR-010": {
+   "benchmark": "benchmarks/foundations/hbar_cosmological_test.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "HBAR-011": {
+   "benchmark": "benchmarks/foundations/hbar_amplitude_rigidity.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "NUCQ-001": {
+   "benchmark": "benchmarks/foundations/nucq_subquantum_confrontation.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "NUCQ-002": {
+   "benchmark": "benchmarks/foundations/nucq_tension_audit.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "NUCQ-003": {
+   "benchmark": "benchmarks/foundations/nucq_flux_tube_strand_count.py",
+   "status": "Failed",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "XSEC-001": {
+   "benchmark": "benchmarks/foundations/cross_sector_rigidity_audit.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "XSEC-002": {
+   "benchmark": "benchmarks/foundations/xsec_gdagger_universality.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "XSEC-003": {
+   "benchmark": "benchmarks/foundations/xsec_highz_gdagger.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "XSEC-004": {
+   "benchmark": "benchmarks/foundations/xsec_kross_replication.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "XSEC-005": {
+   "benchmark": "benchmarks/foundations/xsec_photometric_rerun.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "XSEC-006": {
+   "benchmark": "benchmarks/foundations/xsec_phibss_independent.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ROPE-MODE-007": {
+   "benchmark": "benchmarks/foundations/rope_multi_surgery_fingerprint.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ROPE-MODE-008": {
+   "benchmark": "benchmarks/foundations/rope_matched_ensemble_classifier.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ROPE-MODE-009": {
+   "benchmark": "benchmarks/foundations/rope_potential_matched_controls.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ROPE-MODE-010": {
+   "benchmark": "benchmarks/foundations/rope_fullfield_sham_controls.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ROPE-MODE-013": {
+   "benchmark": "benchmarks/foundations/rope_matched_sham_spectrum.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ROPE-SOURCE-AUDIT-002": {
+   "benchmark": "benchmarks/foundations/rope_source_audit_circulation.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "ROPE-MODE-006": {
+   "benchmark": "benchmarks/foundations/rope_topology_surgery_fingerprint.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ROPE-MODE-012": {
+   "benchmark": "benchmarks/foundations/rope_topology_transition_path.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ROPE-VALIDATION-001": {
+   "benchmark": "benchmarks/foundations/ab_holonomy_validation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ROPE-VALIDATION-002": {
+   "benchmark": "benchmarks/foundations/ab_flux_tube_3d_validation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ROPE-VALIDATION-003": {
+   "benchmark": "benchmarks/foundations/ab_excluded_core_3d_validation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ROPE-VALIDATION-004": {
+   "benchmark": "benchmarks/foundations/ab_curved_excluded_core_3d_validation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-054": {
+   "benchmark": "benchmarks/gravity/sector_state_audit.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-055": {
+   "benchmark": "benchmarks/gravity/dynamic_bijection.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-056": {
+   "benchmark": "benchmarks/gravity/shift_obstruction.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-057": {
+   "benchmark": "benchmarks/gravity/lense_thirring_confrontation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-058": {
+   "benchmark": "benchmarks/gravity/vector_sector.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-059": {
+   "benchmark": "benchmarks/gravity/mass_current_audit.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-060": {
+   "benchmark": "benchmarks/gravity/twist_route.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-061": {
+   "benchmark": "benchmarks/gravity/twist_flux_balance.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-062": {
+   "benchmark": "benchmarks/gravity/ratio_target.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-063": {
+   "benchmark": "benchmarks/gravity/falloff_audit.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-064": {
+   "benchmark": "benchmarks/gravity/cosserat_screening.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-065": {
+   "benchmark": "benchmarks/gravity/micropolar_conditional.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-066": {
+   "benchmark": "benchmarks/gravity/gapless_locking.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-067": {
+   "benchmark": "benchmarks/gravity/goldstone_no_mass.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-068": {
+   "benchmark": "benchmarks/gravity/cosserat_diagonalisation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-069": {
+   "benchmark": "benchmarks/gravity/pole_residue.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-070": {
+   "benchmark": "benchmarks/gravity/residue_structure.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-071": {
+   "benchmark": "benchmarks/gravity/coefficient_audit.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-072": {
+   "benchmark": "benchmarks/gravity/couple_stress_modulus.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-073": {
+   "benchmark": "benchmarks/gravity/K0_derived.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-074": {
+   "benchmark": "benchmarks/gravity/G_constitutive_bracket.py",
+   "status": "Modeled",
+   "measured": {
+    "G (m^3 kg^-1 s^-2)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "GRV-075": {
+   "benchmark": "benchmarks/gravity/band_coefficient_units.py",
+   "status": "Modeled",
+   "measured": {
+    "e (elementary charge, C)": 1,
+    "hbar (J s)": 1,
+    "G (m^3 kg^-1 s^-2)": 1,
+    "alpha / 1/alpha": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "GRV-076": {
+   "benchmark": "benchmarks/gravity/a_determination_survey.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1,
+    "G (m^3 kg^-1 s^-2)": 1
+   },
+   "registered": {
+    "Sigma (J/m^3)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "GRV-077": {
+   "benchmark": "benchmarks/gravity/load_share_theorem.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-078": {
+   "benchmark": "benchmarks/gravity/staticity_relaxation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-079": {
+   "benchmark": "benchmarks/gravity/nonlinear_settling.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-080": {
+   "benchmark": "benchmarks/gravity/diluted_crossing.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-081": {
+   "benchmark": "benchmarks/gravity/ratchet_wave_coupling.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-082": {
+   "benchmark": "benchmarks/gravity/reservoir_temperature.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-083": {
+   "benchmark": "benchmarks/gravity/lift_over_barrier.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-084": {
+   "benchmark": "benchmarks/gravity/pent_quantitative.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-085": {
+   "benchmark": "benchmarks/gravity/shell_steady_state.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-086": {
+   "benchmark": "benchmarks/gravity/mode_count.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-087": {
+   "benchmark": "benchmarks/gravity/flux_confrontation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-088": {
+   "benchmark": "benchmarks/gravity/coefficient_evaluation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {
+    "d_c (m)": 1
+   }
+  },
+  "GRV-089": {
+   "benchmark": "benchmarks/gravity/beta_parameter_map.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {
+    "d_c (m)": 1
+   }
+  },
+  "GRV-090": {
+   "benchmark": "benchmarks/gravity/pileup_adjudication.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {
+    "d_c (m)": 1,
+    "Sigma (J/m^3)": 1
+   }
+  },
+  "GRV-091": {
+   "benchmark": "benchmarks/gravity/mode_identification.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-092": {
+   "benchmark": "benchmarks/gravity/ring_quantum.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1
+   },
+   "registered": {
+    "d_c (m)": 1,
+    "Sigma (J/m^3)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "GRV-093": {
+   "benchmark": "benchmarks/gravity/action_audit.py",
+   "status": "Modeled",
+   "measured": {
+    "alpha / 1/alpha": 1
+   },
+   "registered": {
+    "d_c (m)": 1
+   }
+  },
+  "GRV-094": {
+   "benchmark": "benchmarks/gravity/invariance_sweep.py",
+   "status": "Modeled",
+   "measured": {
+    "alpha / 1/alpha": 1
+   },
+   "registered": {
+    "d_c (m)": 2
+   }
+  },
+  "GRV-095": {
+   "benchmark": "benchmarks/gravity/tensor_coefficient.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1,
+    "G (m^3 kg^-1 s^-2)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "FND-020": {
+   "benchmark": "benchmarks/foundations/rope_parameter_card.py",
+   "status": "Modeled",
+   "measured": {
+    "eps0 (F/m)": 1
+   },
+   "registered": {
+    "T0 (J/m)": 3,
+    "a (m)": 1,
+    "d_c (m)": 1,
+    "Sigma (J/m^3)": 4,
+    "c (m/s)": 1
+   }
+  },
+  "FND-021": {
+   "benchmark": "benchmarks/foundations/extensibility_conflict.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {
+    "d_c (m)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "FND-022": {
+   "benchmark": "benchmarks/foundations/two_fast_channels.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "FND-023": {
+   "benchmark": "benchmarks/foundations/constraint_wave_coexistence.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-024": {
+   "benchmark": "benchmarks/foundations/nonlocal_carrier.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-025": {
+   "benchmark": "benchmarks/foundations/d1_topological_test.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-026": {
+   "benchmark": "benchmarks/foundations/chsh_status_correction.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-027": {
+   "benchmark": "benchmarks/foundations/fnd027_k_adjudication.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-028": {
+   "benchmark": "benchmarks/foundations/fnd028_dark_channel_predictions.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-029": {
+   "benchmark": "benchmarks/foundations/nuc_import_kc_confrontation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-RECON-018": {
+   "benchmark": "benchmarks/em/emrecon018_standoff_refinement.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-096": {
+   "benchmark": "benchmarks/gravity/exact_d_extraction.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-097": {
+   "benchmark": "benchmarks/gravity/exact_d_ordered.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-098": {
+   "benchmark": "benchmarks/gravity/exact_d_derived.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-099": {
+   "benchmark": "benchmarks/gravity/exact_d_asymptotics.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-100": {
+   "benchmark": "benchmarks/gravity/exact_d_interpretation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-101": {
+   "benchmark": "benchmarks/gravity/exact_d_scale.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1,
+    "G (m^3 kg^-1 s^-2)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "ELEC-090": {
+   "benchmark": "benchmarks/foundations/chet2_hollow_interior.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-091": {
+   "benchmark": "benchmarks/foundations/tet2_core_tangent.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-092": {
+   "benchmark": "benchmarks/foundations/yod2_axis_pinning.py",
+   "status": "Modeled",
+   "measured": {
+    "e (elementary charge, C)": 1
+   },
+   "registered": {
+    "Sigma (J/m^3)": 1
+   }
+  },
+  "ELEC-093": {
+   "benchmark": "benchmarks/foundations/kaf2_form_factor.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-094": {
+   "benchmark": "benchmarks/foundations/lamed2_axis_pinning_scaled.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-095": {
+   "benchmark": "benchmarks/foundations/mem2_coupling_prefactor.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-096": {
+   "benchmark": "benchmarks/foundations/nun2_rotational_symmetry.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-097": {
+   "benchmark": "benchmarks/foundations/samekh2_cpin.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-098": {
+   "benchmark": "benchmarks/foundations/ayin2_embedded_solver.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "ELEC-099": {
+   "benchmark": "benchmarks/foundations/pe2_pbc_prefactor.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-041": {
+   "benchmark": "benchmarks/foundations/gimel_whisper_reaudit.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1,
+    "alpha / 1/alpha": 1
+   },
+   "registered": {
+    "d_c (m)": 1,
+    "Sigma (J/m^3)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "FND-042": {
+   "benchmark": "benchmarks/foundations/dalet_window_adjudication.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1,
+    "alpha / 1/alpha": 1
+   },
+   "registered": {
+    "d_c (m)": 1,
+    "Sigma (J/m^3)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "FND-043": {
+   "benchmark": "benchmarks/foundations/he_area_selection.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1,
+    "m_e (kg)": 1,
+    "alpha / 1/alpha": 1
+   },
+   "registered": {
+    "Sigma (J/m^3)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "FND-044": {
+   "benchmark": "benchmarks/foundations/vav_n_computation.py",
+   "status": "Modeled",
+   "measured": {
+    "hbar (J s)": 1,
+    "m_e (kg)": 1,
+    "alpha / 1/alpha": 1
+   },
+   "registered": {
+    "Sigma (J/m^3)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "FND-045": {
+   "benchmark": "benchmarks/foundations/zayin_defect_exponent.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-046": {
+   "benchmark": "benchmarks/foundations/chet_correlated_coefficients.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-047": {
+   "benchmark": "benchmarks/foundations/tet_lattice_confrontation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-048": {
+   "benchmark": "benchmarks/foundations/yod_kstring_category.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-049": {
+   "benchmark": "tools/scale001_seal.py",
+   "status": "Open",
+   "measured": {
+    "hbar (J s)": 1,
+    "alpha / 1/alpha": 1
+   },
+   "registered": {
+    "Sigma (J/m^3)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "FND-051": {
+   "benchmark": "benchmarks/foundations/scale001_evaluate.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {
+    "Sigma (J/m^3)": 1
+   }
+  },
+  "FND-052": {
+   "benchmark": "benchmarks/foundations/kaf_bundle_binding.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-053": {
+   "benchmark": "benchmarks/foundations/samekh_1overN_provenance.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-055": {
+   "benchmark": "benchmarks/foundations/ayin_grantN2_acceptance.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-056": {
+   "benchmark": "benchmarks/foundations/pe_label_blindness.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-057": {
+   "benchmark": "benchmarks/foundations/tsade_label_gap.py",
+   "status": "Modeled",
+   "measured": {
+    "e (elementary charge, C)": 1
+   },
+   "registered": {
+    "d_c (m)": 1,
+    "Sigma (J/m^3)": 1
+   }
+  },
+  "FND-058": {
+   "benchmark": "benchmarks/foundations/qof_threepin_fork.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {
+    "d_c (m)": 1,
+    "Sigma (J/m^3)": 1
+   }
+  },
+  "FND-059": {
+   "benchmark": "benchmarks/foundations/resh_collective_cutoff.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {
+    "Sigma (J/m^3)": 1
+   }
+  },
+  "FND-060": {
+   "benchmark": "benchmarks/foundations/shin_operator_ceiling.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {
+    "Sigma (J/m^3)": 1
+   }
+  },
+  "FND-061": {
+   "benchmark": "benchmarks/foundations/tav_uvmode_audit.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-063": {
+   "benchmark": "benchmarks/foundations/bet3_c4_adjudication.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-064": {
+   "benchmark": "benchmarks/foundations/bet4_stability_identity.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-065": {
+   "benchmark": "benchmarks/foundations/bet5_dilemma.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-066": {
+   "benchmark": "benchmarks/foundations/bet6_w_census.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {
+    "a (m)": 3
+   }
+  },
+  "FND-067": {
+   "benchmark": "benchmarks/foundations/bet7_one_medium.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-068": {
+   "benchmark": "benchmarks/foundations/fnd068_area_convention.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-069": {
+   "benchmark": "benchmarks/foundations/fnd069_scale001_reopen.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-070": {
+   "benchmark": "benchmarks/foundations/fnd070_placement.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-071": {
+   "benchmark": "benchmarks/foundations/ayin_reconnection_audit.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {
+    "a (m)": 1,
+    "c (m/s)": 1
+   }
+  },
+  "FND-072": {
+   "benchmark": "benchmarks/foundations/pe_branching_ratio.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-073": {
+   "benchmark": "benchmarks/foundations/tsade_w_determination.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-074": {
+   "benchmark": "benchmarks/foundations/qoph_encounter_spectrum.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-075": {
+   "benchmark": "benchmarks/foundations/resh_c4_reopening.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-076": {
+   "benchmark": "benchmarks/foundations/shin_one_medium_prosecution.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-077": {
+   "benchmark": "benchmarks/foundations/tav_bundle_census.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {
+    "a (m)": 1
+   }
+  },
+  "FND-078": {
+   "benchmark": "benchmarks/foundations/kaf2_fusion_confrontation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-079": {
+   "benchmark": "benchmarks/foundations/mem_mb_confrontation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-080": {
+   "benchmark": "benchmarks/foundations/mem_mb_confrontation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-081": {
+   "benchmark": "benchmarks/foundations/tet_arriving_spectrum.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-089": {
+   "benchmark": "benchmarks/foundations/shin6_3d_bloch.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-090": {
+   "benchmark": "benchmarks/foundations/fnd_rel_002_wound.py",
+   "status": "Derived",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-091": {
+   "benchmark": "benchmarks/foundations/shin7_kb_pricing.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-092": {
+   "benchmark": "benchmarks/foundations/resh_discrimination_push.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-101": {
+   "benchmark": "benchmarks/foundations/nun_kstring_2021_confrontation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-102": {
+   "benchmark": "benchmarks/foundations/nun2_table14_point_read.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-103": {
+   "benchmark": "benchmarks/foundations/nun3_shortfall_mechanism.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-104": {
+   "benchmark": "benchmarks/foundations/nun4_orientation_decoherence.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-RECON-033": {
+   "benchmark": "benchmarks/foundations/shin8_refinement_invariance.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-RECON-034": {
+   "benchmark": "benchmarks/em/emrecon034_2d_profile_closure.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-RECON-036": {
+   "benchmark": "benchmarks/em/emrecon036_registered_class_closure.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-RECON-038": {
+   "benchmark": "benchmarks/em/emrecon038_strain_derivation.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {
+    "a (m)": 1
+   }
+  },
+  "FND-113": {
+   "benchmark": "benchmarks/foundations/nun8_exdyn_adjudication.py",
+   "status": "Failed",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-105": {
+   "benchmark": "benchmarks/gravity/nungrv2_betaJ_pin.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-106": {
+   "benchmark": "benchmarks/gravity/nungrv3_shiftmap.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-107": {
+   "benchmark": "benchmarks/gravity/nungrv4_rel002_scope.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-108": {
+   "benchmark": "benchmarks/gravity/nungrv5_shift_inventory.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-109": {
+   "benchmark": "benchmarks/gravity/nungrv6_lambda_bound.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-111": {
+   "benchmark": "benchmarks/gravity/nungrv7_lambda_derivation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-112": {
+   "benchmark": "benchmarks/gravity/nungrv8_kappabar_determination.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-113": {
+   "benchmark": "benchmarks/gravity/nungrv9_chi_bound.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "EM-RECON-039": {
+   "benchmark": "benchmarks/em/current_as_spin_resh2.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-119": {
+   "benchmark": "benchmarks/em/vertex_session_tav4.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-RECON-040": {
+   "benchmark": "benchmarks/em/tau0_pin_qof2.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "EM-RECON-041": {
+   "benchmark": "benchmarks/em/dynamo_mem3.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-120": {
+   "benchmark": "benchmarks/gravity/framedrag_ratio_nungrv13.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-121": {
+   "benchmark": "benchmarks/gravity/lambda_compose_nungrv14.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "GRV-123": {
+   "benchmark": "benchmarks/gravity/lambdanat_price_nungrv16.py",
+   "status": "Modeled",
+   "measured": {
+    "G (m^3 kg^-1 s^-2)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "GRV-124": {
+   "benchmark": "benchmarks/gravity/kappaconv_nungrv17.py",
+   "status": "Modeled",
+   "measured": {
+    "G (m^3 kg^-1 s^-2)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "GRV-128": {
+   "benchmark": "benchmarks/gravity/tau_ident_nungrv21.py",
+   "status": "Modeled",
+   "measured": {
+    "e (elementary charge, C)": 1,
+    "G (m^3 kg^-1 s^-2)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "FND-115": {
+   "benchmark": "benchmarks/foundations/shin8_fine_weave.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-126": {
+   "benchmark": "benchmarks/foundations/blochl_longitudinal.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-127": {
+   "benchmark": "benchmarks/foundations/reprice_4046.py",
+   "status": "Modeled",
+   "measured": {
+    "G (m^3 kg^-1 s^-2)": 1
+   },
+   "registered": {
+    "c (m/s)": 1
+   }
+  },
+  "FND-128": {
+   "benchmark": "benchmarks/foundations/contact_rule_candidate.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-130": {
+   "benchmark": "benchmarks/foundations/maint_equilibrium.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-131": {
+   "benchmark": "benchmarks/foundations/twist_determination.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-132": {
+   "benchmark": "benchmarks/foundations/energy_bill.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-133": {
+   "benchmark": "benchmarks/foundations/dbc_background_correction.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-135": {
+   "benchmark": "benchmarks/foundations/composite_wave_build.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-136": {
+   "benchmark": "benchmarks/foundations/sweeppath_coverage.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-137": {
+   "benchmark": "benchmarks/foundations/c4_dynamical.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-138": {
+   "benchmark": "benchmarks/foundations/ansatz_selfconsistency.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-139": {
+   "benchmark": "benchmarks/foundations/curveobj_adjudication.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-140": {
+   "benchmark": "benchmarks/foundations/truestate_stage1.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-141": {
+   "benchmark": "benchmarks/foundations/truesolve_bloch.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-142": {
+   "benchmark": "benchmarks/foundations/truestate_stage2.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-143": {
+   "benchmark": "benchmarks/foundations/traverse96_scout.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-144": {
+   "benchmark": "benchmarks/foundations/native96_continuation.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-145": {
+   "benchmark": "benchmarks/foundations/native96_probe94.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  },
+  "FND-146": {
+   "benchmark": "benchmarks/foundations/svd_diagnostic.py",
+   "status": "Modeled",
+   "measured": {},
+   "registered": {}
+  }
+ },
+ "flags": [
+  {
+   "id": "GRV-006",
+   "constant": "G (m^3 kg^-1 s^-2)",
+   "hits": 1,
+   "benchmark": "benchmarks/gravity/g_underdetermination.py",
+   "adjudicated": null,
+   "title": "G is NOT derivable from current commitments (constructive underdetermination theorem); G inverse-measures the network rigidity c^4/(4 pi G) = 9.6e42 N; and the "
+  },
+  {
+   "id": "FND-MATTER-044",
+   "constant": "m_e (kg)",
+   "hits": 1,
+   "benchmark": "benchmarks/foundations/matter044_whisper_pricing.py",
+   "adjudicated": null,
+   "title": "THE WHISPER-PRICING SESSION: THE 4.6 WAS BOUND-SATURATION ACCOUNTING, NOT PHYSICS -- SOLVING THE m_e-PINNED COMBINATION JOINTLY WITH FND-017'S DERIVED INVARIANC"
+  },
+  {
+   "id": "FND-MATTER-047",
+   "constant": "G (m^3 kg^-1 s^-2)",
+   "hits": 1,
+   "benchmark": "benchmarks/foundations/matter047_channel_exhaustion.py",
+   "adjudicated": null,
+   "title": "THE CHANNEL-EXHAUSTION SESSION: EVERY WAVE BRANCH A REGISTERED STRAND SUPPORTS, PRICED BY ONE INSTRUMENT AND SUMMED WITH THE DICTIONARY BRACKET'S GENEROUS EDGE,"
+  },
+  {
+   "id": "FND-MATTER-052",
+   "constant": "alpha / 1/alpha",
+   "hits": 1,
+   "benchmark": "benchmarks/foundations/matter052_expression_fraction.py",
+   "adjudicated": null,
+   "title": "THE LEVER SESSION, PART 2 -- THE EXPRESSION-FRACTION DERIVATION: WITH THE INSTRUMENT INHERITED FROM MATTER051'S BARS AND THE CANDIDATE AREAS PRE-NAMED, THE CELL"
+  },
+  {
+   "id": "FND-MATTER-056",
+   "constant": "alpha / 1/alpha",
+   "hits": 1,
+   "benchmark": "benchmarks/foundations/matter056_suppression_mechanism.py",
+   "adjudicated": null,
+   "title": "THE SUPPRESSION MECHANISM DERIVED BEFORE THE TARGET WAS LOOKED AT: DILUTE-PERTURBATION CASIMIR IN THE AMBIENT WEAVE GIVES lambda = pi (r/a)^2 = 2.776e-6, PARAME"
+  },
+  {
+   "id": "ELEC-021",
+   "constant": "hbar (J s)",
+   "hits": 1,
+   "benchmark": "benchmarks/foundations/electron_calibration.py",
+   "adjudicated": null,
+   "title": "THE CALIBRATION: WHAT 15.5627 BECOMES, AND THE TWO CONFRONTATIONS IT BUYS (Modeled) -- THE INVARIANT, calibration-independent: Lambda = E-infinity d_c / kappa ="
+  },
+  {
+   "id": "ELEC-044",
+   "constant": "hbar (J s)",
+   "hits": 1,
+   "benchmark": "benchmarks/foundations/electron_hbar_rederivation.py",
+   "adjudicated": null,
+   "title": "THE HBAR RELATION RE-DERIVED: THE PREFACTOR IS INNOCENT, THE LENGTH IS THE LEVER, AND ONE NON-TAUTOLOGICAL CELL CLOSES AT 0.885 HBAR (Modeled; bars locked befor"
+  },
+  {
+   "id": "ELEC-046",
+   "constant": "hbar (J s)",
+   "hits": 1,
+   "benchmark": "benchmarks/foundations/elec_funnel_rerun.py",
+   "adjudicated": null,
+   "title": "THE FUNNEL RE-RUN AT THE DERIVED ACTION: THE CHAIN HEALS AT n_t ~ 498, THE TWO-NORMALIZATION INCONSISTENCY IS RETIRED, AND D/w = 19 DISSOLVES (Modeled; bars loc"
+  },
+  {
+   "id": "ELEC-047",
+   "constant": "hbar (J s)",
+   "hits": 1,
+   "benchmark": "benchmarks/foundations/elec_bundle_census.py",
+   "adjudicated": null,
+   "title": "THE BUNDLE CENSUS: THE MEDIUM HAS THE STRANDS, THE EVENT CANNOT RECRUIT THEM -- THE HBAR-FROM-RECONNECTION CHAIN IS DEAD AS A DERIVATION (Modeled; bars locked b"
+  },
+  {
+   "id": "ELEC-048",
+   "constant": "hbar (J s)",
+   "hits": 1,
+   "benchmark": "benchmarks/foundations/elec_order_sweep.py",
+   "adjudicated": null,
+   "title": "THE ORDER SWEEP: NOTHING REGISTERED SUPPLIES THE COHERENCE, THE ROUTE DIES AT ITS SECOND JOINT, AND THE SWEEP CATCHES ITS OWN AUDITOR -- THE FRONTIER CONSOLIDAT"
+  },
+  {
+   "id": "HBAR-005",
+   "constant": "hbar (J s)",
+   "hits": 1,
+   "benchmark": "benchmarks/foundations/hbar_dimensional_audit.py",
+   "adjudicated": null,
+   "title": "THE DIMENSIONAL AUDIT: NO COMBINATION OF THE MEDIUM'S CONSTANTS GIVES HBAR, AND HBAR IS MESOSCOPIC -- A PATCH SEVENTY-FIVE SPACINGS ACROSS (Modeled) -- THE AUDI"
+  },
+  {
+   "id": "HBAR-006",
+   "constant": "hbar (J s)",
+   "hits": 1,
+   "benchmark": "benchmarks/foundations/hbar_constancy_and_scale.py",
+   "adjudicated": null,
+   "title": "WHAT HBAR'S CONSTANCY REQUIRES, AND WHERE THE SUB-QUANTUM SCALE PUTS THE FIRST TESTABLE PREDICTION (Modeled) -- PART 1, WHAT HBAR DEPENDS ON: with L = N w and w"
+  },
+  {
+   "id": "NUCQ-001",
+   "constant": "hbar (J s)",
+   "hits": 1,
+   "benchmark": "benchmarks/foundations/nucq_subquantum_confrontation.py",
+   "adjudicated": null,
+   "title": "THE NUCLEAR SECTOR REFUTES THE MESOSCOPIC-HBAR PICTURE: THE FRAMEWORK'S ONLY DISTINCTIVE PREDICTION LANDS ON THE BEST-TESTED SMALL-SCALE PHYSICS AND IS NOT OBSE"
+  },
+  {
+   "id": "NUCQ-003",
+   "constant": "hbar (J s)",
+   "hits": 1,
+   "benchmark": "benchmarks/foundations/nucq_flux_tube_strand_count.py",
+   "adjudicated": null,
+   "title": "THE STRUCTURAL STRAND COUNT IS DERIVED, THE ESCAPE IS CLOSED, AND THE MESOSCOPIC-HBAR PICTURE IS REFUTED (Failed, kept) -- THE DERIVATION: with rho = 3 T_tube/("
+  },
+  {
+   "id": "GRV-074",
+   "constant": "G (m^3 kg^-1 s^-2)",
+   "hits": 1,
+   "benchmark": "benchmarks/gravity/G_constitutive_bracket.py",
+   "adjudicated": null,
+   "title": "G(T, a) ATTEMPTED: THE ASSUMED FORM IS DIMENSIONALLY OPEN (THE CONST DEFECT CLASS, IN THE SOLE T1'S OTHER LEG), THE SAKHAROV ROUTE GIVES A TENSION-INERT G ~ a^2"
+  },
+  {
+   "id": "GRV-075",
+   "constant": "G (m^3 kg^-1 s^-2)",
+   "hits": 1,
+   "benchmark": "benchmarks/gravity/band_coefficient_units.py",
+   "adjudicated": null,
+   "title": "THE BAND COEFFICIENT IN PHYSICAL UNITS: THE CORPUS'S FIRST DERIVED G EXPONENT PAIR ((0, 2) -- TENSION-INERT, SPACING-QUADRATIC), THE COEFFICIENT zeta = 1.208 FR"
+  },
+  {
+   "id": "GRV-092",
+   "constant": "hbar (J s)",
+   "hits": 1,
+   "benchmark": "benchmarks/gravity/ring_quantum.py",
+   "adjudicated": null,
+   "title": "THE QUANTUM OF THE RING -- THE FOURTH CANCELLATION: THE SNAP ACTION A* = e_bit/omega_loc IS INDEPENDENT OF DEPTH AND OF THE BLACK HOLE'S MASS (sigma AND kappa B"
+  },
+  {
+   "id": "GRV-093",
+   "constant": "alpha / 1/alpha",
+   "hits": 1,
+   "benchmark": "benchmarks/gravity/action_audit.py",
+   "adjudicated": null,
+   "title": "THE CROSS-REGISTRY ACTION AUDIT -- ONE FORM, TWO AREAS: THE REGISTERED hbar RELATION AND THE HORIZON'S EMERGENT ACTION ARE BOTH TENSION x AREA / c (hbar = T0 [l"
+  },
+  {
+   "id": "GRV-094",
+   "constant": "alpha / 1/alpha",
+   "hits": 1,
+   "benchmark": "benchmarks/gravity/invariance_sweep.py",
+   "adjudicated": null,
+   "title": "THE INVARIANCE SWEEP -- h ADJUDICATED AND THE ONE-POWER THEOREM: d_c IS ELECTRON-ANCHORED AND FORK-INVARIANT (ELEC-021's CALIBRATION-INDEPENDENT Lambda = E_inf "
+  },
+  {
+   "id": "FND-044",
+   "constant": "m_e (kg)",
+   "hits": 1,
+   "benchmark": "benchmarks/foundations/vav_n_computation.py",
+   "adjudicated": null,
+   "title": "COMMISSION VAV \u2014 THE N COMPUTATION: WITH ETA = 1 ALREADY ON THE BOOKS, N = 2g^2 EXACTLY AND THE EVERYTHING-BRICK IS THE REGISTRY'S OLDEST RESIDUAL WEARING FOUR "
+  },
+  {
+   "id": "GRV-123",
+   "constant": "G (m^3 kg^-1 s^-2)",
+   "hits": 1,
+   "benchmark": "benchmarks/gravity/lambdanat_price_nungrv16.py",
+   "adjudicated": null,
+   "title": "THE Lambda_nat PRICING SESSION (NUN-GRV16) -- NUMERATOR-PRICED, DENOMINATOR-BLOCKED-AT TWO NAMED WALLS, STRUCTURAL CONSONANCE AFFIRMED, AND ONE FLAGGED RESEMBLA"
+  },
+  {
+   "id": "GRV-128",
+   "constant": "G (m^3 kg^-1 s^-2)",
+   "hits": 1,
+   "benchmark": "benchmarks/gravity/tau_ident_nungrv21.py",
+   "adjudicated": null,
+   "title": "COMMISSION TAU-IDENT (NUN-GRV21) -- DISTINCT-CERTIFIED ON THE IDENTITY, FINE-BOUND-DERIVED ON THE AMPLITUDE: the author's challenge to GRV-127 ('either the 1e37"
+  }
+ ],
+ "blind": [
+  "FND-001",
+  "FND-002",
+  "FND-003",
+  "FND-004",
+  "FND-005",
+  "FND-006",
+  "FND-007",
+  "FND-008",
+  "FND-009",
+  "FND-010",
+  "FND-011",
+  "FND-012",
+  "FND-013",
+  "FND-014",
+  "FND-015",
+  "FND-016",
+  "GG-001",
+  "GG-002",
+  "GG-003",
+  "GG-006",
+  "EM-RECON-001",
+  "EM-RECON-002",
+  "EM-RECON-003",
+  "EM-RECON-004",
+  "EM-RECON-008",
+  "EM-RECON-009",
+  "EM-RECON-011",
+  "EM-RECON-012",
+  "EM-RECON-013",
+  "EM-RECON-017",
+  "EFT-001",
+  "EM-001",
+  "EM-004",
+  "EM-005",
+  "EM-006",
+  "EM-007",
+  "EM-008",
+  "EM-009",
+  "EM-010",
+  "EM-011",
+  "EM-012",
+  "EM-013",
+  "EM-014",
+  "EM-015",
+  "EM-016",
+  "EM-017",
+  "EM-018",
+  "EM-019",
+  "EM-020",
+  "OPT-001",
+  "OPT-002",
+  "OPT-003",
+  "OPT-004",
+  "OPT-005",
+  "OPT-006",
+  "OPT-007",
+  "OPT-008",
+  "OPT-009",
+  "OPT-010",
+  "THM-002",
+  "THM-003",
+  "THM-004",
+  "THM-005",
+  "THM-006",
+  "QGATE-001",
+  "QGATE-002",
+  "QGATE-003",
+  "QGATE-004",
+  "QGATE-005",
+  "QGATE-006",
+  "QGATE-007",
+  "QGATE-008",
+  "QGATE-018",
+  "QGATE-011",
+  "QGATE-012",
+  "QGATE-013",
+  "QGATE-014",
+  "QGATE-015",
+  "QGATE-016",
+  "QGATE-017",
+  "GRV-001",
+  "GRV-002",
+  "GRV-003",
+  "GRV-008",
+  "GRV-009",
+  "GRV-010",
+  "GRV-011",
+  "GRV-012",
+  "GRV-013",
+  "GRV-015",
+  "GRV-016",
+  "GRV-017",
+  "GRV-018",
+  "GRV-019",
+  "GRV-020",
+  "GRV-021",
+  "GRV-022",
+  "GRV-023",
+  "GRV-024",
+  "GRV-025",
+  "GRV-026",
+  "GRV-027",
+  "GRV-028",
+  "GRV-029",
+  "GRV-030",
+  "GRV-031",
+  "GRV-032",
+  "GRV-033",
+  "GRV-034",
+  "GRV-035",
+  "GRV-036",
+  "GRV-037",
+  "GRV-038",
+  "GRV-039",
+  "GRV-041",
+  "GRV-042",
+  "GRV-043",
+  "GRV-044",
+  "GRV-050",
+  "GRV-051",
+  "GRV-045",
+  "GRV-046",
+  "FND-REL-001",
+  "SOL-002",
+  "FND-REL-002",
+  "FND-REL-004",
+  "FND-REL-005",
+  "PM-003",
+  "PM-004",
+  "PM-005",
+  "FND-MATTER-002",
+  "FND-MATTER-004",
+  "FND-MATTER-006",
+  "FND-MATTER-009",
+  "FND-MATTER-010",
+  "FND-MATTER-011",
+  "FND-MATTER-012",
+  "FND-MATTER-013",
+  "FND-MATTER-014",
+  "FND-MATTER-015",
+  "FND-MATTER-016",
+  "FND-MATTER-017",
+  "FND-MATTER-018",
+  "FND-MATTER-019",
+  "FND-MATTER-020",
+  "FND-MATTER-021",
+  "FND-MATTER-022",
+  "FND-MATTER-023",
+  "FND-MATTER-024",
+  "FND-MATTER-025",
+  "FND-MATTER-026",
+  "FND-MATTER-027",
+  "FND-MATTER-028",
+  "FND-MATTER-029",
+  "FND-MATTER-030",
+  "FND-MATTER-031",
+  "FND-MATTER-032",
+  "FND-MATTER-033",
+  "FND-MATTER-034",
+  "FND-MATTER-035",
+  "FND-MATTER-036",
+  "FND-MATTER-037",
+  "FND-MATTER-038",
+  "QB-001",
+  "QB-002",
+  "QB-003",
+  "QB-007",
+  "QB-008",
+  "QB-009",
+  "QB-010",
+  "QB-011",
+  "QB-012",
+  "QB-013",
+  "QB-014",
+  "QB-023",
+  "QB-024",
+  "QB-025",
+  "QB-028",
+  "QB-029",
+  "QB-030",
+  "QB-031",
+  "QB-032",
+  "QB-033",
+  "QB-015",
+  "QB-016",
+  "QB-017",
+  "QB-018",
+  "QB-019",
+  "QB-020",
+  "QB-021",
+  "QB-022",
+  "FND-KIN-002",
+  "FND-KIN-003",
+  "FND-KIN-004",
+  "FND-KIN-005",
+  "FND-STRAND-001",
+  "FND-STRAND-002",
+  "FND-STRAND-003",
+  "FND-STRAND-004",
+  "FND-STRAND-005",
+  "FND-STRAND-006",
+  "FND-STRAND-007",
+  "FND-STRAND-008",
+  "FND-STRAND-009",
+  "FND-STRAND-010",
+  "FND-STRAND-011",
+  "FND-STRAND-012",
+  "FND-STRAND-013",
+  "FND-STRAND-014",
+  "FND-STRAND-015",
+  "FND-STRAND-016",
+  "FND-STRAND-017",
+  "FND-STRAND-018",
+  "FND-STRAND-019",
+  "FND-STRAND-020",
+  "FND-STRAND-021",
+  "FND-STRAND-022",
+  "FND-STRAND-023",
+  "FND-STRAND-024",
+  "FND-STRAND-025",
+  "FND-STRAND-026",
+  "FND-STRAND-027",
+  "FND-STRAND-028",
+  "FND-STRAND-029",
+  "FND-MATTER-048",
+  "FND-MATTER-049",
+  "QB-034",
+  "QB-035",
+  "FND-MATTER-058",
+  "FND-MATTER-059",
+  "FND-MATTER-061",
+  "FND-MATTER-062",
+  "FND-MATTER-059-hist",
+  "FND-MATTER-060-hist",
+  "NUC-007",
+  "NUC-008",
+  "FND-MATTER-063",
+  "FND-MATTER-064",
+  "EM-RECON-020",
+  "EM-RECON-021",
+  "EM-RECON-023",
+  "EM-RECON-024",
+  "EM-RECON-025",
+  "EM-RECON-026",
+  "EM-RECON-028",
+  "EM-RECON-030",
+  "GRV-103",
+  "NUC-009",
+  "NUC-011",
+  "NUC-012",
+  "NUC-013",
+  "NUC-014",
+  "NUC-015",
+  "NUC-016",
+  "NUC-017",
+  "NUC-018",
+  "NUC-019",
+  "NUC-020",
+  "NUC-021",
+  "NUC-022",
+  "NUC-A",
+  "NUC-B",
+  "NUC-C",
+  "NUC-D",
+  "NUC-D2",
+  "NUC-023",
+  "NUC-024",
+  "NUC-025",
+  "NUC-026",
+  "NUC-027",
+  "NUC-028",
+  "NUC-029",
+  "NUC-030",
+  "FND-BOUND-001",
+  "QB-006",
+  "CHEM-STRUCT-001",
+  "CHEM-GEO-001",
+  "CHEM-GEO-002",
+  "CHEM-MET-001",
+  "CHEM-DYN-001",
+  "CHEM-DYN-002",
+  "CHEM-DYN-003",
+  "CHEM-DYN-004",
+  "CHEM-DYN-005",
+  "CHEM-HB-001",
+  "CHEM-HB-002",
+  "CHEM-HB-003",
+  "CHEM-HB-004",
+  "CHEM-HB-005",
+  "CHEM-HB-006",
+  "NUC-001",
+  "NUC-004",
+  "NUC-005",
+  "NUC-006",
+  "ELEC-001",
+  "ELEC-002",
+  "ELEC-003",
+  "ELEC-003A",
+  "ELEC-004A",
+  "ELEC-004A-R",
+  "ELEC-005",
+  "ELEC-006",
+  "ELEC-007",
+  "ELEC-008",
+  "ELEC-009",
+  "ROPE-MODE-001",
+  "ROPE-MODE-002",
+  "ROPE-MODE-003",
+  "ELEC-010",
+  "ROPE-MODE-004",
+  "ROPE-MODE-005",
+  "ELEC-011",
+  "ELEC-012",
+  "ELEC-013",
+  "ELEC-014",
+  "ELEC-015",
+  "ELEC-016",
+  "ELEC-017",
+  "ELEC-018",
+  "ELEC-019",
+  "ELEC-020",
+  "ELEC-022",
+  "ELEC-023",
+  "ELEC-024",
+  "ELEC-025",
+  "ELEC-026",
+  "ELEC-027",
+  "ELEC-028",
+  "ELEC-029",
+  "ELEC-030",
+  "ELEC-031",
+  "ELEC-033",
+  "ELEC-034",
+  "ELEC-035",
+  "ELEC-036",
+  "ELEC-037",
+  "ELEC-038",
+  "ELEC-039",
+  "ELEC-040",
+  "ELEC-041",
+  "ELEC-042",
+  "ELEC-043",
+  "ELEC-045",
+  "ELEC-049",
+  "ELEC-051",
+  "ELEC-052",
+  "ELEC-081",
+  "ELEC-082",
+  "ELEC-062",
+  "ELEC-063",
+  "PRED-001",
+  "PRED-002",
+  "PRED-002-CONF",
+  "PRED-002-FREQ",
+  "ELEC-064",
+  "ELEC-065",
+  "ELEC-067",
+  "ELEC-068",
+  "ELEC-069",
+  "ELEC-070",
+  "ELEC-071",
+  "ELEC-072",
+  "ELEC-073",
+  "ELEC-074",
+  "ELEC-075",
+  "ELEC-076",
+  "ELEC-077",
+  "ELEC-078",
+  "ELEC-079",
+  "ELEC-080",
+  "FND-017",
+  "PRED-003",
+  "PRED-003-CONF",
+  "PRED-003-META",
+  "PRED-003-J1713",
+  "PRED-003-XCHAIN",
+  "PRED-003-CONST",
+  "PRED-003-CHAIN",
+  "PRED-003-DICT",
+  "PRED-003-LOCK",
+  "ALPHA-DE-CHAIN",
+  "HBAR-008",
+  "HBAR-009",
+  "HBAR-010",
+  "HBAR-011",
+  "XSEC-001",
+  "XSEC-002",
+  "XSEC-003",
+  "XSEC-004",
+  "XSEC-005",
+  "XSEC-006",
+  "ROPE-MODE-007",
+  "ROPE-MODE-008",
+  "ROPE-MODE-009",
+  "ROPE-MODE-010",
+  "ROPE-MODE-013",
+  "ROPE-SOURCE-AUDIT-002",
+  "ROPE-MODE-006",
+  "ROPE-MODE-012",
+  "ROPE-VALIDATION-001",
+  "ROPE-VALIDATION-002",
+  "ROPE-VALIDATION-003",
+  "ROPE-VALIDATION-004",
+  "GRV-054",
+  "GRV-055",
+  "GRV-056",
+  "GRV-057",
+  "GRV-058",
+  "GRV-059",
+  "GRV-060",
+  "GRV-061",
+  "GRV-062",
+  "GRV-063",
+  "GRV-064",
+  "GRV-065",
+  "GRV-066",
+  "GRV-067",
+  "GRV-068",
+  "GRV-069",
+  "GRV-070",
+  "GRV-071",
+  "GRV-072",
+  "GRV-073",
+  "GRV-077",
+  "GRV-078",
+  "GRV-079",
+  "GRV-080",
+  "GRV-081",
+  "GRV-082",
+  "GRV-083",
+  "GRV-084",
+  "GRV-085",
+  "GRV-086",
+  "GRV-087",
+  "GRV-088",
+  "GRV-089",
+  "GRV-090",
+  "GRV-091",
+  "FND-021",
+  "FND-022",
+  "FND-023",
+  "FND-024",
+  "FND-025",
+  "FND-026",
+  "FND-027",
+  "FND-028",
+  "FND-029",
+  "EM-RECON-018",
+  "GRV-096",
+  "GRV-097",
+  "GRV-098",
+  "GRV-099",
+  "GRV-100",
+  "ELEC-090",
+  "ELEC-091",
+  "ELEC-093",
+  "ELEC-094",
+  "ELEC-095",
+  "ELEC-096",
+  "ELEC-097",
+  "ELEC-098",
+  "ELEC-099",
+  "FND-045",
+  "FND-046",
+  "FND-047",
+  "FND-048",
+  "FND-051",
+  "FND-052",
+  "FND-053",
+  "FND-055",
+  "FND-056",
+  "FND-058",
+  "FND-059",
+  "FND-060",
+  "FND-061",
+  "FND-063",
+  "FND-064",
+  "FND-065",
+  "FND-066",
+  "FND-067",
+  "FND-068",
+  "FND-069",
+  "FND-070",
+  "FND-071",
+  "FND-072",
+  "FND-073",
+  "FND-074",
+  "FND-075",
+  "FND-076",
+  "FND-077",
+  "FND-078",
+  "FND-079",
+  "FND-080",
+  "FND-081",
+  "FND-089",
+  "FND-090",
+  "FND-091",
+  "FND-092",
+  "FND-101",
+  "FND-102",
+  "FND-103",
+  "FND-104",
+  "EM-RECON-033",
+  "EM-RECON-034",
+  "EM-RECON-036",
+  "EM-RECON-038",
+  "FND-113",
+  "GRV-105",
+  "GRV-106",
+  "GRV-107",
+  "GRV-108",
+  "GRV-109",
+  "GRV-111",
+  "GRV-112",
+  "GRV-113",
+  "EM-RECON-039",
+  "GRV-119",
+  "EM-RECON-040",
+  "EM-RECON-041",
+  "GRV-120",
+  "GRV-121",
+  "FND-115",
+  "FND-126",
+  "FND-128",
+  "FND-130",
+  "FND-131",
+  "FND-132",
+  "FND-133",
+  "FND-135",
+  "FND-136",
+  "FND-137",
+  "FND-138",
+  "FND-139",
+  "FND-140",
+  "FND-141",
+  "FND-142",
+  "FND-143",
+  "FND-144",
+  "FND-145",
+  "FND-146"
+ ],
+ "consumers": {
+  "e (elementary charge, C)": [
+   "ELEC-021",
+   "ELEC-092",
+   "EM-RECON-005",
+   "EM-RECON-006",
+   "EM-RECON-007",
+   "EM-RECON-010",
+   "FND-057",
+   "FND-REL-003",
+   "GRV-075",
+   "GRV-128"
+  ],
+  "hbar (J s)": [
+   "ELEC-021",
+   "ELEC-044",
+   "ELEC-046",
+   "ELEC-047",
+   "ELEC-048",
+   "ELEC-050",
+   "ELEC-053",
+   "ELEC-054",
+   "ELEC-055",
+   "ELEC-056",
+   "ELEC-057",
+   "ELEC-058",
+   "ELEC-059",
+   "ELEC-060",
+   "EM-RECON-010",
+   "FND-041",
+   "FND-042",
+   "FND-043",
+   "FND-044",
+   "FND-049",
+   "FND-MATTER-040",
+   "FND-MATTER-041",
+   "FND-MATTER-042",
+   "FND-MATTER-043",
+   "FND-MATTER-044",
+   "FND-MATTER-045",
+   "FND-MATTER-046",
+   "FND-MATTER-047",
+   "FND-MATTER-051",
+   "FND-MATTER-052",
+   "FND-MATTER-053",
+   "FND-MATTER-054",
+   "FND-MATTER-055",
+   "FND-MATTER-057",
+   "FND-MATTER-060",
+   "FND-MATTER-065",
+   "FND-MATTER-067",
+   "FND-MATTER-068",
+   "FND-MATTER-069",
+   "FND-MATTER-070",
+   "GRV-006",
+   "GRV-007",
+   "GRV-014",
+   "GRV-053",
+   "GRV-075",
+   "GRV-076",
+   "GRV-092",
+   "GRV-095",
+   "GRV-101",
+   "HBAR-001",
+   "HBAR-002",
+   "HBAR-003",
+   "HBAR-004",
+   "HBAR-005",
+   "HBAR-006",
+   "HBAR-007",
+   "NUC-010",
+   "NUCQ-001",
+   "NUCQ-002",
+   "NUCQ-003",
+   "QGATE-010"
+  ],
+  "G (m^3 kg^-1 s^-2)": [
+   "FND-127",
+   "FND-MATTER-040",
+   "FND-MATTER-041",
+   "FND-MATTER-042",
+   "FND-MATTER-043",
+   "FND-MATTER-045",
+   "FND-MATTER-047",
+   "FND-MATTER-065",
+   "FND-MATTER-067",
+   "FND-MATTER-068",
+   "FND-MATTER-069",
+   "FND-MATTER-070",
+   "GRV-004",
+   "GRV-005",
+   "GRV-006",
+   "GRV-007",
+   "GRV-014",
+   "GRV-040",
+   "GRV-047",
+   "GRV-048",
+   "GRV-049",
+   "GRV-052",
+   "GRV-053",
+   "GRV-074",
+   "GRV-075",
+   "GRV-076",
+   "GRV-095",
+   "GRV-101",
+   "GRV-123",
+   "GRV-124",
+   "GRV-128"
+  ],
+  "m_e (kg)": [
+   "FND-043",
+   "FND-044",
+   "FND-MATTER-040",
+   "FND-MATTER-041",
+   "FND-MATTER-044",
+   "FND-MATTER-051",
+   "FND-MATTER-065",
+   "QGATE-010"
+  ],
+  "m_p (kg)": [
+   "EM-RECON-010",
+   "GRV-006",
+   "GRV-007",
+   "GRV-014"
+  ],
+  "m_p/m_e": [
+   "FND-MATTER-007",
+   "FND-MATTER-008",
+   "FND-MATTER-042",
+   "FND-MATTER-066",
+   "FND-MATTER-067",
+   "FND-MATTER-068",
+   "FND-MATTER-069",
+   "FND-MATTER-070"
+  ],
+  "alpha / 1/alpha": [
+   "ELEC-021",
+   "ELEC-083",
+   "EM-002",
+   "EM-002b",
+   "EM-003",
+   "FND-041",
+   "FND-042",
+   "FND-043",
+   "FND-044",
+   "FND-049",
+   "FND-MATTER-005",
+   "FND-MATTER-040",
+   "FND-MATTER-041",
+   "FND-MATTER-042",
+   "FND-MATTER-044",
+   "FND-MATTER-046",
+   "FND-MATTER-051",
+   "FND-MATTER-052",
+   "FND-MATTER-055",
+   "FND-MATTER-056",
+   "FND-MATTER-065",
+   "GRV-075",
+   "GRV-093",
+   "GRV-094",
+   "PRED-003-ETA",
+   "QGATE-010"
+  ],
+  "eps0 (F/m)": [
+   "EM-021",
+   "EM-RECON-014",
+   "EM-RECON-015",
+   "EM-RECON-016",
+   "EM-RECON-027",
+   "EM-RECON-029",
+   "FND-020",
+   "QGATE-009"
+  ],
+  "mu0": [],
+  "k_B (J/K)": [],
+  "H0": [
+   "QB-026",
+   "QB-027"
+  ],
+  "Schwinger field (V/m)": [
+   "EM-021",
+   "EM-RECON-014",
+   "EM-RECON-015",
+   "EM-RECON-016",
+   "QGATE-009"
+  ],
+  "Planck length (m)": [
+   "FND-REL-003"
+  ],
+  "T0 (J/m)": [
+   "FND-020",
+   "FND-MATTER-044",
+   "FND-MATTER-045",
+   "FND-MATTER-046",
+   "FND-MATTER-047",
+   "FND-MATTER-051",
+   "FND-MATTER-052",
+   "FND-MATTER-053",
+   "FND-MATTER-054",
+   "FND-MATTER-055",
+   "FND-MATTER-057",
+   "FND-MATTER-060"
+  ],
+  "a (m)": [
+   "EM-RECON-025",
+   "EM-RECON-038",
+   "FND-020",
+   "FND-066",
+   "FND-071",
+   "FND-077",
+   "FND-MATTER-044",
+   "FND-MATTER-045",
+   "FND-MATTER-046",
+   "FND-MATTER-047",
+   "FND-MATTER-049",
+   "FND-MATTER-051",
+   "FND-MATTER-052",
+   "FND-MATTER-053",
+   "FND-MATTER-054",
+   "FND-MATTER-055",
+   "FND-MATTER-057",
+   "FND-MATTER-060",
+   "FND-MATTER-067",
+   "FND-MATTER-068",
+   "FND-MATTER-069",
+   "FND-MATTER-070",
+   "FND-REL-004",
+   "FND-REL-005",
+   "QB-035"
+  ],
+  "d_c (m)": [
+   "FND-020",
+   "FND-021",
+   "FND-041",
+   "FND-042",
+   "FND-057",
+   "FND-058",
+   "FND-MATTER-040",
+   "FND-MATTER-041",
+   "FND-MATTER-042",
+   "FND-MATTER-044",
+   "FND-MATTER-046",
+   "FND-MATTER-051",
+   "FND-MATTER-065",
+   "GRV-088",
+   "GRV-089",
+   "GRV-090",
+   "GRV-092",
+   "GRV-093",
+   "GRV-094"
+  ],
+  "Sigma (J/m^3)": [
+   "ELEC-092",
+   "EM-020",
+   "EM-021",
+   "FND-017",
+   "FND-020",
+   "FND-041",
+   "FND-042",
+   "FND-043",
+   "FND-044",
+   "FND-049",
+   "FND-051",
+   "FND-057",
+   "FND-058",
+   "FND-059",
+   "FND-060",
+   "FND-MATTER-041",
+   "FND-MATTER-044",
+   "FND-MATTER-046",
+   "GRV-076",
+   "GRV-090",
+   "GRV-092",
+   "QGATE-018"
+  ],
+  "c (m/s)": [
+   "ELEC-021",
+   "ELEC-044",
+   "ELEC-046",
+   "ELEC-047",
+   "ELEC-048",
+   "ELEC-049",
+   "ELEC-050",
+   "ELEC-053",
+   "ELEC-054",
+   "ELEC-055",
+   "ELEC-056",
+   "ELEC-057",
+   "ELEC-058",
+   "ELEC-059",
+   "ELEC-060",
+   "EM-RECON-016",
+   "EM-RECON-027",
+   "EM-RECON-029",
+   "FND-020",
+   "FND-021",
+   "FND-022",
+   "FND-041",
+   "FND-042",
+   "FND-043",
+   "FND-044",
+   "FND-049",
+   "FND-071",
+   "FND-127",
+   "FND-MATTER-040",
+   "FND-MATTER-041",
+   "FND-MATTER-042",
+   "FND-MATTER-043",
+   "FND-MATTER-044",
+   "FND-MATTER-045",
+   "FND-MATTER-046",
+   "FND-MATTER-047",
+   "FND-MATTER-051",
+   "FND-MATTER-052",
+   "FND-MATTER-053",
+   "FND-MATTER-054",
+   "FND-MATTER-055",
+   "FND-MATTER-057",
+   "FND-MATTER-060",
+   "FND-MATTER-065",
+   "FND-MATTER-067",
+   "FND-MATTER-068",
+   "FND-MATTER-069",
+   "FND-MATTER-070",
+   "FND-REL-003",
+   "GRV-004",
+   "GRV-005",
+   "GRV-006",
+   "GRV-007",
+   "GRV-014",
+   "GRV-047",
+   "GRV-048",
+   "GRV-049",
+   "GRV-052",
+   "GRV-053",
+   "GRV-074",
+   "GRV-075",
+   "GRV-076",
+   "GRV-092",
+   "GRV-095",
+   "GRV-101",
+   "GRV-113",
+   "GRV-123",
+   "GRV-124",
+   "GRV-128",
+   "HBAR-001",
+   "HBAR-002",
+   "HBAR-003",
+   "HBAR-005",
+   "HBAR-007",
+   "HBAR-010",
+   "HBAR-011",
+   "NUCQ-001",
+   "NUCQ-002",
+   "NUCQ-003",
+   "PRED-002-FREQ",
+   "QB-008",
+   "QB-012",
+   "QB-035",
+   "QGATE-010",
+   "XSEC-001"
+  ],
+  "eps (Ca-40 bond depth)": [
+   "NUC-005",
+   "NUC-D",
+   "NUC-D2"
+  ]
+ }
+}

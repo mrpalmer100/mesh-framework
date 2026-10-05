@@ -24,6 +24,10 @@ short because the tooling does the work; the ORDER is the point.
    release BY HAND (it is editorial, not generated) -- the
    tripwire will catch it if forgotten, because a stale version
    string without a history link trips.
+4b. LEDGER: python tools/input_ledger.py; docs/INPUT_LEDGER.md is
+   regenerated and committed; any NEW CIRCULAR flag since the last cut
+   is adjudicated (analysis/input_ledger_adjudicated.json) or named in
+   the release note as open.
 5. VERIFY: tools/verify_corpus.py cold result recorded in
    docs/VERIFY_STATUS.md; README badge numerator = passing,
    denominator = code-backed (the tripwire checks the

@@ -20,13 +20,13 @@ necessary; it is not progress on this page.
 
 ## 2. The scorecard (kept current at every release)
 
-| Target | Derived today | Inputs it consumes | Blocked by | Nearest registered step |
-|---|---|---|---|---|
-| Weights of atoms | Nuclear masses C-12 to U-238 at 0.00 to 0.51% from bond counting (NUC-005/018); surface term derived from packing geometry (18% miss, NUC-016); Coulomb term derived from winding charge and spacing (+9%) | The nucleon mass unit and m_e (PM-005, irreducible); one calibrated bond depth eps fixed on Ca-40 | Asymmetry and pairing need Fermi statistics, i.e. hbar; He-4 misses by 38% (zero-point); H-1 is inputs only; m_p/m_e = 1836 is spectrum-gated, not framework-bounded (FND-MATTER-066, kept) | Fence tests (b) and (c) below |
-| Gravitational force | Newton's law forced by 3D elastostatics (GRV-005); weak-field metric, gamma = 1 and the PPN table (GRV-029); 1.751 arcsec deflection; SPARC g_dagger = cH0/2pi with zero parameters (GRV-030/031/033) | Sigma (measured, FND-030); a (fixed at the M-point by m_e); G itself is read as the medium's rigidity c^4/4piG (GRV-006), with the Sakharov cutoff selected at Planck-class spacing (GRV-075/095) | The frame-dragging magnitude waits on the fine scale a_f (GRV-126, FND-110); G is not yet computed from a | Fence test (d) below |
-| Strength of magnets | Maxwell's equations (EM-003) with a unique mechanical dictionary (EM-017..022); every electromagnetic magnitude locked to Sigma by kappa_0 = c/sqrt(eps0 Sigma) (FND-031, P31): fields of currents and forces between them follow | Sigma | A permanent magnet's strength needs the electron's magnetic moment and exchange ordering: the electron model is unbuilt (the ELEC sector contributes nothing at any census tier; the spin-axis identification was falsified, ELEC-099/100) and both sit behind the quantum layer | COMMISSION CURRENT-AS-SPIN (chartered 2026-08-16); the electron model |
-| Also carried | 1/alpha = 2 pi^2 rho^2 with rho = 2.6348 owed by one mechanism, blind, inside a +178.8 ppm fence (ELEC-083); the adjoint Casimir pin (FND-106, armed); the alpha-G drift ratio (PRED-003, clocked 2027 to 2030) | | | The alpha mechanism is the highest-reward item on the board and has no shape yet |
-| Casimir force | pi^2 hbar c / (240 d^4) from the registered ledger, coefficient by universality on three registered closures (CASIMIR-F3, 2026-09-27; consistency-tier) | hbar (imported, GRV-014) | The energy per light mode: the wave arc's rotation does not supply it (CAS-IDENTITY-SHORT-RANGE, FND-178, granted 2026-09-27) | Fence Task 1 in spectral form |
+| Target | Derived today | Grade (2c) | Inputs it consumes | Blocked by | Nearest registered step |
+|---|---|---|---|---|---|
+| Weights of atoms | Nuclear masses C-12 to U-238 at 0.00 to 0.51% from bond counting (NUC-005/018); surface term derived from packing geometry (18% miss, NUC-016); Coulomb term derived from winding charge and spacing (+9%) | D3 (whole-table, calibrated on Ca-40; the surface and Coulomb terms D2) | The nucleon mass unit and m_e (PM-005, irreducible); one calibrated bond depth eps fixed on Ca-40 | Asymmetry and pairing need Fermi statistics, i.e. hbar; He-4 misses by 38% (zero-point); H-1 is inputs only; m_p/m_e = 1836 is spectrum-gated, not framework-bounded (FND-MATTER-066, kept) | Fence tests (b) and (c) below |
+| Gravitational force | Newton's law forced by 3D elastostatics (GRV-005); weak-field metric, gamma = 1 and the PPN table (GRV-029); 1.751 arcsec deflection; SPARC g_dagger = cH0/2pi with zero parameters (GRV-030/031/033) | D0 (Newton's form, gamma = 1); D1 (g_dagger on SPARC); D3 (G itself, read from measurement) | Sigma (measured, FND-030); a (fixed at the M-point by m_e); G itself is read as the medium's rigidity c^4/4piG (GRV-006), with the Sakharov cutoff selected at Planck-class spacing (GRV-075/095) | The frame-dragging magnitude waits on the fine scale a_f (GRV-126, FND-110); G is not yet computed from a | Fence test (d) below |
+| Strength of magnets | Maxwell's equations (EM-003) with a unique mechanical dictionary (EM-017..022); every electromagnetic magnitude locked to Sigma by kappa_0 = c/sqrt(eps0 Sigma) (FND-031, P31): fields of currents and forces between them follow | D0 (structure); D3 (magnitudes, Sigma measured) | Sigma | A permanent magnet's strength needs the electron's magnetic moment and exchange ordering: the electron model is unbuilt (the ELEC sector contributes nothing at any census tier; the spin-axis identification was falsified, ELEC-099/100) and both sit behind the quantum layer | COMMISSION CURRENT-AS-SPIN (chartered 2026-08-16); the electron model |
+| Also carried | 1/alpha = 2 pi^2 rho^2 with rho = 2.6348 owed by one mechanism, blind, inside a +178.8 ppm fence (ELEC-083); the adjoint Casimir pin (FND-106, armed); the alpha-G drift ratio (PRED-003, clocked 2027 to 2030) | D2 (alpha's form, rho owed); D1 candidate (PRED-003, unadjudicated) | | | The alpha mechanism is the highest-reward item on the board and has no shape yet |
+| Casimir force | pi^2 hbar c / (240 d^4) from the registered ledger, coefficient by universality on three registered closures (CASIMIR-F3, 2026-09-27; consistency-tier) | D3 (hbar imported) | hbar (imported, GRV-014) | The energy per light mode: the wave arc's rotation does not supply it (CAS-IDENTITY-SHORT-RANGE, FND-178, granted 2026-09-27) | Fence Task 1 in spectral form |
 
 ## 2b. The five numbers (adopted 4 October 2026; carried at the top of every release note)
 
@@ -44,6 +44,24 @@ Each is read from a named page, so a release cannot move one by rewording.
 A release that moves none of the five is infrastructure, and its note says so in those words.
 The Standard Model's structure is scored separately, in twelve rows, at docs/SM_EMERGENCE.md
 (today 1 derived, 4 partial, 7 unexplained); a release that moves a row says which.
+
+## 2c. Grades of "Derived" (adopted 4 October 2026 from external review)
+
+The registry's Derived status covers results of different evidential weight. Every scorecard row
+and every SM_EMERGENCE row carries a grade; the status field in claims.yaml is unchanged until a
+reading commission re-grades the registry (named in STRATEGIC_TARGETS section Y, not chartered).
+
+| grade | meaning | counts toward |
+|---|---|---|
+| D0 | a theorem: follows exactly from the axioms (A1, A2) and registered definitions, with no empirical input | SM_EMERGENCE "Derived" |
+| D1 | a parameter-free physical derivation: an observable with no relevant empirical calibration, confrontable with data | the five numbers (predictions); "Derived" on the scorecard |
+| D2 | a conditional derivation: exact given a registered mesh parameter or input that is itself unexplained (rho, w, f, hbar as an import) | nothing on the scorecard until the condition is discharged |
+| D3 | a reconstruction: reproduces known physics using measured or calibrated quantities (whole-table fits, imported constants) | reproducibility; not evidence for the theory over the Standard Model |
+
+D1 is the grade the North Star is for. Today the registry's D1 content is the SPARC g_dagger = cH0/2pi
+(GRV-030) and PRED-003 pending adjudication. The machine side of the ledger
+(tools/input_ledger.py, docs/INPUT_LEDGER.md) lists which benchmarks consume which measured
+constants, so a D1 claim can be checked for a literal of the quantity it claims to derive.
 
 ## 3. The input ledger (the number to drive down)
 

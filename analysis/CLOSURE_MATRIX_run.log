@@ -1,0 +1,33 @@
+[cm M1] 20 rows x 13 columns; cells typed and cited; NONE written as NONE
+[cm M1]   hbar derived                           N ~ 1e21: IDENTITY (FND-183)
+[cm M1]   a (m_e) derived                        hbar: IDENTITY (GRV-095 (R2)); N ~ 1e21: IDENTITY (FND-183: Task 1 and Task 2 are one equation)
+[cm M1]   G absolute value                       hbar: EXPONENT (GRV-075 (0,2), zeta = 1.208); a (m_e): EXPONENT (GRV-075)
+[cm M1]   alpha (rho) derived                    g = l_q/a: IDENTITY (GRV-093 (R1); FND-044); rho (alpha): IDENTITY (ELEC-083 conditional)
+[cm M1]   m_p/m_e and the spectrum               nucleon unit: BLOCKED (FND-MATTER-066: spectrum-gated); hbar: BLOCKED (FND-MATTER-008/039: the zero-point lever lambda)
+[cm M1]   strand mass scale (eV)                 V_0: IDENTITY (STRAND-MASS-SCALE: omega_min^2 = V_0 c^2/(T0 a r^2))
+[cm M1]   FND-182's number                       V_0: IDENTITY (STRAND-MASS-SCALE: E_c = (4 pi/5) V_0/(e a)); f (junction fraction): IDENTITY (NODE-STANDOFF)
+[cm M1]   gauge structure beyond U(1)            d (internal dim): BLOCKED (FND-185: dimension 1 where 3 to 8 are needed)
+[cm M1]   quantum dynamics (guidance)            hbar: BLOCKED (QGATE-011: the guidance flow is imported; HBAR-005)
+[cm M1]   magnet strength                        electron model: BLOCKED (ELEC-062; NORTH_STAR row 3); hbar: BLOCKED (ELEC-062)
+[cm M1]   nuclear shell/pairing, light isotopes  hbar: BLOCKED (FND-BOUND-001); a (m_e): BLOCKED (FND-BOUND-001)
+[cm M1]   dispersion forces (C6)                 hbar: BLOCKED (FND-BOUND-001; CHEM-MET-001)
+[cm M1]   frame-dragging magnitude               a (m_e): BLOCKED (GRV-126: waits on a_f = a/n_sub; n_sub underived (FND-087), candidate row)
+[cm M3] union-find over IDENTITY/EXPONENT edges: 9 classes among 20 primitives
+[cm M3]   class {hbar, a (m_e), T0, Sigma, k/T0 = 2, Pi = 2, g = l_q/a, rho (alpha), N ~ 1e21}: GAP (columns depend on it); columns: G absolute value, a (m_e) derived, alpha (rho) derived, dispersion forces (C6), frame-dragging magnitude, hbar derived, m_p/m_e and the spectrum, magnet strength, nuclear shell/pairing, light isotopes, quantum dynamics (guidance)
+[cm M3]   class {d_c}: input with no column on it
+[cm M3]   class {nucleon unit}: GAP (columns depend on it); columns: m_p/m_e and the spectrum
+[cm M3]   class {eps (Ca-40)}: input with no column on it
+[cm M3]   class {kappa_pack}: input with no column on it
+[cm M3]   class {Poisson ratio}: input with no column on it
+[cm M3]   class {contact convention, V_0, w (kink width), f (junction fraction)}: GAP (columns depend on it); columns: FND-182's number, strand mass scale (eV)
+[cm M3]   class {d (internal dim)}: GAP (columns depend on it); columns: gauge structure beyond U(1)
+[cm M3]   class {electron model}: GAP (columns depend on it); columns: magnet strength
+[cm M3]   TENSION inside the class joining hbar and a (m_e) (GRV-095/075 (R2)): G = c^3 a^2/(16 pi zeta hbar); a_Sak = 8 l_P; TENSION with FND-MATTER-044 by ~17 orders (FND-MATTER-040)
+[cm M4] leverage (recorded, not ranked; B-3): columns whose every needed primitive is in the supplied class via IDENTITY/EXPONENT cells
+[cm M4]   supply {hbar, a (m_e), T0, Sigma, k/T0 = 2, Pi = 2, g = l_q/a, rho (alpha), N ~ 1e21}: CLOSES ['hbar derived', 'a (m_e) derived', 'G absolute value', 'alpha (rho) derived']; TOUCHES (blocked-by or AND with another class) ['m_p/m_e and the spectrum', 'quantum dynamics (guidance)', 'magnet strength', 'nuclear shell/pairing, light isotopes', 'dispersion forces (C6)', 'frame-dragging magnitude']
+[cm M4]   supply {nucleon unit}: CLOSES nothing by identity; TOUCHES (blocked-by or AND with another class) ['m_p/m_e and the spectrum']
+[cm M4]   supply {contact convention, V_0, w (kink width), f (junction fraction)}: CLOSES ['strand mass scale (eV)', "FND-182's number"]; TOUCHES (blocked-by or AND with another class) []
+[cm M4]   supply {d (internal dim)}: CLOSES nothing by identity; TOUCHES (blocked-by or AND with another class) ['gauge structure beyond U(1)']
+[cm M4]   supply {electron model}: CLOSES nothing by identity; TOUCHES (blocked-by or AND with another class) ['magnet strength']
+[cm VERDICT] N-GAPS (N = 5): 9 classes in all, 5 of them load-bearing (a column depends on them); the prior said three.
+[cm] sealed -> closure_matrix.npz, closure_matrix.json

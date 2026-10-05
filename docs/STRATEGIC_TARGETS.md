@@ -634,3 +634,59 @@ class ("the strand carries an internal space of dimension d >= 3"), not proposed
 Author's decision recorded (2026-10-04): the extension "the tie holds the face" is NOT granted; the
 fourth grant FND-184 stays scoped to contacts where strands press (the matter sector). The fence at
 the centre stands as NORTH_STAR section 4 draws it.
+
+## Y. SECOND EXTERNAL REVIEW: TWO ADOPTIONS (2026-10-04, night; the author's word)
+
+A second review (read at the registry level) converged on the first: input retirement and
+discrimination over claim count. Most of it is house law (section 5's rule; the fence; the census's
+form-is-not-a-prediction ruling; the bars and section W). On its two headline targets it is behind
+the record: G's underivability from current commitments is a registered theorem (GRV-006), its
+exponent pair and coefficient are derived (GRV-074/075), and ACTION-BRIDGE (FND-183) joined a, hbar
+and G into one fence whose next step is a primitive; alpha's form carries an owed input (ELEC-083)
+and GAUGE-INVENTORY (FND-185) has now counted the gauge gap. Its question "why is e = 1.602e-19 C"
+is a unit convention (e defines the ampere); the dimensionless question is alpha, already carried.
+Two proposals were new and were adopted:
+
+Y1 THE INPUT LEDGER, MACHINE SIDE. tools/input_ledger.py scans every claim's benchmark for literals
+   of the measured and imported constants (e, hbar, G, m_e, m_p, m_p/m_e, alpha, eps0, k_B, H0, the
+   Schwinger field, the Planck length) and the registered mesh parameters (T0, a, d_c, Sigma, c, the
+   Ca-40 calibration), writes docs/INPUT_LEDGER.md (generated) and analysis/input_ledger.json, and
+   raises a CIRCULAR flag when a title announces a derivation or prediction of a constant whose
+   literal its own benchmark contains. First run: 641 benchmarks, 540 BLIND of measured literals,
+   22 CIRCULAR flags, all UNADJUDICATED. A flag is a reading, not a verdict; most will be the
+   constant used as the comparison target (GRV-006 computes c^4/4piG from G, as its title says).
+   Adjudications go in analysis/input_ledger_adjudicated.json, one line each, on the author's word
+   or by a chartered reading; --strict makes the unadjudicated count a CI failure once that is done.
+   The scanner sees literals only: constants from data files or computed from others are invisible,
+   so BLIND is not a D1 certificate. Added to RELEASE_CHECKLIST: run at every cut.
+Y2 GRADES OF DERIVED. D0 theorem / D1 parameter-free observable / D2 conditional on an unexplained
+   mesh parameter / D3 reconstruction from measured inputs (NORTH_STAR section 2c). Applied tonight
+   to the five scorecard rows and the twelve SM_EMERGENCE rows. What it shows: the registry's D1
+   content is the SPARC g_dagger and PRED-003 pending adjudication; Maxwell's structure, Newton's
+   form, gamma = 1, the winding integer and the half-angle law are D0; the nuclear masses, the
+   electromagnetic magnitudes, G and the Casimir coefficient are D3; alpha, the Lorentz emergence,
+   the spectrum and Born statistics are D2 on their named conditions. The claims.yaml status field
+   is unchanged. NAMED, NOT CHARTERED: a reading commission to grade every Derived claim in the
+   registry (the count is in docs/INPUT_LEDGER.md's consumer table as a starting point).
+
+Not adopted as directions, with the reason on the record: "put G at the top" and "attack hbar first"
+(the fence already; the next step is a grant, section P); the tabletop experiment search (the nearest
+candidate, FND-182, moved to T4 tonight; the registry has no tabletop candidate today and says so);
+the Hilbert-space map (QGATE-011 records the guidance as imported; nothing registered to compute).
+
+
+## Z. CLOSURE-MATRIX EXECUTED (2026-10-04, night; sandbox; charter analysis/CLOSURE_MATRIX_charter_LOCKED.md)
+
+Verdict N-GAPS, N = 5 (analysis/CLOSURE_MATRIX_results.md; the full typed matrix in
+analysis/closure_matrix.json). Twenty primitives against thirteen closure targets, every cell IDENTITY /
+EXPONENT / BOUND / BLOCKED / NONE with a claim id; union-find over IDENTITY and EXPONENT edges only.
+Nine classes, five load-bearing: (1) the action scale (hbar, a, T0, Sigma, g, alpha, N ~ 1e21, Pi, k/T0;
+joined by R1, R2 and the M-point, and registered as jointly inconsistent by seventeen orders,
+FND-MATTER-040); (2) the on-site potential V_0 with w, f and the contact convention; (3) the internal
+dimension d; (4) the electron model; (5) the proton's topology. The prior (three) was wrong because it
+joined (4) and (5) to (1) by blocked-by, which B-2 forbids. Four inputs (d_c, eps, kappa_pack, Poisson)
+are calibrations with no target on them. Leverage recorded, not ranked: supplying gap 1 closes hbar, a,
+G and alpha by identity and unblocks six more columns; gap 2 closes the strand mass scale and FND-182;
+gaps 3 to 5 close nothing by identity. NORTH_STAR section 4's "one fence" is proposed amended to "five
+gaps, one of them the fence", text in the results file, on the author's word; FND-186 recommended.
+Candidate rows found and not counted: n_sub and m (FND-087), A_c (EM-RECON-017).
