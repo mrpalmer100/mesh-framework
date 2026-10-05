@@ -52,7 +52,7 @@ The table says what each gap would unlock; it does not say which to work on. The
 charters; three of the five gaps (1, 3, and by JUNCTION-LOCK's reading 2) have a grant, not a
 computation, as their next step, and the matrix does not change that.
 
-## What section 4 should say instead (the amendment, for the author's adoption, not applied)
+## What section 4 now says (the amendment, adopted on the author's word 2026-10-04 and applied to NORTH_STAR)
 
 Replace the opening of section 4 and the stale evening bracket with:
 

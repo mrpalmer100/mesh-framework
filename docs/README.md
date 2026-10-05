@@ -29,6 +29,8 @@ Read these, roughly in order. They are written to be read, not waded through.
 
 ## If you want to understand the ideas
 
+- **[Five Mesh Challenges](MESH_CHALLENGES.md)**: break one of five load-bearing derivations;
+  frozen inputs, one command each, the bar and what falls.
 - **[SM Emergence](SM_EMERGENCE.md)**: the Standard Model's structure in twelve
   rows, each derived, partial or unexplained, cited by claim id.
 - **[Where it stands](WHERE_IT_STANDS.md)** — strengths, edges, and the

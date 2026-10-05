@@ -65,29 +65,52 @@ constants, so a D1 claim can be checked for a literal of the quantity it claims 
 
 ## 3. The input ledger (the number to drive down)
 
-| Input | Status today | Route to retire it |
-|---|---|---|
-| Sigma, the vacuum stiffness | Pinned by measurement, 3.61 to 3.70e35 J/m^3 (FND-030) | None registered; kappa_pack (a floor, >= 50 or >= 250) would make it Sigma_vac |
-| a, the mesh scale (equivalently m_e) | Fixed at the M-point, 6.0e-17 m (FND-MATTER-044); irreducibility theorem FND-MATTER-005 | Fence Task 2 |
-| d_c, the strand thickness | Calibration, 1.87e-19 m (HBAR-005) | With a |
-| The nucleon mass unit | Input (PM-005) | The 1836 road: kinetic/zero-point structure of the proton knot (FND-MATTER-066) |
-| eps, the nuclear bond depth | One calibration, Ca-40 (NUC-005) | The one calibration the fence directive permits, unless the zero-point layer supplies it |
-| hbar | Imported; the mesoscopic identification retired after six closures; ACTION-BRIDGE (FND-183, 2026-10-04): no registered mechanism bridges the snap action to it, and the postulates' only action carries two powers of a | Fence Task 1 restated: a pure number of order 1e21 from the registered Pi = 2 (2^70 and e^97 are the sizes; recorded as coincidences, not read), or an imported fork-invariant length; the LARGE-NUMBER slot is open and narrow |
-| k/T0 = 2 | Adopted, theorem route closed (FND-129) | Re-opens only through GRANT-CONTACT's supersession clause |
-| The strand's Poisson ratio | Imported from isotropic elasticity | Moves gamma by a factor of a few, not orders |
-| The contact convention (surfaces, not centre lines) | Adopted 2026-10-04 (FND-184, the fourth grant); replaces the centre-line convention of EM-RECON-023 | Retires into a theorem if a two-strand engine (Phase 2b) reproduces the period-pi dependence by itself |
-| g = l_q/a | The single mesoscopic unknown (FND-044) | Whatever mechanism supplies rho = 2.6348 blind |
+| Input | Status today | Route to retire it | Gap (section 4) |
+|---|---|---|---|
+| Sigma, the vacuum stiffness | Pinned by measurement, 3.61 to 3.70e35 J/m^3 (FND-030) | None registered; kappa_pack (a floor, >= 50 or >= 250) would make it Sigma_vac | 1 |
+| a, the mesh scale (equivalently m_e) | Fixed at the M-point, 6.0e-17 m (FND-MATTER-044); irreducibility theorem FND-MATTER-005 | Fence Task 2 | 1 |
+| d_c, the strand thickness | Calibration, 1.87e-19 m (HBAR-005) | With a | calibration on the edge of 1 |
+| The nucleon mass unit | Input (PM-005) | The 1836 road: kinetic/zero-point structure of the proton knot (FND-MATTER-066) | 5 |
+| eps, the nuclear bond depth | One calibration, Ca-40 (NUC-005) | The one calibration the fence directive permits, unless the zero-point layer supplies it | calibration |
+| hbar | Imported; the mesoscopic identification retired after six closures; ACTION-BRIDGE (FND-183, 2026-10-04): no registered mechanism bridges the snap action to it, and the postulates' only action carries two powers of a | Fence Task 1 restated: a pure number of order 1e21 from the registered Pi = 2 (2^70 and e^97 are the sizes; recorded as coincidences, not read), or an imported fork-invariant length; the LARGE-NUMBER slot is open and narrow | 1 |
+| k/T0 = 2 | Adopted, theorem route closed (FND-129) | Re-opens only through GRANT-CONTACT's supersession clause | 1 (adopted) |
+| The strand's Poisson ratio | Imported from isotropic elasticity | Moves gamma by a factor of a few, not orders | import |
+| The contact convention (surfaces, not centre lines) | Adopted 2026-10-04 (FND-184, the fourth grant); replaces the centre-line convention of EM-RECON-023 | Retires into a theorem if a two-strand engine (Phase 2b) reproduces the period-pi dependence by itself | 2 |
+| g = l_q/a | The single mesoscopic unknown (FND-044) | Whatever mechanism supplies rho = 2.6348 blind | 1 |
 
 About ten named inputs, two of them (kappa_pack, g) not even pinned to a number. The
 Standard Model's nineteen buy thousands of measured numbers at ppm precision; ours buy the
 scorecard above. The count is not the point; the direction is.
 
-## 4. Where every road goes: the one fence
+## 4. Where every road goes: five gaps, one of them the fence
 
-The four hardest residuals in four sectors (frame-dragging magnitude, nuclear shell and
-pairing, light-isotope masses, dispersion forces) name the same missing layer: quantum
-zero-point structure (FND-BOUND-001). Constructing it needs hbar and a, neither derived.
-Every target on the scorecard is blocked at that fence, so the fence is the programme.
+CLOSURE-MATRIX (2026-10-04; analysis/CLOSURE_MATRIX_results.md, the typed matrix in
+analysis/closure_matrix.json) typed every registered relation between the programme's twenty
+remaining primitives and its thirteen closure targets and counted the mutually independent gaps,
+joining primitives only by registered identities and exponent laws, never by a blocked-by: FIVE.
+
+(1) THE ACTION SCALE: hbar, a (m_e), T0, Sigma, g, alpha and the pure number N ~ 1e21 are one
+class, joined by the constants ledger's identities (R1 hbar = T0 l_q^2/(4 pi alpha c), GRV-093; R2
+G = c^3 a^2/(16 pi zeta hbar), GRV-095/075; the M-point, FND-MATTER-044), and that class is
+registered as numerically inconsistent by seventeen orders (FND-MATTER-040) between the matter
+sector's a = 6.0e-17 m and the Sakharov a = 1.3e-34 m. This is the fence of FND-BOUND-001 and
+ACTION-BRIDGE: the four hardest residuals (frame-dragging magnitude, nuclear shell and pairing,
+light-isotope masses, dispersion forces) name the zero-point layer that needs it, every scorecard
+target is blocked behind it, and its next step is a primitive (a large-number mechanism from Pi, or
+a fork-invariant length), not a computation.
+(2) THE ON-SITE POTENTIAL V_0, with the kink width w, the junction fraction f and the contact
+convention: the strand mass scale and FND-182's number depend on it and nothing else does; its
+vacuum source is empty at the registered level (JUNCTION-LOCK, f = 0) and the fourth grant lives
+in the matter sector.
+(3) THE INTERNAL DIMENSION d: the gauge structure beyond U(1) depends on it and nothing joins it
+to the rest (FND-185: one real dimension where SU(2) and SU(3) need three to eight).
+(4) THE ELECTRON MODEL, blocked behind (1) and joined to nothing (ELEC-062).
+(5) THE PROTON's topology, blocked behind (1) and joined to nothing (FND-MATTER-066).
+
+Gaps 2 to 5 are not the fence under other names: no registered identity connects them to it, and
+supplying the action scale would leave each of them where it is. Four more inputs (d_c, eps,
+kappa_pack, the Poisson ratio) are calibrations and imports with no target depending on them:
+things to retire, not gaps to close. Leverage is recorded in the results file and is not a queue.
 
 The standing plan is docs/technical/FUTURE_MODEL_PROMPT_one_fence.md (v2, 4 August 2026):
 
@@ -115,8 +138,10 @@ FND-182's window) stop at one registered gap: nothing in the registry resists a 
 azimuth at a contact (V_0 unsourced; FND-179 B). The two grants that would move the fence are
 named: a cross-section-aware contact form; a candidate large-number mechanism from Pi.
 [2026-10-04, evening: the first was adopted as the fourth grant, FND-184 (the contact acts on
-surfaces); V_0 now has a registered source and COMMISSION STRAND-MASS-SCALE is the next step on
-the discriminator route. The second is priced and open (Pi = 2 is registered and clean).]
+surfaces). Night: the chain STRAND-MASS-SCALE, CROSSING-PRICE, NODE-STANDOFF, JUNCTION-LOCK found
+that source EMPTY in the registered vacuum (crossings do not press, the junction is a point bond,
+f = 0); the extension that would fill it is priced at f ~ 3.5 and not granted; FND-182 moved to T4.
+V_0 is gap (2) above. The second grant is priced and open (Pi = 2 is registered and clean).]
 
 The wave arc (FND-130..132, COMPOSITE-SELECT, the anti-aligned sector FND-172..177) is the
 fence attacked from the vacuum side: zero-point energy read mechanically as the winding's

@@ -4394,7 +4394,7 @@
    "constant": "G (m^3 kg^-1 s^-2)",
    "hits": 1,
    "benchmark": "benchmarks/gravity/g_underdetermination.py",
-   "adjudicated": null,
+   "adjudicated": "INPUT BY DESIGN: the claim is a theorem that G is NOT derivable; measured G is used to read the rigidity c^4/(4 pi G). No derivation of G is claimed.",
    "title": "G is NOT derivable from current commitments (constructive underdetermination theorem); G inverse-measures the network rigidity c^4/(4 pi G) = 9.6e42 N; and the "
   },
   {
@@ -4402,7 +4402,7 @@
    "constant": "m_e (kg)",
    "hits": 1,
    "benchmark": "benchmarks/foundations/matter044_whisper_pricing.py",
-   "adjudicated": null,
+   "adjudicated": "CALIBRATION BY DESIGN: m_e pins T0 a (the title says m_e-PINNED); the claim derives the M-point from m_e and Sigma, not m_e.",
    "title": "THE WHISPER-PRICING SESSION: THE 4.6 WAS BOUND-SATURATION ACCOUNTING, NOT PHYSICS -- SOLVING THE m_e-PINNED COMBINATION JOINTLY WITH FND-017'S DERIVED INVARIANC"
   },
   {
@@ -4410,7 +4410,7 @@
    "constant": "G (m^3 kg^-1 s^-2)",
    "hits": 1,
    "benchmark": "benchmarks/foundations/matter047_channel_exhaustion.py",
-   "adjudicated": null,
+   "adjudicated": "COMPARISON: G enters only as the Einstein-Hilbert tension c^4/(16 pi G) the channel exhaustion is compared against; the claim names G an irreducible input.",
    "title": "THE CHANNEL-EXHAUSTION SESSION: EVERY WAVE BRANCH A REGISTERED STRAND SUPPORTS, PRICED BY ONE INSTRUMENT AND SUMMED WITH THE DICTIONARY BRACKET'S GENEROUS EDGE,"
   },
   {
@@ -4418,7 +4418,7 @@
    "constant": "alpha / 1/alpha",
    "hits": 1,
    "benchmark": "benchmarks/foundations/matter052_expression_fraction.py",
-   "adjudicated": null,
+   "adjudicated": "INPUT THROUGH R1: alpha enters l_q^2 = 4 pi alpha hbar c/T0 (GRV-093); the claim derives an expression fraction, not alpha.",
    "title": "THE LEVER SESSION, PART 2 -- THE EXPRESSION-FRACTION DERIVATION: WITH THE INSTRUMENT INHERITED FROM MATTER051'S BARS AND THE CANDIDATE AREAS PRE-NAMED, THE CELL"
   },
   {
@@ -4426,7 +4426,7 @@
    "constant": "alpha / 1/alpha",
    "hits": 1,
    "benchmark": "benchmarks/foundations/matter056_suppression_mechanism.py",
-   "adjudicated": null,
+   "adjudicated": "INPUT: alpha multiplies the whisper ratio; nothing about alpha is derived.",
    "title": "THE SUPPRESSION MECHANISM DERIVED BEFORE THE TARGET WAS LOOKED AT: DILUTE-PERTURBATION CASIMIR IN THE AMBIENT WEAVE GIVES lambda = pi (r/a)^2 = 2.776e-6, PARAME"
   },
   {
@@ -4434,7 +4434,7 @@
    "constant": "hbar (J s)",
    "hits": 1,
    "benchmark": "benchmarks/foundations/electron_calibration.py",
-   "adjudicated": null,
+   "adjudicated": "CALIBRATION BY TITLE: the two anchors (alpha hbar c and m_e c^2) are the calibration the claim performs; hbar is the anchor, not the output.",
    "title": "THE CALIBRATION: WHAT 15.5627 BECOMES, AND THE TWO CONFRONTATIONS IT BUYS (Modeled) -- THE INVARIANT, calibration-independent: Lambda = E-infinity d_c / kappa ="
   },
   {
@@ -4442,7 +4442,7 @@
    "constant": "hbar (J s)",
    "hits": 1,
    "benchmark": "benchmarks/foundations/electron_hbar_rederivation.py",
-   "adjudicated": null,
+   "adjudicated": "COMPARISON: the mesoscopic action W is computed from the medium and reported as a ratio to hbar; the claim re-derives the FORM of the relation and measures the shortfall.",
    "title": "THE HBAR RELATION RE-DERIVED: THE PREFACTOR IS INNOCENT, THE LENGTH IS THE LEVER, AND ONE NON-TAUTOLOGICAL CELL CLOSES AT 0.885 HBAR (Modeled; bars locked befor"
   },
   {
@@ -4450,7 +4450,7 @@
    "constant": "hbar (J s)",
    "hits": 1,
    "benchmark": "benchmarks/foundations/elec_funnel_rerun.py",
-   "adjudicated": null,
+   "adjudicated": "REQUIREMENT, NOT DERIVATION: n_t = hbar/W1 is the strand count the closure would demand; hbar is the target the demand is read against.",
    "title": "THE FUNNEL RE-RUN AT THE DERIVED ACTION: THE CHAIN HEALS AT n_t ~ 498, THE TWO-NORMALIZATION INCONSISTENCY IS RETIRED, AND D/w = 19 DISSOLVES (Modeled; bars loc"
   },
   {
@@ -4458,7 +4458,7 @@
    "constant": "hbar (J s)",
    "hits": 1,
    "benchmark": "benchmarks/foundations/elec_bundle_census.py",
-   "adjudicated": null,
+   "adjudicated": "ASSIGNED, UNUSED: HBAR is defined at the top of the benchmark and never used in a computation (the census reports strand counts); no numerical dependence.",
    "title": "THE BUNDLE CENSUS: THE MEDIUM HAS THE STRANDS, THE EVENT CANNOT RECRUIT THEM -- THE HBAR-FROM-RECONNECTION CHAIN IS DEAD AS A DERIVATION (Modeled; bars locked b"
   },
   {
@@ -4466,7 +4466,7 @@
    "constant": "hbar (J s)",
    "hits": 1,
    "benchmark": "benchmarks/foundations/elec_order_sweep.py",
-   "adjudicated": null,
+   "adjudicated": "REQUIREMENT, NOT DERIVATION: same n_t = hbar/W1 demand as ELEC-046; the claim files a cross-reference collision.",
    "title": "THE ORDER SWEEP: NOTHING REGISTERED SUPPLIES THE COHERENCE, THE ROUTE DIES AT ITS SECOND JOINT, AND THE SWEEP CATCHES ITS OWN AUDITOR -- THE FRONTIER CONSOLIDAT"
   },
   {
@@ -4474,7 +4474,7 @@
    "constant": "hbar (J s)",
    "hits": 1,
    "benchmark": "benchmarks/foundations/hbar_dimensional_audit.py",
-   "adjudicated": null,
+   "adjudicated": "COMPARISON BY TITLE: the dimensional audit shows NO combination of the medium's constants gives hbar; hbar is the target every candidate is measured against.",
    "title": "THE DIMENSIONAL AUDIT: NO COMBINATION OF THE MEDIUM'S CONSTANTS GIVES HBAR, AND HBAR IS MESOSCOPIC -- A PATCH SEVENTY-FIVE SPACINGS ACROSS (Modeled) -- THE AUDI"
   },
   {
@@ -4482,7 +4482,7 @@
    "constant": "hbar (J s)",
    "hits": 1,
    "benchmark": "benchmarks/foundations/hbar_constancy_and_scale.py",
-   "adjudicated": null,
+   "adjudicated": "CIRCULAR AS READ, ALREADY RETIRED: 'reconstructing hbar to 0.1 percent' via hbar = T (N w)^2/c uses an N fixed from hbar; the relation hbar c = N^2 T w^2 was CLOSED by ELEC-061 and HBAR-010 was demoted T4 for resting on it (ELEC-064). The flag is correct and the registry had already acted; recorded, no further action.",
    "title": "WHAT HBAR'S CONSTANCY REQUIRES, AND WHERE THE SUB-QUANTUM SCALE PUTS THE FIRST TESTABLE PREDICTION (Modeled) -- PART 1, WHAT HBAR DEPENDS ON: with L = N w and w"
   },
   {
@@ -4490,7 +4490,7 @@
    "constant": "hbar (J s)",
    "hits": 1,
    "benchmark": "benchmarks/foundations/nucq_subquantum_confrontation.py",
-   "adjudicated": null,
+   "adjudicated": "INPUT: L_h = sqrt(hbar c/T) is taken from HBAR-005 as the premise of a confrontation; hbar is not derived.",
    "title": "THE NUCLEAR SECTOR REFUTES THE MESOSCOPIC-HBAR PICTURE: THE FRAMEWORK'S ONLY DISTINCTIVE PREDICTION LANDS ON THE BEST-TESTED SMALL-SCALE PHYSICS AND IS NOT OBSE"
   },
   {
@@ -4498,7 +4498,7 @@
    "constant": "hbar (J s)",
    "hits": 1,
    "benchmark": "benchmarks/foundations/nucq_flux_tube_strand_count.py",
-   "adjudicated": null,
+   "adjudicated": "COMPARISON: the mesoscopic-hbar picture is refuted against hbar; hbar is the standard, not the output.",
    "title": "THE STRUCTURAL STRAND COUNT IS DERIVED, THE ESCAPE IS CLOSED, AND THE MESOSCOPIC-HBAR PICTURE IS REFUTED (Failed, kept) -- THE DERIVATION: with rho = 3 T_tube/("
   },
   {
@@ -4506,7 +4506,7 @@
    "constant": "G (m^3 kg^-1 s^-2)",
    "hits": 1,
    "benchmark": "benchmarks/gravity/G_constitutive_bracket.py",
-   "adjudicated": null,
+   "adjudicated": "COMPARISON: c^4/(16 pi G_meas) is the tension the constitutive form must reach; G is the target the bracket is read against, and the claim's B1 says G's form is dimensionally open.",
    "title": "G(T, a) ATTEMPTED: THE ASSUMED FORM IS DIMENSIONALLY OPEN (THE CONST DEFECT CLASS, IN THE SOLE T1'S OTHER LEG), THE SAKHAROV ROUTE GIVES A TENSION-INERT G ~ a^2"
   },
   {
@@ -4514,7 +4514,7 @@
    "constant": "G (m^3 kg^-1 s^-2)",
    "hits": 1,
    "benchmark": "benchmarks/gravity/band_coefficient_units.py",
-   "adjudicated": null,
+   "adjudicated": "PARTIAL: the exponent pair (0, 2) and the coefficient zeta = 1.208 are derived without G; a_Sak = sqrt(16 pi zeta hbar G/c^3) is computed FROM measured G and hbar and is therefore a SELECTION (a calibration), as the title's word 'scale selection' says. a_Sak must not be read as a prediction of G; CLOSURE-MATRIX records the resulting seventeen-order tension with the M-point a (FND-MATTER-040).",
    "title": "THE BAND COEFFICIENT IN PHYSICAL UNITS: THE CORPUS'S FIRST DERIVED G EXPONENT PAIR ((0, 2) -- TENSION-INERT, SPACING-QUADRATIC), THE COEFFICIENT zeta = 1.208 FR"
   },
   {
@@ -4522,7 +4522,7 @@
    "constant": "hbar (J s)",
    "hits": 1,
    "benchmark": "benchmarks/gravity/ring_quantum.py",
-   "adjudicated": null,
+   "adjudicated": "COMPARISON: the snap action is reported as a ratio A/hbar; hbar is the standard.",
    "title": "THE QUANTUM OF THE RING -- THE FOURTH CANCELLATION: THE SNAP ACTION A* = e_bit/omega_loc IS INDEPENDENT OF DEPTH AND OF THE BLACK HOLE'S MASS (sigma AND kappa B"
   },
   {
@@ -4530,7 +4530,7 @@
    "constant": "alpha / 1/alpha",
    "hits": 1,
    "benchmark": "benchmarks/gravity/action_audit.py",
-   "adjudicated": null,
+   "adjudicated": "INPUT THROUGH R1: the claim REGISTERS the relation hbar = T0 l_q^2/(4 pi alpha c) and evaluates n_q from measured alpha; alpha is an input, hbar and alpha are not derived.",
    "title": "THE CROSS-REGISTRY ACTION AUDIT -- ONE FORM, TWO AREAS: THE REGISTERED hbar RELATION AND THE HORIZON'S EMERGENT ACTION ARE BOTH TENSION x AREA / c (hbar = T0 [l"
   },
   {
@@ -4538,7 +4538,7 @@
    "constant": "alpha / 1/alpha",
    "hits": 1,
    "benchmark": "benchmarks/gravity/invariance_sweep.py",
-   "adjudicated": null,
+   "adjudicated": "INPUT THROUGH R1: alpha enters the invariance sweep's l_q adjustment; nothing about alpha is derived.",
    "title": "THE INVARIANCE SWEEP -- h ADJUDICATED AND THE ONE-POWER THEOREM: d_c IS ELECTRON-ANCHORED AND FORK-INVARIANT (ELEC-021's CALIBRATION-INDEPENDENT Lambda = E_inf "
   },
   {
@@ -4546,7 +4546,7 @@
    "constant": "m_e (kg)",
    "hits": 1,
    "benchmark": "benchmarks/foundations/vav_n_computation.py",
-   "adjudicated": null,
+   "adjudicated": "INPUT: m_e c^2/(2 L_ring) is the registered identity the N computation evaluates; m_e is the input, N = 2 g^2 the output.",
    "title": "COMMISSION VAV \u2014 THE N COMPUTATION: WITH ETA = 1 ALREADY ON THE BOOKS, N = 2g^2 EXACTLY AND THE EVERYTHING-BRICK IS THE REGISTRY'S OLDEST RESIDUAL WEARING FOUR "
   },
   {
@@ -4554,7 +4554,7 @@
    "constant": "G (m^3 kg^-1 s^-2)",
    "hits": 1,
    "benchmark": "benchmarks/gravity/lambdanat_price_nungrv16.py",
-   "adjudicated": null,
+   "adjudicated": "CALIBRATION, LABELLED IN CODE: G_newton converts the dimensionless C_m to physical units as the comment says; the claim derives a lambda price, not G.",
    "title": "THE Lambda_nat PRICING SESSION (NUN-GRV16) -- NUMERATOR-PRICED, DENOMINATOR-BLOCKED-AT TWO NAMED WALLS, STRUCTURAL CONSONANCE AFFIRMED, AND ONE FLAGGED RESEMBLA"
   },
   {
@@ -4562,7 +4562,7 @@
    "constant": "G (m^3 kg^-1 s^-2)",
    "hits": 1,
    "benchmark": "benchmarks/gravity/tau_ident_nungrv21.py",
-   "adjudicated": null,
+   "adjudicated": "INPUT TO A BOUND: G enters Lambda_nat_max = kT lam c^3/(2G); the claim identifies tau, not G.",
    "title": "COMMISSION TAU-IDENT (NUN-GRV21) -- DISTINCT-CERTIFIED ON THE IDENTITY, FINE-BOUND-DERIVED ON THE AMPLITUDE: the author's challenge to GRV-127 ('either the 1e37"
   }
  ],

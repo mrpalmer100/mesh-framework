@@ -39,8 +39,9 @@ geometry of a weave. The four Partial rows share a shape: the mesh holds the kin
 rule) and lacks the dynamics or the carrier (hbar, the electron, a fermion, the guidance
 flow). The seven Unexplained rows are the Standard Model's gauge structure beyond U(1), its
 statistics, its generations and its numbers. Every one of the Partial rows, and rows 6, 10
-and 11 among the Unexplained, stops at the same place the North Star calls the fence: the
-quantum layer. Rows 7, 8 and 9 stop earlier, at scope: the programme has not claimed them.
+and 11 among the Unexplained, stops at gap 1 of NORTH_STAR section 4, the action scale (the
+fence). Rows 7 and 8 stop at gap 3, the internal dimension (FND-185; CLOSURE-MATRIX); row 9 stops
+at scope: the programme has not claimed it.
 
 GAUGE-INVENTORY (FND-185, 4 October 2026) gave rows 7 and 8 their registered reason without moving them: the weave's continuous internal space has one real dimension (the U(1) of row 3) and the groups need three to eight; what the weave has beyond that is finite. The tally is unchanged, and the gap is now a count rather than an absence.
 

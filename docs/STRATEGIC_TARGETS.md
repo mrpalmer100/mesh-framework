@@ -659,6 +659,12 @@ Y1 THE INPUT LEDGER, MACHINE SIDE. tools/input_ledger.py scans every claim's ben
    or by a chartered reading; --strict makes the unadjudicated count a CI failure once that is done.
    The scanner sees literals only: constants from data files or computed from others are invisible,
    so BLIND is not a D1 certificate. Added to RELEASE_CHECKLIST: run at every cut.
+   ADJUDICATED 2026-10-04 (author's word; analysis/input_ledger_adjudicated.json): twenty of the
+   twenty-two flags are the constant used as an input or as the comparison target of a claim that
+   does not derive it; two are not clean and are recorded as such: GRV-075's a_Sak is computed from
+   measured G and hbar (a selection, i.e. a calibration; the exponent pair and zeta do not use G),
+   and HBAR-006's 'reconstructing hbar to 0.1 percent' used an N fixed from hbar, a circularity the
+   registry had already retired when ELEC-061 closed that relation. --strict now passes (0 open).
 Y2 GRADES OF DERIVED. D0 theorem / D1 parameter-free observable / D2 conditional on an unexplained
    mesh parameter / D3 reconstruction from measured inputs (NORTH_STAR section 2c). Applied tonight
    to the five scorecard rows and the twelve SM_EMERGENCE rows. What it shows: the registry's D1
@@ -687,6 +693,15 @@ dimension d; (4) the electron model; (5) the proton's topology. The prior (three
 joined (4) and (5) to (1) by blocked-by, which B-2 forbids. Four inputs (d_c, eps, kappa_pack, Poisson)
 are calibrations with no target on them. Leverage recorded, not ranked: supplying gap 1 closes hbar, a,
 G and alpha by identity and unblocks six more columns; gap 2 closes the strand mass scale and FND-182;
-gaps 3 to 5 close nothing by identity. NORTH_STAR section 4's "one fence" is proposed amended to "five
-gaps, one of them the fence", text in the results file, on the author's word; FND-186 recommended.
+gaps 3 to 5 close nothing by identity. NORTH_STAR section 4 amended on the author's word (2026-10-04) from "one fence" to
+"five gaps, one of them the fence", with the stale evening bracket on V_0 superseded and a gap column
+on the section 3 input ledger; SM_EMERGENCE's reading paragraph points rows 7 and 8 at gap 3.
+Registered as FND-186 on the author's word (2026-10-04).
 Candidate rows found and not counted: n_sub and m (FND-087), A_c (EM-RECON-017).
+
+Also adopted 2026-10-04 (the author's word): docs/MESH_CHALLENGES.md, the five challenges (homogenisation,
+gauge emergence, the weak-field metric and SPARC, the solvers, PRED-003), each with frozen inputs,
+one-command reproduction, the bar that counts as a found mistake and what falls; linked from
+EXTERNAL_REVIEW_PACKAGE and the docs index. The fifth of the five numbers (externally adjudicated
+predictions) stays at zero until a challenge is met or survives an outside attempt.
+
