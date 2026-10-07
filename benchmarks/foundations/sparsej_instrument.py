@@ -29,6 +29,27 @@ def _memo_dir():
     """platform memo directory: /tmp on Unix, %TEMP% on Windows (2026-09-13, for the Windows compute box)."""
     return pathlib.Path(_tempfile.gettempdir())
 
+
+MEMO_KEEP = 2   # newest memos kept per kind; the rest are deleted by the instrument itself
+
+
+def _prune_memos(just_written, keep=MEMO_KEEP):
+    """[2026-10-04] The instrument prunes its own memos. A factor memo is ~0.6 GB at 144x36 and one is written
+    per factorisation; go.sh/go.py pruned between invocations, but a hand-rolled loop (the ANTI-ARC-NYQ loop on
+    the Windows box, no SJ_MEMO set) wrote ~100 of them into %TEMP% and filled the disk twice in one day. Memos
+    are replay caches keyed by content hash; deleting one costs at most one recomputation. Keep the newest
+    `keep` of each kind (sjjac_*, sjfac_*), never the one just written; ignore every error."""
+    import shutil
+    try:
+        kind = 'sjjac_*' if just_written.name.startswith('sjjac_') else 'sjfac_*'
+        memos = sorted(_memo_dir().glob(kind), key=lambda q: q.stat().st_mtime, reverse=True)
+        for m in memos[keep:]:
+            if m.resolve() == just_written.resolve():
+                continue
+            shutil.rmtree(m, ignore_errors=True) if m.is_dir() else m.unlink(missing_ok=True)
+    except Exception:
+        pass
+
 import scipy.sparse as sp
 import scipy.sparse.linalg as spl
 
@@ -133,6 +154,7 @@ class SparseJac:
         if os.environ.get('SJ_MEMO', '1') in ('1', 'jac'):
             try:
                 mp.write_bytes(pickle.dumps((J, r0)))
+                _prune_memos(mp)
             except Exception:
                 pass
         return J, r0
@@ -587,6 +609,7 @@ class BandedTorusSolver:
                     np.save(d / 'Kw.npy', self.Kw)
                 (d / 'slu.pkl').write_bytes(pickle.dumps(self.Slu))
                 (d / 'ok').touch()
+                _prune_memos(d)
             except Exception:
                 pass
 

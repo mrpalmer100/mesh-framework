@@ -705,3 +705,31 @@ one-command reproduction, the bar that counts as a found mistake and what falls;
 EXTERNAL_REVIEW_PACKAGE and the docs index. The fifth of the five numbers (externally adjudicated
 predictions) stays at zero until a challenge is met or survives an outside attempt.
 
+
+## AA. ANTI-ARC-NYQ RENDERED (2026-10-05; the PC; charter analysis/ANTIARC_NYQ_charter_LOCKED.md)
+
+Verdict ANTI-NYQ-CONTROL-FAIL (analysis/ANTIARC_NYQ_results.md). c1 (FND-173's member) re-gated at
+RMS 8.3e-10, closure 5.0e-12, wsNyq 8.7e-4 (the sub-reading known at lock). c2 (the aligned 4/3
+waypoint-1 arc point, required clean under both arms) stopped at the 60-round budget a hair outside
+one bar in each arm: A1 closure 1.0e-6 against < 1e-6, A2 RMS 1.0e-8 against < 1e-8, with wsNyq
+met by five orders in both. An instrument-budget fault on the control, not a physics finding; the form
+says stop and nothing downstream is read. The driver's printed arm lines (A1 20/20 gated with wsNyq
+9.0e-4 to 1.3e-3, zero clean; A2 refused at p0) are recorded and not read. Riders adopted 2026-10-05
+on FND-174 and FND-173 (record only); no status change. ANTI-ARC-NYQ-2 chartered 2026-10-05 (the
+one repair, section 5): c2's budget 60 -> 200, nothing else, arms carried over sealed; driver
+benchmarks/foundations/antiarc_nyq2.py on a copy of the checkpoint; the prior (ANTI-FLAT-NYQ, FND-174
+refuted as a continuum statement) stated in the charter before the run; the lineage stops there. Disk incident recorded and fixed in the instrument
+(memo prune; 20 GB guard; WINDOWS_COMPUTE rule).
+
+## AB. REGRADE EXECUTED (2026-10-07; sandbox; the reading commission named in section Y2)
+
+All 121 claims with status Derived graded against NORTH_STAR 2c (docs/DERIVED_GRADES.md; machine-readable
+analysis/derived_grades.json): 95 D0, 2 D1, 19 D2, 2 D3, 3 not derivations. Two rules applied strictly:
+an engine-internal numerical result is D0 evidence about the model, never D1; anything resting on an
+adopted grant (Grant 3: four STRAND claims; the substructure grant: FND-090) or an unexplained registered
+input is D2 however exact. The two D1 rows are CHEM-GEO-002 (the hydride asymptote with two predictions
+registered) and GRV-031 (a parameter-free candidate retired by SPARC). The programme's best D1 content
+(GRV-030, PRED-003) is filed as Modeled; grade and status measure different things. Four status
+anomalies for the author: GRV-014 (a conjecture at Derived), GRV-024 (an Open exam at Derived), GRV-036
+and QB-024 (Modeled titles at Derived). NUC-001 is a D3 reconstruction by its own wording. No status
+changed; the grade column is the page.

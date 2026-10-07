@@ -1,0 +1,607 @@
+{
+ "FND-001": {
+  "grade": "D0",
+  "reason": "exact endpoint mechanics; J = T^2/kappa from the harmonic bond and two tensions",
+  "title": "Endpoint force-balance gives locking energy J = T^2/kappa (exact XY form)"
+ },
+ "FND-002": {
+  "grade": "D0",
+  "reason": "coarse-graining coefficient by exact computation; the factor-three corrected",
+  "title": "Coarse-graining coefficient K = J/a scalar (2J/a director), NOT 3J/a"
+ },
+ "FND-003": {
+  "grade": "D0",
+  "reason": "Gamma-convergence within cited standard analysis; hypothesis stated",
+  "title": "Gamma-convergence of discrete locking energy to (K/2)\u222b|grad theta|^2 on vortex-free fields"
+ },
+ "FND-004": {
+  "grade": "D0",
+  "reason": "necessity of the vortex-free hypothesis, shown",
+  "title": "Vortex-free hypothesis is necessary (vortex: finite core-regularised discrete, continuum core divergence)"
+ },
+ "FND-005": {
+  "grade": "D0",
+  "reason": "parameter count: one dimensionless coupling, two unit conventions",
+  "title": "Parameter count: {T,kappa,a} carry one dimensionless coupling Pi = kappa*a/T"
+ },
+ "FND-006": {
+  "grade": "D0",
+  "reason": "impossibility result: Pi not fixable by symmetry",
+  "title": "Lorentz invariance fixes mu = T/c^2 but is orthogonal to Pi; value of Pi not fixable by symmetry"
+ },
+ "FND-007": {
+  "grade": "D0",
+  "reason": "single-vortex energy pi K ln(R/a); coefficient confirmed numerically (model-internal)",
+  "title": "Defect regime: single vortex energy E = pi K ln(R/a) (coefficient confirmed numerically)"
+ },
+ "FND-008": {
+  "grade": "D0",
+  "reason": "topological charge = integer winding, quantised and conserved (homotopy)",
+  "title": "Topological charge = integer winding number, quantized and conserved"
+ },
+ "FND-009": {
+  "grade": "D0",
+  "reason": "pair energy and 2D Coulomb force; BKT by XY correspondence, cited",
+  "title": "Vortex-antivortex pair energy 2 pi K ln(d/a); 2D Coulomb force; BKT physics"
+ },
+ "FND-010": {
+  "grade": "D0",
+  "reason": "charge conservation under reconnection",
+  "title": "Reconnection and annihilation conserve total topological charge"
+ },
+ "FND-011": {
+  "grade": "D0",
+  "reason": "homotopy of S^1: only line defects in 3D; monopole exclusion is a theorem",
+  "title": "3D: vortex-line tension = pi K ln(R/a) per length; only line defects/loops exist (homotopy of S^1)"
+ },
+ "FND-012": {
+  "grade": "D0",
+  "reason": "linking as integer Gauss invariant",
+  "title": "Defect-loop linking = integer Gauss invariant, shared with the knot/soliton sector"
+ },
+ "FND-013": {
+  "grade": "D0",
+  "reason": "flux tubes unit-quantised: discrete Stokes, bounded bond angles; model-internal numerics",
+  "title": "EM flux tubes ARE unit-quantized defect lines (Derived; the old Open bridge closed): smooth winding is topologically incapable of carrying flux (discrete Stokes"
+ },
+ "FND-014": {
+  "grade": "D0",
+  "reason": "finite universal core energy (model-internal numerics, size-independent)",
+  "title": "Defect core is finite and universal: E_core = E - piK ln(L/2) -> 5.448 K (size-independent)"
+ },
+ "FND-015": {
+  "grade": "D0",
+  "reason": "effective cutoff as a dimensionless ratio from discrete mechanics",
+  "title": "Continuum cutoff DERIVED from discrete mechanics: a_eff ~ 0.18 lattice spacings"
+ },
+ "FND-016": {
+  "grade": "D0",
+  "reason": "per-bond energy bound explains core finiteness",
+  "title": "Core finiteness explained: per-bond energy bounded by (1/2)K pi^2 (max angle diff = pi)"
+ },
+ "GG-001": {
+  "grade": "D0",
+  "reason": "standard bundle/connection/curvature geometry assembled; cited",
+  "title": "Unification: bundle/connection A/curvature F=dA framework for the orientation field"
+ },
+ "GG-002": {
+  "grade": "D0",
+  "reason": "invariant hierarchy computed",
+  "title": "Invariant hierarchy computed: winding (pi_1), linking (Gauss), Chern (int F)"
+ },
+ "GG-003": {
+  "grade": "D0",
+  "reason": "Hopf invariant = linking of preimage fibres, one computation",
+  "title": "KEYSTONE: Hopf invariant = linking number of preimage fibers (same routine as charge)"
+ },
+ "GG-004": {
+  "grade": "D0",
+  "reason": "gauge invariance from phase-convention arbitrariness",
+  "title": "Gauge invariance forced by phase-convention arbitrariness (A->A+dchi, F invariant)"
+ },
+ "GG-006": {
+  "grade": "D0",
+  "reason": "handedness integer identical to the linking number",
+  "title": "Gaede's strand handedness is a computable integer identical to the linking number (ontology and description are one quantity)"
+ },
+ "EM-RECON-003": {
+  "grade": "D0",
+  "reason": "lattice swirl strain calculator built and validated; model-internal numerics",
+  "title": "2D square-lattice swirl-field strain calculator (built + validated): out-of-plane swirls favor ANTIFERRO; ferromagnetism cannot come from the field term alone ("
+ },
+ "EM-RECON-004": {
+  "grade": "D0",
+  "reason": "ordering geometry-dependence by true dipole energy; model-internal numerics",
+  "title": "The lattice field-term ferro/antiferro ordering is GEOMETRY-DEPENDENT (out-of-plane->antiferro, in-plane->ferro); EM-RECON-003's antiferro is not universal"
+ },
+ "EM-RECON-006": {
+  "grade": "D2",
+  "reason": "mode-overlap functional constructed from primitives; the ~0.1 eV scale uses the imported e (ledger)",
+  "title": "Rope mode-overlap functional constructed from network primitives (quadratic cross-term); long-range limit reproduces the field anchor and the ~0.1 eV scale fall"
+ },
+ "EM-RECON-012": {
+  "grade": "D0",
+  "reason": "gamma = 1/sin^2 theta exact from helix geometry; no gap, mass term forbidden",
+  "title": "[SPEED-IDENTITY FLAG (Commission J, 2026-08-05, appended at partial merge 2026-08-09): the dressed-screw computation recorded that the screw branch's phase spee"
+ },
+ "EM-001": {
+  "grade": "D0",
+  "reason": "charge = linking number (integer; model-internal |Lk| = 0.999)",
+  "title": "Electric charge = topological linking number (integer quantisation)"
+ },
+ "EM-002": {
+  "grade": "D3",
+  "reason": "structural constants Z0, eps0, c^2 = 1/(mu0 eps0) MATCH measured values; the benchmark consumes alpha (ledger); a reconstruction",
+  "title": "Structural EM constants: free-space impedance Z0=sqrt(mu0/eps0)=376.74 ohm; constitutive c^2=1/(mu0 eps0)"
+ },
+ "EM-003": {
+  "grade": "D0",
+  "reason": "Maxwell from Bianchi + Chern-Weil + d = 3 (the shared benchmark file carries EM-002's alpha literal; not used here, adjudicated)",
+  "title": "Maxwell equations from Bianchi identities + Chern-Weil + d=3"
+ },
+ "EM-004": {
+  "grade": "D0",
+  "reason": "two-slit law from linear superposition",
+  "title": "Classical two-slit interference I \u221d 1+cos(2\u03c0 \u0394/\u03bb) from linear superposition"
+ },
+ "EM-005": {
+  "grade": "D0",
+  "reason": "non-dispersive propagation omega = ck",
+  "title": "Non-dispersive Maxwell propagation: omega(k)=ck, phase velocity independent of k"
+ },
+ "EM-007": {
+  "grade": "D0",
+  "reason": "stiffness reconciliation K = J/a = n lambda/3",
+  "title": "Continuum stiffness reconciliation: K=J/a (lattice) equals K=n*lambda/3 (isotropic ropes); K linear in rope density"
+ },
+ "EM-008": {
+  "grade": "D0",
+  "reason": "continuity as transported linking; model-internal transport simulation",
+  "title": "Current = transported linking: no-wind-up, continuity (div J=0), and closed-loop are one condition"
+ },
+ "EM-012": {
+  "grade": "D0",
+  "reason": "magnetic force from field energy in the model's own units (1/d, signs, magnitude relative to K); no measured input",
+  "title": "Magnetic force between currents reproduced from the swinging-rope field energy (correct magnitude, 1/d, and signs)"
+ },
+ "EM-013": {
+  "grade": "D0",
+  "reason": "Lorentz force from the gauge-forced coupling via Euler-Lagrange",
+  "title": "Lorentz force F = q v x B on a moving charge, from the gauge-forced coupling (perpendicular to v and B, does no work)"
+ },
+ "EM-014": {
+  "grade": "D0",
+  "reason": "screw relation exact; current as helix rotation (model-internal)",
+  "title": "Screw mechanism of current: rotating the two-strand helix transports linking and delivers power, consistently with continuity (EM-008)"
+ },
+ "EM-015": {
+  "grade": "D0",
+  "reason": "electrostatic sign theorem: constraint-sourced fields; no sign hardcoded",
+  "title": "ELECTROSTATIC SIGN THEOREM (Derived; closes the static half of the sign ledger): like windings repel and opposite windings attract, with the 1/d Coulomb form, b"
+ },
+ "EM-016": {
+  "grade": "D2",
+  "reason": "the dictionary assembled with THREE conditionalities named on its face (raised to Derived by author's act)",
+  "title": "THE FIELD-TENSOR DICTIONARY (Derived 2026-08-11 by author's act, EM-022; all four registered debts discharged; three conditionalities named on the face): the co"
+ },
+ "EM-017": {
+  "grade": "D0",
+  "reason": "uniqueness of the dictionary up to gauge and one global scale; computed inversion",
+  "title": "COMMISSION ALEPH-2 -- THE FIELD-TENSOR DICTIONARY IS UNIQUE UP TO GAUGE AND ONE GLOBAL SCALE (Derived): ANY MECHANICAL ASSIGNMENT PREDICTING THE SAME FORCE ON E"
+ },
+ "EM-018": {
+  "grade": "D0",
+  "reason": "phi's channel forced by elimination over the closed inventory; Helmholtz step computed",
+  "title": "COMMISSION BET-2 -- phi's CHANNEL IS FORCED BY ELIMINATION (Derived): OVER THE CLOSED INVENTORY OF REGISTERED MECHANICAL CHANNELS, THE TRANSVERSE CARRIER IS EXC"
+ },
+ "EM-019": {
+  "grade": "D0",
+  "reason": "inertial term's form forced by the shift symmetry",
+  "title": "COMMISSION GIMEL-2 -- THE INERTIAL TERM'S FORM IS FORCED BY THE SAME SYMMETRY THAT FORBIDS THE MASS TERM (Derived): THE FIELD VARIABLE IS A GAUGE LABEL DEFINED "
+ },
+ "OPT-001": {
+  "grade": "D0",
+  "reason": "Huygens construction from the wave equation",
+  "title": "Huygens construction: wavefront = envelope of secondary wavelets, advances at c"
+ },
+ "OPT-002": {
+  "grade": "D0",
+  "reason": "single-slit diffraction law",
+  "title": "Single-slit diffraction I(\u03b8)=sinc^2(\u03c0 a sin\u03b8/\u03bb), first minimum at sin\u03b8=\u03bb/a"
+ },
+ "OPT-003": {
+  "grade": "D0",
+  "reason": "cavity modes",
+  "title": "Standing waves / cavity: omega_n = n pi c/L; fundamental f_1 = c/(2L)"
+ },
+ "OPT-004": {
+  "grade": "D0",
+  "reason": "waveguide cutoff",
+  "title": "Waveguide TE10 cutoff omega_c = pi c/a; evanescent below cutoff"
+ },
+ "OPT-005": {
+  "grade": "D0",
+  "reason": "total internal reflection",
+  "title": "Fibre total internal reflection: critical angle theta_c = arcsin(n2/n1)"
+ },
+ "OPT-006": {
+  "grade": "D0",
+  "reason": "rope impedance Z = T/c intrinsic",
+  "title": "Rope impedance Z = sqrt(T mu) = T/c is intrinsic to the medium"
+ },
+ "OPT-007": {
+  "grade": "D0",
+  "reason": "Snell from wavefront continuity",
+  "title": "Snell's law n1 sin th1 = n2 sin th2 from wavefront continuity"
+ },
+ "OPT-008": {
+  "grade": "D0",
+  "reason": "Fresnel coefficients and R + T = 1",
+  "title": "Fresnel coefficients r=(Z1-Z2)/(Z1+Z2), t=2Z1/(Z1+Z2); energy R+T=1"
+ },
+ "OPT-009": {
+  "grade": "D0",
+  "reason": "Brewster angle",
+  "title": "Brewster angle tan th_B = n2/n1; polarization as transverse-mode structure"
+ },
+ "OPT-010": {
+  "grade": "D0",
+  "reason": "multilayer interference",
+  "title": "Multilayer: AR coating (R=0), Fabry-Perot (T=1 at 2pi m), dielectric mirror (R->1)"
+ },
+ "THM-002": {
+  "grade": "D0",
+  "reason": "Gaussian partition function; equipartition matched",
+  "title": "Equilibrium Gaussian partition function Z=prod sqrt(2 pi T/K lambda_k); free energy, entropy, energy"
+ },
+ "THM-003": {
+  "grade": "D0",
+  "reason": "spin-wave specific heat",
+  "title": "Spin-wave specific heat C = 1/2 per mode (2D Dulong-Petit)"
+ },
+ "THM-004": {
+  "grade": "D0",
+  "reason": "BKT temperature and eta = 1/4 by XY correspondence (cited)",
+  "title": "BKT transition T_BKT = pi K/2; universal correlation exponent eta(T_BKT)=1/4"
+ },
+ "THM-005": {
+  "grade": "D0",
+  "reason": "helicity-modulus jump; established XY result, cited",
+  "title": "Helicity-modulus universal jump K_R(T_BKT)=2 T_BKT/pi; Kosterlitz RG flow separates phases"
+ },
+ "GRV-002": {
+  "grade": "D2",
+  "reason": "the four weak-field tests GIVEN the matched metric of GRV-001 (conditional, said so on its face)",
+  "title": "Given the matched weak-field metric (GRV-001), the four classical weak-field tests take their GR values: light deflection 1.751\u2033, Mercury 43.0\u2033/cy, Shapiro gamm"
+ },
+ "GRV-006": {
+  "grade": "D0",
+  "reason": "theorem: G not derivable from current commitments; measured G used only to read the rigidity (ledger adjudicated)",
+  "title": "G is NOT derivable from current commitments (constructive underdetermination theorem); G inverse-measures the network rigidity c^4/(4 pi G) = 9.6e42 N; and the "
+ },
+ "GRV-008": {
+  "grade": "D0",
+  "reason": "three theorems on the tensor structure; gamma = 1 iff a response condition",
+  "title": "TENSOR STRUCTURE REDUCED: three theorems -- (T1) local c-invariance is an IDENTITY of co-materiality; (T2) the medium picture defines ONE consistent PPN gamma; "
+ },
+ "GRV-013": {
+  "grade": "D0",
+  "reason": "no-go by geometric dilution theorem; rescue postulate refused",
+  "title": "THE HUNT CONCLUDED -- NO-GO: the constructible channel space is mapped and excludes the locked quadrupole. Geometric dilution theorem: direction-carrying struct"
+ },
+ "GRV-014": {
+  "grade": "D2",
+  "reason": "a CONJECTURE admitted by audit (its own title); conditional on a quantum-induced level outside scope; status anomaly: Derived carrying a conjecture",
+  "title": "CONJECTURE (Mark's, audited and admitted): the quantum-completion hypothesis -- classical channels deliver Newton; the post-Newtonian structure (gamma = 1) is e"
+ },
+ "GRV-015": {
+  "grade": "D0",
+  "reason": "tortuosity column derived; sign-lock theorem",
+  "title": "RESOLVED (door closed, no-go STRENGTHENED): the graph-structural channel audited -- tortuosity's fourth response column DERIVED (-sigma, -sigma, 0: clocks DECOU"
+ },
+ "GRV-017": {
+  "grade": "D0",
+  "reason": "no-monopole lemma",
+  "title": "NO-MONOPOLE LEMMA (Derived; closes the reviewer-found Kelvin loophole): a static isolated defect in equilibrium exerts zero net force on the medium, so the Kelv"
+ },
+ "GRV-018": {
+  "grade": "D0",
+  "reason": "internal-mode dichotomy theorem",
+  "title": "INTERNAL-MODE DICHOTOMY (Derived; H1 defended against its most serious attack): every internal mode of the two-strand rope is either GAPPED (Yukawa-screened, wr"
+ },
+ "GRV-019": {
+  "grade": "D0",
+  "reason": "emergent-tensor audit closed on every branch",
+  "title": "H5 EMERGENT-TENSOR AUDIT (Derived; the last serious classical question): coarse-grained nematic order Q_ij closed on every branch with closure types labeled -- "
+ },
+ "GRV-020": {
+  "grade": "D0",
+  "reason": "internal symmetry theorem, formal",
+  "title": "[COROLLARY-1 TENSION SPLIT to GRV-102 (Open, 2026-08-09, Mark's directive executed at merge): the 'torsion dynamics = light' clause is in computed tension with "
+ },
+ "GRV-022": {
+  "grade": "D0",
+  "reason": "registered negative of theorem quality: naive Sakharov route refuted at the tensor test (instrument-measured on the weave band, model-internal)",
+  "title": "THE NAIVE SAKHAROV ROUTE REFUTED AT THE TENSOR TEST (Derived; a registered negative of theorem quality): the induced q^2 action of the measured weave band under"
+ },
+ "GRV-023": {
+  "grade": "D0",
+  "reason": "the gate mapped: one-metric necessary not sufficient (model-internal numerics)",
+  "title": "THE GATE MAPPED (Derived): the one-metric condition is NECESSARY BUT NOT SUFFICIENT, and Einstein-Hilbert dominance is a statement about SCALE SEPARATION the co"
+ },
+ "GRV-024": {
+  "grade": "D0",
+  "reason": "the absorption exam constructed and locked; title says (Open); status anomaly: Derived carrying an Open verdict-withheld exam",
+  "title": "THE ABSORPTION EXAM CONSTRUCTED AND ARMED, VERDICT WITHHELD BY ITS OWN INTEGRITY CHECK (Open): the principled decomposition is derived and locked before computa"
+ },
+ "GRV-025": {
+  "grade": "D0",
+  "reason": "IR-universal remainder is Einstein-Hilbert on the weave band (model-internal numerics under locked bar)",
+  "title": "THE ABSORPTION EXAM PASSED -- THE IR-UNIVERSAL REMAINDER IS EINSTEIN-HILBERT (Derived): under bars locked before the instrument was finished (GRV-024), the m-od"
+ },
+ "GRV-026": {
+  "grade": "D2",
+  "reason": "gamma = 1 and 1.751 arcsec as a TWO-CONDITION theorem (conditional on EH dynamics and covariant sourcing; the scalar mixing measured model-internally)",
+  "title": "GAMMA = 1 AND THE 1.751-ARCSECOND DEFLECTION DERIVED AS A TWO-CONDITION THEOREM (Derived), with the induced scalar sector measured and a FOURTH parameter-free c"
+ },
+ "GRV-028": {
+  "grade": "D2",
+  "reason": "the theorem strengthens to ONE condition; still conditional",
+  "title": "THE LOCUS TEST RUN, THE APPARENT KILL AUDITED, THE SCALAR SCREENED (Derived) -- the 1.751-arcsecond theorem strengthens to ONE condition: executing GRV-027's na"
+ },
+ "GRV-029": {
+  "grade": "D0",
+  "reason": "one-metric derivation by counting and exact bijection (sympy); makes GRV-002 unconditional in form",
+  "title": "THE PHYSICAL ONE-METRIC DERIVATION (Derived) -- the gravity sector's summit reached, C1 discharged, and GRV-002's full table made UNCONDITIONAL: (a) BY COUNTING"
+ },
+ "GRV-031": {
+  "grade": "D1",
+  "reason": "a parameter-free candidate (Langevin saturation, 3 fixed by the deep-MOND asymptotic) confronted with 2788 SPARC points and RETIRED; the D1 content is the confrontation, outcome negative and kept",
+  "title": "THE SHAPE DEBT COLLECTED -- BY RETIREMENT (Derived): GRV-030's named debt executed on both branches in order, with bars locked before data -- the corpus-natural"
+ },
+ "GRV-036": {
+  "grade": "D0",
+  "reason": "definition audit: mass as stress-energy; title says (Modeled); status anomaly: Derived carrying a Modeled title",
+  "title": "MASS WITHOUT KNOTS (Modeled) -- the definition audit forced by GRV-035, resolved, with the no-hair theorem falling out as strand mechanics: the glossary's 'resi"
+ },
+ "GRV-044": {
+  "grade": "D2",
+  "reason": "closed-form saddle-point tail with the MEASURED Gaussian kernel model as input (model-internal)",
+  "title": "THE SADDLE-POINT DERIVATION: THE TAIL'S TRUE ANATOMY IN CLOSED FORM (Derived) -- boundary-Laplace analysis of the pile-up integral with the measured Gaussian ke"
+ },
+ "GRV-045": {
+  "grade": "D0",
+  "reason": "handedness survives reconnection: exact 2 pi quantum exchanged (engine measurement, model-internal, length-independent)",
+  "title": "HANDEDNESS SURVIVES RECONNECTION (Derived) -- the punch-through exchanges exactly ONE 2-pi quantum of frame winding, measured at 1.007 x 2pi in the three-dimens"
+ },
+ "GRV-048": {
+  "grade": "D2",
+  "reason": "expansion parameter a^2 sqrt(K) evaluated with imported G and l_P (ledger); the mildness is conditional on those imports and the lattice scale",
+  "title": "THE STRONG-FIELD AUDIT: THE GATE OPENS (Derived) -- the extrapolation carrying all thirteen black-hole claims certified as a CONTROLLED EXPANSION, with the expa"
+ },
+ "SOL-002": {
+  "grade": "D0",
+  "reason": "linking conservation under relaxation (model-internal)",
+  "title": "Linking-number conservation under flexible relaxation (|Lk|=0.991\u22481; torus Lk=2,3)"
+ },
+ "FND-REL-002": {
+  "grade": "D0",
+  "reason": "no convective term: a theorem of the network with scope annotations",
+  "title": "[L1 SCOPE ANNOTATION (GRV-107, NUN-GRV4, 2026-08-14): the inextensibility leg is ORDER-LIMITED AS WORDED (registered finite k = 2 T0 admits longitudinal phonons"
+ },
+ "FND-REL-004": {
+  "grade": "D2",
+  "reason": "beta = 1/12 - B/(T0 a^2) exact (D0 identity); the eleven-order exclusion is conditional on the registered a = 6.0e-17 m (ledger)",
+  "title": "COMMISSION A RE-DERIVED -- THE DISPERSION COEFFICIENT: beta = 1/12 - B/(T0 a^2) EXACT, THE M-POINT MESH DEAD IN THE PHOTON SECTOR AT ~11 ORDERS PLUS AN EXISTENC"
+ },
+ "PM-003": {
+  "grade": "D0",
+  "reason": "structural impossibility: the composite mass mechanism does not extend to leptons",
+  "title": "The NUC-001 mass mechanism (knot-count minus binding) provably does NOT extend to leptons; the lepton mass problem is structurally reclassified as a 3-level kno"
+ },
+ "PM-005": {
+  "grade": "n/a",
+  "reason": "a scope statement, not a derivation",
+  "title": "Scope statement: the mesh programme is a theory of ORDINARY MATTER (first generation + composites + photon); it derives mass STRUCTURE (massless photon, nuclear"
+ },
+ "FND-MATTER-005": {
+  "grade": "D0",
+  "reason": "irreducibility of a by dimensional argument (benchmark's alpha literal is a comparison, adjudicated)",
+  "title": "[MEASUREMENT ROUTE VOID per FND-REL-004 (re-derived 2026-08-09): the (ka)^2 dispersion signal cannot measure a = 6e-17 m -- it EXCLUDES it at ~11 orders; the ro"
+ },
+ "FND-MATTER-010": {
+  "grade": "D0",
+  "reason": "parity decomposition theorem for the crossing cost; verified at 1e-13",
+  "title": "CROSSING SPECTROSCOPY: THE FIRST DERIVED ENTRY OF THE CONDITIONING DICTIONARY (Derived) -- a two-strand contact's zero-point cost is EXACTLY a single-chain pinn"
+ },
+ "FND-MATTER-012": {
+  "grade": "D0",
+  "reason": "the log law convicted by exact Hessian blocks; held-out sizes are engine sizes (model-internal)",
+  "title": "THE EXPONENT CONVICTED: IT WAS A LOGARITHM (Derived) -- FND-MATTER-011's anomalous bend scaling resolved: the true law is dE x L = a + b ln L (equivalently dE p"
+ },
+ "FND-MATTER-013": {
+  "grade": "D0",
+  "reason": "b = 2 pi (5/2 - 7 sqrt 2/4) exact at the canonical rope point",
+  "title": "b DERIVED: THE BEND LAW CLOSED (Derived) -- FND-MATTER-012's measured logarithm coefficient is now a theorem: b = 2 pi (5/2 - 7 sqrt(2)/4) = 0.157866 at the cor"
+ },
+ "FND-MATTER-014": {
+  "grade": "D0",
+  "reason": "a = -0.509658 certified constant; zero free parameters",
+  "title": "a DERIVED: THE BEND LAW FULLY CLOSED (Derived) -- the zero-point cost of bending in final form with ZERO free parameters: dE x L = a + b ln L with b = 2 pi (5/2"
+ },
+ "FND-MATTER-015": {
+  "grade": "D0",
+  "reason": "topology certifier by exact invariant; the jam convicted",
+  "title": "THE TOPOLOGY CERTIFIER, AND THE FIGURE-EIGHT CONVICTED (Derived) -- the 4_1 anomaly's cause is now a certified fact: a CONFORMATIONAL JAM with topology provably"
+ },
+ "FND-MATTER-016": {
+  "grade": "D0",
+  "reason": "hard contact is a constraint; zero-point cost parameter-free",
+  "title": "k_c DISSOLVED: THE HARD CONTACT IS A CONSTRAINT, ITS ZERO-POINT COST PARAMETER-FREE AND NEGATIVE (Derived) -- the campaign's material unknowns drop from two to "
+ },
+ "FND-MATTER-033": {
+  "grade": "D2",
+  "reason": "two identities exact; lambda reduced to ONE measured constant (its own words)",
+  "title": "THE MICROSTRUCTURE DERIVATION: THE GATE COLLAPSES, AND THE COLLAPSED GATE AUDITS THE CONDITIONAL (Derived) -- the last pure-theory item on the board executed, t"
+ },
+ "FND-MATTER-034": {
+  "grade": "D0",
+  "reason": "the three-ledger fork worked out by exact computation; the surviving reading is a bounded fraction, not a scale",
+  "title": "THE CLASSICAL-AMPLITUDE FORK WORKED OUT: THE TRACE LEDGER (Derived) -- the fork left open at FND-MATTER-033 resolved into a three-way scorecard by exact computa"
+ },
+ "QB-001": {
+  "grade": "D0",
+  "reason": "local rope model gives the triangle wave, CHSH <= 2",
+  "title": "Local rope model gives triangle wave, CHSH \u2264 2"
+ },
+ "QB-002": {
+  "grade": "D0",
+  "reason": "configuration counting gives (pi - theta)/pi, not Born",
+  "title": "Config-counting gives (\u03c0\u2212\u03b8)/\u03c0, NOT Born cos^2(\u03b8/2)"
+ },
+ "QB-012": {
+  "grade": "D0",
+  "reason": "four theorems characterising the CHSH wall (c literal is the loophole-free timing, a comparison)",
+  "title": "THE WALL CHARACTERIZED (Derived; no crossing claimed): four theorems convert the CHSH boundary from a fence into a four-clause SPECIFICATION with two closed-for"
+ },
+ "QB-013": {
+  "grade": "D0",
+  "reason": "dipole rigidity: m1 = 0 exactly",
+  "title": "DIPOLE RIGIDITY (Derived; the continuity-refined ceiling -- Tsirelson NOT derived, reported straight, and what emerged is sharper): mere continuity is VACUOUS a"
+ },
+ "QB-014": {
+  "grade": "D0",
+  "reason": "quadrupole rung ceiling (numerical, model-internal)",
+  "title": "THE QUADRUPOLE RUNG (Derived): extending the conditional class to full isotropic covariance of degree <= 2 in each setting vector (17 terms; uniform-n average E"
+ },
+ "QB-024": {
+  "grade": "D0",
+  "reason": "cos^2(theta/2) from three energy channels and one symmetry; title says (Modeled); status anomaly",
+  "title": "THE HALF-ANGLE FROM ROPE ENERGETICS (Modeled) -- cos^2(theta/2) derived, the sector's declared summit taken: a circular transverse wave about spin axis n, analy"
+ },
+ "QB-025": {
+  "grade": "D0",
+  "reason": "two junctions realised in the engine obey the half-angle law (model-internal, zero parameters)",
+  "title": "THE JUNCTION REALIZED (Derived) -- two physically distinct rope junctions built in the engine and measured, both obeying the half-angle law in their own eigenba"
+ },
+ "QB-015": {
+  "grade": "D0",
+  "reason": "cubic rung: the pinning conjecture refuted by its named test",
+  "title": "THE CUBIC RUNG (Derived; QB-014's B-pinning conjecture REFUTED by its own named next measurement, reported straight): extending to full isotropic covariance of "
+ },
+ "QB-016": {
+  "grade": "D0",
+  "reason": "quartic rung plateau (numerical)",
+  "title": "THE QUARTIC RUNG (Derived): THE LADDER PLATEAUS -- the l <= 4 class does not exceed the cubic rung: the odd sector is exactly saturated (odd-sector CHSH 2.280 a"
+ },
+ "QB-017": {
+  "grade": "D0",
+  "reason": "quintic rung: plateau breaks; parity artefact corrected",
+  "title": "THE QUINTIC RUNG (Derived): THE PLATEAU BREAKS at its first named test -- the second conjecture killed by its own named measurement in three rungs -- and the 'p"
+ },
+ "QB-018": {
+  "grade": "D0",
+  "reason": "all-orders bound settled constructively: polynomial conditionals cross Tsirelson",
+  "title": "THE ALL-ORDERS BOUND SETTLED CONSTRUCTIVELY (Derived): polynomial conditionals CROSS TSIRELSON -- an explicit edge-exact blend construction (P, Q = -xy + (1-x^2"
+ },
+ "QB-019": {
+  "grade": "D0",
+  "reason": "mechanism-unity selects 2 sqrt 2 (TLM inequality); verified to 6 decimals",
+  "title": "THE TSIRELSON-SELECTION QUESTION ANSWERED (Derived): MECHANISM-UNITY selects 2 sqrt 2 from the admissible [0, 3] -- the class of correlations generated by ONE r"
+ },
+ "QB-020": {
+  "grade": "D0",
+  "reason": "Tsirelson as a theorem of the framework; bilinearity forced; Horodecki form exact",
+  "title": "TSIRELSON AS A THEOREM OF THE MESH FRAMEWORK (Derived), WITH THE CORPUS-NATIVE SINGLET SATURATING IT: the corpus's response object per setting IS the derived ga"
+ },
+ "QB-021": {
+  "grade": "D0",
+  "reason": "composite positivity eliminated from the derivation",
+  "title": "COMPOSITE POSITIVITY ELIMINATED FROM THE TSIRELSON DERIVATION (Derived) -- the third axiom this framework has retired by its own structure: the cap needs only ("
+ },
+ "FND-STRAND-020": {
+  "grade": "D0",
+  "reason": "Poissonization law from three stated assumptions; confronted against three ENGINE sizes (model-internal), zero constants",
+  "title": "THE POISSONIZATION LAW: S_N = S_24^{N/24} -- PARAMETER-FREE, THREE SIZES CONFIRMED, PROMOTED AT DERIVED: THE STRAND-KINETICS ARC''S CORNERSTONE (Derived; bars w"
+ },
+ "FND-STRAND-025": {
+  "grade": "D2",
+  "reason": "conditional on Grant 3 (its own words); beamsplitter phenomenology in counting arithmetic",
+  "title": "THE THIRD GRANT ADOPTED -- INDIVISIBLE DELIVERY (''THE QUANTUM ARRIVES WHOLE'') -- AND ITS FIRST CONSEQUENCE DERIVED: THE FULL BEAMSPLITTER PHENOMENOLOGY IN COU"
+ },
+ "FND-STRAND-026": {
+  "grade": "D2",
+  "reason": "conditional on Grant 3; g2 faithfulness theorem; the measured 0.18 located as source purity",
+  "title": "ANTIBUNCHING FORMALIZED AGAINST THE QB PIN: THE FAITHFULNESS THEOREM -- BEAMSPLITTER g2 EQUALS THE SOURCE''S NORMALIZED SECOND FACTORIAL MOMENT, EXACTLY AND LOS"
+ },
+ "FND-STRAND-027": {
+  "grade": "D2",
+  "reason": "conditional on Grant 3 for the nonclassical rows; Mandel counting from threshold nucleation",
+  "title": "THE MANDEL COUNTING FORMULA FROM THRESHOLD NUCLEATION -- PHOTON-COUNT STATISTICS DERIVED FROM THE CORPUS''S OWN DETECTOR, THE CLASSICAL BOUNDARY PLACED AT Q = 0"
+ },
+ "FND-STRAND-028": {
+  "grade": "D2",
+  "reason": "conditional on Grant 3; delayed choice as a non-paradox; V^2 + D^2 = 1",
+  "title": "DELAYED CHOICE DERIVED AS A NON-PARADOX -- NO TRAJECTORY VARIABLE EXISTS FOR A LATE CHOICE TO RETRO-AFFECT, CHOICE-TIMING INVARIANCE IS A ONE-LINE THEOREM, AND "
+ },
+ "FND-MATTER-059-hist": {
+  "grade": "n/a",
+  "reason": "historical slot content, preserved not live",
+  "title": "[HISTORICAL SLOT-CONTENT, PRESERVED NOT LIVE (merge hygiene, 2026-08-09): this is the EARLIER content the FND-MATTER-059/060 id slots held (the FND-017 provenan"
+ },
+ "FND-MATTER-060-hist": {
+  "grade": "n/a",
+  "reason": "historical slot content, preserved not live",
+  "title": "[HISTORICAL SLOT-CONTENT, PRESERVED NOT LIVE (merge hygiene, 2026-08-09): this is the EARLIER content the FND-MATTER-059/060 id slots held (the FND-017 provenan"
+ },
+ "EM-RECON-021": {
+  "grade": "D0",
+  "reason": "psi = 0 exact solution of the full nonlinear driven system: all-orders decoupling",
+  "title": "TRANSVERSE-SECTOR DECOUPLING IS EXACT TO ALL ORDERS FOR THE DRIVEN CHANNEL (Derived) -- a by-product of Commission J that stands in its own right: psi = 0 is an"
+ },
+ "EM-RECON-024": {
+  "grade": "D2",
+  "reason": "E's direction derived under the operational definition with a conditional stated on the face (channel scope corrected by EM-RECON-026)",
+  "title": "[CHANNEL SCOPE (EM-RECON-026, 2026-08-09): the parallel-force derivation below is the q-EVEN contact channel; the ELECTRIC (q-linear) direction is E ~ v x zhat "
+ },
+ "NUC-015": {
+  "grade": "D0",
+  "reason": "surface/volume ratio is geometry: the coordination number cancels exactly; 1.33 to 1.34 against an empirical 1.16 (misses, kept)",
+  "title": "THE SURFACE/VOLUME RATIO IS GEOMETRY, NOT ACCIDENT: THE COORDINATION NUMBER CANCELS EXACTLY AND EVERY CLOSE-PACKED LATTICE GIVES 1.33-1.34 AGAINST AN EMPIRICAL "
+ },
+ "NUC-021": {
+  "grade": "D0",
+  "reason": "no-go: fcc is exactly 4-colourable, four labels; no neighbour-counting model gives a quadratic asymmetry term",
+  "title": "NO NEIGHBOUR-COUNTING MODEL CAN PRODUCE A QUADRATIC ASYMMETRY TERM: fcc IS EXACTLY 4-COLOURABLE AND THERE ARE EXACTLY FOUR SPIN-ISOSPIN LABELS (Derived) -- THE "
+ },
+ "CHEM-STRUCT-001": {
+  "grade": "D2",
+  "reason": "2n^2 from n^2 rope modes x TWO SPIN STATES: the spin doubling is imported, not derived",
+  "title": "Periodic shell capacities 2n^2 from n^2 rope modes x two spin states (as in the chemistry paper 4.1); benchmark verifies the counting"
+ },
+ "CHEM-GEO-002": {
+  "grade": "D1",
+  "reason": "the 90-degree asymptote is a parameter-free fixed point of two theorems, confronted with eight hydrides and with predictions registered for H2Po and BiH3; the extracted core width is a mechanism-consistent read, not a fit of the asymptote",
+  "title": "HEAVY-HYDRIDE 90-DEGREE ASYMPTOTE (Derived; the theorems' first prediction series): 90 degrees is the RAW FIXED POINT of the phase-blocking + orthogonality theo"
+ },
+ "NUC-001": {
+  "grade": "D3",
+  "reason": "atomic masses from knot count minus binding GIVEN MEASURED BINDING ENERGIES (its own words): a reconstruction",
+  "title": "Atomic masses reproduced to <0.1% from nucleon-knot count minus rope-mode-overlap binding (given measured binding energies)"
+ },
+ "FND-037": {
+  "grade": "D2",
+  "reason": "derived from four premises, three registered; all numerical agreements labelled retrodictions; the chromo extension named grade-limiting",
+  "title": "COMMISSION PSI \u2014 THE RECRUITMENT RULE IS LINEARITY WEARING GROUP THEORY: n_D PROPORTIONAL TO C_D IS DERIVED FROM FOUR PREMISES OF WHICH THREE ARE REGISTERED, TH"
+ },
+ "FND-040": {
+  "grade": "D2",
+  "reason": "the sign derived from registered premises including the FND-017 Lagrange-multiplier reading; the floor kappa_pack >= 50 is a bound on an unexplained input",
+  "title": "COMMISSION BET \u2014 THE SIGN IS DERIVED AND IT IS NEGATIVE: AN INEXTENSIBLE CONSTANT-TENSION MESH SOFTENS BY PURE ARC-LENGTH GEOMETRY, THE RETRACTED CLAUSE REFILLS"
+ },
+ "FND-090": {
+  "grade": "D2",
+  "reason": "exact isotropy at the FND-088 angles, under GRANT-SUBSTRUCTURE-TIGHT (FND-087): conditional on an adopted grant",
+  "title": "FND-REL-002 RE-DERIVED ON WOUND CARRIERS AT Derived GRADE (THE GRANT'S TRIGGER DELIVERED), WITH THE NECESSITY THEOREM SHARPENED BY EXACT SOLVE: THE NO-CONVECTIV"
+ }
+}

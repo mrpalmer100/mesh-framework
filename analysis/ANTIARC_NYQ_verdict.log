@@ -1,0 +1,4 @@
+[aan verdict] c1 FND-173 member: stored wsNyq 8.7e-04; re-gated RMS 8.3e-10 clos 5.0e-12 wsNyq 8.7e-04 gated_rc True (sub-reading: member carries Nyquist content above the bar)
+[aan verdict] c2 aligned arc point under A1: RMS 1.6e-09 clos 1.0e-06 wsNyq 4.0e-09 gated_clean False
+[aan verdict] c2 aligned arc point under A2: RMS 1.0e-08 clos 4.2e-07 wsNyq 1.9e-09 gated_clean False
+[aan verdict] VERDICT: ANTI-NYQ-CONTROL-FAIL

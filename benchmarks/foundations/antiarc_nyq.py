@@ -59,7 +59,7 @@ def solve_a2(T, st, key, seed, pin, arm, rounds=60):
     return x, st.get(key + '-cum', 0)
 
 
-def arc_point(T, st, key, xa, xb, arm):
+def arc_point(T, st, key, xa, xb, arm, budget=60):
     N = T.NS * T.NP
     t = xb - xa; nt = float(np.linalg.norm(t))
     if nt == 0.0:
@@ -67,7 +67,7 @@ def arc_point(T, st, key, xa, xb, arm):
     t /= nt
     sj, _ = SJ.make_instrument(T, xb, 'arc', (xb, t, DS), 50.0, cache=str(PAT)); bs = SJ.BandedTorusSolver(T.NS, T.NP, nglob=2)
     cum = st.get(key + '-cum', 0)
-    xn = SJ.gn_sparse(T, xb + DS * t, 'arc', (xb, t, DS), sj, bs, rounds=max(1, 60 - cum), st=st, key=key, project=proj_for(T, arm))
+    xn = SJ.gn_sparse(T, xb + DS * t, 'arc', (xb, t, DS), sj, bs, rounds=max(1, budget - cum), st=st, key=key, project=proj_for(T, arm))
     m = read(T, xn); cum = st.get(key + '-cum', 0)
     if not m['gated_rc']:
         return None, m, cum
@@ -81,8 +81,8 @@ def arc_point(T, st, key, xa, xb, arm):
 def main():
     import shutil
     free_gb = shutil.disk_usage(ROOT).free / 1e9
-    if free_gb < 2.0:                                   # 2026-10-04: the PC filled up mid-write (745 MB free); refuse to start rather than die inside a checkpoint write
-        print(f"[aan] REFUSING TO START: {free_gb:.2f} GB free on the drive holding {ROOT}; free at least 2 GB and rerun (the checkpoint is intact; atomic writes)", flush=True)
+    if free_gb < 20.0:                                  # 2026-10-04: the PC filled up twice (sjfac memos in %TEMP%, now pruned by the instrument); the guard protects the work machine, not just the run
+        print(f"[aan] REFUSING TO START: {free_gb:.2f} GB free on the drive holding {ROOT}; free at least 20 GB and rerun (the checkpoint is intact; atomic writes)", flush=True)
         raise SystemExit(2)
     st = PersistDict(pickle.loads(CKPT.read_bytes()) if CKPT.exists() else {})
     Ta = q1.QTGrid(144, 36, *CELLS['anti']); Tl = q1.QTGrid(144, 36, *CELLS['aligned'])
