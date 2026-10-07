@@ -734,3 +734,17 @@ anomalies ruled 2026-10-07 on the author's word: three were deliberate later pro
 parentheticals (GRV-014 via GRV-025/029, GRV-036 at GRV-045, QB-024 at QB-025) and GRV-024's '(Open)' was
 the withheld verdict GRV-025 delivered; no status changed, four title brackets added, GRV-014 regraded D0. NUC-001 is a D3 reconstruction by its own wording. No status
 changed; the grade column is the page.
+
+## AC. ANTI-ARC-NYQ-2 RENDERED (2026-10-07; the PC; charter analysis/ANTIARC_NYQ2_charter_LOCKED.md): THE LINEAGE CLOSES
+
+Verdict ANTI-FLAT-NYQ, arm A1 (analysis/ANTIARC_NYQ2_results.md; verdict log; sealed
+analysis/antiarc_nyq2_ckpt.pkl). The one repair worked: c2 gated clean under A1 at round 177 and under A2
+at round 64; the instrument certifies a known-clean aligned point under both arms. The sealed A1 arm then
+reads: 20 of 20 points gated on RMS/closure, wsNyq 9.0e-4 to 1.3e-3 (every point ten times over the bar),
+C1 rise +0.018 (flat), licence span covered, zero clean; A2 halted at p0. The 2026-09-07 march reproduces
+exactly and every state carries grid-scale content: the flatness is a fact of the 144x36 grid, not of the
+continuum. Consequence for the author's word: FND-174 registered -> Failed (kept) with the rider;
+FND-176/177 riders (chart-level caution inherited); FND-173 unchanged; scorecard and five numbers
+unchanged; the anti-aligned sector's input-ledger line gains the FND-174 continuum reading. The lineage
+ANTI-ARC to ANTI-ARC-NYQ-2 is closed by charter B-5; no further commission in it.
+

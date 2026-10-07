@@ -1,0 +1,28 @@
+[aan verdict] c1 FND-173 member: stored wsNyq 8.7e-04; re-gated RMS 8.3e-10 clos 5.0e-12 wsNyq 8.7e-04 gated_rc True (sub-reading: member carries Nyquist content above the bar)
+[aan verdict] c2 aligned arc point under A1: RMS 1.6e-09 clos 1.0e-06 wsNyq 4.0e-09 gated_clean True
+[aan verdict] c2 aligned arc point under A2: RMS 1.0e-08 clos 4.2e-07 wsNyq 1.9e-09 gated_clean True
+[aan verdict] seeds: s1 RMS 8.1e-09 wsNyq 8.8e-04
+[aan verdict] arm A1: 20 points gated on RMS/closure, 0 gated clean; halt None
+[aan verdict]   A1 p00 A2 0.0020024 rate +2.1410e-03 V_pt 1.2104e-02 f_dir 0.7589 om2 -1.110632 RMS 9.0e-09 clos 1.1e-11 wsNyq 9.0e-04 over bar rounds 6
+[aan verdict]   A1 p01 A2 0.0021736 rate +2.1401e-03 V_pt 1.2099e-02 f_dir 0.7589 om2 -1.110633 RMS 4.7e-09 clos 1.5e-10 wsNyq 9.2e-04 over bar rounds 1
+[aan verdict]   A1 p02 A2 0.0023448 rate +2.1406e-03 V_pt 1.2126e-02 f_dir 0.7622 om2 -1.110633 RMS 6.6e-09 clos 7.8e-12 wsNyq 9.4e-04 over bar rounds 9
+[aan verdict]   A1 p03 A2 0.0025162 rate +2.1423e-03 V_pt 1.2140e-02 f_dir 0.7640 om2 -1.110633 RMS 5.1e-09 clos 3.2e-12 wsNyq 9.6e-04 over bar rounds 4
+[aan verdict]   A1 p04 A2 0.0026875 rate +2.1421e-03 V_pt 1.2140e-02 f_dir 0.7640 om2 -1.110633 RMS 6.9e-09 clos 2.5e-10 wsNyq 9.7e-04 over bar rounds 1
+[aan verdict]   A1 p05 A2 0.0028589 rate +2.1423e-03 V_pt 1.2164e-02 f_dir 0.7670 om2 -1.110633 RMS 7.7e-09 clos 9.7e-12 wsNyq 1.0e-03 over bar rounds 9
+[aan verdict]   A1 p06 A2 0.0030303 rate +2.1429e-03 V_pt 1.2172e-02 f_dir 0.7680 om2 -1.110634 RMS 6.5e-09 clos 6.1e-12 wsNyq 1.0e-03 over bar rounds 4
+[aan verdict]   A1 p07 A2 0.0032018 rate +2.1429e-03 V_pt 1.2171e-02 f_dir 0.7680 om2 -1.110634 RMS 7.6e-09 clos 3.9e-10 wsNyq 1.0e-03 over bar rounds 1
+[aan verdict]   A1 p08 A2 0.0033732 rate +2.1427e-03 V_pt 1.2190e-02 f_dir 0.7703 om2 -1.110634 RMS 9.2e-09 clos 5.7e-11 wsNyq 1.1e-03 over bar rounds 8
+[aan verdict]   A1 p09 A2 0.0035446 rate +2.1434e-03 V_pt 1.2200e-02 f_dir 0.7716 om2 -1.110634 RMS 6.3e-09 clos 5.6e-12 wsNyq 1.1e-03 over bar rounds 4
+[aan verdict]   A1 p10 A2 0.0037161 rate +2.1433e-03 V_pt 1.2200e-02 f_dir 0.7716 om2 -1.110634 RMS 5.9e-09 clos 5.4e-10 wsNyq 1.1e-03 over bar rounds 1
+[aan verdict]   A1 p11 A2 0.0038876 rate +2.1433e-03 V_pt 1.2200e-02 f_dir 0.7716 om2 -1.110634 RMS 8.0e-09 clos 1.6e-09 wsNyq 1.1e-03 over bar rounds 1
+[aan verdict]   A1 p12 A2 0.0040590 rate +2.1429e-03 V_pt 1.2231e-02 f_dir 0.7753 om2 -1.110634 RMS 7.6e-09 clos 9.0e-12 wsNyq 1.1e-03 over bar rounds 9
+[aan verdict]   A1 p13 A2 0.0042304 rate +2.1432e-03 V_pt 1.2223e-02 f_dir 0.7745 om2 -1.110634 RMS 9.1e-09 clos 2.1e-11 wsNyq 1.2e-03 over bar rounds 8
+[aan verdict]   A1 p14 A2 0.0044019 rate +2.1434e-03 V_pt 1.2230e-02 f_dir 0.7754 om2 -1.110634 RMS 8.6e-09 clos 7.3e-12 wsNyq 1.2e-03 over bar rounds 9
+[aan verdict]   A1 p15 A2 0.0045734 rate +2.1433e-03 V_pt 1.2230e-02 f_dir 0.7754 om2 -1.110634 RMS 9.9e-09 clos 6.3e-10 wsNyq 1.2e-03 over bar rounds 1
+[aan verdict]   A1 p16 A2 0.0047448 rate +2.1432e-03 V_pt 1.2245e-02 f_dir 0.7772 om2 -1.110635 RMS 9.3e-09 clos 5.8e-12 wsNyq 1.2e-03 over bar rounds 10
+[aan verdict]   A1 p17 A2 0.0049163 rate +2.1428e-03 V_pt 1.2244e-02 f_dir 0.7772 om2 -1.110635 RMS 8.1e-09 clos 1.1e-11 wsNyq 1.3e-03 over bar rounds 4
+[aan verdict]   A1 p18 A2 0.0050877 rate +2.1428e-03 V_pt 1.2244e-02 f_dir 0.7772 om2 -1.110635 RMS 7.7e-09 clos 8.8e-10 wsNyq 1.3e-03 over bar rounds 1
+[aan verdict]   A1 p19 A2 0.0052591 rate +2.1428e-03 V_pt 1.2244e-02 f_dir 0.7771 om2 -1.110635 RMS 8.3e-09 clos 2.6e-09 wsNyq 1.3e-03 over bar rounds 1
+[aan verdict] arm A2: 0 points gated on RMS/closure, 0 gated clean; halt p0 refused
+[aan verdict] A1 on RMS/closure alone: 20 points, C1 rise +0.0183, wsNyq range 9.0e-04 to 1.3e-03
+[aan verdict] VERDICT: ANTI-FLAT-NYQ (arm A1)
