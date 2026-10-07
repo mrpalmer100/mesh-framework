@@ -11,7 +11,8 @@ invocations, but a hand-rolled PowerShell loop does neither. Since 2026-10-04 th
 instrument prunes its own memos (sparsej_instrument._prune_memos, newest two of
 each kind kept), so no launcher can refill the disk; the ANTI-ARC-NYQ driver also
 refuses to start under 20 GB free. House rule for any PC run: launch through
-go.py, or carry the prune in the loop; check free space and the memo count once
+go.py (which since 2026-10-07 takes an optional terminal pattern, e.g. COMPLETE for the ANTI-ARC drivers
+that print REFUSED per point, and refuses to launch under 20 GB free), never a hand-rolled loop; check free space and the memo count once
 on the first day:
     Get-PSDrive C | Select-Object @{N='FreeGB';E={[math]::Round($_.Free/1GB,1)}}
     (Get-ChildItem $env:TEMP -Force | Where-Object Name -like 'sjfac_*').Count
