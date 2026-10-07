@@ -290,8 +290,8 @@
   "title": "THE HUNT CONCLUDED -- NO-GO: the constructible channel space is mapped and excludes the locked quadrupole. Geometric dilution theorem: direction-carrying struct"
  },
  "GRV-014": {
-  "grade": "D2",
-  "reason": "a CONJECTURE admitted by audit (its own title); conditional on a quantum-induced level outside scope; status anomaly: Derived carrying a conjecture",
+  "grade": "D0",
+  "reason": "the conjecture's content is a corollary of GRV-025 and GRV-029 (both D0), promoted on that basis; title reconciled 2026-10-07",
   "title": "CONJECTURE (Mark's, audited and admitted): the quantum-completion hypothesis -- classical channels deliver Newton; the post-Newtonian structure (gamma = 1) is e"
  },
  "GRV-015": {
@@ -331,7 +331,7 @@
  },
  "GRV-024": {
   "grade": "D0",
-  "reason": "the absorption exam constructed and locked; title says (Open); status anomaly: Derived carrying an Open verdict-withheld exam",
+  "reason": "the absorption exam constructed and locked; title says (Open); title reconciled 2026-10-07: the verdict was delivered by GRV-025",
   "title": "THE ABSORPTION EXAM CONSTRUCTED AND ARMED, VERDICT WITHHELD BY ITS OWN INTEGRITY CHECK (Open): the principled decomposition is derived and locked before computa"
  },
  "GRV-025": {
@@ -361,7 +361,7 @@
  },
  "GRV-036": {
   "grade": "D0",
-  "reason": "definition audit: mass as stress-energy; title says (Modeled); status anomaly: Derived carrying a Modeled title",
+  "reason": "definition audit: mass as stress-energy; title says (Modeled); title reconciled 2026-10-07: promoted later, title parenthetical was stale",
   "title": "MASS WITHOUT KNOTS (Modeled) -- the definition audit forced by GRV-035, resolved, with the no-hair theorem falling out as strand mechanics: the glossary's 'resi"
  },
  "GRV-044": {
@@ -476,7 +476,7 @@
  },
  "QB-024": {
   "grade": "D0",
-  "reason": "cos^2(theta/2) from three energy channels and one symmetry; title says (Modeled); status anomaly",
+  "reason": "cos^2(theta/2) from three energy channels and one symmetry; title says (Modeled); title reconciled 2026-10-07: promoted at QB-025, title parenthetical was stale",
   "title": "THE HALF-ANGLE FROM ROPE ENERGETICS (Modeled) -- cos^2(theta/2) derived, the sector's declared summit taken: a circular transverse wave about spin axis n, analy"
  },
  "QB-025": {

@@ -10,7 +10,7 @@ is unchanged; this page is the grade column. Machine-readable: analysis/derived_
 
 ## The tally
 
-**95 D0, 2 D1, 19 D2, 2 D3, 3 not derivations (scope statements and historical slots).**
+**96 D0, 2 D1, 18 D2, 2 D3, 3 not derivations (scope statements and historical slots).**
 
 What the tally says: the programme's Derived column is almost entirely theorems and exact computations
 internal to the model (D0), which is what a mechanical theory's foundations should look like and is not
@@ -21,12 +21,14 @@ D1 content is filed under Modeled, not Derived: GRV-030 (g_dagger = cH0/2pi on S
 PRED-003 (the drift ratio, pending adjudication). The grade and the status measure different things, and
 the five numbers (NORTH_STAR 2b) count grades, not statuses.
 
-## Status anomalies found by the reading (for the author)
+## Status anomalies found by the reading, and the ruling (7 October 2026)
 
-- GRV-014 carries status Derived while its own title says CONJECTURE (admitted by audit). Graded D2.
-- GRV-024 carries status Derived while its title says (Open): the exam was constructed and its verdict withheld. Graded D0 for the construction.
-- GRV-036 and QB-024 carry status Derived while their titles say (Modeled). Graded D0 on content.
-- NUC-001 is Derived and is a reconstruction "given measured binding energies" (its own words): D3. It is the base of the scorecard's "Weights of atoms" row, graded D3 there already.
+Four Derived claims carried titles contradicting their status. The notes show three were deliberate later
+promotions with the title's parenthetical left stale (GRV-014 realised as a corollary of GRV-025 and GRV-029;
+GRV-036 promoted at GRV-045; QB-024 promoted at QB-025), and GRV-024's "(Open)" marked a verdict withheld at
+registration and delivered by GRV-025. Ruling on the author's word: no status changes; each title now opens
+with a bracket saying what happened. GRV-014 is regraded D0 as a corollary of two D0 claims. NUC-001 stays a D3
+reconstruction "given measured binding energies" by its own wording.
 
 ## The table
 
@@ -83,6 +85,7 @@ the five numbers (NORTH_STAR 2b) count grades, not statuses.
 | GRV-006 | D0 | theorem: G not derivable from current commitments; measured G used only to read the rigidity (ledger adjudicated) |
 | GRV-008 | D0 | three theorems on the tensor structure; gamma = 1 iff a response condition |
 | GRV-013 | D0 | no-go by geometric dilution theorem; rescue postulate refused |
+| GRV-014 | D0 | the conjecture's content is a corollary of GRV-025 and GRV-029 (both D0), promoted on that basis; title reconciled 2026-10-07 |
 | GRV-015 | D0 | tortuosity column derived; sign-lock theorem |
 | GRV-017 | D0 | no-monopole lemma |
 | GRV-018 | D0 | internal-mode dichotomy theorem |
@@ -90,10 +93,10 @@ the five numbers (NORTH_STAR 2b) count grades, not statuses.
 | GRV-020 | D0 | internal symmetry theorem, formal |
 | GRV-022 | D0 | registered negative of theorem quality: naive Sakharov route refuted at the tensor test (instrument-measured on the weave band, model-internal) |
 | GRV-023 | D0 | the gate mapped: one-metric necessary not sufficient (model-internal numerics) |
-| GRV-024 | D0 | the absorption exam constructed and locked; title says (Open); status anomaly: Derived carrying an Open verdict-withheld exam |
+| GRV-024 | D0 | the absorption exam constructed and locked; title says (Open); title reconciled 2026-10-07: the verdict was delivered by GRV-025 |
 | GRV-025 | D0 | IR-universal remainder is Einstein-Hilbert on the weave band (model-internal numerics under locked bar) |
 | GRV-029 | D0 | one-metric derivation by counting and exact bijection (sympy); makes GRV-002 unconditional in form |
-| GRV-036 | D0 | definition audit: mass as stress-energy; title says (Modeled); status anomaly: Derived carrying a Modeled title |
+| GRV-036 | D0 | definition audit: mass as stress-energy; title says (Modeled); title reconciled 2026-10-07: promoted later, title parenthetical was stale |
 | GRV-045 | D0 | handedness survives reconnection: exact 2 pi quantum exchanged (engine measurement, model-internal, length-independent) |
 | NUC-015 | D0 | surface/volume ratio is geometry: the coordination number cancels exactly; 1.33 to 1.34 against an empirical 1.16 (misses, kept) |
 | NUC-021 | D0 | no-go: fcc is exactly 4-colourable, four labels; no neighbour-counting model gives a quadratic asymmetry term |
@@ -120,7 +123,7 @@ the five numbers (NORTH_STAR 2b) count grades, not statuses.
 | QB-019 | D0 | mechanism-unity selects 2 sqrt 2 (TLM inequality); verified to 6 decimals |
 | QB-020 | D0 | Tsirelson as a theorem of the framework; bilinearity forced; Horodecki form exact |
 | QB-021 | D0 | composite positivity eliminated from the derivation |
-| QB-024 | D0 | cos^2(theta/2) from three energy channels and one symmetry; title says (Modeled); status anomaly |
+| QB-024 | D0 | cos^2(theta/2) from three energy channels and one symmetry; title says (Modeled); title reconciled 2026-10-07: promoted at QB-025, title parenthetical was stale |
 | QB-025 | D0 | two junctions realised in the engine obey the half-angle law (model-internal, zero parameters) |
 | SOL-002 | D0 | linking conservation under relaxation (model-internal) |
 | THM-002 | D0 | Gaussian partition function; equipartition matched |
@@ -143,7 +146,6 @@ the five numbers (NORTH_STAR 2b) count grades, not statuses.
 | FND-STRAND-027 | D2 | conditional on Grant 3 for the nonclassical rows; Mandel counting from threshold nucleation |
 | FND-STRAND-028 | D2 | conditional on Grant 3; delayed choice as a non-paradox; V^2 + D^2 = 1 |
 | GRV-002 | D2 | the four weak-field tests GIVEN the matched metric of GRV-001 (conditional, said so on its face) |
-| GRV-014 | D2 | a CONJECTURE admitted by audit (its own title); conditional on a quantum-induced level outside scope; status anomaly: Derived carrying a conjecture |
 | GRV-026 | D2 | gamma = 1 and 1.751 arcsec as a TWO-CONDITION theorem (conditional on EH dynamics and covariant sourcing; the scalar mixing measured model-internally) |
 | GRV-028 | D2 | the theorem strengthens to ONE condition; still conditional |
 | GRV-044 | D2 | closed-form saddle-point tail with the MEASURED Gaussian kernel model as input (model-internal) |
@@ -160,6 +162,6 @@ Grant 3 (indivisible delivery): FND-STRAND-025, 026, 027, 028. GRANT-SUBSTRUCTUR
 metric of GRV-001: GRV-002 (made unconditional in form by GRV-029, still conditional on EH dynamics and covariant
 sourcing through GRV-026/028). Imported constants: EM-RECON-006 (e), GRV-048 (G, l_P), FND-REL-004 (the registered a),
 CHEM-STRUCT-001 (two spin states), FND-MATTER-033 (one measured constant). Registered premises with an unexplained
-input: FND-037, FND-040, EM-016 (three conditionalities), EM-RECON-024 (one), GRV-014 (a conjecture), GRV-044
+input: FND-037, FND-040, EM-016 (three conditionalities), EM-RECON-024 (one), GRV-014 (a realised conjecture), GRV-044
 (a measured kernel model). Discharging any of these conditions moves its claim to D0, which is interior work; the
 route to D1 runs through confrontation with nature, not through discharging conditions.

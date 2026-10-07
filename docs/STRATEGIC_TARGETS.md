@@ -724,12 +724,13 @@ refuted as a continuum statement) stated in the charter before the run; the line
 ## AB. REGRADE EXECUTED (2026-10-07; sandbox; the reading commission named in section Y2)
 
 All 121 claims with status Derived graded against NORTH_STAR 2c (docs/DERIVED_GRADES.md; machine-readable
-analysis/derived_grades.json): 95 D0, 2 D1, 19 D2, 2 D3, 3 not derivations. Two rules applied strictly:
+analysis/derived_grades.json): 96 D0, 2 D1, 18 D2, 2 D3, 3 not derivations. Two rules applied strictly:
 an engine-internal numerical result is D0 evidence about the model, never D1; anything resting on an
 adopted grant (Grant 3: four STRAND claims; the substructure grant: FND-090) or an unexplained registered
 input is D2 however exact. The two D1 rows are CHEM-GEO-002 (the hydride asymptote with two predictions
 registered) and GRV-031 (a parameter-free candidate retired by SPARC). The programme's best D1 content
-(GRV-030, PRED-003) is filed as Modeled; grade and status measure different things. Four status
-anomalies for the author: GRV-014 (a conjecture at Derived), GRV-024 (an Open exam at Derived), GRV-036
-and QB-024 (Modeled titles at Derived). NUC-001 is a D3 reconstruction by its own wording. No status
+(GRV-030, PRED-003) is filed as Modeled; grade and status measure different things. Four title/status
+anomalies ruled 2026-10-07 on the author's word: three were deliberate later promotions with stale title
+parentheticals (GRV-014 via GRV-025/029, GRV-036 at GRV-045, QB-024 at QB-025) and GRV-024's '(Open)' was
+the withheld verdict GRV-025 delivered; no status changed, four title brackets added, GRV-014 regraded D0. NUC-001 is a D3 reconstruction by its own wording. No status
 changed; the grade column is the page.

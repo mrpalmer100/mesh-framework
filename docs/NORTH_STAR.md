@@ -60,7 +60,7 @@ reading commission re-grades the registry (named in STRATEGIC_TARGETS section Y,
 
 D1 is the grade the North Star is for. Today the registry's D1 content is the SPARC g_dagger = cH0/2pi
 (GRV-030) and PRED-003 pending adjudication, both filed as Modeled. The 121 Derived claims were graded on
-7 October 2026 (docs/DERIVED_GRADES.md): 95 D0, 2 D1 (CHEM-GEO-002; GRV-031 by a lost confrontation), 19 D2,
+7 October 2026 (docs/DERIVED_GRADES.md): 96 D0, 2 D1 (CHEM-GEO-002; GRV-031 by a lost confrontation), 18 D2,
 2 D3, 3 not derivations. The Derived column is the model's mathematics; the evidence for the theory lives in the
 handful of D1 rows, wherever their status field puts them. The machine side of the ledger
 (tools/input_ledger.py, docs/INPUT_LEDGER.md) lists which benchmarks consume which measured
