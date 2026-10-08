@@ -108,7 +108,9 @@ in the matter sector.
 (3) THE INTERNAL DIMENSION d: the gauge structure beyond U(1) depends on it and nothing joins it
 to the rest (FND-185: one real dimension where SU(2) and SU(3) need three to eight).
 (4) THE ELECTRON MODEL, blocked behind (1) and joined to nothing (ELEC-062).
-(5) THE PROTON's topology, blocked behind (1) and joined to nothing (FND-MATTER-066).
+(5) THE PROTON's topology, blocked behind (1) and joined to nothing (FND-MATTER-066); its price under
+pure length is measured, not assumed: a ~1500-crossing object (KNOT-REACH-2, band 1100 to 2000) plus
+NUC-003's layer.
 
 Gaps 2 to 5 are not the fence under other names: no registered identity connects them to it, and
 supplying the action scale would leave each of them where it is. Four more inputs (d_c, eps,

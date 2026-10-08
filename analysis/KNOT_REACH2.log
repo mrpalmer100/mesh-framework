@@ -1,0 +1,45 @@
+[kr2 n=3 k=0] cum 25000; L/D 16.894; change nan; det ok; contacts 3; 0.1 min
+[kr2 n=3 k=1] cum 50000; L/D 16.908; change 0.0008; det ok; contacts 3; 0.3 min
+[kr2 n=3] converged: iters 50000; L/D 16.908 (previous doubling 16.894, grade 0.0008); S -13.429; contacts 3 len 26.49; 0.4 min
+[kr2 n=5 k=0] cum 25000; L/D 25.184; change nan; det ok; contacts 3; 0.8 min
+[kr2 n=5 k=1] cum 50000; L/D 25.048; change 0.0055; det ok; contacts 3; 0.7 min
+[kr2 n=5] converged: iters 50000; L/D 25.048 (previous doubling 25.184, grade 0.0055); S -19.776; contacts 3 len 39.01; 1.5 min
+[kr2 n=7 k=0] cum 25000; L/D 33.736; change nan; det ok; contacts 3; 0.9 min
+[kr2 n=7 k=1] cum 50000; L/D 31.868; change 0.0586; det ok; contacts 7; 0.9 min
+[kr2 n=7 k=2] cum 100000; L/D 31.409; change 0.0146; det ok; contacts 8; 2.6 min
+[kr2 n=7 k=3] cum 200000; L/D 31.452; change 0.0014; det ok; contacts 8; 6.3 min
+[kr2 n=7] converged: iters 200000; L/D 31.452 (previous doubling 31.409, grade 0.0014); S -29.289; contacts 8 len 57.85; 10.7 min
+[kr2 n=9 k=0] cum 25000; L/D 43.403; change nan; det ok; contacts 3; 3.0 min
+[kr2 n=9 k=1] cum 50000; L/D 39.699; change 0.0933; det ok; contacts 11; 3.3 min
+[kr2 n=9 k=2] cum 100000; L/D 41.529; change 0.0441; det ok; contacts 13; 3.9 min
+[kr2 n=9 k=3] cum 200000; L/D 44.031; change 0.0568; det ok; contacts 14; 6.7 min
+[kr2 n=9 k=4] cum 400000; L/D 44.370; change 0.0076; det ok; contacts 14; 26.1 min
+[kr2 n=9] converged: iters 400000; L/D 44.370 (previous doubling 44.031, grade 0.0076); S -42.105; contacts 14 len 83.19; 43.0 min
+[kr2 n=11 k=0] cum 25000; L/D 49.233; change nan; det ok; contacts 12; 5.5 min
+[kr2 n=11 k=1] cum 50000; L/D 52.319; change 0.0590; det ok; contacts 14; 4.7 min
+[kr2 n=11 k=2] cum 100000; L/D 53.132; change 0.0153; det ok; contacts 17; 9.0 min
+[kr2 n=11 k=3] cum 200000; L/D 53.822; change 0.0128; det ok; contacts 17; 18.2 min
+[kr2 n=11 k=4] cum 400000; L/D 53.541; change 0.0052; det ok; contacts 17; 28.7 min
+[kr2 n=11] converged: iters 400000; L/D 53.541 (previous doubling 53.822, grade 0.0052); S -56.094; contacts 17 len 110.92; 66.0 min
+[kr2 n=13 k=0] cum 25000; L/D 54.760; change nan; det ok; contacts 15; 3.0 min
+[kr2 n=13 k=1] cum 50000; L/D 57.748; change 0.0517; det ok; contacts 13; 3.1 min
+[kr2 n=13 k=2] cum 100000; L/D 58.919; change 0.0199; det ok; contacts 14; 7.3 min
+[kr2 n=13 k=3] cum 200000; L/D 59.230; change 0.0053; det ok; contacts 13; 15.5 min
+[kr2 n=13] converged: iters 200000; L/D 59.230 (previous doubling 58.919, grade 0.0053); S -63.890; contacts 13 len 126.32; 28.9 min
+[kr2 n=15 k=0] cum 25000; L/D 70.795; change nan; det ok; contacts 25; 5.1 min
+[kr2 n=15 k=1] cum 50000; L/D 67.868; change 0.0431; det ok; contacts 27; 5.0 min
+[kr2 n=15 k=2] cum 100000; L/D 68.021; change 0.0023; det ok; contacts 25; 11.2 min
+[kr2 n=15] converged: iters 100000; L/D 68.021 (previous doubling 67.868, grade 0.0023); S -67.257; contacts 25 len 132.81; 21.2 min
+[kr2 n=17 k=0] cum 25000; L/D 75.143; change nan; det ok; contacts 23; 6.5 min
+[kr2 n=17 k=1] cum 50000; L/D 76.994; change 0.0240; det ok; contacts 32; 6.5 min
+[kr2 n=17 k=2] cum 100000; L/D 76.900; change 0.0012; det ok; contacts 34; 13.6 min
+[kr2 n=17] converged: iters 100000; L/D 76.900 (previous doubling 76.994, grade 0.0012); S -81.251; contacts 34 len 160.59; 26.6 min
+[kr2 n=19 k=0] cum 25000; L/D 87.622; change nan; det ok; contacts 34; 8.2 min
+[kr2 n=19 k=1] cum 50000; L/D 88.319; change 0.0079; det ok; contacts 39; 9.6 min
+[kr2 n=19] converged: iters 50000; L/D 88.319 (previous doubling 87.622, grade 0.0079); S -96.143; contacts 39 len 190.06; 17.8 min
+[kr2 n=21 k=0] cum 25000; L/D 97.311; change nan; det ok; contacts 34; 10.3 min
+[kr2 n=21 k=1] cum 50000; L/D 94.850; change 0.0260; det ok; contacts 32; 10.3 min
+[kr2 n=21 k=2] cum 100000; L/D 92.680; change 0.0234; det ok; contacts 31; 21.2 min
+[kr2 n=21 k=3] cum 200000; L/D 93.334; change 0.0070; det ok; contacts 36; 41.2 min
+[kr2 n=21] converged: iters 200000; L/D 93.334 (previous doubling 92.680, grade 0.0070); S -103.410; contacts 36 len 204.39; 82.9 min
+[kr2] KNOT-REACH-2 COMPLETE -- run the verdict (ladder complete; reach 21)

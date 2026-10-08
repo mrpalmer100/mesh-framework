@@ -796,3 +796,19 @@ had no machine of his own, so a NUC-BLIND-3 with the adjudicator holding the sea
 row's blind line is finished, and its next real question is the He-4/O-16 class of misses (shell and zero-point),
 a different commission. Housekeeping: the first push of this section carried stray lines of the verdict tool's
 code at its end (a packaging error in the sandbox); removed 2026-10-08, no content lost.
+
+## AF. KNOT-REACH-2 RENDERED (2026-10-08; the PC; charter analysis/KNOT_REACH2_charter_LOCKED.md): LINEAR, THE LINEAGE CLOSES
+
+Verdict LINEAR, p = 0.9605 +/- 0.0378 on the eight rungs n >= 7, reach n = 21, the full ladder
+(analysis/KNOT_REACH2_results.md; verdict log; sealed analysis/knot_reach2_ckpt.pkl; the sandbox verdict on the
+sealed checkpoint is the verdict of record). Every rung certified at both ends at both tilts and converged under the
+1-percent rule before the cap (deepest 400,000 iterations); five hours on the PC. The mass-versus-crossing law
+FND-MATTER-066 assumed is measured: linear within the band, slightly sublinear in the exponent, and the price of
+1836 under pure length moves from the assumed ~1029 crossings to about 1500 (band 1100 to 2000). At the registered
+coupling lam = 0.3 the two-term exponent sits at the band's lower edge within one standard error (reported, not read).
+Riders accepted 2026-10-08 on FND-MATTER-066 (the law measured, the gate at ~1500) and FND-MATTER-019 (reach 21
+under the convergence rule; seats 7 to 21 on the record); NORTH_STAR section 4 gap 5's price line now reads "a
+~1500-crossing object (measured) plus NUC-003's layer". No status change; the five numbers unchanged (a price is not
+a prediction). The lineage KNOT-REACH to KNOT-REACH-2 is closed by charter; the next question for gap 5 is the
+object, not the law.
+
