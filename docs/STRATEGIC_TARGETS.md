@@ -784,9 +784,16 @@ of mass, though the sub-reading shows it is what the residual is (corr +0.861 wi
 is ten times smaller and not pairing-shaped (corr -0.18). The programme's first out-of-sample confrontation in the
 matter sector; not external adjudication (the author's draw), so the five numbers are unchanged. Riders
 accepted 2026-10-08 on NUC-018, NUC-005, NUC-A and NUC-B; the scorecard row (NORTH_STAR section 1) carries the
-out-of-sample line, grade D3 unchanged. NUC-BLIND-2 chartered 2026-10-08 (analysis/NUC_BLIND_2_charter_DRAFT.md,
-for the author's lock once an adjudicator is named): the same two models, a seed chosen and drawn by a person
-who is not the author; a pass is the first externally adjudicated prediction (section 2b, 0 to 1).
+out-of-sample line, grade D3 unchanged. NUC-BLIND-2 chartered and LOCKED 2026-10-08 (analysis/NUC_BLIND_2_charter_LOCKED.md):
+the same two models on a draw chosen and run by the adjudicator mike (seed 1969, test sha256 ca176a47...), sealed
+M1/M2 before the truth is read; a pass is the first externally adjudicated prediction (section 2b, 0 to 1).
+NUC-BLIND-2 RENDERED 2026-10-08 (analysis/NUC_BLIND_2_results.md): M1 BLIND-AGREES at 0.138/0.227 percent of mass,
+M2 BLIND-AGREES at 0.016/0.035, each verdict once on the PC; the sub-readings repeat (M1's residual is the declared
+asymmetry omission, corr +0.83; M2's is not pairing-shaped). The two draws agree to the second digit. By B-6 the
+programme's first externally adjudicated prediction; section 2b moved 0 to 1 and the riders (NUC-018, NUC-A/B)
+and the row's grade-column line were accepted 2026-10-08 on the author's word. Grade D3 stands. Named next-order NUC-BLIND-3 (the
+adjudicator keeps the sealed file) only if a stronger adjudication is wanted; otherwise this row's blind line is
+finished.
   --unit mass    : residual = 100 (pred - truth) / m_atom, the house unit of the nuclear scorecard row (NUC-005/018:
                    mass error), m_atom = Z m_p + N m_n + Z m_e - B with NUC-005's constants (938.272, 939.565, 0.511)
 --label M1 (optional, added 2026-10-07 for NUC-BLIND-1 before any seal): scores several pre-registered models on ONE

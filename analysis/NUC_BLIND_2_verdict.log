@@ -1,0 +1,16 @@
+[holdout] NUC_BLIND_2: 50/50 held-out rows predicted; residual (mass) rms 0.138, max |r| 0.2271; bars rms <= 0.25, max <= 0.6
+[holdout]   worst: Z= 48 N= 82 A=130  residual +0.2271
+[holdout]   worst: Z= 38 N= 64 A=102  residual +0.2194
+[holdout]   worst: Z= 94 N=152 A=246  residual +0.2189
+[holdout]   worst: Z= 53 N= 87 A=140  residual +0.212
+[holdout]   worst: Z= 39 N= 64 A=103  residual +0.2059
+[holdout] VERDICT_M1: BLIND-AGREES  -> analysis/holdout/NUC_BLIND_2/VERDICT_M1.json (kept)
+[holdout] NUC_BLIND_2: 50/50 held-out rows predicted; residual (mass) rms 0.016, max |r| 0.03499; bars rms <= 0.25, max <= 0.6
+[holdout]   worst: Z= 12 N= 19 A= 31  residual +0.03499
+[holdout]   worst: Z= 11 N= 15 A= 26  residual +0.03453
+[holdout]   worst: Z= 15 N= 24 A= 39  residual +0.03162
+[holdout]   worst: Z= 15 N= 22 A= 37  residual +0.03061
+[holdout]   worst: Z=  8 N=  6 A= 14  residual -0.03042
+[holdout] VERDICT_M2: BLIND-AGREES  -> analysis/holdout/NUC_BLIND_2/VERDICT_M2.json (kept)
+[nb1 N5 M1] verdict BLIND-AGREES (rms 0.1380, max 0.2271 mass); corr(residual, 23 (N-Z)^2/A) = +0.829 -> sub-reading recorded, verdict not FAILS
+[nb1 N5 M2] verdict BLIND-AGREES (rms 0.0160, max 0.0350 mass); corr(residual, pairing indicator) = -0.221 -> sub-reading recorded, verdict not FAILS
