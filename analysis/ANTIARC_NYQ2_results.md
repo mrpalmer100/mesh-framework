@@ -53,7 +53,7 @@ FND-174 for grid content, on the plain corrector, reproducibly. FND-173's member
 its own bars; the bar that catches it postdates it; its rider says so). FND-172's structural root is
 untouched (a closed form, not a march).
 
-## Consequences (on the author's word)
+## Consequences (adopted on the author's word, 2026-10-07)
 
 FND-174: status registered -> Failed (kept), with the rider: refuted as a continuum statement by
 ANTI-ARC-NYQ-2 under the locked Nyquist bar; the 2026-09-07 march stands as a record of the 144x36 grid.

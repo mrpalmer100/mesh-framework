@@ -1,0 +1,234 @@
+{
+ "name": "NUC_BLIND_1",
+ "section": "W (STRATEGIC_TARGETS, 2026-10-04)",
+ "drawn_by": "palmer",
+ "drawn_at_utc": "2026-10-08T00:33:25Z",
+ "table": "data\\ame2012\\AME2012.txt",
+ "table_sha256": "88c6272c9e4117d68ac1317e2590c9e376d25f77c9bf68fd6062bbb4e238cb13",
+ "table_rows": 2438,
+ "eligible_rows": 2397,
+ "min_a": 12,
+ "excluded_calibrators": [
+  [
+   20,
+   20
+  ]
+ ],
+ "seed": 92847574954767,
+ "n_test": 50,
+ "n_train": 2388,
+ "train_sha256": "7eda872326ea1d05eab3af44e60ceb0ab623c7306dc30f6aad5c5b4d24c6883a",
+ "test_sha256": "4abe4099897e5ae5e339a421522bb2cd172d9de7491cf1ee5bfffd064630466e",
+ "test_zn": [
+  [
+   8,
+   8
+  ],
+  [
+   8,
+   9
+  ],
+  [
+   20,
+   26
+  ],
+  [
+   23,
+   26
+  ],
+  [
+   32,
+   33
+  ],
+  [
+   31,
+   36
+  ],
+  [
+   28,
+   40
+  ],
+  [
+   31,
+   38
+  ],
+  [
+   35,
+   34
+  ],
+  [
+   38,
+   38
+  ],
+  [
+   33,
+   47
+  ],
+  [
+   34,
+   48
+  ],
+  [
+   39,
+   46
+  ],
+  [
+   38,
+   48
+  ],
+  [
+   34,
+   53
+  ],
+  [
+   43,
+   48
+  ],
+  [
+   40,
+   56
+  ],
+  [
+   46,
+   56
+  ],
+  [
+   42,
+   61
+  ],
+  [
+   45,
+   58
+  ],
+  [
+   54,
+   59
+  ],
+  [
+   52,
+   64
+  ],
+  [
+   53,
+   66
+  ],
+  [
+   51,
+   69
+  ],
+  [
+   57,
+   69
+  ],
+  [
+   52,
+   83
+  ],
+  [
+   61,
+   82
+  ],
+  [
+   55,
+   89
+  ],
+  [
+   58,
+   88
+  ],
+  [
+   69,
+   78
+  ],
+  [
+   64,
+   85
+  ],
+  [
+   61,
+   90
+  ],
+  [
+   62,
+   92
+  ],
+  [
+   67,
+   88
+  ],
+  [
+   73,
+   86
+  ],
+  [
+   74,
+   96
+  ],
+  [
+   79,
+   92
+  ],
+  [
+   82,
+   98
+  ],
+  [
+   78,
+   108
+  ],
+  [
+   84,
+   105
+  ],
+  [
+   80,
+   113
+  ],
+  [
+   77,
+   117
+  ],
+  [
+   83,
+   123
+  ],
+  [
+   86,
+   122
+  ],
+  [
+   88,
+   120
+  ],
+  [
+   87,
+   137
+  ],
+  [
+   92,
+   135
+  ],
+  [
+   94,
+   136
+  ],
+  [
+   94,
+   140
+  ],
+  [
+   94,
+   152
+  ]
+ ],
+ "rule": "The commission reads train.txt only. test.txt is read once, by tools/holdout_verdict.py, after the predictions file is sealed. No redraw.",
+ "prediction_sha256": null,
+ "prediction_sealed_at_utc": null,
+ "verdict": null,
+ "prediction_sha256_M1": "f0cb0050875fffb84c1776c19eb9528930c45390f413b68385cab6b6a6a09598",
+ "prediction_file_M1": "analysis/NUC_BLIND_1_pred_M1.txt",
+ "prediction_sealed_at_utc_M1": "2026-10-08T00:38:42Z",
+ "prediction_sha256_M2": "0823ad17b4e9dc8ecf70bf3ae42eb26ed67d00c4ab14dfaf59377d40544069bf",
+ "prediction_file_M2": "analysis/NUC_BLIND_1_pred_M2.txt",
+ "prediction_sealed_at_utc_M2": "2026-10-08T00:38:42Z"
+}

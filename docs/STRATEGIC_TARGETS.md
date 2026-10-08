@@ -743,7 +743,7 @@ at round 64; the instrument certifies a known-clean aligned point under both arm
 reads: 20 of 20 points gated on RMS/closure, wsNyq 9.0e-4 to 1.3e-3 (every point ten times over the bar),
 C1 rise +0.018 (flat), licence span covered, zero clean; A2 halted at p0. The 2026-09-07 march reproduces
 exactly and every state carries grid-scale content: the flatness is a fact of the 144x36 grid, not of the
-continuum. Consequence for the author's word: FND-174 registered -> Failed (kept) with the rider;
+continuum. Adopted 2026-10-07 on the author's word: FND-174 registered -> Failed (kept) with the rider;
 FND-176/177 riders (chart-level caution inherited); FND-173 unchanged; scorecard and five numbers
 unchanged; the anti-aligned sector's input-ledger line gains the FND-174 continuum reading. The lineage
 ANTI-ARC to ANTI-ARC-NYQ-2 is closed by charter B-5; no further commission in it.
@@ -765,7 +765,7 @@ KNOT-REACH-2 chartered and LOCKED 2026-10-07 (analysis/KNOT_REACH2_charter_LOCKE
 benchmarks/foundations/knot_reach2.py, smoke-tested): the one repair under section 5 of NORTH_STAR, the
 same ladder with the budget rule replaced by a convergence rule fixed before any rung (doublings of 25000
 until the length moves under 1 percent, cap 1.6 million, certificates at every doubling; a rung at the cap
-unconverged is the reach), then the lineage stops whatever it returns.
+unconverged is the reach), then the lineage stops whatever it returns. Running on the PC.
 
 ## AE. NUC-BLIND-1 LOCKED AND SEALED (2026-10-07; the first confrontation under bar W; charter analysis/NUC_BLIND_1_charter_LOCKED.md)
 
@@ -791,32 +791,8 @@ NUC-BLIND-2 RENDERED 2026-10-08 (analysis/NUC_BLIND_2_results.md): M1 BLIND-AGRE
 M2 BLIND-AGREES at 0.016/0.035, each verdict once on the PC; the sub-readings repeat (M1's residual is the declared
 asymmetry omission, corr +0.83; M2's is not pairing-shaped). The two draws agree to the second digit. By B-6 the
 programme's first externally adjudicated prediction; section 2b moved 0 to 1 and the riders (NUC-018, NUC-A/B)
-and the row's grade-column line were accepted 2026-10-08 on the author's word. Grade D3 stands. Named next-order NUC-BLIND-3 (the
-adjudicator keeps the sealed file) only if a stronger adjudication is wanted; otherwise this row's blind line is
-finished.
-  --unit mass    : residual = 100 (pred - truth) / m_atom, the house unit of the nuclear scorecard row (NUC-005/018:
-                   mass error), m_atom = Z m_p + N m_n + Z m_e - B with NUC-005's constants (938.272, 939.565, 0.511)
---label M1 (optional, added 2026-10-07 for NUC-BLIND-1 before any seal): scores several pre-registered models on ONE
-draw. The seal and the verdict are then kept under per-label keys (prediction_sha256_M1, verdict_M1) and
-VERDICT_M1.json; each label is sealed once and read once, and the sealed test file is the same for all labels.
-MP, MN, ME = 938.272, 939.565, 0.511   # NUC-005's constants, for --unit mass
-    ap.add_argument('--unit', choices=['percent', 'mev', 'excess', 'mass'], default='percent')
-    ap.add_argument('--label', default='', help='model label when several pre-registered models score one draw')
-    sfx = f'_{a.label}' if a.label else ''
-    K_SHA, K_FILE, K_AT, K_VER = 'prediction_sha256' + sfx, 'prediction_file' + sfx, 'prediction_sealed_at_utc' + sfx, 'verdict' + sfx
-    VFILE = hd / f'VERDICT{sfx}.json'
-        if man.get(K_SHA):
-            sys.exit(f'[holdout] REFUSED: predictions already sealed ({man[K_SHA][:16]}...). One seal.')
-        man[K_SHA] = ph; man[K_FILE] = str(a.predictions)
-        man[K_AT] = time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())
-    if VFILE.exists():
-        sys.exit(f'[holdout] REFUSED: {VFILE.name} exists. A verdict is computed once and kept.')
-    if not man.get(K_SHA):
-    if ph != man[K_SHA]:
-        sys.exit(f'[holdout] REFUSED: predictions file changed since seal ({ph[:16]} != {man[K_SHA][:16]})')
-        elif a.unit == 'mass':
-            r = 100.0 * (p - b) / (z * MP + n * MN + z * ME - b)
-    out = {'name': a.name, 'label': a.label, 'verdict': verdict, 'unit': a.unit, 'bar_rms': a.bar_rms, 'bar_max': a.bar_max,
-    VFILE.write_text(json.dumps(out, indent=1) + '\n')
-    man[K_VER] = verdict; mp.write_text(json.dumps(man, indent=1) + '\n')
-    print(f'[holdout] VERDICT{sfx}: {verdict}  -> analysis/holdout/{a.name}/{VFILE.name} (kept)')
+and the row's grade-column line were accepted 2026-10-08 on the author's word. Grade D3 stands. The adjudicator
+had no machine of his own, so a NUC-BLIND-3 with the adjudicator holding the sealed file is not available; this
+row's blind line is finished, and its next real question is the He-4/O-16 class of misses (shell and zero-point),
+a different commission. Housekeeping: the first push of this section carried stray lines of the verdict tool's
+code at its end (a packaging error in the sandbox); removed 2026-10-08, no content lost.
