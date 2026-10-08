@@ -1,0 +1,6 @@
+[kr verdict] rungs run [3, 5, 7]; certified at grade [3, 5]; halt: rung 7 fails the 3-percent grade (0.070); reach 5
+[kr verdict]   n= 3 N= 120 L/D   16.894 grade 0.0001 S  -13.418 contacts   3 len   26.47 det_ok True 0.3 min
+[kr verdict]   n= 5 N= 200 L/D   25.049 grade 0.0059 S  -19.779 contacts   3 len   39.01 det_ok True 1.5 min
+[kr verdict]   n= 7 N= 280 L/D   31.535 grade 0.0699 S  -29.536 contacts   7 len   58.34 det_ok True 5.3 min
+[kr verdict K5] reach: n = 5 (largest rung certified at both ends and within the 3-percent grade)
+[kr verdict] VERDICT: REACH-SHORT (0 certified rungs at n >= 7; the law is not read)

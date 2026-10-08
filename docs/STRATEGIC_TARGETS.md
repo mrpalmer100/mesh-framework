@@ -748,3 +748,20 @@ FND-176/177 riders (chart-level caution inherited); FND-173 unchanged; scorecard
 unchanged; the anti-aligned sector's input-ledger line gains the FND-174 continuum reading. The lineage
 ANTI-ARC to ANTI-ARC-NYQ-2 is closed by charter B-5; no further commission in it.
 
+
+## AD. KNOT-REACH RENDERED (2026-10-07; the PC; charter analysis/KNOT_REACH_charter_LOCKED.md): REACH-SHORT
+
+Verdict REACH-SHORT, reach n = 5 (analysis/KNOT_REACH_results.md; analysis/KNOT_REACH_verdict.log; sealed
+analysis/knot_reach_ckpt.pkl; the sandbox verdict on the sealed checkpoint reproduces the PC's line). Rungs
+3 and 5 certified at both ends and within the 3-percent grade, reproducing FND-MATTER-019's seats to 0.3
+and 0.2 percent; rung 7 certified at both ends (det 7 at both tilts, before and after) but unconverged at
+grade 0.070 (33.74 at half budget, 31.54 at full, still falling); by B-5 the ladder stopped there and no
+law was read. The result is about the instrument, not the law: the locked budget rule 25000 n/3 under-budgets
+the tightener as the point count grows, while FND-MATTER-019's seats used per-knot budgets. FND-MATTER-066's
+"about a thousand crossings under pure length" keeps its status as an assumption; gap 5's price is unchanged.
+Consequence for the author's word: riders on FND-MATTER-019 (the reach under a linear rule; its own seats
+were per-knot budgeted) and FND-MATTER-066 (the law not reached); no status change; scorecard and five
+numbers unchanged. Named next-order, one repair under section 5 of NORTH_STAR: KNOT-REACH-2, the same
+ladder with the budget rule replaced by a convergence rule fixed before any rung (doublings of 25000 until
+the length moves under 1 percent, cap 1.6 million; a rung at the cap unconverged is the reach), then the
+lineage stops whatever it returns.

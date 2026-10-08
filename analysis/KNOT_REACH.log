@@ -1,0 +1,4 @@
+[kr n=3] certified; N 120 iters 25000; L/D 16.894 (half-budget 16.896, grade 0.0001); S -13.418; contacts 3 len 26.47; 0.3 min
+[kr n=5] certified; N 200 iters 41666; L/D 25.049 (half-budget 25.196, grade 0.0059); S -19.779; contacts 3 len 39.01; 1.5 min
+[kr n=7] certified; N 280 iters 58333; L/D 31.535 (half-budget 33.740, grade 0.0699); S -29.536; contacts 7 len 58.34; 5.3 min
+[kr] KNOT-REACH COMPLETE -- run the verdict (rung 7 fails the 3-percent grade (0.070); reach 5)
