@@ -11,7 +11,7 @@ Repository: `mesh-framework` (renamed from `rope-framework` on 9 September 2026;
 
 **Version:**
 <!-- BEGIN GENERATED: version -->
-3.32.0
+3.33.0
 <!-- END GENERATED: version -->
 
 A machine-verified development of the Rope Hypothesis into the mesh framework: a classical, mechanical model in which the vacuum is a mesh of physical filaments and matter and light are its configurations, put into falsifiable, independently checkable form.
@@ -25,7 +25,7 @@ A machine-verified development of the Rope Hypothesis into the mesh framework: a
 >
 > **What makes it unusual is the discipline.** Every claim is registered with a pass/fail line drawn *before* the computation runs, and the failures are kept on permanent display rather than quietly dropped. As of this release:
 <!-- BEGIN GENERATED: corpus_stats -->
-*777 registered claims, 641 code-backed and passing, 121 Derived, 48 registered Failed and kept.*
+*779 registered claims, 641 code-backed and passing, 121 Derived, 49 registered Failed and kept.*
 <!-- END GENERATED: corpus_stats --> A dealbreaker, if one exists, should be findable in about five minutes — start with [`KNOWN_LIMITATIONS.md`](KNOWN_LIMITATIONS.md).
 >
 > **Where it is strong (the five-line version):** electromagnetism and optics derive from one wave equation on the weave; the classic gravity tests (light bending, Mercury, clock rates) come out exact; the fine-structure constant lands at 178 ppm from geometry; chemistry and the nuclear mass table are full mechanical layers; and the exact quantum ceiling (the Tsirelson bound) is a theorem. Full account: [`docs/WHERE_IT_STANDS.md`](docs/WHERE_IT_STANDS.md); how it unfolded: [`docs/SURPRISES.md`](docs/SURPRISES.md).
@@ -34,9 +34,11 @@ A machine-verified development of the Rope Hypothesis into the mesh framework: a
 
 > **Corpus state:**
 <!-- BEGIN GENERATED: status_breakdown -->
-777 registered claims (121 Derived, 556 Modeled, 4 EFT-constrained, 2 Conjecture, 7 Open, 48 Failed-and-kept, 39 registered); 641 code-backed.
+779 registered claims (121 Derived, 556 Modeled, 4 EFT-constrained, 2 Conjecture, 7 Open, 49 Failed-and-kept, 40 registered); 641 code-backed.
 <!-- END GENERATED: status_breakdown -->
 > Counts regenerate from `claims.yaml` — the authority is the registry, not this line.
+
+**📄 [THE FIRST ADJUDICATED CONFRONTATION, 8 Oct 2026](docs/history/RELEASE_NOTES_v3.33.0.md)** -- *v3.33.0*: the nuclear mass model scored blind on two sealed draws of fifty isotopes, the author's and an adjudicator's, all four verdicts inside the pre-locked bars (NUC-BLIND-1/2; externally adjudicated predictions 0 to 1); the gap map drawn (CLOSURE-MATRIX, FND-186: five load-bearing gaps) and the gauge inventory taken (FND-185: discrete only); the anti-aligned continuum reading refuted under a Nyquist bar and kept (FND-174); the action-bridge chain closed at the junction (FND-183, FND-182 to T4); 779 claims, 49 Failed and kept.
 
 **📄 [THE NORTH STAR CUT, 4 Oct 2026](docs/history/RELEASE_NOTES_v3.32.0.md)** -- *v3.32.0*: the goal written down and cut against -- the registered zero-point ledger predicts the Casimir force pi^2 hbar c/(240 d^4) exactly given hbar (FND-178, consistency-tier); a charge's force along its strand derived, F = 2 pi c_L eps', and from it the vacuum's charge-creation field window (FND-181, FND-182, T2); GRV-045 corrected on the record; the anti-aligned continuum claim FND-175 refuted on reproducibility and kept, the bordered corrector retired; 775 claims, 48 Failed and kept.
 
@@ -58,7 +60,7 @@ A machine-verified development of the Rope Hypothesis into the mesh framework: a
 
 
 <!-- BEGIN GENERATED: current_release -->
-**Current release: v3.32.0** (4 Oct 2026), 777 claims.
+**Current release: v3.33.0** (8 Oct 2026), 779 claims.
 <!-- END GENERATED: current_release -->
 Headline: THE ENERGY BILL — priced and payable. The vacuum's constituents orbit at exactly c (two registered numbers multiplying to one), and the wave's dynamical share [0.62, 0.78] fits inside the matter sector's registered zero-point window (< 0.889): zero-point energy IS the winding's rotation. Full account: [`docs/history/RELEASE_NOTES_v3.26.77.md`](docs/history/RELEASE_NOTES_v3.26.77.md); prior: [`docs/history/RELEASE_NOTES_v3.26.76.md`](docs/history/RELEASE_NOTES_v3.26.76.md).
 
@@ -194,8 +196,8 @@ A sector earns "Derived" status only where it follows from the strand mechanics,
 - **Electromagnetism / optics** — Maxwell's equations, charge as winding, optics (10/10 benchmarks); the strongest derived sectors.
 - **Chemistry** — a full mechanical layer: covalent bonding from a mode-overlap functional, the ionic-force sign theorem, first-principles molecular geometry (the 90° heavy-hydride asymptote, with registered predictions for H₂Po and BiH₃), hydrogen bonding, metallic bonding, and reaction dynamics (activation barriers from phase-frustration; Hammond and catalysis emergent). **The Schrödinger equation is adopted, not derived** — ℏ and the absolute atomic scale are inherited inputs (see the chemistry paper, §3.1a). Several energies are "consistency-tier" against quantum chemistry, and labeled as such.
 - **Gravity** — Newtonian gravity is recovered; the relativistic completion is falsified under stated assumptions (a theorem-grade no-go, not a fixable discrepancy).
-- **Nuclear** — an exact Yukawa force law and two mass tracks that meet in the middle: a discrete bond-counting model from A=2..16 (one He-4-calibrated constant, r = 0.978; the A=5 instability, the Be-8 maximum, and C-12's three-alpha structure all emerge rather than being imposed — NUC-007/008/009), and a semi-empirical mass formula now derived from classical physics across all five terms (volume, surface, Coulomb with diffuseness and exchange, asymmetry, pairing) spanning A~8 through U-238 with the heavy-table binding gap closed to ~1%; H-1 remains inputs-by-construction and a quantum shell/pairing tier remains the registered frontier.
-- **Particle sector** — lepton mass ratios (Koide) and the Weinberg angle DEMOTED to kept coincidences (v3.31.0: sensitivity 71; three choice points); no derived Weinberg angle; the absolute mass scale is an open problem.
+- **Nuclear** — an exact Yukawa force law and two mass tracks that meet in the middle: a discrete bond-counting model from A=2..16 (one He-4-calibrated constant, r = 0.978; the A=5 instability, the Be-8 maximum, and C-12's three-alpha structure all emerge rather than being imposed — NUC-007/008/009), and a semi-empirical mass formula now derived from classical physics across all five terms (volume, surface, Coulomb with diffuseness and exchange, asymmetry, pairing) spanning A~8 through U-238 with the heavy-table binding gap closed to ~1%; H-1 remains inputs-by-construction and a quantum shell/pairing tier remains the registered frontier. Scored blind under the hold-out bar on two sealed draws of fifty isotopes, the author's and an adjudicator's, all four verdicts inside the pre-locked bars (NUC-BLIND-1/2, v3.33.0; the first externally adjudicated prediction).
+- **Particle sector** — lepton mass ratios (Koide) and the Weinberg angle DEMOTED to kept coincidences (v3.31.0: sensitivity 71; three choice points); no derived Weinberg angle; the absolute mass scale is an open problem. <!-- version-ok: history citation -->
 
 ## Repository structure
 

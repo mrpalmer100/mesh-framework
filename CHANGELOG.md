@@ -508,6 +508,14 @@
   Lambda_nat <= 4.7e34, chi_required >= 2.1e-35. KL updated.
   713 claims.
 
+## 3.33.0 (2026-10-08) -- THE FIRST ADJUDICATED CONFRONTATION: THE WEIGHTS OF ATOMS PREDICTED BLIND, THE GAP MAP DRAWN, ONE CONTINUUM CLAIM REFUTED UNDER A NYQUIST BAR
+
+- Five numbers: externally adjudicated predictions 0 -> 1 (NUC-BLIND-2); the other four unchanged. First release carrying the five numbers (NORTH_STAR 2b) and the D0-D3 grade column (2c).
+- NUC-BLIND-1/2 under standing bar W: the nuclear mass models NUC-018 (three-term) and NUC-A/B (derived a_A = 19.85) scored on two sealed draws of 50 AME2012 isotopes, the author's and an adjudicator's; all four verdicts BLIND-AGREES (0.12-0.14 and 0.011-0.016 percent of mass rms); riders NUC-018/005/A/B; grade D3 stands. tools/holdout_draw.py, tools/holdout_verdict.py.
+- FND-183..186 registered (779 claims): ACTION-BRIDGE (BRIDGE-NO-MECHANISM), the fourth grant (contact acts on surfaces), GAUGE-INVENTORY (DISCRETE-ONLY: the weave's only continuous internal symmetry is the SO(2) spent on electromagnetism; P-even), CLOSURE-MATRIX (five load-bearing gaps, one the fence). NORTH_STAR section 4 amended to five gaps; docs/SM_EMERGENCE.md (1/4/7); docs/DERIVED_GRADES.md (96/2/18/2/3); tools/input_ledger.py (22 flags adjudicated, strict passes); docs/MESH_CHALLENGES.md.
+- FND-174 registered -> Failed (kept): ANTI-ARC-NYQ CONTROL-FAIL, then ANTI-ARC-NYQ-2 (the one repair) read the sealed arm at wsNyq ten times the bar at every point; the lineage closed. FND-182 T2 -> T4 (JUNCTION-LOCK: the registered junction locks no azimuth, f = 0). The action-bridge chain (STRAND-MASS-SCALE, CROSSING-PRICE, NODE-STANDOFF, JUNCTION-LOCK) traced hbar's bridge and the charge-creation field to a strand's face at a node; "the tie holds the face" not granted.
+- KNOT-REACH: REACH-SHORT at n = 5 under the linear budget rule (riders FND-MATTER-019/066); KNOT-REACH-2 (convergence rule) locked and running on the PC. Instrument hygiene: memo pruning, 20 GB guards, go.py terminal patterns. See docs/history/RELEASE_NOTES_v3.33.0.md.
+
 ## 3.32.0 (2026-10-04) -- THE NORTH STAR CUT: ONE EXTERNAL NUMBER MATCHED, ONE DERIVED CLAIM CORRECTED, ONE CONTINUUM CLAIM REFUTED ON REPRODUCIBILITY
 
 - FND-170..182, ELEC-101 registered (775 claims). FND-178 CASIMIR-F3: the registered zero-point ledger predicts pi^2 hbar c/(240 d^4) exactly given hbar (consistency-tier). FND-181 KIN-DRIVE: F = 2 pi c_L eps' derived and obeyed. FND-182 KIN-BREAKDOWN: charge-creation field window [1.1e15, 3.2e18] V/m, T2.

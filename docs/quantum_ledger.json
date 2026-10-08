@@ -952,6 +952,7 @@
  "FND-STRAND-008": {
   "status": "Modeled",
   "markers": [
+   "hbar",
    "q"
   ],
   "cat": "MENTION",
@@ -988,6 +989,7 @@
  "FND-STRAND-025": {
   "status": "Derived",
   "markers": [
+   "hbar",
    "qphase",
    "q"
   ],
@@ -2622,6 +2624,16 @@
   "why": "incidental vocabulary; no dependence (default rule)",
   "branch": ""
  },
+ "ELEC-101": {
+  "status": "registered",
+  "markers": [
+   "zp",
+   "q"
+  ],
+  "cat": "MENTION",
+  "why": "incidental vocabulary; no dependence (default rule)",
+  "branch": ""
+ },
  "FND-037": {
   "status": "Derived",
   "markers": [
@@ -2664,6 +2676,7 @@
   "status": "Modeled",
   "markers": [
    "hbar",
+   "zp",
    "q"
   ],
   "cat": "MENTION",
@@ -2674,6 +2687,7 @@
   "status": "Modeled",
   "markers": [
    "hbar",
+   "zp",
    "q"
   ],
   "cat": "MENTION",
@@ -2980,6 +2994,65 @@
   "status": "registered",
   "markers": [
    "hbar"
+  ],
+  "cat": "MENTION",
+  "why": "incidental vocabulary; no dependence (default rule)",
+  "branch": ""
+ },
+ "FND-174": {
+  "status": "Failed",
+  "markers": [
+   "zp"
+  ],
+  "cat": "FENCE",
+  "why": "stops at a quantum-flavored boundary (default rule)",
+  "branch": ""
+ },
+ "FND-178": {
+  "status": "registered",
+  "markers": [
+   "hbar",
+   "zp",
+   "q"
+  ],
+  "cat": "MENTION",
+  "why": "incidental vocabulary; no dependence (default rule)",
+  "branch": ""
+ },
+ "FND-180": {
+  "status": "registered",
+  "markers": [
+   "q"
+  ],
+  "cat": "MENTION",
+  "why": "incidental vocabulary; no dependence (default rule)",
+  "branch": ""
+ },
+ "FND-182": {
+  "status": "registered",
+  "markers": [
+   "hbar"
+  ],
+  "cat": "MENTION",
+  "why": "incidental vocabulary; no dependence (default rule)",
+  "branch": ""
+ },
+ "FND-183": {
+  "status": "registered",
+  "markers": [
+   "hbar",
+   "e_mass"
+  ],
+  "cat": "MENTION",
+  "why": "incidental vocabulary; no dependence (default rule)",
+  "branch": ""
+ },
+ "FND-186": {
+  "status": "registered",
+  "markers": [
+   "hbar",
+   "e_mass",
+   "q"
   ],
   "cat": "MENTION",
   "why": "incidental vocabulary; no dependence (default rule)",
