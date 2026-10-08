@@ -759,9 +759,57 @@ grade 0.070 (33.74 at half budget, 31.54 at full, still falling); by B-5 the lad
 law was read. The result is about the instrument, not the law: the locked budget rule 25000 n/3 under-budgets
 the tightener as the point count grows, while FND-MATTER-019's seats used per-knot budgets. FND-MATTER-066's
 "about a thousand crossings under pure length" keeps its status as an assumption; gap 5's price is unchanged.
-Consequence for the author's word: riders on FND-MATTER-019 (the reach under a linear rule; its own seats
-were per-knot budgeted) and FND-MATTER-066 (the law not reached); no status change; scorecard and five
-numbers unchanged. Named next-order, one repair under section 5 of NORTH_STAR: KNOT-REACH-2, the same
-ladder with the budget rule replaced by a convergence rule fixed before any rung (doublings of 25000 until
-the length moves under 1 percent, cap 1.6 million; a rung at the cap unconverged is the reach), then the
-lineage stops whatever it returns.
+Riders accepted 2026-10-07 on FND-MATTER-019 (the reach under a linear rule; its own seats were per-knot
+budgeted) and FND-MATTER-066 (the law not reached); no status change; scorecard and five numbers unchanged.
+KNOT-REACH-2 chartered and LOCKED 2026-10-07 (analysis/KNOT_REACH2_charter_LOCKED.md; driver
+benchmarks/foundations/knot_reach2.py, smoke-tested): the one repair under section 5 of NORTH_STAR, the
+same ladder with the budget rule replaced by a convergence rule fixed before any rung (doublings of 25000
+until the length moves under 1 percent, cap 1.6 million, certificates at every doubling; a rung at the cap
+unconverged is the reach), then the lineage stops whatever it returns.
+
+## AE. NUC-BLIND-1 LOCKED AND SEALED (2026-10-07; the first confrontation under bar W; charter analysis/NUC_BLIND_1_charter_LOCKED.md)
+
+The author drew the hold-out on the PC (seed 92847574954767, drawn by palmer, 50 of 2397 eligible AME2012 rows,
+Ca-40 excluded; test sha256 4abe4099...) and locked the charter after the draw and before any seal. The sandbox
+built benchmarks/nuclear/nuc_blind_1.py from train.txt's Ca-40 row alone, reproducing the registered calibrations
+(a_C 0.7716; M1 a_V 17.770 as NUC-018; M2 a_V 15.987 as NUC-018's corrected-spacing row), wrote the two
+prediction files at the held-out labels and sealed them (M1 f0cb0050..., M2 0823ad17...). The verdict tool
+gained --unit mass and --label before the seal (recorded in the charter). The verdict (N4) runs ONCE per model on
+the PC, the machine that holds sealed/test.txt; the sandbox never holds it. Bars: rms <= 0.25 and max <= 0.60
+percent of mass. Prior (B-4, stated, not leaned on): M1 fails on the max bar as declared; M2 is the open question.
+Verdicts (the PC, 2026-10-08, each computed once; analysis/NUC_BLIND_1_results.md): M1 BLIND-AGREES at rms 0.121,
+max 0.219 percent of mass (worst Pu-246); M2 BLIND-AGREES at rms 0.0113, max 0.0262 (worst O-16). The prior was
+wrong in M1's favour: the declared asymmetry omission did not push any of 50 untouched isotopes past 0.60 percent
+of mass, though the sub-reading shows it is what the residual is (corr +0.861 with 23 (N-Z)^2/A); M2's residual
+is ten times smaller and not pairing-shaped (corr -0.18). The programme's first out-of-sample confrontation in the
+matter sector; not external adjudication (the author's draw), so the five numbers are unchanged. Riders
+accepted 2026-10-08 on NUC-018, NUC-005, NUC-A and NUC-B; the scorecard row (NORTH_STAR section 1) carries the
+out-of-sample line, grade D3 unchanged. NUC-BLIND-2 chartered 2026-10-08 (analysis/NUC_BLIND_2_charter_DRAFT.md,
+for the author's lock once an adjudicator is named): the same two models, a seed chosen and drawn by a person
+who is not the author; a pass is the first externally adjudicated prediction (section 2b, 0 to 1).
+  --unit mass    : residual = 100 (pred - truth) / m_atom, the house unit of the nuclear scorecard row (NUC-005/018:
+                   mass error), m_atom = Z m_p + N m_n + Z m_e - B with NUC-005's constants (938.272, 939.565, 0.511)
+--label M1 (optional, added 2026-10-07 for NUC-BLIND-1 before any seal): scores several pre-registered models on ONE
+draw. The seal and the verdict are then kept under per-label keys (prediction_sha256_M1, verdict_M1) and
+VERDICT_M1.json; each label is sealed once and read once, and the sealed test file is the same for all labels.
+MP, MN, ME = 938.272, 939.565, 0.511   # NUC-005's constants, for --unit mass
+    ap.add_argument('--unit', choices=['percent', 'mev', 'excess', 'mass'], default='percent')
+    ap.add_argument('--label', default='', help='model label when several pre-registered models score one draw')
+    sfx = f'_{a.label}' if a.label else ''
+    K_SHA, K_FILE, K_AT, K_VER = 'prediction_sha256' + sfx, 'prediction_file' + sfx, 'prediction_sealed_at_utc' + sfx, 'verdict' + sfx
+    VFILE = hd / f'VERDICT{sfx}.json'
+        if man.get(K_SHA):
+            sys.exit(f'[holdout] REFUSED: predictions already sealed ({man[K_SHA][:16]}...). One seal.')
+        man[K_SHA] = ph; man[K_FILE] = str(a.predictions)
+        man[K_AT] = time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())
+    if VFILE.exists():
+        sys.exit(f'[holdout] REFUSED: {VFILE.name} exists. A verdict is computed once and kept.')
+    if not man.get(K_SHA):
+    if ph != man[K_SHA]:
+        sys.exit(f'[holdout] REFUSED: predictions file changed since seal ({ph[:16]} != {man[K_SHA][:16]})')
+        elif a.unit == 'mass':
+            r = 100.0 * (p - b) / (z * MP + n * MN + z * ME - b)
+    out = {'name': a.name, 'label': a.label, 'verdict': verdict, 'unit': a.unit, 'bar_rms': a.bar_rms, 'bar_max': a.bar_max,
+    VFILE.write_text(json.dumps(out, indent=1) + '\n')
+    man[K_VER] = verdict; mp.write_text(json.dumps(man, indent=1) + '\n')
+    print(f'[holdout] VERDICT{sfx}: {verdict}  -> analysis/holdout/{a.name}/{VFILE.name} (kept)')
