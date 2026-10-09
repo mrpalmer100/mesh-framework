@@ -1,0 +1,7 @@
+[holdout] GRV_BLIND_1: 634 kept points in 30 held-out galaxies; RAR residual rms 0.1138 dex (mean +0.0333); worst galaxy rms 0.3803; bars rms <= 0.18, galaxy <= 0.6321
+[holdout]   worst: F568-V1      rms 0.3803 dex
+[holdout]   worst: F571-8       rms 0.2448 dex
+[holdout]   worst: UGC05721     rms 0.2387 dex
+[holdout]   worst: UGC02487     rms 0.1816 dex
+[holdout]   worst: UGC08286     rms 0.1791 dex
+[holdout] VERDICT: BLIND-AGREES  -> analysis/holdout/GRV_BLIND_1/VERDICT.json (kept)

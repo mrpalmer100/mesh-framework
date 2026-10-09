@@ -1,0 +1,16 @@
+[ns1 S1] registered well: infinite spherical box, levels by Bessel zeros; the bottom plus the 6 largest gap ratios below 184
+[ns1 S1] the well's closed shells: 2 (1s|1p), 8 (1p|1d, 1.6x), 20 (2s|1f, 1.1x), 34 (1f|2p, 1.3x), 58 (1g|2d, 2.6x), 92 (3s|2f, 11.9x), 138 (3p|1j, 3.6x)
+[ns1 S1]   2: MATCH
+[ns1 S1]   8: MATCH
+[ns1 S1]   20: MATCH
+[ns1 S1]   28: MISS; first mismatch at 28
+[ns1 S2] table read once: 2398 nuclides with A >= 12
+[ns1 S2 neutrons] SEEN closures (the 7 largest S_2 drops): [8, 14, 16, 20, 28, 50, 82]
+[ns1 S2 neutrons]   J at the box's closures: 8: +11.02 MeV, 20: +4.65 MeV, 34: +1.95 MeV, 58: +0.83 MeV, 92: +0.68 MeV, 138: +0.48 MeV
+[ns1 S2 neutrons]   J at nature's magic numbers: 8: +11.02 MeV, 20: +4.65 MeV, 28: +5.24 MeV, 50: +4.71 MeV, 82: +4.50 MeV, 126: +3.60 MeV
+[ns1 S2 neutrons]   hits [8, 20]; misses [14, 16, 28, 50, 82]; false [34, 58, 92, 138]
+[ns1 S2 protons] SEEN closures (the 7 largest S_2 drops): [6, 8, 12, 14, 16, 20, 28]
+[ns1 S2 protons]   J at the box's closures: 8: +12.03 MeV, 20: +6.27 MeV, 34: +3.00 MeV, 58: +2.03 MeV, 92: +1.84 MeV
+[ns1 S2 protons]   J at nature's magic numbers: 8: +12.03 MeV, 20: +6.27 MeV, 28: +6.67 MeV, 50: +5.72 MeV, 82: +3.71 MeV
+[ns1 S2 protons]   hits [8, 20]; misses [6, 12, 14, 16, 28]; false [34, 58, 92]
+[ns1 S2] VERDICT: SHELLS-FAIL (S1 first mismatch at 28; neutrons hits/misses/false 2/5/4; protons 2/5/3)

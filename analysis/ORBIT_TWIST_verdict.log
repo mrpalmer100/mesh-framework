@@ -1,0 +1,13 @@
+[ot O1] bare ring N = 96: omega(m,+) 0.06544, 0.13081, 0.19603, 0.26105, 0.32579, 0.39018  vs 2 sin(pi m/N) 0.06544, 0.13081, 0.19603, 0.26105, 0.32579, 0.39018
+[ot O1 control] delta omega(m) = omega(m,+) - omega(m,-):  m>0: +0.00000, -0.00000, +0.00000, +0.00000, +0.00000, +0.00000   m<0: -0.00000, -0.00000, +0.00000, -0.00000, -0.00000, -0.00000   -> NONE
+[ot M0] curvature: R = 15.28, bend-law density +0.00220, k_u = 1.00220, k_v = 1; linear splitting omega_u - omega_v at m=1..6: +0.00007, +0.00014, +0.00022, +0.00029, +0.00036, +0.00043
+[ot M0 curvature] delta omega(m) = omega(m,+) - omega(m,-):  m>0: -0.00000, +0.00000, -0.00000, +0.00000, +0.00000, +0.00000   m<0: +0.00000, -0.00000, +0.00000, -0.00000, +0.00000, -0.00000   -> NONE
+[ot M1] gyroscopic g = 0.05: analytic omega = -sigma g/2 + sqrt(K + g^2/4): shift -0.02500 per sigma, independent of m and of its sign
+[ot M1 gyroscopic] delta omega(m) = omega(m,+) - omega(m,-):  m>0: -0.05000, -0.05000, -0.05000, -0.05000, -0.05000, -0.05000   m<0: -0.05000, -0.05000, -0.05000, -0.05000, -0.05000, -0.05000   -> WRONG-FORM (sigma alone, even in m)
+[ot M2] Rytov: tau = 0.00327 per site, Psi = 0.3142 rad per circuit; analytic omega = 2 sin((pi m - sigma Psi/2)/N): shift -0.00327 x sigma sign(m) at small m, flat in |m|
+[ot M2 Rytov] delta omega(m) = omega(m,+) - omega(m,-):  m>0: +0.00654, +0.00653, +0.00651, +0.00649, +0.00646, +0.00642   m<0: -0.00654, -0.00653, -0.00651, -0.00649, -0.00646, -0.00642   -> WRONG-FORM (sigma * sign(m), flat in |m|)
+[ot M2] shift vs Psi (turns): 0.02: +0.00262, 0.05: +0.00654, 0.10: +0.01308, 0.20: +0.02617
+[ot M3] boundary segment stiffness (u, v) = (2, 1): lowest standing modes u: 0.03451, 0.06896, 0.10326, 0.13735, 0.17116, 0.20463; v: 0.03307, 0.06613, 0.09917, 0.13218, 0.16516, 0.19809
+[ot M3] the splitting is between LINEAR polarizations (u vs v) and does not depend on the sense of propagation: sigma is not resolved -> NONE
+[ot] cells: M0: NONE; M1: WRONG-FORM (sigma alone, even in m); M2: WRONG-FORM (sigma * sign(m), flat in |m|); M3: NONE
+[ot] VERDICT: SO-NO-MECHANISM

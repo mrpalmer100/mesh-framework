@@ -1,0 +1,27 @@
+[ns2 j=l+1/2 lower] best tau R = 0.00: closures [2, 8, 20, 34, 58, 92, 138], hits [2, 8, 20] (3/7)
+[ns2 j=l+1/2 lower]   tau R with all seven: none; with the first four (2, 8, 20, 28): none; with 28 at all: 0.64 to 1.14
+[ns2 j=l+1/2 lower]     tau R 0.00: [2, 8, 20, 34, 58, 92, 138]  hits 3
+[ns2 j=l+1/2 lower]     tau R 0.20: [2, 8, 58, 80, 92, 138, 164]  hits 2
+[ns2 j=l+1/2 lower]     tau R 0.40: [2, 8, 38, 92, 114, 136, 164]  hits 2
+[ns2 j=l+1/2 lower]     tau R 0.60: [2, 38, 76, 92, 114, 136, 164]  hits 1
+[ns2 j=l+1/2 lower]     tau R 0.80: [2, 14, 28, 50, 76, 136, 164]  hits 3
+[ns2 j=l+1/2 lower]     tau R 1.00: [2, 6, 14, 28, 76, 82, 118]  hits 3
+[ns2 j=l+1/2 lower]     tau R 1.20: [2, 6, 14, 48, 76, 118, 162]  hits 1
+[ns2 j=l+1/2 lower]     tau R 1.40: [2, 6, 14, 48, 118, 162, 170]  hits 1
+[ns2 j=l+1/2 lower]     tau R 1.60: [2, 6, 14, 76, 104, 118, 144]  hits 1
+[ns2 j=l+1/2 lower]     tau R 1.80: [2, 6, 14, 100, 118, 144, 168]  hits 1
+[ns2 j=l+1/2 lower]     tau R 2.00: [2, 6, 42, 100, 118, 144, 168]  hits 1
+[ns2 j=l+1/2 higher] best tau R = 0.00: closures [2, 8, 20, 34, 58, 92, 138], hits [2, 8, 20] (3/7)
+[ns2 j=l+1/2 higher]   tau R with all seven: none; with the first four (2, 8, 20, 28): none; with 28 at all: none
+[ns2 j=l+1/2 higher]     tau R 0.00: [2, 8, 20, 34, 58, 92, 138]  hits 3
+[ns2 j=l+1/2 higher]     tau R 0.20: [2, 8, 58, 78, 92, 138, 160]  hits 2
+[ns2 j=l+1/2 higher]     tau R 0.40: [2, 8, 36, 92, 110, 134, 160]  hits 2
+[ns2 j=l+1/2 higher]     tau R 0.60: [2, 36, 72, 92, 110, 134, 160]  hits 1
+[ns2 j=l+1/2 higher]     tau R 0.80: [2, 12, 26, 48, 72, 134, 160]  hits 1
+[ns2 j=l+1/2 higher]     tau R 1.00: [2, 4, 12, 26, 72, 80, 112]  hits 1
+[ns2 j=l+1/2 higher]     tau R 1.20: [2, 4, 12, 44, 72, 112, 156]  hits 1
+[ns2 j=l+1/2 higher]     tau R 1.40: [2, 4, 12, 44, 112, 156, 164]  hits 1
+[ns2 j=l+1/2 higher]     tau R 1.60: [2, 4, 12, 72, 98, 112, 134]  hits 1
+[ns2 j=l+1/2 higher]     tau R 1.80: [2, 4, 12, 92, 112, 134, 160]  hits 1
+[ns2 j=l+1/2 higher]     tau R 2.00: [2, 4, 36, 92, 112, 134, 160]  hits 1
+[ns2] VERDICT: PRICE-NONE (sign that closes 28: j = l + 1/2 lower)

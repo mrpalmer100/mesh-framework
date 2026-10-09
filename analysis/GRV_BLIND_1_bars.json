@@ -1,0 +1,7 @@
+{
+ "rule": "0.95 quantile over 20000 subsets of 30 training galaxies at the predicted g_dagger",
+ "n_train_used": 125,
+ "train_rms": 0.149617335972863,
+ "bar_rms": 0.180043771626121,
+ "bar_gal": 0.6320993156052539
+}

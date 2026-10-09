@@ -812,3 +812,73 @@ under the convergence rule; seats 7 to 21 on the record); NORTH_STAR section 4 g
 a prediction). The lineage KNOT-REACH to KNOT-REACH-2 is closed by charter; the next question for gap 5 is the
 object, not the law.
 
+## AG. NUC-SHELL-1 CHARTERED AND LOCKED (2026-10-09; charter analysis/NUC_SHELL_1_charter_LOCKED.md)
+
+Target: "Weights of atoms", the shell structure M2's smooth form leaves out. The question: do the closed shells of
+the registry's one single-particle well (NUC-A's infinite spherical box at the derived r0) fall at 2, 8, 20, 28, 50,
+82, 126? S1 (no data; run before the lock) gives the well's closures by a rank rule: 2, 8, 20, 34, 58, 92, 138, first
+mismatch at 28. S2 reads AME2012 once after the lock to locate nature's closures by the largest drops in the
+two-nucleon separation energies (rank rule, no threshold, nothing fitted; bar W does not apply) and scores hits,
+misses and false closures per species. Forms SHELLS-MATCH / PARTIAL / FAIL locked; prior PARTIAL (the spin-only box
+fails at 28). Either way the row learns by name what its nucleus has or lacks. A Strutinsky-correction step was
+drafted and withdrawn before the lock (no plateau on this ladder; its harmonic-oscillator control failed). Seconds
+of compute; the PC runs the one read.
+NUC-SHELL-1 RENDERED 2026-10-09 (analysis/NUC_SHELL_1_results.md): SHELLS-FAIL. Shared closures at 8 and 20 only;
+the box's 34, 58, 92, 138 show no shell signal in AME2012 (0.5 to 2 MeV drops) and nature's 28, 50, 82, 126
+(3.6 to 6.7 MeV) are absent from the box. FAIL rather than the prior's PARTIAL partly because the locked rank rule's
+SEEN slots went to light subshell drops (N = 14, 16; Z = 6, 12, 14, 16), capping hits at 2; recorded as a property
+of the rule, the verdict stands. Named missing term: a spin-orbit-class splitting, which no registered mechanism
+supplies. Riders on NUC-A and NUC-022 and the row's "Blocked by" cell accepted 2026-10-09 on the author's word; no status change.
+
+## AH. ORBIT-TWIST CHARTERED AND LOCKED (2026-10-09; charter analysis/ORBIT_TWIST_charter_LOCKED.md)
+
+The ELEC/QB derivation NUC-SHELL-1 named: does the registered machinery couple a mode's polarization handedness
+(QB-025's spinor, QB-020's Pauli structure) to its orbital winding (GRV-020's azimuth) with the l . s form, the
+sign that closes 28 and the size 20 A^(-2/3) MeV? Symmetry pre-check passes (l . s is P-even and T-even; FND-185
+forbids nothing). Enumeration closed at lock: M0 curvature (planar ring), M1 the gyroscopic coupling, M2 the
+geometric (Rytov) frame rotation along a non-planar path, M3 polarization-dependent boundary reflection under the
+contact law; cells typed IDENTITY / SHAPE / WRONG-FORM / NONE; forms SO-DERIVED / WRONG-SIGN / TOO-SMALL /
+SHAPE-ONLY / NO-MECHANISM. Prior: SHAPE-ONLY (M2 has the form; the mode path's torsion is the one unregistered
+input). No new constant; hbar only at the MeV conversion as NUC-A imports it. Two sandbox days; no PC.
+ORBIT-TWIST RENDERED 2026-10-09 (analysis/ORBIT_TWIST_results.md): SO-NO-MECHANISM. The control passes; curvature
+(M0) and the surface contact law (M3) split linear polarizations only; the gyroscopic coupling (M1) is a Zeeman term
+blind to the orbital sense; the geometric frame rotation along a path with torsion (M2) is the one
+handedness-times-sense term and it is flat in the winding number (Delta omega = -sigma sign(m) c tau), the sign
+structure of l . s without its l-scaling: WRONG-FORM by the locked types. Riders on QB-025 and FND-185 and the
+sharpened "Blocked by" line accepted 2026-10-09 on the author's word. Named next-order NUC-SHELL-2 (a price on the mode path's
+torsion: does any flat splitting close 28, 50, 82, 126 in the registered box?).
+
+## AI. NUC-SHELL-2 CHARTERED AND LOCKED (2026-10-09; charter analysis/NUC_SHELL_2_charter_LOCKED.md)
+
+A price, not a derivation: ORBIT-TWIST's one handedness-times-sense term (Delta k = sigma tau, flat in l) applied to
+NUC-SHELL-1's registered box ladder as Delta = 2 x (tau R) per level, j = l + 1/2 lowered; tau R scanned 0 to 2 in
+steps of 0.02 on both signs; the closures read at every tau R by NUC-SHELL-1's locked rank rule; the whole scan is
+the result, no data read, nothing fitted. Control at tau R = 0 reproduces 2, 8, 20, 34, 58, 92, 138. Forms
+PRICE-FOUND (some tau R gives all seven magic numbers: the mode path's torsion is the price) / PRICE-PARTIAL (the
+first four) / PRICE-NONE (28 never closes: the l-scaling is the missing physics). Prior PARTIAL. Seconds; the PC
+runs the scan on the machine of record.
+NUC-SHELL-2 RENDERED 2026-10-09 (analysis/NUC_SHELL_2_results.md): PRICE-NONE. No torsion gives all seven magic
+numbers or the first four together; 28 and 50 appear at tau R 0.8 to 0.9 but only after 8 and 20 are destroyed,
+and 82 and 126 are never reached: the l-scaling of the spin-orbit term is the missing physics, not its sign or
+scale. The charter's PRICE-NONE sentence was stricter than what happened (28 does appear); the driver's locked
+form is read and the discrepancy recorded. The lineage NUC-SHELL-1, ORBIT-TWIST, NUC-SHELL-2 stops here. Rider on
+NUC-A and the row's "Blocked by" cell (final at this level) accepted 2026-10-09 on the author's word.
+
+## AJ. GRV-BLIND-1 CHARTERED AND LOCKED (2026-10-09; charter analysis/GRV_BLIND_1_charter_LOCKED.md)
+
+The programme's best D1 content, GRV-030's g_dagger = c H0 / 2 pi on the SPARC radial-acceleration relation, brought
+under bar W: thirty galaxies drawn by seed (the author's or an adjudicator's), each split by the new
+tools/holdout_galaxies.py into readable inputs and sealed observed velocities; the zero-parameter prediction at
+every held-out radius sealed before the truth is read; the bars a RULE fixed at lock (the 95th percentile of the
+same statistics over 20,000 random 30-galaxy subsets of the training galaxies), because a five-galaxy instrument
+check showed the subsample rms varies by tens of percent. A pass with an adjudicator's draw is the second
+externally adjudicated prediction (2b, 1 to 2), of a parameter-free observable. Prior AGREES.
+Drawn by the author on the PC 2026-10-09 (seed 52525254; 30 of 155), locked after the draw; the sandbox predicted
+734 points from the inputs only (sha256 f15f0e37...) and computed the bars from the 125 training galaxies: rms <=
+0.1800 dex, worst galaxy <= 0.6321 dex (training rms 0.1496). Seal and verdict on the PC.
+GRV-BLIND-1 RENDERED 2026-10-09 (analysis/GRV_BLIND_1_results.md): BLIND-AGREES at rms 0.1138 dex over 634 kept
+points in 30 held-out galaxies (bar 0.1800), worst galaxy 0.380 (bar 0.632); at the data-fitted g_dagger the rms is
+0.112, GRV-030's indistinguishability reproduced out of sample; mean residual +0.033 dex recorded. The first blind
+confrontation of a D1 claim; the author's draw, so 2b stays at 1 (GRV-BLIND-2 with an adjudicator's seed would move
+it to 2). Rider on GRV-030 and the gravity row's grade column accepted 2026-10-09 on the author's word.
+
