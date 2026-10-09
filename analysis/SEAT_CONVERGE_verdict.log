@@ -1,0 +1,18 @@
+[sc verdict] knots on the table: ['3_1', '4_1', '5_1', '5_2', '6_1', '6_2', '6_3', '7_1', '7_2', '8_1']; refused: []
+[sc verdict]   3_1: n=3 N=120 L/D   16.908 (converged, iters   50000, grade 0.0008) S  -13.429 contacts   3; registered 16.84 ; 0.7 min
+[sc verdict]   4_1: n=4 N=130 L/D   21.576 (converged, iters   50000, grade 0.0006) S  -18.161 contacts   5; registered 21.64 ; 0.9 min
+[sc verdict]   5_1: n=5 N=200 L/D   25.048 (converged, iters   50000, grade 0.0055) S  -19.776 contacts   3; registered 25.09 ; 1.8 min
+[sc verdict]   5_2: n=5 N=130 L/D   26.660 (converged, iters  200000, grade 0.0078) S  -22.804 contacts   8; registered 27.5 ; 3.9 min
+[sc verdict]   6_1: n=6 N=140 L/D   34.456 (converged, iters  100000, grade 0.0037) S  -34.656 contacts  10; registered 32.3 WALL (FND-MATTER-032, terminal grade); 2.1 min
+[sc verdict]   6_2: n=6 N=130 L/D   32.582 (converged, iters  200000, grade 0.0013) S  -31.633 contacts   8; registered None ; 4.0 min
+[sc verdict]   6_3: n=6 N=130 L/D   30.451 (converged, iters   50000, grade 0.0089) S  -28.452 contacts  10; registered None ; 0.9 min
+[sc verdict]   7_1: n=7 N=280 L/D   31.452 (converged, iters  200000, grade 0.0014) S  -29.289 contacts   8; registered 31.45 KNOT-REACH-2 seat; 13.7 min
+[sc verdict]   7_2: n=7 N=140 L/D   38.610 (converged, iters   50000, grade 0.0015) S  -39.661 contacts  12; registered 38.6 provisional (FND-MATTER-023); 1.2 min
+[sc verdict]   8_1: n=8 N=140 L/D   36.223 (converged, iters   50000, grade 0.0006) S  -35.266 contacts  11; registered None named next-order (FND-MATTER-023); 1.0 min
+[sc verdict V2] sigma(n) = min L/n: n=3: 5.636, n=4: 5.394, n=5: 5.010, n=6: 5.075, n=7: 4.493, n=8: 4.528
+[sc verdict V2] strict local minima WITH walled knots: [5, 7]
+[sc verdict V2] strict local minima WITHOUT walled knots: [5, 7] (sigma over n = [3, 4, 5, 6, 7, 8])
+[sc verdict V3] 6_1: converged/last L/D 34.456 vs registered 32.3 (converged) -> WALL-STANDS
+[sc verdict V3] 7_2: converged/last L/D 38.610 vs registered 38.6 (converged) -> WALL-STANDS
+[sc verdict V4] solver systematic over literature ideal: 3_1 +3.3%, 4_1 +2.5%, 5_1 +6.4%, 7_1 +2.4%; mean +3.7% (registered +2.3%)
+[sc verdict] VERDICT: STABLE-SET-[5, 7]; walls {'6_1': 'WALL-STANDS', '7_2': 'WALL-STANDS'}

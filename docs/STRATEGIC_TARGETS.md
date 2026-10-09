@@ -882,3 +882,20 @@ points in 30 held-out galaxies (bar 0.1800), worst galaxy 0.380 (bar 0.632); at 
 confrontation of a D1 claim; the author's draw, so 2b stays at 1 (GRV-BLIND-2 with an adjudicator's seed would move
 it to 2). Rider on GRV-030 and the gravity row's grade column accepted 2026-10-09 on the author's word.
 
+## AK. SEAT-CONVERGE CHARTERED AND LOCKED (2026-10-09; charter analysis/SEAT_CONVERGE_charter_LOCKED.md; the PC's night)
+
+The registered certified knot table (ten knots, 3_1 to 8_1, from the registered constructors and words) re-seated
+under KNOT-REACH-2's convergence rule, certified at every doubling (determinant at both tilts; the Alexander odd
+part for 6_1, 7_2, 8_1), walled knots kept and flagged; FND-MATTER-069's stability rule sigma = L/n read once on the
+converged seats (forms MONOTONE-NULL / STABLE-SET), the 6_1 and 7_2 walls tested (DISSOLVED / STANDS), the solver
+systematic re-read against the literature ideals the registry carries. Prior: 4_1 near 21.5 (smoke run 21.547), the
+walls stand, MONOTONE-NULL. Target: SM_EMERGENCE row 10 and gap 5. Two to six hours on the PC, resumable.
+SEAT-CONVERGE RENDERED 2026-10-09 (analysis/SEAT_CONVERGE_results.md): all ten knots converged and certified in 35
+minutes; STABLE-SET-[5, 7], both walls STAND. The prior (MONOTONE-NULL once 4_1 is resolved) was wrong: 4_1 converged
+at 21.58 and the set survives, now resting on the basin-limited seats of the braid and plat knots (6_3 +15 percent,
+8_1 +11 percent over the literature) rather than on the 4_1 stall; with the registry's literature values at n = 6
+and 8 the minimum moves to n = 6, with literature throughout the spectrum is monotone. FND-MATTER-069's verdict
+(absence of selection) stands with its cause relocated; FND-MATTER-023's basin lesson and FND-MATTER-032's terminal
+grade confirmed under a converged budget; 8_1 seated (36.22), 7_2 confirmed (38.61). Riders on FND-MATTER-069/019/
+021/023/032 accepted 2026-10-09 on the author's word; the next road is the rearrangement mover, not iterations.
+

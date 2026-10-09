@@ -1,0 +1,38 @@
+[sc 3_1 k=0] cum 25000; L/D 16.894; change nan; cert ok; contacts 3; 0.3 min
+[sc 3_1 k=1] cum 50000; L/D 16.908; change 0.0008; cert ok; contacts 3; 0.4 min
+[sc 3_1] CONVERGED: iters 50000; L/D 16.908 (registered 16.84); S -13.429; contacts 3 len 26.49; 0.7 min
+[sc 4_1 k=0] cum 25000; L/D 21.563; change nan; cert ok; contacts 6; 0.5 min
+[sc 4_1 k=1] cum 50000; L/D 21.576; change 0.0006; cert ok; contacts 5; 0.5 min
+[sc 4_1] CONVERGED: iters 50000; L/D 21.576 (registered 21.64); S -18.161; contacts 5 len 35.85; 0.9 min
+[sc 5_1 k=0] cum 25000; L/D 25.184; change nan; cert ok; contacts 3; 0.9 min
+[sc 5_1 k=1] cum 50000; L/D 25.048; change 0.0055; cert ok; contacts 3; 0.9 min
+[sc 5_1] CONVERGED: iters 50000; L/D 25.048 (registered 25.09); S -19.776; contacts 3 len 39.01; 1.8 min
+[sc 5_2 k=0] cum 25000; L/D 27.731; change nan; cert ok; contacts 7; 0.5 min
+[sc 5_2 k=1] cum 50000; L/D 26.169; change 0.0597; cert ok; contacts 6; 0.4 min
+[sc 5_2 k=2] cum 100000; L/D 26.452; change 0.0107; cert ok; contacts 6; 1.0 min
+[sc 5_2 k=3] cum 200000; L/D 26.660; change 0.0078; cert ok; contacts 8; 2.0 min
+[sc 5_2] CONVERGED: iters 200000; L/D 26.660 (registered 27.5); S -22.804; contacts 8 len 45.01; 3.9 min
+[sc 6_1 k=0] cum 25000; L/D 36.138; change nan; cert ok; contacts 11; 0.5 min
+[sc 6_1 k=1] cum 50000; L/D 34.329; change 0.0527; cert ok; contacts 10; 0.5 min
+[sc 6_1 k=2] cum 100000; L/D 34.456; change 0.0037; cert ok; contacts 10; 1.1 min
+[sc 6_1] CONVERGED: iters 100000; L/D 34.456 (registered 32.3); S -34.656; contacts 10 len 68.54; 2.1 min
+[sc 6_2 k=0] cum 25000; L/D 31.509; change nan; cert ok; contacts 8; 0.4 min
+[sc 6_2 k=1] cum 50000; L/D 32.105; change 0.0185; cert ok; contacts 8; 0.4 min
+[sc 6_2 k=2] cum 100000; L/D 32.624; change 0.0159; cert ok; contacts 8; 1.0 min
+[sc 6_2 k=3] cum 200000; L/D 32.582; change 0.0013; cert ok; contacts 8; 2.1 min
+[sc 6_2] CONVERGED: iters 200000; L/D 32.582 (registered None); S -31.633; contacts 8 len 62.53; 4.0 min
+[sc 6_3 k=0] cum 25000; L/D 30.722; change nan; cert ok; contacts 9; 0.5 min
+[sc 6_3 k=1] cum 50000; L/D 30.451; change 0.0089; cert ok; contacts 10; 0.5 min
+[sc 6_3] CONVERGED: iters 50000; L/D 30.451 (registered None); S -28.452; contacts 10 len 56.22; 0.9 min
+[sc 7_1 k=0] cum 25000; L/D 33.736; change nan; cert ok; contacts 3; 1.6 min
+[sc 7_1 k=1] cum 50000; L/D 31.868; change 0.0586; cert ok; contacts 7; 1.6 min
+[sc 7_1 k=2] cum 100000; L/D 31.409; change 0.0146; cert ok; contacts 8; 3.5 min
+[sc 7_1 k=3] cum 200000; L/D 31.452; change 0.0014; cert ok; contacts 8; 7.0 min
+[sc 7_1] CONVERGED: iters 200000; L/D 31.452 (registered 31.45); S -29.289; contacts 8 len 57.85; 13.7 min
+[sc 7_2 k=0] cum 25000; L/D 38.551; change nan; cert ok; contacts 10; 0.6 min
+[sc 7_2 k=1] cum 50000; L/D 38.610; change 0.0015; cert ok; contacts 12; 0.6 min
+[sc 7_2] CONVERGED: iters 50000; L/D 38.610 (registered 38.6); S -39.661; contacts 12 len 78.46; 1.2 min
+[sc 8_1 k=0] cum 25000; L/D 36.203; change nan; cert ok; contacts 11; 0.5 min
+[sc 8_1 k=1] cum 50000; L/D 36.223; change 0.0006; cert ok; contacts 11; 0.5 min
+[sc 8_1] CONVERGED: iters 50000; L/D 36.223 (registered None); S -35.266; contacts 11 len 69.73; 1.0 min
+[sc] SEAT-CONVERGE COMPLETE -- run the verdict
