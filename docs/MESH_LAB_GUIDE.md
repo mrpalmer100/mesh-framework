@@ -55,15 +55,16 @@ Everything the lab does is recorded in a database on the machine and in a versio
 
 | Role | Played by | What it does |
 |---|---|---|
-| **Research Director** | Claude Opus (Anthropic) | Reads the state of the project and proposes the next experiments. It must say what question each one answers and what result it expects. It does not get to run anything. |
+| **Research Director** | Claude Fable 5.1 (Anthropic) | Reads the state of the project and proposes the next experiments. It must say what question each one answers and what result it expects. It does not get to run anything. |
 | **Worker** | Claude Sonnet (Anthropic) | Turns an approved proposal into a full charter, writes the calculation code and the scoring script, and tests them on a small scale. Later it writes up results. |
-| **Skeptical reviewer** | Claude Opus (Anthropic) | Reads every charter before it is locked and every result before it is recorded, looking for flaws, loopholes and overclaiming. |
-| **External reviewer** | GPT-5 (OpenAI) | Does the same job independently, from a different AI company's model. The point is that two different model families are less likely to share the same blind spots. |
+| **Skeptical reviewer** | Claude Fable 5.1 (Anthropic) | Reads every charter before it is locked and every result before it is recorded, looking for flaws, loopholes and overclaiming. |
+| **External reviewer** | GPT-6 Astra (OpenAI) | Does the same job independently, from a different AI company's model. The point is that two different model families are less likely to share the same blind spots. |
+| **Decider** | Claude Fable 5.1 (Anthropic) | Settles any commission that cannot proceed as written, without asking anyone, and records why (Part 3, step 5). |
 | **Digest writer** | Claude Haiku (Anthropic) | Writes a short daily summary of what happened. |
 | **The runner** | Ordinary software, no AI | Runs calculations, enforces limits, keeps the record. |
 | **Mark** | A human | Decides what enters the official record. |
 
-If OpenAI is ever unavailable (for example, the account runs out of credit), the external review falls back to a second Claude model, Sonnet. Each time that happens it is flagged in the daily summary and in the request Mark approves, so a reader always knows which reviews lacked a reviewer from outside the Claude family.
+The decisions that matter most (what to try next, whether a charter is sound, how to settle a stuck commission) go to the strongest models available; each role falls back to the next model on its list if one is unavailable. If OpenAI is ever unavailable (for example, the account runs out of credit), the external review falls back to a Claude model, Opus. Each time that happens it is flagged in the daily summary and in the request Mark approves, so a reader always knows which reviews lacked a reviewer from outside the Claude family.
 
 ---
 
@@ -88,7 +89,9 @@ The lab calls each experiment a **commission**. Every commission passes through 
 
 **4. Locking.** Once both reviewers approve, the charter is locked: the plan, the code and the scoring script are frozen, given a digital fingerprint, and committed to the project's history. From this point nothing that affects the result can be changed silently. A genuine fix (for example, a crash in the code) needs a formal, recorded amendment and its own review, and the rules distinguish fixes made before any data exists from fixes made after.
 
-**5. Running.** The runner executes the calculation. Big runs can take days and are broken into steps that can be paused and resumed. If a run gets stuck, a Worker diagnoses it, but it may only release or fix it a limited number of times before the problem is parked for Mark.
+**5. Running.** The runner executes the calculation. Big runs can take days and are broken into steps that can be paused and resumed. If a run gets stuck, a Worker diagnoses it and may restart it or propose a reviewed fix, a limited number of times. Anything it cannot fix, and any commission whose code refuses to continue because something is missing, goes to the **Decider**, which settles it without asking anyone: either it replaces a missing outside step with the public randomness beacon (below), through a charter amendment that both reviewers must pass, or it withdraws the commission. The lock stays on the record either way, and the decision is written up for Mark to review later.
+
+*Blind draws without a person.* Some tests need a random choice that nobody involved controlled, such as which galaxies to hold back as a blind test set. The lab uses the drand public randomness beacon, a value published every 30 seconds by an independent network and checkable by anyone. The lab commits to a specific future round on GitHub before that round exists, then uses its published value as the seed. Neither Mark, the lab nor any agent can choose or predict it. It is independent, but it is not the same as a human adjudicator, and the lab never presents it as one.
 
 **6. Verdict.** When the calculation finishes, the locked scoring script runs **once** and prints its verdict, a pre-declared label such as `BLIND-AGREES` or `FAILED`. The lab checks that the fingerprints still match the locked versions before it accepts the verdict.
 
@@ -115,6 +118,7 @@ An autonomous system that writes its own experiments and grades its own results 
 | Lab output reaching the public record unchecked | The lab works on its own branch. Only Mark's merge moves anything to the main project. |
 | Runaway spending | Hard daily and monthly dollar caps per AI provider. At a cap, agent work pauses and the calculations keep running. |
 | Breaking the project's integrity checks | Every commit runs the project's own corpus verifier first, and is undone if it fails. |
+| The lab quietly taking decisions meant for a person | Every decision the lab makes on its own (settling a stuck commission, a beacon draw, a withdrawal) is written up with its full reasoning in `analysis/lab/decisions/`, listed in the daily digest and listed again in the weekly promotion request for Mark's review. Any of them can be reversed. |
 
 Some limits a reviewer should keep in mind:
 
@@ -137,9 +141,9 @@ Mark's involvement is deliberately small:
 - He **merges the weekly promotion request** (or doesn't). This is the human gate.
 - He **can veto** any claim or commission at any time.
 - He **sets the budget caps** and the weekly lock limit.
-- He reads the **daily digest** if he wants to.
+- He reads the **daily digest** if he wants to, and reviews the **decisions the lab made on its own** when he merges.
 
-He does not need to approve each proposal, charter or run. The design aim is a lab that keeps working when he is busy and never waits on him, while nothing reaches the official record without his merge.
+He does not need to approve each proposal, charter or run, and the lab never stops to ask him. The design aim is a lab that keeps working when he is busy and never waits on him, while nothing reaches the official record without his merge.
 
 ---
 
@@ -153,6 +157,8 @@ If you are evaluating the project or the lab, these are the places to look.
 | Each weekly bundle of new work | [Pull requests](https://github.com/mrpalmer100/mesh-framework/pulls?q=is%3Apr+%22Promote+lab+version%22) titled "Promote lab version lab-YYYYMMDD-N" |
 | Locked charters | `analysis/<NAME>_charter_LOCKED.md` |
 | Verdicts, with fingerprints | `analysis/lab/verdicts/<NAME>.json` |
+| Decisions the lab made on its own, with reasons | `analysis/lab/decisions/` on the `lab` branch |
+| Committed beacon rounds for blind draws | `analysis/lab/beacons/` on the `lab` branch |
 | Results write-ups | `analysis/<NAME>_results.md` |
 | The claims registry | [`claims.yaml`](../claims.yaml) (Provisional entries are the lab's, pending approval) |
 | The project's goal and scorecard | [`docs/NORTH_STAR.md`](NORTH_STAR.md) |
