@@ -24,6 +24,16 @@ should tell critics exactly where to aim. It is written to make rigorous critici
    "derivation" downstream inherits whatever that adoption smuggles in. These seams are
    labeled; test whether the label is honest.
 
+## Results produced by the Mesh Lab
+
+Since October 2026 many commissions are run by an autonomous lab: AI agents propose, draft and
+review charters, and the lab locks, runs and scores them on a separate `lab` branch, which the
+author promotes to `main` by merge. Its claims enter the registry as Provisional until then. Check
+that each charter was locked before its data, that the verdict follows mechanically from the locked
+scoring script, which amendments were made after data existed, and whether the second review came
+from outside the Claude model family (the promotion pull request lists any that did not). The full
+procedure and its safeguards: [`docs/MESH_LAB_GUIDE.md`](docs/MESH_LAB_GUIDE.md).
+
 ## Which assumptions are load-bearing
 
 - **Volume-conserving strands** (P-VOL) -- underlies the mechanical core.
