@@ -204,3 +204,21 @@ state: [analysis/grv_blind_2_ckpt.pkl]
 budget: {cpu_hours: 0.1, usd: 0}
 mem_gb: 1
 ```
+
+## LAB AMENDMENT (2026-10-11 11:41 EDT; decided by the lab without the author, reviewed by both reviewers; record under analysis/lab/decisions/)
+
+## 11. Amendment (lab decision, appended after the lock; the draw replaced by the lab's public randomness beacon)
+
+What changed. Section 3 required a person who is neither the author nor the commission to choose the seed and run the draw. No such person is available to the lab, and the autonomy rule (no step waits on a person) applies. The seed is instead supplied by the lab's public randomness beacon: drand round 6543429 was committed to the lab branch before that round existed, and its published randomness is the seed. The draw is run exactly as section 3 prescribes, with the unchanged tool:
+
+    python tools/holdout_galaxies.py draw --name GRV_BLIND_2 --seed {seed} --n 30 --drawn-by "{drawn_by}"
+
+where {seed} is the 32-byte randomness of drand round 6543429 read as a non-negative base-16 integer (the tool and the bars bootstrap seed numpy's default_rng, which accepts an integer of that size; the manifest records it verbatim, so C-5 reproduces the draw from it) and {drawn_by} is the string "drand beacon round 6543429". The round number, the published randomness, the seed as recorded, the drawn_at_utc time, the train sha256, the test sha256 and the held-out list are appended below this amendment when the draw is in the repo. No redraw (B-5 unchanged): if the beacon seed were by chance 52525254 or 777, or the draw reproduced GRV-BLIND-1's 30 galaxies, the frozen verdict renders DRAW-NOT-EXTERNAL and the commission proceeds on that draw; nothing is redrawn.
+
+Why. Every other part of this charter is already fixed and credentialed (unit calib passed C-1 to C-4 before this amendment and read no BLIND-2 file). The seed is the only thing the absent person was to supply, and the beacon supplies it with the property the charter protects: the author and the lab cannot know it before the draw, and anyone can verify it afterwards.
+
+What is NOT changed. The verdict script (benchmarks/lab/grv_blind_2/verdict.py), its forms, the bars rule B-1, the floors F-1 and F-2, the gate, the predictor, the data and the one-read truth discipline are all unchanged; nothing about what is measured or how it is judged moves. Unit calib's recorded result stands.
+
+What this does NOT establish. A beacon draw is independent of the author and the lab, but it is not a human adjudication. The frozen verdict will render Q2 from the manifest by the mechanical rule of B-6, and a drawn_by of "drand beacon round 6543429" satisfies that rule; that form records only that the seed came from outside the author and the lab. The count this charter defines by external human adjudication, NORTH_STAR section 2b 'externally adjudicated predictions' 1 to 2, stays the author's to grant (B-6: the author decides whether it counts), and a BLIND-AGREES under this draw is offered to him as 'a beacon-seeded blind confrontation', not as an adjudicated one. The results file and the GRV-030 row must say 'beacon draw' and must never call the beacon an adjudicator. Everything section 7 lists as not established by a pass (the coefficient 1/2pi, data novelty, the nu shape, H0, no-evolution) remains not established.
+
+Committed beacon: drand round 6543429 (chain 8990e7a9aaed2ffe), due 2026-10-11 15:51:30Z. Draw command: `python tools/holdout_galaxies.py draw --name GRV_BLIND_2 --seed {seed} --n 30 --drawn-by "{drawn_by}"`.
