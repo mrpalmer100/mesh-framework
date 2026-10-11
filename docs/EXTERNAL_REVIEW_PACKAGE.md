@@ -36,6 +36,8 @@ larger; this is the entry set a reviewer should read, in this order.
 - **SM Emergence**: `SM_EMERGENCE.md`, twelve rows of Standard Model structure, each derived,
   partial or unexplained, by claim id. **Input ledger**: `INPUT_LEDGER.md`, which benchmarks
   consume which measured constants, with every circularity flag adjudicated.
+- **The Mesh Lab**: `MESH_LAB_GUIDE.md`, how commissions produced by the autonomous lab are
+  proposed, locked, reviewed and promoted, and the questions to ask of any lab result.
 
 ## The one-sentence programme
 

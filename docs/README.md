@@ -26,6 +26,9 @@ Read these, roughly in order. They are written to be read, not waded through.
   not expected going in. A fast sense of what the programme actually does.
 - **[How to criticize](../HOW_TO_CRITICIZE.md)** — where the programme thinks it is
   most vulnerable, and how to attack it. (At the repository root.)
+- **[The Mesh Lab](MESH_LAB_GUIDE.md)**: a plain-language guide to the autonomous lab that
+  now runs commissions, how its work is reviewed and kept honest, and how it reaches
+  `main` only by the author's merge.
 
 ## If you want to understand the ideas
 
