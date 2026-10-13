@@ -899,3 +899,51 @@ and 8 the minimum moves to n = 6, with literature throughout the spectrum is mon
 grade confirmed under a converged budget; 8_1 seated (36.22), 7_2 confirmed (38.61). Riders on FND-MATTER-069/019/
 021/023/032 accepted 2026-10-09 on the author's word; the next road is the rearrangement mover, not iterations.
 
+## AL. GRV-BLIND-2 RENDERED BY THE LAB (2026-10-11; the Mac mini; charter analysis/GRV-BLIND-2_charter_LOCKED.md; the first promotion from the lab, 2026-10-13)
+
+The second blind confrontation of GRV-030 (g_dagger = c H0 / 2 pi on the SPARC radial-acceleration relation), run end
+to end by the lab, the autonomous commission pipeline on the Mac mini (docs/MESH_LAB_GUIDE.md): charter drafted and
+reviewed by two model families, locked with its driver and verdict script hashed (analysis/lab/locks/GRV-BLIND-2.v1,
+v2), the person-chosen seed the charter asked for replaced by a lab amendment with a public randomness beacon (drand
+round 6543429 committed to the lab branch at 15:41:06Z, the round published at 15:51:30Z; the decision records under
+analysis/lab/decisions/), the draw, seal and one truth read in the job tree, the verdict computed once, the write-up
+revised twice against reviewer concerns and registered as the forms verbatim when the reviewers did not pass it
+(GRV-129, Provisional; the unresolved concerns at the foot of analysis/GRV-BLIND-2_results.md).
+
+Verdict BLIND-FAILS: rms 0.1656 dex over 647 kept points in 30 held-out galaxies against a locked bar of 0.1582
+(about 4.7 percent over); DRAW-EXTERNAL by the mechanical B-6 rule; OUTLIER-EXCEEDS-BAR, PGC51017 at 0.6321 against
+0.5224. Mean residual -0.027 dex (GRV-BLIND-1: +0.033). The calibration legs C-1 to C-6 and the floors F-1, F-2
+passed; the instrument pair (benchmarks/gravity/grv_blind_1.py, tools/holdout_galaxies.py) reproduced GRV-BLIND-1's
+bars, predictions, draw and verdict exactly. Kept at full weight; not re-chartered; the five numbers unchanged (a
+fail does not add to 2b, and a beacon is not an adjudicator). Taken with GRV-BLIND-1 (BLIND-AGREES, 0.1138 against
+0.1800, the author's draw) the blind record of GRV-030 is one pass and one fail, not pooled.
+
+What the record shows about the bars rule (an executor's reading of the kept files, 2026-10-13; changes no form).
+PGC51017's held-out rms, 0.632099, equals GRV-BLIND-1's worst-galaxy bar, 0.632099 (analysis/GRV_BLIND_1_bars.json).
+PGC51017 and UGC04305 (held-out rms 0.538) were both in GRV-BLIND-1's training set, where the larger of them set
+that bar; the beacon draw moved both into the test set, and the bars recomputed on the 125 galaxies left behind
+tightened (rms bar 0.180 to 0.158; worst-galaxy bar 0.632 to 0.522) at the moment the test got harder. Without
+PGC51017 the held-out rms is 0.1602 (over); without both it is 0.1438 (under). Both are low-acceleration dwarfs
+(g_bar 2 to 4 x 10^-11 m/s^2; 3 and 12 kept points) at which the registered prediction sits 0.5 to 0.6 dex above
+the observed acceleration. The sub-reading is descriptive: B-2 forbids an exclusion after the truth, the verdict
+stands, and a galaxy that misses is a miss. What it says about the instrument is that a bar computed from the
+training complement of the draw moves away from the outliers exactly when the outliers move into the test, so the
+rule measures the draw as much as the prediction, and GRV-BLIND-1's pass and GRV-BLIND-2's fail both carry that
+dependence. The lab's write-up names the operating-characteristic study as the natural next question (its section 9);
+the lab's backlog carries it as GRV-BLIND-OC (rank 1). The charter should fix the bars once from the full eligible
+set (155 galaxies) by a rule that does not depend on which galaxies a draw removes, hold them across draws, state the
+rule's expected false-fail rate, and treat a calibrated, a too-narrow and an over-wide outcome symmetrically.
+
+Owed and disclosed. The amendment's seed wording ("the 32-byte randomness read as a base-16 integer") differs from
+the rule the lab executed and had recorded in the beacon file before the round (the first 8 hex digits, 31-bit);
+the write-up discloses it in section 7 and the lab's amendment template now states the executed rule in the charter
+text. The draw record the amendment promised (round, randomness, seed, hashes, held-out list) is appended to the
+charter as a post-data disclosure at this promotion. The reviewers' objection to the write-up's "interior work"
+label stands recorded: a charter naming rule (c) is not interior work under section 5 even when it moves none of
+the five numbers under section 2b.
+
+Physics, not chartered. The two carrying galaxies are the kind the published SPARC radial-acceleration analysis
+drops by its quality and inclination cuts, which the registered confrontation does not apply (its only cut is
+errV/Vobs < 0.1). A GRV-BLIND-3 could register those published cuts before a fresh beacon draw, as the literature's
+standard rather than a response to this fail, and would have to say so; the SPARC quality and inclination table is
+not in the repository, so nothing about these two galaxies' flags is asserted here.
