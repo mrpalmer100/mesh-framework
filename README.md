@@ -11,7 +11,7 @@ Repository: `mesh-framework` (renamed from `rope-framework` on 9 September 2026;
 
 **Version:**
 <!-- BEGIN GENERATED: version -->
-3.33.0
+3.34.0
 <!-- END GENERATED: version -->
 
 A machine-verified development of the Rope Hypothesis into the mesh framework: a classical, mechanical model in which the vacuum is a mesh of physical filaments and matter and light are its configurations, put into falsifiable, independently checkable form.
@@ -25,7 +25,7 @@ A machine-verified development of the Rope Hypothesis into the mesh framework: a
 >
 > **What makes it unusual is the discipline.** Every claim is registered with a pass/fail line drawn *before* the computation runs, and the failures are kept on permanent display rather than quietly dropped. As of this release:
 <!-- BEGIN GENERATED: corpus_stats -->
-*779 registered claims, 641 code-backed and passing, 121 Derived, 49 registered Failed and kept.*
+*780 registered claims, 641 code-backed and passing, 121 Derived, 49 registered Failed and kept.*
 <!-- END GENERATED: corpus_stats --> A dealbreaker, if one exists, should be findable in about five minutes — start with [`KNOWN_LIMITATIONS.md`](KNOWN_LIMITATIONS.md).
 >
 > **Where it is strong (the five-line version):** electromagnetism and optics derive from one wave equation on the weave; the classic gravity tests (light bending, Mercury, clock rates) come out exact; the fine-structure constant lands at 178 ppm from geometry; chemistry and the nuclear mass table are full mechanical layers; and the exact quantum ceiling (the Tsirelson bound) is a theorem. Full account: [`docs/WHERE_IT_STANDS.md`](docs/WHERE_IT_STANDS.md); how it unfolded: [`docs/SURPRISES.md`](docs/SURPRISES.md).
@@ -34,9 +34,11 @@ A machine-verified development of the Rope Hypothesis into the mesh framework: a
 
 > **Corpus state:**
 <!-- BEGIN GENERATED: status_breakdown -->
-779 registered claims (121 Derived, 556 Modeled, 4 EFT-constrained, 2 Conjecture, 7 Open, 49 Failed-and-kept, 40 registered); 641 code-backed.
+780 registered claims (121 Derived, 556 Modeled, 4 EFT-constrained, 2 Conjecture, 7 Open, 49 Failed-and-kept, 1 Provisional, 40 registered); 641 code-backed.
 <!-- END GENERATED: status_breakdown -->
 > Counts regenerate from `claims.yaml` — the authority is the registry, not this line.
+
+**📄 [THE LAB ON THE RECORD, 13 Oct 2026](docs/history/RELEASE_NOTES_v3.34.0.md)** -- *v3.34.0*: the galactic acceleration scale g_dagger = cH0/2pi scored blind twice, a pass on the author's draw (GRV-BLIND-1, 0.114 dex) and a fail on a public-beacon draw run by the lab (GRV-BLIND-2, 0.166 dex against 0.158), kept; the bars rule caught moving with the draw and named for calibration; the first promotion from the autonomous lab; the mass-versus-crossing law measured to n = 21 (KNOT-REACH-2, LINEAR; the proton-topology price ~1500 crossings); the knot table re-seated under a convergence rule (SEAT-CONVERGE); the nuclear row's shell lineage closed at NO MECHANISM with the missing term named (NUC-SHELL-1/2, ORBIT-TWIST); 780 claims, 49 Failed and kept.
 
 **📄 [THE FIRST ADJUDICATED CONFRONTATION, 8 Oct 2026](docs/history/RELEASE_NOTES_v3.33.0.md)** -- *v3.33.0*: the nuclear mass model scored blind on two sealed draws of fifty isotopes, the author's and an adjudicator's, all four verdicts inside the pre-locked bars (NUC-BLIND-1/2; externally adjudicated predictions 0 to 1); the gap map drawn (CLOSURE-MATRIX, FND-186: five load-bearing gaps) and the gauge inventory taken (FND-185: discrete only); the anti-aligned continuum reading refuted under a Nyquist bar and kept (FND-174); the action-bridge chain closed at the junction (FND-183, FND-182 to T4); 779 claims, 49 Failed and kept.
 
@@ -60,7 +62,7 @@ A machine-verified development of the Rope Hypothesis into the mesh framework: a
 
 
 <!-- BEGIN GENERATED: current_release -->
-**Current release: v3.33.0** (8 Oct 2026), 779 claims.
+**Current release: v3.34.0** (13 Oct 2026), 780 claims.
 <!-- END GENERATED: current_release -->
 Headline: THE ENERGY BILL — priced and payable. The vacuum's constituents orbit at exactly c (two registered numbers multiplying to one), and the wave's dynamical share [0.62, 0.78] fits inside the matter sector's registered zero-point window (< 0.889): zero-point energy IS the winding's rotation. Full account: [`docs/history/RELEASE_NOTES_v3.26.77.md`](docs/history/RELEASE_NOTES_v3.26.77.md); prior: [`docs/history/RELEASE_NOTES_v3.26.76.md`](docs/history/RELEASE_NOTES_v3.26.76.md).
 

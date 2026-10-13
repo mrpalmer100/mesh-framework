@@ -508,6 +508,13 @@
   Lambda_nat <= 4.7e34, chi_required >= 2.1e-35. KL updated.
   713 claims.
 
+## 3.34.0 (2026-10-13) -- THE LAB ON THE RECORD: THE FIRST BEACON-SEEDED CONFRONTATION FAILS AND IS KEPT; THE MASS-VERSUS-CROSSING LAW MEASURED; THE NUCLEAR ROW'S MISSING TERM NAMED
+
+- Five numbers: none moved (infrastructure by NORTH_STAR 2b). GRV-BLIND-1 BLIND-AGREES on the author's draw (rms 0.1138, bar 0.1800); GRV-BLIND-2 BLIND-FAILS on a drand-beacon draw run by the lab (rms 0.1656, bar 0.1582; worst galaxy PGC51017 0.632, bar 0.522), kept at full weight. The worst galaxy's rms equals GRV-BLIND-1's worst-galaxy bar to six figures: it set that bar from the training set and the beacon moved it into the test; the bars rule's calibration is the next charter (GRV-BLIND-OC). tools/holdout_galaxies.py new.
+- First promotion from the lab (the Mac mini's autonomous commission pipeline): benchmarks/lab/grv_blind_2/, analysis/lab/ (locks, beacon commitment, decisions, verdict, digests), GRV-129 Provisional (780 claims; the verdict as rendered; granting at promotion). The amendment's seed wording differs from the executed 31-bit rule; disclosed in the write-up and as a charter disclosure.
+- KNOT-REACH-2 (PC): LINEAR, p = 0.9605 +/- 0.0378 to n = 21 under the convergence rule; the price of 1836 ~1500 crossings (band 1100 to 2000); riders FND-MATTER-066/019; gap 5 priced. SEAT-CONVERGE (PC): ten knots converged in 35 min, STABLE-SET-[5, 7], walls STAND, the set traced to the braid and plat basins; riders FND-MATTER-069/019/021/023/032.
+- NUC-SHELL-1 SHELLS-FAIL (box 2, 8, 20, 34, 58, 92, 138 against nature's 28, 50, 82, 126), ORBIT-TWIST SO-NO-MECHANISM (the frame-rotation term is flat in the winding number), NUC-SHELL-2 PRICE-NONE (no torsion closes 28 without losing 8 and 20): the nuclear row's "Blocked by" cell final at this level; riders NUC-A, NUC-022, QB-025, FND-185. See docs/history/RELEASE_NOTES_v3.34.0.md.
+
 ## 3.33.0 (2026-10-08) -- THE FIRST ADJUDICATED CONFRONTATION: THE WEIGHTS OF ATOMS PREDICTED BLIND, THE GAP MAP DRAWN, ONE CONTINUUM CLAIM REFUTED UNDER A NYQUIST BAR
 
 - Five numbers: externally adjudicated predictions 0 -> 1 (NUC-BLIND-2); the other four unchanged. First release carrying the five numbers (NORTH_STAR 2b) and the D0-D3 grade column (2c).
