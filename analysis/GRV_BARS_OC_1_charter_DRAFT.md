@@ -1,5 +1,6 @@
 # COMMISSION GRV-BARS-OC-1 -- THE OPERATING CHARACTERISTIC OF BAR W's BARS RULE ON THE SPARC TABLE
-# (CHARTER, the author's DRAFT for the lab's lock; nothing has run; no number in this charter was read from the table)
+# (CHARTER, the author's DRAFT v2 for the lab's lock, 2026-10-18; revised after the round-1 lock reviews of 2026-10-17;
+# nothing in this text was read from the table)
 
 Supersedes the withdrawn GRV-BLIND-OC (three lock rounds, 2026-10-15/16; the external reviewer's objections are
 answered by construction below, not by argument). Same question key family; a different question from GRV-BLIND-2,
@@ -18,8 +19,12 @@ rms. A held-out draw passes if its rms is at or under the first and its worst ga
 Q1 (the rms bar). Over many disjoint, uninspected train/test splits of the shipped table, how often does the held-out
 rms exceed the rms bar computed from that split's own training complement? The rule's nominal rate is 5 percent.
 Q2 (the worst-galaxy bar). The same for the worst-galaxy bar.
-Q3 (the verdict rule). The same for the joint rule actually used to render BLIND-AGREES or BLIND-FAILS (either bar
-exceeded), whose nominal rate the GRV-BLIND-2 charter stated as "about 5 to 10 percent" without measuring it.
+Q3 (the recorded outlier form). The rate at which the worst-galaxy bar is exceeded AND the rms bar is not, i.e. how
+often a draw that passes the deciding rule carries an OUTLIER-EXCEEDS-BAR record. Correction from round 1: in
+GRV-BLIND-1 and GRV-BLIND-2 the verdict (BLIND-AGREES or BLIND-FAILS) was decided by the rms bar ALONE; the
+worst-galaxy bar rendered a separate recorded form (Q3, OUTLIER-WITHIN-BAR or OUTLIER-EXCEEDS-BAR) that changed no
+verdict (analysis/GRV-BLIND-2_charter_LOCKED.md section 7). No "joint rule" was ever used, and none is measured here;
+the "5 to 10 percent" prior in that charter is not a rule and is not read against.
 Q4 (the fixed-bar alternative, recorded, not read). The same three rates for bars computed ONCE from all 155 eligible
 galaxies by the same quantile rule and held fixed across every split. This is the candidate rule STRATEGIC_TARGETS
 section AL names; this commission measures it beside the current rule and adopts nothing.
@@ -91,9 +96,8 @@ For an observed rate p_hat over N = 1000 splits, the 95 percent Wilson interval 
 - CALIBRATED: the Wilson 95 percent interval of p_hat contains 5.0 percent.
 - TOO-NARROW: the whole interval lies above 5.0 percent (the rule fails honest draws more often than it says).
 - OVER-WIDE: the whole interval lies below 5.0 percent.
-Q3 (the joint rule) is read against its own nominal band: CALIBRATED if the interval contains any value in
-[5.0, 10.0] percent (the GRV-BLIND-2 charter's stated prior); TOO-NARROW if wholly above 10.0; OVER-WIDE if wholly
-below 5.0.
+Q3 is recorded as a rate with its Wilson interval and read by no form (there is no nominal rate for it: it is the
+product of two dependent events and the charter sets no expectation).
 Q4 is recorded (the three rates and intervals under the fixed bars) and read by no form.
 Sub-reading, recorded, not read: among the splits whose worst-galaxy bar is exceeded, the fraction in which the
 held-out set contains at least one of the two galaxies that set the top of the training distribution in the splits
@@ -106,21 +110,38 @@ FORM (instrument): CREDENTIAL-FAIL (any of C-1 to C-3), CONTROL-FAIL (section 5)
 INCOMPLETE-OPEN (status not COMPLETE, or chunk coverage short of N).
 FORM (Q1): RMS-BAR-CALIBRATED / RMS-BAR-TOO-NARROW / RMS-BAR-OVER-WIDE.
 FORM (Q2): GAL-BAR-CALIBRATED / GAL-BAR-TOO-NARROW / GAL-BAR-OVER-WIDE.
-FORM (Q3): RULE-CALIBRATED / RULE-TOO-NARROW / RULE-OVER-WIDE.
-Q4 and the sub-reading are printed, not formed. The three Q forms are independent; each is read from its own
-interval; none is read from another's. A TOO-NARROW on any form says only that the rule's nominal rate understates
+Q3, Q4 and the sub-reading are printed, not formed. The two Q forms are independent; each is read from its own
+interval; none is read from another's. The instrument forms are rendered in the order listed and the verdict
+returns at the first one rendered: CREDENTIAL-FAIL or CONTROL-FAIL is printed and the script exits before any Q
+statistic is computed or printed. A TOO-NARROW on either form says only that the rule's nominal rate understates
 its false-fail rate; it says nothing about the size of GRV-BLIND-2's miss, which this commission does not measure
-and the write-up must not characterise.
+and the write-up must not characterise. Inclusion arithmetic (30 of 155 per draw) is an expectation, never a
+realised count; the charter claims no realised frequency for any galaxy.
 
 ## 8. The verdict script (benchmarks/lab/grv_bars_oc_1/verdict.py; frozen at lock)
 
-Reads the checkpoint only. Before any statistic: refuses (exit 2, CHECKPOINT-INVALID) unless the checkpoint carries
+Reads the checkpoint only. Order of operations, fixed: (1) validate the checkpoint in full (below); (2) only then
+create the verdict log with O_EXCL; (3) credentials and the floor, each returning at its form; (4) the Q statistics.
+Validation refuses (exit 2, CHECKPOINT-INVALID) unless the checkpoint carries
 status COMPLETE with every field of the plan present (N = 1000 seeds, each equal to the schedule rule's value for its
 index, all distinct; chunk coverage 1..N with no gap; the control's N entries; the fixed bars; the credential results;
-the file hashes equal to those recorded at lock in analysis/lab/locks/); a checkpoint with status CREDENTIAL-FAIL or
+every numeric field finite, the fixed-run parameters equal to this charter's, and a manifest naming
+benchmarks/lab/grv_bars_oc_1/driver.py, benchmarks/lab/grv_bars_oc_1/verdict.py, this charter and both instrument
+files with sha256 equal to the lock record in analysis/lab/locks/); a checkpoint with status CREDENTIAL-FAIL or
 CONTROL-FAIL renders that form and nothing else. The verdict log analysis/GRV-BARS-OC-1_verdict.log is created with
 O_EXCL before evaluate() runs; an existing log refuses the run (one verdict, kept); an interrupted run leaves the
 log and the refusal stands. Every number the forms read is printed with the interval that produced it.
+
+## 8a. Development and smoke discipline (binding on the worker; a lock-review item)
+
+Before the lock nothing may run against data/sparc_rotmod except the three credentials of section 4, which read
+only files already on the record. The driver's LAB_SMOKE=1 mode generates its own synthetic fixture (155 synthetic
+galaxies with point counts drawn from a fixed small set and iid Gaussian residuals, seeded 4242) and runs the whole
+pipeline on that fixture with N = 20 splits; it reads no file under data/, writes analysis/grv_bars_oc_1_smoke.pkl
+and never the evidence checkpoint; the verdict's smoke mode prints the numeric plumbing it checked and the line
+"smoke: forms withheld" and NO FORM token. The round-1 draft smoked on six real splits and printed their forms;
+that run is disclosed in section 10 as exposure, its seeds (whatever they were) are excluded from the schedule by
+the schedule rule's construction (sha256 of a fixed string), and no number from it appears anywhere in this charter.
 
 ## 9. Budgets
 
@@ -137,7 +158,11 @@ thresholds and the control band come from binomial arithmetic at the nominal rat
 cited are the two recorded bar pairs and two recorded draws, already on the record. The executor's reading in
 STRATEGIC_TARGETS section AL (that one galaxy set GRV-BLIND-1's worst-galaxy bar and moved into GRV-BLIND-2's test)
 is a reading of kept files, not a run; the sub-reading in section 6 asks the table to name the setters itself and
-reads no form from them. Whether the result changes the gravity row's reading of GRV-BLIND-1 or GRV-BLIND-2 is a
+reads no form from them. Exposure record (preserved, not cured): the withdrawn GRV-BLIND-OC's 60-split pilot and 12
+previewed seeds; the round-1 draft of this commission's smoke run on six real splits whose Q forms were printed
+(2026-10-17). Neither run chose anything in this charter: the thresholds, the band, N, the chunk size and the
+credential tolerances are the arithmetic of sections 5 and 6, which do not depend on any run's output, and the
+evidence schedule is a hash of a fixed string that no run can have selected. Whether the result changes the gravity row's reading of GRV-BLIND-1 or GRV-BLIND-2 is a
 question for the author at promotion; the forms here are about the rule.
 
 ```lab
@@ -148,7 +173,7 @@ verdict_script: benchmarks/lab/grv_bars_oc_1/verdict.py
 instrument:
   - benchmarks/gravity/grv_blind_1.py
   - tools/holdout_galaxies.py
-forms: [CREDENTIAL-FAIL, CONTROL-FAIL, CHECKPOINT-INVALID, INCOMPLETE-OPEN, RMS-BAR-CALIBRATED, RMS-BAR-TOO-NARROW, RMS-BAR-OVER-WIDE, GAL-BAR-CALIBRATED, GAL-BAR-TOO-NARROW, GAL-BAR-OVER-WIDE, RULE-CALIBRATED, RULE-TOO-NARROW, RULE-OVER-WIDE]
+forms: [CREDENTIAL-FAIL, CONTROL-FAIL, CHECKPOINT-INVALID, INCOMPLETE-OPEN, RMS-BAR-CALIBRATED, RMS-BAR-TOO-NARROW, RMS-BAR-OVER-WIDE, GAL-BAR-CALIBRATED, GAL-BAR-TOO-NARROW, GAL-BAR-OVER-WIDE]
 state: [analysis/grv_bars_oc_1_ckpt.pkl]
 budget: {cpu_hours: 2, usd: 0}
 mem_gb: 1
