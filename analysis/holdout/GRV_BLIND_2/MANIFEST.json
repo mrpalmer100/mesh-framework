@@ -1,0 +1,174 @@
+{
+ "name": "GRV_BLIND_2",
+ "kind": "galaxies",
+ "section": "W (STRATEGIC_TARGETS, 2026-10-04)",
+ "drawn_by": "drand beacon round 6543429 (chain 8990e7a9aaed2ffe)",
+ "drawn_at_utc": "2026-10-11T15:52:01Z",
+ "table": "data/sparc_rotmod",
+ "n_files": 175,
+ "eligible": 155,
+ "seed": 1083026663,
+ "n_test": 30,
+ "n_train": 125,
+ "test_galaxies": [
+  "D564-8",
+  "DDO064",
+  "DDO161",
+  "ESO079-G014",
+  "NGC0024",
+  "NGC2366",
+  "NGC3726",
+  "NGC4217",
+  "NGC5585",
+  "NGC6015",
+  "NGC6195",
+  "NGC6674",
+  "NGC7814",
+  "PGC51017",
+  "UGC00731",
+  "UGC02916",
+  "UGC02953",
+  "UGC03580",
+  "UGC04305",
+  "UGC05414",
+  "UGC06786",
+  "UGC06818",
+  "UGC06930",
+  "UGC07151",
+  "UGC07524",
+  "UGC07690",
+  "UGC09133",
+  "UGC10310",
+  "UGC11557",
+  "UGCA281"
+ ],
+ "train_sha256": "26a7721fd44601e8af72e98a12cfe10d127c5bada6e4fb71b967e44b752c10b5",
+ "files": {
+  "D564-8": {
+   "inputs": "c1765b9b5a4038f2adab5971b4bc64f919fa9665d57f0e00a7b471824715ec53",
+   "sealed": "722de12932e47fe9584841d85be8f3c3f2fcc4d32216961c010072e17ad99cc1"
+  },
+  "DDO064": {
+   "inputs": "7a7809546e58caf64aac7058a70aaf890c6073776c179535df8aff9b2b4ce97e",
+   "sealed": "e2b78cd4e423ee2ef933235b537d3c45782edb9656853e86fe04775d661824cb"
+  },
+  "DDO161": {
+   "inputs": "cc97b695b36fed3403b8a172148f4b3bc2d8a25f9882530782330f6d69784494",
+   "sealed": "7f5f8e9b67df747a353a26748d8be5effed8f759f82d53144afb7c7cf5b892d9"
+  },
+  "ESO079-G014": {
+   "inputs": "ba981791115eddb611a14eb9eda6d55eee7d75d27bec6e81d83d5e95e1594d8b",
+   "sealed": "d7967e1db524d7dbabd80de62ec6610e78c3a0ec3e4e17baec3a83a945c0ec7b"
+  },
+  "NGC0024": {
+   "inputs": "37ddc20921959552e2af529760b5fda303c61319260522ae5ef9b6676656c0e4",
+   "sealed": "747bca0850402cc92c7260100324c2b9737c8d66b734ec40994a46d0ea50d3bb"
+  },
+  "NGC2366": {
+   "inputs": "af6247fae1720ee6d2cd4eca100a1f30438bae16487c054dfffb8099d2fb16bf",
+   "sealed": "fa4469db99b5ff030cc2dfcb2d87e0a3c5574635ea260e17a9d5f9c9f09cf53d"
+  },
+  "NGC3726": {
+   "inputs": "b64906f76bf763209a6abd195449553bcb23467ca7cd1e76f331dcd20bc17783",
+   "sealed": "d375b2db7579f9bf6fb4657f9995ddc17352665d96805f76e3da9666de1b1a7e"
+  },
+  "NGC4217": {
+   "inputs": "d08ec6256d15740f910952412665b9cb9522127d9b52f0c1708f8c8d27ba9107",
+   "sealed": "6b8a0505eb1297cfbcd63bae54af8f8f7f1ffe01ff7bf45c1630c8c1f13f0d59"
+  },
+  "NGC5585": {
+   "inputs": "2986cec9b4c55d69f76eeb66d1ad95caf957997684bdcf3c54cb720de255679a",
+   "sealed": "9666039416f5c1820fa99b2cd74ed113a67811c1d7ae1aae0fafa3c8381ece2a"
+  },
+  "NGC6015": {
+   "inputs": "be50074177f9dff09f99eb1540e212f35f27315f9aea810f0dbf66c38b063aeb",
+   "sealed": "ea0396105423a76bd52bd4663f6237cc8c6091d6574ff73fbb46c0b23d49c5b2"
+  },
+  "NGC6195": {
+   "inputs": "ddc12880f69ba019c0bd389d72ff476ba1a5d073af0c6b55aa1eb1136f8d0f8d",
+   "sealed": "d8faa9d7bcc6d7443e83873cddc8f08b874419078c0b08e98629498a55ec93f7"
+  },
+  "NGC6674": {
+   "inputs": "dd32784cd89fad265f512838f28300e3165a4effcaed4643923dfb895208d323",
+   "sealed": "e5a7962a8cfcdc33586ea830de734d0ec06a18ed9d2995e3ee7bb459237cf02d"
+  },
+  "NGC7814": {
+   "inputs": "3aec3156f80dc7b5b91842251057c0ffe8b41f621c9c9440684a48a06559bc4f",
+   "sealed": "2ac27907a134cceef53268d36c8c5611f543a1ec0b36a3dc53c854488da66036"
+  },
+  "PGC51017": {
+   "inputs": "cb45e2f51f506aa210ae2b03250b2b6b3bf1af2b51ad87fd176c4f7c7a5f7acb",
+   "sealed": "65c9cc2b5626ca66f392ff17ba5a810fd96ceaa4a5923d06cf293a19a5c82bcd"
+  },
+  "UGC00731": {
+   "inputs": "32b1f7392ec93b21f6bc276b30424c21183fd3d1146e72a92b35363a4d6e8f49",
+   "sealed": "5577e0a29fead183920b93b724eb83195d74ce144468043e06783c47056bd8c8"
+  },
+  "UGC02916": {
+   "inputs": "c7457fd2a6e0a2202d46abb4d882a9f9c3596956323b9614a3c4d35f0c51b6af",
+   "sealed": "9c1fcfe49abae08a418f8083641a7494a2c4a54fe2ac229e723c638a6bdeb1c1"
+  },
+  "UGC02953": {
+   "inputs": "e449eb9c70504db6e5e0630dc5f625ea631295a915f20c520d746e0f5a8e79f7",
+   "sealed": "de5659740e5917a606b5c8fa8ae304efdc1ec15932f83a07daecae925e48e7c3"
+  },
+  "UGC03580": {
+   "inputs": "bfabc59fb101ade394bb3f824a5586e74d5b88cb8b789c5e3eebd3e98f574c1b",
+   "sealed": "07b9f709d40fecc74f1c82a9cff1c7339487e719338de27cde1cf2b5348d686f"
+  },
+  "UGC04305": {
+   "inputs": "116da9294e062872b3d7e4bc6668abc596bf22282d671bbf0eac848bc53fa6f7",
+   "sealed": "92cf9004782bc8b2b86d1115fbdc1f8c93399a3db8297c1fee0b964085f3477e"
+  },
+  "UGC05414": {
+   "inputs": "552df6b5337709dec41503e354dd1ac040c45f96ba3895ff997ccdcd4c3fec0d",
+   "sealed": "97051fd76a0cc6936c9d77e307d7404e43fee2e9514956d5ea36ffb8533f65af"
+  },
+  "UGC06786": {
+   "inputs": "0557f4decf904d08674023f00fa3713d70566d43baeaccccbae91fd1d4366c67",
+   "sealed": "b1027199fb6efe4c322250ab156e526af3a2a0a9b65474364a84c0d54138fafe"
+  },
+  "UGC06818": {
+   "inputs": "ad143220332dcdeb2dd1301b7478c0e1a63cf4e314ef9ff97c1661e7df95c03f",
+   "sealed": "98540d475446a5ed3e175b163a4744df932a688afcd9788032c68bcd7a0d9f02"
+  },
+  "UGC06930": {
+   "inputs": "38116c4cfbe5b5975999fb4ebdc90fb4c6f210676d4510e3ef557f63257778c9",
+   "sealed": "fffdcb5339162c38b3d65e87e69f1a2616a074565b22a4e6a17bf4393ca8eae3"
+  },
+  "UGC07151": {
+   "inputs": "fc303f2c869c1a93438b30d9389a8353c85d619a9f0399c764a93d6cfa8a0bca",
+   "sealed": "efcae9f21f9284715e252aa442bab4b7609785da825ba0168550d6baec990b9c"
+  },
+  "UGC07524": {
+   "inputs": "170718636452fd06b0ac921ea2ee59717c994acf32d26feade2d2d95422ebcf3",
+   "sealed": "5e2f79f729306815f533d310e5664f9a8d0a3d9c0b72b2e0749a1b25b197bd2e"
+  },
+  "UGC07690": {
+   "inputs": "89b22dfe5359a4912b5bcee8c259020f8f48b647dcd1a4ebee33a649fcdfaae9",
+   "sealed": "0f302002ebb7eeb999ebddb9ad90c044ffb790992efd544bf7807d58a1453082"
+  },
+  "UGC09133": {
+   "inputs": "99d794d1be4d99cb223b7c2ad3663b02f1a69a26b44ca30cf246ed5a1276021d",
+   "sealed": "7f9bb0ec3922c03aa75495d489c7833a2a60e19f5a80d32f0af50b02ea2a758f"
+  },
+  "UGC10310": {
+   "inputs": "112b3169aef267d237312549567fd7ecd5f698e9aacf1c0b57d4aef552477f05",
+   "sealed": "54c37e6d78299f45a8c62692b65ded7989bfa616e8f30b96a5aaf35b9f020693"
+  },
+  "UGC11557": {
+   "inputs": "28e486008b02946480b45006f7906bef6e4de616e3d5ca5f896e45250ae91917",
+   "sealed": "ed9a19211cc410c95b62172beacf2678d99f2f06d2581aa23d9f66abe670f05e"
+  },
+  "UGCA281": {
+   "inputs": "5a00454f233d4a8ead182bc6aa1ace459311cad7f9320ce4f48d82397268ee46",
+   "sealed": "980bef0886bcfb8fbc7ae9fdb18937926df964b1c8b5e90af6ab12688edea6db"
+  }
+ },
+ "test_sha256": "3fa3db3331fcf8d8390349b6828613b8e4f664caec4c240d0168c67b19ae807b",
+ "rule": "The commission reads train.txt, the training galaxies' files and inputs/<galaxy>.dat only. sealed/ is read once, by verdict, after the predictions are sealed. No redraw.",
+ "prediction_sha256": "f796989a69d90be416abe7998291aa03459d50a5369c1348e0c3a4a9b137c659",
+ "prediction_sealed_at_utc": "2026-10-11T15:52:15Z",
+ "verdict": "BLIND-FAILS",
+ "prediction_file": "analysis/GRV_BLIND_2_pred.txt"
+}

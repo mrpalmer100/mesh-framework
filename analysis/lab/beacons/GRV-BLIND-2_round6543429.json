@@ -1,0 +1,11 @@
+{
+  "commission": "GRV-BLIND-2",
+  "chain": "8990e7a9aaed2ffed73dbd7092123d6f289930540d7651336225dc172e51b2ce",
+  "round": 6543429,
+  "round_time": "2026-10-11T15:51:30Z",
+  "committed_at": "2026-10-11T11:41:06-0400",
+  "command": "python tools/holdout_galaxies.py draw --name GRV_BLIND_2 --seed {seed} --n 30 --drawn-by \"{drawn_by}\"",
+  "drawn_by": "drand beacon round 6543429 (chain 8990e7a9aaed2ffe)",
+  "seed_rule": "int(randomness[:8], 16) & 0x7fffffff",
+  "verify": "curl https://api.drand.sh/public/6543429"
+}

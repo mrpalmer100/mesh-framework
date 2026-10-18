@@ -1,0 +1,34 @@
+GRV-BLIND-2 verdict (evidence checkpoint); checkpoint analysis/grv_blind_2_ckpt.pkl; units done ['calib', 'manifest', 'predict', 'seal', 'truth']
+
+CALIBRATION LEG (pass bars locked; every one must pass; C-1 to C-5 are evaluated before the seal and the truth)
+  C-1 bars rule reproduces GRV-BLIND-1: |d| = 0.00e+00 dex (bar 1e-06); new 0.180044/0.632099; ref 0.180044/0.632099: PASS
+  C-2 predictor reproduces GRV_BLIND_1_pred.txt: 734/734 points, keys equal True, max rel diff 0.00e+00 (bar 1e-05); file sha equal True (informational): PASS
+  C-3 draw tool reproduces GRV-BLIND-1's 30 galaxies from seed 52525254: True; eligible 155 vs 155: PASS
+  C-4 verdict arithmetic on GRV-BLIND-1's recorded rows: rms 0.1138 (tool 0.1138), worst 0.3803 (tool 0.3803), n 634 (tool 634), form BLIND-AGREES (tool BLIND-AGREES); bar 5e-05: PASS
+  C-5 the adjudicator's draw reproduces from its seed 1083026663 (test True, eligible True, train True); inputs present True; train file sha matches manifest True: PASS
+  C-6 one seal, on the file the driver wrote (evaluated after the seal; not part of the pre-truth gate): f796989a69d90be4...: PASS
+
+FLOOR LEG (computed before the seal and before the truth; training data and held-out inputs only)
+  F-1 power against the null: Newtonian (g_pred = g_bar) training rms 0.5350 dex = x3.38 the bar 0.1582 (bar x2.0); prediction's training rms 0.1344: PASS
+  F-2 the draw is in the regime where the prediction differs from the null: held-out rms of log10(g_pred/g_bar) 0.472 dex (bar >= 0.3); fraction of input radii with g_bar < g_dagger 0.701 (bar >= 0.4); input radii unpredicted or g_bar <= 0: 0 (bar 0): PASS
+  worst-galaxy bar origin (recorded): bar 0.5224; worst TRAINING galaxy rms at the prediction 0.5224 (UGC02455): the bar is that one training galaxy's rms
+
+DRAW: seed 1083026663; drawn by 'drand beacon round 6543429 (chain 8990e7a9aaed2ffe)' at 2026-10-11T15:52:01Z; 30 of 155 eligible; train sha256 26a7721fd44601e8af72e98a12cfe10d127c5bada6e4fb71b967e44b752c10b5; test sha256 3fa3db3331fcf8d8390349b6828613b8e4f664caec4c240d0168c67b19ae807b
+  overlap with GRV-BLIND-1's test set: 5 galaxies ['ESO079-G014', 'NGC5585', 'NGC6674', 'UGC02953', 'UGC07524'] (recorded, not removed)
+
+HELD-OUT STATISTICS (recomputed from the kept rows; the tool's own numbers are cross-checked)
+  647 kept points in 30 galaxies; rms 0.1656 dex (bar <= 0.1582); worst galaxy PGC51017 0.6321 (bar <= 0.5224); mean residual -0.0271
+  tool agreement: rms/worst/n match to 1e-09: True; tool's bars equal the checkpoint's: True; tool verdict BLIND-FAILS (both bars) vs script BLIND-FAILS: True; missing 0
+  worst five: PGC51017 0.632, UGC04305 0.538, UGC11557 0.311, DDO161 0.263, NGC0024 0.258
+
+SUB-READINGS (descriptive; locked as recorded-not-read; they change no form)
+  rms at the registered data-fitted g_dagger 1.134e-10: 0.1671 (mean -0.0338) against 0.1656 at the predicted 1.083e-10
+  no factor on the grid within the bar
+  training pass window (set before the truth): g_dagger x0.707 to x1.682 of the predicted value keep the training rms within the bar: a BLIND-AGREES does not discriminate c H0 / 2 pi from values inside this window
+  rms excluding the 5 galaxies shared with GRV-BLIND-1: 0.1865
+
+BARS: rms <= 0.1582 dex (decides Q1) and worst galaxy <= 0.5224 dex (recorded as Q3 only), 95th percentiles over 20000 random 30-galaxy subsets of the 125 training galaxies at the predicted g_dagger
+FORM (Q1): BLIND-FAILS -- rms 0.1656 > 0.1582
+FORM (Q2): DRAW-EXTERNAL -- drawn by 'drand beacon round 6543429 (chain 8990e7a9aaed2ffe)' (seed 1083026663); not in the locked excluded-drawer list, seed not in [777, 52525254], set is not GRV-BLIND-1's
+FORM (Q3): OUTLIER-EXCEEDS-BAR -- worst galaxy PGC51017 0.6321 > 0.5224 (recorded; changes neither Q1 nor the scorecard)
+SCORECARD: 2b unchanged by this verdict

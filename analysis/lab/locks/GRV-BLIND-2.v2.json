@@ -1,0 +1,48 @@
+{
+  "commission": "GRV-BLIND-2",
+  "version": 2,
+  "kind": "disclosure",
+  "actor": "agent:decider",
+  "reason": "lab decision: beacon draw (drand round 6543429)",
+  "at": "2026-10-11 11:41:04 -0400",
+  "spec": {
+    "commission": "GRV-BLIND-2",
+    "target": "NORTH_STAR section 2b, externally adjudicated predictions 1 to 2, by adjudicating GRV-030's parameter-free g_dagger = cH0/2pi (the Gravitational force row's D1 content) on an adjudicator's draw; no target moved to derived, no input retired",
+    "driver": "benchmarks/lab/grv_blind_2/driver.py",
+    "verdict_script": "benchmarks/lab/grv_blind_2/verdict.py",
+    "instrument": [
+      "benchmarks/gravity/grv_blind_1.py",
+      "tools/holdout_galaxies.py"
+    ],
+    "forms": [
+      "BLIND-AGREES",
+      "BLIND-FAILS",
+      "BLIND-INCOMPLETE",
+      "BLIND-OPEN-FLOOR",
+      "BLIND-CALIB-FAIL",
+      "DRAW-EXTERNAL",
+      "DRAW-NOT-EXTERNAL",
+      "OUTLIER-WITHIN-BAR",
+      "OUTLIER-EXCEEDS-BAR",
+      "OUTLIER-OPEN"
+    ],
+    "state": [
+      "analysis/grv_blind_2_ckpt.pkl"
+    ],
+    "budget": {
+      "cpu_hours": 0.1,
+      "usd": 0
+    },
+    "mem_gb": 1
+  },
+  "manifest": {
+    "analysis/GRV-BLIND-2_charter_LOCKED.md": "1076d31f3e9e5eb1ea89593e5d026842bc451dd494ba0ad518684284c22bacc2",
+    "benchmarks/lab/grv_blind_2/driver.py": "8d5e177037973eb9328e4f768b0101ebcceee722c9f41a4a684a019abca32310",
+    "benchmarks/lab/grv_blind_2/verdict.py": "76f43f2ffbd09d9d3343db016960badf6463c161529ccea9d4078bc2840f65ad",
+    "benchmarks/gravity/grv_blind_1.py": "4c407e9e732c431909b3bf8bc0e6abcf214083f8fe2c480c526ae921503aa634",
+    "tools/holdout_galaxies.py": "87fa200c1145f9d8b87922f272544b6c18a09bab1cd657ff59f99e3f87e25d7a"
+  },
+  "changed": [
+    "analysis/GRV-BLIND-2_charter_LOCKED.md"
+  ]
+}
