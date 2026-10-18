@@ -42,15 +42,16 @@ the author before this charter).
 | the internal prediction | g_pred = g_bar nu(g_bar / g_dagger), nu(y) = 1/(1 - exp(-sqrt y)), g_dagger = c H0 / 2 pi, H0 = 70; M/L gas, 0.5, 0.7 | GRV-030; benchmarks/gravity/grv_blind_1.py (unchanged) |
 | the table | data/sparc_rotmod, 155 eligible galaxies (kept_mask as the registered confrontation) | tools/holdout_galaxies.py |
 | the low-acceleration set | kept points with 0 < g_bar < 0.3 g_dagger; galaxies with at least three such points (136 galaxies, 1537 points on the shipped table; read as inputs only, no g_obs) | this charter, from the table's inputs |
-| the environmental field | e_N per SPARC galaxy, the Newtonian acceleration from the surrounding large-scale structure, in units of the authors' a_0 = 1.2e-10 m/s^2, from Chae, Lelli, Desmond, McGaugh, Li and Schombert 2020, ApJ 904, 51, Table 1 (arXiv:2009.11525) | data/sparc_efe/chae2020_eN.csv, to be placed in the repository by the author AFTER the lock (section 3); not read by anyone in the programme before the verdict |
+| the environmental field | e_N per SPARC galaxy, the Newtonian acceleration from the surrounding large-scale structure, in units of the authors' a_0 = 1.2e-10 m/s^2, from Chae, Lelli, Desmond, McGaugh, Li and Schombert 2020, ApJ 904, 51 (arXiv:2009.11525), Appendix B Table 2, column e_env (the ENVIRONMENTAL estimate from large-scale structure, g_env / g_dagger_authors; NOT the column e, which is the external field FITTED to each rotation curve and would be circular here), in the version corrected by the authors' erratum as posted at the SPARC site (astroweb.cwru.edu/SPARC/) | data/sparc_efe/chae2020_eN.csv, to be placed in the repository by the author AFTER the lock (section 3); not read by anyone in the programme before the verdict |
 | the conversion | e_N [m/s^2] = (value) x 1.2e-10 (the authors' unit), then e = e_N / g_dagger with the registered g_dagger | this charter |
 | the H-LOCAL form | section 6 | the algebra of a local algebraic response in one dimension |
 
 ## 3. The sealed input (the analogue of section W's draw; a precondition of the verdict, not of the lock)
 
-After the lock the author downloads the authors' Table 1, writes data/sparc_efe/chae2020_eN.csv with the header
-"galaxy,eN_a0" (one row per galaxy as the authors name them; SPARC names, e.g. NGC3198), and commits it with its
-sha256 in the commit message, WITHOUT reading its values beyond what the download shows. The driver's units before
+After the lock the author downloads the authors' table (Appendix B Table 2, erratum-corrected, from the SPARC site), takes the column e_env (never the fitted column e), writes data/sparc_efe/chae2020_eN.csv with the header
+"galaxy,eN_a0" (one row per galaxy as the authors name them; SPARC names, e.g. NGC3198, matched to the table's
+names after stripping zero-padding and case), by a script that copies the column without printing it, and commits
+it with its sha256 in the commit message, WITHOUT reading its values beyond what the download shows. The driver's units before
 U3 read no file under data/sparc_efe/; U3 reads the file ONCE, records its sha256 and row count in the checkpoint,
 and no unit after U3 reopens it. The author's own exposure is disclosed: he knows the paper reports a detection.
 If the file has fewer than 100 galaxies matched to the 155, or fewer than 30 matched among the low-acceleration
