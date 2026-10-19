@@ -42,19 +42,28 @@ the author before this charter).
 | the internal prediction | g_pred = g_bar nu(g_bar / g_dagger), nu(y) = 1/(1 - exp(-sqrt y)), g_dagger = c H0 / 2 pi, H0 = 70; M/L gas, 0.5, 0.7 | GRV-030; benchmarks/gravity/grv_blind_1.py (unchanged) |
 | the table | data/sparc_rotmod, 155 eligible galaxies (kept_mask as the registered confrontation) | tools/holdout_galaxies.py |
 | the low-acceleration set | kept points with 0 < g_bar < 0.3 g_dagger; galaxies with at least three such points (136 galaxies, 1537 points on the shipped table; read as inputs only, no g_obs) | this charter, from the table's inputs |
-| the environmental field | e_N per SPARC galaxy, the Newtonian acceleration from the surrounding large-scale structure, in units of the authors' a_0 = 1.2e-10 m/s^2, from Chae, Lelli, Desmond, McGaugh, Li and Schombert 2020, ApJ 904, 51 (arXiv:2009.11525), Appendix B Table 2, column e_env (the ENVIRONMENTAL estimate from large-scale structure, g_env / g_dagger_authors; NOT the column e, which is the external field FITTED to each rotation curve and would be circular here), in the version corrected by the authors' erratum as posted at the SPARC site (astroweb.cwru.edu/SPARC/) | data/sparc_efe/chae2020_eN.csv, to be placed in the repository by the author AFTER the lock (section 3); not read by anyone in the programme before the verdict |
+| the environmental field | e_N per SPARC galaxy, the Newtonian acceleration from the surrounding large-scale structure, in units of the authors' a_0 = 1.2e-10 m/s^2, from Chae, Lelli, Desmond, McGaugh, Li and Schombert 2020, ApJ 904, 51 (arXiv:2009.11525), Appendix B Table 2, column e_env (the ENVIRONMENTAL estimate from large-scale structure, g_env / g_dagger_authors; NOT the column e, which is the external field FITTED to each rotation curve and would be circular here), in the version corrected by the authors' erratum as posted at the SPARC site (astroweb.cwru.edu/SPARC/) | data/sparc_efe/chae2020_eN.csv, present at lock, sha256 f18ee3c7eac92b248a1e7eea0f62e4e706bb749c648ecdb9b8947570c54248e7 (section 3); sealed: opened by no one in the programme before the verdict, and by the driver once |
 | the conversion | e_N [m/s^2] = (value) x 1.2e-10 (the authors' unit), then e = e_N / g_dagger with the registered g_dagger | this charter |
 | the nature of e_env (disclosed) | the authors compute g_env from the 2M++ dynamical masses of surrounding galaxies with LCDM N-body infill of unrecorded halos (Desmond et al. 2018), so e_env estimates the TOTAL external field at the galaxy, not a baryonic Newtonian one; this charter uses it as e_N. S1 (a rank correlation) does not depend on that reading; S2's local form treats e_N as the external Newtonian input, which overstates it if the medium's own response is already in g_env, so a failure of S2 alone is read with that caveat (section 7) | the authors' section 2.3 |
 | the H-LOCAL form | section 6 | the algebra of a local algebraic response in one dimension |
 
-## 3. The sealed input (the analogue of section W's draw; a precondition of the verdict, not of the lock)
+## 3. The sealed input (the analogue of section W's draw; present at lock, read once by the driver)
 
-After the lock the author downloads the authors' table (Appendix B Table 2, erratum-corrected, from the SPARC site), takes the column e_env (never the fitted column e), writes data/sparc_efe/chae2020_eN.csv with the header
-"galaxy,eN_a0" (one row per galaxy as the authors name them; SPARC names, e.g. NGC3198, matched to the table's
-names after stripping zero-padding and case), by a script that copies the column without printing it, and commits
-it with its sha256 in the commit message, WITHOUT reading its values beyond what the download shows. The driver's units before
-U3 read no file under data/sparc_efe/; U3 reads the file ONCE, records its sha256 and row count in the checkpoint,
-and no unit after U3 reopens it. The author's own exposure is disclosed: he knows the paper reports a detection.
+The file data/sparc_efe/chae2020_eN.csv is in the repository at lock, produced on 2026-10-18 by
+tools/extract_chae2020_eenv.py from the authors' own LaTeX source (arXiv:2009.11525v2, March 2021, which carries
+the erratum and the corrected Table 2): the script takes column e_env (never the fitted column e), strips the
+table's footnote markers from five names, refuses malformed rows, duplicate names, a row count outside 150 to 175
+or a value outside [0, 1], and prints only the row count and the sha256. Header "galaxy,eN_a0"; 153 rows; the
+authors use SPARC's zero-padded names, and all 153 match data/sparc_rotmod by name (matching rule: strip
+zero-padding and case). Its sha256 is f18ee3c7eac92b248a1e7eea0f62e4e706bb749c648ecdb9b8947570c54248e7, and the
+driver refuses (exit 3) a file whose hash differs. Sealing here means what it meant for GRV-BLIND-2's held-out
+velocities: the values are in the repository but no one in the programme opens them before the verdict (the
+executor built the file by script without printing a value; the worker and the reviewers smoke-test on stubs
+under scratch/ and do not open data/sparc_efe/), and the forms are computed once, by the locked driver. The
+driver's units before U3 read no file under data/sparc_efe/; U3 reads the file ONCE, records its sha256 and row
+count in the checkpoint, and no unit after U3 reopens it. Exposure disclosed: the author and the executor know the
+paper reports a detection and its headline numbers; neither has seen a per-galaxy value or computed anything from
+the file. This commission needs no person to act after the lock.
 If the file has fewer than 100 galaxies matched to the 155, or fewer than 30 matched among the low-acceleration
 set, the form is EFE-OPEN (section 7) and the commission ends without a Q2 reading.
 
@@ -68,7 +77,7 @@ U2 residuals: per galaxy in the low-acceleration set, the mean residual D_g = me
 log10(g_obs) - log10(g_pred) (one number per galaxy, so galaxies are the units and points are not pseudo-replicated);
 also the per-galaxy rms. Written to the checkpoint.
 U3 the sealed read: data/sparc_efe/chae2020_eN.csv once; sha256 and row count; e per matched galaxy; refuses (exit 3,
-waiting) while the file is absent.
+blocked) if the file is absent or its sha256 differs from section 3's.
 U4 the statistics of section 6: S1, its permutation null (10,000 shuffles of e across the matched galaxies, seed
 20261018), S2 and its control; the sub-readings of section 8. Terminal line "GRV-EFE-1 COMPLETE -- run the verdict".
 
