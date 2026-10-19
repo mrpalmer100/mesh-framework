@@ -187,5 +187,58 @@ def main(N=1000):
     return out
 
 
+def verify(K=25):
+    """The bounded --verify path for tools/verify_corpus.py (2026-10-19): checks the SHIPPED record
+    analysis/GRV_BARS_OC_exploratory.json instead of regenerating it (a cold run rewrote that file under
+    verification, which the verifier's evidence-mutation guard rightly refused: CI failed from b0a8421c). Checks:
+    (1) credentials, the registered loop reproduces both recorded draws and bar pairs exactly; (2) the fixed bars
+    over all eligible galaxies reproduce the shipped ones; (3) the first K splits recompute to the shipped rows
+    (test set, bars, statistics, flags); (4) the shipped rows' exceedance counts equal the shipped summaries.
+    Writes nothing."""
+    rec = json.loads((ROOT / 'analysis' / 'GRV_BARS_OC_exploratory.json').read_text())
+    per = per_galaxy(); names = sorted(per)
+    if len(names) != rec['eligible']:
+        print(f'[oc verify] eligible {len(names)} != shipped {rec["eligible"]}'); return 1
+    ss = np.array([np.sum(per[g] ** 2) for g in names]); nn = np.array([len(per[g]) for g in names], float)
+    wr = np.sqrt(ss / nn)
+    bad = 0
+    for name, seed, ref in (('GRV_BLIND_1', 52525254, 'GRV_BLIND_1_bars.json'), ('GRV_BLIND_2', 1083026663, 'GRV_BLIND_2_bars.json')):
+        man = json.loads((ROOT / 'analysis' / 'holdout' / name / 'MANIFEST.json').read_text())
+        rng = np.random.default_rng(seed)
+        test = sorted(rng.choice(names, size=NTEST, replace=False).tolist())
+        train = [g for g in names if g not in test]
+        b = bars_registered(per, train, seed)
+        rb = json.loads((ROOT / 'analysis' / ref).read_text())
+        ok = test == man['test_galaxies'] and abs(b[0] - rb['bar_rms']) < 1e-6 and abs(b[1] - rb['bar_gal']) < 1e-6
+        bad += not ok
+        print(f'[oc verify] credential {name}: {"ok" if ok else "MISMATCH"} ({b[0]:.6f}/{b[1]:.6f} vs {rb["bar_rms"]:.6f}/{rb["bar_gal"]:.6f})', flush=True)
+    fixed = bars_fast(ss, nn, wr, np.arange(len(names)), np.random.default_rng(0))[:2]
+    fb = rec['fixed_bars']
+    ok = abs(fixed[0] - fb['bar_rms']) < 1e-9 and abs(fixed[1] - fb['bar_gal']) < 1e-9
+    bad += not ok
+    print(f'[oc verify] fixed bars {fixed[0]:.6f}/{fixed[1]:.6f} vs shipped {fb["bar_rms"]:.6f}/{fb["bar_gal"]:.6f}: {"ok" if ok else "MISMATCH"}', flush=True)
+    rows = splits(ss, nn, wr, names, K, (fb['bar_rms'], fb['bar_gal']), 'GRV-BARS-OC-1 split ')
+    mism = 0
+    for r, q in zip(rows, rec['rows'][:K]):
+        same = (r['seed'] == q['seed'] and r['test'] == q['test'] and abs(r['bar_rms'] - q['bar_rms']) < 1e-9
+                and abs(r['bar_gal'] - q['bar_gal']) < 1e-9 and abs(r['rms'] - q['rms']) < 1e-9 and abs(r['gal'] - q['gal']) < 1e-9
+                and all(r[k] == q[k] for k in ('ex_rms', 'ex_gal', 'fx_rms', 'fx_gal', 'setter')))
+        mism += not same
+    bad += mism > 0
+    print(f'[oc verify] first {K} splits recomputed: {K - mism} match, {mism} differ', flush=True)
+    R = rec['rows']; N = len(R)
+    counts = dict(rms=sum(r['ex_rms'] for r in R), gal=sum(r['ex_gal'] for r in R),
+                  either=sum(r['ex_rms'] or r['ex_gal'] for r in R))
+    shipped = {k: rec['split_bars'][k]['k'] for k in counts}
+    fx = dict(rms=sum(r['fx_rms'] for r in R), gal=sum(r['fx_gal'] for r in R)); fxs = {k: rec['fixed'][k]['k'] for k in fx}
+    ok = N == rec['N'] and counts == shipped and fx == fxs
+    bad += not ok
+    print(f'[oc verify] shipped rows {N}: split exceedances {counts} vs summary {shipped}; fixed {fx} vs {fxs}: {"ok" if ok else "MISMATCH"}')
+    print('[oc verify] ' + ('ALL CHECKS PASS' if bad == 0 else f'{bad} CHECK(S) FAILED'))
+    return 0 if bad == 0 else 1
+
+
 if __name__ == '__main__':
+    if '--verify' in sys.argv:
+        sys.exit(verify())
     main(int(sys.argv[1]) if len(sys.argv) > 1 else 1000)
