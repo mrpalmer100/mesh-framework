@@ -1,0 +1,21 @@
+[legB verdict] cells of the ladder:
+[legB verdict]   7/5 (q 1.4000, N1 5) phase done halt None: 36: D 1.06x (rate 4.382e-04 @ 0.00479 -> 4.151e-04 @ 0.00537; A2_max 0.00537; om2 +2.64485; 20 full-bar pts); 54: D 1.05x (rate 3.588e-04 @ 0.00481 -> 3.430e-04 @ 0.00532; A2_max 0.00532; om2 +2.64524; 20 full-bar pts)
+[legB verdict]   8/5 (q 1.6000, N1 5) phase done halt None: 36: D 1.05x (rate 4.399e-04 @ 0.00479 -> 4.200e-04 @ 0.00537; A2_max 0.00537; om2 +3.90115; 20 full-bar pts); 54: D 1.04x (rate 3.592e-04 @ 0.00481 -> 3.449e-04 @ 0.00532; A2_max 0.00532; om2 +3.90189; 20 full-bar pts)
+[legB verdict]   10/7 (q 1.4286, N1 7) phase done halt None: 36: D 1.04x (rate 3.700e-04 @ 0.00480 -> 3.547e-04 @ 0.00527; A2_max 0.00527; om2 +2.82672; 20 full-bar pts); 54: D 1.04x (rate 3.037e-04 @ 0.00479 -> 2.922e-04 @ 0.00522; A2_max 0.00522; om2 +2.82599; 20 full-bar pts)
+[legB verdict]   11/7 (q 1.5714, N1 7) phase done halt None: 36: D 1.04x (rate 3.720e-04 @ 0.00480 -> 3.570e-04 @ 0.00527; A2_max 0.00527; om2 +3.72415; 20 full-bar pts); 54: D 1.04x (rate 3.040e-04 @ 0.00479 -> 2.934e-04 @ 0.00522; A2_max 0.00522; om2 +3.72357; 20 full-bar pts)
+[legB verdict]   13/9 (q 1.4444, N1 9) phase done halt None: 36: D 1.04x (rate 3.274e-04 @ 0.00479 -> 3.150e-04 @ 0.00520; A2_max 0.00520; om2 +2.92671; 20 full-bar pts); 54: D 1.03x (rate 2.675e-04 @ 0.00480 -> 2.591e-04 @ 0.00516; A2_max 0.00516; om2 +2.92685; 20 full-bar pts)
+[legB verdict]   14/9 (q 1.5556, N1 9) phase done halt None: 36: D 1.04x (rate 3.280e-04 @ 0.00479 -> 3.167e-04 @ 0.00520; A2_max 0.00520; om2 +3.62469; 20 full-bar pts); 54: D 1.03x (rate 2.679e-04 @ 0.00480 -> 2.599e-04 @ 0.00516; A2_max 0.00516; om2 +3.62498; 20 full-bar pts)
+[legB verdict]   existing 3/2 (q 1.5000, N1 2): D36 9.56x  [Q-SWEEP stage 1 registered constants (FND-147)]
+[legB verdict]   existing 4/3 (q 1.3333, N1 3): D36 5.31x  [qsweep_stage1_ckpt q4/3 (FND-147)]
+[legB verdict]   existing 5/3 (q 1.6667, N1 3): D36 1.11x  [qsweep_stage1_ckpt q5/3 (FND-147)]
+[legB verdict]   existing 5/4: NOT LOADABLE from disk; enter from the registered records into composite_legB_existing_D.json or it stays out of the ladder
+[legB verdict] ladder at NP = 36: 9 cells with a D: 7/5 1.06x, 8/5 1.05x, 10/7 1.04x, 11/7 1.04x, 13/9 1.04x, 14/9 1.04x, 3/2 9.56x, 4/3 5.31x, 5/3 1.11x
+[legB verdict]   NP 36: rho(D, q) -0.167  rho(D, N1) -0.983  -> RAT-RESONANT
+[legB verdict] ladder at NP = 54: 6 cells with a D: 7/5 1.05x, 8/5 1.04x, 10/7 1.04x, 11/7 1.04x, 13/9 1.03x, 14/9 1.03x
+[legB verdict]   NP 54: rho(D, q) -0.257  rho(D, N1) -0.956  -> RAT-RESONANT
+[legB verdict] QC price table (Sigma_wave in units of T0; share = 1 - 1/Sigma_wave; kb ceiling to the desk, FND-141):
+[legB verdict]   (i)   A2* selected by QA: none (Leg A: COMP-PIN-UNREACHABLE, FND-169)
+[legB verdict]   (ii)  deepest gated member, cell 13/9 (q 1.4444) at 432x36, A2 0.00520: Sigma_wave 2.6069 T0 (ke 0.5007); P32 upper edge 0.6164; grid scope NP 36
+[legB verdict]   (ii)  deepest gated member, cell 13/9 (q 1.4444) at 432x54, A2 0.00516: Sigma_wave 2.6067 T0 (ke 0.5007); P32 upper edge 0.6164; grid scope NP 54
+[legB verdict]   (iii) level-1 retreat: Sigma_wave 2.598 T0; P32 edge 0.6151 (the exact lower edge)
+[legB verdict] QB VERDICT: NP 36 RAT-RESONANT; NP 54 RAT-RESONANT
