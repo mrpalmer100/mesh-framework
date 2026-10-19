@@ -344,6 +344,9 @@ VERIFY_MODE = {
     # campaign instruments with a bounded --verify path
     "benchmarks/foundations/traverse96_scout.py",
     "benchmarks/foundations/native96_continuation.py",
+    # GRV-130: the exploratory study regenerates and rewrites its own record when run cold (65 s, and the
+    # evidence-mutation guard refuses the rewrite); --verify checks the shipped record instead (2026-10-19)
+    "benchmarks/gravity/grv_bars_oc_exploratory.py",
 }
 
 _HW = ("hardware-sensitive iterative evidence: an optimizer/validation run whose "
