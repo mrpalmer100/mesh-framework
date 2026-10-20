@@ -14,7 +14,11 @@ Runs, each a level-1 recovery followed by the sub-pin ladder to waypoint 1 (frac
   C. hull vs cell at q = 3/2 (the LOW-order rational): the same comparison; this one is NOT a credential bar
      (at rational q the cell locks the degenerate modes (0, 1) and (3, -1), which the hull keeps separate; the
      difference is Q2's content) and is recorded to show the effect's size at this density.
-Usage: python benchmarks/foundations/qp_hull_leg0.py [--quick]   (--quick: the smallest grids only, a smoke)
+  D. (--part2 CKPT) the credential proper at the registered density: the hull at NP 36 (24 x 8, and 48 x 12 as its
+     own refinement) marched to the two 13/9 waypoint pins against the RETAINED 13/9 members of COMPOSITE-SELECT Leg
+     B (432 x 36, from the full sealed checkpoint on the machine of record): om1, om2, gamma, the restricted state
+     in the cell's metrics, the cell-equation residual of the restricted state, and FND-135's price on both.
+Usage: python benchmarks/foundations/qp_hull_leg0.py [--quick] [--part2 CKPT]
 """
 import json
 import os
@@ -80,6 +84,58 @@ def compare(H, xh, T, xc):
                 cell_rms_of_restricted=float(T.field_rms(xr)))
 
 
+def price_hull(H, x):
+    """FND-135's closed form on the hull (the torus average in place of the cell mean): (1 + ke) / gamma."""
+    ws, zp, w, ze, gphi, gam, th, pt, T, om1, om2 = H.geom(x)
+    ke = 0.5 * np.mean(np.abs(1j * om1 * w + om2 * (w @ H.DP1.T)) ** 2 + (om2 * (ze @ H.DP1.T)) ** 2)
+    return float((1.0 + ke) / gam), float(ke)
+
+
+def part2(ckpt, grids=((24, 8), (48, 12)), NP=36):
+    import pickle
+    log = lambda s_: print(s_, flush=True)
+    d = pickle.loads(pathlib.Path(ckpt).read_bytes())
+    cell = d['cell|13/9']
+    T = Q1.QTGrid(432, NP, 9, 13)
+    members = cell['members']
+    out = dict(date='2026-10-20', part='2', cell='13/9 at 432 x 36 (COMPOSITE-SELECT Leg B, retained)', grids=[])
+    rec_path = ROOT / 'analysis' / 'qp_hull_leg0_part2.json'
+    for m in members:
+        xm = np.asarray(m['x'], float)
+        S, ke = T.G2.price(T.to_stage2(xm))
+        log(f'  retained member A2 {m["A2"]:.7f}: rms {m["rms"]:.1e} om1 {T.unpack(xm)[3]:.7f} om2 {m["om2"]:.7f} gam {m["gam"]:.7f} '
+            f'Sigma_wave {S:.6f} (ke {ke:.6f})')
+    for nt1, nt2 in grids:
+        H = QH.HGrid(nt1, nt2, NP, 13 / 9)
+        t0 = time.time()
+        x = QH.solve(H, H.level1_seed(), 'a2', 0.0, rounds=20, verbose=False)
+        l1 = dict(rms=float(H.field_rms(x)), theta=float(H.unpack(x)[0].mean()), om1=float(H.unpack(x)[3]), gam=float(H.geom(x)[5]))
+        log(f'  hull {nt1}x{nt2}x{NP}: level-1 theta {l1["theta"]:.8f} om1 {l1["om1"]:.7f} gam {l1["gam"]:.8f} ({time.time() - t0:.0f}s)')
+        xs = H.ramp_seed(x, FRACS[0] * members[0]['A2'])
+        g = dict(grid=[nt1, nt2, NP], level1=l1, members=[])
+        for mi, m in enumerate(members):
+            pins = [f * m['A2'] for f in FRACS] if mi == 0 else [m['A2']]
+            for pin in pins:
+                t0 = time.time()
+                xs = QH.solve(H, xs, 'a2', pin, rounds=60, stop_rms=None if pin == m['A2'] else 1e-9, verbose=False)
+                log(f'    pin {pin:.7f}: rms {H.field_rms(xs):.1e} om2 {H.unpack(xs)[4]:.7f} ({time.time() - t0:.0f}s)')
+            mh = QH.metrics(H, xs)
+            xm = np.asarray(m['x'], float)
+            cmp_ = compare(H, xs, T, xm)
+            Sh, keh = price_hull(H, xs); Sc, kec = T.G2.price(T.to_stage2(xm))
+            rel = lambda a, b: abs(a - b) / abs(b)
+            rec = dict(A2_pin=m['A2'], hull=mh, cell=dict(rms=m['rms'], om1=float(T.unpack(xm)[3]), om2=m['om2'], gam=m['gam']),
+                       rel_om1=rel(mh['om1'], float(T.unpack(xm)[3])), rel_om2=rel(mh['om2'], m['om2']), rel_gam=rel(mh['gam'], m['gam']),
+                       compare=cmp_, price_hull=Sh, price_cell=Sc, rel_price=rel(Sh, Sc))
+            g['members'].append(rec)
+            log(f'  == A2 {m["A2"]:.7f}: om2 hull {mh["om2"]:.7f} cell {m["om2"]:.7f} rel {rec["rel_om2"]:.1e}; om1 rel {rec["rel_om1"]:.1e}; '
+                f'gam rel {rec["rel_gam"]:.1e}; restricted-vs-cell dtheta {cmp_["dtheta"]:.1e} dpt {cmp_["dpt"]:.1e} dT {cmp_["dT"]:.1e}; '
+                f'cell rms of restricted {cmp_["cell_rms_of_restricted"]:.1e}; Sigma_wave hull {Sh:.6f} cell {Sc:.6f} rel {rec["rel_price"]:.1e}')
+        out['grids'].append(g)
+        rec_path.write_text(json.dumps(out, indent=1, default=str) + '\n')
+    log(f'written {rec_path}')
+
+
 def main(quick=False):
     rec = dict(date='2026-10-20', A=[], B=[], C=[])
     log = lambda s: print(s, flush=True)
@@ -87,15 +143,15 @@ def main(quick=False):
     def save():
         OUT.write_text(json.dumps(rec, indent=1, default=str) + '\n')
     NP = 8 if quick else 12
-    grids_A = [(12, 8), (24, 8)] if quick else [(12, 8), (12, 12), (12, 16), (24, 8), (24, 12), (36, 8), (48, 8), (48, 12)]
+    grids_A = [(12, 8), (24, 8)] if quick else [(12, 8), (12, 12), (24, 8), (24, 12), (48, 8)]
     log('== A. resolution sweep at q = 1.492')
     for nt1, nt2 in grids_A:
         H = QH.HGrid(nt1, nt2, NP, QH.Q_PHYS)
         t0 = time.time()
         x1, xw, l1, rungs = ladder_hull(H, log)
         rec['A'].append(dict(grid=[nt1, nt2, NP], level1=l1, rungs=rungs, seconds=time.time() - t0)); save()
-    for tag, (n1, n2), grids in (('B', (9, 13), [(12, 8)] if quick else [(12, 8), (24, 8), (24, 12)]),
-                                 ('C', (2, 3), [(12, 8)] if quick else [(12, 8), (24, 8), (48, 8)])):
+    for tag, (n1, n2), grids in (('B', (9, 13), [(12, 8)] if quick else [(12, 8), (24, 8)]),
+                                 ('C', (2, 3), [(12, 8)] if quick else [(12, 8), (24, 8)])):
         log(f'== {tag}. hull vs cell at q = {n2}/{n1}')
         for nt1, nt2 in grids:
             H = QH.HGrid(nt1, nt2, NP, n2 / n1)
@@ -112,4 +168,7 @@ def main(quick=False):
 
 
 if __name__ == '__main__':
-    main(quick='--quick' in sys.argv)
+    if '--part2' in sys.argv:
+        part2(sys.argv[sys.argv.index('--part2') + 1])
+    else:
+        main(quick='--quick' in sys.argv)
