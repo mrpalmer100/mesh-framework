@@ -1,0 +1,41 @@
+id: auto
+title: 'COMMISSION COMPOSITE-SELECT, LEG B -- RAT-RESONANT: THE AMPLITUDE-GROWTH COLLAPSE OF THE ALIGNED TWO-FREQUENCY FAMILY
+  TRACKS THE CELL''S COMMENSURABILITY ORDER, NOT THE RATIO VALUE (Spearman rho(D, N1) -0.983 and rho(D, q) -0.167 over nine
+  cells at NP 36; -0.956 and -0.257 over the six new cells at NP 54; locked thresholds 0.8 and 0.5); cells of order 5, 7 and
+  9 march flat (D 1.03 to 1.06x) through the window in which the order-2 and order-3 cells collapse (9.56x, 5.31x); the physical
+  branch near 1.492 is read from the N1 = 9 cells and does not collapse under the registered protocol; FND-147/151/152/153/163
+  take a CELL-SCOPE rider; QC prices the deepest gated member at 2.6069 T0 against the retreat 2.598 (P32 upper edge 0.6164
+  vs 0.6151); the retreat granted at FND-169 stands with its rider''s range 2.598 to 2.609 over nine cells'
+status: Modeled
+benchmark: benchmarks/foundations/composite_legB_verify.py
+depends_on:
+- FND-169
+- FND-147
+- FND-163
+- FND-164
+- FND-135
+- FND-132
+note: 'Charter analysis/COMPOSITE_SELECT_charter_LOCKED.md (gating amendment of 2026-09-05: two refinements per cell, 36 and
+  54, the 20 percent D convergence bar). Run as lab job legB on the Mac mini (the one machine for the job; moved there 2026-10-13
+  at 42.7 GB), 136 invocations, every invocation sealed, LADDER COMPLETE 2026-10-19; the verdict computed once from the sealed
+  checkpoint on the mini (analysis/COMPOSITE_SELECT_legB_verdict.log, sha256 85c263ed452ed9d23f04bc62c998be2346f95531ce02e0741dbc7ebf38f51015).
+  The ladder: 7/5 D 1.06x/1.05x (NP 36/54), 8/5 1.05/1.04, 10/7 1.04/1.04, 11/7 1.04/1.04, 13/9 1.04/1.03, 14/9 1.04/1.03,
+  twenty full-bar points per profile, D converged between densities to 1 percent; existing cells as data by the same rule:
+  3/2 9.56x, 4/3 5.31x, 5/3 1.11x (FND-147); 5/4 has no matched-definition D on the record and stayed out, as the readiness
+  note said. No new cell reached the 0.0063 target (A2_max 0.0052 to 0.0054), so the nearest-point rule paired against each
+  cell''s deepest full-bar member, as 4/3 was paired in stage 1 under the unreached-target clause. No NO CALL trigger fired.
+  Readiness: the verdict script was written 2026-10-04 and dry-run on synthetic ladders before any Leg B number existed; its
+  pre-data finding that RAT-SMOOTH could not fire on this ladder (|rho(D, q)| capped at 0.767 by the registered cells) is
+  on the record; the data exceeded the dry run''s expectation for RAT-RESONANT. Consequences as the charter pre-registered
+  them, executed on the author''s word: (a) CELL-SCOPE riders on FND-147, FND-151, FND-152, FND-153, FND-163 (their collapse
+  statements describe rational cells of low order, not the quasi-periodic state; the claims stand as rendered); (b) the physical
+  branch at 1.492 is read from the N1 = 9 cells, A2_max 0.0052 at both densities, the budget''s not a fold''s; (c) the anti-aliased
+  continuum of the state is the next instrument question (QP-HULL-1, chartered 2026-10-19). QC (a table, not a verdict): (i)
+  no A2* (Leg A); (ii) deepest gated member, cell 13/9 at 432 x 36, A2 0.00520, Sigma_wave 2.6069 T0, P32 upper edge 0.6164
+  (2.6067 / 0.6164 at 54); (iii) the level-1 retreat 2.598, edge 0.6151 exact; hold and retreat differ by 0.34 percent; neither
+  moves FND-141''s kb ceiling. The desk memo analysis/SIGMA_WAVE_decision_memo.md recommends the retreat as granted at FND-169
+  with its rider''s range unchanged. Recorded, not formed: om2 at the low point is linear in q across the six new cells, 6.282
+  (q - 1) + 0.134, the slope 0.02 percent from 2 pi with an uncertainty of order 0.01 (six points over a span of 0.2); the
+  rates at matched A2 fall with N1 roughly as 1/sqrt(N1). The full checkpoint (122 MB, sha256 557d071b57e897d1bd6490b39616084f384689a5c933ab01f3efb43e823169f0)
+  stays on the machine of record; the repository extract (analysis/composite_legB_ckpt_verdict_extract.pkl, sha256 3d4a5a06a9a9eefa2c5fefcfe1e322598a27973665001ee19824520df9a6040d)
+  reproduces the log byte for byte under benchmarks/foundations/composite_legB_verify.py. Results analysis/COMPOSITE_SELECT_legB_results.md.'
