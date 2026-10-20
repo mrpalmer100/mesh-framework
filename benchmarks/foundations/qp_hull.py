@@ -383,11 +383,33 @@ def metrics(H, x):
                 minzp=float(zp.min()), minsin=float(np.sin(th).min()), clos=float(H.closure_max(x)))
 
 
-def solve(H, x, pin_mode, aux, rounds=60, stop_rms=None, st=None, key=None, verbose=True):
-    """gn_sparse (the SPARSE-J ladder, verbatim) with the analytic hull Jacobian and the banded torus kernel."""
+def pin_residual(H, x, pin_mode, aux):
+    """The largest unweighted pin residual (c1 - R1 re/im, the A2 or arc pin, c2.imag, <T> - 3/2)."""
+    return float(np.abs(H.residual(x, pin_mode, aux)[-5:]).max())
+
+
+def solve(H, x, pin_mode, aux, rounds=60, stop_rms=None, st=None, key=None, verbose=True, pin_tol=1e-8, chunk=5):
+    """gn_sparse (the SPARSE-J ladder, verbatim) with the analytic hull Jacobian and the banded torus kernel,
+    driven in chunks until the field RMS, the closure AND the pins are met. gn_sparse's own stop reads the field
+    RMS and the closure only; at level 1 the field equations hold for any theta0 (the pin c1 = R1 is what fixes
+    it) and the first small-grid runs stopped with the pin unmet (theta off by 3e-3). The pins are part of the
+    acceptance here, as Q-SWEEP's gate() makes them for members."""
     from benchmarks.foundations import sparsej_instrument as SJ
+    from benchmarks.foundations import qsweep_stage1 as Q1
     sj = HullJac(H)
     bs = SJ.BandedTorusSolver(H.NS, H.NP, nglob=2)
     if verbose:
         print(f"      [hull {H.NT1}x{H.NT2}x{H.NP} q {H.q:.4f}  n {H.n}  null modes {len(H.null)}]", flush=True)
-    return SJ.gn_sparse(H, x, pin_mode, aux, sj, bs, rounds=rounds, st=st, key=key, stop_rms=stop_rms)
+    st = {} if st is None else st
+    key = key or f'hull-solve-{id(x)}'
+    bar = stop_rms or Q1.RMS_BAR
+    done = 0
+    while done < rounds:
+        x = SJ.gn_sparse(H, x, pin_mode, aux, sj, bs, rounds=min(chunk, rounds - done), st=st, key=key, stop_rms=1e-300)
+        done += chunk
+        rms, clos, pr = H.field_rms(x), H.closure_max(x), pin_residual(H, x, pin_mode, aux)
+        if verbose:
+            print(f"      [hull chunk: rms {rms:.1e} clos {clos:.1e} pins {pr:.1e}]", flush=True)
+        if rms < bar and clos < Q1.CLOSURE_BAR and pr < pin_tol:
+            break
+    return x
