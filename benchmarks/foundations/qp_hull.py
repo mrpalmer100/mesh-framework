@@ -77,20 +77,18 @@ class HGrid:
         T1, T2 = np.meshgrid(self.t1, self.t2, indexing='ij')
         self.th1 = T1.ravel(); self.th2 = T2.ravel()                     # per torus node
         self.PSI0 = self.th1[:, None]                                       # the level-1 winding, explicit
-        # operators: D_s on the torus (sparse, 13 nnz per row), phi stencils (dense small)
-        Dt1 = sp.kron(sp.csr_matrix(_circulant(nt1, self.h1, D1O, D1W)), sp.identity(nt2), format='csr')
-        Dt2 = sp.kron(sp.identity(nt1), sp.csr_matrix(_circulant(nt2, self.h2, D1O, D1W)), format='csr')
-        self.Ds = (self.K1 * Dt1 + self.K2 * Dt2).tocsr()
+        # operators: D_s on the torus is SPECTRAL (symbol i (K1 m1 + K2 m2), exact; Nyquist zeroed): directional
+        # fourth-order stencils were tried first (Leg 0, 2026-10-20) and mis-derive the beat modes (m1, -m2),
+        # whose small resultant wavenumber is the difference of two large ones with uncancelled truncation errors
+        # (3.4 percent on (1, -1) at 12 x 8; om2 off by 4.6 percent against the 13/9 cell). The phi stencils are
+        # the registered ones (DP1, DP2), as the cell has them.
         self.DP1 = _circulant(npn, self.hp, D1O, D1W)
         self.DP2 = _circulant(npn, self.hp, D2O, D2W)
-        # the symbol of D_s on the torus and its null set
         m1 = np.fft.fftfreq(nt1, 1.0 / nt1).astype(int)
         m2 = np.fft.fftfreq(nt2, 1.0 / nt2).astype(int)
-        l1 = np.zeros(nt1, complex); l2 = np.zeros(nt2, complex)
-        for o, w in zip(D1O, D1W):
-            l1 += (w / self.h1) * np.exp(1j * m1 * o * self.h1)
-            l2 += (w / self.h2) * np.exp(1j * m2 * o * self.h2)
-        self.LAM = self.K1 * l1[:, None] + self.K2 * l2[None, :]
+        LAM = 1j * (self.K1 * m1[:, None] + self.K2 * m2[None, :])
+        LAM[nt1 // 2, :] = 0.0; LAM[:, nt2 // 2] = 0.0                     # the grid's Nyquist lines
+        self.LAM = LAM
         self.rat = rational(self.q)
         if self.rat:
             n1, n2 = self.rat
@@ -103,23 +101,32 @@ class HGrid:
         for a, b in self.null:
             nullmask |= ((M1 - a) % nt1 == 0) & ((M2 - b) % nt2 == 0)
             nullmask |= ((M1 + a) % nt1 == 0) & ((M2 + b) % nt2 == 0)
-        nullmask |= np.abs(self.LAM) < 1e-9 * self.K1                    # the grid's Nyquist nulls
+        nullmask |= np.abs(self.LAM) < 1e-9 * self.K1                    # the Nyquist lines and exact nulls
         self.nullmask = nullmask
         self.lam_safe = np.where(nullmask, 1.0, self.LAM)
         # the recon matrix R (NS' x NS', complex): w = R ws per phi, the FD-consistent inverse with nulls projected
         self.R = self._recon_matrix()
+        self.Ds = self._symbol_matrix(self.LAM)                              # dense NS' x NS' (Jacobian only)
         self.selfconj = [((2 * a) % nt1 == 0 and (2 * b) % nt2 == 0) for a, b in self.null]
         self.nullbasis = [np.exp(1j * (a * self.th1 + b * self.th2)) for a, b in self.null]
         self.e1 = np.exp(-1j * self.th1)                                    # level-1 projector on the torus
         self.e2 = np.exp(-1j * self.th2)                                    # level-2 projector on the torus
 
-    def _recon_matrix(self):
+    def _symbol_matrix(self, sym):
+        """The dense matrix of the Fourier multiplier sym (nt1, nt2) on theta1-major vectors."""
         nt1, nt2 = self.NT1, self.NT2
-        sym = np.where(self.nullmask, 0.0, 1.0 / self.lam_safe)             # (nt1, nt2)
-        # R = F^-1 diag(sym) F acting on vectors indexed theta1-major: build by applying to the identity via FFT
         I = np.eye(nt1 * nt2).reshape(nt1, nt2, nt1 * nt2)
         Fh = np.fft.fft2(I, axes=(0, 1)) * sym[:, :, None]
         return np.fft.ifft2(Fh, axes=(0, 1)).reshape(nt1 * nt2, nt1 * nt2)
+
+    def _recon_matrix(self):
+        return self._symbol_matrix(np.where(self.nullmask, 0.0, 1.0 / self.lam_safe))
+
+    def ds(self, F):
+        """D_s F per phi by FFT on the torus (F: (NS', NP))."""
+        sh = F.shape
+        G = F.reshape(self.NT1, self.NT2, -1)
+        return np.fft.ifft2(np.fft.fft2(G, axes=(0, 1)) * self.LAM[:, :, None], axes=(0, 1)).reshape(sh)
 
     # ----------------------------------------------------------------- chart (TGrid verbatim in form)
     def recon(self, F):
@@ -161,8 +168,8 @@ class HGrid:
         ws, zp, w, ze, gphi, gam, th, pt, T, om1, om2 = self.geom(x)
         wp = w @ self.DP1.T
         wpp = w @ self.DP2.T
-        Rw = -om1 ** 2 * w + 2j * om1 * om2 * wp + om2 ** 2 * wpp - self.Ds @ (T * ws)
-        Rz = om2 ** 2 * (ze @ self.DP2.T) - self.Ds @ (T * zp)
+        Rw = -om1 ** 2 * w + 2j * om1 * om2 * wp + om2 ** 2 * wpp - self.ds(T * ws)
+        Rz = om2 ** 2 * (ze @ self.DP2.T) - self.ds(T * zp).real
         rows = [Rw.real.ravel(), Rw.imag.ravel(), Rz.ravel()]
         for (a, b), e, sc in zip(self.null, self.nullbasis, self.selfconj):
             for ee in ([e] if sc else [e, np.conj(e)]):
@@ -230,18 +237,18 @@ class HGrid:
                 Mth = cw[o] * (R * a[:, kk][None, :])                   # complex NS x NS
                 Mpt = cw[o] * (R * b[:, kk][None, :])
                 if o == 0:
-                    L = Ds @ sp.diags(T[:, k])                           # sparse
-                    Mth = Mth - (L @ sp.diags(a[:, k])).toarray()
-                    Mpt = Mpt - (L @ sp.diags(b[:, k])).toarray()
+                    L = Ds * T[:, k][None, :]                            # dense complex: D_s diag(T)
+                    Mth = Mth - L * a[:, k][None, :]
+                    Mpt = Mpt - L * b[:, k][None, :]
                 put(rw_re, c_th, Mth.real); put(rw_im, c_th, Mth.imag)
                 put(rw_re, c_pt, Mpt.real); put(rw_im, c_pt, Mpt.imag)
                 Mz = cz[o] * (Rr * dz[:, kk][None, :])
                 if o == 0:
-                    Mz = Mz - (L @ sp.diags(dz[:, k])).toarray()
+                    Mz = Mz - (L * dz[:, k][None, :]).real
                 put(rz, c_th, Mz)
-            # T columns (local): -Ds diag(ws), -Ds diag(zp)
-            LT = (Ds @ sp.diags(ws[:, k])).toarray(); put(rw_re, (2 * N + k, NP), -LT.real); put(rw_im, (2 * N + k, NP), -LT.imag)
-            put(rz, (2 * N + k, NP), -(Ds @ sp.diags(zp[:, k])).toarray())
+            # T columns: -D_s diag(ws), -Re D_s diag(zp)
+            LT = Ds * ws[:, k][None, :]; put(rw_re, (2 * N + k, NP), -LT.real); put(rw_im, (2 * N + k, NP), -LT.imag)
+            put(rz, (2 * N + k, NP), -(Ds * zp[:, k][None, :]).real)
         rows = np.concatenate(rowsR); cols = np.concatenate(colsR); vals = np.concatenate(valsR)
         # global columns
         g1 = -2 * om1 * w + 2j * om2 * (w @ self.DP1.T)
@@ -305,7 +312,7 @@ class HGrid:
         """Stage 2's m2 injection on a level-1 chart state: w += A2 e^{i theta2} e^{-i m2 phi}, re-charted."""
         ws, zp, w, ze, gphi, gam, th, pt, T, om1, om2 = self.geom(x)
         w2 = w + A2 * np.exp(1j * self.th2)[:, None] * np.exp(1j * m2 * self.pgrid)[None, :]   # e^{i theta2 - i phi}, as ramp_seed
-        ws2 = self.Ds @ w2
+        ws2 = self.ds(w2)
         th2 = np.arctan2(np.abs(ws2), zp)
         pt2 = np.angle(ws2 * np.exp(-1j * self.PSI0))
         pt2 = np.unwrap(pt2.reshape(self.NT1, self.NT2, self.NP), axis=0).reshape(self.NS, self.NP)
