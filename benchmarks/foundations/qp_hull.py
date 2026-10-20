@@ -349,17 +349,17 @@ class HGrid:
         return (np.fft.ifft2(out, axes=(0, 1)) * (self.NT1 * self.NT2)).reshape(self.NS, self.NP)
 
     def restrict_field(self, F, cell):
-        """hull field (NS', NP) -> cell field (ns, NP) on the line theta2 = q theta1."""
+        """hull field (NS', NP) -> cell field (ns, NP) on the line theta2 = q theta1, by two-dimensional
+        trigonometric interpolation (exact for the band-limited hull function at any density ratio)."""
         ns = cell.NS
-        assert ns == self.NT1 * cell.G2.N1, 'the cell density must be the hull density per period'
-        k = np.arange(ns)
-        i = k % self.NT1
+        th1 = (self.K1 * cell.sgrid) % (2 * np.pi)
         th2 = (cell.G2.K2 * cell.sgrid) % (2 * np.pi)
         G = F.reshape(self.NT1, self.NT2, self.NP)
-        Fh = np.fft.fft(G, axis=1) / self.NT2
-        m2 = np.fft.fftfreq(self.NT2, 1.0 / self.NT2)
-        E = np.exp(1j * np.outer(th2, m2))
-        return np.einsum('km,kmp->kp', E, Fh[i, :, :])
+        Fh = np.fft.fft2(G, axes=(0, 1)) / (self.NT1 * self.NT2)
+        m1 = np.fft.fftfreq(self.NT1, 1.0 / self.NT1); m2 = np.fft.fftfreq(self.NT2, 1.0 / self.NT2)
+        E1 = np.exp(1j * np.outer(th1, m1)); E2 = np.exp(1j * np.outer(th2, m2))       # (ns, NT1), (ns, NT2)
+        # out[k, p] = sum_{a, b} E1[k, a] E2[k, b] Fh[a, b, p]
+        return np.einsum('ka,kb,abp->kp', E1, E2, Fh, optimize=True)
 
     def lift_state(self, xc, cell):
         table = self.lift_table(cell)

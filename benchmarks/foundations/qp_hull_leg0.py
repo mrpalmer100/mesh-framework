@@ -121,6 +121,7 @@ def part2(ckpt, grids=((24, 8), (48, 12)), NP=36):
                 log(f'    pin {pin:.7f}: rms {H.field_rms(xs):.1e} om2 {H.unpack(xs)[4]:.7f} ({time.time() - t0:.0f}s)')
             mh = QH.metrics(H, xs)
             xm = np.asarray(m['x'], float)
+            pickle.dump(dict(grid=[nt1, nt2, NP], A2=m['A2'], x=xs), open(ROOT / 'analysis' / f'qp_hull_leg0_part2_{nt1}x{nt2}x{NP}_{mi}.pkl', 'wb'))
             cmp_ = compare(H, xs, T, xm)
             Sh, keh = price_hull(H, xs); Sc, kec = T.G2.price(T.to_stage2(xm))
             rel = lambda a, b: abs(a - b) / abs(b)
