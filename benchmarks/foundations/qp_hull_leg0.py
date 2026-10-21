@@ -118,18 +118,22 @@ def part2(ckpt, grids=((24, 8), (48, 12)), NP=36, resume=False):
         pickle.dump(dict(grid=[H.NT1, H.NT2, H.NP], A2=pin, x=x, rms=float(H.field_rms(x)), clos=float(H.closure_max(x)),
                          pins=QH.pin_residual(H, x, 'a2', pin)), open(path, 'wb'))
 
-    def load(path):
+    def load(path, H, pin):
         if not (resume and path.exists()):
             return None
         r = pickle.load(open(path, 'rb'))
-        if r['rms'] < Q1.RMS_BAR and r['clos'] < Q1.CLOSURE_BAR and r['pins'] < 1e-8:
-            log(f'    resumed {path.name} (rms {r["rms"]:.1e})')
-            return np.asarray(r['x'], float)
-        log(f'    {path.name} on disk but unconverged (rms {r["rms"]:.1e}); re-solving')
+        x = np.asarray(r['x'], float)
+        if x.size != H.n or abs(float(r.get('A2', pin)) - pin) > 1e-12:
+            return None
+        rms, clos, pr = float(H.field_rms(x)), float(H.closure_max(x)), QH.pin_residual(H, x, 'a2', pin)   # recomputed, not trusted
+        if rms < Q1.RMS_BAR and clos < Q1.CLOSURE_BAR and pr < 1e-8:
+            log(f'    resumed {path.name} (rms {rms:.1e} clos {clos:.1e} pins {pr:.1e})')
+            return x
+        log(f'    {path.name} on disk but unconverged (rms {rms:.1e} clos {clos:.1e} pins {pr:.1e}); re-solving')
         return None
 
     def rung(H, xs, pin, path, final):
-        x = load(path)
+        x = load(path, H, pin)
         if x is not None:
             return x
         t0 = time.time()
@@ -146,7 +150,7 @@ def part2(ckpt, grids=((24, 8), (48, 12)), NP=36, resume=False):
         states = []
         if prev is None:
             p1 = adir / f'{tag}_l1.pkl'
-            x = load(p1)
+            x = load(p1, H, 0.0)
             if x is None:
                 t0 = time.time()
                 x = QH.solve(H, H.level1_seed(), 'a2', 0.0, rounds=20, verbose=False)
