@@ -15,3 +15,4 @@ read this directory.
   revised; a blind confrontation needs a non-SPARC sample and the sealed-input credentialing GRV-EFE-1 lacked.
 - QP-HULL-1: abandoned on a compute estimate of the v1 instrument; the spectral hull is small; successor
   QP-HULL-2 waits on Leg 0 part 2.
+- ITEM6 (ANTI-ALIGNED, AXIS-MEANING, METALLIC, KOIDE-WEINBERG): four charters in one old draft file, all four executed and withdrawn before 2026-10-20; moved here 2026-10-21 so the Director stops re-reading it.
