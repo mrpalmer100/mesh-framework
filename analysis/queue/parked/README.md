@@ -20,3 +20,10 @@ read this directory.
   (harness checked tokens and formula agreement, not a coupling mechanism; positive fixture accepted a fabricated
   extent). Successor ELEC-FF-SUB-2 drafted with a harness-evaluated density. The SUB-1 draft stays in analysis/
   as the record of the first form.
+- ELEC-G-1: withdrawn 2026-10-21 15:20 after 3 rounds; the skeptical reviewer passed the physics in rounds 2 and 3,
+  the external failed each round on harness defects (fail-closed halts, output published before the form,
+  one-shot rendering). Successor ELEC-G-2 on the harness kit, with the round-1 control-leg fix.
+- FINE-DISP-1: vetoed by the author after the executor's preview on the evidence cell made the lock impossible
+  under checklist items B and I (both reviewers, round 1); the preview stands as an exploratory record
+  (analysis/FINE_DISP_1_preview.md). A blind successor would be the same coefficient on the registered fibre
+  operator, a different instrument, chartered only after the kit is in use.
