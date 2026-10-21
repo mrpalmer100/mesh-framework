@@ -76,13 +76,14 @@ C-6 Negative controls, run by the harness before the module is evaluated and sea
     (d) rho_s scaled by 0.5 in radius with no dictionary step. Each must render NOT-DERIVED; a positive control
     (e), rho_s itself with SEPARATION_STEP "none" and STATUS NOT-DERIVED, must render NOT-DERIVED cleanly.
     The controls credential the gate, not the physics; no positive fixture receives DERIVED.
-C-7 Execution: the module is statically scanned (imports: numpy only; no open, os, sys, subprocess, pathlib,
-    np.load/save/memmap/savetxt/fromfile); a module failing the scan is not imported and renders NOT-DERIVED-
-    OPEN with the scan result; evaluation runs in a subprocess with a 300 s limit and the grid as its only
-    input; malformed metadata renders NOT-DERIVED without exception (calibration cases).
-C-8 Sealing: four units (controls; primitives and their hashes; module evaluation; verdict), each bound to the
-    manifest's hashes of driver, verdict script, instrument files and the module and document as evaluated;
-    the verdict refuses an incomplete or mixed-version checkpoint and is written once, exclusively.
+C-7 Execution: labkit.static_scan on the module before any import (numpy only; the kit's forbidden names and
+    modules); a module failing the scan is never imported and renders NOT-DERIVED-OPEN with the scan result;
+    evaluation by labkit.run_isolated (python -I, empty environment, scratch cwd, 300 s limit, the grid passed
+    by value as its only input); malformed metadata renders NOT-DERIVED without exception (calibration cases).
+C-8 Sealing: the driver and the verdict script are built on benchmarks/lab/_kit/labkit.py; units (controls;
+    primitives, sealed; module evaluation, its result and metadata sealed; verdict) are bound to the manifest
+    of driver, verdict script, instrument files, module and document; the kit refuses an incomplete or
+    mixed-version checkpoint, decides the form before publishing, and writes the log once.
 C-9 Attempt budget: the theorist's attempt is bounded at the derive budget (cfg task_budget_usd['derive'], 80
     turns) and two attempts; an absent deliverable after that renders NOT-DERIVED-OPEN with the attempt record.
 
@@ -129,6 +130,7 @@ instrument:
   - benchmarks/foundations/electron_form_factor.py
   - benchmarks/foundations/electron_calibration.py
   - rope_solver/topology/linking.py
+  - benchmarks/lab/_kit/labkit.py
 forms: [NOT-DERIVED, NOT-DERIVED-OPEN, DERIVED-CONDITIONAL, DERIVED]
 state: [analysis/elec_ff_sub_2_ckpt.pkl]
 budget: {cpu_hours: 0.5, usd: 30}
