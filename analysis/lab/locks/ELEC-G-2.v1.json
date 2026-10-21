@@ -1,0 +1,42 @@
+{
+  "commission": "ELEC-G-2",
+  "version": 1,
+  "kind": "lock",
+  "actor": "agent:registry",
+  "at": "2026-10-21 19:59:43 -0400",
+  "target": "Strength of magnets row (the electron model): computes the gyromagnetic ratio of the committed rotating terminus from its own energy and charge densities, with no factor imported from the alpha observable, and tests whether Gate 2b's g = 2 survives once the 1/pi recording factor is removed.",
+  "spec": {
+    "commission": "ELEC-G-2",
+    "target": "Strength of magnets row (the electron model): a conditional second-moment diagnostic of the committed rotating terminus (its charge-to-energy second-moment ratio, a gyromagnetic ratio only under two named unregistered current laws), computed with no factor imported from the alpha observable; names a number for a later current-law derivation, discharges nothing in Gate 2b; interior work on a target-facing row, moves none of the five numbers",
+    "driver": "benchmarks/lab/elec_g_2/driver.py",
+    "verdict_script": "benchmarks/lab/elec_g_2/verdict.py",
+    "instrument": [
+      "explorations/w_dressing_phase1c.py",
+      "benchmarks/lab/_kit/labkit.py"
+    ],
+    "forms": [
+      "G-DIRAC",
+      "G-MEASURED",
+      "G-CLASSICAL",
+      "G-PI-DIRAC",
+      "G-OTHER",
+      "UNDERSPECIFIED",
+      "NO-CALL"
+    ],
+    "state": [
+      "analysis/elec_g_2_ckpt.pkl"
+    ],
+    "budget": {
+      "cpu_hours": 1,
+      "usd": 0
+    },
+    "mem_gb": 2
+  },
+  "manifest": {
+    "analysis/ELEC-G-2_charter_LOCKED.md": "149c938b072a6d4edf259ee9817ebf2ac802be419fd333e777dc3adaf96d792d",
+    "benchmarks/lab/elec_g_2/driver.py": "906575601949531e655be04d78e3ff324f5fffe124e50bd5eae7f0ce79585be4",
+    "benchmarks/lab/elec_g_2/verdict.py": "9d152c661678d5e301bd731218f4ada062ca79d59feff5a4a05690b68002d8fe",
+    "explorations/w_dressing_phase1c.py": "e56c239289766c7ed6b146bebe65dddab410c36fff4b3e813cc31c77b0856472",
+    "benchmarks/lab/_kit/labkit.py": "3ad0659bfed062308a7ebbda83d17308e38369d6564c93c8d61a567e3d4c592a"
+  }
+}
