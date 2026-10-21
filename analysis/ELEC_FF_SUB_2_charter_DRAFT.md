@@ -1,7 +1,7 @@
 # COMMISSION ELEC-FF-SUB-2 -- DOES THE SUBSTRUCTURE GRANT SUPPLY THE COUPLING MECHANISM THE FORM-FACTOR TRILEMMA LACKED?
-# (CHARTER, the author's STAGED successor to ELEC-FF-SUB-1, 2026-10-21, rewritten against the external
-# reviewer's round-2 objections; a DERIVATION commission; the derivation does not exist; no experimental bound is
-# a step. Staged, not a DRAFT: it enters the queue only if ELEC-FF-SUB-1 parks, under this new name.)
+# (CHARTER, the author's DRAFT for the lab's lock, 2026-10-21, the successor to ELEC-FF-SUB-1 (withdrawn 14:31 after the worker
+# declined to redraft against the round-2 external objections), rewritten against those objections; a DERIVATION
+# commission; the derivation does not exist; no experimental bound is a step)
 
 ## 0. What changed from ELEC-FF-SUB-1, and why
 The round-2 external review found that the harness checked tokens, citations and the agreement of two formulas
