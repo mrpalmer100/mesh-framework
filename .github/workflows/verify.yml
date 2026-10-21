@@ -24,3 +24,5 @@ jobs:
           python -c "import numpy, scipy; print('numpy', numpy.__version__, 'scipy', scipy.__version__)"
       - name: Verify corpus
         run: python tools/verify_corpus.py --skip-heavy
+      - name: Lab harness kit tests
+        run: python benchmarks/lab/_kit/test_labkit.py
