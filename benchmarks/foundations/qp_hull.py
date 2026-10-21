@@ -367,6 +367,24 @@ class HGrid:
         L = lambda f: self.lift_field(f, cell, table).real
         return self.pack(L(th), L(pt), L(T), float(om1), float(om2))
 
+    def prolong_field(self, F, Hs):
+        """hull field on a coarser hull grid Hs (same NP) -> this grid, by zero-padded 2D FFT (exact for the
+        band-limited coarse function; this grid must hold every coarse mode)."""
+        G = np.asarray(F).reshape(Hs.NT1, Hs.NT2, self.NP)
+        Fh = np.fft.fft2(G, axes=(0, 1)) / (Hs.NT1 * Hs.NT2)
+        out = np.zeros((self.NT1, self.NT2, self.NP), dtype=complex)
+        m1 = np.fft.fftfreq(Hs.NT1, 1.0 / Hs.NT1).astype(int)
+        m2 = np.fft.fftfreq(Hs.NT2, 1.0 / Hs.NT2).astype(int)
+        for i, a in enumerate(m1):
+            for j, b in enumerate(m2):
+                out[a % self.NT1, b % self.NT2, :] += Fh[i, j, :]
+        return (np.fft.ifft2(out, axes=(0, 1)) * (self.NT1 * self.NT2)).reshape(self.NS, self.NP)
+
+    def prolong_state(self, xs, Hs):
+        th, pt, T, om1, om2 = Hs.unpack(xs)
+        P = lambda f: self.prolong_field(f, Hs).real
+        return self.pack(P(th), P(pt), P(T), float(om1), float(om2))
+
     def restrict_state(self, x, cell):
         th, pt, T, om1, om2 = self.unpack(x)
         Rr = lambda F: self.restrict_field(F, cell).real
