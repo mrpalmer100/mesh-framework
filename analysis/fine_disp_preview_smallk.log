@@ -1,0 +1,57 @@
+wound f=1/5, fit window k a_f in [0.004, 0.040] (k p in [0.02, 0.20]); beta in units of a_f, beta_p = beta/25 in units of p
+wound f=1/5 small-k                kb/T0a^2 0.00000: beta_iso +0.181210  A 32.212578  [-31.627950, +32.797205]  bands differ 5.0e+00  resid 5.2e-03  min pw wt 0.99
+   beta_p (per (k p)^2): iso +0.00725  range [-1.26512, +1.31189]  per-direction:
+      dir [0.0, 0.0, 1.0] band 0 c 0.6161 beta_p +0.00495 resid 7.3e-11 wt 1.00
+      dir [0.0, 0.0, 1.0] band 1 c 0.6399 beta_p +0.01340 resid 5.1e-11 wt 1.00
+      dir [0.0, 1.0, 0.0] band 0 c 0.6371 beta_p +0.00608 resid 1.6e-10 wt 1.00
+      dir [0.0, 1.0, 0.0] band 1 c 0.6400 beta_p +0.01296 resid 1.5e-10 wt 1.00
+      dir [0.0, 0.7071, 0.7071] band 0 c 0.6267 beta_p +0.00324 resid 9.6e-12 wt 1.00
+      dir [0.0, 0.7071, 0.7071] band 1 c 0.6088 beta_p +0.00233 resid 2.9e-11 wt 1.00
+      dir [1.0, 0.0, 0.0] band 0 c 0.6372 beta_p +0.00568 resid 7.4e-11 wt 1.00
+      dir [1.0, 0.0, 0.0] band 1 c 0.6160 beta_p +0.00470 resid 2.8e-11 wt 1.00
+      dir [0.7071, 0.0, 0.7071] band 0 c 0.6369 beta_p -1.26512 resid 5.2e-03 wt 1.00
+      dir [0.7071, 0.0, 0.7071] band 1 c 0.6275 beta_p +1.31189 resid 5.2e-03 wt 1.00
+      dir [0.7071, 0.7071, 0.0] band 0 c 0.6287 beta_p +0.00498 resid 9.5e-12 wt 1.00
+      dir [0.7071, 0.7071, 0.0] band 1 c 0.6159 beta_p +0.00392 resid 3.0e-11 wt 1.00
+      dir [0.5774, 0.5774, 0.5774] band 0 c 0.6297 beta_p +0.00780 resid 5.8e-11 wt 1.00
+      dir [0.5774, 0.5774, 0.5774] band 1 c 0.6098 beta_p +0.00560 resid 2.8e-11 wt 1.00
+      dir [0.7071, -0.7071, 0.0] band 0 c 0.6288 beta_p +0.00512 resid 7.4e-11 wt 1.00
+      dir [0.7071, -0.7071, 0.0] band 1 c 0.6152 beta_p +0.00391 resid 4.0e-11 wt 1.00
+      dir [0.7071, 0.0, -0.7071] band 0 c 0.6391 beta_p +0.00480 resid 6.4e-11 wt 1.00
+      dir [0.7071, 0.0, -0.7071] band 1 c 0.6260 beta_p +0.00354 resid 1.8e-11 wt 1.00
+      dir [0.0, 0.7071, -0.7071] band 0 c 0.6269 beta_p +0.00279 resid 2.4e-11 wt 1.00
+      dir [0.0, 0.7071, -0.7071] band 1 c 0.6089 beta_p +0.00128 resid 3.1e-11 wt 1.00
+      dir [0.5774, -0.5774, 0.5774] band 0 c 0.6316 beta_p +0.00862 resid 3.2e-11 wt 1.00
+      dir [0.5774, -0.5774, 0.5774] band 1 c 0.6110 beta_p +0.00621 resid 1.8e-11 wt 0.99
+      dir [0.5774, 0.5774, -0.5774] band 0 c 0.6324 beta_p +0.01028 resid 6.6e-11 wt 1.00
+      dir [0.5774, 0.5774, -0.5774] band 1 c 0.6124 beta_p +0.00493 resid 2.2e-11 wt 1.00
+      dir [-0.5774, 0.5774, 0.5774] band 0 c 0.6303 beta_p +0.00739 resid 8.0e-11 wt 1.00
+      dir [-0.5774, 0.5774, 0.5774] band 1 c 0.6140 beta_p +0.00719 resid 2.3e-11 wt 1.00
+wound f=1/5 small-k                kb/T0a^2 0.07909: beta_iso +0.129586  A 0.139051  [+0.025495, +0.303597]  bands differ 4.4e-03  resid 1.3e-10  min pw wt 0.99
+   beta_p (per (k p)^2): iso +0.00518  range [+0.00102, +0.01214]  per-direction:
+      dir [0.0, 0.0, 1.0] band 0 c 0.6168 beta_p +0.00396 resid 2.8e-11 wt 1.00
+      dir [0.0, 0.0, 1.0] band 1 c 0.6401 beta_p +0.01214 resid 7.7e-11 wt 1.00
+      dir [0.0, 1.0, 0.0] band 0 c 0.6373 beta_p +0.00514 resid 1.3e-10 wt 1.00
+      dir [0.0, 1.0, 0.0] band 1 c 0.6402 beta_p +0.01168 resid 1.3e-10 wt 1.00
+      dir [0.0, 0.7071, 0.7071] band 0 c 0.6271 beta_p +0.00270 resid 1.9e-11 wt 1.00
+      dir [0.0, 0.7071, 0.7071] band 1 c 0.6100 beta_p +0.00189 resid 1.6e-11 wt 1.00
+      dir [1.0, 0.0, 0.0] band 0 c 0.6374 beta_p +0.00477 resid 3.4e-11 wt 1.00
+      dir [1.0, 0.0, 0.0] band 1 c 0.6167 beta_p +0.00372 resid 1.7e-11 wt 1.00
+      dir [0.7071, 0.0, 0.7071] band 0 c 0.6384 beta_p +0.00433 resid 8.6e-11 wt 1.00
+      dir [0.7071, 0.0, 0.7071] band 1 c 0.6268 beta_p +0.00324 resid 4.3e-11 wt 1.00
+      dir [0.7071, 0.7071, 0.0] band 0 c 0.6291 beta_p +0.00439 resid 2.6e-11 wt 1.00
+      dir [0.7071, 0.7071, 0.0] band 1 c 0.6168 beta_p +0.00344 resid 1.8e-11 wt 1.00
+      dir [0.5774, 0.5774, 0.5774] band 0 c 0.6302 beta_p +0.00733 resid 1.7e-11 wt 1.00
+      dir [0.5774, 0.5774, 0.5774] band 1 c 0.6109 beta_p +0.00519 resid 6.3e-11 wt 1.00
+      dir [0.7071, -0.7071, 0.0] band 0 c 0.6292 beta_p +0.00453 resid 5.5e-11 wt 1.00
+      dir [0.7071, -0.7071, 0.0] band 1 c 0.6162 beta_p +0.00358 resid 6.5e-11 wt 1.00
+      dir [0.7071, 0.0, -0.7071] band 0 c 0.6393 beta_p +0.00424 resid 9.7e-11 wt 1.00
+      dir [0.7071, 0.0, -0.7071] band 1 c 0.6266 beta_p +0.00310 resid 2.1e-11 wt 1.00
+      dir [0.0, 0.7071, -0.7071] band 0 c 0.6273 beta_p +0.00230 resid 1.8e-11 wt 1.00
+      dir [0.0, 0.7071, -0.7071] band 1 c 0.6100 beta_p +0.00102 resid 1.2e-10 wt 1.00
+      dir [0.5774, -0.5774, 0.5774] band 0 c 0.6320 beta_p +0.00824 resid 1.2e-11 wt 1.00
+      dir [0.5774, -0.5774, 0.5774] band 1 c 0.6120 beta_p +0.00587 resid 9.6e-12 wt 0.99
+      dir [0.5774, 0.5774, -0.5774] band 0 c 0.6328 beta_p +0.00964 resid 3.6e-11 wt 1.00
+      dir [0.5774, 0.5774, -0.5774] band 1 c 0.6135 beta_p +0.00462 resid 2.4e-11 wt 1.00
+      dir [-0.5774, 0.5774, 0.5774] band 0 c 0.6307 beta_p +0.00696 resid 1.1e-10 wt 1.00
+      dir [-0.5774, 0.5774, 0.5774] band 1 c 0.6149 beta_p +0.00675 resid 5.1e-11 wt 1.00

@@ -1,6 +1,8 @@
 # COMMISSION FINE-DISP-1 -- THE LONG-WAVELENGTH DISPERSION OF THE WOUND FINE MESH
 # (CHARTER, the author's DRAFT for the lab's lock, 2026-10-21; a measurement on a credentialed instrument;
-# no number at the wound geometry has been computed by anyone before this lock)
+# the forms below were fixed at queue commit 5201dc8 BEFORE any wound number existed; on the author's instruction
+# the executor then ran a PREVIEW on the same engine (analysis/FINE_DISP_1_preview.md, disclosed in section
+# PREVIEW); the lab's sealed run is the record and the forms are not changed by the preview)
 
 ## WHERE IT STANDS (the honest sentence, before the question)
 The photon sector's existence problem was resolved on 12 August 2026 by GRANT-SUBSTRUCTURE-TIGHT (FND-087): the
@@ -60,22 +62,28 @@ this engine is a cancellation on this engine (Modeled); the charter says in sect
 Derived-grade statement would need and does not take it.
 
 ## DESIGN COMMITMENTS (locked at lock)
-D1. THE DISPERSION FIT. For each of SHIN6's 13 probe directions d and for k a_f in {0.02, 0.04, ..., 0.20}
-    (ten values), the plane-wave band frequency omega(k d) from two_bands() on the inherited engine, both
-    transverse bands; the quantity y = omega^2 / (c_d^2 k^2) fitted to 1 - beta (k a_f)^2 + gamma (k a_f)^4 by
-    least squares with c_d the band's own k -> 0 phase speed (fitted jointly, so the isotropic-speed factor
-    0.790 of SHIN4 is absorbed per direction and beta is a pure ratio). Reported per direction and per band:
-    c_d, beta_d, gamma_d, the fit residual. beta_iso is the mean of beta_d over the 13 directions and both
-    bands; the anisotropy A = (max beta_d - min beta_d) / 2.
+D1. THE DISPERSION FIT. The wound medium's structure length is the winding period p = P a_f (P = 5 at the
+    adjudicating member), so the expansion variable is k p, not k a_f, and the coefficient is reported in both
+    units: beta_p per (k p)^2 and beta_f = P^2 beta_p per (k a_f)^2. For each of SHIN6's 13 probe directions d
+    and for k p in {0.02, 0.04, ..., 0.20} (ten values; k a_f = k p / P), the plane-wave band frequency
+    omega(k d) from two_bands() on the inherited engine, both transverse bands; the quantity
+    y = (omega / k)^2 fitted to c_d^2 [1 - beta_p (k p)^2 + gamma_p (k p)^4] by least squares with c_d the
+    band's own k -> 0 phase speed (fitted jointly, so the direction-dependent speed factor of SHIN4/SHIN6 is
+    absorbed and beta is a pure ratio). Reported per direction and per band: c_d, beta_p, gamma_p, the fit
+    residual. beta_iso is the mean of beta_p over the 13 directions and both bands; the anisotropy
+    A = (max beta_p - min beta_p) / 2; the band split B = |mean over directions of (beta_p band 0 - beta_p
+    band 1)|, which is dispersion birefringence. On the straight control P = 1 and the two units coincide.
 D2. THE BENDING CHANNEL. One term added to dyn_matrix(): for each site and each stencil direction b, a
     second-neighbour coupling to the sites at +2b and -2b with the fibre-bending second-difference form
     (stiffness kb / a_f^2 in the engine's units, so that on a straight chain along b it is exactly the kb term of
     FND-REL-004's operator) weighted by the bond's alignment with the local tangent, (b . T)^4 averaged over the
     two end sites, so that bonds across the fibre carry none. The acoustic sum rule holds by construction
     (the term is a difference operator). kb is swept over {0, 0.02, 0.04, 0.06, 0.07909} T0_f a_f^2.
-D3. THE FIT WINDOW stays at k a_f <= 0.20, below the regime edge FND-089 probed (|k| = 2 pi / 24 = 0.26), so the
-    plane-wave weight is above 0.86 at every point (recorded; a point with weight below 0.5 is dropped and the
-    drop is disclosed).
+D3. THE FIT WINDOW stays at k p <= 0.20 (k a_f <= 0.04 at P = 5), inside the supercell's zone by a factor 15,
+    so the plane-wave weight is above 0.95 at every point (recorded; a point with weight below 0.5 is dropped
+    and the drop is disclosed). A direction and band whose fit residual exceeds 1e-8 is a band crossing inside
+    the window: it is reported as such, excluded from beta_iso, A and B, and disclosed; more than two such
+    directions at the adjudicating member is NO-CALL.
 D4. THE PRICE (Q2, computed by the verdict script from the sealed beta_f, not by the driver): with
     beta_min = min over the kb sweep of |beta_iso| and beta_ceil = |beta_iso| at the kb ceiling,
     a_f(required) = 2.70e-28 m / sqrt(beta), n_sub(required) = (a / a_f)^2 for each, beside the grant's
@@ -87,10 +95,13 @@ v1. STRAIGHT CONTROL, NO BENDING: on the straight medium (wound = False, P = 1) 
     in the verdict script by sympy from dyn_matrix()'s own weights with KX = 0.08 and g = 2); the fitted
     beta_d agrees with it to 1e-6 absolute in every direction. This is the instrument's beta resolution and it
     sets the floor in section FORMS.
-v2. STRAIGHT CONTROL, BENDING: on a straight chain along z with the D2 term, the fitted beta shifts by exactly
-    -kb / (T0 a^2) relative to v1 (FND-REL-004's form) to 1e-6, at every kb of the sweep.
+v2. STRAIGHT CONTROL, BENDING: on the straight medium with the D2 term, the fitted beta along the fibre (z)
+    shifts by -kb / (T0 a^2) relative to v1 (FND-REL-004's form) to 1e-4 absolute, at every kb of the sweep
+    (the next-nearest bonds of the engine's straight medium move the shift at the 1e-5 level; that residue is
+    reported).
 v3. ISOTROPIC NULL: the engine's own isotropic null (the g = 2 calibration case of SHIN6) gives A <= 1e-6.
-v4. FIT QUALITY: residual of the D1 fit below 1e-8 at every direction, band and kb; gamma_d finite and reported.
+v4. FIT QUALITY: residual of the D1 fit below 1e-8 at every direction, band and kb on the straight control and
+    the null; on the wound member the D3 crossing rule applies; gamma_p finite and reported.
 v5. FRESH PATTERN: every number from a fresh eigensolve; no cached dispersion table enters; the checkpoint seals
     omega(k) per point before any fit.
 
@@ -106,13 +117,25 @@ v5. FRESH PATTERN: every number from a fresh eigensolve; no cached dispersion ta
   DISP-FLOOR         min |beta_iso| over the box > 1e-6 and A <= 0.1 |beta_iso| there: the winding does not
                      cancel the dispersion; the price (D4) is the result, n_sub(required) registered as the
                      grant's price under the live bound.
-  DISP-ANISOTROPIC   A > 0.1 |beta_iso| at the kb of minimum |beta_iso|: the leading correction is
-                     direction-dependent, a separately bounded signature (vacuum anisotropy and birefringence
-                     bounds are tighter than the time-of-flight bound); the price table is computed from the
-                     largest |beta_d| and the form says so.
+  DISP-ANISOTROPIC   A > 0.1 |beta_iso| or B > 0.1 |beta_iso| at the kb of minimum |beta_iso|: the leading
+                     correction is direction-dependent or polarization-dependent, separately bounded
+                     signatures (vacuum anisotropy and birefringence bounds are tighter than the time-of-flight
+                     bound); the price table is computed from the largest |beta_p| and the form says so.
   INSTRUMENT-OPEN    v1 to v5 not all met; nothing wound is read.
   NO-CALL            Any point of the wound fit dropped under D3 in more than two directions at the adjudicating
                      member, or the two bands disagree in beta_iso by more than 0.1 |beta_iso|.
+
+## PREVIEW (disclosed; the executor's run of 2026-10-21 on the author's instruction, after the forms were fixed)
+benchmarks/foundations/fine_disp_preview.py, results in analysis/FINE_DISP_1_preview.md. The straight credential
+passed (v1 to 4e-8; v2 to 2e-5). The wound adjudicating member, in the k p window of D3, gave beta_p of order
++5e-3 per (k p)^2, positive in every direction and band, with a tenfold spread across directions and a factor
+two to three between the two bands, and the bending sweep moving it by a third at most; one direction showed a
+band crossing inside the window at kb = 0 and none at the kb ceiling. Read against the forms as they stood, that
+is DISP-ANISOTROPIC with a floor, not a cancellation. The preview is NOT the verdict: the lab's run on the
+locked harness, with the symbolic check of DISP-CANCELS and the sealed checkpoint, is. The drafting worker and
+the reviewers should treat the preview's numbers as the author's disclosure of what the executor saw, and the
+charter's bars as unchanged by them (the bars and thresholds above are those of commit 5201dc8, amended only in
+D1/D3 for the expansion variable and in v2 for the tolerance, both instrument facts the preview exposed).
 
 ## SMOKE DISCIPLINE (binding on the drafting worker)
 The smoke run (LAB_SMOKE=1) executes v1 to v4 on the straight medium and the isotropic null only, prints
