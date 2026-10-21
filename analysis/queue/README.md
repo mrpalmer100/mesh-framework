@@ -8,6 +8,9 @@ branch (lab) and main changes only by the author's merge. The executor never pus
 Branched from main at ed27c9e on 2026-10-18.
 
 ## Log
+- 2026-10-21: ELEC-G-1 (the gyromagnetic ratio of the committed terminus from its own motion, no imported
+  factor) and ELEC-FF-SUB-1 (derivation: does the substructure grant supply ELEC-036's branch C coupling mechanism),
+  drafted on the author's instruction after the electron discussion; FINE-DISP-1 preview disclosed in its charter.
 - 2026-10-21: FINE-DISP-1 (analysis/FINE_DISP_1_charter_DRAFT.md): the (k a_f)^2 dispersion coefficient of the
   wound fine mesh on the SHIN6 engine with the registered bending channel, pricing the substructure grant's n_sub
   under FND-REL-004's live bound. Drafted on the author's instruction after the research-charter discussion.
