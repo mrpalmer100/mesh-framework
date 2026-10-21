@@ -18,6 +18,18 @@ Progress is measured by two numbers only: targets moved from blocked to derived,
 inputs retired by derivation. A registration that does neither is interior work. It may be
 necessary; it is not progress on this page.
 
+## 1b. The research charter of 21 October 2026
+
+[`docs/RESEARCH_CHARTER_2026-10-21.md`](RESEARCH_CHARTER_2026-10-21.md) is the author's record of the programme's
+aim, operating principles and immediate research priorities, placed in the repository on 21 October 2026 so that
+the lab's planning reads it. Its three-way distinction (what happens; what predicts it; what physically produces
+it) is the one this page's grades of "Derived" encode, and its five priorities (single-photon detection from the
+propagation dynamics; Bell correlations with no-signaling from specified rope interactions; stable particle
+identity and the electron's spin and statistics from geometry; one quantitative prediction that differs from the
+established alternatives and can be tested independently; the comparison with superfluid and topological-defect
+mechanisms) are to be weighed beside the scorecard when proposals are ranked. The rope model is a hypothesis on
+that page, in the author's words, and every commission treats it as one.
+
 ## 2. The scorecard (kept current at every release)
 
 | Target | Derived today | Grade (2c) | Inputs it consumes | Blocked by | Nearest registered step |
