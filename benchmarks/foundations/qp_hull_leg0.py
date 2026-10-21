@@ -18,7 +18,7 @@ Runs, each a level-1 recovery followed by the sub-pin ladder to waypoint 1 (frac
      own refinement) marched to the two 13/9 waypoint pins against the RETAINED 13/9 members of COMPOSITE-SELECT Leg
      B (432 x 36, from the full sealed checkpoint on the machine of record): om1, om2, gamma, the restricted state
      in the cell's metrics, the cell-equation residual of the restricted state, and FND-135's price on both.
-Usage: python benchmarks/foundations/qp_hull_leg0.py [--quick] [--part2 CKPT]
+Usage: python benchmarks/foundations/qp_hull_leg0.py [--quick] [--part2 CKPT [--resume]]
 """
 import json
 import os
@@ -91,37 +91,89 @@ def price_hull(H, x):
     return float((1.0 + ke) / gam), float(ke)
 
 
-def part2(ckpt, grids=((24, 8), (48, 12)), NP=36):
+def part2(ckpt, grids=((24, 8), (48, 12)), NP=36, resume=False):
+    """Part 2, as run on the machine of record 2026-10-20/21. Every solve writes its state to analysis/ as it
+    finishes (level 1, each rung, each member), so --resume continues from the last converged state after a stop.
+    The first grid walks the Q-SWEEP ladder to member 0 and then three rungs across the gap to member 1 (the
+    first run jumped the gap in one pin and the solve exhausted its rounds at rms 2.6e-5). A finer grid does not
+    repeat the ladder: each member is seeded by prolonging the coarser grid's converged member (zero-padded 2D
+    FFT, exact) and solved once at its pin; the finer grid's level-1 line is not re-derived (the coarse one
+    matched Leg B's theta to 8 digits and the finer level-1 solve alone took 10579 s)."""
     import pickle
     log = lambda s_: print(s_, flush=True)
+    adir = ROOT / 'analysis'
     d = pickle.loads(pathlib.Path(ckpt).read_bytes())
     cell = d['cell|13/9']
     T = Q1.QTGrid(432, NP, 9, 13)
     members = cell['members']
-    out = dict(date='2026-10-20', part='2', cell='13/9 at 432 x 36 (COMPOSITE-SELECT Leg B, retained)', grids=[])
-    rec_path = ROOT / 'analysis' / 'qp_hull_leg0_part2.json'
+    out = dict(date='2026-10-21', part='2', cell='13/9 at 432 x 36 (COMPOSITE-SELECT Leg B, retained)', grids=[])
+    rec_path = adir / 'qp_hull_leg0_part2.json'
     for m in members:
         xm = np.asarray(m['x'], float)
         S, ke = T.G2.price(T.to_stage2(xm))
         log(f'  retained member A2 {m["A2"]:.7f}: rms {m["rms"]:.1e} om1 {T.unpack(xm)[3]:.7f} om2 {m["om2"]:.7f} gam {m["gam"]:.7f} '
             f'Sigma_wave {S:.6f} (ke {ke:.6f})')
-    for nt1, nt2 in grids:
-        H = QH.HGrid(nt1, nt2, NP, 13 / 9)
+
+    def save(path, H, x, pin):
+        pickle.dump(dict(grid=[H.NT1, H.NT2, H.NP], A2=pin, x=x, rms=float(H.field_rms(x)), clos=float(H.closure_max(x)),
+                         pins=QH.pin_residual(H, x, 'a2', pin)), open(path, 'wb'))
+
+    def load(path):
+        if not (resume and path.exists()):
+            return None
+        r = pickle.load(open(path, 'rb'))
+        if r['rms'] < Q1.RMS_BAR and r['clos'] < Q1.CLOSURE_BAR and r['pins'] < 1e-8:
+            log(f'    resumed {path.name} (rms {r["rms"]:.1e})')
+            return np.asarray(r['x'], float)
+        log(f'    {path.name} on disk but unconverged (rms {r["rms"]:.1e}); re-solving')
+        return None
+
+    def rung(H, xs, pin, path, final):
+        x = load(path)
+        if x is not None:
+            return x
         t0 = time.time()
-        x = QH.solve(H, H.level1_seed(), 'a2', 0.0, rounds=20, verbose=False)
-        l1 = dict(rms=float(H.field_rms(x)), theta=float(H.unpack(x)[0].mean()), om1=float(H.unpack(x)[3]), gam=float(H.geom(x)[5]))
-        log(f'  hull {nt1}x{nt2}x{NP}: level-1 theta {l1["theta"]:.8f} om1 {l1["om1"]:.7f} gam {l1["gam"]:.8f} ({time.time() - t0:.0f}s)')
-        xs = H.ramp_seed(x, FRACS[0] * members[0]['A2'])
-        g = dict(grid=[nt1, nt2, NP], level1=l1, members=[])
-        for mi, m in enumerate(members):
-            pins = [f * m['A2'] for f in FRACS] if mi == 0 else [m['A2']]
-            for pin in pins:
+        xs = QH.solve(H, xs, 'a2', pin, rounds=60, stop_rms=None if final else 1e-9, verbose=False)
+        save(path, H, xs, pin)
+        log(f'    pin {pin:.7f}: rms {H.field_rms(xs):.1e} clos {H.closure_max(xs):.1e} om2 {H.unpack(xs)[4]:.7f} ({time.time() - t0:.0f}s)')
+        return xs
+
+    prev = None                                           # (H, [member states]) of the previous grid
+    for gi, (nt1, nt2) in enumerate(grids):
+        H = QH.HGrid(nt1, nt2, NP, 13 / 9)
+        tag = f'qp_hull_leg0_part2_{nt1}x{nt2}x{NP}'
+        g = dict(grid=[nt1, nt2, NP], level1=None, members=[])
+        states = []
+        if prev is None:
+            p1 = adir / f'{tag}_l1.pkl'
+            x = load(p1)
+            if x is None:
                 t0 = time.time()
-                xs = QH.solve(H, xs, 'a2', pin, rounds=60, stop_rms=None if pin == m['A2'] else 1e-9, verbose=False)
-                log(f'    pin {pin:.7f}: rms {H.field_rms(xs):.1e} om2 {H.unpack(xs)[4]:.7f} ({time.time() - t0:.0f}s)')
+                x = QH.solve(H, H.level1_seed(), 'a2', 0.0, rounds=20, verbose=False)
+                save(p1, H, x, 0.0)
+                log(f'  hull {nt1}x{nt2}x{NP}: level-1 theta {H.unpack(x)[0].mean():.8f} om1 {H.unpack(x)[3]:.7f} '
+                    f'gam {H.geom(x)[5]:.8f} ({time.time() - t0:.0f}s)')
+            g['level1'] = dict(rms=float(H.field_rms(x)), theta=float(H.unpack(x)[0].mean()), om1=float(H.unpack(x)[3]), gam=float(H.geom(x)[5]))
+            xs = H.ramp_seed(x, FRACS[0] * members[0]['A2'])
+            for mi, m in enumerate(members):
+                if mi == 0:
+                    pins = [f * m['A2'] for f in FRACS]
+                else:
+                    a, b = members[mi - 1]['A2'], m['A2']
+                    pins = [a + f * (b - a) for f in (1 / 3, 2 / 3, 1.0)]
+                for k, pin in enumerate(pins):
+                    final = k == len(pins) - 1
+                    xs = rung(H, xs, pin, adir / (f'{tag}_{mi}.pkl' if final else f'{tag}_{mi}_r{k}.pkl'), final)
+                states.append(xs)
+        else:
+            Hp, sp = prev
+            for mi, m in enumerate(members):
+                xs = rung(H, H.prolong_state(sp[mi], Hp), m['A2'], adir / f'{tag}_{mi}.pkl', True)
+                states.append(xs)
+        for mi, m in enumerate(members):
+            xs = states[mi]
             mh = QH.metrics(H, xs)
             xm = np.asarray(m['x'], float)
-            pickle.dump(dict(grid=[nt1, nt2, NP], A2=m['A2'], x=xs), open(ROOT / 'analysis' / f'qp_hull_leg0_part2_{nt1}x{nt2}x{NP}_{mi}.pkl', 'wb'))
             cmp_ = compare(H, xs, T, xm)
             Sh, keh = price_hull(H, xs); Sc, kec = T.G2.price(T.to_stage2(xm))
             rel = lambda a, b: abs(a - b) / abs(b)
@@ -129,11 +181,12 @@ def part2(ckpt, grids=((24, 8), (48, 12)), NP=36):
                        rel_om1=rel(mh['om1'], float(T.unpack(xm)[3])), rel_om2=rel(mh['om2'], m['om2']), rel_gam=rel(mh['gam'], m['gam']),
                        compare=cmp_, price_hull=Sh, price_cell=Sc, rel_price=rel(Sh, Sc))
             g['members'].append(rec)
-            log(f'  == A2 {m["A2"]:.7f}: om2 hull {mh["om2"]:.7f} cell {m["om2"]:.7f} rel {rec["rel_om2"]:.1e}; om1 rel {rec["rel_om1"]:.1e}; '
+            log(f'  == {nt1}x{nt2}x{NP} A2 {m["A2"]:.7f}: om2 hull {mh["om2"]:.7f} cell {m["om2"]:.7f} rel {rec["rel_om2"]:.1e}; om1 rel {rec["rel_om1"]:.1e}; '
                 f'gam rel {rec["rel_gam"]:.1e}; restricted-vs-cell dtheta {cmp_["dtheta"]:.1e} dpt {cmp_["dpt"]:.1e} dT {cmp_["dT"]:.1e}; '
                 f'cell rms of restricted {cmp_["cell_rms_of_restricted"]:.1e}; Sigma_wave hull {Sh:.6f} cell {Sc:.6f} rel {rec["rel_price"]:.1e}')
         out['grids'].append(g)
         rec_path.write_text(json.dumps(out, indent=1, default=str) + '\n')
+        prev = (H, states)
     log(f'written {rec_path}')
 
 
@@ -170,6 +223,6 @@ def main(quick=False):
 
 if __name__ == '__main__':
     if '--part2' in sys.argv:
-        part2(sys.argv[sys.argv.index('--part2') + 1])
+        part2(sys.argv[sys.argv.index('--part2') + 1], resume='--resume' in sys.argv)
     else:
         main(quick='--quick' in sys.argv)
