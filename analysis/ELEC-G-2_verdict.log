@@ -1,0 +1,29 @@
+credential v3 (production moment path on closed forms): worst relative error 2.38e-11 against 1e-08
+  v3 f=r (physical eps): <r2>_eps 1.3e-16 <r2>_q 0.0e+00 g_A 1.3e-16 g_B 1.9e-16 assembly 0.0e+00
+  v3 f=r+0.1r^3 (test eps): <r2>_eps 1.9e-16 <r2>_q 1.9e-16 g_A 1.7e-16 g_B 0.0e+00 assembly 0.0e+00
+  v3 f=exp(-r^2/2) (test eps): <r2>_eps 2.4e-11 <r2>_q 2.2e-16 g_A 2.4e-11 g_B 2.4e-11 assembly 3.0e-16
+run 1 (r_min 0.001, tol 1e-10, nodes 12824): D_E 1.1051026 v2 0.0e+00 v2b 3.1e-15
+   full     <r2>_eps 2.052737850e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 1.820941399 g_B 1.114922898
+   elastic  <r2>_eps 1.365913752e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 2.736567610 g_B 1.675540954
+   chain    <r2>_eps 2.152805582e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 1.736299536 g_B 1.063098522
+run 2 (r_min 0.001, tol 1e-06, nodes 5040): D_E 1.1051029 v2 0.0e+00 v2b 1.3e-14
+   full     <r2>_eps 2.052737850e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 1.820941399 g_B 1.114922897
+   elastic  <r2>_eps 1.365913752e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 2.736567609 g_B 1.675540954
+   chain    <r2>_eps 2.152805582e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 1.736299536 g_B 1.063098522
+run 3 (r_min 0.001, tol 1e-08, nodes 8121): D_E 1.1051029 v2 0.0e+00 v2b 1.3e-14
+   full     <r2>_eps 2.052737850e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 1.820941399 g_B 1.114922897
+   elastic  <r2>_eps 1.365913752e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 2.736567609 g_B 1.675540954
+   chain    <r2>_eps 2.152805582e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 1.736299536 g_B 1.063098522
+run 4 (r_min 0.0001, tol 1e-08, nodes 6654): D_E 1.1051030 v2 0.0e+00 v2b 2.2e-14
+   full     <r2>_eps 2.052737850e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 1.820941399 g_B 1.114922898
+   elastic  <r2>_eps 1.365913752e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 2.736567611 g_B 1.675540955
+   chain    <r2>_eps 2.152805582e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 1.736299536 g_B 1.063098522
+run 5 (r_min 0.0003, tol 1e-08, nodes 6103): D_E 1.1051029 v2 0.0e+00 v2b 1.7e-14
+   full     <r2>_eps 2.052737850e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 1.820941399 g_B 1.114922898
+   elastic  <r2>_eps 1.365913752e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 2.736567611 g_B 1.675540955
+   chain    <r2>_eps 2.152805582e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 1.736299536 g_B 1.063098522
+D2: absolute range of g across the 5 runs: g_A 1.42e-10, g_B 8.69e-11 against 1e-05 (band 0.0005, ratio 50)
+Q2 (reading A): g/2 = 0.910470699; Gate-1 candidates matched within 0.0005: none
+Q2 (reading B): g/2 = 0.557461449; Gate-1 candidates matched within 0.0005: none
+sensitivities (reported, not readings, no role in the form): elastic: g_A 2.736568 g_B 1.675541; chain: g_A 1.736300 g_B 1.063099
+FORM (Q1): G-OTHER -- reading A: g_A = 1.820941 -> no target; reading B: g_B = 1.114923 -> no target; neither reading within 0.0005 of any of the four targets

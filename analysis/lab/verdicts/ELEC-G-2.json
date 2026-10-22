@@ -1,0 +1,25 @@
+{
+  "commission": "ELEC-G-2",
+  "forms": [
+    "G-OTHER"
+  ],
+  "undeclared": [],
+  "rc": 0,
+  "actor": "agent:runner",
+  "at": "2026-10-21 20:01:27 -0400",
+  "charter_version": 1,
+  "lock_commit": "2701a4b8d2efde9bc927f03f1d357e8d20a9b50e",
+  "verdict_script": "benchmarks/lab/elec_g_2/verdict.py",
+  "verdict_script_sha256": "9d152c661678d5e301bd731218f4ada062ca79d59feff5a4a05690b68002d8fe",
+  "sealed_state": {
+    "analysis/elec_g_2_ckpt.pkl": "a1d65cc53e2f075f4029b840fa000316d158dbbc1ba8f14d6880d0439df9ce94"
+  },
+  "output_sha256": "d6fdd501a555473e0dcb2f2bfea8aecaa8a6e7d52ef519d170246b58d41d9b79",
+  "results": [
+    "analysis/ELEC-G-2_verdict.lock",
+    "analysis/elec_g_2_ckpt.pkl",
+    "analysis/ELEC-G-2_verdict.log"
+  ],
+  "not_committed": [],
+  "output_tail": "credential v3 (production moment path on closed forms): worst relative error 2.38e-11 against 1e-08\n  v3 f=r (physical eps): <r2>_eps 1.3e-16 <r2>_q 0.0e+00 g_A 1.3e-16 g_B 1.9e-16 assembly 0.0e+00\n  v3 f=r+0.1r^3 (test eps): <r2>_eps 1.9e-16 <r2>_q 1.9e-16 g_A 1.7e-16 g_B 0.0e+00 assembly 0.0e+00\n  v3 f=exp(-r^2/2) (test eps): <r2>_eps 2.4e-11 <r2>_q 2.2e-16 g_A 2.4e-11 g_B 2.4e-11 assembly 3.0e-16\nrun 1 (r_min 0.001, tol 1e-10, nodes 12824): D_E 1.1051026 v2 0.0e+00 v2b 3.1e-15\n   full     <r2>_eps 2.052737850e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 1.820941399 g_B 1.114922898\n   elastic  <r2>_eps 1.365913752e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 2.736567610 g_B 1.675540954\n   chain    <r2>_eps 2.152805582e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 1.736299536 g_B 1.063098522\nrun 2 (r_min 0.001, tol 1e-06, nodes 5040): D_E 1.1051029 v2 0.0e+00 v2b 1.3e-14\n   full     <r2>_eps 2.052737850e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 1.820941399 g_B 1.114922897\n   elastic  <r2>_eps 1.365913752e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 2.736567609 g_B 1.675540954\n   chain    <r2>_eps 2.152805582e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 1.736299536 g_B 1.063098522\nrun 3 (r_min 0.001, tol 1e-08, nodes 8121): D_E 1.1051029 v2 0.0e+00 v2b 1.3e-14\n   full     <r2>_eps 2.052737850e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 1.820941399 g_B 1.114922897\n   elastic  <r2>_eps 1.365913752e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 2.736567609 g_B 1.675540954\n   chain    <r2>_eps 2.152805582e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 1.736299536 g_B 1.063098522\nrun 4 (r_min 0.0001, tol 1e-08, nodes 6654): D_E 1.1051030 v2 0.0e+00 v2b 2.2e-14\n   full     <r2>_eps 2.052737850e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 1.820941399 g_B 1.114922898\n   elastic  <r2>_eps 1.365913752e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 2.736567611 g_B 1.675540955\n   chain    <r2>_eps 2.152805582e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 1.736299536 g_B 1.063098522\nrun 5 (r_min 0.0003, tol 1e-08, nodes 6103): D_E 1.1051029 v2 0.0e+00 v2b 1.7e-14\n   full     <r2>_eps 2.052737850e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 1.820941399 g_B 1.114922898\n   elastic  <r2>_eps 1.365913752e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 2.736567611 g_B 1.675540955\n   chain    <r2>_eps 2.152805582e+08 <r2>_qB 2.288644432e+08 R*^2 3.737915332e+08 g_A 1.736299536 g_B 1.063098522\nD2: absolute range of g across the 5 runs: g_A 1.42e-10, g_B 8.69e-11 against 1e-05 (band 0.0005, ratio 50)\nQ2 (reading A): g/2 = 0.910470699; Gate-1 candidates matched within 0.0005: none\nQ2 (reading B): g/2 = 0.557461449; Gate-1 candidates matched within 0.0005: none\nsensitivities (reported, not readings, no role in the form): elastic: g_A 2.736568 g_B 1.675541; chain: g_A 1.736300 g_B 1.063099\nFORM (Q1): G-OTHER -- reading A: g_A = 1.820941 -> no target; reading B: g_B = 1.114923 -> no target; neither reading within 0.0005 of any of the four targets\n"
+}
