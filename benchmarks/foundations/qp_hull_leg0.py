@@ -118,18 +118,22 @@ def part2(ckpt, grids=((24, 8), (48, 12)), NP=36, resume=False):
         pickle.dump(dict(grid=[H.NT1, H.NT2, H.NP], A2=pin, x=x, rms=float(H.field_rms(x)), clos=float(H.closure_max(x)),
                          pins=QH.pin_residual(H, x, 'a2', pin)), open(path, 'wb'))
 
-    def load(path):
+    def load(path, H, pin):
         if not (resume and path.exists()):
             return None
         r = pickle.load(open(path, 'rb'))
-        if r['rms'] < Q1.RMS_BAR and r['clos'] < Q1.CLOSURE_BAR and r['pins'] < 1e-8:
-            log(f'    resumed {path.name} (rms {r["rms"]:.1e})')
-            return np.asarray(r['x'], float)
-        log(f'    {path.name} on disk but unconverged (rms {r["rms"]:.1e}); re-solving')
+        x = np.asarray(r['x'], float)
+        if x.size != H.n or abs(float(r.get('A2', pin)) - pin) > 1e-12:
+            return None
+        rms, clos, pr = float(H.field_rms(x)), float(H.closure_max(x)), QH.pin_residual(H, x, 'a2', pin)   # recomputed, not trusted
+        if rms < Q1.RMS_BAR and clos < Q1.CLOSURE_BAR and pr < 1e-8:
+            log(f'    resumed {path.name} (rms {rms:.1e} clos {clos:.1e} pins {pr:.1e})')
+            return x
+        log(f'    {path.name} on disk but unconverged (rms {rms:.1e} clos {clos:.1e} pins {pr:.1e}); re-solving')
         return None
 
     def rung(H, xs, pin, path, final):
-        x = load(path)
+        x = load(path, H, pin)
         if x is not None:
             return x
         t0 = time.time()
@@ -146,7 +150,7 @@ def part2(ckpt, grids=((24, 8), (48, 12)), NP=36, resume=False):
         states = []
         if prev is None:
             p1 = adir / f'{tag}_l1.pkl'
-            x = load(p1)
+            x = load(p1, H, 0.0)
             if x is None:
                 t0 = time.time()
                 x = QH.solve(H, H.level1_seed(), 'a2', 0.0, rounds=20, verbose=False)
@@ -166,28 +170,48 @@ def part2(ckpt, grids=((24, 8), (48, 12)), NP=36, resume=False):
                     xs = rung(H, xs, pin, adir / (f'{tag}_{mi}.pkl' if final else f'{tag}_{mi}_r{k}.pkl'), final)
                 states.append(xs)
         else:
+            # member 0 by exact prolongation of the coarse member (a converged coarse state is a good seed; the
+            # 48x12 solve from the 24x8 member 0 converged in 20 rounds); the later members by three rungs from
+            # the fine grid's previous member, NOT by prolonging the coarse one, which at A2 0.0047 was itself
+            # under-resolved in theta2 and seeded the fine solve at RMS 0.5 (2026-10-21).
             Hp, sp = prev
             for mi, m in enumerate(members):
-                xs = rung(H, H.prolong_state(sp[mi], Hp), m['A2'], adir / f'{tag}_{mi}.pkl', True)
+                if mi == 0:
+                    xs = rung(H, H.prolong_state(sp[0], Hp), m['A2'], adir / f'{tag}_0.pkl', True)
+                else:
+                    a, b = members[mi - 1]['A2'], m['A2']
+                    xs = states[mi - 1]
+                    for k, f in enumerate((1 / 3, 2 / 3, 1.0)):
+                        pin = a + f * (b - a); final = k == 2
+                        xs = rung(H, xs, pin, adir / (f'{tag}_{mi}.pkl' if final else f'{tag}_{mi}_r{k}.pkl'), final)
                 states.append(xs)
-        for mi, m in enumerate(members):
-            xs = states[mi]
-            mh = QH.metrics(H, xs)
-            xm = np.asarray(m['x'], float)
-            cmp_ = compare(H, xs, T, xm)
-            Sh, keh = price_hull(H, xs); Sc, kec = T.G2.price(T.to_stage2(xm))
-            rel = lambda a, b: abs(a - b) / abs(b)
-            rec = dict(A2_pin=m['A2'], hull=mh, cell=dict(rms=m['rms'], om1=float(T.unpack(xm)[3]), om2=m['om2'], gam=m['gam']),
-                       rel_om1=rel(mh['om1'], float(T.unpack(xm)[3])), rel_om2=rel(mh['om2'], m['om2']), rel_gam=rel(mh['gam'], m['gam']),
-                       compare=cmp_, price_hull=Sh, price_cell=Sc, rel_price=rel(Sh, Sc))
-            g['members'].append(rec)
-            log(f'  == {nt1}x{nt2}x{NP} A2 {m["A2"]:.7f}: om2 hull {mh["om2"]:.7f} cell {m["om2"]:.7f} rel {rec["rel_om2"]:.1e}; om1 rel {rec["rel_om1"]:.1e}; '
-                f'gam rel {rec["rel_gam"]:.1e}; restricted-vs-cell dtheta {cmp_["dtheta"]:.1e} dpt {cmp_["dpt"]:.1e} dT {cmp_["dT"]:.1e}; '
-                f'cell rms of restricted {cmp_["cell_rms_of_restricted"]:.1e}; Sigma_wave hull {Sh:.6f} cell {Sc:.6f} rel {rec["rel_price"]:.1e}')
+                report(H, xs, m, nt1, nt2, g)
+        if prev is None:
+            for mi, m in enumerate(members):
+                report(H, states[mi], m, nt1, nt2, g)
         out['grids'].append(g)
         rec_path.write_text(json.dumps(out, indent=1, default=str) + '\n')
         prev = (H, states)
     log(f'written {rec_path}')
+
+
+def report(H, xs, m, nt1, nt2, g):
+    NP = H.NP
+    T = Q1.QTGrid(432, NP, 9, 13)
+    log = lambda s_: print(s_, flush=True)
+    rel = lambda a, b: abs(a - b) / abs(b)
+    mh = QH.metrics(H, xs)
+    xm = np.asarray(m['x'], float)
+    cmp_ = compare(H, xs, T, xm)
+    Sh, keh = price_hull(H, xs); Sc, kec = T.G2.price(T.to_stage2(xm))
+    rec = dict(A2_pin=m['A2'], hull=mh, cell=dict(rms=m['rms'], om1=float(T.unpack(xm)[3]), om2=m['om2'], gam=m['gam']),
+               rel_om1=rel(mh['om1'], float(T.unpack(xm)[3])), rel_om2=rel(mh['om2'], m['om2']), rel_gam=rel(mh['gam'], m['gam']),
+               compare=cmp_, price_hull=Sh, price_cell=Sc, rel_price=rel(Sh, Sc))
+    g['members'].append(rec)
+    log(f'  == {nt1}x{nt2}x{NP} A2 {m["A2"]:.7f}: om2 hull {mh["om2"]:.7f} cell {m["om2"]:.7f} rel {rec["rel_om2"]:.1e}; om1 rel {rec["rel_om1"]:.1e}; '
+        f'gam rel {rec["rel_gam"]:.1e}; restricted-vs-cell dtheta {cmp_["dtheta"]:.1e} dpt {cmp_["dpt"]:.1e} dT {cmp_["dT"]:.1e}; '
+        f'cell rms of restricted {cmp_["cell_rms_of_restricted"]:.1e}; Sigma_wave hull {Sh:.6f} cell {Sc:.6f} rel {rec["rel_price"]:.1e}')
+    return rec
 
 
 def main(quick=False):
