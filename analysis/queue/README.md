@@ -8,6 +8,9 @@ branch (lab) and main changes only by the author's merge. The executor never pus
 Branched from main at ed27c9e on 2026-10-18.
 
 ## Log
+- 2026-10-22: ELEC-CURRENT-1 (derivation, on the kit): the current and momentum laws of a rotating phase pattern
+  from the registered dictionary, with the superluminal edge; the one derivation ELEC-102 was conditional on and the
+  form-factor line (SUB-1/SUB-2, both withdrawn) lacked. ELEC-G-2 completed and registered provisionally (ELEC-102).
 - 2026-10-21: ELEC-G-1 (the gyromagnetic ratio of the committed terminus from its own motion, no imported
   factor) and ELEC-FF-SUB-1 (derivation: does the substructure grant supply ELEC-036's branch C coupling mechanism),
   drafted on the author's instruction after the electron discussion; FINE-DISP-1 preview disclosed in its charter.
