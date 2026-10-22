@@ -50,3 +50,13 @@ The engine is the SHIN spring lattice, not the registered fibre operator (the ch
 winding is the f = 1/5 member on a cubic supercell, so the anisotropy pattern includes the supercell's; the
 bending channel is the executor's implementation of D2 (three axes, each triple once), credentialed on the
 straight medium only. None of these would plausibly move beta_p by the eight orders the minimal pitch needs.
+
+## Caveat added 2026-10-21 (from the lab's round-3 skeptical review of the vetoed charter)
+The SHIN engine's straight cubic lattice is itself anisotropic at order (k a)^2: beta = 1/12 on the axes and 1/24
+on the face diagonals (the credential table above shows it). Part of the direction dependence reported for the
+wound member is therefore the engine's lattice, not the winding's; the statistic that would attribute anisotropy
+to the winding is the difference against a folded straight cell of the same supercell, per direction and band,
+which this preview did not compute. The wound spread in a_f units (25 beta_p: 0.025 to 0.30, twelve-fold) exceeds
+the straight lattice's (0.042 to 0.106), so the conclusions that the dispersion does not cancel across the bending
+box and that the pitch is priced by the bound stand; the attribution of the anisotropy and the band split to the
+winding does not, and a successor on the registered fibre operator should score the difference.
