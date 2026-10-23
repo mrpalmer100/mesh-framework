@@ -92,25 +92,50 @@ F5. Not tested: A2's linear stability (no Hessian; the solver finds minima at fi
     A9 (E4). A1 holds by construction (the pair is linked; |Lk| 0.95 to 0.98 is contact smearing, and the
     relinked seeds show the core is crossable in the optimizer).
 
-## 5. What this does to the ledger's section 8
+## 5. The registry check (same day), which supersedes the reading above
 
-E3 cannot be the commission section 8 describes, because two of its forms rest on quantities the instrument
-shows to be unset: the size (set by an unregistered regulator, F2) and g (set by an unregistered charge locus,
-F4). The honest next step is not a form on the rotator's numbers but two registry questions, each small enough
-to settle and each a mechanical-state decision of the kind the author said the programme should be willing to
-make:
-  Q1 Contact. What does the medium do when two strands meet? Candidates: a hard core at the strand thickness
-     (a_f or the coarse thickness, a registered length, which would make D_HARD a derived number and F2 a
-     measurement rather than a regulator dependence); or reconnection (strand crossing is allowed and the linked
-     pair is not protected, in which case the electron is not a linked pair and H is dead at R1).
-  Q2 Charge locus. Where along a rotating winding does the charge sit? The transported-linking reading says
-     uniformly; H's g = 2 needs the edge. If the registry's answer is "uniformly", H's g = 2 is withdrawn and the
-     rotating pair gives g = 2/3 (a kill of H at R4, kept as such). If the dynamics localize the winding at the
-     lightlike edge (a possibility the static transport law does not address: the edge is where the strand is
-     lightlike and the winding's phase speed is c, W4), that is a derivation to be done, not assumed.
-E3 is re-charted after Q1 and Q2; the kit, the forms of section 7 (re-worded per F4), and the instrument are ready
-for it. The D_HARD scan result is appended below.
+Before registering anything for F2 or F4, the registry was read for what it already says about strands meeting
+and about where charge sits. It answers F2 and reframes F4:
+  - The charge-carrying link is the linking of the two strands OF ONE ROPE (GG-006: charge = the two strands'
+    handedness = their linking number; GRV-020: the winding of the rope's internal twist phase Phi(s) around the
+    closed loop, pi_1(S^1) = Z). ELEC-001's "unit-linked Hopf configurations" are the two strand curves of one
+    rope, linked once; so are this instrument's two curves.
+  - Ropes interpenetrate OTHER ropes freely below the coverage threshold (FND-MATTER-004, magnetism paper 2.1;
+    load-bearing in the gravity audit, GRV-013). But the two strands of one rope are BOUND: their separation is
+    gapped (GRV-020, "Branch-A logic"), with a registered standoff d0 (EM-RECON-017/018, d0 / sigma0 in
+    [0.40, 0.46]). Linking conservation and interpenetrability are statements about different pairs of strands,
+    and both stand.
+  So Q1 needs no registration: the two strands of the rope ride at the registered standoff, held by a restoring
+  potential; they neither cross nor collide as tubes. The instrument's free loops with a hard core are the wrong
+  object: what it found at the core (two loops hooked at one point, each stretched into an arm of the fold, a
+  two-link chain) is a configuration the bound rope cannot take, and the D_HARD dependence is the dependence of
+  a non-registered object on its regulator. The scan confirms the point from the other side: at D_HARD = 0.03 the
+  chain seed crossed and unlinked (Lk -0.09), leaving no linked state at all; see section 6.
+  The rotating electron candidate under H is therefore ONE closed rope with one unit of twist, folded and
+  rotating: the control object of section 2 with an internal twist field. E2 is rebuilt on that (E2b), not
+  patched.
 
-## 6. D_HARD scan at J = 2 (appended when it lands)
+  For F4 the registry supplies the density to derive from: the local charge density along the rope is the twist
+  density dPhi/ds / 2 pi (the registry defines the integral; reading it locally is the one decision here, and it
+  is the natural one since the Coulomb source must be local). The twist is the Goldstone with energy
+  (kappa / 2)(dPhi/ds)^2 (GRV-020), and on a rotating rope each element's internal energy carries the gamma of
+  its motion, so minimizing the twist energy at fixed total winding gives Phi' proportional to 1 / gamma: the
+  twist is pushed AWAY from the lightlike folds toward the slow centre. On the fold, with x = r / R weighted by
+  the charge density, g = 2 <x^2>:
+      density proportional to 1 / gamma (twist minimizing its energy):  <x^2> = 1/4,  g = 1/2
+      uniform (this instrument as built):                               <x^2> = 1/3,  g = 2/3
+      proportional to gamma (following the energy density):             <x^2> = 1/2,  g = 1
+      at the lightlike edge (ledger section 6's assumption):            <x^2> = 1,    g = 2
+  The registered reading, carried through, predicts g = 1/2; the only route to 2 is a mechanism that pins the
+  winding to the edge, which nothing in the registry supplies. E2b computes this properly (shape and twist
+  distribution minimized together at fixed J and fixed winding, g from the twist-density current). If it
+  confirms 1/2, H dies at R4 with a number attached: the Dirac g = 2 is not available to a rotating twisted rope
+  with the registered twist energy, and the electron sector needs a different carrier of charge or a different
+  object. That is a result, not a setback; it is the first electron number the registry's own mechanics would
+  have produced.
 
-(pending)
+## 6. D_HARD scan at J = 2 (the free-loop instrument's regulator dependence; a footnote after section 5)
+
+  D_HARD 0.03: the chain seed crossed the core and unlinked (Lk -0.09, E 5.43); no linked state survived.
+  D_HARD 0.06: E 5.522 (section 3).
+  D_HARD 0.12: (appended when it lands)

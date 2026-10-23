@@ -258,3 +258,13 @@ E3 is not charted on the rotator's numbers until Q1 and Q2 are answered; both ar
 the kind the author has said the programme is willing to make. The Coulomb fraction (0.1 to 0.8 percent in the
 march, falling as 1 / R) is consistent with H's section 6 expectation and is not the problem.
 
+Registry check, same day (record section 5): Q1 needs no registration. The two curves are the two strands of one
+rope; ropes interpenetrate other ropes (FND-MATTER-004) but a rope's own strands are bound at the registered
+standoff (GRV-020, EM-RECON-017/018), so the free-loop instrument's hooked chain at the core is a configuration
+the registered rope cannot take. The candidate under H is one closed rope with one unit of twist, folded and
+rotating (the control object with an internal twist field); E2b is built on that. Q2 derives from the registered
+twist density: minimizing the twist energy (kappa / 2)(dPhi/ds)^2 on the rotating rope pushes the winding toward
+the slow centre (Phi' proportional to 1 / gamma), for which the fold gives g = 1/2 (g = 2 <x^2>: 1/2, 2/3, 1, 2
+for twist-minimizing, uniform, energy-following, edge-pinned densities). Section 6's g = 2 required the edge.
+E2b decides it by computation; a confirmed 1/2 kills H at R4 and is kept as such.
+
