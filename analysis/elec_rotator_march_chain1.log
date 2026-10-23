@@ -1,0 +1,11 @@
+PAIR: Hopf-linked two curves, kappa = 0.02292530923636929, M = 48, J ladder [0.5, 1.0, 2.0, 4.0, 8.0]
+    fixed J: E 2.821958 J 0.500000 (target 0.500000, off -1.11e-15) Omega 2.38447 pen 5.67e-04 nit 2519 nfev 303800 CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+    J 0.5000: E 2.82196 J 0.50000 Omega 2.3845 2J/E 0.3544 R_end 0.4067 edge 0.9690 E_C/E 0.0084 <r2>_q/<r2>_E 0.7038 g_rigid 0.7182 g_perp 0.7039 Lk -0.968 cm_speed 1.27e-06 4piJ/E^2 0.8024
+    fixed J: E 3.874953 J 0.997061 (target 1.000000, off -2.94e-03) Omega 1.77052 pen 8.15e-04 nit 1220 nfev 150234 CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+    J 1.0000: E 3.87495 J 0.99706 Omega 1.7705 2J/E 0.5146 R_end 0.5648 edge 0.9902 E_C/E 0.0057 <r2>_q/<r2>_E 0.6803 g_rigid 0.6991 g_perp 0.6813 Lk -0.946 cm_speed 6.03e-06 4piJ/E^2 0.8440
+    fixed J: E 6.354554 J 1.987481 (target 2.000000, off -6.26e-03) Omega 1.27031 pen 5.41e-03 nit 424 nfev 63210 CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+    J 2.0000: E 6.35455 J 1.98748 Omega 1.2703 2J/E 0.6255 R_end 0.7872 edge 0.9999 E_C/E 0.0029 <r2>_q/<r2>_E 0.7683 g_rigid 0.8773 g_perp 0.7237 Lk -0.942 cm_speed 9.46e-05 4piJ/E^2 0.6222
+    fixed J: E 9.141023 J 3.978774 (target 4.000000, off -5.31e-03) Omega 0.98138 pen 1.20e-03 nit 96 nfev 24990 CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+    J 4.0000: E 9.14102 J 3.97877 Omega 0.9814 2J/E 0.8705 R_end 1.0189 edge 0.9999 E_C/E 0.0017 <r2>_q/<r2>_E 0.7279 g_rigid 0.8744 g_perp 0.6432 Lk -0.993 cm_speed 1.10e-04 4piJ/E^2 0.6005
+    fixed J: E 10.363311 J 7.926748 (target 8.000000, off -9.16e-03) Omega 0.66422 pen 3.14e-03 nit 1086 nfev 145628 CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+    J 8.0000: E 10.36331 J 7.92675 Omega 0.6642 2J/E 1.5298 R_end 1.5055 edge 0.9997 E_C/E 0.0014 <r2>_q/<r2>_E 0.6375 g_rigid 0.6425 g_perp 0.6347 Lk -0.920 cm_speed 3.00e-05 4piJ/E^2 0.9301

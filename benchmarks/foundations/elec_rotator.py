@@ -303,27 +303,60 @@ def control(M=64):
     return rows
 
 
-def pair_march(kappa, Js, M=64, out=None):
-    """The Hopf-linked pair, E minimized at fixed J along a ladder of J; each solve seeded by the previous. Seeds:
-    the base Hopf pair with C1 flattened toward the rotation plane (the control's lesson), small random modes."""
-    print(f'PAIR: Hopf-linked two curves, kappa = {kappa}, M = {M}, J ladder {Js}')
-    rows = []
+def pair_seeds(R0, Omega0):
+    """Seeds for one rung at scale R0: flat (C1 flattened toward the rotation plane, the control's lesson), base
+    Hopf (both circles round), and a tilted pair; each with small random modes."""
+    seeds = {}
+    z = z_init(R0, seed=2, amp=0.02 * R0); z[1 + 2 * K + 0] = -0.5 * R0; seeds['flat'] = (z, Omega0)
+    z = z_init(R0, seed=3, amp=0.02 * R0); seeds['round'] = (z, Omega0)
+    z = z_init(R0, seed=4, amp=0.02 * R0); z[1 + 2 * K + 0] = -0.8 * R0; z[1 + 6 * K + 0] = 0.3 * R0; seeds['tilt'] = (z, Omega0)
+    return seeds
+
+
+def pair_march(kappa, Js, M=64, out=None, multiseed=False, warm=None):
+    """The Hopf-linked pair, E minimized at fixed J along a ladder of J. Default: each rung seeded by the previous
+    rung's shape scaled with sqrt(J) (one chain). With multiseed, every rung is also solved from the fresh seeds of
+    pair_seeds and the lowest E is kept, since a single chain can land on a higher branch (the first march of
+    2026-10-23 did at J = 2: the Regge ratio dropped from 0.84 to 0.62 in one rung). With warm (a JSON written by
+    an earlier march) the chain starts from that march's shape at the first J in Js that it covered."""
+    print(f'PAIR: Hopf-linked two curves, kappa = {kappa}, M = {M}, J ladder {Js}, multiseed {multiseed}')
+    rows, shapes = [], {}
     R0 = math.sqrt(Js[0] / (math.pi * T0))
-    z = z_init(R0, seed=2, amp=0.02 * R0)
-    z[1 + 2 * K + 0] = -0.5 * R0            # C1: y = 0.5 R sin t (a flattened loop in the rotation plane, still linked)
-    Omega = 0.8 / R0
+    z, Omega = pair_seeds(R0, 0.8 / R0)['flat']
+    if warm:
+        W = json.loads(pathlib.Path(warm).read_text())
+        if 'shapes' in W:
+            avail = {float(k): v for k, v in W['shapes'].items()}
+            Jw = max((j for j in avail if j <= Js[0]), default=None)
+            if Jw is not None:
+                z = np.array(avail[Jw]['z']); Omega = avail[Jw]['Omega']; z[0] += 0.5 * math.log(Js[0] / Jw)
+                print(f'    warm start from {warm} at J {Jw}')
     for J_t in Js:
-        z, Omega, res = solve_fixed_J(z, Omega, J_t, kappa, M=M, verbose=True)
-        o = observables(z, Omega, kappa, M, basis(M), False)
-        o['J_target'] = J_t
-        rows.append(o)
-        print(f'    J {J_t:.4f}: E {o["E"]:.5f} J {o["J"]:.5f} Omega {Omega:.4f} 2J/E {o["two_J_over_E"]:.4f} R_end {o["R_end"]:.4f} edge {o["edge_speed"]:.4f} '
-              f'E_C/E {o["coulomb_fraction"]:.4f} <r2>_q/<r2>_E {o["second_moment_ratio"]:.4f} g_rigid {o["g_rigid"]:.4f} g_perp {o["g_perp"]:.4f} Lk {o["linking"]:.3f} '
-              f'cm_speed {o["cm_speed"]:.2e} 4piJ/E^2 {o["regge"]:.4f}', flush=True)
+        cands = [('chain', z, Omega)]
+        if multiseed:
+            Rr = math.sqrt(J_t / (math.pi * T0))
+            cands += [(name, zz, Om) for name, (zz, Om) in pair_seeds(Rr, 0.8 / Rr).items()]
+        best = None
+        for name, z0, Om0 in cands:
+            print(f'  seed {name}:', flush=True)
+            zs, Oms, res = solve_fixed_J(z0, Om0, J_t, kappa, M=M, verbose=True)
+            o = observables(zs, Oms, kappa, M, basis(M), False)
+            o['J_target'] = J_t; o['seed'] = name
+            print(f'    J {J_t:.4f} [{name}]: E {o["E"]:.5f} J {o["J"]:.5f} Omega {Oms:.4f} 2J/E {o["two_J_over_E"]:.4f} R_end {o["R_end"]:.4f} edge {o["edge_speed"]:.4f} '
+                  f'E_C/E {o["coulomb_fraction"]:.4f} <r2>_q/<r2>_E {o["second_moment_ratio"]:.4f} g_rigid {o["g_rigid"]:.4f} g_perp {o["g_perp"]:.4f} Lk {o["linking"]:.3f} '
+                  f'cm_speed {o["cm_speed"]:.2e} 4piJ/E^2 {o["regge"]:.4f}', flush=True)
+            if abs(o['linking']) < 0.5:
+                print('      (unlinked: discarded)', flush=True); continue
+            if best is None or o['E'] < best[0]['E']:
+                best = (o, zs, Oms)
+        o, z, Omega = best
+        rows.append(o); shapes[str(J_t)] = dict(z=z.tolist(), Omega=Omega, seed=o['seed'])
+        print(f'    J {J_t:.4f} BEST [{o["seed"]}]: E {o["E"]:.5f} 4piJ/E^2 {o["regge"]:.4f}', flush=True)
         if out:
-            pathlib.Path(out).write_text(json.dumps(dict(kappa=kappa, M=M, rows=rows, z_last=z.tolist(), Omega_last=Omega), indent=1))
-        # seed the next rung by scaling the shape with sqrt(J)
-        z = z.copy(); z[0] += 0.5 * math.log(Js[min(Js.index(J_t) + 1, len(Js) - 1)] / J_t)
+            pathlib.Path(out).write_text(json.dumps(dict(kappa=kappa, M=M, rows=rows, shapes=shapes), indent=1))
+        k = Js.index(J_t)
+        if k + 1 < len(Js):
+            z = z.copy(); z[0] += 0.5 * math.log(Js[k + 1] / J_t)
     return rows
 
 
@@ -335,8 +368,10 @@ if __name__ == '__main__':
     ap.add_argument('--Js', type=str, default='0.5,1.0,2.0,4.0')
     ap.add_argument('--M', type=int, default=64)
     ap.add_argument('--out', type=str, default=str(ROOT / 'analysis' / 'elec_rotator_march.json'))
+    ap.add_argument('--multiseed', action='store_true')
+    ap.add_argument('--warm', type=str, default=None)
     a = ap.parse_args()
     if a.control:
         control(a.M)
     if a.pair:
-        pair_march(a.kappa, [float(x) for x in a.Js.split(',')], M=a.M, out=a.out)
+        pair_march(a.kappa, [float(x) for x in a.Js.split(',')], M=a.M, out=a.out, multiseed=a.multiseed, warm=a.warm)
