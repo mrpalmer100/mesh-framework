@@ -1,0 +1,37 @@
+E2b: one twisted rope, folded and rotating; M 48, kappa_C 0.02293; g = 2 <x^2> on the fold: 1/2 (twist-minimizing), 2/3 (uniform), 1 (energy-following), 2 (edge)
+    round 0: E 6.6425893 (change -5.23e-02) nit shape 351
+    round 1: E 6.6420554 (change -5.34e-04) nit shape 45
+    round 2: E 6.6420477 (change -7.65e-06) nit shape 15
+    round 3: E 6.6420435 (change -4.22e-06) nit shape 13
+    round 4: E 6.6420259 (change -1.76e-05) nit shape 28
+    round 5: E 6.6420159 (change -9.99e-06) nit shape 15
+    round 6: E 6.6419868 (change -2.92e-05) nit shape 25
+    round 7: E 6.6419902 (change +3.45e-06) nit shape 2
+    round 8: E 6.6419838 (change -6.46e-06) nit shape 24
+    round 9: E 6.6419794 (change -4.40e-06) nit shape 29
+    round 10: E 6.6419722 (change -7.13e-06) nit shape 28
+    round 11: E 6.6419725 (change +2.43e-07) nit shape 3
+  R 1.0 kappa_tw 0.1 alternating: E 6.64197 (tension 5.6041 twist 1.0214 C 0.0165) J 3.14159 2J/E 0.9460 R_end 1.0282 edge 0.9687 regge 0.8993 cm 1.9e-07  g 0.9118  <x^2>_q 0.4330 <x^2>_E 0.4761 <v^2>_q 0.4064 q_max/q_min 3.64 nit [('shape', 192), ('twist', 'fixed-point'), ('shape', 351), ('twist', 'fixed-point'), ('shape', 45), ('twist', 'fixed-point'), ('shape', 15), ('twist', 'fixed-point'), ('shape', 13), ('twist', 'fixed-point'), ('shape', 28), ('twist', 'fixed-point'), ('shape', 15), ('twist', 'fixed-point'), ('shape', 25), ('twist', 'fixed-point'), ('shape', 2), ('twist', 'fixed-point'), ('shape', 24), ('twist', 'fixed-point'), ('shape', 29), ('twist', 'fixed-point'), ('shape', 28), ('twist', 'fixed-point'), ('shape', 3)]
+    round 0: E 9.8771306 (change -2.05e-02) nit shape 247
+    round 1: E 9.8770799 (change -5.06e-05) nit shape 216
+    round 2: E 9.8770491 (change -3.08e-05) nit shape 172
+    round 3: E 9.8770237 (change -2.55e-05) nit shape 244
+    round 4: E 9.8770047 (change -1.90e-05) nit shape 247
+    round 5: E 9.8769933 (change -1.14e-05) nit shape 139
+    round 6: E 9.8769842 (change -9.09e-06) nit shape 386
+    round 7: E 9.8769772 (change -7.00e-06) nit shape 20
+    round 8: E 9.8769772 (change -1.75e-08) nit shape 3
+  R 1.0 kappa_tw 1.0 alternating: E 9.87698 (tension 5.7679 twist 4.0938 C 0.0152) J 3.14159 2J/E 0.6361 R_end 1.3301 edge 0.6369 regge 0.4059 cm 4.2e-08  g 0.9459  <x^2>_q 0.3552 <x^2>_E 0.3761 <v^2>_q 0.1441 q_max/q_min 1.28 nit [('shape', 210), ('twist', 'fixed-point'), ('shape', 247), ('twist', 'fixed-point'), ('shape', 216), ('twist', 'fixed-point'), ('shape', 172), ('twist', 'fixed-point'), ('shape', 244), ('twist', 'fixed-point'), ('shape', 247), ('twist', 'fixed-point'), ('shape', 139), ('twist', 'fixed-point'), ('shape', 386), ('twist', 'fixed-point'), ('shape', 20), ('twist', 'fixed-point'), ('shape', 3)]
+    round 0: E 6.3538193 (change -4.31e-02) nit shape 187
+    round 1: E 6.3378820 (change -1.59e-02) nit shape 183
+    round 2: E 6.3363647 (change -1.52e-03) nit shape 64
+    round 3: E 6.3351437 (change -1.22e-03) nit shape 115
+    round 4: E 6.3338146 (change -1.33e-03) nit shape 98
+    round 5: E 6.3335672 (change -2.47e-04) nit shape 68
+    round 6: E 6.3335426 (change -2.46e-05) nit shape 13
+    round 7: E 6.3328512 (change -6.91e-04) nit shape 88
+    round 8: E 6.3329019 (change +5.08e-05) nit shape 9
+    round 9: E 6.3326765 (change -2.25e-04) nit shape 59
+    round 10: E 6.3326889 (change +1.24e-05) nit shape 34
+    round 11: E 6.3326846 (change -4.29e-06) nit shape 9
+  R 1.0 kappa_tw 0.01 alternating: E 6.32467 (tension 6.0633 twist 0.2450 C 0.0164) J 3.12535 2J/E 0.9883 R_end 1.0053 edge 0.9982 regge 0.9869 cm 5.6e-07  g 0.9668  <x^2>_q 0.4753 <x^2>_E 0.4951 <v^2>_q 0.4730 q_max/q_min 8.00 nit [('shape', 137), ('twist', 'fixed-point'), ('shape', 187), ('twist', 'fixed-point'), ('shape', 183), ('twist', 'fixed-point'), ('shape', 64), ('twist', 'fixed-point'), ('shape', 115), ('twist', 'fixed-point'), ('shape', 98), ('twist', 'fixed-point'), ('shape', 68), ('twist', 'fixed-point'), ('shape', 13), ('twist', 'fixed-point'), ('shape', 88), ('twist', 'fixed-point'), ('shape', 9), ('twist', 'fixed-point'), ('shape', 59), ('twist', 'fixed-point'), ('shape', 34), ('twist', 'fixed-point'), ('shape', 9)]

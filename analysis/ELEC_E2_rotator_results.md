@@ -139,3 +139,54 @@ and about where charge sits. It answers F2 and reframes F4:
   D_HARD 0.03: the chain seed crossed the core and unlinked (Lk -0.09, E 5.43); no linked state survived.
   D_HARD 0.06: E 5.522 (section 3).
   D_HARD 0.12: (appended when it lands)
+
+## 7. E2b: the twisted rope's g (benchmarks/foundations/elec_rope_rotator.py; records analysis/elec_rope_rotator_R1.{log,json})
+
+The instrument of section 5: one closed rope, tension T = 1, K = 8 shape modes, rigid rotation at J = pi T R^2
+with R = 1, Omega from the J constraint, rest frame enforced; an internal twist Phi(s) with one unit of winding,
+energy (kappa_tw / 2) int gamma Phi'^2 ds carried on the moving element and contributing to J through its momentum
+density; Coulomb of the twist-density charge at kappa_C = alpha pi. Shape and twist minimized together by block
+alternation, the twist step being its own stationarity condition (q_i proportional to ds_i (lam - V_i) / w_i with
+the Routhian weight w = gamma (1 - Omega (p x v_perp)) and the Coulomb potential V), the shape step L-BFGS.
+
+Corrections made on the way, kept in order: (i) "uniform" weights per segment were uniform in the chart parameter,
+not in length (the chart bunches nodes at the folds), fixed; (ii) section 5's estimate g = 1/2 minimized E rather
+than E - Omega J, and at fixed J the Routhian weights internal energy by 1 / gamma, so the twist goes TOWARD the
+folds (proportional to gamma), the g = 1 row; (iii) a finite-difference L-BFGS over the twist stalled at g 0.75
+on a shape where the stationarity fixed point gives 0.95 at lower energy, so the fixed point is the twist step.
+All four rows of the table were verified on an explicit fold with fixed weights: 0.504, 0.672, 0.996, and 2 by
+construction.
+
+Converged results at R = 1 (J exact, cm speed below 1e-6, energy settled to 1e-6 relative):
+  kappa_tw   E        E_twist/E   edge    4piTJ/E_t^2   <x^2>_q   q_max/q_min   g
+  0.01       6.3247   0.039       0.998   0.987         0.475     8.0           0.967
+  0.1        6.6420   0.154       0.969   0.899         0.433     3.6           0.912
+  1.0        9.8770   0.414       0.637   0.406         0.355     1.3           0.946
+(E_twist / E is the twist's share; at kappa_tw = 1 the rope is a slow heavy rotator with no lightlike point, a
+different regime that gives the same g within 4 percent.)
+
+F6. For the registered charge (the winding of the rope's internal twist) and the registered twist energy, the
+    rotating twisted rope has g = 0.91 to 0.97 across two decades of twist stiffness: g = 1 up to the Coulomb
+    spreading, never 2. The reason is structural and will not move with resolution or parameters: at fixed J the
+    twist distributes itself like the energy (both weighted by the same Routhian factor), and charge that
+    follows mass gives g = 1 for any rigid rotator. g = 2 needs the charge concentrated beyond the mass by a
+    further factor, which for a rotating string is the charge sitting at a lightlike END (the open-string result
+    behind ledger section 6). A closed rope has no ends and its winding is not a point; nothing in the registered
+    mechanics puts the winding at the fold ahead of the energy. H is therefore KILLED at R4: the electron is not
+    a closed twisted rope in rigid rotation with the registered twist energy. Kept as such. What survives of H:
+    the rotator identity R = 2 c J / E (E2 F1), the Coulomb fraction of order alpha (F3), and the Regge
+    trajectory; what is dead is the mechanism for g = 2, which section 6 had called H's cleanest result.
+
+F7. What a g = 2 object would have to be, stated without adopting any of it: either (a) an open rope with the
+    charge at its ends (ends are not registered objects; the medium's strands are closed or anchored), or (b) a
+    charge carrier that is not the twist and not tied to the energy density, with a reason to sit at the lightlike
+    locus (none registered), or (c) a non-rigid motion in which the charge-bearing feature circulates faster than
+    the mass (a wave riding the rope at c relative to the strand gives time-averaged density proportional to
+    gamma again, so this does not obviously help), or (d) the spinor route, where g = 2 is not a classical moment
+    ratio at all, which the programme has no registered mechanics for. Each is a new mechanical commitment, not
+    a parameter, and none is proposed here.
+
+E3 as charted in ledger section 8 is withdrawn as a commission on H. The instruments (free-loop rotator, twisted
+rope) and the kit stand for whatever the author charters next; the single most useful registry fact they
+produced is F6's structural one, that charge following mass gives g = 1 in this ontology.
+
