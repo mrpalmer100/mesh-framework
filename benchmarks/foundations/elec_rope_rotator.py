@@ -99,6 +99,36 @@ def omega_for_J(z, u, J_t, kappa_tw, kappa_C, M, B):
     return brentq(f, 1e-3, Om_hi, xtol=1e-12, rtol=1e-12, maxiter=200), J_t
 
 
+def twist_step(z, u, J_t, kappa_tw, kappa_C, M, B, iters=50):
+    """The twist distribution at fixed shape from its stationarity condition. At fixed J the internal energy of a
+    rigidly rotating element is weighted by w = gamma (1 - Omega (p x v_perp)) (the Routhian E - Omega J; for a
+    fold w = 1 / gamma), so with E_twist = 2 pi^2 kappa_tw sum_i w_i q_i^2 / ds_i and the Coulomb potential
+    V_i = dE_C / dq_i, stationarity at sum q = 1 is q_i = (lam - V_i) ds_i / (4 pi^2 kappa_tw w_i), iterated to a
+    fixed point. Replaces a finite-difference L-BFGS over u, which on this ill-conditioned problem stalled far
+    from the minimum (2026-10-23: g 0.75 against the fixed point's 0.95 on the same shape, at higher energy)."""
+    for _ in range(iters):
+        Om, _ = omega_for_J(z, u, J_t, kappa_tw, kappa_C, M, B)
+        p = pieces(z, u, Om, kappa_tw, kappa_C, M, B)
+        g = p['g']; ds = g['ds']
+        gam = np.mean(g['sgint'], axis=1); pxv = np.mean(g['spxv'], axis=1)
+        w = gam * (1.0 - Om * pxv)
+        # Coulomb potential at the segment midpoints from the current charges
+        P = g['mid']
+        d = np.linalg.norm(P[:, None, :] - P[None, :, :], axis=2) + np.eye(len(P))
+        K = erf(d / (2 * A_SMEAR)) / d
+        np.fill_diagonal(K, 1.0 / (A_SMEAR * math.sqrt(math.pi)))
+        V = kappa_C * K @ p['q']
+        a = ds / (4 * math.pi ** 2 * kappa_tw * w)
+        # lam from sum q = 1: sum a (lam - V) = 1
+        lam = (1.0 + np.sum(a * V)) / np.sum(a)
+        q_new = np.clip(a * (lam - V), 1e-12, None); q_new /= q_new.sum()
+        u_new = np.log(q_new / ds); u_new -= u_new.mean()
+        if np.max(np.abs(q_new - p['q'])) < 1e-10:
+            u = u_new; break
+        u = u_new
+    return u
+
+
 def objective(x, J_t, kappa_tw, kappa_C, M, B, w_J=300.0):
     z, u = unpack(x, M)
     Om, Jr = omega_for_J(z, u, J_t, kappa_tw, kappa_C, M, B)
@@ -123,35 +153,44 @@ def observables(z, u, Om, kappa_tw, kappa_C, M, B):
     return dict(Omega=Om, E=E, E_tension=p['E_t'], E_twist=p['E_tw'], E_C=p['E_C'], J=J, R_end=rend, two_J_over_E=2 * J / E,
                 g=(mu / J) * 2 * E, x2_charge=r2q / rend ** 2, x2_energy=r2e / rend ** 2, r2_ratio=r2q / r2e,
                 v2_charge=float(np.sum(q * v2n)), edge=float(math.sqrt(g['sv2max'])), regge=4 * math.pi * T * J / (p['E_t'] + p['E_tw']) ** 2,
-                cm_speed=float(np.linalg.norm(p['Pm'][:2]) / E), q_max_over_min=float(q.max() / q.min()),
+                cm_speed=float(np.linalg.norm(p['Pm'][:2]) / E), q_max_over_min=float((q / g['ds']).max() / (q / g['ds']).min()),
                 twist_fraction=p['E_tw'] / E, coulomb_fraction=p['E_C'] / E)
 
 
-def run(R, kappa_tw, kappa_C, M, twist_only=False, maxiter=3000, verbose=True):
+def run(R, kappa_tw, kappa_C, M, twist_only=False, maxiter=3000, verbose=True, rounds=12):
+    """Block alternation: the twist at fixed shape (48 well-conditioned variables), then the shape at fixed twist,
+    repeated until neither step lowers E by more than 1e-7 relative. A joint L-BFGS over [z, u] leaves u untouched:
+    the shape gradients near the speed wall are a thousand times the twist gradients and the stopping rule fires
+    on them first (2026-10-23, the first joint run returned the uniform twist to three decimals)."""
     B = er.basis(M)
     J_t = math.pi * T * R * R
     z = er.z_init(R, seed=0, amp=0.0); z[1 + 2 * er.K + 0] = -0.9 * R       # the control's flat-ellipse seed
     u = np.zeros(M)
-    x0 = np.concatenate([z, u])
-    if twist_only:
-        # the fold's shape first (no twist energy), then the twist on that fixed shape: the arithmetic check
-        f0 = lambda zz: objective(np.concatenate([zz, u]), J_t, 0.0, 0.0, M, B)
-        r0 = minimize(f0, z, method='L-BFGS-B', options=dict(maxiter=maxiter, maxfun=400000, ftol=1e-13, gtol=1e-9, eps=1e-7, maxls=60))
-        z = r0.x
-        f1 = lambda uu: objective(np.concatenate([z, uu]), J_t, kappa_tw, kappa_C, M, B)
-        r1 = minimize(f1, u, method='L-BFGS-B', options=dict(maxiter=maxiter, maxfun=400000, ftol=1e-13, gtol=1e-9, eps=1e-7, maxls=60))
-        u = r1.x; nit = (r0.nit, r1.nit)
-    else:
-        f = lambda xx: objective(xx, J_t, kappa_tw, kappa_C, M, B)
-        res = minimize(f, x0, method='L-BFGS-B', options=dict(maxiter=maxiter, maxfun=600000, ftol=1e-13, gtol=1e-9, eps=1e-7, maxls=60))
-        z, u = unpack(res.x, M); nit = res.nit
+    opts = dict(maxiter=maxiter, maxfun=400000, ftol=1e-14, gtol=1e-10, eps=1e-7, maxls=60)
+    # the fold's shape first (uniform twist), as the control did
+    r0 = minimize(lambda zz: objective(np.concatenate([zz, u]), J_t, kappa_tw, kappa_C, M, B), z, method='L-BFGS-B', options=opts)
+    z = r0.x
+    E_prev = objective(np.concatenate([z, u]), J_t, kappa_tw, kappa_C, M, B)
+    nits = [('shape', r0.nit)]
+    for rd in range(rounds):
+        u = twist_step(z, u, J_t, kappa_tw, kappa_C, M, B); nits.append(('twist', 'fixed-point'))
+        if twist_only:
+            break
+        r2 = minimize(lambda zz: objective(np.concatenate([zz, u]), J_t, kappa_tw, kappa_C, M, B), z, method='L-BFGS-B', options=opts)
+        z = r2.x; nits.append(('shape', r2.nit))
+        E_now = objective(np.concatenate([z, u]), J_t, kappa_tw, kappa_C, M, B)
+        if verbose:
+            print(f'    round {rd}: E {E_now:.7f} (change {E_now - E_prev:+.2e}) nit shape {r2.nit}', flush=True)
+        if abs(E_now - E_prev) < 1e-7 * abs(E_now):
+            break
+        E_prev = E_now
     Om, _ = omega_for_J(z, u, J_t, kappa_tw, kappa_C, M, B)
     o = observables(z, u, Om, kappa_tw, kappa_C, M, B)
-    o.update(R=R, kappa_tw=kappa_tw, kappa_C=kappa_C, M=M, nit=nit, twist_only=twist_only)
+    o.update(R=R, kappa_tw=kappa_tw, kappa_C=kappa_C, M=M, nit=nits, twist_only=twist_only)
     if verbose:
-        print(f"  R {R} kappa_tw {kappa_tw} {'twist-only' if twist_only else 'joint'}: E {o['E']:.5f} (tension {o['E_tension']:.4f} twist {o['E_twist']:.4f} C {o['E_C']:.4f}) "
+        print(f"  R {R} kappa_tw {kappa_tw} {'twist-only' if twist_only else 'alternating'}: E {o['E']:.5f} (tension {o['E_tension']:.4f} twist {o['E_twist']:.4f} C {o['E_C']:.4f}) "
               f"J {o['J']:.5f} 2J/E {o['two_J_over_E']:.4f} R_end {o['R_end']:.4f} edge {o['edge']:.4f} regge {o['regge']:.4f} cm {o['cm_speed']:.1e}  "
-              f"g {o['g']:.4f}  <x^2>_q {o['x2_charge']:.4f} <x^2>_E {o['x2_energy']:.4f} <v^2>_q {o['v2_charge']:.4f} q_max/q_min {o['q_max_over_min']:.2f} nit {nit}", flush=True)
+              f"g {o['g']:.4f}  <x^2>_q {o['x2_charge']:.4f} <x^2>_E {o['x2_energy']:.4f} <v^2>_q {o['v2_charge']:.4f} q_max/q_min {o['q_max_over_min']:.2f} nit {nits}", flush=True)
     return o, z, u
 
 
