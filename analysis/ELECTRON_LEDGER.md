@@ -237,3 +237,34 @@ Not another census: every static configuration hits section 2's wall. Not a curr
 terminus: R10 fails there and the reviewers were right. Not another form-factor commission on the static clasp:
 W5. Not a change to the medium's constitutive law (ELEC-076's open question, constant tension versus stiffness
 k) before E2 shows whether H needs one; H uses the pure-tension functional the registry already selected.
+
+## 10. E2 outcome (2026-10-23; record in analysis/ELEC_E2_rotator_results.md)
+
+The instrument exists and its control passes (the folded rotating string to 1.2 and 0.3 percent at two radii,
+with the Regge bound and the rest frame checked on every line; two loopholes closed on the way and recorded).
+The rotating Hopf-linked pair exists at every J tried and is a Regge rotator approaching the single fold from
+above (E^2 / (4 pi T0 J) from 1.27 at J = 0.5 to 1.06 at J = 8; R_end = 2 J / E to 1 to 2 percent from J = 2 up;
+edge at c). Two findings change section 8:
+  F2 Every lowest-energy state sits on the hard core (closest approach 0.057 to 0.062 against D_HARD 0.06 at
+     every J; seeds that crossed the core ended unlinked or relinked at the same energy). The clasp under tension
+     and rotation is driven to strand crossing and held only by an unregistered regulator, so the pair has no
+     size of its own until the medium's contact rule is registered (Q1 in the record).
+  F4 For the registered charge (the winding transported along the whole strand, hence a uniform line charge)
+     g = 2/3, not 2: the pair gives 0.64 to 0.70, the fold exactly 2/3. Section 6's g = 2 placed the charge at the
+     lightlike end, which the registry does not do. H's cleanest claim is therefore conditional on a charge locus
+     the registry has not settled (Q2 in the record); A3 and A4 as worded presume the edge locus and must be
+     re-worded against whatever locus is registered.
+E3 is not charted on the rotator's numbers until Q1 and Q2 are answered; both are mechanical-state decisions of
+the kind the author has said the programme is willing to make. The Coulomb fraction (0.1 to 0.8 percent in the
+march, falling as 1 / R) is consistent with H's section 6 expectation and is not the problem.
+
+Registry check, same day (record section 5): Q1 needs no registration. The two curves are the two strands of one
+rope; ropes interpenetrate other ropes (FND-MATTER-004) but a rope's own strands are bound at the registered
+standoff (GRV-020, EM-RECON-017/018), so the free-loop instrument's hooked chain at the core is a configuration
+the registered rope cannot take. The candidate under H is one closed rope with one unit of twist, folded and
+rotating (the control object with an internal twist field); E2b is built on that. Q2 derives from the registered
+twist density: minimizing the twist energy (kappa / 2)(dPhi/ds)^2 on the rotating rope pushes the winding toward
+the slow centre (Phi' proportional to 1 / gamma), for which the fold gives g = 1/2 (g = 2 <x^2>: 1/2, 2/3, 1, 2
+for twist-minimizing, uniform, energy-following, edge-pinned densities). Section 6's g = 2 required the edge.
+E2b decides it by computation; a confirmed 1/2 kills H at R4 and is kept as such.
+
