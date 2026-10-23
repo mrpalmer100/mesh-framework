@@ -1,0 +1,13 @@
+CONTROL: single loop, kappa = 0, hard core off, E minimized at fixed J
+  seed near-circle, R 1.0
+    fixed J: E 7.471130 J 3.123303 (target 3.141593, off -5.82e-03) Omega 1.03751 pen 2.77e-04 nit 511 nfev 79870 CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+    R_end 0.96380 (expected 1.00000; 1/Omega 0.96385)  E 7.47113 (2 pi T0 R 6.28319, rel +1.89e-01)  J 3.12330 (rel -5.82e-03)  2J/E 0.83610  edge 0.99985  <r^2>_q/R^2 0.4156 (1/3)  g_rigid 1.0313 g_perp 0.6933  cm_speed 5.26e-05  4piJ/E^2 0.7032
+  seed flat-ellipse, R 1.0
+    fixed J: E 6.360593 J 3.126587 (target 3.141593, off -4.78e-03) Omega 0.91628 pen 1.11e-05 nit 46 nfev 9702 CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+    R_end 1.09132 (expected 1.00000; 1/Omega 1.09137)  E 6.36059 (2 pi T0 R 6.28319, rel +1.23e-02)  J 3.12659 (rel -4.78e-03)  2J/E 0.98311  edge 0.99462  <r^2>_q/R^2 0.4025 (1/3)  g_rigid 0.7503 g_perp 0.7120  cm_speed 1.05e-05  4piJ/E^2 0.9711
+  seed near-circle, R 2.0
+    fixed J: E 16.770891 J 12.405454 (target 12.566371, off -1.28e-02) Omega 0.57267 pen 4.86e-03 nit 97 nfev 29988 CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+    R_end 1.74613 (expected 2.00000; 1/Omega 1.74622)  E 16.77089 (2 pi T0 R 12.56637, rel +3.35e-01)  J 12.40545 (rel -1.28e-02)  2J/E 1.47940  edge 0.99970  <r^2>_q/R^2 0.5350 (1/3)  g_rigid 1.6567 g_perp 0.7137  cm_speed 2.21e-04  4piJ/E^2 0.5543
+  seed flat-ellipse, R 2.0
+    fixed J: E 12.599765 J 12.434439 (target 12.566371, off -1.05e-02) Omega 0.48629 pen 1.39e-06 nit 139 nfev 25088 CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+    R_end 2.05627 (expected 2.00000; 1/Omega 2.05638)  E 12.59976 (2 pi T0 R 12.56637, rel +2.66e-03)  J 12.43444 (rel -1.05e-02)  2J/E 1.97376  edge 0.99990  <r^2>_q/R^2 0.3553 (1/3)  g_rigid 0.7003 g_perp 0.6767  cm_speed 3.72e-06  4piJ/E^2 0.9843

@@ -24,14 +24,22 @@ THE CONTROL (section 8): a single closed loop with no Coulomb term, rotating, mu
 string with ends at r = 1 / Omega and give E = 2 pi T0 R, J = pi T0 R^2 and R_end = 2 J / E, and with the
 charge uniform along it its second moment is R^2 / 3.
 
-CONTROL RECORD (2026-10-23, M = 48, K = 8, finite-difference L-BFGS): from a flat-ellipse seed at J = pi T0 (R = 1)
-the folded rotating string is found with E = 6.1828 (2 pi T0 R = 6.2832, -1.6 percent), J on target to 5e-4,
-edge speed 0.99989, R_end = 2 J / E to 1.6 percent, <r^2>_q / R^2 = 0.355 (exact 1/3), g = 0.637 for the uniform
-line charge (exact 2/3; g = 2 needs the charge at the lightlike ends). From a near-circle seed the optimizer finds
-instead a ring rotating about a diameter, a genuine stationary state 25 to 30 percent above the fold in E at the
-same J: the landscape has more than one rotating branch, and the pair march seeds accordingly. At fixed Omega
-(the Routhian) the rotating states are saddles and a minimizer collapses the loop, which is why the instrument
-minimizes E at fixed J (ELECTRON_LEDGER section 3).
+CONTROL RECORD (2026-10-23, final form: M = 48, K = 8, NSUB = 8, Omega eliminated by J(z, Omega) = J_target, rest
+frame enforced by W_MOM (P / E)^2, finite-difference L-BFGS). Flat-ellipse seed, single loop, kappa = 0, hard core off:
+  R = 1: E = 6.3606 (2 pi T0 R = 6.2832, +1.2 percent), 2 J / E = 0.983 (fold: 1), <r^2>_q / R^2 = 0.403 (1/3),
+         4 pi T0 J / E^2 = 0.971 (bound 1), cm speed 1e-5, J 0.5 percent under target at the speed wall.
+  R = 2: E = 12.600 (12.566, +0.27 percent), 2 J / E = 1.974 (2), <r^2>_q / R^2 = 0.355 (1/3), 4 pi T0 J / E^2 = 0.984,
+         cm speed 4e-6, J 1.0 percent under target at the speed wall.
+The near-circle seed finds a different stationary branch at both radii (E 19 and 34 percent above the fold, Regge
+ratio 0.70 and 0.55), so the pair march seeds flat. Two loopholes were closed on the way to this record, and both
+are warnings for every rotator number: (1) node tangents from central differences are meaningless at a cusp, and the
+exact-constraint solver found loops 20 percent BELOW the fold's energy at the same J through them (violating the
+closed-string Regge bound E^2 >= 4 pi T0 J); the geometry now uses the segment tangent and sub-segment gamma
+integrals, and 4 pi T0 J / E^2 <= 1 is printed on every line as the check; (2) without the momentum constraint the
+minimizer finds the lopsided hairpin (one tip lightlike at 1 / Omega, the other end on the axis, E = pi T0 R,
+J = pi T0 R^2 / 2) whose J is orbital angular momentum of a centre of energy moving at 0.6 c; the rest frame is now
+enforced and the cm speed printed. At fixed Omega (the Routhian) the rotating states are saddles and a minimizer
+collapses the loop, which is why the instrument minimizes E at fixed J (ELECTRON_LEDGER section 3).
 
 THE PARAMETRIZATION is the clasp engine's (ELEC-020 / electron_augmented_lagrangian.Model): two closed curves,
 Hopf-linked base circles of radius R = e^{z0} (C1 in the xy-plane about the origin, C2 in the xz-plane about
@@ -45,7 +53,7 @@ import sys
 import time
 
 import numpy as np
-from scipy.optimize import minimize
+from scipy.optimize import minimize, brentq
 from scipy.special import erf
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
@@ -56,7 +64,10 @@ T0 = 1.0
 K = 8                   # Fourier modes per coordinate (the engine's K)
 A_THICK = 0.24          # the engine's smearing width, in units of the base radius at z0 = 0
 D_HARD = 0.06           # the engine's hard-core separation
-VMAX2 = 1.0 - 1e-6      # v_perp^2 is clamped below 1 inside the sqrt
+VMAX2 = 1.0 - 1e-6
+VSOFT = 1.0 - 1e-4            # quadratic wall begins here: the optimizer never reaches the hard cap, where the objective kinks
+WALL = 1e-4      # v_perp^2 is clamped below 1 inside the sqrt
+W_MOM = 1e5                   # penalty weight on (P / E)^2, the centre-of-energy speed squared
 HC = [True]             # hard-core penalty on (the pair); the control switches it off to reach the folded string
 
 
@@ -91,24 +102,42 @@ def _gamma_int(a, b):
     return out
 
 
+NSUB = 8      # sub-segments per segment for the gamma-weighted integrals
+
+
 def geometry(cs, Omega):
-    """Per-segment midpoints, lengths, unit tangents, rigid and transverse velocity at the midpoint, and the
-    segment's gamma-weight integrated exactly from the squared transverse speeds at its two nodes (c = 1)."""
+    """Per segment: constant unit tangent t = (p_{i+1} - p_i) / ds, rigid velocity v = Omega z x p linear along the
+    segment, transverse velocity v_perp = v - (v . t) t linear, so v_perp^2 is quadratic; each segment is split into
+    NSUB sub-segments with the gamma-weight integrated exactly for a linear v_perp^2 on each (_gamma_int), and E, J
+    and the moments use the same weights at the sub-midpoints. The first version took node tangents from central
+    differences, which are meaningless at a cusp: a node at the fold tip could show a small transverse speed and a
+    cheap gamma, and the exact-constraint solver found loops 20 percent below the Regge bound E^2 = 4 pi T0 J of
+    the folded string that way (2026-10-23). With the segment tangent the fold tip is lightlike on both adjacent
+    segments, as it must be. Returned per curve: mid, ds, t, v, vperp (segment level, for the moments) and
+    smid, sds, sgint, spxv, sv2max (sub-segment level, for E and J and the speed wall)."""
     out = []
+    xs = np.linspace(0.0, 1.0, NSUB + 1)
     for c in cs:
-        nxt = np.roll(c, -1, axis=0); prv = np.roll(c, 1, axis=0)
+        nxt = np.roll(c, -1, axis=0)
         seg = nxt - c
         ds = np.linalg.norm(seg, axis=1)
         t = seg / ds[:, None]
-        tn = (nxt - prv); tn /= np.linalg.norm(tn, axis=1)[:, None]                       # node tangents
-        vn = Omega * np.stack([-c[:, 1], c[:, 0], np.zeros(len(c))], axis=1)                # node velocities
-        vpn = vn - (np.sum(vn * tn, axis=1))[:, None] * tn
-        v2n = np.sum(vpn ** 2, axis=1)
+        # sub-nodes: p(x) = c + x seg, shape (Mseg, NSUB+1, 3)
+        P = c[:, None, :] + xs[None, :, None] * seg[:, None, :]
+        V = Omega * np.stack([-P[..., 1], P[..., 0], np.zeros(P.shape[:2])], axis=-1)
+        Vp = V - np.sum(V * t[:, None, :], axis=-1)[..., None] * t[:, None, :]
+        v2 = np.sum(Vp ** 2, axis=-1)                                     # (Mseg, NSUB+1)
+        a = v2[:, :-1].ravel(); b = v2[:, 1:].ravel()
+        sgint = _gamma_int(a, b).reshape(v2.shape[0], NSUB)
+        Pm = 0.5 * (P[:, :-1, :] + P[:, 1:, :]); Vpm = 0.5 * (Vp[:, :-1, :] + Vp[:, 1:, :])
+        svp = Vpm                                                          # sub-midpoint transverse velocity
+        spxv = Pm[..., 0] * Vpm[..., 1] - Pm[..., 1] * Vpm[..., 0]
+        sds = np.repeat(ds[:, None], NSUB, axis=1) / NSUB
         mid = 0.5 * (c + nxt)
-        v = Omega * np.stack([-mid[:, 1], mid[:, 0], np.zeros(len(mid))], axis=1)       # Omega z x p
+        v = Omega * np.stack([-mid[:, 1], mid[:, 0], np.zeros(len(mid))], axis=1)
         vperp = v - (np.sum(v * t, axis=1))[:, None] * t
-        gint = _gamma_int(v2n, np.roll(v2n, -1))                                            # per segment
-        out.append(dict(mid=mid, ds=ds, t=t, v=v, vperp=vperp, v2=np.sum(vperp ** 2, axis=1), v2n=v2n, gint=gint))
+        out.append(dict(mid=mid, ds=ds, t=t, v=v, vperp=vperp, smid=Pm, sds=sds, sgint=sgint, spxv=spxv, sv2=v2,
+                        svp=svp, sv2max=float(v2.max())))
     return out
 
 
@@ -146,31 +175,19 @@ def hardcore(cs, w=1e3):
     return w * pen
 
 
-def routhian(z, Omega, kappa, M, B, single):
-    cs = curves(z, M, B, single)
-    g = geometry(cs, Omega)
-    F = 0.0
-    for gi in g:
-        v2 = gi['v2n']
-        over = np.clip(v2 - VMAX2, 0, None)
-        F += T0 * np.sum(np.sqrt(1.0 - np.minimum(gi['v2'], VMAX2)) * gi['ds']) + 1e3 * np.sum(over) * gi['ds'].mean()
-    if kappa > 0:
-        F += coulomb(cs, kappa)[0]
-    return F + hardcore(cs)
-
-
 def observables(z, Omega, kappa, M, B, single):
     cs = curves(z, M, B, single)
     g = geometry(cs, Omega)
     E_t, J, Eden_r2, edge = 0.0, 0.0, 0.0, 0.0
+    Pm = np.zeros(3)
     for gi in g:
-        gam = gi['gint']
-        E_t += T0 * np.sum(gam * gi['ds'])
-        pxv = gi['mid'][:, 0] * gi['vperp'][:, 1] - gi['mid'][:, 1] * gi['vperp'][:, 0]
-        J += T0 * np.sum(gam * pxv * gi['ds'])
-        r2 = gi['mid'][:, 0] ** 2 + gi['mid'][:, 1] ** 2
-        Eden_r2 += T0 * np.sum(gam * r2 * gi['ds'])
-        edge = max(edge, float(np.sqrt(gi['v2n'].max())))
+        w = gi['sgint'] * gi['sds']
+        E_t += T0 * np.sum(w)
+        J += T0 * np.sum(w * gi['spxv'])
+        r2 = gi['smid'][..., 0] ** 2 + gi['smid'][..., 1] ** 2
+        Eden_r2 += T0 * np.sum(w * r2)
+        Pm += T0 * np.sum(w[..., None] * gi['svp'], axis=(0, 1))
+        edge = max(edge, math.sqrt(gi['sv2max']))
     E_C, P, q = coulomb(cs, kappa) if kappa > 0 else (0.0, *coulomb(cs, 1.0)[1:])
     E = E_t + E_C
     r2q = float(np.sum(q * (P[:, 0] ** 2 + P[:, 1] ** 2)))
@@ -186,53 +203,71 @@ def observables(z, Omega, kappa, M, B, single):
     return dict(Omega=Omega, E=float(E), E_tension=float(E_t), E_C=float(E_C), coulomb_fraction=float(E_C / E),
                 J=float(J), R_end=rend, two_J_over_E=float(2 * J / E) if E else float('nan'), r2_charge=r2q, r2_energy=float(r2e),
                 second_moment_ratio=float(r2q / r2e), edge_speed=edge, mu_rigid=mu_rigid, mu_perp=mu_perp, g_rigid=g_rigid,
-                g_perp=g_perp, length=float(sum(np.sum(gi['ds']) for gi in g)), linking=lk)
+                g_perp=g_perp, length=float(sum(np.sum(gi['ds']) for gi in g)), linking=lk,
+                cm_speed=float(np.linalg.norm(Pm[:2]) / E_t), regge=float(4 * math.pi * T0 * J / E_t ** 2))
 
 
 def energy_and_J(z, Omega, kappa, M, B, single):
     cs = curves(z, M, B, single)
     g = geometry(cs, Omega)
     E, J, over = 0.0, 0.0, 0.0
+    Pm = np.zeros(3)
     for gi in g:
-        over += np.sum(np.clip(gi['v2n'] - VMAX2, 0, None)) * gi['ds'].mean()
-        gam = gi['gint']
-        E += T0 * np.sum(gam * gi['ds'])
-        pxv = gi['mid'][:, 0] * gi['vperp'][:, 1] - gi['mid'][:, 1] * gi['vperp'][:, 0]
-        J += T0 * np.sum(gam * pxv * gi['ds'])
+        over += np.sum((np.clip(gi['sv2'] - VSOFT, 0, None) / WALL) ** 2) * gi['ds'].mean()
+        w = gi['sgint'] * gi['sds']
+        E += T0 * np.sum(w)
+        J += T0 * np.sum(w * gi['spxv'])
+        Pm += T0 * np.sum(w[..., None] * gi['svp'], axis=(0, 1))
     if kappa > 0:
         E += coulomb(cs, kappa)[0]
-    return E, J, 1e3 * over + hardcore(cs)
+    # rest frame: the rotation axis must pass through the centre of energy, P = T0 int gamma v_perp ds = 0; without
+    # this the minimizer finds the lopsided hairpin (one tip lightlike at 1 / Omega, the other end on the axis,
+    # E = pi T0 R, J = pi T0 R^2 / 2) whose J is orbital angular momentum of a moving centre of mass (2026-10-23)
+    pen_P = W_MOM * float(np.sum(Pm[:2] ** 2)) / E ** 2
+    return E, J, 1e3 * over + hardcore(cs) + pen_P
 
 
-def solve_fixed_J(z0, Omega0, J_target, kappa, M=64, single=False, maxiter=3000, verbose=False, w=(30.0, 300.0, 3000.0)):
-    """Minimize E over the shape AND Omega with J held at J_target (penalty continuation, then the last stage is the
-    answer). This is the ensemble of ELECTRON_LEDGER section 3: at fixed angular momentum the rotation is repulsive
-    at short scale, so the minimum exists; at fixed Omega (the Routhian F) the rotating solution is a saddle and an
-    unconstrained minimizer shrinks the loop to the hard core (the first control run, 2026-10-23, R_end 0.16 at
-    1 / Omega = 2)."""
+def omega_for_J(z, J_target, kappa, M, B, single, Omega_lo=1e-3):
+    """Omega such that J(z, Omega) = J_target, for the shape z: J is monotone in Omega below the speed cap, so a
+    bracketed root find gives it. Returns (Omega, J_reached): if the shape cannot carry J_target below the cap,
+    J_reached < J_target at the cap Omega and the caller penalizes the shortfall (the shape must grow)."""
+    cs = curves(z, M, B, single)
+    rmax = max(float(np.max(np.hypot(c[:, 0], c[:, 1]))) for c in cs)
+    Omega_hi = math.sqrt(VSOFT) / max(rmax, 1e-9)             # every node below the wall at this Omega
+    def Jof(Om):
+        return energy_and_J(z, Om, 0.0, M, B, single)[1] - J_target
+    jhi = Jof(Omega_hi)
+    if jhi < 0.0:
+        return Omega_hi, jhi + J_target
+    jlo = Jof(Omega_lo)
+    if jlo > 0.0:
+        return Omega_lo, jlo + J_target
+    Om = brentq(Jof, Omega_lo, Omega_hi, xtol=1e-12, rtol=1e-12, maxiter=200)
+    return Om, J_target
+
+
+def solve_fixed_J(z0, Omega0, J_target, kappa, M=64, single=False, maxiter=3000, verbose=False, w=300.0):
+    """Minimize E over the shape with Omega eliminated by J(z, Omega) = J_target (omega_for_J): the constraint is
+    exact at every evaluation and the objective is smooth where the shape can carry J_target; a shape that cannot
+    (too small for the speed cap) pays w (J / J_target - 1)^2 and grows. Earlier versions (penalty continuation,
+    then an augmented Lagrangian over [z, log Omega]) stalled with zero iterations whenever the fold sat just under
+    the speed cap: the gradient was sound but L-BFGS-B's line search could not resolve the 1e-5-scale descent
+    against the wall a step of 1e-4 away (diagnosed 2026-10-23). This is the ensemble of ELECTRON_LEDGER section 3:
+    at fixed angular momentum the rotation is repulsive at short scale, so the minimum exists; at fixed Omega (the
+    Routhian F) the rotating solution is a saddle and an unconstrained minimizer shrinks the loop to the hard core
+    (the first control run, 2026-10-23, R_end 0.16 at 1 / Omega = 2)."""
     B = basis(M)
-    x = np.concatenate([z0, [math.log(Omega0)]])
-    res = None
-    for wj in w:
-        def f(x):
-            E, J, pen = energy_and_J(x[:-1], math.exp(x[-1]), kappa, M, B, single)
-            return E + pen + wj * (J / J_target - 1.0) ** 2
-        bounds = [(None, None)] * (len(x) - 1) + [(-6.0, 6.0)]
-        res = minimize(f, x, method='L-BFGS-B', bounds=bounds, options=dict(maxiter=maxiter, maxfun=400000, ftol=1e-13, gtol=1e-9))
-        x = res.x
-        if verbose:
-            E, J, pen = energy_and_J(x[:-1], math.exp(x[-1]), kappa, M, B, single)
-            print(f'    w {wj:g}: E {E:.6f} J {J:.6f} (target {J_target:.6f}, off {J / J_target - 1:+.2e}) Omega {math.exp(x[-1]):.5f} pen {pen:.2e} nit {res.nit}', flush=True)
-    return x[:-1], math.exp(x[-1]), res
-
-
-def solve(z0, Omega, kappa, M=64, single=False, maxiter=400, verbose=False):
-    B = basis(M)
-    f = lambda z: routhian(z, Omega, kappa, M, B, single)
-    res = minimize(f, z0, method='L-BFGS-B', options=dict(maxiter=maxiter, maxfun=200000, ftol=1e-12, gtol=1e-8))
+    def f(z):
+        Om, Jr = omega_for_J(z, J_target, kappa, M, B, single)
+        E, J, pen = energy_and_J(z, Om, kappa, M, B, single)
+        return E + pen + w * (Jr / J_target - 1.0) ** 2
+    res = minimize(f, z0, method='L-BFGS-B', options=dict(maxiter=maxiter, maxfun=400000, ftol=1e-13, gtol=1e-9, eps=1e-7, maxls=60))
+    z = res.x
+    Om, Jr = omega_for_J(z, J_target, kappa, M, B, single)
+    E, J, pen = energy_and_J(z, Om, kappa, M, B, single)
     if verbose:
-        print(f'    Omega {Omega:.4f}: F {res.fun:.6f} nit {res.nit} nfev {res.nfev} {"ok" if res.success else res.message}')
-    return res.x, res
+        print(f'    fixed J: E {E:.6f} J {J:.6f} (target {J_target:.6f}, off {J / J_target - 1:+.2e}) Omega {Om:.5f} pen {pen:.2e} nit {res.nit} nfev {res.nfev} {res.message}', flush=True)
+    return z, Om, res
 
 
 def z_init(R, seed=0, amp=0.0):
@@ -263,16 +298,8 @@ def control(M=64):
             exp = dict(E=2 * math.pi * T0 * R, J=J_t, R=R)
             print(f'    R_end {o["R_end"]:.5f} (expected {R:.5f}; 1/Omega {1 / Omega:.5f})  E {o["E"]:.5f} (2 pi T0 R {exp["E"]:.5f}, rel {o["E"] / exp["E"] - 1:+.2e})  '
                   f'J {o["J"]:.5f} (rel {o["J"] / exp["J"] - 1:+.2e})  2J/E {o["two_J_over_E"]:.5f}  edge {o["edge_speed"]:.5f}  '
-                  f'<r^2>_q/R^2 {o["r2_charge"] / R ** 2:.4f} (1/3)  g_rigid {o["g_rigid"]:.4f} g_perp {o["g_perp"]:.4f}', flush=True)
-        continue
-        z, Omega, res = solve_fixed_J(z, 0.8 / R, J_t, 0.0, M=M, single=True, verbose=True)
-        o = observables(z, Omega, 0.0, M, basis(M), True)
-        exp = dict(E=2 * math.pi * T0 * R, J=J_t, R=R)
-        rows.append(dict(obs=o, expected=exp))
-        HC[0] = True
-        print(f'    R_end {o["R_end"]:.5f} (expected {R:.5f}; 1/Omega {1 / Omega:.5f})  E {o["E"]:.5f} (2 pi T0 R {exp["E"]:.5f}, rel {o["E"] / exp["E"] - 1:+.2e})  '
-              f'J {o["J"]:.5f} (pi T0 R^2 {exp["J"]:.5f}, rel {o["J"] / exp["J"] - 1:+.2e})  2J/E {o["two_J_over_E"]:.5f}  '
-              f'edge {o["edge_speed"]:.5f}  <r^2>_q/R^2 {o["r2_charge"] / R ** 2:.4f} (1/3)  g_rigid {o["g_rigid"]:.4f} g_perp {o["g_perp"]:.4f}')
+                  f'<r^2>_q/R^2 {o["r2_charge"] / R ** 2:.4f} (1/3)  g_rigid {o["g_rigid"]:.4f} g_perp {o["g_perp"]:.4f}  '
+                  f'cm_speed {o["cm_speed"]:.2e}  4piJ/E^2 {o["regge"]:.4f}', flush=True)
     return rows
 
 
@@ -291,7 +318,8 @@ def pair_march(kappa, Js, M=64, out=None):
         o['J_target'] = J_t
         rows.append(o)
         print(f'    J {J_t:.4f}: E {o["E"]:.5f} J {o["J"]:.5f} Omega {Omega:.4f} 2J/E {o["two_J_over_E"]:.4f} R_end {o["R_end"]:.4f} edge {o["edge_speed"]:.4f} '
-              f'E_C/E {o["coulomb_fraction"]:.4f} <r2>_q/<r2>_E {o["second_moment_ratio"]:.4f} g_rigid {o["g_rigid"]:.4f} g_perp {o["g_perp"]:.4f} Lk {o["linking"]:.3f}', flush=True)
+              f'E_C/E {o["coulomb_fraction"]:.4f} <r2>_q/<r2>_E {o["second_moment_ratio"]:.4f} g_rigid {o["g_rigid"]:.4f} g_perp {o["g_perp"]:.4f} Lk {o["linking"]:.3f} '
+              f'cm_speed {o["cm_speed"]:.2e} 4piJ/E^2 {o["regge"]:.4f}', flush=True)
         if out:
             pathlib.Path(out).write_text(json.dumps(dict(kappa=kappa, M=M, rows=rows, z_last=z.tolist(), Omega_last=Omega), indent=1))
         # seed the next rung by scaling the shape with sqrt(J)
