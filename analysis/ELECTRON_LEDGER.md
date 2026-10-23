@@ -268,3 +268,9 @@ the slow centre (Phi' proportional to 1 / gamma), for which the fold gives g = 1
 for twist-minimizing, uniform, energy-following, edge-pinned densities). Section 6's g = 2 required the edge.
 E2b decides it by computation; a confirmed 1/2 kills H at R4 and is kept as such.
 
+E2b result (same day; record section 7): the twisted rope at R = 1 gives g = 0.967, 0.912, 0.946 for kappa_tw =
+0.01, 0.1, 1 (the section 10 estimate of 1/2 was wrong: at fixed J the Routhian puts the twist at the folds like
+the energy, and charge that follows mass gives g = 1 for any rigid rotator). H is KILLED at R4 under the
+registered twist energy, kept as such; E3 on H is withdrawn. What g = 2 would need (ends, a non-twist carrier at
+the lightlike locus, non-rigid circulation, or the spinor route) is listed in the record as commitments not made.
+
