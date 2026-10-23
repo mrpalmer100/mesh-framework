@@ -8,6 +8,12 @@ branch (lab) and main changes only by the author's merge. The executor never pus
 Branched from main at ed27c9e on 2026-10-18.
 
 ## Log
+- 2026-10-23: THE ELECTRON LEDGER (analysis/ELECTRON_LEDGER.md, E1 of the electron programme): requirements R1-R10 with
+  registered status; the five kills of the static clasp; the dynamical line and the ensemble it did not test; the alpha
+  terminus and ELEC-102; the walls; hypothesis H (the rotating charge-one pair at fixed angular momentum) with its
+  closed forms (R = 2cJ/E = lambda-bar_C, g = 2 exactly, T_eff = m_e^2 c^3/(pi hbar) = 0.0675 J/m) and price; the
+  acceptance criteria A1-A10 fixed before any candidate; E2/E3/E4. Numbers: benchmarks/foundations/electron_ledger_numbers.py.
+  ELEC-CURRENT-1 parked (reviews read; the terminus has no mechanical reading, R10); the lab's queue is empty on purpose.
 - 2026-10-22: ELEC-CURRENT-1 (derivation, on the kit): the current and momentum laws of a rotating phase pattern
   from the registered dictionary, with the superluminal edge; the one derivation ELEC-102 was conditional on and the
   form-factor line (SUB-1/SUB-2, both withdrawn) lacked. ELEC-G-2 completed and registered provisionally (ELEC-102).
