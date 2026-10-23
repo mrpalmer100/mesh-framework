@@ -200,11 +200,14 @@ def observables(z, Omega, kappa, M, B, single):
     g_perp = (mu_perp / J) * 2 * E if J else float('nan')
     rend = max(float(np.sqrt((c[:, 0] ** 2 + c[:, 1] ** 2).max())) for c in cs)
     lk = float(linking_number(cs[0], cs[1])) if len(cs) == 2 else 0.0
+    # closest approach between the two curves (segment midpoints), against the hard core D_HARD: a pair sitting on
+    # the core is a clasp held only by the core, and its Gauss linking number smears below 1 (2026-10-23)
+    min_sep = float(np.min(np.linalg.norm(g[0]['mid'][:, None, :] - g[1]['mid'][None, :, :], axis=2))) if len(cs) == 2 else float('nan')
     return dict(Omega=Omega, E=float(E), E_tension=float(E_t), E_C=float(E_C), coulomb_fraction=float(E_C / E),
                 J=float(J), R_end=rend, two_J_over_E=float(2 * J / E) if E else float('nan'), r2_charge=r2q, r2_energy=float(r2e),
                 second_moment_ratio=float(r2q / r2e), edge_speed=edge, mu_rigid=mu_rigid, mu_perp=mu_perp, g_rigid=g_rigid,
                 g_perp=g_perp, length=float(sum(np.sum(gi['ds']) for gi in g)), linking=lk,
-                cm_speed=float(np.linalg.norm(Pm[:2]) / E_t), regge=float(4 * math.pi * T0 * J / E_t ** 2))
+                cm_speed=float(np.linalg.norm(Pm[:2]) / E_t), regge=float(4 * math.pi * T0 * J / E_t ** 2), min_sep=min_sep)
 
 
 def energy_and_J(z, Omega, kappa, M, B, single):
@@ -344,7 +347,7 @@ def pair_march(kappa, Js, M=64, out=None, multiseed=False, warm=None):
             o['J_target'] = J_t; o['seed'] = name
             print(f'    J {J_t:.4f} [{name}]: E {o["E"]:.5f} J {o["J"]:.5f} Omega {Oms:.4f} 2J/E {o["two_J_over_E"]:.4f} R_end {o["R_end"]:.4f} edge {o["edge_speed"]:.4f} '
                   f'E_C/E {o["coulomb_fraction"]:.4f} <r2>_q/<r2>_E {o["second_moment_ratio"]:.4f} g_rigid {o["g_rigid"]:.4f} g_perp {o["g_perp"]:.4f} Lk {o["linking"]:.3f} '
-                  f'cm_speed {o["cm_speed"]:.2e} 4piJ/E^2 {o["regge"]:.4f}', flush=True)
+                  f'cm_speed {o["cm_speed"]:.2e} 4piJ/E^2 {o["regge"]:.4f} min_sep {o["min_sep"]:.4f} (core {D_HARD})', flush=True)
             if abs(o['linking']) < 0.5:
                 print('      (unlinked: discarded)', flush=True); continue
             if best is None or o['E'] < best[0]['E']:
