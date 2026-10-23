@@ -373,7 +373,11 @@ if __name__ == '__main__':
     ap.add_argument('--out', type=str, default=str(ROOT / 'analysis' / 'elec_rotator_march.json'))
     ap.add_argument('--multiseed', action='store_true')
     ap.add_argument('--warm', type=str, default=None)
+    ap.add_argument('--dhard', type=float, default=None, help='override the hard-core separation D_HARD (regulator scan)')
     a = ap.parse_args()
+    if a.dhard is not None:
+        D_HARD = a.dhard
+        print(f'D_HARD overridden to {D_HARD}')
     if a.control:
         control(a.M)
     if a.pair:

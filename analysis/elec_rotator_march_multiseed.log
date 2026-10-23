@@ -1,0 +1,54 @@
+PAIR: Hopf-linked two curves, kappa = 0.02292530923636929, M = 48, J ladder [1.0, 2.0, 4.0, 8.0], multiseed True
+  seed chain:
+    fixed J: E 4.024010 J 1.000000 (target 1.000000, off -1.47e-12) Omega 1.90291 pen 9.54e-03 nit 578 nfev 73892 CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+    J 1.0000 [chain]: E 4.02401 J 1.00000 Omega 1.9029 2J/E 0.4970 R_end 0.5248 edge 0.9944 E_C/E 0.0056 <r2>_q/<r2>_E 0.6311 g_rigid 0.6438 g_perp 0.6272 Lk -1.003 cm_speed 1.67e-06 4piJ/E^2 0.7848
+  seed flat:
+    fixed J: E 4.024010 J 1.000000 (target 1.000000, off -1.47e-12) Omega 1.90291 pen 9.54e-03 nit 578 nfev 73892 CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+    J 1.0000 [flat]: E 4.02401 J 1.00000 Omega 1.9029 2J/E 0.4970 R_end 0.5248 edge 0.9944 E_C/E 0.0056 <r2>_q/<r2>_E 0.6311 g_rigid 0.6438 g_perp 0.6272 Lk -1.003 cm_speed 1.67e-06 4piJ/E^2 0.7848
+  seed round:
+    fixed J: E 4.289047 J 1.000000 (target 1.000000, off -2.66e-15) Omega 1.85415 pen 6.27e-03 nit 678 nfev 92022 CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+    J 1.0000 [round]: E 4.28905 J 1.00000 Omega 1.8542 2J/E 0.4663 R_end 0.5391 edge 0.9996 E_C/E 0.0052 <r2>_q/<r2>_E 0.6318 g_rigid 0.6692 g_perp 0.6026 Lk -0.966 cm_speed 2.39e-05 4piJ/E^2 0.6903
+  seed tilt:
+    fixed J: E 3.886147 J 1.000000 (target 1.000000, off -3.33e-16) Omega 1.76587 pen 3.53e-03 nit 1640 nfev 203448 CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+    J 1.0000 [tilt]: E 3.88615 J 1.00000 Omega 1.7659 2J/E 0.5146 R_end 0.5640 edge 0.9956 E_C/E 0.0057 <r2>_q/<r2>_E 0.6656 g_rigid 0.6753 g_perp 0.6648 Lk 0.046 cm_speed 5.33e-06 4piJ/E^2 0.8416
+      (unlinked: discarded)
+    J 1.0000 BEST [chain]: E 4.02401 4piJ/E^2 0.7848
+  seed chain:
+    fixed J: E 5.542706 J 1.991003 (target 2.000000, off -4.50e-03) Omega 1.33272 pen 1.29e-03 nit 914 nfev 122500 CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+    J 2.0000 [chain]: E 5.54271 J 1.99100 Omega 1.3327 2J/E 0.7184 R_end 0.7503 edge 0.9996 E_C/E 0.0036 <r2>_q/<r2>_E 0.6468 g_rigid 0.6642 g_perp 0.6349 Lk -0.967 cm_speed 9.97e-06 4piJ/E^2 0.8203
+  seed flat:
+    fixed J: E 5.532257 J 1.992824 (target 2.000000, off -3.59e-03) Omega 1.31768 pen 7.07e-03 nit 633 nfev 84182 CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+    J 2.0000 [flat]: E 5.53226 J 1.99282 Omega 1.3177 2J/E 0.7204 R_end 0.7589 edge 0.9977 E_C/E 0.0036 <r2>_q/<r2>_E 0.6321 g_rigid 0.6382 g_perp 0.6319 Lk -0.987 cm_speed 7.31e-05 4piJ/E^2 0.8242
+  seed round:
+    fixed J: E 5.629380 J 1.990430 (target 2.000000, off -4.78e-03) Omega 1.28057 pen 3.23e-03 nit 1227 nfev 155330 CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+    J 2.0000 [round]: E 5.62938 J 1.99043 Omega 1.2806 2J/E 0.7072 R_end 0.7809 edge 0.9999 E_C/E 0.0035 <r2>_q/<r2>_E 0.6361 g_rigid 0.6538 g_perp 0.6221 Lk -1.037 cm_speed 9.53e-06 4piJ/E^2 0.7949
+  seed tilt:
+    fixed J: E 5.522054 J 2.000000 (target 2.000000, off -1.20e-14) Omega 1.34953 pen 5.81e-03 nit 614 nfev 79184 CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+    J 2.0000 [tilt]: E 5.52205 J 2.00000 Omega 1.3495 2J/E 0.7244 R_end 0.7401 edge 0.9987 E_C/E 0.0036 <r2>_q/<r2>_E 0.6391 g_rigid 0.6461 g_perp 0.6399 Lk -0.970 cm_speed 3.60e-05 4piJ/E^2 0.8302
+    J 2.0000 BEST [tilt]: E 5.52205 4piJ/E^2 0.8302
+  seed chain:
+    fixed J: E 7.636103 J 3.977384 (target 4.000000, off -5.65e-03) Omega 0.88622 pen 1.38e-03 nit 483 nfev 65660 CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+    J 4.0000 [chain]: E 7.63610 J 3.97738 Omega 0.8862 2J/E 1.0417 R_end 1.1283 edge 0.9979 E_C/E 0.0022 <r2>_q/<r2>_E 0.6719 g_rigid 0.6843 g_perp 0.6685 Lk -0.975 cm_speed 4.16e-05 4piJ/E^2 0.8609
+  seed flat:
+    fixed J: E 7.701734 J 3.974646 (target 4.000000, off -6.34e-03) Omega 0.94712 pen 1.37e-03 nit 666 nfev 89376 CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+    J 4.0000 [flat]: E 7.70173 J 3.97465 Omega 0.9471 2J/E 1.0321 R_end 1.0558 edge 0.9988 E_C/E 0.0022 <r2>_q/<r2>_E 0.6376 g_rigid 0.6404 g_perp 0.6387 Lk -0.945 cm_speed 5.73e-06 4piJ/E^2 0.8458
+  seed round:
+    fixed J: E 8.227539 J 3.971131 (target 4.000000, off -7.22e-03) Omega 0.90526 pen 5.85e-03 nit 632 nfev 85162 CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+    J 4.0000 [round]: E 8.22754 J 3.97113 Omega 0.9053 2J/E 0.9653 R_end 1.1046 edge 0.9999 E_C/E 0.0021 <r2>_q/<r2>_E 0.6385 g_rigid 0.6694 g_perp 0.6142 Lk -1.054 cm_speed 9.07e-05 4piJ/E^2 0.7403
+  seed tilt:
+    fixed J: E 7.429999 J 3.974882 (target 4.000000, off -6.28e-03) Omega 0.93075 pen 9.73e-04 nit 1043 nfev 135142 CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+    J 4.0000 [tilt]: E 7.43000 J 3.97488 Omega 0.9307 2J/E 1.0700 R_end 1.0744 edge 0.9998 E_C/E 0.0023 <r2>_q/<r2>_E 0.6414 g_rigid 0.6449 g_perp 0.6415 Lk 0.957 cm_speed 7.17e-06 4piJ/E^2 0.9090
+    J 4.0000 BEST [tilt]: E 7.43000 4piJ/E^2 0.9090
+  seed chain:
+    fixed J: E 10.337548 J 8.000000 (target 8.000000, off -4.44e-15) Omega 0.63849 pen 1.45e-03 nit 741 nfev 92316 CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+    J 8.0000 [chain]: E 10.33755 J 8.00000 Omega 0.6385 2J/E 1.5478 R_end 1.5658 edge 0.9998 E_C/E 0.0014 <r2>_q/<r2>_E 0.6562 g_rigid 0.6577 g_perp 0.6567 Lk -0.978 cm_speed 2.03e-05 4piJ/E^2 0.9433
+  seed flat:
+    fixed J: E 11.672858 J 7.933449 (target 8.000000, off -8.32e-03) Omega 0.64959 pen 1.96e-03 nit 229 nfev 38024 CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+    J 8.0000 [flat]: E 11.67286 J 7.93345 Omega 0.6496 2J/E 1.3593 R_end 1.5394 edge 0.9987 E_C/E 0.0011 <r2>_q/<r2>_E 0.6780 g_rigid 0.6912 g_perp 0.6788 Lk -1.045 cm_speed 2.40e-05 4piJ/E^2 0.7333
+  seed round:
+    fixed J: E 10.713584 J 7.924686 (target 8.000000, off -9.41e-03) Omega 0.68761 pen 1.22e-03 nit 1132 nfev 145530 CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+    J 8.0000 [round]: E 10.71358 J 7.92469 Omega 0.6876 2J/E 1.4794 R_end 1.4542 edge 0.9996 E_C/E 0.0014 <r2>_q/<r2>_E 0.6095 g_rigid 0.6133 g_perp 0.6069 Lk -1.051 cm_speed 2.73e-06 4piJ/E^2 0.8700
+  seed tilt:
+    fixed J: E 10.372597 J 7.929991 (target 8.000000, off -8.75e-03) Omega 0.65333 pen 2.45e-03 nit 1451 nfev 197274 CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
+    J 8.0000 [tilt]: E 10.37260 J 7.92999 Omega 0.6533 2J/E 1.5290 R_end 1.5305 edge 0.9998 E_C/E 0.0014 <r2>_q/<r2>_E 0.6481 g_rigid 0.6498 g_perp 0.6485 Lk 0.958 cm_speed 2.84e-05 4piJ/E^2 0.9287
+    J 8.0000 BEST [chain]: E 10.33755 4piJ/E^2 0.9433
