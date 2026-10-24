@@ -133,7 +133,11 @@ v5. CLEAN ROOM: no hull number at 1.492 before the credential unit is sealed; th
 Leg 1  Credential at 13/9 (D2, v1 to v4) on W and C; memory and time measured; the lock follows on this record
        if the forms CRED-RATE-MET fires; INSTRUMENT-OPEN otherwise and the commission stops.
 Leg 2  Q2 first: q = 3/2 on W (the full march), then the two C points.
-Leg 3  Q1: q = 1.492 on W, then the two C points.
+Leg 3  Q1: q = 1.492 on W, then the two C points. DECISION GATE (the author's, 2026-10-24): Leg 3 starts only on
+       the author's word after Leg 2's form is rendered and read. If the hull collapses at 3/2 as the cell did,
+       the aliasing reading is dead and the author may close the commission at Leg 2 with Q1 unrun; that is a
+       completed commission (Q2 answered, Q1 WITHHELD-BY-AUTHOR on the record), not a withdrawal. The gate does
+       not change any form or threshold; it decides whether three further weeks are spent.
 Leg 4  Q3 price table; results doc; the author reads before any claim is drafted.
 
 ## FORMS (exhaustive; pre-registered; anything else is NO-CALL)
@@ -152,6 +156,8 @@ Q1 (exactly one, per D6 with the D4 convergence bar):
   QP-FOLD                  the march ends by the fold rule with A2_max < 0.0060 and D < 2.0 on W, the fold point
                            reproduced on C within 20 percent in A2: a reachable maximum that is the state's.
   QP-MIXED                 between thresholds, or D(W) and D(C) differ by more than 20 percent, or CRED-HELD.
+  WITHHELD-BY-AUTHOR       Leg 3 not started at the author's decision after Leg 2 (the gate); Q1 unanswered by
+                           choice, stated as such; no reading of Q1 is implied.
 Q2 (exactly one):
   HULL-ALIAS-CONFIRMED     D(3/2 on the hull) <= 1.25 on W and C: the registered 3/2 collapse was the cell's
                            aliasing; FND-147/151/152/153's 3/2 statements take the CELL-SCOPE rider as Leg B
@@ -179,13 +185,30 @@ nothing at 1.492. One unit per invocation, atomic checkpoint, one FORM per quest
 
 ## SCHEDULING (budgets, not bars; measured, from Leg 0)
 Leg 0 measured 32000 s for the level-1 solve plus the first member on W by prolongation and 52000 to 61000 s per
-further rung on W (14 to 17 hours), on the mini, the only machine for this job. The credential's two C members are
-projected at 2 to 3 times a W rung each (measured in D2 f). A march of 10 to 14 full-bar points per ratio on W is
-6 to 10 days per ratio; the two C points per ratio 3 to 4 days. Total of order four weeks of the mini for Legs 1
-to 3, the lab's one-job rule holding the machine for that time; the author decides whether that is acceptable
-before the lock, and the lock records the booking. cpu_hours 700 (wall, single process); mem_gb from D2 (f),
-booked at the measured peak plus 20 percent and under 48; usd 0 beyond drafting and review. Results to
-analysis/QP_HULL_2_results.md; the price table inside it.
+further rung on W (14 to 17 hours), on the mini. The solver is single-threaded (the lab's Phase-0 benchmark:
+threads_per_job 1, extra BLAS threads gave nothing), so the lab runs jobs side by side and the binding constraint
+is MEMORY, which D2 (f) measures: a hull job on W is at least Leg B's cell in grid points (20736 against 15552) and
+Leg B's cell ran at 42.7 GB under the 48 GB cap. CONCURRENCY RULE, decided by the measurement, not in advance: if a
+W job's measured peak is at most one third of the cap, Legs 2 and 3 run concurrently (the control and the question
+are both sealed before either is read, so the "control first" ordering is an ordering of reading, which concurrency
+does not touch); if more, they run in sequence; C runs alone if its peak exceeds half the cap. A march of 10 to 14
+full-bar points per ratio on W is 6 to 10 days per ratio; the two C points per ratio 3 to 4 days; Legs 1 to 3 are
+two to four weeks of wall time depending on the concurrency the measurement allows. The author decides whether that
+is acceptable before the lock, and the lock records the booking and the concurrency. cpu_hours 700 (single-thread
+hours); mem_gb from D2 (f), booked at the measured peak plus 20 percent per job and under 48 in total; usd 0 beyond
+drafting and review. Results to analysis/QP_HULL_2_results.md; the price table inside it.
+
+## DISCLOSURES (for the lock checklist's anti-fishing item; the reviewers judge)
+Leg 0 part 1 (benchmarks/foundations/qp_hull_leg0.py, runs A and C, 2026-10-20) computed hull numbers at the FIRST
+RAMP WAYPOINT ONLY (A2 = 0.0018792, NP 12, grids 12 x 8 and 24 x 8): run A at q = 1.492 (om2, gamma, the level-1
+theta, closure, to read the density at which om2 converges), run C at q = 3/2 against the 3/2 cell (the restricted
+state in the cell metrics, to show the size of the degenerate-mode effect at that density). Neither computed a rate,
+a march, a D, nor any point near 0.0048 or 0.0063; the part-1 JSON was not kept on the record (part 2 superseded
+it). These are instrument-convergence quantities at an amplitude 2.5 to 3.4 times below the statistic's window,
+and the executor's reading is that they do not preview Q1 or Q2, whose evidence is D at the two statistic points and
+the fold rule; but FINE-DISP-1 taught that a preview is the result for a deterministic computation, so the
+disclosure is made here in full and the skeptical reviewer decides whether checklist item I is met. Leg 0 part 2
+computed nothing at 1.492 or 3/2.
 
 ## STANDING
 Registered claims untouched until the author grants. The lock is the lab's, after the credential unit; the draft
@@ -205,7 +228,7 @@ instrument:
   - benchmarks/foundations/qsweep_stage1.py
   - benchmarks/foundations/sparsej_instrument.py
   - benchmarks/lab/_kit/labkit.py
-forms: [CRED-RATE-MET, CRED-HELD, INSTRUMENT-OPEN, QP-FLAT, QP-COLLAPSE, QP-FOLD, QP-MIXED, HULL-ALIAS-CONFIRMED, HULL-COLLAPSE-PHYSICAL, HULL-32-MIXED, NO-CALL]
+forms: [CRED-RATE-MET, CRED-HELD, INSTRUMENT-OPEN, QP-FLAT, QP-COLLAPSE, QP-FOLD, QP-MIXED, WITHHELD-BY-AUTHOR, HULL-ALIAS-CONFIRMED, HULL-COLLAPSE-PHYSICAL, HULL-32-MIXED, NO-CALL]
 state: [analysis/qp_hull_2_ckpt.pkl]
 budget: {cpu_hours: 700, usd: 0}
 mem_gb: 48
