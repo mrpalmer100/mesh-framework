@@ -28,3 +28,4 @@ Branched from main at ed27c9e on 2026-10-18.
 - 2026-10-20: GRV-BLIND-3 retired by the executor's reading of its reviews (same-table statistic; both reviewers);
   GRV-2PI-DERIVE-1, GRV-EFE-DERIVE-1, GRV-NU-DERIVE-1, GRV-EFE-1, QP-HULL-1 withdrawn by the lab, successors to
   follow under new names (a withdrawn name stays taken).
+- 2026-10-24: QP-HULL-2 drafted (analysis/QP_HULL_2_charter_DRAFT.md) on Leg 0 part 2 (analysis/QP_HULL_1_leg0_results.md): the same Q1/Q2/Q3 as QP-HULL-1 on the credentialed spectral hull, working grid 48x12x36 and convergence grid 48x24x36, the credential a measured convergence rate at 13/9 (D2), booking measured before the lock (about four weeks of the mini). The only live draft; the Director plans from it once agents resume.
