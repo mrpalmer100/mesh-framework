@@ -13,8 +13,9 @@ read this directory.
 - GRV-EFE-1: abandoned by the worker ("cannot make the sealed input credentialed from inside this sandbox").
 - GRV-BLIND-3: abandoned; both reviewers found the same-table statistic self-referential. Retired rather than
   revised; a blind confrontation needs a non-SPARC sample and the sealed-input credentialing GRV-EFE-1 lacked.
-- QP-HULL-1: abandoned on a compute estimate of the v1 instrument; the spectral hull is small; successor
-  QP-HULL-2 waits on Leg 0 part 2.
+- QP-HULL-1: abandoned on a compute estimate of the v1 instrument; the spectral hull is small; Leg 0 part 2 is on
+  the record (analysis/QP_HULL_1_leg0_results.md, 2026-10-24: the hull converges onto the 13/9 cell, om2 gap 1.7e-5
+  at member 1 and 3.7e-3 at member 2 on 48x12x36); successor QP-HULL-2 is charted on it.
 - ITEM6 (ANTI-ALIGNED, AXIS-MEANING, METALLIC, KOIDE-WEINBERG): four charters in one old draft file, all four executed and withdrawn before 2026-10-20; moved here 2026-10-21 so the Director stops re-reading it.
 - ELEC-FF-SUB-1: withdrawn 2026-10-21 14:31; the worker declined to redraft against the external round-2 review
   (harness checked tokens and formula agreement, not a coupling mechanism; positive fixture accepted a fabricated
