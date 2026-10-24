@@ -133,7 +133,11 @@ v5. CLEAN ROOM: no hull number at 1.492 before the credential unit is sealed; th
 Leg 1  Credential at 13/9 (D2, v1 to v4) on W and C; memory and time measured; the lock follows on this record
        if the forms CRED-RATE-MET fires; INSTRUMENT-OPEN otherwise and the commission stops.
 Leg 2  Q2 first: q = 3/2 on W (the full march), then the two C points.
-Leg 3  Q1: q = 1.492 on W, then the two C points.
+Leg 3  Q1: q = 1.492 on W, then the two C points. DECISION GATE (the author's, 2026-10-24): Leg 3 starts only on
+       the author's word after Leg 2's form is rendered and read. If the hull collapses at 3/2 as the cell did,
+       the aliasing reading is dead and the author may close the commission at Leg 2 with Q1 unrun; that is a
+       completed commission (Q2 answered, Q1 WITHHELD-BY-AUTHOR on the record), not a withdrawal. The gate does
+       not change any form or threshold; it decides whether three further weeks are spent.
 Leg 4  Q3 price table; results doc; the author reads before any claim is drafted.
 
 ## FORMS (exhaustive; pre-registered; anything else is NO-CALL)
@@ -152,6 +156,8 @@ Q1 (exactly one, per D6 with the D4 convergence bar):
   QP-FOLD                  the march ends by the fold rule with A2_max < 0.0060 and D < 2.0 on W, the fold point
                            reproduced on C within 20 percent in A2: a reachable maximum that is the state's.
   QP-MIXED                 between thresholds, or D(W) and D(C) differ by more than 20 percent, or CRED-HELD.
+  WITHHELD-BY-AUTHOR       Leg 3 not started at the author's decision after Leg 2 (the gate); Q1 unanswered by
+                           choice, stated as such; no reading of Q1 is implied.
 Q2 (exactly one):
   HULL-ALIAS-CONFIRMED     D(3/2 on the hull) <= 1.25 on W and C: the registered 3/2 collapse was the cell's
                            aliasing; FND-147/151/152/153's 3/2 statements take the CELL-SCOPE rider as Leg B
@@ -192,6 +198,18 @@ is acceptable before the lock, and the lock records the booking and the concurre
 hours); mem_gb from D2 (f), booked at the measured peak plus 20 percent per job and under 48 in total; usd 0 beyond
 drafting and review. Results to analysis/QP_HULL_2_results.md; the price table inside it.
 
+## DISCLOSURES (for the lock checklist's anti-fishing item; the reviewers judge)
+Leg 0 part 1 (benchmarks/foundations/qp_hull_leg0.py, runs A and C, 2026-10-20) computed hull numbers at the FIRST
+RAMP WAYPOINT ONLY (A2 = 0.0018792, NP 12, grids 12 x 8 and 24 x 8): run A at q = 1.492 (om2, gamma, the level-1
+theta, closure, to read the density at which om2 converges), run C at q = 3/2 against the 3/2 cell (the restricted
+state in the cell metrics, to show the size of the degenerate-mode effect at that density). Neither computed a rate,
+a march, a D, nor any point near 0.0048 or 0.0063; the part-1 JSON was not kept on the record (part 2 superseded
+it). These are instrument-convergence quantities at an amplitude 2.5 to 3.4 times below the statistic's window,
+and the executor's reading is that they do not preview Q1 or Q2, whose evidence is D at the two statistic points and
+the fold rule; but FINE-DISP-1 taught that a preview is the result for a deterministic computation, so the
+disclosure is made here in full and the skeptical reviewer decides whether checklist item I is met. Leg 0 part 2
+computed nothing at 1.492 or 3/2.
+
 ## STANDING
 Registered claims untouched until the author grants. The lock is the lab's, after the credential unit; the draft
 and the instrument are the executor's, on the queue branch; the runs are the lab's runner's. Adjacent and OUT:
@@ -210,7 +228,7 @@ instrument:
   - benchmarks/foundations/qsweep_stage1.py
   - benchmarks/foundations/sparsej_instrument.py
   - benchmarks/lab/_kit/labkit.py
-forms: [CRED-RATE-MET, CRED-HELD, INSTRUMENT-OPEN, QP-FLAT, QP-COLLAPSE, QP-FOLD, QP-MIXED, HULL-ALIAS-CONFIRMED, HULL-COLLAPSE-PHYSICAL, HULL-32-MIXED, NO-CALL]
+forms: [CRED-RATE-MET, CRED-HELD, INSTRUMENT-OPEN, QP-FLAT, QP-COLLAPSE, QP-FOLD, QP-MIXED, WITHHELD-BY-AUTHOR, HULL-ALIAS-CONFIRMED, HULL-COLLAPSE-PHYSICAL, HULL-32-MIXED, NO-CALL]
 state: [analysis/qp_hull_2_ckpt.pkl]
 budget: {cpu_hours: 700, usd: 0}
 mem_gb: 48
