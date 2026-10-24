@@ -179,13 +179,18 @@ nothing at 1.492. One unit per invocation, atomic checkpoint, one FORM per quest
 
 ## SCHEDULING (budgets, not bars; measured, from Leg 0)
 Leg 0 measured 32000 s for the level-1 solve plus the first member on W by prolongation and 52000 to 61000 s per
-further rung on W (14 to 17 hours), on the mini, the only machine for this job. The credential's two C members are
-projected at 2 to 3 times a W rung each (measured in D2 f). A march of 10 to 14 full-bar points per ratio on W is
-6 to 10 days per ratio; the two C points per ratio 3 to 4 days. Total of order four weeks of the mini for Legs 1
-to 3, the lab's one-job rule holding the machine for that time; the author decides whether that is acceptable
-before the lock, and the lock records the booking. cpu_hours 700 (wall, single process); mem_gb from D2 (f),
-booked at the measured peak plus 20 percent and under 48; usd 0 beyond drafting and review. Results to
-analysis/QP_HULL_2_results.md; the price table inside it.
+further rung on W (14 to 17 hours), on the mini. The solver is single-threaded (the lab's Phase-0 benchmark:
+threads_per_job 1, extra BLAS threads gave nothing), so the lab runs jobs side by side and the binding constraint
+is MEMORY, which D2 (f) measures: a hull job on W is at least Leg B's cell in grid points (20736 against 15552) and
+Leg B's cell ran at 42.7 GB under the 48 GB cap. CONCURRENCY RULE, decided by the measurement, not in advance: if a
+W job's measured peak is at most one third of the cap, Legs 2 and 3 run concurrently (the control and the question
+are both sealed before either is read, so the "control first" ordering is an ordering of reading, which concurrency
+does not touch); if more, they run in sequence; C runs alone if its peak exceeds half the cap. A march of 10 to 14
+full-bar points per ratio on W is 6 to 10 days per ratio; the two C points per ratio 3 to 4 days; Legs 1 to 3 are
+two to four weeks of wall time depending on the concurrency the measurement allows. The author decides whether that
+is acceptable before the lock, and the lock records the booking and the concurrency. cpu_hours 700 (single-thread
+hours); mem_gb from D2 (f), booked at the measured peak plus 20 percent per job and under 48 in total; usd 0 beyond
+drafting and review. Results to analysis/QP_HULL_2_results.md; the price table inside it.
 
 ## STANDING
 Registered claims untouched until the author grants. The lock is the lab's, after the credential unit; the draft
