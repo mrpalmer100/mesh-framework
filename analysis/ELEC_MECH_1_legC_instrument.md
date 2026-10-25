@@ -47,4 +47,23 @@ J = 2 pi kappa / c is quantized by the winding, which is R3 (HBAR-003) answered 
 for this class alone. Whether (i) is a kill depends on a registered reason for the twist to travel rather than
 ride (none registered; the Goldstone equation admits both), which is a Q2 gap to name.
 
-## 5. kappa_tw = 1 scan (appended when it lands)
+## 5. The scans, and the shape-independence of g = 2 in the travelling-twist class
+
+kappa_tw = 0.1, J = pi (the fold regime; analysis/elec_rope_wave_scan_k01.log): g = 0.76, 0.79, 0.95, 1.05 at beta_p =
+0.25, 0.5, 0.75, 1 (flat seed; E 6.71, 6.76, 6.88, 7.00). kappa_tw = 1, J = pi, with the angular-momentum vector
+pinned to the axis (analysis/elec_rope_wave_scan_k1.log; the first run let a loop meet J by tilting 30 degrees, a
+bookkeeping hole closed the same day): beta_p = 0.5 a rotating intermediate state, g = 1.43 to 1.47 (E 10.48, the
+flux 35 to 37 percent of J); beta_p = 0.75 and 1 STATIC planar loops, g = 2.001 to 2.004 (E 11.12 and 12.58),
+E_t = E_w to 0.1 percent, from both seeds, with DIFFERENT shapes at the same energy (R_end 0.86 and 1.10; 0.77 and
+1.47): to carry a J below the ring's natural 2 pi kappa the loop adds length without area (J_flux proportional to
+A / L^2), and the energy does not care which way.
+
+The reason, which the record states as the class's theorem rather than the ring's property: for ANY static closed
+loop with its twist travelling at beta_p c, mu = q beta_p A / L (the current q beta_p / L around the enclosed area)
+and J = 2 beta_p A E_w / L (the flux eps_w beta_p around the same area), so g = (mu / J)(2 E / q) = E / E_w; and the
+scale virial (E_t proportional to L, E_w proportional to 1 / L, the two equal at the minimum over scale) gives
+E = 2 E_w for every shape. g = 2 is shape-independent in this class and depends on no parameter; what the shape
+and kappa_tw decide is the energy and whether the state is static or must also rotate (the intermediate regime
+at beta_p = 0.5, where the loop carries part of J by rotation and g sits between 1 and 2).
+
+Records: analysis/elec_rope_wave_naturalJ.json, analysis/elec_rope_rotator_R1_k05.json, analysis/elec_rope_wave_scan_k1.json.
