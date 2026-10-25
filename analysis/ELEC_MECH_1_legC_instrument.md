@@ -67,3 +67,11 @@ and kappa_tw decide is the energy and whether the state is static or must also r
 at beta_p = 0.5, where the loop carries part of J by rotation and g sits between 1 and 2).
 
 Records: analysis/elec_rope_wave_naturalJ.json, analysis/elec_rope_rotator_R1_k05.json, analysis/elec_rope_wave_scan_k1.json.
+
+## 6. The scale wall is the registry's hbar wall (added 2026-10-25)
+M7b's angular momentum J = 2 pi kappa / c with the registered torsional stiffness of order T w^2 is HBAR-003's strand
+action quantum S_1 = pi T w^2 / 2 c: the same 3549-fold short of hbar / 2 that the HBAR series mapped, and the
+tension ladder (A7) on top. The Q3 table for M7b should cite HBAR-003 and FND-183 (ACTION-BRIDGE) for the kappa
+half of kappa / T = lambda-bar_C^2 rather than restate it: the electron class that gets g = 2 by mechanics meets
+the two walls the registry has already named, in one object.
+
