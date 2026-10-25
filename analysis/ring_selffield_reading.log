@@ -1,0 +1,23 @@
+SOURCE-FORM CREDENTIAL (beta = 0.5)
+  nc 200 b 0.004: U_E 1.249147 U_M 0.232711 L_z 0.930847  c_E 0.2477  c_M -1.7522
+  nc 200 b 0.008: U_E 1.138829 U_M 0.205134 L_z 0.820541  c_E 0.2477  c_M -1.7522
+  nc 200 b 0.016: U_E 1.028520 U_M 0.177565 L_z 0.710260  c_E 0.2478  c_M -1.7519
+  nc 200: slopes U_E -0.15915 (exp -0.15915) U_M -0.03978 (exp -0.03979); L_z / (q Phi / 2 pi) consistent by construction
+  nc 400 b 0.004: U_E 1.249334 U_M 0.232757 L_z 0.931020  c_E 0.2489  c_M -1.7511
+  nc 400 b 0.008: U_E 1.139027 U_M 0.205181 L_z 0.820711  c_E 0.2490  c_M -1.7510
+  nc 400 b 0.016: U_E 1.028736 U_M 0.177615 L_z 0.710427  c_E 0.2491  c_M -1.7507
+  nc 400: slopes U_E -0.15913 (exp -0.15915) U_M -0.03978 (exp -0.03979); L_z / (q Phi / 2 pi) consistent by construction
+  nc 800 b 0.004: U_E 1.249420 U_M 0.232778 L_z 0.931111  c_E 0.2494  c_M -1.7505
+  nc 800 b 0.008: U_E 1.139109 U_M 0.205203 L_z 0.820803  c_E 0.2495  c_M -1.7505
+  nc 800 b 0.016: U_E 1.028812 U_M 0.177635 L_z 0.710519  c_E 0.2496  c_M -1.7501
+  nc 800: slopes U_E -0.15914 (exp -0.15915) U_M -0.03978 (exp -0.03979); L_z / (q Phi / 2 pi) consistent by construction
+ANOMALY (the executor's reading; beta = 1, R = 1, e^2 = alpha hbar c, E_w = hbar c / 2R)
+  nc 200 b 0.001: c_E 0.2477 c_M -1.7523  bracket 0.31831 (q^2/R)  g - 2 = 3.9999 alpha / pi
+  nc 200 b 0.01: c_E 0.2477 c_M -1.7521  bracket 0.31828 (q^2/R)  g - 2 = 3.9996 alpha / pi
+  nc 200 b 0.1: c_E 0.2514 c_M -1.7427  bracket 0.31798 (q^2/R)  g - 2 = 3.9958 alpha / pi
+  nc 400 b 0.001: c_E 0.2489 c_M -1.7511  bracket 0.31831 (q^2/R)  g - 2 = 4.0000 alpha / pi
+  nc 400 b 0.01: c_E 0.2490 c_M -1.7509  bracket 0.31833 (q^2/R)  g - 2 = 4.0003 alpha / pi
+  nc 400 b 0.1: c_E 0.2536 c_M -1.7411  bracket 0.31833 (q^2/R)  g - 2 = 4.0002 alpha / pi
+  nc 800 b 0.001: c_E 0.2494 c_M -1.7506  bracket 0.31831 (q^2/R)  g - 2 = 4.0000 alpha / pi
+  nc 800 b 0.01: c_E 0.2495 c_M -1.7504  bracket 0.31831 (q^2/R)  g - 2 = 4.0001 alpha / pi
+  nc 800 b 0.1: c_E 0.2538 c_M -1.7407  bracket 0.31821 (q^2/R)  g - 2 = 3.9988 alpha / pi
