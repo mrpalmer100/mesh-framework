@@ -65,6 +65,11 @@ def pieces(z, Omega, beta, kappa_tw, kappa_C, M, B):
     J_flux = eps_w * beta * float(np.sum(tpx * ds))
     P_flux = eps_w * beta * np.sum(g['t'] * ds[:, None], axis=0)
     J = J_mat + J_flux; Pm = P_mat + P_flux
+    # the full angular-momentum VECTOR: a rest-frame state has J along z; without this a loop whose flux carries more
+    # than J_t met the constraint by tilting out of the plane (kappa_tw 1, beta 0.75: a 30 degree tilt, 2026-10-25)
+    Jvec_mat = dens * np.sum((w[..., None] * np.cross(g['smid'], g['svp'])), axis=(0, 1))
+    Jvec_flux = eps_w * beta * np.sum(np.cross(g['mid'], g['t']) * ds[:, None], axis=0)
+    Jvec = Jvec_mat + Jvec_flux
     # charge moments: uniform q / L per length; current = lambda (v_mat + beta t)
     q = ds / L
     mid = g['mid']
@@ -78,7 +83,7 @@ def pieces(z, Omega, beta, kappa_tw, kappa_C, M, B):
     E = E_t + E_w + float(E_C)
     r2q = float(np.sum(q * (mid[:, 0] ** 2 + mid[:, 1] ** 2)))
     rend = float(np.sqrt((cs[0][:, 0] ** 2 + cs[0][:, 1] ** 2).max()))
-    return dict(E=E, E_t=E_t, E_w=E_w, E_C=float(E_C), J=J, J_mat=J_mat, J_flux=J_flux, Pm=Pm, mu=mu, over=over, L=L,
+    return dict(E=E, E_t=E_t, E_w=E_w, E_C=float(E_C), J=J, J_mat=J_mat, J_flux=J_flux, Pm=Pm, Jvec=Jvec, mu=mu, over=over, L=L,
                 r2q=r2q, R_end=rend, edge=float(math.sqrt(g['sv2max'])), g=(mu / J) * 2 * E if J else float('nan'))
 
 
@@ -101,7 +106,8 @@ def omega_for_J(z, J_t, beta, kappa_tw, kappa_C, M, B):
 def objective(z, J_t, beta, kappa_tw, kappa_C, M, B, w_J=300.0):
     Om, Jr = omega_for_J(z, J_t, beta, kappa_tw, kappa_C, M, B)
     p = pieces(z, Om, beta, kappa_tw, kappa_C, M, B)
-    pen = 1e3 * p['over'] + er.W_MOM * float(np.sum(p['Pm'][:2] ** 2)) / p['E'] ** 2 + w_J * (Jr / J_t - 1) ** 2
+    pen = (1e3 * p['over'] + er.W_MOM * float(np.sum(p['Pm'][:2] ** 2)) / p['E'] ** 2 + w_J * (Jr / J_t - 1) ** 2
+           + er.W_MOM * float(np.sum(p['Jvec'][:2] ** 2)) / J_t ** 2)                    # J along the axis
     return p['E'] + pen
 
 
@@ -118,11 +124,12 @@ def solve(J_t, beta, kappa_tw, kappa_C, M=48, seed='ring', R0=1.0, maxiter=3000,
     o = dict(beta=beta, kappa_tw=kappa_tw, kappa_C=kappa_C, J_target=J_t, Omega=Om, seed=seed, nit=res.nit, M=M,
              E=p['E'], E_tension=p['E_t'], E_wave=p['E_w'], E_C=p['E_C'], J=p['J'], J_flux_fraction=p['J_flux'] / p['J'] if p['J'] else float('nan'),
              R_end=p['R_end'], two_J_over_E=2 * p['J'] / p['E'], g=p['g'], x2_charge=p['r2q'] / p['R_end'] ** 2, edge=p['edge'],
-             cm_speed=float(np.linalg.norm(p['Pm'][:2]) / p['E']), length=p['L'], wave_fraction=p['E_w'] / p['E'], z=z.tolist())
+             cm_speed=float(np.linalg.norm(p['Pm'][:2]) / p['E']), J_tilt=float(np.linalg.norm(p['Jvec'][:2]) / J_t),
+             length=p['L'], wave_fraction=p['E_w'] / p['E'], z=z.tolist())
     if verbose:
         print(f"  beta {beta} kappa_tw {kappa_tw} J {J_t:.4f} [{seed}]: E {o['E']:.5f} (tension {o['E_tension']:.4f} wave {o['E_wave']:.4f} C {o['E_C']:.4f}) "
               f"Omega {Om:.4f} R_end {o['R_end']:.4f} edge {o['edge']:.4f} J_flux/J {o['J_flux_fraction']:.3f} cm {o['cm_speed']:.1e}  g {o['g']:.4f}  "
-              f"wave/E {o['wave_fraction']:.3f} 2J/E {o['two_J_over_E']:.4f} nit {res.nit}", flush=True)
+              f"wave/E {o['wave_fraction']:.3f} 2J/E {o['two_J_over_E']:.4f} J_tilt {o['J_tilt']:.1e} nit {res.nit}", flush=True)
     return o
 
 
