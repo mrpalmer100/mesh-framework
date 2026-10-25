@@ -28,3 +28,5 @@ read this directory.
   under checklist items B and I (both reviewers, round 1); the preview stands as an exploratory record
   (analysis/FINE_DISP_1_preview.md). A blind successor would be the same coefficient on the registered fibre
   operator, a different instrument, chartered only after the kit is in use.
+- ELEC-MECH-1: withdrawn 2026-10-25 after one lock round (both reviewers: every class outcome was a closed form, on the record, or scale-free from a computed cell, so no verdict was open before the lock; the worker abandoned). Right call. Its content is the executor's reading, analysis/ELEC_MECH_1_reading.md; successor ELEC-KAPPA-1 asks the one number nobody knows.
+
