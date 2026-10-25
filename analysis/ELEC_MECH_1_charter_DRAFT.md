@@ -38,7 +38,9 @@ mechanism can.
       left open as a fence test), stated as a theorem-grade argument or as a list of named gaps?
   Q3  THE SURVIVOR'S NEXT WALL (a table, not a verdict): for any class that reaches 2, the size and mass it would
       imply at J = hbar / 2 and m = m_e, beside ELEC-036's form-factor bar and W3's tension ladder, so the author
-      sees the next wall before chartering the candidate.
+      sees the next wall before chartering the candidate. For M7b the table is already computable in closed form
+      (kappa = hbar c / 4 pi, T = m_e^2 c^3 / 4 pi hbar, R = lambda-bar_C, against the registered kappa / T) and the
+      commission renders it with the registered rope constants in it, not the executor's estimate.
 
 ## THE CLASSES (fixed here; Q2 tests the list, no class is added after the lock)
   M1  Rigid rotator, closed rope, charge = the twist density co-moving with the rope (E2b as built): the Routhian
@@ -51,16 +53,24 @@ mechanism can.
       ENDS, which are not registered objects (the medium's strands are closed or anchored, FND-MATTER-004 /
       GRV-020). Scored as REACHES-2-AT-A-PRICE with the price named; whether an end can be a registered object is
       a grant question for the author, out of scope here.
-  M5  A lightlike circulating pulse carrying both the charge and the energy on a static closed rope (the
-      zitterbewegung picture): charge and energy co-located, g = 1 by the formula. Closed form.
+  M5  A lightlike circulating pulse carrying the charge and ALL the energy (the zitterbewegung picture with no
+      rope tension counted in m): charge and energy co-located, g = 1 by the formula. Closed form. (The same pulse
+      WITH the rope's tension counted is M7b, a different class with a different answer.)
   M6  The texture soliton (ELEC-074's hollow object) in rigid rotation with the charge at its boundary or
       profile-weighted: the same computation as ELEC-102 on ELEC-074's profile p(x); already dead as the electron
       by ELEC-075 but scored for completeness of the screen.
-  M7  NON-RIGID: a twist pattern circulating along a rotating closed rope faster than the rope's material
-      (omega_q > omega_E), the pattern's own momentum density (energy flux over c^2, EM-019) counted in J. The one
-      rigid-body loophole the formula leaves open, and the only class with a registered mechanism for it (the
-      screw, EM-014: rotating the helix transports linking). COMPUTED in Leg C on the instrument of section
-      INSTRUMENT.
+  M7  NON-RIGID: the twist pattern moving along the rope relative to its material, the pattern's own momentum
+      density (energy flux over c^2, EM-019) counted in J, the transported winding (EM-008 / EM-014) as the
+      current. Two sub-classes, decided by the pattern speed beta_p c relative to the material:
+      M7a beta_p = 0, the co-moving twist (E2b): g = 0.91 to 0.97. ON THE RECORD.
+      M7b beta_p = 1, the torsion wave at light speed (EM-RECON-012) on the closed rope: the executor's closed
+          form and instrument (analysis/ELEC_MECH_1_legC_instrument.md) give a static ring with R = sqrt(kappa / T),
+          E_tension = E_wave by a virial, J = 2 pi kappa / c quantized by the winding, and g = 2 EXACTLY, nothing
+          tuned (2.0034 by free minimization at M = 48). Its prices, to be written on the form's face: 9 percent
+          above M7a in energy at equal kappa and J (stability), and kappa / T = lambda-bar_C^2 required against the
+          registered rope's standoff-squared (nine orders, A7). Leg C scans beta_p between 0 and 1 and both seeds
+          at the ring's own J and at J = pi; the forms are decided by the band and the price rule, not by the
+          executor's numbers, which are the credential's.
   M8  INTRINSIC: spin carried by the internal azimuth itself (the registered spin machinery, ELEC-100: QB-025's
       half-angle law, QB-031's transport law, GRV-020's Goldstone), i.e. the strand pair rotating about the rope's
       own centreline at rate phi-dot with moment of inertia I_pair and the charge on the strands at the standoff
@@ -106,15 +116,19 @@ D3. THE BAND: a class REACHES 2 if |g_M - 2| <= 1e-2 somewhere in its registered
 D4. COMPLETENESS (Q2): the argument is written before Leg C runs and sealed with the credential; its named
     gaps are forms, not footnotes.
 
-## INSTRUMENT (Leg C; built and credentialed by the executor BEFORE the lock; the lock records the credential)
-benchmarks/foundations/elec_rope_rotator.py extended with (i) a travelling twist Phi(s, t) = Phi_0(s - v_p t) on
-the rotating rope, v_p a registered pattern speed (the screw's, up to c), the twist energy and its momentum density
-carried in E, J and P, the time average over one pattern period for the moments; (ii) the pair's internal rotation
-about the centreline with I_pair from the registered standoff and strand mass per length, J_int and mu_int added.
-Credential (the executor's record, delivered with the draft): the fold's rows reproduced (M2 table) to 1 percent;
-M5 reproduced (a lightlike pulse on a static ring gives 1 to 1e-3); the rigid limit of (i) at v_p = 0 reproduces
-E2b's g at each kappa_tw to 1e-3; the rigid-pair closed form of (ii) reproduced to 1e-6. Without this record the
-charter does not lock (INSTRUMENT-OPEN at Leg C; Legs A and B still render).
+## INSTRUMENT (Leg C; built and credentialed by the executor BEFORE the lock, 2026-10-25; the lock records it)
+benchmarks/foundations/elec_rope_wave.py: the closed rope in rigid rotation (Omega eliminated by J, rest frame
+enforced) with its unit of twist travelling at beta_p c relative to the material; time-averaged charge (uniform in
+length for beta_p > 0, verified) and current lambda (v_perp + beta_p t); wave energy kappa Phi'^2 (1 + beta_p^2) / 2
+carried with the material's gamma; momentum = the material part plus the wave flux eps_w beta_p t; Coulomb at
+kappa_C = alpha pi. Credential ON THE RECORD (analysis/ELEC_MECH_1_legC_instrument.md section 2): the ring's closed
+forms through the production functions, the virial, g = 2 at R*, g = 1 with the tension excluded, time-average
+independence, and a free minimization landing on R* with g = 1.998. M8 (intrinsic azimuthal spin of the strand
+pair) is a closed form in the rigid-pair limit, a correction of order (d0 / R)^2 to M7's moments, computed in the
+driver from the registered standoff and strand mass per length; its non-rigid form is NOT instrumented and is a
+named gap if the closed form does not settle it. Simplifications of the instrument, priced by the reviewers: the
+wave flux is added without the transverse boost's correction (zero for the static ring); the wave energy's
+kinetic-equals-potential split is the Goldstone wave at its own speed.
 
 ## HARNESS (binding)
 Driver and verdict on labkit (Driver / Verdict / Halt); units: credential (the instrument's four checks, sealed),
@@ -168,6 +182,7 @@ target: "Electron sector (STATE_OF_THE_PROGRAMME: contributes nothing at any pre
 driver: benchmarks/lab/elec_mech_1/driver.py
 verdict_script: benchmarks/lab/elec_mech_1/verdict.py
 instrument:
+  - benchmarks/foundations/elec_rope_wave.py
   - benchmarks/foundations/elec_rope_rotator.py
   - benchmarks/foundations/elec_rotator.py
   - benchmarks/foundations/electron_ledger_numbers.py
