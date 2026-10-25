@@ -29,3 +29,5 @@ Branched from main at ed27c9e on 2026-10-18.
   GRV-2PI-DERIVE-1, GRV-EFE-DERIVE-1, GRV-NU-DERIVE-1, GRV-EFE-1, QP-HULL-1 withdrawn by the lab, successors to
   follow under new names (a withdrawn name stays taken).
 - 2026-10-24: QP-HULL-2 drafted (analysis/QP_HULL_2_charter_DRAFT.md) on Leg 0 part 2 (analysis/QP_HULL_1_leg0_results.md): the same Q1/Q2/Q3 as QP-HULL-1 on the credentialed spectral hull, working grid 48x12x36 and convergence grid 48x24x36, the credential a measured convergence rate at 13/9 (D2), booking measured before the lock (about four weeks of the mini). The only live draft; the Director plans from it once agents resume.
+- 2026-10-25: ELEC-MECH-1 drafted and made live (analysis/ELEC_MECH_1_charter_DRAFT.md): the second-moment screen over eight electron mechanism classes; Leg C instrument elec_rope_wave.py credentialed first (analysis/ELEC_MECH_1_legC_instrument.md). The executor's closed form: a closed rope carrying its twist as a torsion wave at c has g = 2 exactly, at a stability price (9 percent above the co-moving fold at equal kappa and J) and the kappa / T = lambda-bar_C^2 wall.
+
