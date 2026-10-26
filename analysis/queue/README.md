@@ -40,3 +40,9 @@ Branched from main at ed27c9e on 2026-10-18.
   nothing until a question has an unknown outcome. RING-WAVE-STABILITY Leg 0: benchmarks/foundations/ring_wave_stability.py,
   the constrained-Hessian and stationarity-ceiling instrument credentialed on the Michell threshold (sqrt 3 B / C), the
   exact polygon writhe, and the co-moving fold as the reference minimum; the ring-wave cell is never built by it.
+- 2026-10-26: GRV-2PI-DERIVE-2 withdrawn by the lab (three rounds; a response harness cannot distinguish a derived
+  coefficient from a typed one); GRV-NU-DERIVE-2 and GRV-EFE-DERIVE-2 declined by the author on the same ground.
+  Derivations move to the executor as readings with the lab's discipline kept by hand (premises and forms sealed
+  before the attempt). First: analysis/GRV_2PI_derivation_reading.md, NOT-DERIVED at a named step: the registered
+  statics (GRV-005) are linear, and a linear medium of any extent gives Newton with M-independent corrections at
+  r of order L, never an acceleration scale; kappa belongs to a nonlinear response law the registry does not hold.
