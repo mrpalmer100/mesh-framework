@@ -53,3 +53,10 @@ Branched from main at ed27c9e on 2026-10-18.
   energy order 1.9). Three charter questions recorded: which action the registry holds (induced-metric scalar versus
   five-dimensional Nambu-Goto, O(1) apart at the ring-wave), the one-parameter family of static rings (neutral
   direction), and the polygon's O(M^-2) equilibrium offset as the stationarity ceiling.
+- 2026-10-26 (night): RING-WAVE-STABILITY charter drafted (analysis/RING_WAVE_STABILITY_charter_DRAFT.md) on both Leg 0
+  instruments: Q0 the registry's twist action by quotation (induced-metric scalar versus five-dimensional Nambu-Goto),
+  Q1 the twist-speed channel (W1, W2, R0 probes, 40 periods, two resolutions, rho and sigma thresholds fixed), Q1b the
+  neutral shape manifold (Leg C's shape theorem, now seen dynamically in K5: a deformed static loop with travelling twist
+  does not move at first order), Q2 the end state. Dynamics instrument gained the gauge pin (sliding-mode runaway on
+  perturbed data) with J as a per-run bar, and K5. One pre-pin contact with the beta = 1 state (0.3 period, aborted by the
+  runaway) disclosed in the charter. The author's word: lock it.

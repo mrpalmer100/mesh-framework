@@ -167,3 +167,26 @@ the run. Three values of kappa_tw as the Director's estimate says, though in the
 question is scale-free; the real variable to scan is the perturbation's content (shape versus twist speed).
 
 Section 5(a) is superseded by this section; 5(b) to (d) stand.
+
+## 8. Part 2 addenda (2026-10-26, later): the gauge pin and the shape theorem seen dynamically
+(a) THE SLIDING MODE. The arc-length gauge leaves one collective sliding of all nodes along the loop. In the
+continuum it is pure gauge; the discrete Lagrangian gives it a tiny inertia through the twist's transport term,
+and on perturbed data it ran away: on the beta = 0.5 family member with an n = 2 shape probe (M = 16) the node
+speeds reached 16 c by t = 1 and Newton failed. It is now pinned by one holonomic constraint on node 0
+((x_0 - centroid) . y = const), on by default. The pin exerts a torque at the discretization level: J drifts
+1e-3 on fast generic data at M = 32 (K4, both pinned and unpinned now reported) and 1e-8 on the slow K5 probe.
+J is therefore a bar on every run rather than an identity, and the unpinned K4 remains the demonstration that
+the discrete symmetries are exact. The cleaner cure, the conformal gauge of the induced metric (where the twist
+scalar decouples into a free wave and the sliding is fixed by the gauge condition itself), is noted for a later
+version; it is not needed for a lock whose runs are slow and whose J bar is 1e-7.
+(b) THE SHAPE THEOREM, DYNAMICALLY (K5). Leg C's theorem (g = 2 for ANY static shape with travelling twist)
+has a dynamical face: the local balance kappa Phi-dot Phi' = T between the wave's momentum flux and the tension
+holds at every point of any shape of the right length, so EVERY such loop is a stationary solution and shape
+perturbations at fixed length are neutral at first order. On the beta = 0.5 member a radial n = 3 deformation of
+epsilon = 1e-2 moved 1.4 epsilon^2 R over two periods (first order would be epsilon R, 70 times more). The
+charter (analysis/RING_WAVE_STABILITY_charter_DRAFT.md) is written around this: the live question is the
+twist-speed channel (W probes) and the length mode (R0); the shape probes test the second-order fate of a flat
+valley, scored as NEUTRAL-HOLDS / DRIFTS / WOBBLES.
+(c) ONE EVIDENCE-STATE CONTACT, disclosed: before the pin existed, the n = 2 shape probe at epsilon = 1e-2 was
+started on the beta = 1 state at M = 16 and aborted by the sliding runaway at t = 1.28 (0.3 of a period). Nothing
+about stability was read or readable from it; it is in the charter's disclosures for the reviewers to judge.
