@@ -1,0 +1,16 @@
+READING A: the twist route, J_1 = 2 pi kappa_pair / c against hbar / 2
+  M-point (card): T0 434.0 J/m, a 6.000e-17 m: S1 = pi T0 a^2 / 2c = 8.186e-39 J s, hbar / S1 = 12882
+    d0 = (0.40 to 0.46) x 0.6272 a = 1.51e-17 to 1.73e-17 m; kappa_pair = 4.92e-32 to 6.50e-32 J m (2C adds 1.7e-04 to 2.4e-04 of it); kappa_pair / (T0 a^2) = 0.031 to 0.042
+    J_1 = 1.03e-39 to 1.36e-39 J s;  F = (hbar / 2) / J_1 = 3.87e+04 to 5.12e+04
+  HBAR-003 point: T0 1700.0 J/m, a 5.780e-17 m: S1 = pi T0 a^2 / 2c = 2.976e-38 J s, hbar / S1 = 3544
+    d0 = (0.40 to 0.46) x 0.6272 a = 1.45e-17 to 1.67e-17 m; kappa_pair = 1.79e-31 to 2.36e-31 J m (2C adds 4.7e-05 to 6.7e-05 of it); kappa_pair / (T0 a^2) = 0.031 to 0.042
+    J_1 = 3.75e-39 to 4.95e-39 J s;  F = (hbar / 2) / J_1 = 1.06e+04 to 1.41e+04
+  ACTION-BRIDGE F-LOR rows for comparison: 2.2e3 to 9.0e3 (GRV-092 point); 1.4e4 to 4.2e4 (the three scale sets).
+READING B: the patch as the screening length
+  patch needs xi / a = 74.6 i.e. m^2 = 1.80e-04 per site (lattice units)
+  GRV-028: zero-point correction -0.019 per site; bare cost O(1) with a 50x margin (bare about 1; the margin edge is bare = 0.95)
+    bare 1.0000: net m^2 0.9810, xi / a = 1.01, action ratio (xi / L_hbar)^2 = 1.83e-04
+    bare 0.9500: net m^2 0.9310, xi / a = 1.04, action ratio (xi / L_hbar)^2 = 1.93e-04
+    bare 0.0192: net m^2 0.0002, xi / a = 74.60, action ratio (xi / L_hbar)^2 = 1.00e+00
+  The patch requires the bare cost tuned to within 1 percent of the zero-point correction (bare = 0.0192), against a registered O(1);
+  at the registered value xi / a is about 1, short of 74.6 by 75 in length and 5600 in action.
