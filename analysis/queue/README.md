@@ -60,3 +60,10 @@ Branched from main at ed27c9e on 2026-10-18.
   does not move at first order), Q2 the end state. Dynamics instrument gained the gauge pin (sliding-mode runaway on
   perturbed data) with J as a per-run bar, and K5. One pre-pin contact with the beta = 1 state (0.3 period, aborted by the
   runaway) disclosed in the charter. The author's word: lock it.
+- 2026-10-26 (hbar consult): the author put the hbar question to outside models through the new `lab consult` (mesh-lab)
+  and to the executor; analysis/consults/HBAR_consult_2026-10-26.md holds Terra's memo verbatim, the executor's ranked
+  ideas, and two readings run as closed forms (benchmarks/foundations/hbar_consult_readings.py): the rope's twist route
+  is the hbar wall restated at F = 4e4 to 5e4 at the M-point (the executor's chat estimate "nine orders" corrected: that is
+  kappa / T, with the tension's shortfall multiplied in); the screening-length patch is killed (xi / a = 1 against 74.6).
+  Also recorded: at the M-point card the strand quantum is 12,882-fold short of hbar; the registered 3549 is HBAR-003's
+  pre-M-point value. One open item with a registered falsifier: the substructure count n_sub against the dispersion bound.
