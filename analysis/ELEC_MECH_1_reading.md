@@ -28,7 +28,13 @@ ratio of the charge's and the energy's angular-velocity-weighted second moments 
 Completeness: a direction of escape the list does not cover is the spinor route (g = 2 as a non-classical moment
 ratio), for which the registry has no mechanics; named, open.
 
-## What follows
-The one unknown number in the reading is kappa_pair for the registered rope, which sets J_1 = 2 pi kappa / c for
-M7b. ELEC-KAPPA-1 (analysis/ELEC_KAPPA_1_charter_DRAFT.md) derives it from the parameter card and confronts J_1
-with hbar / 2 blind. Nothing else here needs a lock.
+## What follows (revised 2026-10-26)
+ELEC-KAPPA-1 was withdrawn by the lab: J_1 = 2 pi kappa / c is the RING's angular momentum, not the class's (a
+non-circular member carries less at the same winding; analysis/ELEC_MECH_1_legC_instrument.md section 7a), and
+its confrontation with hbar / 2 is HBAR-003's wall restated (Leg C section 6). The M7b row's "J = 2 pi kappa / c"
+above is to be read with that restriction, and its "credit: J quantized by the winding (R3)" is the ring's
+property only. The class's open question with an unknown answer is its STABILITY (the Director's
+RING-WAVE-STABILITY): whether the travelling-twist state is a protected stationary point or decays to the
+co-moving fold 9 percent below it. The instrument for that is credentialed on known answers in
+benchmarks/foundations/ring_wave_stability.py (analysis/RING_WAVE_STABILITY_leg0.md) without touching the
+ring-wave cell.

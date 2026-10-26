@@ -30,3 +30,22 @@ read this directory.
   operator, a different instrument, chartered only after the kit is in use.
 - ELEC-MECH-1: withdrawn 2026-10-25 after one lock round (both reviewers: every class outcome was a closed form, on the record, or scale-free from a computed cell, so no verdict was open before the lock; the worker abandoned). Right call. Its content is the executor's reading, analysis/ELEC_MECH_1_reading.md; successor ELEC-KAPPA-1 asks the one number nobody knows.
 
+- ELEC-KAPPA-1: withdrawn by the lab 2026-10-25 16:15 (worker abandonment, both reviewers). Reasons kept: (1) the
+  executor's Leg C section 6 estimate (J_1 at the registered kappa is HBAR-003's S_1) is a preview of the
+  confrontation, so the outcome was known to within the band before the lock; (2) J_1 = 2 pi kappa / c is the
+  RING's angular momentum, not the class's (a non-circular member carries (2 pi kappa / c)(4 pi A / L^2), less), so
+  the confrontation scored one member and called it the class; (3) reading (ii) (the strands' rod torsion, 2 C)
+  does not establish that the pair's twist propagates at c; (4) the pair-tension convention (T0 per strand or per
+  pair) was not fixed. Record corrected in analysis/ELEC_MECH_1_legC_instrument.md section 7. Not redrafted: the
+  number it wanted is on the record as HBAR-003's wall; nothing with an unknown outcome remains in it.
+- RING-WAVE-ANOMALY-R: withdrawn by the lab 2026-10-25 18:30 (worker abandonment on the merits; external reviewer's
+  objections 1 and 4). Reasons kept: (1) North Star: a replication of a number already on record moves no target,
+  retires no input and discriminates nothing, so it is interior work the section 5 budget does not allow in
+  sequence; (2) the replication re-derives its own credential (the coefficient A = 2(c_E - c_M) is the derivation
+  being checked, so D2's bars and D3's threshold were set after inspection of the result); (3) the dictionary
+  question Q2 is already answerable: the worker read EM-015 and EM-018 as NEUTRAL (the registry is SILENT on
+  whether the twist energy contains the field energy), so the form would have been ANOMALY-UNDECIDED by
+  construction; (4) the executor's reading remains the record of 4 alpha / pi, conditional on additive field
+  energy. Not redrafted. The next electron commission with an unknown outcome is RING-WAVE-STABILITY (the
+  Director's memo 2026-10-25 #2), proposed by the Director under approval mode; its Leg 0 instrument is
+  benchmarks/foundations/ring_wave_stability.py, credentialed on known answers only.

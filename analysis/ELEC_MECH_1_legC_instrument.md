@@ -75,3 +75,43 @@ tension ladder (A7) on top. The Q3 table for M7b should cite HBAR-003 and FND-18
 half of kappa / T = lambda-bar_C^2 rather than restate it: the electron class that gets g = 2 by mechanics meets
 the two walls the registry has already named, in one object.
 
+
+## 7. Corrections of record (2026-10-26, after the lab's reviews of ELEC-KAPPA-1 and RING-WAVE-ANOMALY-R)
+Three statements above are narrower than they read, and the lab's reviewers caught each one. They are corrected
+here rather than edited in place, so the record shows what was claimed and when it was narrowed.
+
+(a) J = 2 pi kappa / c is a RING result, not a class result. Sections 1, 4 and 6 write the angular momentum of the
+travelling-twist class as 2 pi kappa / c "independent of R". That holds for the circle, where the wave flux
+kappa Phi' Phi-dot / c with Phi' = 2 pi / L and the moment arm R give 2 pi kappa (beta / c)(2 A / L) = 2 pi kappa / c
+at A = pi R^2, L = 2 pi R. For a general static loop at beta_p = 1 the flux angular momentum is
+J_flux = eps_w (2 A) / c with eps_w = kappa (2 pi / L)^2, that is J = (2 pi kappa / c) (4 pi A / L^2), and the
+isoperimetric factor 4 pi A / L^2 is at most 1, equal to 1 only for the circle (section 5 states the proportionality
+to A / L^2, and the kappa_tw = 1 rungs at beta_p = 0.75 and 1 carried J = pi below the ring's 2 pi kappa by adding
+length without area). The ring is the member that carries the MOST angular momentum per unit winding. So the class quantizes J by the winding ONLY through the ring; a non-circular member
+carries less at the same winding. The statement in section 4 ("J = 2 pi kappa / c is quantized by the winding,
+which is R3 answered by topology times a rope constant") is therefore the ring's property, and the credit it
+claims for the class is withdrawn to that extent. ELEC-KAPPA-1's confrontation of J_1 = 2 pi kappa / c with
+hbar / 2 was built on the class reading and would have scored the ring alone (the skeptical reviewer's point).
+
+(b) Reading (ii) of ELEC-KAPPA-1 D1 (the strands' own torsion "following the pair's twist", 2 C) does not by itself
+establish that the pair's twist propagates at c. EM-RECON-012 registers torsion waves at c on a rope with the
+registered rigidity; what travels at c in the ring-wave is the Goldstone phase of GRV-020, whose speed is set by
+kappa and the rope's twist inertia together, and the instrument here fixed beta_p by hand (section 5's beta_p is
+a parameter, not a solved speed). Nothing in this record derives beta_p = 1 for the registered rope. The class
+reaches g = 2 at beta_p = 1; whether the registered rope's twist travels at that speed is open and is a question
+about the twist inertia, which the card does not carry.
+
+(c) The field / twist split is SILENT in the registry. The RING-WAVE-ANOMALY reading (analysis/RING_WAVE_ANOMALY_
+reading.md) treated the magnetic self-energy U_M as additive to the twist energy and obtained g - 2 = 4 alpha / pi.
+The lab's worker read EM-015 and EM-018 for RING-WAVE-ANOMALY-R and found them NEUTRAL on whether the twist
+energy already contains the field energy; the dictionary claims (EM-017 to EM-022) describe the twist as the
+mechanical form of the field without stating the energy accounting. So 4 alpha / pi is the additive reading's
+number, conditional, and the registry owes the split before any O(alpha) statement about this class is more
+than that. The reading's face already says "conditional"; this entry records that the condition is unmet by
+citation, not merely unexamined.
+
+(d) What stands unchanged: g = E / E_wave = 2 by the scale virial for ANY static closed loop whose twist travels
+at beta_p c with the charge riding the transverse material motion (section 5's theorem; two seeds, different
+shapes, 2.001 to 2.004); the 9 percent energy price over the co-moving fold at equal kappa and J; the scale wall
+kappa / T = lambda-bar_C^2 (section 6's identification with HBAR-003 and FND-183 is about the ring's kappa and
+is unaffected by (a) in that the ring is the member that carries the most J per winding).
