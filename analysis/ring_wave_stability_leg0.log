@@ -1,0 +1,28 @@
+K4 writhe: exact polygon formula against the registered midpoint integral and a planar polygon
+  M   48: exact 0.10090658  registered midpoint 0.10350408  diff -2.60e-03
+  M   96: exact 0.09909082  registered midpoint 0.10005495  diff -9.64e-04
+  M  192: exact 0.09860816  registered midpoint 0.09892661  diff -3.18e-04
+  M  384: exact 0.09848566  registered midpoint 0.09858439  diff -9.87e-05
+  planar polygon writhe 0.0e+00
+K1 Michell: Lk_c from the constrained spectrum, two B / C, convergence in M
+  Michell M   16 B/C 1.000: Lk_c 1.678045 (theory 1.732051, rel -3.12e-02)  mode n=2 zfrac 0.605  linearity 6.3e-08  S(circle) 1.6e-05  nneg(Lk 0) 0 nnull 0 dim 26  9s
+  Michell M   24 B/C 1.000: Lk_c 1.707653 (theory 1.732051, rel -1.41e-02)  mode n=2 zfrac 0.609  linearity 2.5e-08  S(circle) 3.1e-05  nneg(Lk 0) 0 nnull 0 dim 42  23s
+  Michell M   32 B/C 1.000: Lk_c 1.718237 (theory 1.732051, rel -7.98e-03)  mode n=2 zfrac 0.611  linearity 2.9e-08  S(circle) 4.8e-05  nneg(Lk 0) 0 nnull 0 dim 58  49s
+  Michell M   48 B/C 1.000: Lk_c 1.725639 (theory 1.732051, rel -3.70e-03)  mode n=2 zfrac 0.612  linearity 3.0e-08  S(circle) 9.0e-05  nneg(Lk 0) 0 nnull 0 dim 90  172s
+  B/C 1.0: Lk_c(M) [1.678045, 1.707653, 1.718237, 1.725639] -> extrapolated 1.731780 (order 1.98, fit rms 5.0e-05); theory 1.732051; rel -1.56e-04
+  Michell M   16 B/C 0.600: Lk_c 1.006827 (theory 1.039230, rel -3.12e-02)  mode n=2 zfrac 0.605  linearity 5.1e-08  S(circle) 1.2e-05  nneg(Lk 0) 0 nnull 0 dim 26  9s
+  Michell M   24 B/C 0.600: Lk_c 1.024592 (theory 1.039230, rel -1.41e-02)  mode n=2 zfrac 0.609  linearity 2.4e-08  S(circle) 2.3e-05  nneg(Lk 0) 0 nnull 0 dim 42  23s
+  Michell M   32 B/C 0.600: Lk_c 1.030943 (theory 1.039230, rel -7.98e-03)  mode n=2 zfrac 0.611  linearity 2.5e-08  S(circle) 3.6e-05  nneg(Lk 0) 0 nnull 0 dim 58  51s
+  Michell M   48 B/C 0.600: Lk_c 1.035383 (theory 1.039230, rel -3.70e-03)  mode n=2 zfrac 0.612  linearity 2.9e-08  S(circle) 6.8e-05  nneg(Lk 0) 0 nnull 0 dim 90  167s
+  B/C 0.6: Lk_c(M) [1.006827, 1.024592, 1.030943, 1.035383] -> extrapolated 1.039068 (order 1.98, fit rms 3.0e-05); theory 1.039230; rel -1.57e-04
+K2 stationarity probe (n = 3 ripple on the twisted circle, Lk = 1, B/C = 1)
+  amp 0e+00: S 9.026e-05
+  amp 1e-03: S 4.720e-02
+  amp 1e-02: S 4.704e-01
+  amp 1e-01: S 3.554e+00
+K3 rope wiring: pieces_nodes against elec_rope_wave.pieces
+  worst relative difference 6.7e-16
+  beta 0.0 kappa_tw 0.5 J 3.1416 [flat]: E 8.14414 (tension 5.6320 wave 2.4957 C 0.0164) Omega 0.7185 R_end 1.1798 edge 0.8477 J_flux/J -0.000 cm 6.3e-08  g 0.8622  wave/E 0.306 2J/E 0.7715 J_tilt 1.2e-07 nit 949
+  fold reading M 48: E 8.14414 g 0.8622 edge 0.84768  S(nodes) 8.673e-04  spectrum dim 86: neg 0 null 0 pos 86  lowest [0.03574279 0.46659404 0.54956477 0.75010507]  highest 1.23e+02  1198s
+BARS: K4_planar PASS  K4_agree PASS  K1 PASS  K2_zero PASS  K2_monotone PASS  K3_wiring PASS
+  record -> analysis/ring_wave_stability_leg0.json

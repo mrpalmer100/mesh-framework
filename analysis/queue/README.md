@@ -33,3 +33,10 @@ Branched from main at ed27c9e on 2026-10-18.
 - 2026-10-25 (later): ELEC-MECH-1 withdrawn by the lab (verdict decided before the lock); filed as a reading. ELEC-KAPPA-1 drafted and live: kappa_pair of the registered rope from the parameter card, J_1 = 2 pi kappa / c against hbar / 2 blind, the tension ladder for the g = 2 class; closed forms, no solver.
 - 2026-10-25 (evening): RING-WAVE-ANOMALY computed as the executor's reading (g - 2 = 4 alpha / pi, cutoff-free; analysis/RING_WAVE_ANOMALY_reading.md) and RING-WAVE-ANOMALY-R drafted live: a code-independent replication of the number plus the dictionary question (is the magnetic self-energy additional to or inside the twist energy) that decides between the 4 alpha / pi form and a ln-enhanced one. ELEC-KAPPA-1 stands on the queue beside it.
 
+- 2026-10-26: ELEC-KAPPA-1 and RING-WAVE-ANOMALY-R parked with the reviewers' reasons (analysis/queue/parked/README.md);
+  the Leg C record corrected (section 7: J = 2 pi kappa / c is the ring's, the class carries (2 pi kappa / c)(4 pi A / L^2);
+  beta_p = 1 is set by hand, not derived; the field / twist split is SILENT in the registry by the worker's reading of
+  EM-015 / EM-018). The lab is in approval mode (the Director proposes, the author approves); the executor drafts
+  nothing until a question has an unknown outcome. RING-WAVE-STABILITY Leg 0: benchmarks/foundations/ring_wave_stability.py,
+  the constrained-Hessian and stationarity-ceiling instrument credentialed on the Michell threshold (sqrt 3 B / C), the
+  exact polygon writhe, and the co-moving fold as the reference minimum; the ring-wave cell is never built by it.
