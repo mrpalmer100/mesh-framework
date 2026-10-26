@@ -3,10 +3,15 @@ K1 twist wave on a frozen ring
 K2 Nambu-Goto pulsating circle (kappa = 0), R0 to R0 / 2
   R(t_end) 0.499433 exact 0.499433; worst |R - exact| 2.1e-07; E0 6.278699 (2 pi R0 = 6.283185) drift 1.6e-11; circle kept to 3.3e-13
 K3 the exact ring-wave, unperturbed, two periods (conservation only; no growth read)
-  R_d 0.707359 (continuum sqrt(kappa / T) = 0.707107): E0 8.882595 (closed form 8.885766) drift 1.3e-11; J0 3.141593 (2 pi kappa = 3.141593) drift 2.7e-11; |P| max 2.7e-11; Q drift 8.4e-11; circle kept to 5.5e-12, R_mean drift 7.3e-11; spacing kept to 2.3e-14
+  R_d 0.707359 (continuum sqrt(kappa / T) = 0.707107): E0 8.882595 (closed form 8.885766) drift 2.2e-12; J0 3.141593 (2 pi kappa = 3.141593) drift 4.3e-12; |P| max 1.8e-11; Q drift 1.4e-11; circle kept to 8.2e-12, R_mean drift 5.3e-13; spacing kept to 2.7e-13
 K4 Noether on generic data
-  h 0.04: E drift 1.84e-04  |dP| 5.6e-14  |dJ| 2.1e-14  dQ 1.5e-14  (24 steps)
-  h 0.02: E drift 4.93e-05  |dP| 6.0e-13  |dJ| 1.3e-13  dQ 9.3e-14  (49 steps)
-  h 0.01: E drift 1.29e-05  |dP| 8.6e-14  |dJ| 6.8e-14  dQ 7.9e-14  (99 steps)
-  energy-drift order 1.90
-BARS: K1 PASS  K2 PASS  K3 PASS  K4 PASS   (116s)
+  h 0.04 pin False: E drift 1.84e-04  |dP| 5.6e-14  |dJ| 2.1e-14  dQ 1.5e-14  (24 steps)
+  h 0.04 pin True : E drift 2.58e-04  |dP| 6.5e-14  |dJ| 1.0e-03  dQ 1.2e-14  (24 steps)
+  h 0.02 pin False: E drift 4.93e-05  |dP| 6.0e-13  |dJ| 1.3e-13  dQ 9.3e-14  (49 steps)
+  h 0.02 pin True : E drift 6.60e-05  |dP| 5.0e-13  |dJ| 1.1e-03  dQ 7.8e-14  (49 steps)
+  h 0.01 pin False: E drift 1.29e-05  |dP| 8.6e-14  |dJ| 6.8e-14  dQ 7.9e-14  (99 steps)
+  h 0.01 pin True : E drift 1.67e-05  |dP| 6.9e-14  |dJ| 1.1e-03  dQ 6.2e-14  (99 steps)
+  energy-drift order 1.90 (unpinned); the pinned |dJ| is the gauge pin's torque on fast generic data
+K5 shape degeneracy on the beta = 0.5 family member (Leg C theorem; not the evidence cell)
+  n 3 eps 0.01: worst node displacement 7.97e-05 = 1.42 eps^2 R (first order would be 5.6e-03); vmax 7.2e-05; |dJ| 9.7e-09; E drift 3.8e-12
+BARS: K1 PASS  K2 PASS  K3 PASS  K4 PASS  K5 PASS   (304s)

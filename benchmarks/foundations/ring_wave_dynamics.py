@@ -38,7 +38,16 @@ KNOWN ANSWERS (Leg 0 part 2)
       from R0 to R0 / 2 (the collapse itself is lightlike and not followed).
   K3  The exact ring-wave, unperturbed, for two periods: E, J, P, winding conserved; the shape stays a circle to the
       discretization tolerance over that span. No growth is read; the span is too short to read one.
-  K4  Noether on generic smooth data: P and J exact, E drift of order h^2 (order measured).
+  K4  Noether on generic smooth data without the gauge pin: P and J exact, E drift of order h^2 (order measured);
+      with the pin, the torque it exerts on fast generic data is reported (the pin's price).
+  K5  Leg C's shape theorem on the beta = 0.5 family member: a deformed static loop with its twist travelling is
+      stationary (kappa Phi-dot Phi' = T balances tension locally for any shape); the deformation does not move
+      at first order in eps. Not the beta = 1 evidence cell.
+
+THE GAUGE PIN: the equal-spacing constraints leave one collective sliding mode (all nodes moving along the loop),
+pure gauge in the continuum and nearly so here; the discrete Lagrangian gives it a tiny inertia, and on perturbed
+data it ran away (node speeds of 16 c by t = 1 at M = 16). It is pinned by one holonomic constraint on node 0
+((x_0 - centroid) . y = const). The pin exerts a torque at the discretization level, so J is a bar on every run.
 
 Usage: python3 benchmarks/foundations/ring_wave_dynamics.py --credential [--M 48] [--out analysis/...json]
 """
@@ -104,7 +113,9 @@ class StringIntegrator:
             raise RuntimeError('JAX is required: pip install jax')
         self.M, self.kappa, self.winding, self.h, self.freeze, self.freeze_twist = M, kappa, winding, h, freeze_shape, freeze_twist
         if gauge_pin is None:
-            gauge_pin = (kappa == 0.0)
+            gauge_pin = True            # 2026-10-26: without the pin the sliding mode ran away on perturbed data (node speeds
+                                        # of 16 c on the beta = 0.5 member by t = 1); with it the price is a small torque,
+                                        # measured by the J bar of every run (K4 reports both)
         X0 = np.asarray(q0)[:3 * M].reshape(M, 3); gauge_ref = float((X0[0] - X0.mean(0))[1]) if gauge_pin else None
         Lf, gf, self.split = make_lagrangian(M, kappa, winding, gauge_ref)
         N = 4 * M
@@ -309,14 +320,36 @@ def k4_noether(M=32, kappa=0.3, hs=(0.04, 0.02, 0.01)):
     q0 = np.concatenate([X.ravel(), Phi]); v0 = np.concatenate([V.ravel(), W])
     rows_out = []
     for h in hs:
-        integ = StringIntegrator(M, kappa, 1, h, q0)
-        rows = run(integ, q0, v0, 1.0, every=1)
-        E = np.array([r['E'] for r in rows]); P = np.array([r['P'] for r in rows]); J = np.array([r['J'] for r in rows]); Q = np.array([r['Q'] for r in rows])
-        rows_out.append(dict(h=h, E_drift=float(E.max() - E.min()), P_drift=float(np.max(np.abs(P - P[0]))), J_drift=float(np.max(np.abs(J - J[0]))),
-                             Q_drift=float(Q.max() - Q.min()), steps=len(rows) - 1))
-    d = [r['E_drift'] for r in rows_out]
+        for pin in (False, True):
+            integ = StringIntegrator(M, kappa, 1, h, q0, gauge_pin=pin)
+            rows = run(integ, q0, v0, 1.0, every=1)
+            E = np.array([r['E'] for r in rows]); P = np.array([r['P'] for r in rows]); J = np.array([r['J'] for r in rows]); Q = np.array([r['Q'] for r in rows])
+            rows_out.append(dict(h=h, pin=pin, E_drift=float(E.max() - E.min()), P_drift=float(np.max(np.abs(P - P[0]))), J_drift=float(np.max(np.abs(J - J[0]))),
+                                 Q_drift=float(Q.max() - Q.min()), steps=len(rows) - 1))
+    d = [r['E_drift'] for r in rows_out if not r['pin']]
     order = math.log(d[0] / d[1]) / math.log(hs[0] / hs[1]) if d[1] > 0 else float('nan')
     return dict(M=M, kappa=kappa, rows=rows_out, E_order=order)
+
+
+def k5_shape_degeneracy(M=48, kappa=0.5, beta=0.5, eps=1e-2, n=3, periods=2.0):
+    """Leg C's shape theorem as a dynamical known answer, on the beta = 0.5 FAMILY MEMBER (not the beta = 1 evidence
+    cell): a static closed loop of the right length carrying its twist as a travelling wave is stationary for ANY
+    shape, because the wave's momentum flux balances the tension locally (kappa Phi-dot Phi' = T at every point,
+    which fixes L and nothing else). A radially deformed ring (1 + eps cos n theta) should therefore stay where it is
+    to O(eps^2); the residual motion is the second-order breathing of the length mode."""
+    R = discrete_ring_radius(M, kappa, 1, beta); q0, v0 = ring(M, R, 1, -beta)
+    th = 2 * math.pi * np.arange(M) / M; r = R * (1 + eps * np.cos(n * th))
+    X = equalize(np.stack([r * np.cos(th), r * np.sin(th), np.zeros(M)], 1)); q0[:3 * M] = X.ravel()
+    h = 0.01 * 2 * math.pi * R / M
+    integ = StringIntegrator(M, kappa, 1, h, q0); rows = run(integ, q0, v0, periods * 2 * math.pi * R, every=5)
+    X0 = X.copy(); worst = 0.0; vmax = 0.0
+    integ2 = StringIntegrator(M, kappa, 1, h, q0).init(q0, v0)
+    while integ2.t < periods * 2 * math.pi * R:
+        integ2.step(); Xk, _ = integ2.split(np.asarray(integ2.q)); U = np.asarray((integ2.q - integ2.qprev) / h)[:3 * M].reshape(M, 3)
+        worst = max(worst, float(np.linalg.norm(Xk - X0, axis=1).max())); vmax = max(vmax, float(np.linalg.norm(U, axis=1).max()))
+    J = np.array([r['J'][2] for r in rows]); E = np.array([r['E'] for r in rows])
+    return dict(M=M, beta=beta, eps=eps, n=n, R=R, worst_displacement=worst, worst_over_eps2R=worst / (eps ** 2 * R), vmax=vmax,
+                J_drift=float(J.max() - J.min()), E_drift=float((E.max() - E.min()) / abs(E[0])), R_spread0=float(np.ptp(np.hypot(X[:, 0], X[:, 1]))))
 
 
 def credential(M=48, out=None):
@@ -335,13 +368,18 @@ def credential(M=48, out=None):
     print('K4 Noether on generic data')
     r4 = k4_noether(); rec['K4'] = r4
     for r in r4['rows']:
-        print(f"  h {r['h']}: E drift {r['E_drift']:.2e}  |dP| {r['P_drift']:.1e}  |dJ| {r['J_drift']:.1e}  dQ {r['Q_drift']:.1e}  ({r['steps']} steps)")
-    print(f"  energy-drift order {r4['E_order']:.2f}")
+        print(f"  h {r['h']} pin {str(r['pin']):5s}: E drift {r['E_drift']:.2e}  |dP| {r['P_drift']:.1e}  |dJ| {r['J_drift']:.1e}  dQ {r['Q_drift']:.1e}  ({r['steps']} steps)")
+    print(f"  energy-drift order {r4['E_order']:.2f} (unpinned); the pinned |dJ| is the gauge pin's torque on fast generic data")
+    print('K5 shape degeneracy on the beta = 0.5 family member (Leg C theorem; not the evidence cell)')
+    r5 = k5_shape_degeneracy(M); rec['K5'] = r5
+    print(f"  n {r5['n']} eps {r5['eps']}: worst node displacement {r5['worst_displacement']:.2e} = {r5['worst_over_eps2R']:.2f} eps^2 R (first order would be {r5['eps'] * r5['R']:.1e}); "
+          f"vmax {r5['vmax']:.1e}; |dJ| {r5['J_drift']:.1e}; E drift {r5['E_drift']:.1e}")
     ok = dict(K1=abs(r1['rel_to_discrete']) < 2e-3 and r1['E_drift'] < 1e-6,
               K2=r2['worst_R_error'] < 1e-3 and abs(r2['E0'] - r2['E_exact']) / r2['E_exact'] < 1e-3 and r2['E_drift'] < 1e-4,
               K3=abs(r3['E0'] - r3['E_closed_form']) / r3['E_closed_form'] < 1e-3 and abs(r3['J0'] - r3['J_closed_form']) / r3['J_closed_form'] < 1e-3
                  and r3['E_drift'] < 1e-4 and r3['J_drift'] < 1e-7 and r3['P_max'] < 1e-8 and r3['R_mean_drift'] < 1e-4 and r3['R_spread_max'] < 1e-6,
-              K4=all(r['P_drift'] < 1e-9 and r['J_drift'] < 1e-9 for r in r4['rows']) and r4['E_order'] > 1.8)
+              K4=all(r['P_drift'] < 1e-9 and r['J_drift'] < 1e-9 for r in r4['rows'] if not r['pin']) and r4['E_order'] > 1.8,
+              K5=r5['worst_displacement'] < 0.1 * r5['eps'] * r5['R'] and r5['J_drift'] < 1e-7)
     rec['bars'] = ok; rec['seconds'] = time.time() - t0
     print('BARS: ' + '  '.join(f"{k} {'PASS' if v else 'FAIL'}" for k, v in ok.items()) + f"   ({rec['seconds']:.0f}s)")
     if out:
