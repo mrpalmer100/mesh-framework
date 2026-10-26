@@ -46,3 +46,10 @@ Branched from main at ed27c9e on 2026-10-18.
   before the attempt). First: analysis/GRV_2PI_derivation_reading.md, NOT-DERIVED at a named step: the registered
   statics (GRV-005) are linear, and a linear medium of any extent gives Newton with M-independent corrections at
   r of order L, never an acceleration scale; kappa belongs to a nonlinear response law the registry does not hold.
+- 2026-10-26 (later): RING-WAVE-STABILITY Leg 0 part 2, the dynamics instrument (benchmarks/foundations/ring_wave_dynamics.py,
+  JAX): Nambu-Goto plus the twist scalar on the induced metric in arc-length gauge, constrained variational integrator;
+  credentialed on the twist wave (dispersion to 5e-6), the pulsating circle (R(t) to 2e-7), the unperturbed ring-wave
+  (E, J, P, winding to 1e-11 over two periods, no growth read) and discrete Noether on generic data (P, J, Q to 1e-13,
+  energy order 1.9). Three charter questions recorded: which action the registry holds (induced-metric scalar versus
+  five-dimensional Nambu-Goto, O(1) apart at the ring-wave), the one-parameter family of static rings (neutral
+  direction), and the polygon's O(M^-2) equilibrium offset as the stationarity ceiling.

@@ -108,6 +108,62 @@ bending term. The machinery is the same; the physics of the threshold is not the
 claims only that the instrument finds a known constrained instability from the spectrum with the right mode
 and convergence.
 
-## 6. Status
-Instrument credentialed on K1 to K4 for the shape-stability half of the commission; the dynamical half has no
-instrument yet. The evidence cell is untouched. Nothing here is a result about the ring-wave.
+## 6. Status (revised in section 7)
+Both halves now have a credentialed instrument: the constrained Hessian (sections 1 to 4) and the dynamics
+(section 7). The evidence cell is untouched. Nothing here is a result about the ring-wave.
+
+## 7. Part 2 (added 2026-10-26): the dynamics instrument, credentialed
+Section 5(a) said the dynamical half had no instrument. It now does: `benchmarks/foundations/ring_wave_dynamics.py`
+(records `analysis/ring_wave_dynamics_leg0.{json,log}`; needs JAX, `pip install jax`).
+
+The action is the one Leg C's static functional is the Routhian of: Nambu-Goto plus a massless scalar on the
+string's induced metric, S = -Int sqrt(-h) [T + (kappa / 2) h^ab d_a Phi d_b Phi], in static gauge and ARC-LENGTH
+gauge (equal segment lengths as holonomic constraints), so the reparametrization freedom is gone and every
+remaining coordinate is physical: 2M + 1 for the shape and M for the twist. The twist gradient energy is the
+three-point form (no checkerboard mode); the twist field is stored unwrapped with its winding fixed, so the
+winding is conserved by construction. The integrator is the constrained variational (discrete Euler-Lagrange,
+midpoint discrete Lagrangian, SHAKE structure) scheme solved by Newton with JAX Jacobians. Because the discrete
+Lagrangian carries the continuous symmetries exactly, the DISCRETE Noether momenta (translations, rotations
+about every axis, the twist charge Phi -> Phi + const) are conserved to roundoff, and the energy oscillates
+boundedly at O(h^2). The static ring with its twist travelling at c is a stationary solution at R^2 = kappa / T
+(dL / dR = 2 pi [-1 + kappa / R^2]), Leg C's virial, and the polygon's own equilibrium radius (M = 48: 0.707359
+against sqrt(kappa / T) = 0.707107) is found by a root find on the discrete Lagrangian before any run.
+
+Known answers, M = 48 (bars in the file):
+  K1  Twist wave on a frozen ring, mode n = 3: period 2.106420 against the three-point chain's exact dispersion
+      2.106409 (5e-6; the continuum 2.094395 is 0.6 percent away, the M^-2 discretization); energy to 2e-15.
+  K2  The Nambu-Goto pulsating circle (kappa = 0, the twist frozen, the sliding gauge pinned, which is
+      torque-free by symmetry): R(t) = R0 cos(t / R0) followed from R0 to R0 / 2 with worst error 2e-7; E0 = 6.27870
+      (the 48-gon's perimeter against 2 pi), drift 2e-11; the circle kept to 3e-13.
+  K3  The exact ring-wave, unperturbed, two periods: E0 8.882595 (closed form at the continuum radius 8.885766;
+      the 3e-4 is the polygon), J0 = 2 pi kappa to 1e-13, |P| 3e-11, E drift 1e-11, J drift 3e-11, twist charge
+      drift 8e-11, the circle kept to 6e-12 and R_mean to 7e-11, the spacing to 2e-14. Conservation only. Two
+      periods of an unperturbed state cannot show a growth rate and none is read.
+  K4  Generic smooth data (a wobbly twisted loop with transverse velocity and a twist pulse), h = 0.04, 0.02, 0.01:
+      |dP|, |dJ|, dQ below 1e-12 at every h; energy drift 1.8e-4, 4.9e-5, 1.3e-5, order 1.90.
+
+Three things the charter now has to settle, found while building this:
+(i)  WHICH ACTION. "Scalar on the induced metric" (this instrument, Leg C) and "Nambu-Goto in five dimensions
+     with the twist as a fifth coordinate", S = -T Int sqrt(-det(dX . dX + (kappa / T) dPhi dPhi), agree at first
+     order in kappa Phi'^2 / T and differ at O(1); the ring-wave sits at kappa Phi'^2 / T = 1 exactly. The lab's
+     theorist must say from GRV-020, EM-RECON-012 and EM-019 which form the registry holds, by quotation. If the
+     registry is SILENT, the stability verdict is conditional on the form and the charter says so.
+(ii) THE FAMILY. The static ring with twist at phase speed beta is a stationary solution for EVERY beta, at
+     R^2 = kappa (1 + beta^2) / 2T with J = 2 pi kappa beta: a one-parameter family (Leg C's beta_p scan was a walk
+     along it). The ring-wave at beta = 1 is one member. Its spectrum therefore has a neutral direction along the
+     family (changing beta and R together at fixed winding), which is not an instability and must be projected
+     out, or the question posed at fixed J, where the family is a point. Also the obvious zero modes: rotations,
+     translations, the twist shift.
+(iii) THE STATIONARITY CEILING for the dynamics: the polygon's equilibrium radius differs from the continuum's by
+     O(M^-2) (3.6e-4 at M = 48), and a run started at the continuum radius breathes at that amplitude. A charter
+     that perturbs the ring-wave by epsilon must start from the polygon's own equilibrium (as K3 does) and keep
+     epsilon well above the O(M^-2) offset or well below it, stated which.
+
+What the evidence run would be (NOT run here, and this file has no code path that runs it): the discrete
+ring-wave at fixed kappa and winding, perturbed by a small-amplitude mode (n = 2, 3, ... in shape, and in the
+twist's phase speed), integrated for tens of periods; the growth or oscillation of each mode amplitude read from
+the sealed trajectory; the forms RING-STABLE / RING-UNSTABLE (with the rate and the mode) / NO-CALL fixed before
+the run. Three values of kappa_tw as the Director's estimate says, though in these units kappa only sets R and the
+question is scale-free; the real variable to scan is the perturbation's content (shape versus twist speed).
+
+Section 5(a) is superseded by this section; 5(b) to (d) stand.
