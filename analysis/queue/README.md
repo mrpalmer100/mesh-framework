@@ -67,3 +67,8 @@ Branched from main at ed27c9e on 2026-10-18.
   kappa / T, with the tension's shortfall multiplied in); the screening-length patch is killed (xi / a = 1 against 74.6).
   Also recorded: at the M-point card the strand quantum is 12,882-fold short of hbar; the registered 3549 is HBAR-003's
   pre-M-point value. One open item with a registered falsifier: the substructure count n_sub against the dispersion bound.
+- 2026-10-27: hbar consult reading C (the count routes, benchmarks/foundations/hbar_consult_readings.py): the substructure
+  count n_sub cannot raise the action quantum (the fine level lowers it, S_f = S1 / n_sub^2; closed by construction, the
+  executor's idea 1 wrong in direction); the count above the strand, n_rs strands per rope under tension additivity, gives
+  hbar / 2 at n_rs = 6441 and a rope radius of 80 a = 4.8 fm, which is HBAR-005's patch read as the rope's cross-section;
+  open with the standing of a dimensional identity, no registered handle on n_rs, one scoped indication the other way.
