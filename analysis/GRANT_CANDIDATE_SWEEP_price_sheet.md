@@ -211,3 +211,12 @@ transverse form factor of the charge is 1; the bound of T-3 is a bound on the MA
 is lifted pending the author's word on the FND-189 rider. T-2's findings stand: B2 still owes the spin and the
 binding of its halves. The decision line of "T-3 RUN" is therefore reopened: not adopted as the electron on T-2's
 grounds alone, with the size objection withdrawn.
+
+## Decision line, final for this sheet (the author's word, 2026-10-27, after Road 1)
+The size objection (T-3) is withdrawn by the FND-189 rider: the charge is pointlike by the dictionary. The candidate
+is NOT adopted as the electron on T-2's grounds alone: the double-cover state carries self-linking 2 against the
+charged state's Lk = 1 (no belt-trick spin on the charged object), and a pi-periodic lock splits the unit charge into
+two unbound half-kinks. Kept on record as a priced mechanism (B1 demonstrated; B3 the charge-creation field at pi / 5
+of Schwinger). What would reopen adoption: a registered rule assigning the unit charge to the double-cover state
+(or binding the two half-kinks), which is the spin question of the electron sector in its sharpest form.
+
