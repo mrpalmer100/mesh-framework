@@ -343,18 +343,163 @@ def k5_shape_degeneracy(M=48, kappa=0.5, beta=0.5, eps=1e-2, n=3, periods=2.0):
     X = equalize(np.stack([r * np.cos(th), r * np.sin(th), np.zeros(M)], 1)); q0[:3 * M] = X.ravel()
     h = 0.01 * 2 * math.pi * R / M
     integ = StringIntegrator(M, kappa, 1, h, q0); rows = run(integ, q0, v0, periods * 2 * math.pi * R, every=5)
-    X0 = X.copy(); worst = 0.0; vmax = 0.0
+    X0 = X.copy(); worst = 0.0; vmax = 0.0; dshape = 0.0; k = 0
     integ2 = StringIntegrator(M, kappa, 1, h, q0).init(q0, v0)
     while integ2.t < periods * 2 * math.pi * R:
-        integ2.step(); Xk, _ = integ2.split(np.asarray(integ2.q)); U = np.asarray((integ2.q - integ2.qprev) / h)[:3 * M].reshape(M, 3)
+        integ2.step(); k += 1; Xk, _ = integ2.split(np.asarray(integ2.q)); U = np.asarray((integ2.q - integ2.qprev) / h)[:3 * M].reshape(M, 3)
         worst = max(worst, float(np.linalg.norm(Xk - X0, axis=1).max())); vmax = max(vmax, float(np.linalg.norm(U, axis=1).max()))
+        if k % 200 == 0:                                        # the correspondence-free shape distance (K6), sampled
+            dshape = max(dshape, shape_distance(Xk, X0)['D_max'])
     J = np.array([r['J'][2] for r in rows]); E = np.array([r['E'] for r in rows])
     return dict(M=M, beta=beta, eps=eps, n=n, R=R, worst_displacement=worst, worst_over_eps2R=worst / (eps ** 2 * R), vmax=vmax,
+                D_shape_max=dshape, D_shape_over_epsR=dshape / (eps * R),
                 J_drift=float(J.max() - J.min()), E_drift=float((E.max() - E.min()) / abs(E[0])), R_spread0=float(np.ptp(np.hypot(X[:, 0], X[:, 1]))))
 
 
+# ----------------------------------------------------------------------------------------------------------------
+# the shape observable (added 2026-10-27 for RING-WAVE-STABILITY-3, after the external reviewer's round-3 finding on
+# the lab's indexed-node Procrustes: in the arc-length gauge the nodes are equally spaced along the loop, so the gauge's
+# collective sliding mode moves every node ALONG an unchanged shape, by a fractional number of spacings; an indexed-
+# node residual then reports a shape change that is not one, up to half a spacing (0.065 R at M = 48, i.e. 65 eps R
+# at eps = 1e-3, far above any hold bar). The distance below is correspondence-free: the reference polygon X0 is
+# interpolated trigonometrically in its node index (spectral for the smooth shapes in use), and the residual is
+# minimized over a CONTINUOUS index shift s (the slide), a rigid rotation (Kabsch) and a translation. Known-answer
+# fixtures K6; the dynamics decide nothing with it until K6 passes.)
+# ----------------------------------------------------------------------------------------------------------------
+def trig_interp(X0, u):
+    """The closed polygon X0 (M x 3, nodes equally spaced) as a trigonometric polynomial in the node index, at the
+    real indices u (any shape, periodic in M)."""
+    M = len(X0); c = np.fft.rfft(X0, axis=0); n = np.arange(c.shape[0])
+    ph = np.exp(2j * math.pi * np.outer(u, n) / M)
+    w = np.full(c.shape[0], 2.0); w[0] = 1.0
+    if M % 2 == 0:
+        w[-1] = 1.0
+    return (np.real(ph @ (c * w[:, None])) / M)
+
+
+def kabsch(X, Y):
+    """Rigid alignment of X onto Y (equal index correspondence): returns R, t minimizing sum |R X_i + t - Y_i|^2."""
+    cx = X.mean(0); cy = Y.mean(0); H = (X - cx).T @ (Y - cy)
+    U, _, Vt = np.linalg.svd(H); d = np.sign(np.linalg.det(Vt.T @ U.T))
+    D = np.diag([1.0, 1.0, d]); Rm = Vt.T @ D @ U.T
+    return Rm, cy - Rm @ cx
+
+
+def shape_distance(X, X0, grid_per_node=4, refine_iters=60, project=True):
+    """Correspondence-free rigid-invariant distance between the closed polygon X and the reference shape through X0.
+    Stage 1 (registration): the rms residual |R X_i + t - C0(i + s)| is minimized over a CONTINUOUS uniform index
+    shift s (the arc-length gauge's slide; a grid of grid_per_node per node, then golden-section refinement), with
+    the rotation R and translation t by Kabsch at each s. Stage 2 (projection, project=True): with R, t fixed, each
+    node's index u_i is refined about i + s to the nearest point of the curve C0 (an equal-chord polygon inscribed in
+    a curve at a slid start has index spacings that are uniform only to O(spacing^2), so stage 1 alone carries that
+    floor; K6 F1b versus F1c). Returns D_max and D_rms of the projected residual, the uniform-shift residual D_max_uniform,
+    and s."""
+    M = len(X); idx = np.arange(M)
+
+    def resid(s, want_max=False):
+        Y = trig_interp(X0, idx + s); Rm, t = kabsch(X, Y); r = np.linalg.norm(X @ Rm.T + t - Y, axis=1)
+        return (float(r.max()), float(np.sqrt(np.mean(r ** 2))), Rm, t) if want_max else float(np.sqrt(np.mean(r ** 2)))
+    ss = np.arange(0, M, 1.0 / grid_per_node); vals = np.array([resid(s) for s in ss])
+    k = int(np.argmin(vals)); a = ss[k] - 1.0 / grid_per_node; b = ss[k] + 1.0 / grid_per_node
+    g = (math.sqrt(5) - 1) / 2; c = b - g * (b - a); d = a + g * (b - a); fc = resid(c); fd = resid(d)
+    for _ in range(refine_iters):
+        if fc < fd:
+            b, d, fd = d, c, fc; c = b - g * (b - a); fc = resid(c)
+        else:
+            a, c, fc = c, d, fd; d = a + g * (b - a); fd = resid(d)
+    s = 0.5 * (a + b); Dmax_u, Drms_u, Rm, t = resid(s, True)
+    out = dict(D_max_uniform=Dmax_u, D_rms_uniform=Drms_u, s=float(s % M))
+    if not project:
+        out.update(D_max=Dmax_u, D_rms=Drms_u); return out
+    u = idx + s
+    for _ in range(5):                                           # project, then re-fit the rigid motion on the projected correspondences
+        Z = X @ Rm.T + t
+        lo = u - 0.5; hi = u + 0.5
+        f = lambda uu: np.linalg.norm(Z - trig_interp(X0, uu), axis=1)
+        c = hi - g * (hi - lo); d = lo + g * (hi - lo); fc = f(c); fd = f(d)
+        for _ in range(refine_iters):
+            m = fc < fd
+            hi = np.where(m, d, hi); lo = np.where(m, lo, c)
+            c = hi - g * (hi - lo); d = lo + g * (hi - lo); fc = f(c); fd = f(d)
+        u = 0.5 * (lo + hi); Rm, t = kabsch(X, trig_interp(X0, u))
+    # joint least squares over the rigid motion and the per-node curve parameters (the ICP above converges only
+    # linearly; this finishes it): parameters (rotation vector about Rm, translation, u_i)
+    from scipy.optimize import least_squares
+    from scipy.spatial.transform import Rotation
+
+    def res(pv):
+        Rj = Rotation.from_rotvec(pv[:3]).as_matrix() @ Rm; tj = t + pv[3:6]; uj = pv[6:]
+        return (X @ Rj.T + tj - trig_interp(X0, uj)).ravel()
+    p0 = np.concatenate([np.zeros(6), u])
+    sol = least_squares(res, p0, method='lm', xtol=1e-15, ftol=1e-15, gtol=1e-15, max_nfev=2000)
+    Rm = Rotation.from_rotvec(sol.x[:3]).as_matrix() @ Rm; t = t + sol.x[3:6]; u = sol.x[6:]
+    Z = X @ Rm.T + t; f = lambda uu: np.linalg.norm(Z - trig_interp(X0, uu), axis=1); lo = hi = u
+    r = f(0.5 * (lo + hi)); out.update(D_max=float(r.max()), D_rms=float(np.sqrt(np.mean(r ** 2))))
+    return out
+
+
+def indexed_procrustes_distance(X, X0):
+    """The defective observable (the lab's round-3 instrument, for the record): Kabsch on index correspondence."""
+    Rm, t = kabsch(X, X0)
+    return float(np.linalg.norm(X @ Rm.T + t - X0, axis=1).max())
+
+
+def equalize_spectral(X0, start=0.0, fine=512, iters=200):
+    """The equal-chord polygon inscribed in the trigonometric curve through X0 whose first vertex sits at index
+    `start` (vertices placed along that curve, sampled fine per node, their arc spacings relaxed until the chords
+    agree to 1e-12). The shape is preserved to the fine sampling, where equalize() (piecewise linear) moves nodes
+    onto the chords, an O(spacing^2) shape change."""
+    M = len(X0); C = trig_interp(X0, start + np.arange(0, M, 1.0 / fine))
+    seg = np.linalg.norm(np.roll(C, -1, 0) - C, axis=1); s = np.concatenate([[0], np.cumsum(seg)]); Cc = np.vstack([C, C[:1]])
+    a = np.full(M, s[-1] / M)
+    for _ in range(iters):
+        su = np.concatenate([[0], np.cumsum(a)])[:-1]
+        Y = np.stack([np.interp(su, s, Cc[:, k]) for k in range(3)], 1)
+        c = np.linalg.norm(np.roll(Y, -1, 0) - Y, axis=1)
+        if np.ptp(c) < 1e-12:
+            break
+        a = a * (c.mean() / c); a *= s[-1] / a.sum()
+    return Y
+
+
+def k6_shape_registration(M=48, R=0.707359, base_eps=0.05, base_n=3, shift_nodes=7, slide=0.37, defo=1e-3, defo_n=5):
+    """Known-answer fixtures for shape_distance (exact answers 0, 0, 0, 0, defo * R; bars below):
+    F1  the unchanged noncircular polygon under a cyclic relabeling by shift_nodes nodes (bar 1e-10 R);
+    F1b the same polygon with its nodes slid along the shape by a FRACTIONAL spacing (slide), re-equalized with the
+        instrument's equalize() (piecewise linear, nodes moved onto the chords): an O(spacing^2) shape change made by
+        the equalizer, not by the dynamics (whose constraint is the chord length, not a chord placement); recorded
+        as the observable's reading of that artifact. Bar 5e-5 R at M = 48 and 6.25e-6 R at M = 96 (M^-3), set on
+        2026-10-27 AFTER this fixture's first run (uniform-shift stage only) read 2.8e-5 R and 3.4e-6 R (a credential
+        fixture, not an evidence cell; disclosed in the charter);
+    F1c the same slide with the nodes kept ON the smooth curve with equal chords (equalize_spectral; bar 1e-8 R):
+        the projected distance is exact for a slid equal-chord polygon, where the uniform-shift stage alone reads the
+        O(spacing^2) non-uniformity of its index spacings (reported as D_max_uniform);
+    F2  relabeling plus a rigid rotation (0.7 rad in plane, 0.1 rad tilt) plus a translation (bar 1e-10 R);
+    F3  a genuine deformation, radial defo R cos(defo_n theta), re-equalized (exact defo R to the equalization's
+        tangential part; bar: D_max within [0.5, 1.5] defo R, so the registration neither absorbs nor inflates it);
+    F4  (informative, no bar) the indexed-node Procrustes on F1 and F1b, the round-3 defect."""
+    th = 2 * math.pi * np.arange(M) / M; r = R * (1 + base_eps * np.cos(base_n * th))
+    X0 = equalize(np.stack([r * np.cos(th), r * np.sin(th), np.zeros(M)], 1))
+    out = dict(M=M, R=R, base_eps=base_eps, base_n=base_n)
+    X1 = np.roll(X0, shift_nodes, axis=0); out['F1'] = shape_distance(X1, X0)
+    X1b = equalize(trig_interp(X0, np.arange(M) + slide)); out['F1b'] = shape_distance(X1b, X0)
+    X1c = equalize_spectral(X0, slide); out['F1c'] = shape_distance(X1c, X0)
+    out['F1c_chord_spread'] = float(np.ptp(np.linalg.norm(np.roll(X1c, -1, 0) - X1c, axis=1)))
+    ca, sa = math.cos(0.7), math.sin(0.7); cb, sb = math.cos(0.1), math.sin(0.1)
+    Rz = np.array([[ca, -sa, 0], [sa, ca, 0], [0, 0, 1]]); Rx = np.array([[1, 0, 0], [0, cb, -sb], [0, sb, cb]])
+    X2 = X1 @ (Rx @ Rz).T + np.array([0.3, -0.2, 0.1]); out['F2'] = shape_distance(X2, X0)
+    rr = np.hypot(X0[:, 0], X0[:, 1]); tt = np.arctan2(X0[:, 1], X0[:, 0]); r3 = rr * (1 + defo * np.cos(defo_n * tt))
+    X3 = equalize(np.stack([r3 * np.cos(tt), r3 * np.sin(tt), np.zeros(M)], 1)); out['F3'] = shape_distance(X3, X0)
+    out['F3_exact'] = defo * R; out['F3_indexed'] = float(np.linalg.norm(X3 - X0, axis=1).max())
+    out['F4_indexed_F1'] = indexed_procrustes_distance(X1, X0); out['F4_indexed_F1b'] = indexed_procrustes_distance(X1b, X0)
+    out['F1b_bar'] = 5e-5 * R * (48.0 / M) ** 3
+    out['bars'] = dict(F1=out['F1']['D_max'] < 1e-10 * R, F1b=out['F1b']['D_max'] < out['F1b_bar'], F1c=out['F1c']['D_max'] < 1e-8 * R,
+                       F2=out['F2']['D_max'] < 1e-10 * R, F3=0.5 * defo * R <= out['F3']['D_max'] <= 1.5 * defo * R)
+    return out
+
+
 def credential(M=48, out=None):
-    rec = dict(date='2026-10-26', instrument='benchmarks/foundations/ring_wave_dynamics.py', M=M)
+    rec = dict(date='2026-10-27', instrument='benchmarks/foundations/ring_wave_dynamics.py', M=M)
     t0 = time.time()
     print('K1 twist wave on a frozen ring')
     r1 = k1_twist_wave(M); rec['K1'] = r1
@@ -374,13 +519,20 @@ def credential(M=48, out=None):
     print('K5 shape degeneracy on the beta = 0.5 family member (Leg C theorem; not the evidence cell)')
     r5 = k5_shape_degeneracy(M); rec['K5'] = r5
     print(f"  n {r5['n']} eps {r5['eps']}: worst node displacement {r5['worst_displacement']:.2e} = {r5['worst_over_eps2R']:.2f} eps^2 R (first order would be {r5['eps'] * r5['R']:.1e}); "
-          f"vmax {r5['vmax']:.1e}; |dJ| {r5['J_drift']:.1e}; E drift {r5['E_drift']:.1e}")
+          f"vmax {r5['vmax']:.1e}; |dJ| {r5['J_drift']:.1e}; E drift {r5['E_drift']:.1e}; D_shape (K6 observable, every 200 steps) {r5['D_shape_max']:.2e} = {r5['D_shape_over_epsR']:.4f} eps R")
+    print('K6 the shape observable on known answers (relabeling, fractional slide, rigid motion, deformation)')
+    r6 = {M_: k6_shape_registration(M_) for M_ in (48, 96)}; rec['K6'] = r6
+    for M_, o in r6.items():
+        print(f"  M {M_}: F1 relabel {o['F1']['D_max']:.1e}  F1b slide+equalize {o['F1b']['D_max']:.2e} (bar {o['F1b_bar']:.2e}; uniform-shift stage {o['F1b']['D_max_uniform']:.2e})  "
+              f"F1c slide on curve {o['F1c']['D_max']:.1e}  F2 relabel+rigid {o['F2']['D_max']:.1e}  F3 deformation {o['F3']['D_max']:.3e} (exact {o['F3_exact']:.3e})  "
+              f"| indexed Procrustes reads F1 {o['F4_indexed_F1']:.1e} F1b {o['F4_indexed_F1b']:.1e}")
     ok = dict(K1=abs(r1['rel_to_discrete']) < 2e-3 and r1['E_drift'] < 1e-6,
               K2=r2['worst_R_error'] < 1e-3 and abs(r2['E0'] - r2['E_exact']) / r2['E_exact'] < 1e-3 and r2['E_drift'] < 1e-4,
               K3=abs(r3['E0'] - r3['E_closed_form']) / r3['E_closed_form'] < 1e-3 and abs(r3['J0'] - r3['J_closed_form']) / r3['J_closed_form'] < 1e-3
                  and r3['E_drift'] < 1e-4 and r3['J_drift'] < 1e-7 and r3['P_max'] < 1e-8 and r3['R_mean_drift'] < 1e-4 and r3['R_spread_max'] < 1e-6,
               K4=all(r['P_drift'] < 1e-9 and r['J_drift'] < 1e-9 for r in r4['rows'] if not r['pin']) and r4['E_order'] > 1.8,
-              K5=r5['worst_displacement'] < 0.1 * r5['eps'] * r5['R'] and r5['J_drift'] < 1e-7)
+              K5=r5['worst_displacement'] < 0.1 * r5['eps'] * r5['R'] and r5['J_drift'] < 1e-7,
+              K6=all(all(o['bars'].values()) for o in r6.values()))
     rec['bars'] = ok; rec['seconds'] = time.time() - t0
     print('BARS: ' + '  '.join(f"{k} {'PASS' if v else 'FAIL'}" for k, v in ok.items()) + f"   ({rec['seconds']:.0f}s)")
     if out:
