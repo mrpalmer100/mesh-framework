@@ -64,3 +64,20 @@ read this directory.
   already say. (5) Notation and T-1 bookkeeping defects. Not redrafted. The two alternatives the worker named (a price
   sheet for V_0 as a function of unregistered A_c and span, with the coasting span L* of order 1e4 to 1e5 a; or the
   junction's azimuthal locking under the 'tie holds the face' grant) are the author's to choose; neither is a commission.
+- RING-WAVE-STABILITY-2: withdrawn by the lab 2026-10-27 13:00 after 3 review rounds. The worker's lab-side
+  charter and kit (benchmarks/lab/ring_wave_stability_2/) were never pushed (the lab commits only on a lock), so
+  the record of what was built is the review transcript. Progress across the rounds: S2's pre-pin preview made
+  exploratory and the form-bearing cells disjoint (cured, both reviewers); the v5 J bar re-sourced from the
+  beta = 0.5 credential rather than inspected kappa = 0.3 fixtures (cured); deformed-polygon shape floor and
+  late-time control gate added; Q2 qualifying set made consistent with the NEUTRAL-DRIFTS witness rule; the
+  check amplitude 3e-3 made consistent; failed trajectories probe-local. Round 3: skeptical PASS (non-blocking:
+  49 trajectories and the 11 half-step units in the budget; Q0 presented as inventory only). External FAIL on
+  two points: (a) Q0 is form-bearing while its classification rule was written after the drafter inspected all
+  five claim texts it adjudicates, so its result is not blind; cure named: drop Q0 from the FORM list, keep the
+  wording inventory as background, mark every dynamics decision conditional on action (i); (b) the worker's
+  procrustes_shape registers nodes by index, so a cyclic relabeling of an unchanged noncircular polygon can
+  report nonzero D_shape; cure named: correspondence-aware (or correspondence-free) shape distance with
+  known-answer fixtures (unchanged polygon under cyclic relabeling, relabeling plus rotation, genuine
+  deformation) and locked bars. Successor RING-WAVE-STABILITY-3 to be drafted on the author's word with both
+  cures and every round-1/2 repair written into the executor's draft, since the worker's revisions are not on
+  any branch.
