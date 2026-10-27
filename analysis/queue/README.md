@@ -94,3 +94,10 @@ Branched from main at ed27c9e on 2026-10-18.
 - 2026-10-27 (later): CROSSING-PRICE-1 parked, the worker's five reasons conceded (f = 0 at the registered level by
   JUNCTION-LOCK; the variational profile ill-posed without a span; the self-consistency degenerate). The kink candidate
   is closed on the record: no well without the tie grant, pinned with it, kappa / c either way (ELEC_KINK_reading.md §4).
+- 2026-10-27: docs/CLEAN_ROOM_ELECTRON_STUDY.md, the author's clean-room design study: a mechanical electron written in
+  its own vocabulary (five axioms: medium, winding is charge, frame, beat, soliton; nine derivations: hbar = 4 pi K / c as
+  a medium constant, the ring solution, g = 2, the double cover, the Kerr-Newman check with R* = 2a, quantization as
+  resonance at half the medium's beat, pair threshold, the mass as the medium's beat times its action, generations),
+  scored against the electron, then mapped axiom by axiom onto the registry: A1, A2, A5 registered; A3 untested as spin;
+  A4 (a mode at the zitter frequency with the twist's far field relaxed beyond half a Compton wavelength) absent, and the
+  whole map; no registered candidate beats within three orders. Not a claim.
