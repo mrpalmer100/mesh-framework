@@ -1,0 +1,7 @@
+kappa = hbar c / 16 = 1.976e-27 J m  (the pair has 5.68e-32; FND-188 rope 1.30e-22)
+Omega = 2 m_e c^2 / hbar = 1.553e+21 rad/s;  kink width l = c / Omega = 1.931e-13 m = 3218 a (coasts: far above 2.8 a)
+lock curvature V'' = kappa Omega^2 / c^2 = m_e^2 c^3 / 4 hbar = 5.300e-02 J/m;  V_0 per node = 3.180e-18 J = 19.8 eV;  f = V_0 / (T0 a / 2) = 2.44e-04
+kink energy E = 8 kappa Omega / c = 8.187e-14 J = 1.0000 m_e c^2;  action 8 kappa / c = 0.500 hbar
+charge-creation field E_c = (4 pi / 5) V'' / e = 8.314e+17 V/m = 0.628 x Schwinger (1.323e+18); = pi / 5 exactly;  laser record 9.1e14: 914 x above
+strand count for kappa: disk packing n = 50 (R = a sqrt n = 4.26e-16 m); pair packing n = 373
+identities: E_c / E_Schwinger = pi / 5 and l = c / Omega hold for ANY kappa once E = m_e c^2 and 8 kappa / c = hbar / 2 are imposed; kappa itself is the one input.

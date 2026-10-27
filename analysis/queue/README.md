@@ -106,3 +106,11 @@ Branched from main at ed27c9e on 2026-10-18.
   mode); the only gap route (the junction tie) six orders high; the unpriced standoff mode excluded by the A_c bound by
   2e7. Reading: a beat for the twist is a gap for EM's own U(1) (FND-185), so the question is closure gap 3, a second
   internal angle with a restoring force; grant-class.
+- 2026-10-27 (night): GRANT-CANDIDATE-SWEEP price sheet (analysis/GRANT_CANDIDATE_SWEEP_price_sheet.md; T-1 run,
+  benchmarks/foundations/sweep_t1.py): a weak lock f on the rope's azimuth, allowed because light is the transverse
+  Goldstone pair and not the azimuth wave (GRV-102 / EM-RECON-025). Imposing the electron: kappa = hbar c / 16, the beat at
+  the zitter frequency, a coasting kink of width c / Omega = 3,218 a, V_0 = 20 eV per node (f = 2.4e-4), and the
+  charge-creation field E_c = (pi / 5) E_Schwinger = 8.3e17 V/m, an identity once the electron is imposed. Price: f
+  calibrated by m_e; the stiffness wall as a strand count (50 to 370); incompatible with FND-188 (supersedes it under C1
+  if adopted); the core size against compositeness bounds; the muon cannot be an excited kink (T-4 decided). Held
+  pending T-2 (frame locking) and T-3 (the kink's far field as a point charge).
