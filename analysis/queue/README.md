@@ -137,3 +137,6 @@ Branched from main at ed27c9e on 2026-10-18.
   term and a 2 pi kink averages the anisotropic ones to zero (road1_check.py, 2e-15). T-3 had scored a coupling source;
   its transverse bound (FND-189) is a bound on the mass form factor, not the charge. Riders proposed for the author's
   word: FND-189 narrowed to the stress channel; SWEEP's T-3 kill lifted (T-2's stand).
+- 2026-10-27 (riders registered on the author's word): FND-189 carries the Road 1 rider (the bound is on the mass form factor;
+  the charge is a constraint source on the centreline, pointlike by the dictionary; T-3's model was the wrong source type);
+  the SWEEP sheet's final decision line: not adopted on T-2's grounds alone, kept as a priced mechanism; ledger updated.
