@@ -1,5 +1,6 @@
-# GRANT-HBAR-ROPE (author's decision, Mark Palmer, 2026-10-27): DRAFT FOR THE AUTHOR'S WORD
-# Registered as FND-188 on the author's confirmation of THIS TEXT; nothing below is in claims.yaml yet.
+# GRANT-HBAR-ROPE (author's decision, Mark Palmer, 2026-10-27): REGISTERED AS FND-188
+# The author's word, 2026-10-27: decision 1 = (A) hbar; conditions as drafted. Registered on the queue branch for the
+# author's merge; this file is the charter the claim cites. P2's estimate superseded by N1 (rider on FND-188).
 
 ## The proposition (what is granted)
 The quantum of action is carried at the ROPE level. One rope of n_rs coarse strands, moving coherently as a single
