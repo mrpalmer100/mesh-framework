@@ -129,3 +129,6 @@ Branched from main at ed27c9e on 2026-10-18.
   the electron) killed for every strand count, and the statement is general: any charge on strands at the registered
   spacing is not pointlike to e+e- scattering by one to three orders; the loophole (field sourced on the centreline, no
   transverse multipoles) is unregistered. SWEEP not adopted as the electron; B1 and B3 kept on record as a mechanism.
+- 2026-10-27 (registration): FND-189, the transverse size bound on a strand-borne charge and the SWEEP candidate declined
+  on the author's word (kept on record as a mechanism with T-1, B1, T-2, T-3 and the tools); ledger R3 rider and the
+  clean-room study's postscript updated. Enters main by the author's merge.

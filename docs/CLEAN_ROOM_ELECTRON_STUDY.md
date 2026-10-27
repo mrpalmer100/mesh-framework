@@ -165,3 +165,15 @@ electron, in either direction. The beat is a new mechanism or it is nothing; tha
 Inside the programme this is the Gapped Twist model: the mesh plus one mechanism. If it were ever its own
 programme it should be named for the mechanism and not the material; the author's choice. The executor's
 suggestion was Cadence, for a medium with a beat and an object that keeps time at half of it.
+
+## 9. Postscript (2026-10-27, the same day): the beat was pursued and the lesson registered
+A4 was supplied as a grant candidate (SWEEP, a weak lock on the azimuth; allowed because light is not on the
+azimuth, GRV-102 / EM-RECON-025, which Part II section 6 had missed) and priced with three cheap tests. The beat is
+real on the instrument (B1: gapped dispersion, a Compton-width relativistic kink), the chain lands the charge-creation
+field at pi / 5 of Schwinger as an identity (T-1), the double cover and the unit charge are different states of the
+rope (T-2, C1 fails), and design item (i) is answered in the negative with a number (T-3, registered as FND-189): at
+the registered strand spacing, charge carried on strands is one to three orders too wide for e+ e- scattering. The
+candidate was declined as the electron on the author's word and kept as a mechanism. The study's open items after
+this: (i) is now a registered bound on the medium (charge must be sourced on a line, or carried two orders finer);
+C1 is closed in the negative on the ledger; C2 is closed (no lepton spectrum from one lock); chirality untouched.
+
