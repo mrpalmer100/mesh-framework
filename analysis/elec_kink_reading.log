@@ -1,0 +1,11 @@
+per-node twist stiffness: single strand kt = 3.162e-20 J (1.973e-01 eV); pair kt = 9.470e-16 J (5.9 keV); T0 a = 163 keV
+  single strand    coasting w = 0.8: V_0 = 3.083e-01 eV per node, kink E = 1.973e+00 eV = 3.86e-06 m_e c^2; E/omega = 8 kappa/c = 5.06e-44 J s = hbar / 2.1e+09
+  single strand    coasting w = 2.8: V_0 = 2.517e-02 eV per node, kink E = 5.638e-01 eV = 1.10e-06 m_e c^2; E/omega = 8 kappa/c = 5.06e-44 J s = hbar / 2.1e+09
+  single strand    kink of mass m_e needs w = 3.09e-06 a (V_0 = 2.07e+07 keV per node, f = V_0 / (T0 a / 2) = 2.54e+05)
+  two-strand pair  coasting w = 0.8: V_0 = 9.236e+03 eV per node, kink E = 5.911e+04 eV = 1.16e-01 m_e c^2; E/omega = 8 kappa/c = 1.52e-39 J s = hbar / 7.0e+04
+  two-strand pair  coasting w = 2.8: V_0 = 7.539e+02 eV per node, kink E = 1.689e+04 eV = 3.30e-02 m_e c^2; E/omega = 8 kappa/c = 1.52e-39 J s = hbar / 7.0e+04
+  two-strand pair  kink of mass m_e needs w = 9.25e-02 a (V_0 = 6.90e+02 keV per node, f = V_0 / (T0 a / 2) = 8.49e+00)
+bundles of n strands at the pair packing (kappa (n/2)^2 kappa_pair), coasting regime:
+  w = 0.8: a kink of mass m_e needs n = 5.9 strands; its action 8 kappa / c = hbar / 8.0e+03
+  w = 2.8: a kink of mass m_e needs n = 11.0 strands; its action 8 kappa / c = hbar / 2.3e+03
+NODE-STANDOFF (registered): the coasting regime implies f ~ 1e-7 to 1e-4 (V_0 far below T0 a); a kink of electron mass on the pair needs f of order 1e4 and is pinned.

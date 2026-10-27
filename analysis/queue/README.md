@@ -82,3 +82,9 @@ Branched from main at ed27c9e on 2026-10-18.
   granted rope the class overshoots J by 5e4 and E by 4e6, the 57-strand bundle carrying hbar / 2 weighs 617 MeV, the pair
   keeps E near m_e c^2 (calibration) with J short by 4e4. The grant moved nothing toward the electron; FND-188's P2 estimate
   superseded by a rider on the claim. The sector's wall is a tension rung between the fine level and the strand.
+- 2026-10-27: the twist kink read on the registered chain (analysis/ELEC_KINK_reading.md): it is the registered winding;
+  on the pair in the coasting regime it weighs 17 to 59 keV with action hbar / 7e4, an electron-mass kink needs w = 0.09 a
+  (pinned), bundles of 6 to 11 strands weigh m_e at action hbar / 2e3 to 8e3; the wall is kappa / (hbar c), unchanged.
+  CROSSING-PRICE-1 drafted (analysis/CROSSING_PRICE_1_charter_DRAFT.md): A_c in joules from registered rod mechanics at
+  the registered standoff, then V_0, f, w and FND-182's E_c blind against the coasting regime and the field marks; the
+  one computation with an unknown outcome the kink route needs; D1's identification flagged for the reviewers.
