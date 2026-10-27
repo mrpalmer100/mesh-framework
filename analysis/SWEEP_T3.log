@@ -1,0 +1,13 @@
+kink length l = lambda-bar_C / 2 = 1.931e-13 m
+(a) along the rope: <s^2>^(1/2) = 1.751e-13 m; the Dirac electron's Darwin spread <r^2>^(1/2) = 3.344e-13 m; ratio of <r^2>: 0.27
+    F_par at q = m_e c / hbar: 0.755; at q = 0.1 m_e c / hbar: 0.99692
+    reading: a Compton-length kink has the same order of charge spread QED already attributes to the electron (the Darwin term); not a kill.
+(b) across the rope: F_perp = J0(q rho); |1 - F| = 1 percent at q rho = 0.2 (J0(x) = 1 - x^2/4 + ...)
+    q = 30 GeV/c (PETRA-class QED test, 1 percent): transverse radius must satisfy rho < 0.2 / q = 1.32e-18 m
+    q = 100 GeV/c (LEP2-class, 1 percent): transverse radius must satisfy rho < 0.2 / q = 3.95e-19 m
+    registered pair, d0 / 2                      rho = 8.09e-18 m: q rho at 100 GeV/c = 4.1, F_perp = -0.389; exceeds the 1 percent bound by 21x
+    bundle of 50 (disk), a sqrt 50               rho = 4.24e-16 m: q rho at 100 GeV/c = 215.0, F_perp = +0.045; exceeds the 1 percent bound by 1075x
+    bundle of 373 (pair packing), ~ (373/2) d0 / 2 rho = 1.51e-15 m: q rho at 100 GeV/c = 764.7, F_perp = -0.025; exceeds the 1 percent bound by 3823x
+    reading: any charge carried on strands at the registered spacing has a transverse radius 20 to 1000 times above what
+    e+e- scattering allows; the kink on a registered rope is NOT pointlike across the rope. The only loophole is a rule that
+    the winding's field is sourced on the centreline with no transverse multipoles, which nothing registered supplies.
