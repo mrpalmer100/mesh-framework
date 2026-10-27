@@ -91,3 +91,6 @@ Branched from main at ed27c9e on 2026-10-18.
 - 2026-10-27: RING-WAVE-STABILITY re-filed as RING-WAVE-STABILITY-2 (declined name stays taken; the Director skipped the
   draft). CROSSING-PRICE-1 withdrawn by the worker before drafting (five reasons; D1 ill-posed as stated); the full
   abandonment text is being read before any redraft.
+- 2026-10-27 (later): CROSSING-PRICE-1 parked, the worker's five reasons conceded (f = 0 at the registered level by
+  JUNCTION-LOCK; the variational profile ill-posed without a span; the self-consistency degenerate). The kink candidate
+  is closed on the record: no well without the tie grant, pinned with it, kappa / c either way (ELEC_KINK_reading.md §4).
