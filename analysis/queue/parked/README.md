@@ -52,3 +52,15 @@ read this directory.
 - RING-WAVE-STABILITY (author's draft, 2026-10-26): never proposed; the name was taken by the Director's own
   Hessian-only proposal of 2026-10-25, which the author declined in favour of this draft, and the Director then read
   the declined name as covering the draft. Re-filed unchanged as RING-WAVE-STABILITY-2 (analysis/RING_WAVE_STABILITY_2_charter_DRAFT.md).
+- CROSSING-PRICE-1: withdrawn by the worker 2026-10-27 09:00 before drafting; the executor concedes all five reasons.
+  (1) D1 was ill-posed: a tension-bending profile with a point constraint and no span has infimum zero (E L stays at
+  1.234 as L grows), and l_b = r / sqrt 2 = 6.6e-20 m makes bending irrelevant; the price is T0 d^2 / 2L, set entirely
+  by an unregistered span. (2) D2's self-consistency was degenerate by algebra (U(x) = x^2 + 1 / (1 + x^4) has no
+  interior minimum; STANDOFF-NONE forced before any run). (3) The premise was stale: JUNCTION-LOCK (verdict
+  JUNCTION-FREE) found f = 0 identically at the registered level, NODE-STANDOFF found crossings away from nodes do
+  not interact, FND-070 assigns the just-in-contact placement to matter and not the vacuum, and FND-182 moved T2 to
+  T4; the executor had not read those records and re-opened a closed question. (4) The outcome was bounded: any
+  registered span gives PINNED by an order or more, as CROSSING-PRICE (w = 0.003 at touching) and NODE-STANDOFF's G5
+  already say. (5) Notation and T-1 bookkeeping defects. Not redrafted. The two alternatives the worker named (a price
+  sheet for V_0 as a function of unregistered A_c and span, with the coasting span L* of order 1e4 to 1e5 a; or the
+  junction's azimuthal locking under the 'tie holds the face' grant) are the author's to choose; neither is a commission.

@@ -37,3 +37,18 @@ field (a live discriminator against the laser record and Schwinger) waits on. Th
 unknown outcome: not the kink's mass, which the chain fixes once V_0 is known, but V_0 itself, which decides whether
 the registered winding coasts (f small, a keV kink, charge that moves) or is pinned (f of order 1, a sub-lattice
 kink, charge that does not). The charter for that is drafted beside this reading (CROSSING-PRICE-1).
+
+## 4. Closed by the record (2026-10-27, after the lab's withdrawal of CROSSING-PRICE-1)
+The worker's withdrawal, which I concede in full, settles the kink route on the registry as it stands:
+- At the registered level f = 0 identically (JUNCTION-LOCK, verdict JUNCTION-FREE): the registered vacuum has NO
+  on-site orientation potential, so the registered winding is a free rotor, not a kink. Section 2's coasting-regime
+  rows describe a hypothetical well, not the registered one.
+- The only other registered reading is the face-to-face tie at f about 3.5 (the first of the Director's two grants);
+  under it every kink is PINNED by three orders (w of order 1e-3 a; CROSSING-PRICE: w = 0.003 at touching), so the
+  charge carrier could not move. A coasting kink needs a span of 1e4 to 1e5 spacings that nothing registers.
+So the kink candidate is closed: with the registered contact there is no kink; with the tie grant there is a kink
+that cannot move; and in either case its action is kappa / c, the same wall. CROSSING-PRICE-1 is parked with the
+five reasons (analysis/queue/parked/README.md). What survives of the thought experiment's four candidates on the
+registry: the double-cover ring (RING-WAVE-STABILITY-2, FRAMED-EXCHANGE) and the screened vortex (needs a gapped
+twist mode, which the registered Goldstone is not). The executor's error, named: I drafted against the state of the
+registry as of FND-184 and did not read JUNCTION-LOCK and NODE-STANDOFF, which had already answered the question.
