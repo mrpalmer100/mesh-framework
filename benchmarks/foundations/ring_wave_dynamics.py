@@ -67,7 +67,7 @@ T = 1.0
 # ----------------------------------------------------------------------------------------------------------------
 # fields: q = (X.ravel() [3M], Phi [M]); Phi stored unwrapped with winding n (Phi_{i+M} = Phi_i + 2 pi n)
 # ----------------------------------------------------------------------------------------------------------------
-def make_lagrangian(M, kappa, winding, gauge_ref=None):
+def make_lagrangian(M, kappa, winding, gauge_ref=None, lock=0.0):
     """gauge_ref: if not None, the value of (x_0 - centroid) . y-hat that a gauge constraint holds fixed. The
     equal-spacing constraints leave one sliding mode (all nodes moving along the loop together, a relabelling):
     exactly null for the pure string (kappa = 0), where it must be pinned, and merely soft for kappa > 0, where the
@@ -94,6 +94,7 @@ def make_lagrangian(M, kappa, winding, gauge_ref=None):
         vperp2 = jnp.clip(u2 - vpar ** 2, 0.0, 1.0 - 1e-12)
         g = 1.0 / jnp.sqrt(1.0 - vperp2)
         f = -T / g + 0.5 * kappa * g * (W ** 2 - 2.0 * vpar * W * Phip - (1.0 - u2) * Phip2)
+        f = f - lock * (1.0 - jnp.cos(P))                                # SWEEP's lock, V'' per length (2026-10-27); 0 by default
         return jnp.sum(ell * f)
 
     def constraints(q):
@@ -108,7 +109,7 @@ def make_lagrangian(M, kappa, winding, gauge_ref=None):
 
 
 class StringIntegrator:
-    def __init__(self, M, kappa, winding, h, q0, freeze_shape=False, freeze_twist=False, gauge_pin=None):
+    def __init__(self, M, kappa, winding, h, q0, freeze_shape=False, freeze_twist=False, gauge_pin=None, lock=0.0):
         if jax is None:
             raise RuntimeError('JAX is required: pip install jax')
         self.M, self.kappa, self.winding, self.h, self.freeze, self.freeze_twist = M, kappa, winding, h, freeze_shape, freeze_twist
@@ -117,7 +118,7 @@ class StringIntegrator:
                                         # of 16 c on the beta = 0.5 member by t = 1); with it the price is a small torque,
                                         # measured by the J bar of every run (K4 reports both)
         X0 = np.asarray(q0)[:3 * M].reshape(M, 3); gauge_ref = float((X0[0] - X0.mean(0))[1]) if gauge_pin else None
-        Lf, gf, self.split = make_lagrangian(M, kappa, winding, gauge_ref)
+        Lf, gf, self.split = make_lagrangian(M, kappa, winding, gauge_ref, lock)
         N = 4 * M
         if freeze_shape:
             gf = lambda q: jnp.zeros(0)

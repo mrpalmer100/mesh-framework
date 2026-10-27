@@ -119,3 +119,7 @@ Branched from main at ed27c9e on 2026-10-18.
   unit-charge state's Lk = 1, whose frame returns every circuit. C1 fails: spin by the belt and charge by linking live on
   different states; SWEEP's hbar / 2 is an action, not a spin. A pi-periodic lock splits the unit charge into two unbound
   half-kinks (named debt). B1 and B3 untouched; T-3 next.
+- 2026-10-27 (B1): the beat made concrete (sweep_b1.py): on the locked azimuth the dispersion is omega^2 = Omega^2 + c^2 k^2
+  to 1e-7, the 2 pi kink has E = 8 sqrt(kappa V'') and width c / Omega and sits still for fifty beats, and the boosted kink
+  has gamma E_0, l / gamma and the set speed to 1e-4 to 1e-3: a relativistic soliton. ring_wave_dynamics gained a lock
+  term (default 0). T-2 failed (spin); T-3 (the core) next.

@@ -152,3 +152,22 @@ registered interaction binds them. Nothing registered does. That is a second deb
 What T-2 leaves standing: B1 (the beat) and B3 (E_c = pi / 5 of Schwinger) do not depend on C1 and are untouched.
 B2 (the kink as the electron) now owes the spin AND the binding of its halves. T-3 (the core as a point charge)
 still decides whether B2 survives at all.
+
+## B1 MADE CONCRETE (2026-10-27, sandbox; benchmarks/foundations/sweep_b1.py; log analysis/SWEEP_B1.log)
+The beat, on the locked azimuth of a rope held by its nodes (shape frozen, which is the physical case for a kink
+on a rope in the weave; the dynamics instrument gained the lock term, ring_wave_dynamics.make_lagrangian(lock=),
+0 by default, and with the shape frozen its twist sector is exactly the sine-Gordon equation, integrated here by
+Stoermer-Verlet at M = 1600). Units kappa = c = 1, V'' = 100, so Omega = 10 and l = c / Omega = 0.1.
+  (1) The gap is real and the dispersion is the massive one: omega(n)^2 = Omega^2 + omega_d(n)^2 to 1e-7 at n = 0, 5,
+      20 and 1e-5 at n = 80; the azimuth's lowest mode beats at Omega with no wavelength, and every mode above it
+      is the free wave with the beat added in quadrature.
+  (2) The static 2 pi kink: E = 79.9983 against 8 sqrt(kappa V'') = 80 (2e-5, the ring's finite size), width from
+      the maximal slope 0.10002 against c / Omega = 0.1; integrated for fifty beats it does not move and its energy
+      holds to 7e-14. The kink's width IS the screening length, as the identity said.
+  (3) The moving kink at v = 0.3, 0.6, 0.9: energy gamma E_0 to 2e-6, 1e-5, 9e-5; width l / gamma to 1e-4; it travels
+      at the set speed to 1e-3; energy conserved to 1e-9 or better. The locked twist sector is Lorentz covariant on
+      the instrument, so a kink has a rest energy, a Compton-scale rest width, and the kinematics of a particle.
+B1 is therefore not an assertion: a weak lock on the azimuth makes the medium beat, and the winding on that
+medium is a relativistic soliton of rest energy 8 sqrt(kappa V'') and width c / Omega. What B1 does not settle is
+unchanged: the value of the lock (P1), the stiffness (P2), the spin (T-2, failed), the binding of the halves under
+a pi-periodic lock (T-2's debt), and the core (T-3, not yet run).
