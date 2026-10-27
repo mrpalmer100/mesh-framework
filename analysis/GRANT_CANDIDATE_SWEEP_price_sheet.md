@@ -201,3 +201,13 @@ relativistic soliton, and the lock that reproduces the electron's mass and actio
 charge-creation field at pi / 5 of Schwinger. The executor's recommendation: DO NOT ADOPT as the electron; keep
 the sheet on record with T-1 to T-3 as the reason, per the author's instruction; the mechanism (a weak azimuthal
 lock) stays priced for any later object that is not a rope of registered strands.
+
+## T-3 CORRECTED (2026-10-27, later; analysis/ROAD1_centreline_reading.md)
+T-3 scored the winding as a coupling source (charge at the strands, Born form factor J0(q rho)). EM-015 registers the
+winding as a CONSTRAINT source and GRV-020 / ELEC-089 define its azimuth about the common centreline; the exterior
+field of a winding has no isotropic size correction, and a 2 pi kink averages every anisotropic one to zero
+(road1_check.py: the orientation-averaged field equals the point-winding field to 2e-15 outside the strands). The
+transverse form factor of the charge is 1; the bound of T-3 is a bound on the MASS form factor. The T-3 kill of B2
+is lifted pending the author's word on the FND-189 rider. T-2's findings stand: B2 still owes the spin and the
+binding of its halves. The decision line of "T-3 RUN" is therefore reopened: not adopted as the electron on T-2's
+grounds alone, with the size objection withdrawn.

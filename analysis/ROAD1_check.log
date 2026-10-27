@@ -1,0 +1,14 @@
+(1) exterior FIELD (grad Phi, single-valued) of the split reading, averaged over the pair orientation, against the point winding:
+    r = 1.05 rho: max relative |<E_split>_orientation - E_point| = 2.0e-15
+    r = 1.5 rho: max relative |<E_split>_orientation - E_point| = 1.2e-15
+    r = 3.0 rho: max relative |<E_split>_orientation - E_point| = 1.9e-15
+    r = 10.0 rho: max relative |<E_split>_orientation - E_point| = 1.4e-15
+    (exact outside rho by the mean-value property; inside r < rho the split reading differs, and the registered definition has no split)
+(2) the transverse form factor by source type (Born amplitude proportional to the Fourier transform of the potential):
+    q rho = 0.2: coupling-source ring of charge (T-3's model) F = J0 = +0.990;   constraint source on the centreline F = 1.000
+    q rho = 1.0: coupling-source ring of charge (T-3's model) F = J0 = +0.765;   constraint source on the centreline F = 1.000
+    q rho = 4.1: coupling-source ring of charge (T-3's model) F = J0 = -0.389;   constraint source on the centreline F = 1.000
+READ: T-3 scored the winding as a coupling source (charge at the strands); EM-015 says it is a constraint source and
+      GRV-020 / ELEC-089 put its singular line on the common centreline. Under the registered dictionary the EM form
+      factor of a 2 pi kink is F_par(q_par) alone; the transverse bound of FND-189 applies to the strands' STRESS field
+      (the mass channel, gravitational-class), not to the charge.

@@ -132,3 +132,8 @@ Branched from main at ed27c9e on 2026-10-18.
 - 2026-10-27 (registration): FND-189, the transverse size bound on a strand-borne charge and the SWEEP candidate declined
   on the author's word (kept on record as a mechanism with T-1, B1, T-2, T-3 and the tools); ledger R3 rider and the
   clean-room study's postscript updated. Enters main by the author's merge.
+- 2026-10-27 (Road 1): the dictionary reading (analysis/ROAD1_centreline_reading.md): EM-015 makes the winding a constraint
+  source and GRV-020 / ELEC-089 define it about the common centreline; a winding's exterior field has no isotropic size
+  term and a 2 pi kink averages the anisotropic ones to zero (road1_check.py, 2e-15). T-3 had scored a coupling source;
+  its transverse bound (FND-189) is a bound on the mass form factor, not the charge. Riders proposed for the author's
+  word: FND-189 narrowed to the stress channel; SWEEP's T-3 kill lifted (T-2's stand).
