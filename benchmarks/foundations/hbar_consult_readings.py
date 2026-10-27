@@ -64,5 +64,31 @@ def reading_b():
     print('  at the registered value xi / a is about 1, short of 74.6 by 75 in length and 5600 in action.')
 
 
+def reading_c():
+    """READING C (2026-10-27, idea 1 of the executor's memo, run as the table it asked for): the count routes.
+    BELOW the strand: the substructure grant (FND-087 / FND-110) makes a coarse strand a bundle of n_sub fibres with
+    T0_f = T0 / n_sub and a_f = a / sqrt(n_sub) (n_sub = (a / a_f)^2, FINE-DISP-1 D4). The fibre's own quantum is
+    S_f = pi T0_f a_f^2 / 2c = S1 / n_sub^2; summing n_sub fibres coherently at the coarse amplitude gives back S1
+    (tension additivity, QGATE-005), incoherently S1 / n_sub. The fine level LOWERS the quantum: no value of n_sub
+    helps, whatever the dispersion bound says. ABOVE the strand: a rope of n_rs strands (R ~ a sqrt(n_rs), FND-110)
+    under tension additivity has S_rope = n_rs S1 at amplitude a, so hbar / 2 fixes n_rs and R."""
+    T0, a = 434.0, 6.0e-17
+    S1 = math.pi * T0 * a ** 2 / (2 * C_LIGHT)
+    print('READING C: the count routes')
+    print('  below (n_sub): S_f = S1 / n_sub^2; the bundle returns S1 (coherent) or S1 / n_sub (incoherent):')
+    for label, a_f in (("the grant's a_f = lambda / 4 at 1.4 PeV", 2.21e-22), ("the dispersion-bound a_f ~ 1e-27 m (beta_f of order 1e-2)", 1.0e-27)):
+        n = (a / a_f) ** 2
+        print(f'    {label}: n_sub = {n:.1e}; hbar / S_f = {HBAR / (S1 / n ** 2):.1e}; coherent bundle hbar / S = {HBAR / S1:.0f}; incoherent {HBAR / (S1 / n):.1e}')
+    print('    -> no n_sub raises the quantum; the route below the strand is closed by construction.')
+    print('  above (n_rs): S_rope = n_rs S1 at amplitude a (tension additivity), R = a sqrt(n_rs):')
+    for label, target in (('hbar / 2', HBAR / 2), ('hbar', HBAR)):
+        n = target / S1; R = a * math.sqrt(n)
+        print(f'    {label}: n_rs = {n:.0f}, R = {R:.2e} m = {math.sqrt(n):.0f} a = {R * 1e15:.1f} fm')
+    print('  HBAR-005 for comparison: L_hbar = sqrt(hbar c / T) = 4.312 fm at its T; at the M-point sqrt(hbar c / T0) = '
+          f'{math.sqrt(HBAR * C_LIGHT / T0) * 1e15:.2f} fm = {math.sqrt(HBAR * C_LIGHT / T0) / a:.0f} a.')
+    print('  Registered handles on n_rs: none derived (FND-MATTER-003: charge counts winding, not packing); EM-RECON-034 (off-registry')
+    print('  family, scoped by EM-RECON-035) indicated r_w / xi near 0.05, the opposite direction if xi is the strand scale; QGATE-003 n_t = 111 dissolved.')
+
+
 if __name__ == '__main__':
-    reading_a(); reading_b()
+    reading_a(); reading_b(); reading_c()

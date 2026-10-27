@@ -131,3 +131,41 @@ the registry already classifies. The one open item with a registered falsifier i
 which is a table nobody has made: the dispersion bound on n_sub carried to a number. The author decides whether to
 commission that table; it is arithmetic on the card plus FND-REL-004's bound, an executor reading of a day if the
 bound's inputs are on the record, and it either lands n_sub near 1e4 under a stated bundle rule or it does not.
+
+## 5. Reading C (2026-10-27): the count routes, run as the table idea 1 asked for
+The author said run it. The result closes idea 1 as stated and relocates what is left of it.
+
+BELOW THE STRAND (n_sub, the substructure grant). The grant makes a coarse strand a bundle of n_sub fibres with
+T0_f = T0 / n_sub and a_f = a / sqrt(n_sub). A fibre's own quantum is S_f = pi T0_f a_f^2 / 2c = S1 / n_sub^2; the
+bundle, summed coherently at the coarse amplitude, returns exactly S1 (tension additivity, QGATE-005), or S1 / n_sub
+incoherently. The fine level can only LOWER the action quantum. At the grant's a_f (lambda / 4 at 1.4 PeV, n_sub =
+7.4e10) hbar / S_f = 7e25; at the dispersion-bound a_f (n_sub = 3.6e21) it is 1.7e47. No value of n_sub helps, so
+FND-REL-004's bound on it is irrelevant to hbar, and the idea as I stated it on 2026-10-26 was wrong in direction:
+a count that multiplies S1 has to sit ABOVE the strand, not below it. Closed by construction; no instrument needed.
+
+ABOVE THE STRAND (n_rs, strands per rope; FND-110's one underived integer above the anchor). Under tension
+additivity a rope of n_rs strands carrying one coherent transverse quantum at amplitude a has S_rope = n_rs S1, so
+hbar / 2 = S_rope fixes n_rs = 6441 and the rope radius R = a sqrt(n_rs) = 80 a = 4.8 fm (hbar: 12,882 and 6.8 fm).
+This is HBAR-005's mesoscopic patch (L_hbar = 4.3 fm at its parameters; 8.5 fm = 142 a at the M-point) read as the
+rope's own cross-section rather than as a coherence length in the medium: "hbar is the action of one rope of about
+1e4 strands moving together". It is the one count route still open, and it has exactly the standing of the
+HBAR-005 patch: a dimensional identity with no mechanism selecting the amplitude or the coherence, now with a
+named integer the registry already wants for other reasons (EM-RECON-008's core closure hangs on r_w / xi, which
+FND-110's ladder says hangs on n_rs).
+Falsifier: an independent n_rs outside [3e3, 3e4] (hbar / 2 to hbar, both parameter points). Registered handles:
+none derived (FND-MATTER-003's kept obstruction: charge counts winding, not packing). One scoped indication points
+the other way: EM-RECON-034's off-registry profile family (scoped by EM-RECON-035) met its bands only at
+r_w / xi near 0.05, a rope twenty times SMALLER than the healing length; if xi is the strand scale that is
+n_rs of order 1e-3 against the 6e3 wanted here, and if xi is much larger than a there is no conflict. Not a kill,
+since the family is off-registry; a tension to record. The price, stated plainly: a 5 fm rope is a nuclear-scale
+object, and whatever the electron is in this framework it must then be either a rope that size or not the object
+that carries the quantum; the form-factor line (ELEC-036 branch C, ELEC-FF-SUB-1/2 withdrawn) is where that bill
+would be presented.
+
+## 6. What stands after reading C
+Four routes closed with numbers (twist stiffness, screening length, the count below the strand, Terra's slow mode)
+and one open with the standing of a dimensional identity (the count above the strand, n_rs about 6e3 at the
+M-point). The open one is not a search either: it is the statement that the registry's missing integer n_rs and
+the hbar wall are the same number, which FND-110 and EM-RECON-034 had already said between them for the rope-core
+closure. A mechanism that selects n_rs (why a rope has 6e3 strands rather than 60 or 6e6) would be the grant; the
+consult did not find one, and I do not have one.

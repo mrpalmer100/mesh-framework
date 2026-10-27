@@ -14,3 +14,14 @@ READING B: the patch as the screening length
     bare 0.0192: net m^2 0.0002, xi / a = 74.60, action ratio (xi / L_hbar)^2 = 1.00e+00
   The patch requires the bare cost tuned to within 1 percent of the zero-point correction (bare = 0.0192), against a registered O(1);
   at the registered value xi / a is about 1, short of 74.6 by 75 in length and 5600 in action.
+READING C: the count routes
+  below (n_sub): S_f = S1 / n_sub^2; the bundle returns S1 (coherent) or S1 / n_sub (incoherent):
+    the grant's a_f = lambda / 4 at 1.4 PeV: n_sub = 7.4e+10; hbar / S_f = 7.0e+25; coherent bundle hbar / S = 12882; incoherent 9.5e+14
+    the dispersion-bound a_f ~ 1e-27 m (beta_f of order 1e-2): n_sub = 3.6e+21; hbar / S_f = 1.7e+47; coherent bundle hbar / S = 12882; incoherent 4.6e+25
+    -> no n_sub raises the quantum; the route below the strand is closed by construction.
+  above (n_rs): S_rope = n_rs S1 at amplitude a (tension additivity), R = a sqrt(n_rs):
+    hbar / 2: n_rs = 6441, R = 4.82e-15 m = 80 a = 4.8 fm
+    hbar: n_rs = 12882, R = 6.81e-15 m = 113 a = 6.8 fm
+  HBAR-005 for comparison: L_hbar = sqrt(hbar c / T) = 4.312 fm at its T; at the M-point sqrt(hbar c / T0) = 8.54 fm = 142 a.
+  Registered handles on n_rs: none derived (FND-MATTER-003: charge counts winding, not packing); EM-RECON-034 (off-registry
+  family, scoped by EM-RECON-035) indicated r_w / xi near 0.05, the opposite direction if xi is the strand scale; QGATE-003 n_t = 111 dissolved.
