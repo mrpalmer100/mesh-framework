@@ -72,3 +72,8 @@ Branched from main at ed27c9e on 2026-10-18.
   executor's idea 1 wrong in direction); the count above the strand, n_rs strands per rope under tension additivity, gives
   hbar / 2 at n_rs = 6441 and a rope radius of 80 a = 4.8 fm, which is HBAR-005's patch read as the rope's cross-section;
   open with the standing of a dimensional identity, no registered handle on n_rs, one scoped indication the other way.
+- 2026-10-27: GRANT-HBAR-ROPE registered as FND-188 on the author's word (decision 1: hbar; conditions C1 to C4 as
+  drafted): the quantum of action at the rope level, n_rs = 12,882, R = 6.8 fm, Author-granted with the auto-supersession
+  tripwire and the clean room. Card section 5c, ledger R3 rider, charter analysis/GRANT_HBAR_ROPE_DRAFT.md. Named
+  next-orders: N1 the scale wall re-priced on the rope (reading), N2 the form-factor line on the rope radius (charter),
+  N3/N4 done here. The registration enters main only by the author's merge of the queue branch.
