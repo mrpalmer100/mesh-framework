@@ -171,3 +171,33 @@ B1 is therefore not an assertion: a weak lock on the azimuth makes the medium be
 medium is a relativistic soliton of rest energy 8 sqrt(kappa V'') and width c / Omega. What B1 does not settle is
 unchanged: the value of the lock (P1), the stiffness (P2), the spin (T-2, failed), the binding of the halves under
 a pi-periodic lock (T-2's debt), and the core (T-3, not yet run).
+
+## T-3 RUN (2026-10-27, sandbox; benchmarks/foundations/sweep_t3.py; log analysis/SWEEP_T3.log)
+The kink's charge is its winding density sech(s / l) along the rope, carried on strands at radius rho across it;
+a probe sees F(q) = sech(pi q l / 2) J0(q rho).
+  (a) ALONG the rope: <s^2>^(1/2) = 1.75e-13 m against the Dirac electron's own Darwin spread 3.34e-13 m (the
+      ratio of mean squares 0.27); F_par = 0.755 at q = m_e c / hbar and 0.997 at a tenth of it. A Compton-length
+      kink has the charge spread QED already attributes to the electron. Not a kill; if anything the right order.
+  (b) ACROSS the rope: e+ e- -> e+ e- tests of QED at the 1 percent level bound a transverse charge radius to
+      1.3e-18 m (PETRA class, 30 GeV/c) and 4e-19 m (LEP2 class, 100 GeV/c). The registered pair has
+      rho = d0 / 2 = 8.1e-18 m (21 times over; F_perp = -0.39 at 100 GeV/c); the 50-strand bundle 4.2e-16 m
+      (1,100 times over); the 373-strand bundle 1.5e-15 m (3,800 times over).
+READ. B2 is KILLED across the rope on an experimental bound, for every strand count including the registered
+pair: a charge carried on strands at the registered spacing a = 6.0e-17 m is not pointlike to e+ e- scattering by
+one to three orders of magnitude. This is not specific to SWEEP: it is a statement about ANY mesh electron whose
+charge sits on strands at the registered standoff, and it is the form-factor bill FND-188's P1 named, presented
+now with a number. The one loophole is a registered rule that a winding's field is sourced on the rope's
+centreline with no transverse multipoles (the probe coupling to the topological charge and not to where the
+strands are); the EM dictionary (EM-015 to EM-022) is silent on it, and nothing registered supplies it. That
+loophole is itself a grant, and a larger one than SWEEP.
+What stands: B1 (the beat, made concrete) and B3 (E_c at pi / 5 of Schwinger) do not depend on the transverse
+structure of the charge; they are properties of the lock and the kink's length, not its cross-section.
+
+## Decision line, revised after T-2 and T-3
+The candidate as a MODEL OF THE ELECTRON (B2) is dead on this registry: no spin (T-2), unbound halves under a
+pi-periodic lock (T-2), and a transverse charge radius one to three orders above the e+ e- bound (T-3). The
+candidate as a MECHANISM (B1, B3) survives: a weak lock makes the medium beat, the winding on it is a
+relativistic soliton, and the lock that reproduces the electron's mass and action puts the vacuum's
+charge-creation field at pi / 5 of Schwinger. The executor's recommendation: DO NOT ADOPT as the electron; keep
+the sheet on record with T-1 to T-3 as the reason, per the author's instruction; the mechanism (a weak azimuthal
+lock) stays priced for any later object that is not a rope of registered strands.

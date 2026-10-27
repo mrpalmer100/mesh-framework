@@ -123,3 +123,9 @@ Branched from main at ed27c9e on 2026-10-18.
   to 1e-7, the 2 pi kink has E = 8 sqrt(kappa V'') and width c / Omega and sits still for fifty beats, and the boosted kink
   has gamma E_0, l / gamma and the set speed to 1e-4 to 1e-3: a relativistic soliton. ring_wave_dynamics gained a lock
   term (default 0). T-2 failed (spin); T-3 (the core) next.
+- 2026-10-27 (T-3): the kink's charge against the pointlike bound (sweep_t3.py): along the rope a Compton-length kink
+  carries the Darwin-order spread QED already has (not a kill); across the rope the charge sits on strands at radius
+  8e-18 m (pair) to 1.5e-15 m (bundles), 21 to 3,800 times above the e+e- bound of 4e-19 m at 100 GeV/c. B2 (the kink as
+  the electron) killed for every strand count, and the statement is general: any charge on strands at the registered
+  spacing is not pointlike to e+e- scattering by one to three orders; the loophole (field sourced on the centreline, no
+  transverse multipoles) is unregistered. SWEEP not adopted as the electron; B1 and B3 kept on record as a mechanism.
