@@ -1,0 +1,11 @@
+FULL TWIST (2 pi kink; two closed strands; the registered Lk = 1 charge):
+  d/R 0.3: Lk(X, Y) = -1.0000;  strand X ledger with the partner frame: Tw -0.9996 Wr -0.0004 SL -1.0000
+  d/R 0.1: Lk(X, Y) = -1.0000;  strand X ledger with the partner frame: Tw -1.0000 Wr -0.0000 SL -1.0000
+  d/R 0.03: Lk(X, Y) = -1.0000;  strand X ledger with the partner frame: Tw -1.0000 Wr -0.0000 SL -1.0000
+HALF TWIST (pi kink; the strands exchange; ONE closed strand of two circuits, a (2,1) torus curve):
+  d/R 0.3: the doubled strand: Tw -1.0084 Wr -0.9916 SL = Tw + Wr -2.0000;  frame after one circuit n.n0 = -1.000 (reversed), after two +1.000
+  d/R 0.1: the doubled strand: Tw -1.0009 Wr -0.9991 SL = Tw + Wr -2.0000;  frame after one circuit n.n0 = -1.000 (reversed), after two +1.000
+  d/R 0.03: the doubled strand: Tw -1.0001 Wr -0.9999 SL = Tw + Wr -2.0000;  frame after one circuit n.n0 = -1.000 (reversed), after two +1.000
+QUARTER-TURN CONTROL (not a closed state; the frame does not return): skipped by construction.
+READ: the half-twist state exists as a closed object only as a single doubled strand; its integer is SL,
+      printed above; the full-twist state carries Lk = 1 with the frame returning every circuit.

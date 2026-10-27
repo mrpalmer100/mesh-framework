@@ -128,3 +128,27 @@ decided: no lepton spectrum from one lock). T-3 is the one that can kill the can
 (the electron's size) without any registration, and T-2 is the one that decides whether the candidate's hbar / 2
 is a spin or only an action. If both survive, the candidate is worth adopting for B3's number alone: a charge-
 creation field at pi / 5 of Schwinger is the first zero-parameter prediction the electron sector has produced.
+
+## T-2 RUN (2026-10-27, sandbox; benchmarks/foundations/sweep_t2.py; log analysis/SWEEP_T2.log)
+On the registered Calugareanu machinery (strand_calugareanu.twist_from_frames; the exact polygon writhe), a rope
+of two strands at separation d around a circle of radius R, M = 2400 nodes, three thin-rope ratios d / R = 0.3,
+0.1, 0.03:
+  FULL TWIST (the 2 pi kink; two closed strands): Lk(X, Y) = 1.0000 by the Gauss linking integral at every d / R;
+    each strand's ledger with the partner-pointing frame Tw + Wr = 1.0000 (Tw 1.0000, Wr 0.0000 in the thin limit).
+    The frame returns after ONE circuit. This is the registered unit charge (GG-006).
+  HALF TWIST (the pi kink; the strands exchange; one closed strand of two circuits, the (2, 1) torus curve): the
+    frame is reversed after one circuit (n . n0 = -1.000) and returns after two (+1.000): the double cover is real.
+    The doubled strand's ledger: Tw = 1.000, Wr = 1.000, SELF-LINKING SL = Tw + Wr = 2.0000 at every d / R.
+READ. C1 FAILS at the registered charge accounting. The state whose frame needs two circuits to return carries
+self-linking 2, twice the integer of the unit-charge state; the unit-charge state (Lk = 1) returns its frame every
+circuit and has no double cover. Spin 1/2 by the belt and charge e by linking are carried by DIFFERENT states of
+the rope, and no registered rule assigns a charge to the half-twist state at all (FND-184's pre-adoption read:
+"a half material twist is twist, not linking"). So the hbar / 2 that SWEEP's kink carries is an action and not a
+belt-trick spin of the charged state; P5 stands as a price, not a hope; g = 2 and spin 1/2 are not one fact here.
+A structural consequence for the record, not scored: FND-184's lock has period pi, so a 2 pi kink is two pi kinks,
+which in a pi-periodic potential do not bind; the unit charge on such a rope would split into two separated
+half-kinks, each a local exchange of the strands (the fractionalization of polyacetylene's soliton), unless a
+registered interaction binds them. Nothing registered does. That is a second debt on B2, named here.
+What T-2 leaves standing: B1 (the beat) and B3 (E_c = pi / 5 of Schwinger) do not depend on C1 and are untouched.
+B2 (the kink as the electron) now owes the spin AND the binding of its halves. T-3 (the core as a point charge)
+still decides whether B2 survives at all.

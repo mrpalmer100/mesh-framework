@@ -114,3 +114,8 @@ Branched from main at ed27c9e on 2026-10-18.
   calibrated by m_e; the stiffness wall as a strand count (50 to 370); incompatible with FND-188 (supersedes it under C1
   if adopted); the core size against compositeness bounds; the muon cannot be an excited kink (T-4 decided). Held
   pending T-2 (frame locking) and T-3 (the kink's far field as a point charge).
+- 2026-10-27 (T-2): SWEEP's frame-locking test run on the Calugareanu machinery (sweep_t2.py): the half-twist state has
+  the double cover (frame reversed after one circuit, restored after two) but carries self-linking 2, twice the
+  unit-charge state's Lk = 1, whose frame returns every circuit. C1 fails: spin by the belt and charge by linking live on
+  different states; SWEEP's hbar / 2 is an action, not a spin. A pi-periodic lock splits the unit charge into two unbound
+  half-kinks (named debt). B1 and B3 untouched; T-3 next.
