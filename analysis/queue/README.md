@@ -77,3 +77,8 @@ Branched from main at ed27c9e on 2026-10-18.
   tripwire and the clean room. Card section 5c, ledger R3 rider, charter analysis/GRANT_HBAR_ROPE_DRAFT.md. Named
   next-orders: N1 the scale wall re-priced on the rope (reading), N2 the form-factor line on the rope radius (charter),
   N3/N4 done here. The registration enters main only by the author's merge of the queue branch.
+- 2026-10-27: N1 of FND-188 executed (analysis/ELEC_SCALE_WALL_rope_reading.md, benchmarks/foundations/elec_scale_wall_rope.py):
+  the travelling-twist class's E^2 = 8 pi T c J fixes the tension it needs at T* = T0 / 25,700 regardless of kappa; on the
+  granted rope the class overshoots J by 5e4 and E by 4e6, the 57-strand bundle carrying hbar / 2 weighs 617 MeV, the pair
+  keeps E near m_e c^2 (calibration) with J short by 4e4. The grant moved nothing toward the electron; FND-188's P2 estimate
+  superseded by a rider on the claim. The sector's wall is a tension rung between the fine level and the strand.
