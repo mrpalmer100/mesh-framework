@@ -101,3 +101,8 @@ Branched from main at ed27c9e on 2026-10-18.
   scored against the electron, then mapped axiom by axiom onto the registry: A1, A2, A5 registered; A3 untested as spin;
   A4 (a mode at the zitter frequency with the twist's far field relaxed beyond half a Compton wavelength) absent, and the
   whole map; no registered candidate beats within three orders. Not a claim.
+- 2026-10-27: the beat census (analysis/BEAT_CENSUS_reading.md, benchmarks/foundations/beat_census.py): every registered
+  mode against Omega = 1.55e21 rad/s; nothing within 1.5 orders except FND-188's rope ring mode at 28x (a rider, not a
+  mode); the only gap route (the junction tie) six orders high; the unpriced standoff mode excluded by the A_c bound by
+  2e7. Reading: a beat for the twist is a gap for EM's own U(1) (FND-185), so the question is closure gap 3, a second
+  internal angle with a restoring force; grant-class.
