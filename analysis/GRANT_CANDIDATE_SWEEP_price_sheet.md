@@ -1,0 +1,130 @@
+# GRANT-CANDIDATE-SWEEP -- the loosened thread: a weak lock on the rope's azimuth, priced for the author's desk
+# (DRAFT 2026-10-27; a candidate, not a grant; the decision is reserved to the author; the author's standing
+# instruction: pursue it to the extent it leads to the proper cadence, and if it does not, retract and keep on record)
+
+## Why a candidate exists
+The clean-room study (docs/CLEAN_ROOM_ELECTRON_STUDY.md) reduced the mechanical electron to one absence in the
+registry: a beat, a mode of the medium at the zitterbewegung frequency Omega = 2 m_e c^2 / hbar with the twist's
+far field relaxed beyond c / Omega. The beat census (analysis/BEAT_CENSUS_reading.md) found nothing registered within
+thirty-fold of it. The census also recorded an objection: a gap for the rope's azimuth would gap the U(1) that is
+electromagnetism. That objection is WRONG on the registry as it stands, and finding so is what makes this candidate
+possible: GRV-102 and EM-RECON-025 resolved the "torsion dynamics = light" clause of GRV-020 as an allocation that
+over-reached; light is the collective transverse Goldstone pair (two polarizations), not the azimuth wave (one).
+Charge remains the azimuth's winding; the photon does not live on the azimuth. The azimuth may therefore be gapped.
+Gaede's picture, that a rope's threads can loosen and sweep around their partner, is this degree of freedom; the
+registry's name for its lock is f (NODE-STANDOFF: V_0 = f T0 a / 2 per node), which JUNCTION-LOCK found to be zero
+at the registered level and which the face-holding tie would put at about 3.5. The candidate is a THIRD value of f,
+small, with its consequences priced before anyone chooses it.
+
+## The candidate, stated in full
+The rope's internal azimuth Phi (GRV-020's Goldstone, whose winding is charge) is weakly locked to its surroundings
+by a periodic potential V(Phi) = V_0 (1 - cos Phi) per node, V_0 = f T0 a / 2 with f much smaller than one, so that:
+  (i)   the azimuth has a gap, Omega^2 = V'' / I with V'' = V_0 / a per length and I = kappa / c^2 the azimuth's
+        inertia per length (an IDENTITY for the tension-geometric stiffness kappa = T0 sum rho^2, since mu = T0 / c^2:
+        the inertia and the stiffness are the same sum);
+  (ii)  a winding of the azimuth is a sine-Gordon kink of width l = sqrt(kappa / V'') = c / Omega, which is the
+        screening length by identity, with rest energy E = 8 sqrt(kappa V'') and action E / Omega = 8 kappa / c with
+        no free amplitude (A5 of the study);
+  (iii) FND-182's charge-creation identity E_c = (4 pi / 5) V_0 / (e a) applies to it unchanged.
+Nothing else is granted: no new field, no new constant beyond f, and f is not chosen here.
+
+## What it is and is not
+It is a weak on-site potential for a registered angle, of the kind the registry has priced twice (NODE-STANDOFF's
+f-table; STRAND-MASS-SCALE's chain) and once found to be zero (JUNCTION-LOCK, at the registered contact). It is not a
+derivation of f: JUNCTION-LOCK's f = 0 was by construction (a point node with a harmonic bond has no azimuth), so a
+nonzero f needs a node that is not a point, which is the "tie holds the face" extension FND-184 named and the
+author did not grant. SWEEP is that extension with the tie's strength left to be measured rather than priced at 3.5.
+
+## The cheap test, run (T-1; benchmarks/foundations/sweep_t1.py; log analysis/SWEEP_T1.log)
+Impose the electron on (i) to (iii): E = m_e c^2 and 8 kappa / c = hbar / 2 (so that the kink's action is the spin and
+Omega is the zitter frequency). Everything is then fixed:
+    kappa = hbar c / 16 = 1.98e-27 J m         the one input; the pair has 5.7e-32, the FND-188 rope 1.3e-22
+    Omega = 1.553e21 rad/s                      the beat, by construction
+    l = c / Omega = 1.93e-13 m = 3,218 a        the kink coasts (far above the 2.8 a regime edge)
+    V'' = m_e^2 c^3 / 4 hbar = 5.3e-2 J/m;  V_0 = 19.8 eV per node;  f = 2.4e-4
+    E_c = (4 pi / 5) V'' / e = 8.3e17 V/m = (pi / 5) E_Schwinger   914 times the laser record, 0.63 of Schwinger
+    strands for kappa: 50 at disk packing (R = 4.3e-16 m), 373 at the pair's packing
+Two of these are identities that hold for ANY kappa once the electron is imposed, and they are the content:
+the kink width equals the screening length c / Omega, and the charge-creation field is pi / 5 of the Schwinger
+field. The second was not put in. FND-182's identity came from a strain-gradient force law on a winding, with no
+hbar in it; the Schwinger field is QED's pair-creation threshold. That a weak azimuthal lock tuned only to the
+electron's mass and spin lands its charge-creation field at 0.63 of QED's threshold is the kind of coincidence
+the house records and does not read; it is recorded here, and it is the first thing a falsifier would test.
+
+## The price (on the face)
+P1. f is calibrated by m_e, as the M-point's a and T0 are (FND-MATTER-044). The candidate buys the structure (a gap
+    for the azimuth with the kink as the charge carrier), not the number. The beat census says no registered
+    mechanism produces f = 2.4e-4; it is a node property the registry does not hold.
+P2. kappa = hbar c / 16 is the stiffness wall by another name: the electron's rope must have about 50 strands at
+    disk packing or 370 at the pair's. The registered pair has neither. The candidate does not remove the wall; it
+    converts "kappa / hbar c" into a strand count for the electron's rope, which is a different count from
+    FND-188's.
+P3. INCOMPATIBLE WITH FND-188 AS STATED. GRANT-HBAR-ROPE puts the quantum of action in the coherent transverse
+    motion of a 12,882-strand rope; SWEEP puts it in the twist kink of a 50- to 370-strand rope. Both cannot be
+    the electron. If SWEEP is adopted, the electron's n_rs falls outside FND-188's factor-3 tripwire by two orders,
+    and FND-188 supersedes by its own C1, kept on record (the author's instruction). The HBAR-005 patch would then
+    be the kink's length (3,218 a) rather than a rope's radius.
+P4. THE CORE SIZE. The kink's transverse core is the rope's radius, 4e-16 m at disk packing. The electron's
+    compositeness bounds (from g - 2 and high-energy scattering) sit near 1e-18 to 1e-19 m. The candidate survives
+    only if what a probe scatters from is the winding's far field (a scalar topological charge sourced at the
+    core) and not the rope's material cross-section; that is design item (i) of the study, unsolved.
+P5. The kink carries no angular momentum of its own; the spin hbar / 2 enters as the kink's ACTION 8 kappa / c,
+    not as a mechanical J. Whether that action is a spin is C1 of the study (the frame locking), unsolved.
+
+## What it buys (if granted, each a registered consequence)
+B1. The beat: the medium has a mode at the zitter frequency, A4 of the study, and D6 (quantization as resonance)
+    becomes a registered question rather than an absence.
+B2. The electron as a Compton-length coasting kink of the azimuth on a rope of order 50 to 370 strands, with
+    E = m_e c^2, action hbar / 2, size c / Omega, pointlike winding core, topological charge, pair threshold 2 m_e c^2.
+B3. A PREDICTION with no free parameter: vacuum charge creation at E_c = (pi / 5) E_Schwinger = 8.3e17 V/m, below
+    QED's threshold by 0.63 and above the laser record by 900. FND-182 moves from T4 back to a live discriminator
+    with a single number instead of a three-order window.
+B4. Gap 2 (V_0) closes with a value; gap 3 (the internal dimension) is NOT touched, because the azimuth is the
+    registered angle and light was never on it.
+
+## Falsifiers (any one kills the candidate as stated)
+F1. If light is the azimuth wave after all (a reversal of EM-RECON-025's resolution), the gap is a photon mass of
+    m_e c^2 and the candidate is dead on arrival.
+F2. E_c: observation of vacuum charge creation at any field below 8.3e17 V/m without a QED mechanism, or its
+    absence at fields above 8.3e17 V/m within the mechanism's window, kills it; the laser record (9.1e14, no
+    creation) is consistent and is the floor.
+F3. The core: a registered electron structure computation on a 50-strand rope that puts a material cross-section
+    of 4e-16 m in the scattering amplitude kills it (P4).
+F4. The lock: any registered determination of the node's azimuthal lock (a derivation of the tie, a dynamical pin)
+    that lands outside a factor 3 of V_0 = 20 eV per node kills it by name (the FND-121 tripwire form).
+F5. The count: an independent determination of the electron rope's strand count outside [50 / 3, 373 x 3] kills it.
+
+## Scope discipline
+The granted f may not be used to confront hbar or m_e (it was set by them; clean room, as FND-188 C3). It MAY be used
+to confront E_c (B3), the kink's size, the gap's consequences for the twist spectrum, and the generation spectrum
+(the kink's excited states, C2 of the study). Every quantity carrying it takes the SWEEP rider.
+
+## Retirement clause (the author's instruction, written in)
+If the candidate, adopted, does not lead to the cadence (the beat with its consequences B1 to B3 surviving one
+locked confrontation), it is retracted by name on the same release, every SWEEP-rider quantity reverts, FND-188
+is reinstated if it was superseded under P3, and the sheet stays on the record with the reason.
+
+## Cheap tests still runnable before any adoption (sandbox, no machine time)
+T-2. The frame locking (C1): on the dynamics instrument, whether a 2 pi azimuth kink on a framed closed rope
+     carries a half turn of the Calugareanu frame per circuit (FND-STRAND-003's ledger); known-answer credential
+     on the static twisted ring. Decides whether the kink's action is a spin.
+T-3. The far field of the kink (P4): the azimuthal winding's field outside the rope under the registered 1/r
+     conditioning (GRV-005) with the gap, i.e. whether the screened winding presents a point charge at distances
+     between 4e-16 m and 2e-13 m. Closed forms.
+T-4. The generation ratio (C2), DECIDED HERE at zero cost: a sine-Gordon kink has no internal bound state (its
+     only discrete mode is translation; the breather is a neutral kink-antikink pair), and any periodic lock's kink
+     has its internal modes BELOW the continuum edge, so no excitation of the kink sector exceeds E_0 + hbar Omega =
+     3 E_0 (E_0 = hbar Omega / 2). The muon at 206.8 E_0 cannot be an excited electron kink. Dirac's membrane test
+     fails for the excited-state reading, as it did for Dirac. The alternative the chain allows: generations as
+     three LOCK STRENGTHS on one rope, f = 2.4e-4, 10.4 (= 206.8^2 f_e) and 2950, each with the spin unchanged
+     (8 kappa / c is the rope's, not the lock's), each with its kink width at its own Compton scale, and each with
+     E_c = (pi / 5) of its own Schwinger field. That is a restatement with three inputs, not a prediction, unless
+     the three f follow from a registered node structure; it is recorded so that nobody mistakes B2 for a lepton
+     spectrum. B2 holds for the electron alone.
+
+## Decision line (the author's)
+Adopt / decline / hold pending T-2 and T-3. The executor's recommendation: HOLD and run T-2 and T-3 first (T-4 is
+decided: no lepton spectrum from one lock). T-3 is the one that can kill the candidate on an experimental bound
+(the electron's size) without any registration, and T-2 is the one that decides whether the candidate's hbar / 2
+is a spin or only an action. If both survive, the candidate is worth adopting for B3's number alone: a charge-
+creation field at pi / 5 of Schwinger is the first zero-parameter prediction the electron sector has produced.
