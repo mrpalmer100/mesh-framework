@@ -190,3 +190,38 @@ valley, scored as NEUTRAL-HOLDS / DRIFTS / WOBBLES.
 (c) ONE EVIDENCE-STATE CONTACT, disclosed: before the pin existed, the n = 2 shape probe at epsilon = 1e-2 was
 started on the beta = 1 state at M = 16 and aborted by the sliding runaway at t = 1.28 (0.3 of a period). Nothing
 about stability was read or readable from it; it is in the charter's disclosures for the reviewers to judge.
+
+## 9. Part 2 addendum (2026-10-27): the shape observable, K6
+
+RING-WAVE-STABILITY-2's external reviewer (round 3) found that the lab worker's shape observable, a Procrustes
+alignment on node index, reports a shape change for an unchanged loop whose nodes have slid cyclically. The point is
+sharper than a relabeling: in the arc-length gauge the nodes are equally spaced along the loop, so the gauge's
+collective sliding mode moves every node ALONG the shape by a fractional spacing, and an indexed-node residual then
+reads up to half a spacing, 0.096 R at M = 48, which is 32 epsilon R_d at the scored amplitude 3e-3: an artifact
+three hundred times the hold bar that the circular control cannot show (a circle slid is the same polygon) and
+that agrees across M and h (it is shared). The observable is replaced by shape_distance in ring_wave_dynamics.py:
+the reference polygon is interpolated trigonometrically in its node index (spectral for these smooth shapes), and
+the worst node residual is minimized over a continuous uniform index shift (the slide), a rigid rotation (Kabsch)
+and a translation, then per node over the curve parameter (projection onto the curve, since an equal-chord polygon
+inscribed in a curve at a slid start has index spacings uniform only to O(spacing^2)), finished by a joint least
+squares over the rigid motion and the curve parameters (the projection-and-refit iteration alone converges only
+linearly and left 5.6e-8 R on F1c against a 1e-8 R bar; the bar was not moved).
+
+K6, known answers at M = 48 and 96 on r = R (1 + 0.05 cos 3 theta), equalized (bars in the docstring; exact answers
+0, 0, 0, 0, a): F1 cyclic relabeling by 7 nodes: 1.9e-15 and 1.8e-15 (bar 1e-10 R). F1b the nodes slid by 0.37 of a
+spacing and re-equalized by the instrument's piecewise-linear equalize: 3.4e-6 and 2.1e-7 (bars 5e-5 R and 6.25e-6
+R, M^-3): this residual is the equalizer moving nodes onto the chords, an O(spacing^2) shape change the equalizer
+makes and the dynamics does not (its constraint is the chord length); the uniform-shift stage alone reads 1.9e-5
+and 2.4e-6 there, the non-uniformity of the slid spacings, which is why the projection stage exists. F1c the same
+slide with the equal-chord nodes kept on the curve (equalize_spectral): 5.3e-9 and 4.0e-10 (bar 1e-8 R; the
+residual is the fixture's own fine sampling). F2 relabeling plus a rotation of 0.7 rad in plane and a 0.1 rad tilt
+plus a translation: 2.1e-15 and 9.2e-16 (bar 1e-10 R). F3 a radial deformation a = 1e-3 R cos 5 theta, re-
+equalized: 7.42e-4 and 7.42e-4 against a = 7.07e-4 (bar [0.5, 1.5] a; the excess is the equalizer's tangential
+part, which the indexed displacement also carries at 7.43e-4). F4, informative: the indexed-node Procrustes reads
+F1 at 6.8e-2 and 4.5e-2, F1b at 5.1e-3 and 2.5e-3. Non-uniform on-curve samples (u_i = i + 0.37 + 0.3 sin i) read
+1.9e-15. Bar provenance: F1b's bar was set after the fixture's first run (uniform-shift version) read 2.8e-5 R and
+3.4e-6 R; all other K6 bars were written before their fixtures ran. Disclosed in the -3 charter.
+
+K5 now also reports D_shape over the two periods (sampled every 200 steps), the number the -3 charter's hold bar
+is measured against: 7.97e-5 = 0.0142 eps R on the K5 probe, identical to the node displacement (no slide occurs on the pinned beta = 0.5 run over two periods). The full credential (K1 to K6) re-run on
+2026-10-27 is analysis/ring_wave_dynamics_leg0.{json,log}.
