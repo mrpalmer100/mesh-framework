@@ -49,3 +49,6 @@ read this directory.
   energy. Not redrafted. The next electron commission with an unknown outcome is RING-WAVE-STABILITY (the
   Director's memo 2026-10-25 #2), proposed by the Director under approval mode; its Leg 0 instrument is
   benchmarks/foundations/ring_wave_stability.py, credentialed on known answers only.
+- RING-WAVE-STABILITY (author's draft, 2026-10-26): never proposed; the name was taken by the Director's own
+  Hessian-only proposal of 2026-10-25, which the author declined in favour of this draft, and the Director then read
+  the declined name as covering the draft. Re-filed unchanged as RING-WAVE-STABILITY-2 (analysis/RING_WAVE_STABILITY_2_charter_DRAFT.md).

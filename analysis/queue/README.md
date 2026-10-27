@@ -88,3 +88,6 @@ Branched from main at ed27c9e on 2026-10-18.
   CROSSING-PRICE-1 drafted (analysis/CROSSING_PRICE_1_charter_DRAFT.md): A_c in joules from registered rod mechanics at
   the registered standoff, then V_0, f, w and FND-182's E_c blind against the coasting regime and the field marks; the
   one computation with an unknown outcome the kink route needs; D1's identification flagged for the reviewers.
+- 2026-10-27: RING-WAVE-STABILITY re-filed as RING-WAVE-STABILITY-2 (declined name stays taken; the Director skipped the
+  draft). CROSSING-PRICE-1 withdrawn by the worker before drafting (five reasons; D1 ill-posed as stated); the full
+  abandonment text is being read before any redraft.
