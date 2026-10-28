@@ -225,3 +225,16 @@ F1 at 6.8e-2 and 4.5e-2, F1b at 5.1e-3 and 2.5e-3. Non-uniform on-curve samples 
 K5 now also reports D_shape over the two periods (sampled every 200 steps), the number the -3 charter's hold bar
 is measured against: 7.97e-5 = 0.0142 eps R on the K5 probe, identical to the node displacement (no slide occurs on the pinned beta = 0.5 run over two periods). The full credential (K1 to K6) re-run on
 2026-10-27 is analysis/ring_wave_dynamics_leg0.{json,log}.
+
+## 10. Part 2 addendum (2026-10-28): the production step credentialed; F1b made informative
+
+RING-WAVE-STABILITY-3's skeptical reviewer (round 1) noted that the production step of the evidence runs (500 steps
+per period) had been credentialed only on near-stationary states, never on a large-amplitude known answer. K2 and K3
+re-run at that step, h = 2 pi R / 500 (about ten times the K-series step): K2 (the Nambu-Goto pulsating circle to
+R0 / 2, strongly nonlinear) worst |R - exact| 2.0e-5 at M = 48 and 96 (bar 1e-3), E0 to 7.3e-4 and 2.0e-4 (bar
+1e-3), E drift 2.9e-12 and 4.6e-12 (bar 1e-4), circle kept to 1e-14; K3 (the unperturbed ring-wave, two periods) E,
+J, Q drifts at 1e-13, |P| 4e-13, R_spread 1e-13 at both M. The K2 and K3 bars are met at the production step with
+their credential-step margins; the -4 charter's v2p makes this a halt-grade unit. Separately, K6 F1b is made
+informative (no bar): its first bar had been set after a reading, which is not a credential bar, and the slide
+reading is credentialed by F1c with its prospective bar; F1b's reading is the charter's floor number only. K6's
+halt-grade bars are F1, F1c, F2, F3.
