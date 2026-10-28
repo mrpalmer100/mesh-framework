@@ -81,3 +81,20 @@ read this directory.
   deformation) and locked bars. Successor RING-WAVE-STABILITY-3 to be drafted on the author's word with both
   cures and every round-1/2 repair written into the executor's draft, since the worker's revisions are not on
   any branch.
+- RING-WAVE-STABILITY-3: withdrawn by the lab 2026-10-27 21:32 after 3 review rounds (76 minutes; $13 in all). The
+  round-3 cures of -2 held: Q0 as a premise was accepted by both reviewers, and the external called the
+  correspondence-free shape observable "a substantive new discriminator". Rounds 1 and 2 were the worker's kit
+  again (S2 excluded from the form-bearing set at lock; a saturating instability must class GROWS, with a fixture;
+  a growing run that fails scored from its valid prefix as a witness, with the end state read from the prefix;
+  the production step credentialed on K2 at large amplitude; a late-time floor for Q1; a drift-statistic
+  agreement for the Q1b half-step gate; Q2 witnesses by the same predicate as Q1; mixed-availability end marks;
+  the F1b bar made prospective), all cured by round 3, where the skeptical reviewer PASSED. The external FAILED
+  round 3 on ONE point: NORTH_STAR section 5. ELEC-G-2 (2026-10-22) was itself interior, no target-facing session
+  has completed since, and the rule says at most one interior session between target-facing ones; the charter's
+  own words concede it, and "the cited approval is not presented as an explicit exception to section 5". A second
+  point travels with it: the readings must not call RING-STABLE + NEUTRAL-HOLDS an A2 pass or RING-UNSTABLE an A2
+  failure (no dynamical spectrum is computed; the experiment tests selected finite-amplitude probes for 40
+  periods under an adopted action), and END-FOLD establishes two end-state marks, not decay into a g = 0.9 state.
+  Not a physics or instrument objection. The successor waits on the author's decision under section 5 (his own
+  rule): an explicit dated exception on that page, a target-facing session first, or the shelf. The worker's -3
+  kit was not pushed.
