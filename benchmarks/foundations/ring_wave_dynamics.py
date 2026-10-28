@@ -493,7 +493,9 @@ def k6_shape_registration(M=48, R=0.707359, base_eps=0.05, base_n=3, shift_nodes
     out['F3_exact'] = defo * R; out['F3_indexed'] = float(np.linalg.norm(X3 - X0, axis=1).max())
     out['F4_indexed_F1'] = indexed_procrustes_distance(X1, X0); out['F4_indexed_F1b'] = indexed_procrustes_distance(X1b, X0)
     out['F1b_bar'] = 5e-5 * R * (48.0 / M) ** 3
-    out['bars'] = dict(F1=out['F1']['D_max'] < 1e-10 * R, F1b=out['F1b']['D_max'] < out['F1b_bar'], F1c=out['F1c']['D_max'] < 1e-8 * R,
+    # F1b is INFORMATIVE (2026-10-28): its first bar was set after a reading, so it is not a credential bar; the slide
+    # reading is credentialed by F1c (prospective bar), and F1b's reading enters the charter as a floor number only
+    out['bars'] = dict(F1=out['F1']['D_max'] < 1e-10 * R, F1c=out['F1c']['D_max'] < 1e-8 * R,
                        F2=out['F2']['D_max'] < 1e-10 * R, F3=0.5 * defo * R <= out['F3']['D_max'] <= 1.5 * defo * R)
     return out
 

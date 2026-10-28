@@ -180,6 +180,18 @@ target-facing sessions, and never a lineage of them. An instrument fault is repa
 point where the pending verdict can be read, then the lineage stops. Every release note
 carries the scorecard delta, including when it is zero.
 
+Exception, recorded by the author on 28 October 2026 (one commission, one lock): RING-WAVE-STABILITY-4,
+the successor of RING-WAVE-STABILITY-2 and -3 (both withdrawn in review without a verdict; -3's round 3 was
+passed by the skeptical reviewer and failed by the external reviewer on this section alone), may lock as an
+interior session although ELEC-G-2 (22 October 2026) was interior and no target-facing session has completed
+since. Reason: every target-facing draft filed since ELEC-G-2 (GRV-NU-DERIVE-2, GRV-2PI-DERIVE-2,
+GRV-EFE-DERIVE-2) was withdrawn or declined on a derivation obstruction that no lab commission can lift
+(analysis/GRV_2PI_derivation_reading.md: linear statics carry no acceleration scale), so no target-facing
+work is displaced by this session. The exception names one commission and does not extend to any successor
+of -4, to any other interior charter, or to a lineage; the session after it must be target-facing; the
+reviewers apply the rest of this section as written, including the reading that a finite-amplitude run
+under an adopted action does not adjudicate the electron ledger's A2.
+
 Standing bar, blind hold-out (adopted 4 October 2026, STRATEGIC_TARGETS section W): in any
 sector whose model carries a calibration or a fit against a measured table (today the
 nuclear masses, NUC-005/018), the next confrontation holds out a pre-registered test set,
