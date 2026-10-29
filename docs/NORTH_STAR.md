@@ -70,6 +70,22 @@ reading commission re-grades the registry (named in STRATEGIC_TARGETS section Y,
 | D2 | a conditional derivation: exact given a registered mesh parameter or input that is itself unexplained (rho, w, f, hbar as an import) | nothing on the scorecard until the condition is discharged |
 | D3 | a reconstruction: reproduces known physics using measured or calibrated quantities (whole-table fits, imported constants) | reproducibility; not evidence for the theory over the Standard Model |
 
+Standing bar, pure numbers (adopted 29 October 2026, the author's decision): a claim that a dimensionless
+constant of nature (alpha through rho, m_p/m_e, g = l_q/a, kappa_pack, any Standard Model coupling or ratio)
+takes a definite value is graded D0 only when the value is a THEOREM of the axioms and registered definitions
+and the derivation is checked by a proof assistant (Lean or equivalent) from a formalization of those axioms and
+definitions, with the proof file committed beside the claim and named in it, and the formalization written and
+sealed BEFORE the number is read against measurement. The proof must show that the count, exponent or closed
+form is forced: no coefficient, denominator, normalization or choice of unit may be selected after any
+comparison with the measured value, and the fence rule (the numerology guard of ELEC-083, +178.8 ppm for rho)
+and the no-hunt clause apply unchanged. A candidate without the checked proof is at most D2 (exact given the
+candidate), whatever its agreement with measurement, because ELEC-083 showed that a derivation of alpha can
+be algebra wearing the form of evidence, and the registry has no other way to tell a forced count from a
+fitted one. CI remains the arbiter for code; the proof assistant is the arbiter for a theorem. Occasion: the
+Chain Theory announcement of October 2026 (A. Wissner-Gross), which claims alpha(0) to ten digits as a
+Lean-checked count over the records of one entangled pair; whatever its fate, that is the standard a pure
+number must meet here, and the registry had no such bar until today.
+
 D1 is the grade the North Star is for. Today the registry's D1 content is the SPARC g_dagger = cH0/2pi
 (GRV-030) and PRED-003 pending adjudication, both filed as Modeled. The 121 Derived claims were graded on
 7 October 2026 (docs/DERIVED_GRADES.md): 96 D0, 2 D1 (CHEM-GEO-002; GRV-031 by a lost confrontation), 18 D2,

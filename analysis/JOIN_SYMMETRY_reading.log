@@ -1,0 +1,12 @@
+R: registered contact, FND-184 form (separable, period pi each)
+  invariant torus shifts on the 96x96 grid: 4 (plus 4 with the strand swap); continuous one-parameter family: False
+  shifts (units 2 pi / 96): [(0, 0), (0, 48), (48, 0), (48, 48)]  -> the group is finite
+H: hypothetical relative-azimuth contact
+  invariant torus shifts on the 96x96 grid: 192 (plus 192 with the strand swap); continuous one-parameter family: True
+
+READ: (R) the registered join keeps only the shifts by pi in each azimuth and the swap: (Z_2 x Z_2) x| Z_2, order 8,
+      finite, abelian up to the swap; no continuous phase survives the join (both azimuth circles are broken by the contact).
+      (H) a contact depending only on the RELATIVE azimuth would keep the common azimuth as a U(1) at the join; that U(1)
+      is the pair's common azimuth, the Goldstone GRV-020 already spends on electromagnetism, and it is not registered
+      as a contact form. No join of registered strands generates a continuous non-abelian group: the product of the
+      ends' groups is a torus, and a stabilizer inside a torus is abelian. FND-185's count stands at the join too.
