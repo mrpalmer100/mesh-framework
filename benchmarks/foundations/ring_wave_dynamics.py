@@ -109,6 +109,9 @@ def make_lagrangian(M, kappa, winding, gauge_ref=None, lock=0.0):
 
 
 class StringIntegrator:
+    tol = 1e-13                 # the Newton test on max |residual|
+    tol_stagnant = 1e-11        # below this, a residual that a Newton step no longer halves is accepted as roundoff
+
     def __init__(self, M, kappa, winding, h, q0, freeze_shape=False, freeze_twist=False, gauge_pin=None, lock=0.0):
         if jax is None:
             raise RuntimeError('JAX is required: pip install jax')
@@ -166,14 +169,22 @@ class StringIntegrator:
         return self
 
     def step(self):
-        z = jnp.concatenate([2 * self.q - self.qprev, jnp.zeros(self.nc)])
+        z = jnp.concatenate([2 * self.q - self.qprev, jnp.zeros(self.nc)]); prev = None
         for it in range(30):
-            r = self.F(z, self.qprev, self.q)
-            if float(jnp.max(jnp.abs(r))) < 1e-13:
+            r = self.F(z, self.qprev, self.q); rm = float(jnp.max(jnp.abs(r)))
+            if rm < self.tol:
                 break
+            # converged to roundoff: a further Newton step no longer halves the residual and it is already far below
+            # the discretization error (2026-10-29, after RING-WAVE-STABILITY-4: the absolute test alone declared 27
+            # runs failed at step 10186 to 10255, where the residual's roundoff floor crossed 1e-13 by 4 percent with
+            # every conserved quantity still at 1e-11; K7 is the 40-period known answer that guards this now)
+            if prev is not None and rm < self.tol_stagnant and rm > 0.5 * prev:
+                break
+            prev = rm
             z = z - jnp.linalg.solve(self.JF(z, self.qprev, self.q), r)
         else:
-            raise RuntimeError(f'Newton did not converge at t = {self.t:.4f} (residual {float(jnp.max(jnp.abs(r))):.2e})')
+            raise RuntimeError(f'Newton did not converge at t = {self.t:.4f} (residual {rm:.2e})')
+        self.newton_iters = it; self.newton_resid = rm
         self.qprev, self.q = self.q, z[:self.N]
         self.t += self.h
         return self
@@ -500,8 +511,23 @@ def k6_shape_registration(M=48, R=0.707359, base_eps=0.05, base_n=3, shift_nodes
     return out
 
 
+def k7_long_ring(M=48, kappa=0.5, periods=40.0, steps_per_period=500):
+    """The unperturbed ring-wave at the PRODUCTION step (2 pi R / steps_per_period) for the full evidence span: the
+    known answer (conservation only, no growth read) that the two-period K3 could not supply. Added 2026-10-29 after
+    RING-WAVE-STABILITY-4's M = 48 runs all ended at step 10186 to 10255 (section 11 of the Leg 0 record)."""
+    R = discrete_ring_radius(M, kappa); q0, v0 = ring(M, R, 1, -1.0); h = 2 * math.pi * R / steps_per_period
+    integ = StringIntegrator(M, kappa, 1, h, q0).init(q0, v0); ob0 = integ.observables(); n = int(round(periods * steps_per_period))
+    E = []; J = []; Q = []; P = []; Rs = []; Rm = []; worst_resid = 0.0; max_iters = 0
+    for k in range(n):
+        integ.step(); worst_resid = max(worst_resid, integ.newton_resid); max_iters = max(max_iters, integ.newton_iters)
+        if k % 50 == 49:
+            ob = integ.observables(); E.append(ob['E']); J.append(ob['J'][2]); Q.append(ob['Q']); P.append(np.linalg.norm(ob['P'])); Rs.append(ob['R_spread']); Rm.append(ob['R_mean'])
+    return dict(M=M, steps=n, h=h, periods=periods, E_drift=float((max(E) - min(E)) / abs(ob0['E'])), J_drift=float(max(J) - min(J)), Q_drift=float(max(Q) - min(Q)),
+                P_max=float(max(P)), R_spread_max=float(max(Rs)), R_mean_drift=float(max(Rm) - min(Rm)), worst_resid=worst_resid, max_newton_iters=max_iters)
+
+
 def credential(M=48, out=None):
-    rec = dict(date='2026-10-27', instrument='benchmarks/foundations/ring_wave_dynamics.py', M=M)
+    rec = dict(date='2026-10-29', instrument='benchmarks/foundations/ring_wave_dynamics.py', M=M)
     t0 = time.time()
     print('K1 twist wave on a frozen ring')
     r1 = k1_twist_wave(M); rec['K1'] = r1
@@ -528,13 +554,17 @@ def credential(M=48, out=None):
         print(f"  M {M_}: F1 relabel {o['F1']['D_max']:.1e}  F1b slide+equalize {o['F1b']['D_max']:.2e} (bar {o['F1b_bar']:.2e}; uniform-shift stage {o['F1b']['D_max_uniform']:.2e})  "
               f"F1c slide on curve {o['F1c']['D_max']:.1e}  F2 relabel+rigid {o['F2']['D_max']:.1e}  F3 deformation {o['F3']['D_max']:.3e} (exact {o['F3_exact']:.3e})  "
               f"| indexed Procrustes reads F1 {o['F4_indexed_F1']:.1e} F1b {o['F4_indexed_F1b']:.1e}")
+    print('K7 the unperturbed ring-wave at the production step for 40 periods (the full evidence span; conservation only)')
+    r7 = k7_long_ring(M); rec['K7'] = r7
+    print(f"  M {M}, {r7['steps']} steps at h {r7['h']:.2e}: E drift {r7['E_drift']:.1e}; J drift {r7['J_drift']:.1e}; Q drift {r7['Q_drift']:.1e}; |P| max {r7['P_max']:.1e}; circle kept to {r7['R_spread_max']:.1e}; R_mean drift {r7['R_mean_drift']:.1e}; worst Newton residual {r7['worst_resid']:.1e}, max iterations {r7['max_newton_iters']}")
     ok = dict(K1=abs(r1['rel_to_discrete']) < 2e-3 and r1['E_drift'] < 1e-6,
               K2=r2['worst_R_error'] < 1e-3 and abs(r2['E0'] - r2['E_exact']) / r2['E_exact'] < 1e-3 and r2['E_drift'] < 1e-4,
               K3=abs(r3['E0'] - r3['E_closed_form']) / r3['E_closed_form'] < 1e-3 and abs(r3['J0'] - r3['J_closed_form']) / r3['J_closed_form'] < 1e-3
                  and r3['E_drift'] < 1e-4 and r3['J_drift'] < 1e-7 and r3['P_max'] < 1e-8 and r3['R_mean_drift'] < 1e-4 and r3['R_spread_max'] < 1e-6,
               K4=all(r['P_drift'] < 1e-9 and r['J_drift'] < 1e-9 for r in r4['rows'] if not r['pin']) and r4['E_order'] > 1.8,
               K5=r5['worst_displacement'] < 0.1 * r5['eps'] * r5['R'] and r5['J_drift'] < 1e-7,
-              K6=all(all(o['bars'].values()) for o in r6.values()))
+              K6=all(all(o['bars'].values()) for o in r6.values()),
+              K7=r7['E_drift'] < 1e-9 and r7['J_drift'] < 1e-9 and r7['Q_drift'] < 1e-9 and r7['P_max'] < 1e-9 and r7['R_spread_max'] < 1e-9 and r7['R_mean_drift'] < 1e-9)
     rec['bars'] = ok; rec['seconds'] = time.time() - t0
     print('BARS: ' + '  '.join(f"{k} {'PASS' if v else 'FAIL'}" for k, v in ok.items()) + f"   ({rec['seconds']:.0f}s)")
     if out:

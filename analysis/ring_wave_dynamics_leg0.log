@@ -17,5 +17,6 @@ K5 shape degeneracy on the beta = 0.5 family member (Leg C theorem; not the evid
 K6 the shape observable on known answers (relabeling, fractional slide, rigid motion, deformation)
   M 48: F1 relabel 1.9e-15  F1b slide+equalize 3.37e-06 (bar 3.54e-05; uniform-shift stage 1.95e-05)  F1c slide on curve 5.3e-09  F2 relabel+rigid 2.1e-15  F3 deformation 7.419e-04 (exact 7.074e-04)  | indexed Procrustes reads F1 6.8e-02 F1b 5.1e-03
   M 96: F1 relabel 1.8e-15  F1b slide+equalize 2.12e-07 (bar 4.42e-06; uniform-shift stage 2.40e-06)  F1c slide on curve 4.0e-10  F2 relabel+rigid 9.2e-16  F3 deformation 7.416e-04 (exact 7.074e-04)  | indexed Procrustes reads F1 4.5e-02 F1b 2.5e-03
-BARS: K1 PASS  K2 PASS  K3 PASS  K4 PASS  K5 PASS  K6 PASS   (421s)
-
+K7 the unperturbed ring-wave at the production step for 40 periods (the full evidence span; conservation only)
+  M 48, 20000 steps at h 8.89e-03: E drift 8.7e-12; J drift 5.5e-11; Q drift 5.5e-11; |P| max 7.8e-11; circle kept to 3.2e-11; R_mean drift 1.0e-11; worst Newton residual 1.1e-13, max iterations 3
+BARS: K1 PASS  K2 PASS  K3 PASS  K4 PASS  K5 PASS  K6 PASS  K7 PASS   (577s)
