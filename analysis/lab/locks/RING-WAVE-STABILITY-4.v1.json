@@ -1,0 +1,58 @@
+{
+  "commission": "RING-WAVE-STABILITY-4",
+  "version": 1,
+  "kind": "lock",
+  "actor": "agent:registry",
+  "at": "2026-10-29 00:23:02 -0400",
+  "target": "Strength of magnets row (the electron model, gap 4): it asks whether the one registered mechanism class that reaches g = 2 with nothing tuned, the travelling-twist ring, holds together when perturbed under action (i), or is a transient whose g = 2 belongs to something that does not last.",
+  "spec": {
+    "commission": "RING-WAVE-STABILITY-4",
+    "target": "Strength of magnets row, gap 4 (the electron model): whether locked finite-amplitude shape and twist-speed probes of the travelling-twist ring, the one registered mechanism class with g = 2 by mechanics, grow or drift over 40 periods in the full nonlinear dynamics of action (i) (a disclosed premise), and whether a growing run's end state carries the co-moving fold's shape and speed marks; interior work locking under the author's dated section 5 exception (docs/NORTH_STAR.md, 28 October 2026); moves no scorecard row and none of the five numbers",
+    "driver": "benchmarks/lab/ring_wave_stability_4/driver.py",
+    "verdict_script": "benchmarks/lab/ring_wave_stability_4/verdict.py",
+    "instrument": [
+      "benchmarks/foundations/ring_wave_dynamics.py",
+      "benchmarks/foundations/ring_wave_stability.py",
+      "benchmarks/foundations/elec_rope_wave.py",
+      "benchmarks/foundations/elec_rotator.py",
+      "benchmarks/foundations/strand_calugareanu.py",
+      "benchmarks/lab/ring_wave_stability_4/stats.py",
+      "benchmarks/lab/_kit/labkit.py"
+    ],
+    "forms": [
+      "RING-STABLE",
+      "RING-UNSTABLE",
+      "RING-SLOW",
+      "Q1-NO-CALL",
+      "NEUTRAL-HOLDS",
+      "NEUTRAL-DRIFTS",
+      "NEUTRAL-WOBBLES",
+      "Q1B-NO-CALL",
+      "END-FOLD",
+      "END-OTHER",
+      "END-NOT-TRIGGERED",
+      "Q2-NO-CALL",
+      "HARNESS-OPEN"
+    ],
+    "state": [
+      "analysis/ring_wave_stability_4_ckpt.pkl"
+    ],
+    "budget": {
+      "cpu_hours": 8,
+      "usd": 0
+    },
+    "mem_gb": 1
+  },
+  "manifest": {
+    "analysis/RING-WAVE-STABILITY-4_charter_LOCKED.md": "4382c32deeded73672acbfcd759eab1d2021d10b80bacd9cfd867b4e8f723f0a",
+    "benchmarks/lab/ring_wave_stability_4/driver.py": "6ff4799e485ad45ea0e245be87a6a73a0c7709a193720f2b8c489d74b7864a8f",
+    "benchmarks/lab/ring_wave_stability_4/verdict.py": "c0af64a591ca61d30beaa27f88f8031ed81b0bf1bce1020710cd9854045fc7e9",
+    "benchmarks/foundations/ring_wave_dynamics.py": "bbb2ea9912a5ccf362c48d410ac45f9704182d1d0e7e8a42a84b437448dd18c6",
+    "benchmarks/foundations/ring_wave_stability.py": "f84c21e71946171ac403e8441906d81f23eae176f9c346706f4f3e3fc8055e94",
+    "benchmarks/foundations/elec_rope_wave.py": "eb4d6a5bd72888fc157687a8acf56bdc0ed58d1742093c92f5316055d4725411",
+    "benchmarks/foundations/elec_rotator.py": "54f6563ed6b53e33105e2e1f67a31fbcb02855c8599b6ee06b4d30c0633177bb",
+    "benchmarks/foundations/strand_calugareanu.py": "fe8d717ed70cc4f52892313b17eabbf3f2ea30767f8d7653b468beec3d58fa09",
+    "benchmarks/lab/ring_wave_stability_4/stats.py": "591f3bdc042d760d751c9ffe76dc72a732fae6481d7982359115e7658ffedd03",
+    "benchmarks/lab/_kit/labkit.py": "3ad0659bfed062308a7ebbda83d17308e38369d6564c93c8d61a567e3d4c592a"
+  }
+}
