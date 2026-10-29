@@ -238,3 +238,40 @@ their credential-step margins; the -4 charter's v2p makes this a halt-grade unit
 informative (no bar): its first bar had been set after a reading, which is not a credential bar, and the slide
 reading is credentialed by F1c with its prospective bar; F1b's reading is the charter's floor number only. K6's
 halt-grade bars are F1, F1c, F2, F3.
+
+## 11. Part 2 addendum (2026-10-29): the M = 48 failures of RING-WAVE-STABILITY-4 assigned, and repaired
+
+RING-WAVE-STABILITY-4 locked (round 2, both reviewers), ran its 48 trajectories, and rendered Q1-NO-CALL, Q1B-NO-CALL,
+END-NOT-TRIGGERED (analysis/RING-WAVE-STABILITY-4_results.md; provisional ELEC-103). Twenty-seven of the thirty-five
+failure records were "Newton/init failures" at M = 48, every one of them, the unperturbed control included, in the
+step window 10186 to 10255, at the production step AND at the half step (the same step count at two physical times).
+The verdict left the cause unassigned, as it should. The executor's diagnosis, on the unperturbed M = 48 ring-wave
+at the production step, instrumented step by step (scratch runs, 2026-10-29; no probe, no evidence cell):
+
+The failure reproduces exactly: step 10186, "Newton did not converge", final residual 1.04e-13 against the absolute
+test max |r| < 1e-13. There is no instability. At step 10100 the energy is conserved to 1e-12, J and Q to 8e-12, |P|
+is 8e-12, the circle is kept to 8e-12 and the spacing to 2e-16; the Newton loop converges in ONE iteration at every
+step; the Nyquist (checkerboard) mode of Phi-dot is 2e-12. What rises is the residual's roundoff floor: 3.5e-14 at
+step 500, 5.5e-14 at step 10,000, and at step 10186 the floor after the first (and every further) Newton step sits at
+1.04e-13, four percent above the test, so thirty iterations cannot pass it and the integrator raises. At the half
+step the same thing happens at step 10203 (residual 1.02e-13). The floor's dependence on the step count rather than
+the time is recorded as observed and not explained here. The "init" in the lab's label is the driver's wording for
+the same exception.
+
+The repair (StringIntegrator.step): the absolute test max |r| < 1e-13 is kept, and an iterate is also accepted when
+the residual is below 1e-11 AND a further Newton step no longer halves it (the solver has reached roundoff; 1e-11 is
+two orders below the discretization error of anything the instrument measures). Before the repair the integrator
+raised at step 10186; with it the unperturbed ring runs the full 20,000 steps (40 periods): in the credential record K7, E to 9e-12, J
+and Q to 6e-11, |P| 8e-11, the circle kept to 3e-11, R_mean to 1e-11, the worst residual 1.1e-13, at most three
+Newton iterations at any step. K7 is the new known answer: the unperturbed ring-wave at the production step for the full 40-period evidence
+span (bars 1e-9 on every drift), so a span the evidence needs is credentialed for that span and not for two
+periods of it. The credential record (K1 to K7) re-run on 2026-10-29 is analysis/ring_wave_dynamics_leg0.{json,log}.
+
+What this means for the commission's record: the twenty-seven M = 48 failure records were an instrument fault of
+the kind NORTH_STAR section 5 names ("an instrument fault is repaired to the point where the pending verdict can be
+read"); the eight J breaches are a different matter. They occurred only on the twist-speed and radial probes (R0,
+WU, W1, W2) and mostly at M = 96, against a bar of 2e-6 that the charter EXTRAPOLATED (20 times K5's two-period bar).
+The pin's torque under a twist-speed probe is a property of the pinned gauge, not a solver fault, and a successor
+would have to set that bar from a measured known answer on the beta = 0.5 family member (a W-type probe for 40
+periods), not from arithmetic on a shape probe. Whether a successor is filed is the author's decision under section
+5; the repaired instrument and K7 stand on this record either way.

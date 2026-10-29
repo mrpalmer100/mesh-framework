@@ -1,5 +1,5 @@
 {
- "date": "2026-10-27",
+ "date": "2026-10-29",
  "instrument": "benchmarks/foundations/ring_wave_dynamics.py",
  "M": 48,
  "K1": {
@@ -170,7 +170,6 @@
    "F1b_bar": 3.536795e-05,
    "bars": {
     "F1": true,
-    "F1b": true,
     "F1c": true,
     "F2": true,
     "F3": true
@@ -224,12 +223,25 @@
    "F1b_bar": 4.42099375e-06,
    "bars": {
     "F1": true,
-    "F1b": true,
     "F1c": true,
     "F2": true,
     "F3": true
    }
   }
+ },
+ "K7": {
+  "M": 48,
+  "steps": 20000,
+  "h": 0.00888894001208372,
+  "periods": 40.0,
+  "E_drift": 8.732402697650863e-12,
+  "J_drift": 5.490718990586174e-11,
+  "Q_drift": 5.4868110055394936e-11,
+  "P_max": 7.802338924583444e-11,
+  "R_spread_max": 3.238531665061828e-11,
+  "R_mean_drift": 1.0283107698683125e-11,
+  "worst_resid": 1.1064932785458318e-13,
+  "max_newton_iters": 3
  },
  "bars": {
   "K1": true,
@@ -237,7 +249,8 @@
   "K3": true,
   "K4": true,
   "K5": true,
-  "K6": true
+  "K6": true,
+  "K7": true
  },
- "seconds": 420.6493353843689
+ "seconds": 577.4421145915985
 }
