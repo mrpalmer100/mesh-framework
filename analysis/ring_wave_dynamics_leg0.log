@@ -1,0 +1,22 @@
+K1 twist wave on a frozen ring
+  n 3: period measured 2.106420, discrete 2.106409 (rel +5.1e-06), exact 2.094395 (rel +5.7e-03); E drift 1.8e-15
+K2 Nambu-Goto pulsating circle (kappa = 0), R0 to R0 / 2
+  R(t_end) 0.499433 exact 0.499433; worst |R - exact| 2.1e-07; E0 6.278699 (2 pi R0 = 6.283185) drift 1.6e-11; circle kept to 2.7e-13
+K3 the exact ring-wave, unperturbed, two periods (conservation only; no growth read)
+  R_d 0.707359 (continuum sqrt(kappa / T) = 0.707107): E0 8.882595 (closed form 8.885766) drift 1.7e-12; J0 3.141593 (2 pi kappa = 3.141593) drift 3.4e-12; |P| max 1.3e-11; Q drift 1.1e-11; circle kept to 1.6e-11, R_mean drift 8.9e-13; spacing kept to 3.4e-13
+K4 Noether on generic data
+  h 0.04 pin False: E drift 1.84e-04  |dP| 6.1e-14  |dJ| 2.2e-14  dQ 1.4e-14  (24 steps)
+  h 0.04 pin True : E drift 2.58e-04  |dP| 6.9e-14  |dJ| 1.0e-03  dQ 2.6e-14  (24 steps)
+  h 0.02 pin False: E drift 4.93e-05  |dP| 6.0e-13  |dJ| 1.1e-13  dQ 8.3e-14  (49 steps)
+  h 0.02 pin True : E drift 6.60e-05  |dP| 5.2e-13  |dJ| 1.1e-03  dQ 8.0e-14  (49 steps)
+  h 0.01 pin False: E drift 1.29e-05  |dP| 9.1e-14  |dJ| 8.9e-14  dQ 1.0e-13  (99 steps)
+  h 0.01 pin True : E drift 1.67e-05  |dP| 9.2e-14  |dJ| 1.1e-03  dQ 9.4e-14  (99 steps)
+  energy-drift order 1.90 (unpinned); the pinned |dJ| is the gauge pin's torque on fast generic data
+K5 shape degeneracy on the beta = 0.5 family member (Leg C theorem; not the evidence cell)
+  n 3 eps 0.01: worst node displacement 7.97e-05 = 1.42 eps^2 R (first order would be 5.6e-03); vmax 7.2e-05; |dJ| 9.7e-09; E drift 3.7e-12; D_shape (K6 observable, every 200 steps) 7.97e-05 = 0.0142 eps R
+K6 the shape observable on known answers (relabeling, fractional slide, rigid motion, deformation)
+  M 48: F1 relabel 1.9e-15  F1b slide+equalize 3.37e-06 (bar 3.54e-05; uniform-shift stage 1.95e-05)  F1c slide on curve 5.3e-09  F2 relabel+rigid 2.1e-15  F3 deformation 7.419e-04 (exact 7.074e-04)  | indexed Procrustes reads F1 6.8e-02 F1b 5.1e-03
+  M 96: F1 relabel 1.8e-15  F1b slide+equalize 2.12e-07 (bar 4.42e-06; uniform-shift stage 2.40e-06)  F1c slide on curve 4.0e-10  F2 relabel+rigid 9.2e-16  F3 deformation 7.416e-04 (exact 7.074e-04)  | indexed Procrustes reads F1 4.5e-02 F1b 2.5e-03
+K7 the unperturbed ring-wave at the production step for 40 periods (the full evidence span; conservation only)
+  M 48, 20000 steps at h 8.89e-03: E drift 8.7e-12; J drift 5.5e-11; Q drift 5.5e-11; |P| max 7.8e-11; circle kept to 3.2e-11; R_mean drift 1.0e-11; worst Newton residual 1.1e-13, max iterations 3
+BARS: K1 PASS  K2 PASS  K3 PASS  K4 PASS  K5 PASS  K6 PASS  K7 PASS   (577s)

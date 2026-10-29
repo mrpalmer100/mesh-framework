@@ -1,0 +1,17 @@
+freedom                                                 | dim | what acts on it                                            | connected symmetry of its energy
+azimuth phi (registered)                                |   1 | rotations about the tangent (the section is defined by the axis) | SO(2) about the tangent
+elliptical section (eps, psi)                           |   2 | rotations about the tangent (the section is defined by the axis) | SO(2) about the tangent
+core offset u in the section                            |   2 | rotations about the tangent (the section is defined by the axis) | SO(2) about the tangent
+twist rate tau (scalar)                                 |   1 | rotations about the tangent (the section is defined by the axis) | SO(2) about the tangent
+5 strand positions in a bundle section                  |  10 | rotations about the tangent (the section is defined by the axis) | SO(2) about the tangent
+two section amplitudes, different stiffness (x, y)      |   2 | rotations about the tangent (the section is defined by the axis) | finite only
+3D director d, energy depends on the tilt d.t           |   2 | all rotations                                              | SO(2) about the tangent
+3D director d, energy blind to the axis (hypothetical)  |   2 | all rotations                                              | SO(3)
+
+READ: every freedom a thick rope carries IN ITS SECTION (ellipticity, core offset, twist, strand positions in a bundle,
+      any number of section amplitudes) has an energy whose only continuous symmetry is the rotation about the tangent,
+      SO(2), the same circle as the azimuth; two section amplitudes of unequal stiffness have none at all. Thickness raises
+      the DIMENSION count (two per section mode) and never the symmetry: rotations about one axis commute. A non-abelian
+      group needs an internal freedom whose energy is blind to the rope's axis (the hypothetical director: SO(3) = SU(2)/Z2),
+      which no geometric mode of the section is, because the section is defined by the axis. That freedom would be a new
+      internal field with its own registered energy: FND-185's price, in rope language.

@@ -314,6 +314,23 @@ branch-independent ratios, which is what it checks today.
 
 ---
 
+## 5c. The rope level (added 27 Oct 2026, GRANT-HBAR-ROPE, FND-188)
+
+The rope rung of FND-110's ladder is anchored by the author's grant, not derived: the quantum of
+action is carried at the rope level, S_rope = n_rs S1 = hbar with S1 = pi T0 a^2 / 2c and tension
+additivity (QGATE-005). Every row carries the HBAR-ROPE rider; condition C1 of FND-188 (an independent
+n_rs outside a factor 3 supersedes the grant by name) applies to all of them.
+
+| Quantity | Symbol | Value | Status | Source |
+|---|---|---|---|---|
+| Strand action quantum (M-point) | S1 | 8.19e-39 J s (hbar / 12,882) | derived from T0, a | HBAR-003 form; hbar_consult_readings.py |
+| Strands per rope | n_rs | **12,882** | **Author-granted** (set BY hbar; clean room C3) | FND-188 |
+| Rope radius | R = a sqrt(n_rs) | **6.8e-15 m = 113 a** | Author-granted (rider) | FND-188 |
+| Rope tension | T_rope = n_rs T0 | 5.6e6 J/m | derived from the grant and additivity | QGATE-005, FND-188 |
+
+Open debt on the face of the grant: the mechanism that selects n_rs. The HBAR-003 note's 3549 is the
+pre-M-point value of hbar / S1; at this card it is 12,882.
+
 ## 6. The fine level (added 17 Aug 2026, v3.26.77 — the BLOCH-L arc, FND-126 → FND-132)
 
 The photon sector's granted substructure (GRANT-SUBSTRUCTURE, FND-084) makes

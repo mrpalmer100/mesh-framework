@@ -1,0 +1,13 @@
+lock V'' = 100.0: Omega = 10.0, l = c/Omega = 0.1; M 1600, a = 0.0039, L = 6.283
+(1) gapped dispersion of the azimuth (standing wave of mode n on winding 0):
+   n   0: omega measured 10.00000  theory sqrt(Omega^2 + omega_d^2) 10.00000  rel +1.0e-07   (gap alone 10.0, free wave 0.000)
+   n   5: omega measured 11.18031  theory sqrt(Omega^2 + omega_d^2) 11.18030  rel +1.7e-07   (gap alone 10.0, free wave 5.000)
+   n  20: omega measured 22.35610  theory sqrt(Omega^2 + omega_d^2) 22.35608  rel +8.2e-07   (gap alone 10.0, free wave 19.995)
+   n  80: omega measured 80.29741  theory sqrt(Omega^2 + omega_d^2) 80.29654  rel +1.1e-05   (gap alone 10.0, free wave 79.671)
+(2) the static 2 pi kink:
+   E_kink 79.998286  closed form 8 sqrt(kappa V'') 80.000000  rel -2.1e-05;  width from max slope 2/l: 0.10002 (c/Omega 0.10000)
+   integrated 5 time units (50 beats): E drift 7.1e-14, centre moved +0.00e+00; the kink stays put
+(3) the moving kink:
+   v 0.3: E 83.86081 vs gamma E_0 83.86099 (rel -2.1e-06);  width after 2.0: 0.09539 vs l/gamma 0.09539;  speed 0.3004 (set 0.3);  E drift 2.7e-14
+   v 0.6: E 99.99665 vs gamma E_0 99.99786 (rel -1.2e-05);  width after 2.0: 0.07999 vs l/gamma 0.08000;  speed 0.6008 (set 0.6);  E drift 4.8e-12
+   v 0.9: E 183.51191 vs gamma E_0 183.52866 (rel -9.1e-05);  width after 2.0: 0.04350 vs l/gamma 0.04359;  speed 0.8993 (set 0.9);  E drift 1.3e-09

@@ -1,0 +1,14 @@
+  beta 0.25 kappa_tw 0.1 J 3.1416 [ring]: E 8.50433 (tension 8.0352 wave 0.4518 C 0.0174) Omega 0.9813 R_end 1.0190 edge 0.9971 J_flux/J -0.003 cm 3.8e-05  g 0.6376  wave/E 0.053 2J/E 0.7346 nit 229
+  beta 0.25 kappa_tw 0.1 J 3.1416 [flat]: E 6.70575 (tension 5.9576 wave 0.7307 C 0.0174) Omega 0.9660 R_end 1.0352 edge 0.9910 J_flux/J 0.003 cm 8.9e-07  g 0.7595  wave/E 0.109 2J/E 0.9324 nit 151
+  beta 0.5 kappa_tw 0.1 J 3.1416 [ring]: E 6.77700 (tension 5.9213 wave 0.8382 C 0.0175) Omega 0.9449 R_end 1.0434 edge 0.9851 J_flux/J 0.001 cm 2.4e-06  g 0.7330  wave/E 0.124 2J/E 0.9271 nit 677
+  beta 0.5 kappa_tw 0.1 J 3.1416 [flat]: E 6.76334 (tension 5.8815 wave 0.8644 C 0.0175) Omega 0.9727 R_end 1.0280 edge 0.9900 J_flux/J 0.005 cm 2.4e-06  g 0.7865  wave/E 0.128 2J/E 0.9244 nit 386
+  beta 0.75 kappa_tw 0.1 J 3.1416 [ring]: E 6.87866 (tension 5.8679 wave 0.9936 C 0.0172) Omega 0.9164 R_end 1.0659 edge 0.9766 J_flux/J 0.009 cm 1.5e-06  g 0.8225  wave/E 0.144 2J/E 0.9134 nit 943
+  beta 0.75 kappa_tw 0.1 J 3.1416 [flat]: E 6.87711 (tension 5.8279 wave 1.0320 C 0.0172) Omega 0.9598 R_end 1.0419 edge 0.9860 J_flux/J 0.024 cm 4.9e-06  g 0.9497  wave/E 0.150 2J/E 0.9092 nit 66
+  beta 1.0 kappa_tw 0.1 J 3.1416 [ring]: E 7.03271 (tension 5.8068 wave 1.2088 C 0.0171) Omega 0.8909 R_end 1.0863 edge 0.9600 J_flux/J 0.018 cm 5.0e-06  g 0.8852  wave/E 0.172 2J/E 0.8934 nit 1182
+  beta 1.0 kappa_tw 0.1 J 3.1416 [flat]: E 6.99942 (tension 5.6859 wave 1.2963 C 0.0172) Omega 0.9598 R_end 1.0418 edge 0.9786 J_flux/J 0.043 cm 4.0e-06  g 1.0498  wave/E 0.185 2J/E 0.8934 nit 76
+  beta 0.25 kappa_tw 1.0 J 3.1416 [ring]: E 10.05950 (tension 5.8501 wave 4.1944 C 0.0150) Omega 0.4814 R_end 1.3401 edge 0.6375 J_flux/J 0.066 cm 1.5e-06  g 1.0413  wave/E 0.417 2J/E 0.6246 nit 1936
+  beta 0.25 kappa_tw 1.0 J 3.1416 [flat]: E 10.05908 (tension 5.8488 wave 4.1953 C 0.0150) Omega 0.4816 R_end 1.3385 edge 0.6323 J_flux/J 0.066 cm 6.3e-08  g 1.0449  wave/E 0.417 2J/E 0.6246 nit 385
+  beta 0.5 kappa_tw 1.0 J 3.1416 [ring]: E 10.48382 (tension 5.7554 wave 4.7147 C 0.0138) Omega 0.4568 R_end 1.3010 edge 0.5755 J_flux/J 0.353 cm 5.4e-06  g 1.4354  wave/E 0.450 2J/E 0.5993 nit 2530
+  beta 0.5 kappa_tw 1.0 J 3.1416 [flat]: E 10.47584 (tension 5.7379 wave 4.7243 C 0.0137) Omega 0.4657 R_end 1.2831 edge 0.5283 J_flux/J 0.371 cm 2.3e-07  g 1.4643  wave/E 0.451 2J/E 0.5998 nit 530
+  beta 0.75 kappa_tw 1.0 J 3.1416 [ring]: E 11.12009 (tension 5.5575 wave 5.5497 C 0.0129) Omega 0.0000 R_end 0.8790 edge 0.0000 J_flux/J 1.000 cm 9.6e-08  g 2.0037  wave/E 0.499 2J/E 0.5650 nit 41
+  beta 0.75 kappa_tw 1.0 J 3.1416 [flat]: E 11.11988 (tension 5.5634 wave 5.5438 C 0.0127) Omega 0.0019 R_end 1.1231 edge 0.0012 J_flux/J 0.999 cm 2.3e-06  g 2.0048  wave/E 0.499 2J/E 0.5650 nit 33

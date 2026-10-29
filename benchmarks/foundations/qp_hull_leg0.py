@@ -91,7 +91,27 @@ def price_hull(H, x):
     return float((1.0 + ke) / gam), float(ke)
 
 
-def part2(ckpt, grids=((24, 8), (48, 12)), NP=36, resume=False):
+def load_members(ckpt):
+    """The retained 13/9 members: from the sealed Leg B checkpoint (a .pkl on the machine of record) or from the
+    repository extract analysis/qp_hull_13_9_members.npz written by tools/qp_hull_members_extract.py (the lab's
+    driver can only bind what the manifest holds, QP-HULL-2's abandonment defect 3)."""
+    import pickle
+    if str(ckpt).endswith('.npz'):
+        z = np.load(ckpt, allow_pickle=False)
+        n = int(z['n'])
+        return [dict(A2=float(z[f'A2_{i}']), x=z[f'x_{i}'], rms=float(z[f'rms_{i}']), om2=float(z[f'om2_{i}']), gam=float(z[f'gam_{i}']))
+                for i in range(n)]
+    d = pickle.loads(pathlib.Path(ckpt).read_bytes())
+    return d['cell|13/9']['members']
+
+
+def maxrss_gb():
+    import resource
+    r = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+    return r / 1e9 if sys.platform == 'darwin' else r / 1e6          # bytes on macOS, kB on Linux
+
+
+def part2(ckpt, grids=((24, 8), (48, 12)), NP=36, resume=False, rec_name='qp_hull_leg0_part2.json', chain=True):
     """Part 2, as run on the machine of record 2026-10-20/21. Every solve writes its state to analysis/ as it
     finishes (level 1, each rung, each member), so --resume continues from the last converged state after a stop.
     The first grid walks the Q-SWEEP ladder to member 0 and then three rungs across the gap to member 1 (the
@@ -99,15 +119,12 @@ def part2(ckpt, grids=((24, 8), (48, 12)), NP=36, resume=False):
     repeat the ladder: each member is seeded by prolonging the coarser grid's converged member (zero-padded 2D
     FFT, exact) and solved once at its pin; the finer grid's level-1 line is not re-derived (the coarse one
     matched Leg B's theta to 8 digits and the finer level-1 solve alone took 10579 s)."""
-    import pickle
     log = lambda s_: print(s_, flush=True)
     adir = ROOT / 'analysis'
-    d = pickle.loads(pathlib.Path(ckpt).read_bytes())
-    cell = d['cell|13/9']
     T = Q1.QTGrid(432, NP, 9, 13)
-    members = cell['members']
-    out = dict(date='2026-10-21', part='2', cell='13/9 at 432 x 36 (COMPOSITE-SELECT Leg B, retained)', grids=[])
-    rec_path = adir / 'qp_hull_leg0_part2.json'
+    members = load_members(ckpt)
+    out = dict(date=time.strftime('%Y-%m-%d'), part='2', cell='13/9 at 432 x 36 (COMPOSITE-SELECT Leg B, retained)', grids=[])
+    rec_path = adir / rec_name
     for m in members:
         xm = np.asarray(m['x'], float)
         S, ke = T.G2.price(T.to_stage2(xm))
@@ -139,7 +156,7 @@ def part2(ckpt, grids=((24, 8), (48, 12)), NP=36, resume=False):
         t0 = time.time()
         xs = QH.solve(H, xs, 'a2', pin, rounds=60, stop_rms=None if final else 1e-9, verbose=False)
         save(path, H, xs, pin)
-        log(f'    pin {pin:.7f}: rms {H.field_rms(xs):.1e} clos {H.closure_max(xs):.1e} om2 {H.unpack(xs)[4]:.7f} ({time.time() - t0:.0f}s)')
+        log(f'    pin {pin:.7f}: rms {H.field_rms(xs):.1e} clos {H.closure_max(xs):.1e} om2 {H.unpack(xs)[4]:.7f} ({time.time() - t0:.0f}s, maxrss {maxrss_gb():.1f} GB)')
         return xs
 
     prev = None                                           # (H, [member states]) of the previous grid
@@ -191,8 +208,10 @@ def part2(ckpt, grids=((24, 8), (48, 12)), NP=36, resume=False):
                 report(H, states[mi], m, nt1, nt2, g)
         out['grids'].append(g)
         rec_path.write_text(json.dumps(out, indent=1, default=str) + '\n')
-        prev = (H, states)
-    log(f'written {rec_path}')
+        prev = (H, states) if chain else None
+        g['maxrss_gb'] = maxrss_gb()
+        rec_path.write_text(json.dumps(out, indent=1, default=str) + '\n')
+    log(f'written {rec_path} (peak RSS of this process {maxrss_gb():.1f} GB)')
 
 
 def report(H, xs, m, nt1, nt2, g):
@@ -247,6 +266,12 @@ def main(quick=False):
 
 if __name__ == '__main__':
     if '--part2' in sys.argv:
-        part2(sys.argv[sys.argv.index('--part2') + 1], resume='--resume' in sys.argv)
+        kw = {}
+        if '--grids' in sys.argv:                      # e.g. --grids 24x24 or --grids 48x8,48x16 (each grid walks its own ladder)
+            kw['grids'] = tuple(tuple(int(v) for v in g.split('x')) for g in sys.argv[sys.argv.index('--grids') + 1].split(','))
+            kw['chain'] = False
+        if '--out' in sys.argv:
+            kw['rec_name'] = sys.argv[sys.argv.index('--out') + 1]
+        part2(sys.argv[sys.argv.index('--part2') + 1], resume='--resume' in sys.argv, **kw)
     else:
         main(quick='--quick' in sys.argv)
