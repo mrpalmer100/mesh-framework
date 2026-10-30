@@ -59,3 +59,11 @@ Row "m_e, m_mu, m_tau": the mesh is of the right kind for (a) and holds a Z_3 in
 (c) is the open condition; PM-001's failure is the registered example of the wrong kind (a phase inserted by hand).
 Any three-generation charter cites this reading and states, before computing, which registered geometry fixes the
 modulation ratio, with the phase theta left to the mechanism and never read from the masses.
+
+## 6. Correction (same day): the registry already carries the Brannen form
+
+PRED-001 (the neutrino mass sum, Modeled, T3) uses m_i = mu (1 + sqrt 2 cos(delta + 2 pi i / 3))^2 for the charged
+leptons, with delta_c read from m_mu / m_e and the tau ratio then predicted to 0.01 percent, and for the neutrinos
+with a declared pi / 12 offset. Section 3 above, which said no Z_3 triplet is registered, is wrong on that point:
+(b) is in use; what is missing is (c), a geometric origin for the sqrt 2 and for the phases. See
+analysis/PRED_001_confrontation_reading.md section 6.
