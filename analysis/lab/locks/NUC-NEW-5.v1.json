@@ -1,0 +1,77 @@
+{
+  "commission": "NUC-NEW-5",
+  "version": 1,
+  "kind": "lock",
+  "actor": "agent:registry",
+  "at": "2026-10-31 11:31:54 -0400",
+  "target": "Weights of atoms row: confronts the two adjudicated nuclear mass models (NUC-018 three-term; NUC-A + NUC-B four-term), frozen as sealed for NUC-BLIND-2, with the 128 nuclides first measured between AME2012 and AME2020, which the programme has never inspected, under the section W bars, with an extrapolation ratio test above a locked sampling floor.",
+  "spec": {
+    "commission": "NUC-NEW-5",
+    "target": "Weights of atoms row (section 1) and its registered discriminator: whether the two adjudicated nuclear mass models (NUC-018 three-term; NUC-A + NUC-B four-term), frozen as sealed for NUC-BLIND-2 and calibrated once on AME2012's Ca-40, predict the masses of the 128 nuclides first measured between AME2012 and AME2020 (pinned hold-out analysis/holdout/NUC_NEW_1, in the repository) inside the section W bars, and whether their off-valley rms stays within twice the adjudicated in-sample rms above a locked sampling floor; target-facing; moves no North Star number; nothing waits on a person; NUC-NEW-2's failed audit bar and the build counts kept as diagnostics, no threshold set with a statistic in view; C-1 bound to the run",
+    "driver": "benchmarks/lab/nuc_new_5/driver.py",
+    "verdict_script": "benchmarks/lab/nuc_new_5/verdict.py",
+    "instrument": [
+      "benchmarks/lab/_kit/labkit.py",
+      "tools/ame2020_newset.py",
+      "benchmarks/nuclear/nuc_blind_1.py",
+      "data/ame2012/AME2012.txt",
+      "analysis/NUC_NEW_5_design_SEALED.md",
+      "analysis/NUC_NEW_4_design_SEALED.md",
+      "analysis/NUC_NEW_3_design_SEALED.md",
+      "analysis/NUC_NEW_2_design_SEALED.md",
+      "analysis/NUC_NEW_1_design_SEALED.md",
+      "analysis/holdout/NUC_NEW_1/labels.txt",
+      "analysis/holdout/NUC_NEW_1/AUDIT.json",
+      "analysis/holdout/NUC_BLIND_2/MANIFEST.json",
+      "analysis/holdout/NUC_BLIND_2/train.txt",
+      "analysis/NUC_BLIND_2_pred_M1.txt",
+      "analysis/NUC_BLIND_2_pred_M2.txt",
+      "analysis/holdout/NUC_BLIND_1/VERDICT_M1.json",
+      "analysis/holdout/NUC_BLIND_1/VERDICT_M2.json",
+      "analysis/holdout/NUC_BLIND_2/VERDICT_M1.json",
+      "analysis/holdout/NUC_BLIND_2/VERDICT_M2.json"
+    ],
+    "forms": [
+      "BLIND-AGREES",
+      "BLIND-FAILS",
+      "BLIND-INCOMPLETE",
+      "EXTRAPOLATES",
+      "WITHIN-FLOOR",
+      "DRIFTS",
+      "NEW-SET-TOO-SMALL",
+      "INSTRUMENT-OPEN"
+    ],
+    "state": [
+      "analysis/nuc_new_5_ckpt.pkl"
+    ],
+    "budget": {
+      "cpu_hours": 0.1,
+      "usd": 0
+    },
+    "mem_gb": 1
+  },
+  "manifest": {
+    "analysis/NUC-NEW-5_charter_LOCKED.md": "546edd59b32c068b83d8e433796453f9d296d59dda683661a6a9e2e1caeee400",
+    "benchmarks/lab/nuc_new_5/driver.py": "15b5ff9eca29c4376a302492655a50f8e1bc3832297a941de987418ef3481fef",
+    "benchmarks/lab/nuc_new_5/verdict.py": "edcb0f122c7a5486ce36e760eeef04db2df29a4babc58787a7af46a52b37a9d4",
+    "benchmarks/lab/_kit/labkit.py": "3ad0659bfed062308a7ebbda83d17308e38369d6564c93c8d61a567e3d4c592a",
+    "tools/ame2020_newset.py": "9ca5b24b9f806a80fbc43901c38e1238d3d7091a9b5d4dad6f7071eb1b408ab7",
+    "benchmarks/nuclear/nuc_blind_1.py": "e88fa2389840a9c40a549af9a6222e8a8a7c122a1b7aa8265e7862d9a3982142",
+    "data/ame2012/AME2012.txt": "88c6272c9e4117d68ac1317e2590c9e376d25f77c9bf68fd6062bbb4e238cb13",
+    "analysis/NUC_NEW_5_design_SEALED.md": "ea241524c7bc03d020133ad5e98a559d2e7b46e1413713f3717a9fc40bdda0e6",
+    "analysis/NUC_NEW_4_design_SEALED.md": "3c2f9964246bae5f32c78747c22a6145386ec38d037662c951ace73e317647e6",
+    "analysis/NUC_NEW_3_design_SEALED.md": "0e1ee4ceed44e7876d7aa312d28e07c76d4f46bfb6f548356f5c0b6c62ef6b95",
+    "analysis/NUC_NEW_2_design_SEALED.md": "90b7509f582fb373e0d6cf5a3e81f9b0316e49ed6fbc559d2826e271a40d38be",
+    "analysis/NUC_NEW_1_design_SEALED.md": "e92be751189a409d435d0d4bfa125640f1eee684f28b7a9dc2759b9afd89d339",
+    "analysis/holdout/NUC_NEW_1/labels.txt": "2387278737460b207fc8b4d5637ad5426cfe4f0981686ee187fac20f2012298a",
+    "analysis/holdout/NUC_NEW_1/AUDIT.json": "2a92fe6ae4ee4a848230be1a8725d281c2378663c4d4be3351765aa50b9b54fe",
+    "analysis/holdout/NUC_BLIND_2/MANIFEST.json": "f5340fb3c10be0678dc6ae4666fdf75c1c25b7e1aa4b51651b8afd39950fa791",
+    "analysis/holdout/NUC_BLIND_2/train.txt": "97b6901181b00094cac4c9e80f5026b066106cdaddb5289c114369cd1a1ddbb3",
+    "analysis/NUC_BLIND_2_pred_M1.txt": "edb67e2410176d86ef15f4644e58e6932a912efab6104ff32fe8b3af7d30b363",
+    "analysis/NUC_BLIND_2_pred_M2.txt": "a5f3f8e01f6c213efcbd4e44c934db33e400b0b6dca68f2f0d94dc4dd44a51c9",
+    "analysis/holdout/NUC_BLIND_1/VERDICT_M1.json": "450722be7a96084fc4f9b3ace5f64c4c75038729a8878f21a33aecd1b9a2e823",
+    "analysis/holdout/NUC_BLIND_1/VERDICT_M2.json": "604e283b4526bc86497cd4c94b7050c30cf2ee3c7a33925e63041fd514d8ee79",
+    "analysis/holdout/NUC_BLIND_2/VERDICT_M1.json": "6c3b24a6b20542010cbbca1ed7afb253d54d5b8daf1dff3917deb41e74c5c16d",
+    "analysis/holdout/NUC_BLIND_2/VERDICT_M2.json": "ba31aa3e33a1c2e1fe50c187554f15eaf0b03984dffd8475645b8d20ed335756"
+  }
+}
