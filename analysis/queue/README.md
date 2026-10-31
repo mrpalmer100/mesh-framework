@@ -176,3 +176,4 @@ Branched from main at ed27c9e on 2026-10-18.
   credentialed on NUC-BLIND-2's sealed files byte for byte and on a synthetic mas20 fixture; charter
   analysis/NUC_NEW_1_charter_DRAFT.md. The set is built on the author's machine; the sandbox never holds AME2020.
 - 2026-10-31: NUC-NEW-1 hold-out built by the author on the lab machine (7d23981; |T| = 128; author's-draw variant, 2b unchanged); charter draft carries the hashes. Ready for the Director's proposal.
+- 2026-10-31: NUC-NEW-1 parked WITHDRAWN by the lab (three lock rounds, 22:55 to 23:06 local, before the hold-out existed; name taken). NUC-NEW-2 supersedes: design sealed 46b6ec6 (pins, binding, Q2 sampling floor, Q3 null, audit C-6, variant removed), kit at benchmarks/lab/nuc_new_2/, tool --audit mode. Charter draft follows the author's audit run (AUDIT.json), so no step waits on a person at proposal.
