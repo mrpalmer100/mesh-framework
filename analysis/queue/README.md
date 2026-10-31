@@ -166,3 +166,12 @@ Branched from main at ed27c9e on 2026-10-18.
 - 2026-10-27 (riders registered on the author's word): FND-189 carries the Road 1 rider (the bound is on the mass form factor;
   the charge is a constraint source on the centreline, pointlike by the dictionary; T-3's model was the wrong source type);
   the SWEEP sheet's final decision line: not adopted on T-2's grounds alone, kept as a priced mechanism; ledger updated.
+- 2026-10-31 (riders registered on the author's word): FND-185 and SM_EMERGENCE rows 7 and 8 carry the JOIN and
+  THICKNESS riders (analysis/JOIN_SYMMETRY_reading.md, analysis/THICK_ROPE_SYMMETRY_reading.md); GRV-028 and GRV-029
+  carry the LOCUS rider (analysis/SIGMA_LAMBDA_reading.md); PRED-001 carries the DESI DR2 confrontation
+  (analysis/PRED_001_confrontation_reading.md). No status changes.
+- 2026-10-31 (NUC-NEW-1, target-facing, kit-first under the standing rules): the evidence design sealed first
+  (analysis/NUC_NEW_1_design_SEALED.md, e38870c), then tools/ame2020_newset.py (the set of nuclides measured between
+  AME2012 and AME2020, labels and a sealed truth), the driver and the verdict on labkit (benchmarks/lab/nuc_new_1/),
+  credentialed on NUC-BLIND-2's sealed files byte for byte and on a synthetic mas20 fixture; charter
+  analysis/NUC_NEW_1_charter_DRAFT.md. The set is built on the author's machine; the sandbox never holds AME2020.
