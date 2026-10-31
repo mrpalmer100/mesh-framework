@@ -35,8 +35,17 @@ T = every (Z, N) whose AME2020 mass excess is experimental (no '#' flag), with A
 data/ame2012/AME2012.txt (2438 experimental rows). Built once by tools/ame2020_newset.py on the machine holding the
 AME2020 file (AMDC mass_1.mas20), which writes labels.txt (Z N only), sealed/test.txt (read once by the truth
 unit) and MANIFEST.json (hashes, counts, the anchor check). The sandbox never holds the AME2020 file; the models and
-the sandbox read labels.txt only. |T| is not known to the executor at this draft (expected 100 to 300); if |T| < 30
-every question renders NEW-SET-TOO-SMALL.
+the sandbox read labels.txt only. If |T| < 30 every question renders NEW-SET-TOO-SMALL.
+BUILT 2026-10-31 11:25 UTC by the author on the lab machine (commit 7d23981 on queue; the author's-draw variant):
+  |T| = 128 (new, experimental, A >= 12). AME2020: 3558 rows, 2550 experimental, 1008 from systematics; shared with
+  AME2012 2421; AME2012 rows absent from AME2020 17 (they are AME2012 rows, not T; recorded, nothing done); new rows
+  with A < 12: 1 (excluded by scope). Anchors C-12, O-16, Ca-40, Fe-56, Pb-208: deltas 0.0000, -0.0000, -0.0000,
+  -0.0007, -0.0004 MeV, all within 0.010 (C-4 pass).
+  ame2020 sha256 e8599c6d7f724fac91934e59f1b9de8fb8f63e820f4b39456b790665ed2a3307  (mass_1.mas20, from the AMDC
+                 mirror at IMP Lanzhou, amdc.impcas.ac.cn; the IAEA host sits behind a browser challenge)
+  ame2012 sha256 88c6272c9e4117d68ac1317e2590c9e376d25f77c9bf68fd6062bbb4e238cb13  (data/ame2012/AME2012.txt)
+  labels  sha256 2387278737460b207fc8b4d5637ad5426cfe4f0981686ee187fac20f2012298a  (analysis/holdout/NUC_NEW_1/labels.txt)
+  test    sha256 71658bb61b80507f68e2d1e19b5cc56fa4853447c848a4568137771b37b6534b  (analysis/holdout/NUC_NEW_1/sealed/test.txt; read once, by the truth unit)
 
 ## WHAT IS NOT ASSUMED, AND WHAT IS FORBIDDEN
 No row is removed after the truth is read; no model is re-fit, amended or added; no bar moves; no second verdict.
@@ -95,7 +104,8 @@ Q2: a rider on the same claims. DRIFTS for M2 is the out-of-sample price of NUC-
 Section 2b "externally adjudicated predictions": 1 -> 2 only if a named person who is not the author runs the set
   tool and holds sealed/ on a machine the author does not use, and runs the truth step there (the driver ingests
   VERDICT_M*.json); if the author runs the tool on the lab machine, the result is the author's draw of a public,
-  reader-reproducible set and 2b is unchanged. The author states which at lock.
+  reader-reproducible set and 2b is unchanged. CHOSEN: the author's-draw variant (the author ran the tool on the lab
+  machine, 2026-10-31); 2b is unchanged by this commission.
 
 ## NO-RESCUE RULE
 No row excluded for its residual; no regional re-scoring that was not pre-registered (none is); no amended model
@@ -107,22 +117,27 @@ open analysis/holdout/NUC_NEW_1/sealed/ if it exists, and does not run the predi
 before the lock (predictions are not evidence, but the order is the rule).
 
 ## PROCEDURE (who does what)
-1. The author (or the adjudicator), on the machine holding the AME2020 file, in a clone of the repository:
-       curl -sS -o mass_1.mas20 https://www-nds.iaea.org/amdc/ame2020/mass_1.mas20
-       python tools/ame2020_newset.py --ame2020 mass_1.mas20 --run-by "<name>"
-   commits analysis/holdout/NUC_NEW_1/ (labels.txt, MANIFEST.json and, in the author's-draw variant, sealed/test.txt,
-   as GRV-BLIND-2 did) and pushes it to the queue branch. In the adjudicated variant sealed/ stays on the
-   adjudicator's machine and only labels.txt and MANIFEST.json are pushed.
-2. The lab locks; the driver runs its units; in the adjudicated variant the truth unit is Blocked until the
+1. DONE (author's-draw variant). The author, on the lab machine, in the queue clone:
+       curl -sSL -o mass_1.mas20 https://amdc.impcas.ac.cn/masstables/Ame2020/mass_1.mas20
+       python3 tools/ame2020_newset.py --ame2020 mass_1.mas20 --run-by "author"
+   The first attempt against the IAEA host fetched a 5 KB browser-challenge page; the tool refused it ("parsed only
+   0 experimental rows") and wrote nothing. The mirror's file (472648 bytes, AME2020 header dated 3 Mar 2021)
+   parsed and passed the anchors. Committed analysis/holdout/NUC_NEW_1/ (labels.txt, MANIFEST.json, sealed/test.txt,
+   as GRV-BLIND-2 did) as 7d23981 on queue. The .mas20 file is not in the repository.
+2. The lab locks; the driver runs its units on the lab machine, where sealed/ exists; the truth unit reads
+   sealed/test.txt once. (In the adjudicated variant, not chosen, the truth unit would be Blocked until the
    adjudicator, holding sealed/ and the sealed MANIFEST.json the lab pushed, runs the standing tool where sealed/ lives
    (python tools/holdout_verdict.py verdict --name NUC_NEW_1 --predictions analysis/NUC_NEW_1_pred_M1.txt --label M1
    --unit mass --bar-rms 0.25 --bar-max 0.60, and the same for M2) and sends back VERDICT_M1.json and VERDICT_M2.json,
-   which the driver ingests after checking their prediction and test hashes against the seals.
+   which the driver ingests after checking their prediction and test hashes against the seals.)
 3. The verdict renders once; results to analysis/NUC_NEW_1_results.md.
 
 ## DISCLOSURES (for the lock checklist's anti-fishing item; the reviewers judge)
-1. The executor has not opened AME2020 in any form; the sandbox cannot reach the AMDC site and holds no copy. The
-   set size |T| is unknown to the executor. The AME2012 table in the repository holds experimental rows only.
+1. The executor has not opened AME2020 in any form; the sandbox cannot reach the AMDC site and holds no copy. After
+   the build the sandbox fetched 7d23981 with analysis/holdout/NUC_NEW_1/sealed/ excluded from the working tree
+   (git sparse-checkout); it holds labels.txt (Z N only; sha256 verified against the manifest) and MANIFEST.json,
+   which carries counts, hashes and the five anchor deltas (AME2012 rows) and no mass of any new row. The executor
+   knows |T| = 128 and the labels, and no value of T. The AME2012 table in the repository holds experimental rows only.
 2. The design was sealed (commit e38870c) before the set tool, the driver and the verdict were written; the kit was
    then credentialed on NUC-BLIND-2's published files (C-1, C-2) and on a synthetic fixture (C-3); the smoke's
    throwaway truth is five planted synthetic numbers. No evidence cell was computed.
