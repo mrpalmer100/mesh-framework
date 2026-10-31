@@ -7,6 +7,32 @@ branch (lab) and main changes only by the author's merge. The executor never pus
 
 Branched from main at ed27c9e on 2026-10-18.
 
+## Standing rules for every draft filed here (adopted by the author 29 October 2026, after the RING-WAVE-STABILITY lineage)
+
+1. THE KIT SHIPS WITH THE CHARTER. A draft carries its driver and verdict script at the paths its ```lab block names
+   (benchmarks/lab/<slug>/driver.py and verdict.py, on benchmarks/lab/_kit/labkit.py), one CONFIG shared by both
+   holding every locked number, and a stat_credential unit whose synthetic fixtures each carry a pre-stated class
+   or form derived from arithmetic, never from an instrument run. The lab's worker verifies and files it (mesh-lab
+   author-kit mode); it does not rebuild it. Three names and six review rounds were lost in October 2026 to
+   worker-written kits that re-implemented an instrument the executor already had.
+2. CREDENTIAL ON THE EVIDENCE SPAN. Before a draft is filed, every instrument it uses is credentialed on a known
+   answer at the PRODUCTION step and over the FULL span the evidence will run (RING-WAVE-STABILITY-4's 27 failure
+   records came from a convergence test that a two-period credential could never see; K7 is the model: 40 periods
+   at the production step, bars on every conserved quantity). A credential over a shorter span than the evidence
+   is not a credential of the evidence.
+3. THE EVIDENCE DESIGN IS SEALED BEFORE THE INSTRUMENT IS TOUCHED. The order is: write the probe schedule, the
+   amplitudes, the resolutions, the windows and the bars into a sealed file (analysis/<name>_design_SEALED.md,
+   committed with its hash in the charter); then build and credential the instrument on fixtures that are disjoint
+   from that schedule by construction (a different family member, a known-answer state, a synthetic datum); then
+   charter. Exploration is allowed and expected, on states the charter will never score, and every exploratory run
+   is listed in the charter's disclosures. A run that touches a scheduled cell before the lock removes that cell
+   from the form-bearing set, whatever it showed (the S2 lesson: one aborted 0.3-period run cost two rounds on three
+   names).
+4. A READING IS NOT A COMMISSION. A question whose answer is closed-form, previewed, or scale-free from a computed
+   cell is written as an executor's reading in analysis/ and never filed (ELEC-MECH-1, ELEC-KAPPA-1,
+   RING-WAVE-ANOMALY-R, CROSSING-PRICE-1 were all withdrawn on this ground, correctly). The lab is for
+   confrontations whose outcome nobody knows and, under NORTH_STAR section 5, for target-facing ones first.
+
 ## Log
 - 2026-10-23: THE ELECTRON LEDGER (analysis/ELECTRON_LEDGER.md, E1 of the electron programme): requirements R1-R10 with
   registered status; the five kills of the static clasp; the dynamical line and the ensemble it did not test; the alpha

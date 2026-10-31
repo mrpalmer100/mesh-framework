@@ -1,0 +1,95 @@
+UNDER ACTION (i) throughout (charter P1). Interior work (NORTH_STAR section 5, exception of 28 October 2026).
+credential bars: v1_K1=PASS v2_K2=PASS v2p_K2=PASS v2p_K3=PASS v3_K3=PASS v4_K4=PASS v4b_K5=PASS v6_K6=PASS
+failure record ctrl_M48: Newton/init failure at step 10186: 1019 samples kept, all before it, prefix v5-clean
+failure record S2_M48_s: Newton/init failure at step 10240: 1024 samples kept, all before it, prefix v5-clean
+failure record S3_M48_s: Newton/init failure at step 10217: 1022 samples kept, all before it, prefix v5-clean
+failure record S4_M48_s: Newton/init failure at step 10212: 1022 samples kept, all before it, prefix v5-clean
+failure record Z2_M48_s: Newton/init failure at step 10194: 1020 samples kept, all before it, prefix v5-clean
+failure record Z3_M48_s: Newton/init failure at step 10235: 1024 samples kept, all before it, prefix v5-clean
+failure record R0_M48_s: v5 breach (J) at the retained row, step 5310: 531 prefix samples v5-clean, breach row excluded from statistics
+failure record W1_M48_s: Newton/init failure at step 10209: 1021 samples kept, all before it, prefix v5-clean
+failure record W2_M48_s: Newton/init failure at step 10197: 1020 samples kept, all before it, prefix v5-clean
+failure record WU_M48_s: v5 breach (J) at the retained row, step 9370: 937 prefix samples v5-clean, breach row excluded from statistics
+failure record S2_M48_c: Newton/init failure at step 10187: 1019 samples kept, all before it, prefix v5-clean
+failure record S3_M48_c: Newton/init failure at step 10187: 1019 samples kept, all before it, prefix v5-clean
+failure record S4_M48_c: Newton/init failure at step 10197: 1020 samples kept, all before it, prefix v5-clean
+failure record Z2_M48_c: Newton/init failure at step 10196: 1020 samples kept, all before it, prefix v5-clean
+failure record Z3_M48_c: Newton/init failure at step 10205: 1021 samples kept, all before it, prefix v5-clean
+failure record R0_M48_c: Newton/init failure at step 10221: 1023 samples kept, all before it, prefix v5-clean
+failure record W1_M48_c: Newton/init failure at step 10255: 1026 samples kept, all before it, prefix v5-clean
+failure record W2_M48_c: Newton/init failure at step 10186: 1019 samples kept, all before it, prefix v5-clean
+failure record WU_M48_c: Newton/init failure at step 10209: 1021 samples kept, all before it, prefix v5-clean
+failure record R0_M96_s: v5 breach (J) at the retained row, step 2910: 291 prefix samples v5-clean, breach row excluded from statistics
+failure record W1_M96_s: v5 breach (J) at the retained row, step 6770: 677 prefix samples v5-clean, breach row excluded from statistics
+failure record W2_M96_s: v5 breach (J) at the retained row, step 7330: 733 prefix samples v5-clean, breach row excluded from statistics
+failure record WU_M96_s: v5 breach (J) at the retained row, step 3350: 335 prefix samples v5-clean, breach row excluded from statistics
+failure record R0_M96_c: v5 breach (J) at the retained row, step 4900: 490 prefix samples v5-clean, breach row excluded from statistics
+failure record WU_M96_c: v5 breach (J) at the retained row, step 8190: 819 prefix samples v5-clean, breach row excluded from statistics
+failure record ctrl_M48_h: Newton/init failure at step 10239: 1024 samples kept, all before it, prefix v5-clean
+failure record S2_M48_h: Newton/init failure at step 10186: 1019 samples kept, all before it, prefix v5-clean
+failure record S3_M48_h: Newton/init failure at step 10213: 1022 samples kept, all before it, prefix v5-clean
+failure record S4_M48_h: Newton/init failure at step 10212: 1022 samples kept, all before it, prefix v5-clean
+failure record Z2_M48_h: Newton/init failure at step 10215: 1022 samples kept, all before it, prefix v5-clean
+failure record Z3_M48_h: Newton/init failure at step 10233: 1024 samples kept, all before it, prefix v5-clean
+failure record R0_M48_h: Newton/init failure at step 10198: 1020 samples kept, all before it, prefix v5-clean
+failure record W1_M48_h: Newton/init failure at step 10201: 1021 samples kept, all before it, prefix v5-clean
+failure record W2_M48_h: Newton/init failure at step 10214: 1022 samples kept, all before it, prefix v5-clean
+failure record WU_M48_h: Newton/init failure at step 10211: 1022 samples kept, all before it, prefix v5-clean
+raw-series check: 13 complete runs scan v5-clean; 35 failure record(s) verified from the retained breach row / prefix
+D6 static cross-check (Leg C functional, no Coulomb term) M=48: S=6.681e-04 (bar 0.01: met), negative constrained modes 0, null 0, dim 87
+Q1 W1 M=48 amp=s: UNAVAILABLE rho=nan sigma=nan/period [control run not complete]
+Q1 W1 M=48 amp=c: UNAVAILABLE rho=nan sigma=nan/period [control run not complete]
+Q1 W1 M=96 amp=s: UNAVAILABLE rho=0.9999 sigma=-1.084e-05/period prefix of 13 blocks [failed run whose prefix does not bear GROWS (failure record)]
+Q1 W1 M=96 amp=c: BOUNDED rho=1 sigma=-2.499e-05/period
+Q1 W1 half-step run: UNAVAILABLE rho=nan sigma=nan
+Q1 W2 M=48 amp=s: UNAVAILABLE rho=nan sigma=nan/period [control run not complete]
+Q1 W2 M=48 amp=c: UNAVAILABLE rho=nan sigma=nan/period [control run not complete]
+Q1 W2 M=96 amp=s: UNAVAILABLE rho=0.9975 sigma=-0.0001189/period prefix of 14 blocks [failed run whose prefix does not bear GROWS (failure record)]
+Q1 W2 M=96 amp=c: BOUNDED rho=0.9905 sigma=-0.0002125/period
+Q1 W2 half-step run: UNAVAILABLE rho=nan sigma=nan
+Q1 R0 M=48 amp=s: UNAVAILABLE rho=nan sigma=nan/period [control run not complete]
+Q1 R0 M=48 amp=c: UNAVAILABLE rho=nan sigma=nan/period [control run not complete]
+Q1 R0 M=96 amp=s: UNAVAILABLE rho=1 sigma=-7.564e-06/period prefix of 5 blocks [failed run whose prefix does not bear GROWS (failure record)]
+Q1 R0 M=96 amp=c: UNAVAILABLE rho=1 sigma=-5.172e-06/period prefix of 9 blocks [failed run whose prefix does not bear GROWS (failure record)]
+Q1 R0 half-step run: UNAVAILABLE rho=nan sigma=nan
+Q1 half-blocked: {'W1': True, 'W2': True, 'R0': True}
+Q1 W1 M=48 reported (not scored): max |beta - beta0| 1.673e-06, largest Phidot mode of n=1..6 over the run 4.241e-03
+Q1 W1 M=96 reported (not scored): max |beta - beta0| 1.428e-06, largest Phidot mode of n=1..6 over the run 4.242e-03
+Q1 W2 M=48 reported (not scored): max |beta - beta0| 7.076e-04, largest Phidot mode of n=1..6 over the run 4.240e-03
+Q1 W2 M=96 reported (not scored): max |beta - beta0| 6.089e-04, largest Phidot mode of n=1..6 over the run 4.242e-03
+Q1 R0 M=48 reported (not scored): max |beta - beta0| 4.496e-06, largest Phidot mode of n=1..6 over the run 3.976e-07
+Q1 R0 M=96 reported (not scored): max |beta - beta0| 4.487e-06, largest Phidot mode of n=1..6 over the run 5.011e-07
+WU M=48 s: anomaly (run incomplete)
+WU M=48 c: anomaly (run incomplete)
+WU M=96 s: anomaly (run incomplete)
+WU M=96 c: anomaly (run incomplete)
+Q1b M=48: control D_shape max inf (bar 0.02), control slope per block nan; g4 observable floor (K6 F1b) 1.590e-03 (bar 0.02)
+Q1b S2 M=48 amp=s (DIAGNOSTIC ONLY): UNAVAILABLE max D_shape nan second-half slope nan (se nan) per block [failed run]
+Q1b S2 M=48 amp=c (DIAGNOSTIC ONLY): UNAVAILABLE max D_shape nan second-half slope nan (se nan) per block [failed run]
+Q1b S3 M=48 amp=s: UNAVAILABLE max D_shape nan second-half slope nan (se nan) per block [failed run]
+Q1b S3 M=48 amp=c: UNAVAILABLE max D_shape nan second-half slope nan (se nan) per block [failed run]
+Q1b S4 M=48 amp=s: UNAVAILABLE max D_shape nan second-half slope nan (se nan) per block [failed run]
+Q1b S4 M=48 amp=c: UNAVAILABLE max D_shape nan second-half slope nan (se nan) per block [failed run]
+Q1b Z2 M=48 amp=s: UNAVAILABLE max D_shape nan second-half slope nan (se nan) per block [failed run]
+Q1b Z2 M=48 amp=c: UNAVAILABLE max D_shape nan second-half slope nan (se nan) per block [failed run]
+Q1b Z3 M=48 amp=s: UNAVAILABLE max D_shape nan second-half slope nan (se nan) per block [failed run]
+Q1b Z3 M=48 amp=c: UNAVAILABLE max D_shape nan second-half slope nan (se nan) per block [failed run]
+Q1b M=96: control D_shape max 6.019e-09 (bar 0.02), control slope per block 1.908e-10; g4 observable floor (K6 F1b) 1.001e-04 (bar 0.02)
+Q1b S2 M=96 amp=s (DIAGNOSTIC ONLY): HOLDS max D_shape 0.006623 second-half slope 2.04e-06 (se 5.88e-08) per block
+Q1b S2 M=96 amp=c (DIAGNOSTIC ONLY): HOLDS max D_shape 0.008494 second-half slope 5.72e-07 (se 1.89e-07) per block
+Q1b S3 M=96 amp=s: HOLDS max D_shape 9.879e-05 second-half slope 3.018e-09 (se 1.06e-09) per block
+Q1b S3 M=96 amp=c: HOLDS max D_shape 0.004212 second-half slope 2.596e-07 (se 7.64e-08) per block
+Q1b S4 M=96 amp=s: HOLDS max D_shape 0.006278 second-half slope 4.065e-06 (se 3.66e-07) per block
+Q1b S4 M=96 amp=c: HOLDS max D_shape 0.001058 second-half slope 5.189e-08 (se 3.24e-08) per block
+Q1b Z2 M=96 amp=s: HOLDS max D_shape 0.002701 second-half slope 4.593e-08 (se 1.21e-07) per block
+Q1b Z2 M=96 amp=c: HOLDS max D_shape 0.0009 second-half slope 1.189e-08 (se 3.11e-08) per block
+Q1b Z3 M=96 amp=s: HOLDS max D_shape 0.00608 second-half slope 1.642e-07 (se 3.6e-07) per block
+Q1b Z3 M=96 amp=c: HOLDS max D_shape 0.002025 second-half slope 2.631e-08 (se 7.34e-08) per block
+Q1b S2 half-step run: UNAVAILABLE max nan slope nan; g2 blocked
+Q1b S3 half-step run: UNAVAILABLE max nan slope nan; g2 blocked
+Q1b S4 half-step run: UNAVAILABLE max nan slope nan; g2 blocked
+Q1b Z2 half-step run: UNAVAILABLE max nan slope nan; g2 blocked
+Q1b Z3 half-step run: UNAVAILABLE max nan slope nan; g2 blocked
+FORM (Q1): Q1-NO-CALL -- under action (i): no valid RING-UNSTABLE witness; W1 M48 s: UNAVAILABLE; W1 M48 c: UNAVAILABLE; W1 M96 s: UNAVAILABLE; W1 half-blocked; W2 M48 s: UNAVAILABLE; W2 M48 c: UNAVAILABLE; W2 M96 s: UNAVAILABLE; W2 half-blocked; R0 M48 s: UNAVAILABLE; R0 M48 c: UNAVAILABLE; R0 M96 s: UNAVAILABLE; R0 M96 c: UNAVAILABLE; R0 half-blocked
+FORM (Q1b): Q1B-NO-CALL -- under action (i): g1: control D_shape inf above 0.02 at M=48
+FORM (Q2): END-NOT-TRIGGERED -- under action (i): neither RING-UNSTABLE nor NEUTRAL-DRIFTS was rendered (this does not assert that no witness existed when only one was)

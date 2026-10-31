@@ -1,0 +1,27 @@
+{
+  "commission": "RING-WAVE-STABILITY-4",
+  "forms": [
+    "Q1-NO-CALL",
+    "Q1B-NO-CALL",
+    "END-NOT-TRIGGERED"
+  ],
+  "undeclared": [],
+  "rc": 0,
+  "actor": "agent:runner",
+  "at": "2026-10-29 01:00:23 -0400",
+  "charter_version": 1,
+  "lock_commit": "7f91cbd091eccaae007b2839935cf900bff92560",
+  "verdict_script": "benchmarks/lab/ring_wave_stability_4/verdict.py",
+  "verdict_script_sha256": "c0af64a591ca61d30beaa27f88f8031ed81b0bf1bce1020710cd9854045fc7e9",
+  "sealed_state": {
+    "analysis/ring_wave_stability_4_ckpt.pkl": "683e0d5aa1ac11ee4e20bba45594bad88d094fcd590910558f79c71d3377de57"
+  },
+  "output_sha256": "2864bf828f1b62d90c5088da3c0277dcd629db73c3855b3af8428f142be38873",
+  "results": [
+    "analysis/RING-WAVE-STABILITY-4_verdict.lock",
+    "analysis/ring_wave_stability_4_ckpt.pkl",
+    "analysis/RING-WAVE-STABILITY-4_verdict.log"
+  ],
+  "not_committed": [],
+  "output_tail": "r the run 4.241e-03\nQ1 W1 M=96 reported (not scored): max |beta - beta0| 1.428e-06, largest Phidot mode of n=1..6 over the run 4.242e-03\nQ1 W2 M=48 reported (not scored): max |beta - beta0| 7.076e-04, largest Phidot mode of n=1..6 over the run 4.240e-03\nQ1 W2 M=96 reported (not scored): max |beta - beta0| 6.089e-04, largest Phidot mode of n=1..6 over the run 4.242e-03\nQ1 R0 M=48 reported (not scored): max |beta - beta0| 4.496e-06, largest Phidot mode of n=1..6 over the run 3.976e-07\nQ1 R0 M=96 reported (not scored): max |beta - beta0| 4.487e-06, largest Phidot mode of n=1..6 over the run 5.011e-07\nWU M=48 s: anomaly (run incomplete)\nWU M=48 c: anomaly (run incomplete)\nWU M=96 s: anomaly (run incomplete)\nWU M=96 c: anomaly (run incomplete)\nQ1b M=48: control D_shape max inf (bar 0.02), control slope per block nan; g4 observable floor (K6 F1b) 1.590e-03 (bar 0.02)\nQ1b S2 M=48 amp=s (DIAGNOSTIC ONLY): UNAVAILABLE max D_shape nan second-half slope nan (se nan) per block [failed run]\nQ1b S2 M=48 amp=c (DIAGNOSTIC ONLY): UNAVAILABLE max D_shape nan second-half slope nan (se nan) per block [failed run]\nQ1b S3 M=48 amp=s: UNAVAILABLE max D_shape nan second-half slope nan (se nan) per block [failed run]\nQ1b S3 M=48 amp=c: UNAVAILABLE max D_shape nan second-half slope nan (se nan) per block [failed run]\nQ1b S4 M=48 amp=s: UNAVAILABLE max D_shape nan second-half slope nan (se nan) per block [failed run]\nQ1b S4 M=48 amp=c: UNAVAILABLE max D_shape nan second-half slope nan (se nan) per block [failed run]\nQ1b Z2 M=48 amp=s: UNAVAILABLE max D_shape nan second-half slope nan (se nan) per block [failed run]\nQ1b Z2 M=48 amp=c: UNAVAILABLE max D_shape nan second-half slope nan (se nan) per block [failed run]\nQ1b Z3 M=48 amp=s: UNAVAILABLE max D_shape nan second-half slope nan (se nan) per block [failed run]\nQ1b Z3 M=48 amp=c: UNAVAILABLE max D_shape nan second-half slope nan (se nan) per block [failed run]\nQ1b M=96: control D_shape max 6.019e-09 (bar 0.02), control slope per block 1.908e-10; g4 observable floor (K6 F1b) 1.001e-04 (bar 0.02)\nQ1b S2 M=96 amp=s (DIAGNOSTIC ONLY): HOLDS max D_shape 0.006623 second-half slope 2.04e-06 (se 5.88e-08) per block\nQ1b S2 M=96 amp=c (DIAGNOSTIC ONLY): HOLDS max D_shape 0.008494 second-half slope 5.72e-07 (se 1.89e-07) per block\nQ1b S3 M=96 amp=s: HOLDS max D_shape 9.879e-05 second-half slope 3.018e-09 (se 1.06e-09) per block\nQ1b S3 M=96 amp=c: HOLDS max D_shape 0.004212 second-half slope 2.596e-07 (se 7.64e-08) per block\nQ1b S4 M=96 amp=s: HOLDS max D_shape 0.006278 second-half slope 4.065e-06 (se 3.66e-07) per block\nQ1b S4 M=96 amp=c: HOLDS max D_shape 0.001058 second-half slope 5.189e-08 (se 3.24e-08) per block\nQ1b Z2 M=96 amp=s: HOLDS max D_shape 0.002701 second-half slope 4.593e-08 (se 1.21e-07) per block\nQ1b Z2 M=96 amp=c: HOLDS max D_shape 0.0009 second-half slope 1.189e-08 (se 3.11e-08) per block\nQ1b Z3 M=96 amp=s: HOLDS max D_shape 0.00608 second-half slope 1.642e-07 (se 3.6e-07) per block\nQ1b Z3 M=96 amp=c: HOLDS max D_shape 0.002025 second-half slope 2.631e-08 (se 7.34e-08) per block\nQ1b S2 half-step run: UNAVAILABLE max nan slope nan; g2 blocked\nQ1b S3 half-step run: UNAVAILABLE max nan slope nan; g2 blocked\nQ1b S4 half-step run: UNAVAILABLE max nan slope nan; g2 blocked\nQ1b Z2 half-step run: UNAVAILABLE max nan slope nan; g2 blocked\nQ1b Z3 half-step run: UNAVAILABLE max nan slope nan; g2 blocked\nFORM (Q1): Q1-NO-CALL -- under action (i): no valid RING-UNSTABLE witness; W1 M48 s: UNAVAILABLE; W1 M48 c: UNAVAILABLE; W1 M96 s: UNAVAILABLE; W1 half-blocked; W2 M48 s: UNAVAILABLE; W2 M48 c: UNAVAILABLE; W2 M96 s: UNAVAILABLE; W2 half-blocked; R0 M48 s: UNAVAILABLE; R0 M48 c: UNAVAILABLE; R0 M96 s: UNAVAILABLE; R0 M96 c: UNAVAILABLE; R0 half-blocked\nFORM (Q1b): Q1B-NO-CALL -- under action (i): g1: control D_shape inf above 0.02 at M=48\nFORM (Q2): END-NOT-TRIGGERED -- under action (i): neither RING-UNSTABLE nor NEUTRAL-DRIFTS was rendered (this does not assert that no witness existed when only one was)\n"
+}
