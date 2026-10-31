@@ -175,3 +175,4 @@ Branched from main at ed27c9e on 2026-10-18.
   AME2012 and AME2020, labels and a sealed truth), the driver and the verdict on labkit (benchmarks/lab/nuc_new_1/),
   credentialed on NUC-BLIND-2's sealed files byte for byte and on a synthetic mas20 fixture; charter
   analysis/NUC_NEW_1_charter_DRAFT.md. The set is built on the author's machine; the sandbox never holds AME2020.
+- 2026-10-31: NUC-NEW-1 hold-out built by the author on the lab machine (7d23981; |T| = 128; author's-draw variant, 2b unchanged); charter draft carries the hashes. Ready for the Director's proposal.
