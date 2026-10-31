@@ -567,5 +567,11 @@
  ],
  "labels_sha256": "2387278737460b207fc8b4d5637ad5426cfe4f0981686ee187fac20f2012298a",
  "test_sha256": "71658bb61b80507f68e2d1e19b5cc56fa4853447c848a4568137771b37b6534b",
- "rule": "The models and the sandbox read labels.txt only. sealed/test.txt is read once, by the commission verdict, after the predictions are sealed. No row is added or removed afterwards."
+ "rule": "The models and the sandbox read labels.txt only. sealed/test.txt is read once, by the commission verdict, after the predictions are sealed. No row is added or removed afterwards.",
+ "prediction_sha256_M1": "ff061233a5a8627142bb8a9f0f49ad9d5b78f63249ba50ef77bdfb6f4ffee447",
+ "prediction_file_M1": "analysis/NUC_NEW_5_pred_M1.txt",
+ "prediction_sealed_at_utc_M1": "2026-10-31T15:32:49Z",
+ "prediction_sha256_M2": "1382170fb665bf2c09d70be144f6b6625e4cb50b9f30d1834e928652eeea9dd2",
+ "prediction_file_M2": "analysis/NUC_NEW_5_pred_M2.txt",
+ "prediction_sealed_at_utc_M2": "2026-10-31T15:32:49Z"
 }

@@ -1,0 +1,12 @@
+NUC-NEW-5: 128 nuclides first measured between AME2012 and AME2020 (A >= 12; hold-out built by author; ame2020 sha256 e8599c6d7f724fac...; truth read-once)
+credential: C-1 PASS, C-2 PASS, C-3 PASS, C-4 PASS, C-5 PASS, C-6(a, counts equality) PASS, C-7 PASS; C-1 run binding M1 PASS, M2 PASS; audit diagnostics (no threshold; NUC-NEW-2 closed on its 0.99 agreement bar): counts {'ame2020_rows': 3558, 'ame2020_experimental': 2550, 'ame2020_systematics': 1008, 'ame2012_rows': 2438, 'ame2012_absent_from_ame2020': 17}; shared rows 2421, 0.9752 within 0.1 MeV, beyond 60, largest shift 1.360 MeV; a_C 0.7716 MeV; a_V M1 17.7703, M2 15.9871 (Ca-40, AME2012)
+M1: rms 0.1909, max 0.4976 percent of mass on 128 rows; adjudicated in-sample 0.1380 / 0.2271; rho 1.383; sampling floor F 1.178 (bootstrap median 1.001); Q2 is a fixed rms ratio, not a test of equal error distributions
+M1 worst five (+: overbound by the model): Z=5 N=16 +0.4976, Z=5 N=15 +0.4532, Z=5 N=14 +0.4008, Z=4 N=11 +0.3466, Z=9 N=20 +0.3081
+Q3 M1 (sub-reading; Q3 carries no claim; no rider may quote it): corr(residual, 23 (N-Z)^2/A) = +0.892; permutation null 99th percentile of |r| 0.223, observed at the 100.0th percentile (above the null floor)
+M2: rms 0.0203, max 0.0420 percent of mass on 128 rows; adjudicated in-sample 0.0160 / 0.0350; rho 1.271; sampling floor F 1.370 (bootstrap median 1.004); Q2 is a fixed rms ratio, not a test of equal error distributions
+M2 worst five (+: overbound by the model): Z=4 N=11 -0.0420, Z=5 N=16 -0.0391, Z=10 N=5 -0.0381, Z=23 N=39 +0.0363, Z=21 N=38 +0.0355
+Q3 M2 (sub-reading; Q3 carries no claim; no rider may quote it): corr(residual, (N-Z)^4/A^3) = -0.252; permutation null 99th percentile of |r| 0.224, observed at the 99.3th percentile (above the null floor); corr(residual, pairing indicator) = +0.046; permutation null 99th percentile of |r| 0.227, observed at the 41.2th percentile (not above the null floor)
+FORM (Q1-M1): BLIND-AGREES -- rms 0.1909 <= 0.25 and max 0.4976 <= 0.6 percent of mass on 128 rows
+FORM (Q2-M1): EXTRAPOLATES -- rho 1.383 <= 2.0 (rms 0.1909 / adjudicated in-sample 0.1380); floor F 1.178
+FORM (Q1-M2): BLIND-AGREES -- rms 0.0203 <= 0.25 and max 0.0420 <= 0.6 percent of mass on 128 rows
+FORM (Q2-M2): EXTRAPOLATES -- rho 1.271 <= 2.0 (rms 0.0203 / adjudicated in-sample 0.0160); floor F 1.370
