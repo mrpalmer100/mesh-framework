@@ -9,6 +9,15 @@ holds the AME2020 file (the author's or the adjudicator's; never the sandbox), a
 
     python tools/ame2020_newset.py --ame2020 /path/to/mass_1.mas20 --run-by "author"
 
+and, afterwards, with --audit (design NUC_NEW_2 C-6), reads the same file and the hold-out it built and writes
+
+    analysis/holdout/NUC_NEW_1/AUDIT.json           the real-file sanity record: the file's sha256, the counts, and
+                                                    for the SHARED rows (AME2012 rows experimental in both tables)
+                                                    how many agree within --tol MeV, how many do not, and the largest
+                                                    absolute shift (AME2012 rows: not evidence). It reads no new row.
+
+    python tools/ame2020_newset.py --ame2020 /path/to/mass_1.mas20 --run-by "author" --audit
+
 The test set T is every (Z, N) whose AME2020 mass excess is EXPERIMENTAL (no '#' in the field), with A >= 12, that is
 not a row of data/ame2012/AME2012.txt. It prints counts and hashes only; it never prints a mass of a new row. It
 refuses to overwrite an existing hold-out and refuses the parse unless the five anchors (C-12, O-16, Ca-40, Fe-56,
@@ -93,14 +102,52 @@ def build(ame2020_text, ame2012):
                             new_a_below_12=len(new_light), n_test=len(test)))
 
 
+def audit(ame2020_text, ame2012, tol_mev):
+    """The real-file sanity record (design NUC_NEW_2 C-6): pure; no new row is read or returned."""
+    rows = parse_mas20(ame2020_text)
+    exp = {k: v for k, (v, flagged) in rows.items() if not flagged}
+    shared = [k for k in ame2012 if k in exp]
+    deltas = [abs(exp[k] - ame2012[k]) for k in shared]
+    within = sum(d <= tol_mev for d in deltas)
+    return dict(tol_MeV=tol_mev, shared=len(shared), within=within, beyond=len(shared) - within,
+                fraction_within=(within / len(shared)) if shared else 0.0,
+                max_abs_shift_MeV=(max(deltas) if deltas else 0.0),
+                counts=dict(ame2020_rows=len(rows), ame2020_experimental=len(exp), ame2020_systematics=len(rows) - len(exp),
+                            ame2012_rows=len(ame2012), ame2012_absent_from_ame2020=len([k for k in ame2012 if k not in exp])))
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--ame2020', required=True, help='the AMDC file mass_1.mas20 (or mass20.txt)')
-    ap.add_argument('--run-by', required=True, help='who ran it (the author, or a named adjudicator)')
+    ap.add_argument('--run-by', required=True, help='who ran it')
     ap.add_argument('--name', default='NUC_NEW_1')
     ap.add_argument('--out-root', default=str(ROOT), help='(smoke only) a different root for analysis/holdout/<name>')
+    ap.add_argument('--audit', action='store_true', help='write AUDIT.json for an existing hold-out (design NUC_NEW_2 C-6)')
+    ap.add_argument('--tol', type=float, default=0.100, help='audit tolerance on the shared rows, MeV (design C-6: 0.100)')
     a = ap.parse_args()
     out = pathlib.Path(a.out_root) / 'analysis' / 'holdout' / a.name
+    src = pathlib.Path(a.ame2020)
+    if a.audit:
+        if not out.exists():
+            sys.exit(f'[newset] REFUSED: {out} does not exist; the audit follows the build.')
+        ap_ = out / 'AUDIT.json'
+        if ap_.exists():
+            sys.exit(f'[newset] REFUSED: {ap_} exists. The audit is written once.')
+        man = json.loads((out / 'MANIFEST.json').read_text())
+        h = sha256(src)
+        if h != man['ame2020_sha256']:
+            sys.exit(f'[newset] REFUSED: {src.name} sha256 {h[:16]}... is not the file the hold-out was built from. Nothing written.')
+        r = audit(src.read_text(errors='replace'), read_ame2012(), a.tol)
+        r.update(name=a.name, run_by=a.run_by, run_at_utc=time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
+                 ame2020_sha256=h, ame2012_sha256=sha256(AME2012), labels_sha256=sha256(out / 'labels.txt'),
+                 test_sha256=sha256(out / 'sealed' / 'test.txt') if (out / 'sealed' / 'test.txt').exists() else None,
+                 rule='Shared rows only (AME2012 rows experimental in both tables); no new row is read. Written once.')
+        ap_.write_text(json.dumps(r, indent=1) + '\n')
+        print(f"[newset] AUDIT {a.name}: shared rows {r['shared']}; within {a.tol:.3f} MeV: {r['within']} "
+              f"({100 * r['fraction_within']:.2f} percent); beyond: {r['beyond']}; largest shift among shared rows "
+              f"{r['max_abs_shift_MeV']:.4f} MeV; counts {r['counts']}; run by {a.run_by}")
+        print(f"[newset] audit sha256 {sha256(ap_)}  (analysis/holdout/{a.name}/AUDIT.json)")
+        return
     if out.exists():
         sys.exit(f'[newset] REFUSED: {out} exists. The set is built once; use a new --name.')
     src = pathlib.Path(a.ame2020)
