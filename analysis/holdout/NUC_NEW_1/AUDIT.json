@@ -1,0 +1,23 @@
+{
+ "tol_MeV": 0.1,
+ "shared": 2421,
+ "within": 2361,
+ "beyond": 60,
+ "fraction_within": 0.9752168525402726,
+ "max_abs_shift_MeV": 1.359993000000003,
+ "counts": {
+  "ame2020_rows": 3558,
+  "ame2020_experimental": 2550,
+  "ame2020_systematics": 1008,
+  "ame2012_rows": 2438,
+  "ame2012_absent_from_ame2020": 17
+ },
+ "name": "NUC_NEW_1",
+ "run_by": "author",
+ "run_at_utc": "2026-10-31T13:10:03Z",
+ "ame2020_sha256": "e8599c6d7f724fac91934e59f1b9de8fb8f63e820f4b39456b790665ed2a3307",
+ "ame2012_sha256": "88c6272c9e4117d68ac1317e2590c9e376d25f77c9bf68fd6062bbb4e238cb13",
+ "labels_sha256": "2387278737460b207fc8b4d5637ad5426cfe4f0981686ee187fac20f2012298a",
+ "test_sha256": "71658bb61b80507f68e2d1e19b5cc56fa4853447c848a4568137771b37b6534b",
+ "rule": "Shared rows only (AME2012 rows experimental in both tables); no new row is read. Written once."
+}

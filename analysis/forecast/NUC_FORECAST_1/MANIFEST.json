@@ -1,0 +1,50 @@
+{
+ "name": "NUC_FORECAST_1",
+ "registration": "analysis/NUC_FORECAST_1_PREREGISTERED.md",
+ "registration_commit": "72c840a94d46dc94d9502a124942da89097dc387",
+ "built_at_utc": "2026-10-31T23:04:33Z",
+ "built_by": "mark",
+ "ame2020_sha256": "e8599c6d7f724fac91934e59f1b9de8fb8f63e820f4b39456b790665ed2a3307",
+ "ame2012_sha256": "88c6272c9e4117d68ac1317e2590c9e376d25f77c9bf68fd6062bbb4e238cb13",
+ "labels_sha256": "a3077bb1c7dbf48bef9c0fa92dd3d0113761ec4362e6928ecd63bc11a0f2c3c1",
+ "n_forecast": 987,
+ "counts": {
+  "ame2020_rows": 3558,
+  "ame2020_systematics": 1008,
+  "systematics_a_below_12": 4,
+  "systematics_in_ame2012": 17,
+  "n_forecast": 987
+ },
+ "a_range": [
+  13,
+  295
+ ],
+ "z_max": 118,
+ "models": {
+  "M1": {
+   "as_over_av": 1.34,
+   "a_a": 0.0,
+   "a_v": 17.770286909889982,
+   "a_c": 0.7716295256894924,
+   "calibrator": "Ca-40 AME2012",
+   "b_ca40": 342.0521406,
+   "bound_to": "analysis/nuc_new_5_ckpt.pkl records.credential",
+   "bind_tol": 1e-12
+  },
+  "M2": {
+   "as_over_av": 1.108,
+   "a_a": 19.85,
+   "a_v": 15.987072226683638,
+   "a_c": 0.7716295256894924,
+   "calibrator": "Ca-40 AME2012",
+   "b_ca40": 342.0521406,
+   "bound_to": "analysis/nuc_new_5_ckpt.pkl records.credential",
+   "bind_tol": 1e-12
+  }
+ },
+ "rule": "F: every (Z, N) of the pinned AME2020 table whose mass excess is from systematics, A >= 12, not a row of AME2012.txt. Predictions by the frozen NUC-NEW-5 models (a_V on AME2012 Ca-40 only). Scored on the first Atomic Mass Evaluation published after this commit, on the rows of F it lists as experimental, under bar W (rms <= 0.25, max <= 0.60 percent of mass) and the extrapolation ratio rho <= 2 against NUC-BLIND-2's in-sample rms, min 30 rows; no row added or removed; a new scoring commission with its own sealed design. See analysis/NUC_FORECAST_1_PREREGISTERED.md.",
+ "pred_M1_sha256": "ac669785c475735f2158071d1d349be8f69cab62ab7c4c562c32e9ee6701172c",
+ "pred_M1_file": "analysis/forecast/NUC_FORECAST_1/pred_M1.txt",
+ "pred_M2_sha256": "40f7b2767a9d179d4f6cf3327ab6304ea05893a4f9b497bd476cb014eefc03a3",
+ "pred_M2_file": "analysis/forecast/NUC_FORECAST_1/pred_M2.txt"
+}
