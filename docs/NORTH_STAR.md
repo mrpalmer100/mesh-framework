@@ -208,6 +208,22 @@ of -4, to any other interior charter, or to a lineage; the session after it must
 reviewers apply the rest of this section as written, including the reading that a finite-amplitude run
 under an adopted action does not adjudicate the electron ledger's A2.
 
+Reading, recorded by the author on 4 November 2026 (one commission, one lock): NUC-MIRROR-LEAN-2 (the derived
+uniform-sphere Coulomb term scored on the AME2012 T = 1/2 mirror displacement energies, the channel in which the
+Ca-40 calibration, the surface term and the symmetry term cancel exactly; design analysis/NUC_MIRROR_LEAN_2_design_SEALED.md)
+is interior work and locks as the one interior session this section permits after NUC-NEW-5 (locked 31 October
+2026, target-facing, promoted as NUC-031); the session after it must be target-facing. For this commission the
+reviewers read bar W as met by its construction (the predictions written and sealed before the table is read, the
+evidence unit bound to them by hash, the set fixed by a deterministic rule on a table pinned by hash, nature's
+set with no seed and no choice, as NUC-NEW-5's was), and read the lock checklist's floor item as met by the floor
+the design states (the pair-scatter bootstrap and the audit-tolerance allowance, read against the band edge,
+with a coherent charge-symmetry-breaking contribution named as part of the measured channel and of the rider's
+wording, not of the floor). The reviewers apply the rest of the checklist as written. Reason: six designs of this
+question died before any lock of lab defects, and the seventh (NUC-MIRROR-LEAN, 4 November) died at lock on this
+section, on bar W and on the floor, none of which a kit can answer; the author judges the channel worth one lock
+at the cost it has already shown (one kit, two reviews). This reading names one commission and does not extend to
+any successor or lineage.
+
 Standing bar, blind hold-out (adopted 4 October 2026, STRATEGIC_TARGETS section W): in any
 sector whose model carries a calibration or a fit against a measured table (today the
 nuclear masses, NUC-005/018), the next confrontation holds out a pre-registered test set,
