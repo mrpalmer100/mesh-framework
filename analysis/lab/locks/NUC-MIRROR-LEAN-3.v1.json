@@ -1,0 +1,45 @@
+{
+  "commission": "NUC-MIRROR-LEAN-3",
+  "version": 1,
+  "kind": "lock",
+  "actor": "agent:registry",
+  "at": "2026-11-05 06:43:34 -0500",
+  "target": "Weights of atoms row, the Coulomb cell ('Coulomb term derived from winding charge and spacing (+9%)'): the first score of the derived zero-constant uniform-sphere Coulomb term against measurements on its own, using the one channel where the Ca-40 calibration, the surface term and the symmetry term cancel exactly.",
+  "spec": {
+    "commission": "NUC-MIRROR-LEAN-3",
+    "target": "Weights of atoms row (section 1), the Coulomb cell: whether the derived uniform-sphere Coulomb term a_C = 0.7716 MeV (d0 = 2.026 fm, no constant fitted to a mass), scored alone on the AME2012 T = 1/2 mirror displacement energies at A >= 13, the channel in which the Ca-40 calibration, the surface term and the symmetry term cancel exactly, with the predictions sealed before the table is read, lies inside the coefficient's registered 8.5 percent band above a locked floor; interior work, the one interior session after NUC-NEW-5 under NORTH_STAR section 5 with the author's reading recorded there; moves no North Star number; nothing waits on a person; no count, no preview, no draw",
+    "driver": "benchmarks/lab/nuc_mirror_lean_3/driver.py",
+    "verdict_script": "benchmarks/lab/nuc_mirror_lean_3/verdict.py",
+    "instrument": [
+      "benchmarks/lab/_kit/labkit.py",
+      "benchmarks/lab/nuc_new_5/driver.py",
+      "data/ame2012/AME2012.txt",
+      "analysis/NUC_MIRROR_LEAN_3_design_SEALED.md"
+    ],
+    "forms": [
+      "U-AGREES",
+      "U-MISS-HIGH",
+      "U-MISS-LOW",
+      "U-OPEN-BAND",
+      "U-NULL-FLOOR",
+      "INSTRUMENT-OPEN"
+    ],
+    "state": [
+      "analysis/nuc_mirror_lean_3_ckpt.pkl"
+    ],
+    "budget": {
+      "cpu_hours": 0.05,
+      "usd": 0
+    },
+    "mem_gb": 1
+  },
+  "manifest": {
+    "analysis/NUC-MIRROR-LEAN-3_charter_LOCKED.md": "3aa332f3e6704020191df3b0914a0d0c4274e2f80038963b83ee7f4d14d42eca",
+    "benchmarks/lab/nuc_mirror_lean_3/driver.py": "6bc75735badbe0768ca821439e0bf41cd4383b3dde4f915461319f8496b286b3",
+    "benchmarks/lab/nuc_mirror_lean_3/verdict.py": "574790f97ed91c0d888afc0129f656a739c25345df737247048a4ac85fb2dd06",
+    "benchmarks/lab/_kit/labkit.py": "3ad0659bfed062308a7ebbda83d17308e38369d6564c93c8d61a567e3d4c592a",
+    "benchmarks/lab/nuc_new_5/driver.py": "15b5ff9eca29c4376a302492655a50f8e1bc3832297a941de987418ef3481fef",
+    "data/ame2012/AME2012.txt": "88c6272c9e4117d68ac1317e2590c9e376d25f77c9bf68fd6062bbb4e238cb13",
+    "analysis/NUC_MIRROR_LEAN_3_design_SEALED.md": "f816466fe925a72e442b2f9496a2e158b3d600479dcff640585d4d2f65eacbc4"
+  }
+}
