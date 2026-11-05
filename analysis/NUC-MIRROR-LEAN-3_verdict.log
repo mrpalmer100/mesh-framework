@@ -1,0 +1,4 @@
+NUC-MIRROR-LEAN-3: n = 31 T = 1/2 mirror pairs, A = 13 to 75; a_c() = 0.7716295256894924 MeV (C-1 ok, C-2 worst 3.0e-14); table sha256 88c6272c9e4117d68ac1317e2590c9e376d25f77c9bf68fd6062bbb4e238cb13; predictions sealed 51c713ba12657100 before the table was read
+mean_delta = +0.24642, rms_delta = 0.25601, min +0.16887 (A = 69), max +0.43999 (A = 17); diagnostic Z(Z-1) mean +0.20884 (no form)
+floor h = max(h_boot 0.03284, h_inst 0.00595) = 0.03284; band B1 = 0.085; |mean| + h = 0.27926; mean - h = +0.21358; mean + h = +0.27926; sign_resolved = True (decides nothing)
+FORM (Q1): U-MISS-HIGH -- mean - h = +0.21358 > B1 = 0.085

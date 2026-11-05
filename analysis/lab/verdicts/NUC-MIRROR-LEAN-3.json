@@ -1,0 +1,27 @@
+{
+  "commission": "NUC-MIRROR-LEAN-3",
+  "forms": [
+    "U-MISS-HIGH"
+  ],
+  "undeclared": [],
+  "rc": 0,
+  "actor": "agent:runner",
+  "at": "2026-11-05 06:44:44 -0500",
+  "charter_version": 1,
+  "lock_commit": "70284c4967477f93a3134ade7f74afe48d4a4374",
+  "verdict_script": "benchmarks/lab/nuc_mirror_lean_3/verdict.py",
+  "verdict_script_sha256": "574790f97ed91c0d888afc0129f656a739c25345df737247048a4ac85fb2dd06",
+  "sealed_state": {
+    "analysis/nuc_mirror_lean_3_ckpt.pkl": "b144d37e789d713f61aed2da7431ee8bd65779964c1e98c902a74342e0ac01e2"
+  },
+  "output_sha256": "3053e3a193fcff485b9a284ae809168f7a9e643a89c051a5f639ebfd04839c81",
+  "results": [
+    "analysis/nuc_mirror_lean_3_ckpt.pkl",
+    "analysis/NUC_MIRROR_LEAN_3_results.md",
+    "analysis/NUC_MIRROR_LEAN_3_pred.txt",
+    "analysis/NUC-MIRROR-LEAN-3_verdict.log",
+    "analysis/NUC-MIRROR-LEAN-3_verdict.lock"
+  ],
+  "not_committed": [],
+  "output_tail": "NUC-MIRROR-LEAN-3: n = 31 T = 1/2 mirror pairs, A = 13 to 75; a_c() = 0.7716295256894924 MeV (C-1 ok, C-2 worst 3.0e-14); table sha256 88c6272c9e4117d68ac1317e2590c9e376d25f77c9bf68fd6062bbb4e238cb13; predictions sealed 51c713ba12657100 before the table was read\nmean_delta = +0.24642, rms_delta = 0.25601, min +0.16887 (A = 69), max +0.43999 (A = 17); diagnostic Z(Z-1) mean +0.20884 (no form)\nfloor h = max(h_boot 0.03284, h_inst 0.00595) = 0.03284; band B1 = 0.085; |mean| + h = 0.27926; mean - h = +0.21358; mean + h = +0.27926; sign_resolved = True (decides nothing)\nFORM (Q1): U-MISS-HIGH -- mean - h = +0.21358 > B1 = 0.085\n"
+}
