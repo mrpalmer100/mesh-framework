@@ -222,7 +222,10 @@ wording, not of the floor). The reviewers apply the rest of the checklist as wri
 question died before any lock of lab defects, and the seventh (NUC-MIRROR-LEAN, 4 November) died at lock on this
 section, on bar W and on the floor, none of which a kit can answer; the author judges the channel worth one lock
 at the cost it has already shown (one kit, two reviews). This reading names one commission and does not extend to
-any successor or lineage.
+any successor or lineage. Extended by the author on 5 November 2026 to NUC-MIRROR-LEAN-3 (design
+analysis/NUC_MIRROR_LEAN_3_design_SEALED.md), the same design with the evidence cell's inspection history told
+exactly and the kit held to the design's read order, after NUC-MIRROR-LEAN-2 died at lock on two points of the
+executor's making that this reading does not touch; still one commission, one lock, and no further.
 
 Standing bar, blind hold-out (adopted 4 October 2026, STRATEGIC_TARGETS section W): in any
 sector whose model carries a calibration or a fit against a measured table (today the
