@@ -243,23 +243,30 @@ checklist, the section 5 alternation, two reviewers, a verdict that can move a s
 one of the five numbers, or a grade. By 6 November 2026 every table in the repository had been
 read by some locked session, and under those rules the lab could propose nothing it could run.
 
-An EXPLORATORY commission runs on evidence the programme has already inspected. It keeps the
-discipline that makes a result honest: a sealed design before any kit; every statistic, bar,
-floor and form fixed before the commission reads anything (the theorist designs without the
-data); fixtures certain to pass; exhaustive forms; the no-rescue rule; no step waiting on a
-person; the checkpoint and the one-shot verdict. It drops what exists to protect this page:
-bar W, the section 5 line (an exploratory commission is not a session under section 5 and
-does not count in its alternation), and the external reviewer. Its result is registered in
-claims.yaml with status Exploratory and a note naming the commission and the evidence.
+An EXPLORATORY commission runs on evidence the programme has already inspected, and its
+designer looks first: the data is in view while the statistic, the bars and the forms are
+chosen, and the design records what was looked at. Looking at data before an experiment is
+how physics is done; this page's only job is to say what the result then is. Once the design
+is sealed it keeps the discipline that makes a result honest: the kit implements the design
+and does not change it; every statistic, bar and form is written down before the kit runs;
+fixtures certain to pass; exhaustive forms; the no-rescue rule; no step waiting on a person;
+the checkpoint and the one-shot verdict. It drops what exists to protect this page: the
+no-preview items of the lock checklist, bar W, the section 5 line (an exploratory commission
+is not a session under section 5 and does not count in its alternation), and the external
+reviewer. Its result is registered in claims.yaml with status Exploratory and a note naming
+the commission and the evidence.
 
 What an exploratory result is: a reading of the model against data the programme already
-holds, under bars fixed before the reading, by a lab that cannot rescue it. What it is not:
+holds, with the data in view when the bars were set, by a lab that cannot rescue it once the
+design is sealed. What it is not:
 evidence. It never moves a grade in section 2c, a cell in section 1, a number in section 2b or
 a row of the input ledger; it never retires an input or arms a discriminator; it is never
 cited in support of a Derived or Modeled claim, and the author never grants it. A discovery
 worth confirming is the case for bringing uninspected evidence into the repository and
-chartering a confirmatory commission on it under a new name. Each question is explored at
-most once; the second look is confirmatory or nothing.
+chartering a confirmatory commission on it under a new name, blind. Each question is explored
+at most once; the second look is confirmatory or nothing. The loop is the ordinary one: look,
+find, predict, test; only the last step is blind, and only because the registered claim says
+so.
 
 ## 6. The queue as of 27 September 2026 (proposed, author decides)
 
