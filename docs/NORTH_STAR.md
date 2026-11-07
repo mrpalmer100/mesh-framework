@@ -263,10 +263,17 @@ evidence. It never moves a grade in section 2c, a cell in section 1, a number in
 a row of the input ledger; it never retires an input or arms a discriminator; it is never
 cited in support of a Derived or Modeled claim, and the author never grants it. A discovery
 worth confirming is the case for bringing uninspected evidence into the repository and
-chartering a confirmatory commission on it under a new name, blind. Each question is explored
-at most once; the second look is confirmatory or nothing. The loop is the ordinary one: look,
-find, predict, test; only the last step is blind, and only because the registered claim says
-so.
+chartering a confirmatory commission on it under a new name, blind. A question may be explored
+again from a different angle. The loop is the ordinary one: look, find, predict, test; only the
+last step is blind, and only because the registered claim says so.
+
+The author's standing instruction of 7 November 2026: the lab is in discovery mode. Its
+ordinary commission is exploratory, and its standing agenda is the fitted parameters of
+standard physics, read eyes open against the registered mesh constants wherever the data is
+on hand; a confirmatory commission is the exception. "Someday after the discoveries are made
+we will need a disprove lab to test questionable theories and possibilities of numerology,
+but we are so far from that. We can't explain a single fitted parameter and we must be in
+discovery mode now."
 
 ## 6. The queue as of 27 September 2026 (proposed, author decides)
 
