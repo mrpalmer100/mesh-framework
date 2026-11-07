@@ -235,6 +235,46 @@ prediction is frozen before the held-out values are read. The locked charter nam
 hold-out file by hash. Inspecting the whole table and fitting to part of it is no longer a
 confrontation on this page.
 
+## 5b. Exploratory results (adopted by the author on 7 November 2026)
+
+The lab has two grades of commission. Everything on this page before this section describes
+the CONFIRMATORY grade: evidence the programme has never inspected (bar W), the full lock
+checklist, the section 5 alternation, two reviewers, a verdict that can move a scorecard cell,
+one of the five numbers, or a grade. By 6 November 2026 every table in the repository had been
+read by some locked session, and under those rules the lab could propose nothing it could run.
+
+An EXPLORATORY commission runs on evidence the programme has already inspected, and its
+designer looks first: the data is in view while the statistic, the bars and the forms are
+chosen, and the design records what was looked at. Looking at data before an experiment is
+how physics is done; this page's only job is to say what the result then is. Once the design
+is sealed it keeps the discipline that makes a result honest: the kit implements the design
+and does not change it; every statistic, bar and form is written down before the kit runs;
+fixtures certain to pass; exhaustive forms; the no-rescue rule; no step waiting on a person;
+the checkpoint and the one-shot verdict. It drops what exists to protect this page: the
+no-preview items of the lock checklist, bar W, the section 5 line (an exploratory commission
+is not a session under section 5 and does not count in its alternation), and the external
+reviewer. Its result is registered in claims.yaml with status Exploratory and a note naming
+the commission and the evidence.
+
+What an exploratory result is: a reading of the model against data the programme already
+holds, with the data in view when the bars were set, by a lab that cannot rescue it once the
+design is sealed. What it is not:
+evidence. It never moves a grade in section 2c, a cell in section 1, a number in section 2b or
+a row of the input ledger; it never retires an input or arms a discriminator; it is never
+cited in support of a Derived or Modeled claim, and the author never grants it. A discovery
+worth confirming is the case for bringing uninspected evidence into the repository and
+chartering a confirmatory commission on it under a new name, blind. A question may be explored
+again from a different angle. The loop is the ordinary one: look, find, predict, test; only the
+last step is blind, and only because the registered claim says so.
+
+The author's standing instruction of 7 November 2026: the lab is in discovery mode. Its
+ordinary commission is exploratory, and its standing agenda is the fitted parameters of
+standard physics, read eyes open against the registered mesh constants wherever the data is
+on hand; a confirmatory commission is the exception. "Someday after the discoveries are made
+we will need a disprove lab to test questionable theories and possibilities of numerology,
+but we are so far from that. We can't explain a single fitted parameter and we must be in
+discovery mode now."
+
 ## 6. The queue as of 27 September 2026 (proposed, author decides)
 
 Delta since this page was written (2026-09-27, CASIMIR-F3): targets moved blocked to
